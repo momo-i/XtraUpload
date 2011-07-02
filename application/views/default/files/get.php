@@ -128,7 +128,7 @@ if($this->startup->site_config['show_preview'] && $this->xu_api->embed->get_embe
           <input style="display:none" id="<?php echo $file->type; ?>_embed_code" type="text" size="60" onclick="this.select();" onfocus="this.select()" value="<iframe src="<?php echo site_url('files/embed/'.$file->type.'/'.$file->file_id); ?>" width="<?php echo $embed['width']; ?>" height="<?php echo $embed['height']; ?>" scrolling="no" frameborder="0"></iframe>">
         </p>
 <? } ?>
-<?php /*File Page Hooks*/ $this->xu_api->hooks->runHooks('files::get::add_section::before_download', null); ?>
+<?php /*File Page Hooks*/ $this->xu_api->hooks->run_hooks('files::get::add_section::before_download', null); ?>
 
         <h3 id="dlhere"><img src="<?php echo base_url(); ?>img/other/download_16.png" class="nb" alt=""> <?php echo lang('Download Here'); ?></h3>
         <form action="<?php echo site_url('files/gen/'.$file->file_id.'/'.$file->link_name); ?>" method="post" onsubmit="return checkTimer()">
@@ -157,7 +157,7 @@ if($this->startup->site_config['show_preview'] && $this->xu_api->embed->get_embe
           </span>
         </div>
       </form>
-<?php /*File Page Hooks*/ $this->xu_api->hooks->runHooks('files::get::add_section::after_download', null); ?>
+<?php /*File Page Hooks*/ $this->xu_api->hooks->run_hooks('files::get::add_section::after_download', null); ?>
       <script type="text/javascript">
         //<![CDATA[
 <?php
