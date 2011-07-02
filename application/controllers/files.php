@@ -212,7 +212,7 @@ class Files extends CI_Controller {
 				$this->db->delete('captcha', $data);
 			}
 		}
-		$file = $this->files_db->_get_file_object($id);
+		$file = $this->files_db->get_file_object($id);
 
 		$link = $this->_gen_dlink($id, $file->link_name, 60);
 
@@ -520,7 +520,7 @@ class Files extends CI_Controller {
 	private function _download($id, $speed=0)
 	{
 		// Get the file refrence
-		$file = $this->files_db->_get_file_object($id, 'file_id, filename, o_filename, size, direct');
+		$file = $this->files_db->get_file_object($id, 'file_id, filename, o_filename, size, direct');
 
 		// Increment the file downloa count
 		$this->files_db->add_to_downloads($file->file_id);
