@@ -532,7 +532,7 @@ class Files extends CI_Controller {
 			$this->load->library('filedownload');
 
 			// Function to call if user aborts connection during download
-			register_shutdown_function(array('Files', '_downloadFail'), $file);
+			register_shutdown_function(array('Files', '_download_fail'), $file);
 
 			// Setup config for file download
 			$config = array();
