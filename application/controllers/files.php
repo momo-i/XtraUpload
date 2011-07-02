@@ -57,7 +57,7 @@ class Files extends CI_Controller {
 		$this->_check_for_httpauth();
 
 		// Get the file object for the requested file
-		$file = $this->files_db->_get_file_object($id);
+		$file = $this->files_db->get_file_object($id);
 
 		// If there is no such file found, redirect to 404 error
 		if( ! isset($file->server) OR ! $file)
