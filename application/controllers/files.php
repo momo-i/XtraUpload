@@ -294,7 +294,7 @@ class Files extends CI_Controller {
 		$this->load->model('server/server_db');
 
 		// let the embed definition see if we can stream, and describe the file transfer speed limit
-		$code = $this->xu_api->embed->getEmbedCode($file->type);
+		$code = $this->xu_api->embed->get_embed_code($file->type);
 		if(is_array($code))
 		{
 			$serv = $this->server_db->get_serverForDownload($file);

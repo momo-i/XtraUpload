@@ -58,7 +58,7 @@
                       <img class="nb" src="<?php echo base_url(); ?>img/icons/user_16.png" alt="">
                       <?php echo lang('Uploader:'); ?> 
                     </label>
-                    <span id="user"><?php echo $this->users->getUsernameById($file->user); ?></span>
+                    <span id="user"><?php echo $this->users->get_username_by_id($file->user); ?></span>
                     <br>
                     <label for="tags" style="display:inline;padding-bottom:2px">
                       <img class="nb" src="<?php echo base_url(); ?>img/icons/tags_16.png" alt="">
@@ -115,9 +115,9 @@ $tags = array_map('ucwords', $tags);
           </tr>
         </table>
 <?php
-if($this->startup->site_config['show_preview'] && $this->xu_api->embed->getEmbedCode($file->type))
+if($this->startup->site_config['show_preview'] && $this->xu_api->embed->get_embed_code($file->type))
 {
-    $embed = $this->xu_api->embed->getEmbedCode($file->type);
+    $embed = $this->xu_api->embed->get_embed_code($file->type);
 ?>
         <h3 id="dlhere"><img src="<?php echo base_url(); ?>img/icons/music_16.png" class="nb" alt=""> <?php echo lang('Preview File'); ?></h3>
         <p>

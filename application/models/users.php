@@ -87,7 +87,7 @@ class Users extends CI_Model {
 	// ------------------------------------------------------------------------
 	
 	/**
-	 * Users->getUsernameById()
+	 * Users->get_username_by_id()
 	 *
 	 * Get a username from a user id
 	 *
