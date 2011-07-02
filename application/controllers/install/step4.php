@@ -61,6 +61,7 @@ class Step4 extends CI_Controller {
 			}
 
 			$this->url = $this->input->post('url');
+			$this->url = str_replace('index.php', '', $this->url);
 			if(substr($this->url, -1) != '/')
 			{
 				$this->url .= '/';
