@@ -42,13 +42,13 @@ class Step2 extends CI_Controller {
 	{
 		$chmod = array();
 		$base = realpath(BASEPATH.'/../');
-		$chmod[$base.'/application/config/config.php'] = "0666";
-		$chmod[$base.'/application/config/database.php'] = "0666";
-		$chmod[$base.'/filestore'] = "0777";
-		$chmod[$base.'/temp'] = "0777";
-		$chmod[$base.'/application/cache'] = "0777";
-		$chmod[$base.'/thumbstore'] = "0777";
-		$chmod[$base.'/application/logs'] = "0777";
+		$chmod[$base.'/application/config/config.php'] = 0666;
+		$chmod[$base.'/application/config/database.php'] = 0666;
+		$chmod[$base.'/filestore'] = 0777;
+		$chmod[$base.'/temp'] = 0777;
+		$chmod[$base.'/application/cache'] = 0777;
+		$chmod[$base.'/thumbstore'] = 0777;
+		$chmod[$base.'/application/logs'] = 0777;
 		$data['is_chmod'] = true;
 		$data['pass_fail'] = array();
 		foreach($chmod as $file => $perm)
@@ -56,8 +56,15 @@ class Step2 extends CI_Controller {
 			$data['pass_fail'][$file]['perm'] = $perm;
 			if(!is_writeable($file))
 			{
-				$data['is_chmod'] = false;
-				$data['pass_fail'][$file]['html'] = '<span style="color:#FF0000; font-size:4"><strong>'.lang('Failed')."</strong></span>\n";
+				if( ! @chmod($file, $perm))
+				{
+					$data['is_chmod'] = false;
+					$data['pass_fail'][$file]['html'] = '<span style="color:#FF0000; font-size:4"><strong>'.lang('Failed')."</strong></span>\n";
+				}
+				else
+				{
+					$data['pass_fail'][$file]['html'] = '<span style="color:#009900; font-size:4"><strong>'.lang('Passed')."</strong></span>\n";
+				}
 			}
 			else
 			{
