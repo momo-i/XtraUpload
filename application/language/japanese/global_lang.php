@@ -550,35 +550,36 @@ $lang['View Image Gallery'] = 'View Image Gallery';
 #: application/controllers/image.php:157
 $lang['Create Image Gallery'] = 'Create Image Gallery';
 
-#: application/controllers/install/step2.php:60
-#: application/controllers/install/step2.php:71
-#: application/controllers/install/step2.php:93
-#: application/controllers/install/step2.php:114
-#: application/controllers/install/step2.php:135
-#: application/controllers/install/step2.php:156
+#: application/controllers/install/step2.php:62
+#: application/controllers/install/step2.php:78
+#: application/controllers/install/step2.php:100
+#: application/controllers/install/step2.php:121
+#: application/controllers/install/step2.php:142
+#: application/controllers/install/step2.php:163
 $lang['Failed'] = 'Failed';
 
-#: application/controllers/install/step2.php:64
-#: application/controllers/install/step2.php:76
-#: application/controllers/install/step2.php:98
-#: application/controllers/install/step2.php:119
-#: application/controllers/install/step2.php:140
-#: application/controllers/install/step2.php:161
+#: application/controllers/install/step2.php:66
+#: application/controllers/install/step2.php:71
+#: application/controllers/install/step2.php:83
+#: application/controllers/install/step2.php:105
+#: application/controllers/install/step2.php:126
+#: application/controllers/install/step2.php:147
+#: application/controllers/install/step2.php:168
 $lang['Passed'] = 'Passed';
 
-#: application/controllers/install/step2.php:72
+#: application/controllers/install/step2.php:79
 $lang['Please update php to the latest version in the %s'] = 'Please update php to the latest version in the %s';
 
-#: application/controllers/install/step2.php:72
+#: application/controllers/install/step2.php:79
 $lang['v5.3 code branch'] = 'v5.3 code branch';
 
-#: application/controllers/install/step2.php:94
-#: application/controllers/install/step2.php:115
-#: application/controllers/install/step2.php:136
-#: application/controllers/install/step2.php:157
+#: application/controllers/install/step2.php:101
+#: application/controllers/install/step2.php:122
+#: application/controllers/install/step2.php:143
+#: application/controllers/install/step2.php:164
 $lang['Please recompile php with %s'] = 'Please recompile php with %s';
 
-#: application/controllers/install/step2.php:94
+#: application/controllers/install/step2.php:101
 $lang['GD2 support'] = 'GD2 support';
 
 #: application/views/default/admin/groups/add.php:26
@@ -604,13 +605,13 @@ $lang['Yes'] = 'Yes';
 #: application/views/default/user/compare.php:155
 $lang['No'] = 'No';
 
-#: application/controllers/install/step2.php:115
+#: application/controllers/install/step2.php:122
 $lang['FreeType support'] = 'FreeType support';
 
-#: application/controllers/install/step2.php:136
+#: application/controllers/install/step2.php:143
 $lang['SimpleXML support'] = 'SimpleXML support';
 
-#: application/controllers/install/step2.php:157
+#: application/controllers/install/step2.php:164
 $lang['FTP support'] = 'FTP support';
 
 #: application/controllers/legal.php:44
@@ -662,6 +663,7 @@ $lang['Email Address Confirmation'] = 'Email Address Confirmation';
 #: application/controllers/user.php:133
 $lang['The Captcha you submited was incorrect'] = 'The Captcha you submited was incorrect';
 
+#: application/views/citrus_island/menu.php:36
 #: application/views/default/home.php:10
 #: application/views/default/menu.php:35
 #: application/views/default/user/login.php:14
@@ -685,6 +687,7 @@ $lang['If you are not automatically redirected to payment website within 5 secon
 #: application/controllers/user.php:333
 $lang['Make Payment'] = 'Make Payment';
 
+#: application/views/citrus_island/menu.php:9
 #: application/views/default/menu.php:8
 $lang['Manage Account'] = 'Manage Account';
 
@@ -698,6 +701,7 @@ $lang['New Password'] = 'New Password';
 #: application/controllers/user.php:442
 $lang['New Password Confirmation'] = 'New Password Confirmation';
 
+#: application/views/citrus_island/menu.php:14
 #: application/views/default/menu.php:11
 #: application/views/default/user/password.php:9
 #: application/views/default/user/password.php:13
@@ -750,6 +754,118 @@ $lang['New Password Sent!'] = 'New Password Sent!';
 
 #: application/views/_protected/files/embed/mp3.php:8
 $lang['MP3 Embed'] = 'MP3 Embed';
+
+#: application/views/citrus_island/footer.php:22
+#: application/views/default/footer.php:64
+$lang['&copy; Copyright %s'] = '&copy; Copyright %s';
+
+#: application/views/citrus_island/footer.php:22
+#: application/views/default/footer.php:64
+$lang['XtraFile'] = 'XtraFile';
+
+#: application/views/citrus_island/footer.php:24
+#: application/views/default/footer.php:65
+$lang['Design By: %s'] = 'Design By: %s';
+
+#: application/views/citrus_island/footer.php:26
+#: application/views/default/admin/home.php:228
+#: application/views/default/footer.php:68
+$lang['Valid'] = 'Valid';
+
+#: application/views/citrus_island/footer.php:28
+#: application/views/default/footer.php:70
+$lang['Debug Info'] = 'Debug Info';
+
+#: application/views/citrus_island/footer.php:30
+#: application/views/default/footer.php:72
+$lang['Execution Time: %s sec'] = 'Execution Time: %s sec';
+
+#: application/views/citrus_island/footer.php:32
+#: application/views/default/footer.php:73
+$lang['Memory Usage: %d KB'] = 'Memory Usage: %d KB';
+
+#: application/views/citrus_island/menu.php:5
+#: application/views/default/menu.php:5
+$lang['Welcome %s!'] = 'Welcome %s!';
+
+#: application/views/citrus_island/menu.php:19
+#: application/views/default/admin/menu.php:19
+#: application/views/default/menu.php:14
+#: application/views/default/user/logout.php:3
+$lang['Logout'] = 'Logout';
+
+#: application/views/citrus_island/menu.php:28
+#: application/views/default/menu.php:22
+$lang['Member Login'] = 'Member Login';
+
+#: application/views/citrus_island/menu.php:32
+#: application/views/default/menu.php:27
+#: application/views/default/user/login.php:10
+#: application/views/default/user/manage.php:15
+#: application/views/install/step5.php:54
+$lang['Username:'] = 'Username:';
+
+#: application/views/citrus_island/menu.php:34
+#: application/views/default/files/get.php:84
+#: application/views/default/menu.php:31
+#: application/views/default/user/login.php:12
+#: application/views/install/step5.php:55
+$lang['Password:'] = 'Password:';
+
+#: application/views/citrus_island/menu.php:42
+#: application/views/default/menu.php:40
+$lang['Forgot Your Password?'] = 'Forgot Your Password?';
+
+#: application/views/citrus_island/menu.php:47
+#: application/views/default/menu.php:43
+$lang['New? Register Here!'] = 'New? Register Here!';
+
+#: application/views/citrus_island/menu.php:59
+#: application/views/default/footer.php:27
+$lang['Recently Uploaded Files'] = 'Recently Uploaded Files';
+
+#: application/views/citrus_island/menu.php:80
+#: application/views/default/footer.php:51
+$lang['About'] = 'About';
+
+#: application/views/citrus_island/menu.php:83
+#: application/views/citrus_island/menu.php:84
+#: application/views/citrus_island/menu.php:87
+#: application/views/default/footer.php:54
+#: application/views/default/footer.php:57
+$lang['XtraUpload v3'] = 'XtraUpload v3';
+
+#: application/views/citrus_island/menu.php:84
+#: application/views/default/footer.php:54
+$lang['%s is a next generation file hosting solution, blurring the lines between file hosting and ease of use.'] = '%s is a next generation file hosting solution, blurring the lines between file hosting and ease of use.';
+
+#: application/views/citrus_island/menu.php:85
+#: application/views/default/footer.php:55
+$lang['Our revolutionary flash-based file uploader technology gets what you want done.'] = 'Our revolutionary flash-based file uploader technology gets what you want done.';
+
+#: application/views/citrus_island/menu.php:86
+#: application/views/default/footer.php:56
+$lang['Upload up to 500 files at once, and get links to them all on the same page.'] = 'Upload up to 500 files at once, and get links to them all on the same page.';
+
+#: application/views/citrus_island/menu.php:87
+#: application/views/default/footer.php:57
+$lang['%s is also pushing the envelope on extensibility. Built on the wonderful'] = '%s is also pushing the envelope on extensibility. Built on the wonderful';
+
+#: application/views/citrus_island/menu.php:88
+#: application/views/default/footer.php:58
+$lang['CodeIgniter'] = 'CodeIgniter';
+
+#: application/views/citrus_island/menu.php:89
+#: application/views/default/footer.php:59
+$lang['PHP Framework, XtraUpload is fully OpenSource and extendable.'] = 'PHP Framework, XtraUpload is fully OpenSource and extendable.';
+
+#: application/views/citrus_island/menu.php:90
+#: application/views/default/footer.php:60
+$lang['The documentation is extensive, concise, and clear.'] = 'The documentation is extensive, concise, and clear.';
+
+#: application/views/citrus_island/menu.php:91
+#: application/views/default/footer.php:61
+$lang['Database abstraction, page caching, configurable downloads, secure file storage, secure file links, and so much more combine to create the new leader in file hosting technology, XtraUpload. Oh, and its Free.'] = 'Database abstraction, page caching, configurable downloads, secure file storage, secure file links, and so much more combine to create the new leader in file hosting technology, XtraUpload. Oh, and its Free.';
 
 #: application/views/default/admin/actions/view.php:3
 $lang['Site Maintenance'] = 'Site Maintenance';
@@ -1280,20 +1396,11 @@ $lang['Last 5 Admin Logins'] = 'Last 5 Admin Logins';
 #: application/views/default/admin/home.php:226
 $lang['IP Address'] = 'IP Address';
 
-#: application/views/default/admin/home.php:228
-#: application/views/default/footer.php:68
-$lang['Valid'] = 'Valid';
-
 #: application/views/default/admin/menu.php:1
 $lang['Admin Links'] = 'Admin Links';
 
 #: application/views/default/admin/menu.php:13
 $lang['Site Home'] = 'Site Home';
-
-#: application/views/default/admin/menu.php:19
-#: application/views/default/menu.php:14
-#: application/views/default/user/logout.php:3
-$lang['Logout'] = 'Logout';
 
 #: application/views/default/admin/menu.php:33
 $lang['Server Load'] = 'Server Load';
@@ -1768,12 +1875,6 @@ $lang['Tags:'] = 'Tags:';
 #: application/views/default/files/get.php:77
 $lang['Downloads:'] = 'Downloads:';
 
-#: application/views/default/files/get.php:84
-#: application/views/default/menu.php:31
-#: application/views/default/user/login.php:12
-#: application/views/install/step5.php:55
-$lang['Password:'] = 'Password:';
-
 #: application/views/default/files/get.php:94
 $lang['Image BBCode/Links:'] = 'Image BBCode/Links:';
 
@@ -1934,60 +2035,8 @@ $lang['Link:'] = 'Link:';
 #: application/views/default/folder/done.php:7
 $lang['View File Folder Now'] = 'View File Folder Now';
 
-#: application/views/default/footer.php:27
-$lang['Recently Uploaded Files'] = 'Recently Uploaded Files';
-
-#: application/views/default/footer.php:51
-$lang['About'] = 'About';
-
-#: application/views/default/footer.php:54
-$lang['%s is a next generation file hosting solution, blurring the lines between file hosting and ease of use.'] = '%s is a next generation file hosting solution, blurring the lines between file hosting and ease of use.';
-
-#: application/views/default/footer.php:54
-#: application/views/default/footer.php:57
-$lang['XtraUpload v3'] = 'XtraUpload v3';
-
-#: application/views/default/footer.php:55
-$lang['Our revolutionary flash-based file uploader technology gets what you want done.'] = 'Our revolutionary flash-based file uploader technology gets what you want done.';
-
-#: application/views/default/footer.php:56
-$lang['Upload up to 500 files at once, and get links to them all on the same page.'] = 'Upload up to 500 files at once, and get links to them all on the same page.';
-
-#: application/views/default/footer.php:57
-$lang['%s is also pushing the envelope on extensibility. Built on the wonderful'] = '%s is also pushing the envelope on extensibility. Built on the wonderful';
-
-#: application/views/default/footer.php:58
-$lang['CodeIgniter'] = 'CodeIgniter';
-
-#: application/views/default/footer.php:59
-$lang['PHP Framework, XtraUpload is fully OpenSource and extendable.'] = 'PHP Framework, XtraUpload is fully OpenSource and extendable.';
-
-#: application/views/default/footer.php:60
-$lang['The documentation is extensive, concise, and clear.'] = 'The documentation is extensive, concise, and clear.';
-
-#: application/views/default/footer.php:61
-$lang['Database abstraction, page caching, configurable downloads, secure file storage, secure file links, and so much more combine to create the new leader in file hosting technology, XtraUpload. Oh, and its Free.'] = 'Database abstraction, page caching, configurable downloads, secure file storage, secure file links, and so much more combine to create the new leader in file hosting technology, XtraUpload. Oh, and its Free.';
-
-#: application/views/default/footer.php:64
-$lang['&copy; Copyright %s'] = '&copy; Copyright %s';
-
-#: application/views/default/footer.php:64
-$lang['XtraFile'] = 'XtraFile';
-
-#: application/views/default/footer.php:65
-$lang['Design By: %s'] = 'Design By: %s';
-
 #: application/views/default/footer.php:66
 $lang['Terms Of Service'] = 'Terms Of Service';
-
-#: application/views/default/footer.php:70
-$lang['Debug Info'] = 'Debug Info';
-
-#: application/views/default/footer.php:72
-$lang['Execution Time: %s sec'] = 'Execution Time: %s sec';
-
-#: application/views/default/footer.php:73
-$lang['Memory Usage: %d KB'] = 'Memory Usage: %d KB';
 
 #: application/views/default/home.php:10
 $lang['You are currently not allowed to upload local files. Please %s to gain access.'] = 'You are currently not allowed to upload local files. Please %s to gain access.';
@@ -2255,24 +2304,6 @@ $lang['8. Governing Law'] = '8. Governing Law';
 
 #: application/views/default/legal/tos.php:34
 $lang['Any claim relating to %s \'s web site shall be governed by the laws of the United States of America without regard to its conflict of law provisions.'] = 'Any claim relating to %s \'s web site shall be governed by the laws of the United States of America without regard to its conflict of law provisions.';
-
-#: application/views/default/menu.php:5
-$lang['Welcome %s!'] = 'Welcome %s!';
-
-#: application/views/default/menu.php:22
-$lang['Member Login'] = 'Member Login';
-
-#: application/views/default/menu.php:27
-#: application/views/default/user/login.php:10
-#: application/views/default/user/manage.php:15
-#: application/views/install/step5.php:54
-$lang['Username:'] = 'Username:';
-
-#: application/views/default/menu.php:40
-$lang['Forgot Your Password?'] = 'Forgot Your Password?';
-
-#: application/views/default/menu.php:43
-$lang['New? Register Here!'] = 'New? Register Here!';
 
 #: application/views/default/upload/complete.php:3
 $lang['Upload Complete'] = 'Upload Complete';
