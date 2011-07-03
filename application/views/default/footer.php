@@ -30,11 +30,11 @@ if($this->startup->site_config['show_recent_uploads'])
 	$query = $this->files_db->get_recent_files(5);
 	foreach ($query->result() as $file)
 	{
-	$links = $this->files_db->get_links('', $file);
+		$links = $this->files_db->get_links('', $file);
 ?>
               <li>
                 <a href="<?php echo $links['down'];?>">
-                  <img src="<?php echo base_url().'img/files/'.$this->functions->getFileTypeIcon($file->type);?>" class="nb" alt="">
+                  <img src="<?php echo base_url().'img/files/'.$this->functions->get_file_type_icon($file->type);?>" class="nb" alt="">
                   <?php echo $this->functions->elipsis($file->o_filename, 10); ?> 
                 </a>
               </li>

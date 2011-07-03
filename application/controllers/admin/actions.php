@@ -98,8 +98,8 @@ class Actions extends CI_Controller {
 
 EOF;
 		$gitignore = <<<EOF
-!index.html
 *
+!index.html
 
 EOF;
 		write_file(CACHEPATH.'index.html', $html);
