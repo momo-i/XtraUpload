@@ -42,7 +42,7 @@
             <tr>
               <td width="19%" valign="middle">
                 <center>
-                  <img src="<?php echo site_url('/images/angle/checkmark.png'); ?>" width="128" height="128">
+                  <img src="<?php echo site_url('/images/install/angle/checkmark.png'); ?>" width="128" height="128">
                 </center>
               </td>
               <td width="100%">
