@@ -1,7 +1,7 @@
 	v3.0.0-Alpha1
 		- Upgrade CodeIgniter 2.0.2 from 1.7.2
 		- Update Language system
-		  All Terms are included global_lang.php
+		  All Terms are included global_lang.php (like gettext, but cannot set fuzzy, obsolete...)
 		- All functions were compliant with CodeIgniter
 		  (ex $userPath -> $user_path, function getUser -> get_user)
 		- Auto installer.

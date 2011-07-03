@@ -94,7 +94,7 @@ class Extend extends CI_Controller {
 
 			$this->session->set_flashdata('msg', sprintf(lang('Plugin "%s" Installed'), ucwords(str_replace('_', ' ', $name))));
 		}
-		$this->_updateCache();
+		$this->_update_cache();
 		redirect('admin/extend/view');
 	}
 
@@ -107,7 +107,7 @@ class Extend extends CI_Controller {
 
 		$this->db->delete('extend', array('file_name' => $name));
 		$this->session->set_flashdata('msg', sprintf(lang('Plugin "%s" Uninstalled'), ucwords(str_replace('_', ' ', $name))));
-		$this->_updateCache();
+		$this->_update_cache();
 		redirect('admin/extend/view');
 	}
 
@@ -117,7 +117,7 @@ class Extend extends CI_Controller {
 	{
 		$this->db->where('file_name', $name)->update('extend', array('active' => 1));
 		$this->session->set_flashdata('msg', sprintf(lang('Plugin "%s" Activated'), ucwords(str_replace('_', ' ', $name))));
-		$this->_updateCache();
+		$this->_update_cache();
 		redirect('admin/extend/view');
 	}
 
@@ -127,7 +127,7 @@ class Extend extends CI_Controller {
 	{
 		$this->db->where('file_name', $name)->update('extend', array('active' => 0));
 		$this->session->set_flashdata('msg', sprintf(lang('Plugin "%s" Deactivated'), ucwords(str_replace('_', ' ', $name))));
-		$this->_updateCache();
+		$this->_update_cache();
 		redirect('admin/extend/view');
 	}
 

@@ -3,7 +3,7 @@
         <!-- sidebar starts -->
         <div id="sidebar">
 <?php
-if(stristr(uri_string(),'admin') != FALSE)
+if(stristr(uri_string(),'admin') !== FALSE)
 {
 	$this->load->view($skin.'/admin/menu');
 }

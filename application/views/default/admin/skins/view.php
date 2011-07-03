@@ -89,7 +89,7 @@ foreach ($skins->result() as $skin)
 	if(!$skin->active)
 	{
 ?>
-              <a title="<?php echo lang('Activate This Skin'); ?>" href="<?php echo site_url('admin/skin/setActive/'.$skin->name); ?>">
+              <a title="<?php echo lang('Activate This Skin'); ?>" href="<?php echo site_url('admin/skin/set_active/'.$skin->name); ?>">
                 <img src="<?php echo base_url(); ?>img/icons/off_16.png" class="nb" alt="<?php echo lang('Set Active'); ?>">
               </a>
 <?php

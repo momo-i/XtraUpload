@@ -8,7 +8,7 @@ if($this->session->userdata('id'))
               <?php echo anchor('user/manage', '<img src="'.base_url().'img/icons/options_16.png" class="nb" alt="">'.lang('Manage Account')); ?> 
             </li>
             <li>
-              <?php echo anchor('user/changePassword', '<img src="'.base_url().'img/icons/security_16.png" class="nb" alt="">'.lang('Change Password')); ?> 
+              <?php echo anchor('user/change_password', '<img src="'.base_url().'img/icons/security_16.png" class="nb" alt="">'.lang('Change Password')); ?> 
             </li>
             <li>
               <?php echo anchor('user/logout', '<img src="'.base_url().'img/icons/log_out_16.png" class="nb" alt="">'.lang('Logout')); ?> 

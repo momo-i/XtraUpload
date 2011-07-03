@@ -17,7 +17,7 @@ foreach ($folder_files->result() as $fileRef):
 ?>
             <tr>
               <td>
-                <img src="<?php echo base_url().'img/files/'.$this->functions->getFileTypeIcon($file->type); ?>" class="nb" alt="">
+                <img src="<?php echo base_url().'img/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
                 <?php echo anchor('files/get/'.$file->file_id.'/'.$file->link_name, $file->o_filename, array('target'=>'_blank')); ?> 
               </td>
               <td><?php echo $this->functions->get_filesize_prefix($file->size); ?></td>

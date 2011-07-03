@@ -38,7 +38,7 @@ else
           <tr id="<?php echo $file->file_id; ?>" <?php echo alternator('class="odd"', 'class="even"'); ?>>
             <td>
               <a href='<?php echo site_url('/files/get/'.$file->file_id.'/'.$file->link_name); ?>' target="_blank" title="<?php echo $file->o_filename; ?>">
-                <img src="<?php echo base_url().'img/files/'.$this->functions->getFileTypeIcon($file->type); ?>" class="nb" alt="">
+                <img src="<?php echo base_url().'img/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
                 <?php echo $this->functions->elipsis($file->o_filename); ?> 
               </a>
             </td>

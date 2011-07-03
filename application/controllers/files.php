@@ -442,7 +442,7 @@ class Files extends CI_Controller {
 			$this->pagination->initialize($config);
 
 			// Get the files object
-			$data['files'] = $this->files_db->searchFiles($this->uri->segment(3), $per_page, $this->uri->segment(3), '', true);
+			$data['files'] = $this->files_db->search_files($this->uri->segment(3), $per_page, $this->uri->segment(3), '', true);
 
 			// Create the pagination HTML
 			$data['pagination'] = $this->pagination->create_links();

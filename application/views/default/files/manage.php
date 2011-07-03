@@ -43,7 +43,7 @@ foreach ($files->result() as $file):
               </td>
               <td>
                 <a href='<?php echo $link['down']; ?>' rel="external">
-                  <img src="<?php echo base_url().'img/files/'.$this->functions->getFileTypeIcon($file->type); ?>" class="nb" alt="">
+                  <img src="<?php echo base_url().'img/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
                   <?php echo $this->functions->elipsis($file->o_filename, 10); ?>
                 </a>
               </td>
