@@ -46,4 +46,4 @@ else
 <?php
 }
 ?>
-        <?php echo $this->xu_api->menus->get_sub_menu(); //Get action submenus ?>
+          <?php echo $this->xu_api->menus->get_sub_menu(); //Get action submenus ?>
