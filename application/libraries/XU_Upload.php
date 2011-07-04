@@ -24,7 +24,7 @@
  * @author		ExpressionEngine Dev Team
  * @link		http://codeigniter.com/user_guide/libraries/file_uploading.html
  */
-class CI_Upload {
+class XU_Upload extends CI_Upload {
 
 	public $max_size				= 0;
 	public $max_width				= 0;
@@ -63,12 +63,13 @@ class CI_Upload {
 	 */
 	public function __construct($props = array())
 	{
+		parent::__construct();
 		if (count($props) > 0)
 		{
 			$this->initialize($props);
 		}
 
-		log_message('debug', "Upload Class Initialized");
+		log_message('debug', "XU_Upload Class Initialized");
 	}
 
 	// --------------------------------------------------------------------
