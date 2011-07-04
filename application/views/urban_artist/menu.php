@@ -57,7 +57,7 @@ if($this->startup->site_config['show_recent_uploads'])
 	$query = $this->files_db->get_recent_files(5);
 	foreach ($query->result() as $file)
 	{
-		$links = $this->files_db->getLinks('', $file);
+		$links = $this->files_db->get_links('', $file);
 ?>
             <li>
               <a href="<?php echo $links['down']; ?>">
