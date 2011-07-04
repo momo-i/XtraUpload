@@ -471,7 +471,6 @@ class CI_Input {
 
 			foreach ($_COOKIE as $key => $val)
 			{
-				log_message('debug', "Key: $key, Val: $val");
 				$_COOKIE[$this->_clean_input_keys($key)] = $this->_clean_input_data($val);
 			}
 		}

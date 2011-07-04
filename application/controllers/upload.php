@@ -27,13 +27,14 @@ class Upload extends CI_Controller {
 
 	public function __construct()
 	{
+		log_message('debug', 'Upload Controller Initialized !!');
 		parent::__construct();
 		$this->load->model('server/server_db');
 	}
 
 	public function index()
 	{
-		redirect('/home');
+		redirect('home');
 	}
 
 	public function url()
@@ -97,8 +98,9 @@ class Upload extends CI_Controller {
 
 	public function process($secid='', $user=0)
 	{
-		if(intval($user) != 0 && $this->session->userdata('login') != true)
+		if(intval($user) !== 0 && $this->session->userdata('login') !== TRUE)
 		{
+			log_message('debug', 'User not found?');
 			echo intval($user)."\n\n";
 			$userobj = $this->users->get_user_by_id(intval($user));
 			$this->startup->get_group(intval($userobj->group));
@@ -110,6 +112,7 @@ class Upload extends CI_Controller {
 		$config['max_size'] = (1024 * intval($this->startup->group_config->upload_size_limit));
 		$this->load->library('upload', $config);
 
+		log_message('debug', 'Class: '.__CLASS__.' Function: '.__FUNCTION__.' Upload start');
 		if($this->upload->do_upload('Filedata'))
 		{
 			$data = $this->upload->data();
@@ -122,6 +125,7 @@ class Upload extends CI_Controller {
 			}
 			else
 			{
+				log_message('debug', 'Upload Completed');
 				echo "true|".lang('Upload Completed!');
 			}
 		}
@@ -178,7 +182,7 @@ class Upload extends CI_Controller {
 			'feature' => intval($this->input->post('featured'))
 		);
 
-				foreach($data as $key => $val)
+		foreach ($data as $key => $val)
 		{
 			if($val == 'undefined')
 			{

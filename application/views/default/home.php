@@ -199,7 +199,7 @@ else
             }
             function ___filePropSaveButtons(id)
             {
-             var template = "<?php echo str_replace("\n", '', str_replace('"', '\\"', generate_link_button('Save Changes', 'javascript:;', base_url().'img/icons/ok_16.png', 'green', array('onclick' => 'saveFilePropChanges(\'--id--\');$(\'#--id---details\').hide();$(\'#--id---edit_img\').fadeIn(\'fast\');')).generate_link_button('Discard Changes', 'javascript:;', base_url().'img/icons/close_16.png', 'red', array('onclick' => '$(\'#--id---details\').hide();$(\'#--id---edit_img\').fadeIn(\'fast\');'))))?>";
+             var template = "<?php echo str_replace("\n", '', str_replace('"', '\\"', generate_link_button(lang('Save Changes'), 'javascript:;', base_url().'img/icons/ok_16.png', 'green', array('onclick' => 'saveFilePropChanges(\'--id--\');$(\'#--id---details\').hide();$(\'#--id---edit_img\').fadeIn(\'fast\');')).generate_link_button(lang('Discard Changes'), 'javascript:;', base_url().'img/icons/close_16.png', 'red', array('onclick' => '$(\'#--id---details\').hide();$(\'#--id---edit_img\').fadeIn(\'fast\');'))))?>";
               return str_replace('--id--', id, template);
             }
             function str_replace (search, replace, subject, count)
@@ -327,7 +327,7 @@ else
                 return;
               }
               $.post(
-                '<?php echo site_url('upload/fileUploadProps'); ?>',
+                '<?php echo site_url('upload/file_upload_props'); ?>',
                 {
                   fid: curFileId,
                   password: fPass,

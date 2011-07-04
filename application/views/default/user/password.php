@@ -9,11 +9,11 @@ if( ! $this->session->userdata('id'))
           <?php echo lang('Change Password'); ?> 
         </h2>
         <?php echo $error_message; ?> 
-        <form action="<?php echo site_url('user/changePassword'); ?>" method="post">
+        <form action="<?php echo site_url('user/change_password'); ?>" method="post">
           <h3><?php echo lang('Change Password'); ?></h3>
           <p>
             <label style="font-weight:bold" for="username"><?php echo lang('Username; ')?></label>
-            <input type="text" class="readonly" readonly="readonly" name="username" value="<?=$this->session->userdata('username'); ?>" size="50"><br><br>
+            <input type="text" class="readonly" readonly="readonly" name="username" value="<?php echo $this->session->userdata('username'); ?>" size="50"><br><br>
             <label style="font-weight:bold" for="password"><?php echo lang('Old Password'); ?></label>
             <input type="password" name="oldpassword" size="50"><br>
             <label style="font-weight:bold" for="password"><?php echo lang('New Password'); ?></label>

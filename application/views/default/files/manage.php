@@ -109,7 +109,7 @@ endforeach;
             var fTags = $('#'+id+'_tags').val();
             var curFileId = $('#'+id+'_fid').val();
             $.post(
-              '<?php echo site_url('upload/fileUploadProps'); ?>',
+              '<?php echo site_url('upload/file_upload_props'); ?>',
               {
                 fid: curFileId,
                 password: fPass,
@@ -126,7 +126,7 @@ endforeach;
           {
             if(confirm('<?php echo lang('Are you sure you want to delete these files?'); ?>'))
             {
-              $('#userAdmin').attr('action', "<?php echo site_url('files/massDelete'); ?>");
+              $('#userAdmin').attr('action', "<?php echo site_url('files/mass_delete'); ?>");
               $('#userAdmin').submit();
             }
           }

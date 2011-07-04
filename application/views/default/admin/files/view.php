@@ -97,7 +97,7 @@ foreach ($files->result() as $file)
           {
             if(confirm('<?php echo lang('Are you sure you want to delete these files?'); ?>'))
             {
-              $('#userAdmin').attr('action', "<?php echo site_url('admin/files/massDelete'); ?>");
+              $('#userAdmin').attr('action', "<?php echo site_url('admin/files/mass_delete'); ?>");
               $('#userAdmin').submit();
             }
           }

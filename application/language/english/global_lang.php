@@ -291,19 +291,19 @@ $lang['The ammount of time in days that a file uploaded by this group is kept on
 #: application/views/default/user/register/begin.php:17
 $lang['None'] = 'None';
 
-#: application/models/users.php:269
+#: application/models/users.php:272
 $lang['Daily'] = 'Daily';
 
-#: application/models/users.php:270
+#: application/models/users.php:273
 $lang['Weekly'] = 'Weekly';
 
-#: application/models/users.php:271
+#: application/models/users.php:274
 $lang['Monthly'] = 'Monthly';
 
-#: application/models/users.php:272
+#: application/models/users.php:275
 $lang['Yearly'] = 'Yearly';
 
-#: application/models/users.php:273
+#: application/models/users.php:276
 $lang['Bi-Yearly'] = 'Bi-Yearly';
 
 #: application/controllers/admin/group.php:239
@@ -315,7 +315,7 @@ $lang['First Download'] = 'First Download';
 #: application/controllers/admin/group.php:241
 $lang['Always'] = 'Always';
 
-#: application/libraries/startup.php:195
+#: application/libraries/startup.php:196
 $lang['Home'] = 'Home';
 
 #: application/controllers/admin/menu_shortcuts.php:76
@@ -393,7 +393,7 @@ $lang['The Skin "%s" has been Uninstalled.'] = 'The Skin "%s" has been Uninstall
 #: application/controllers/admin/skin.php:95
 $lang['Skin "%s" set as active.'] = 'Skin "%s" set as active.';
 
-#: application/libraries/startup.php:235
+#: application/libraries/startup.php:236
 $lang['Site Stats'] = 'Site Stats';
 
 #: application/controllers/admin/transactions.php:76
@@ -526,7 +526,7 @@ $lang['Password Protected File'] = 'Password Protected File';
 #: application/controllers/files.php:701
 $lang['File Not Found'] = 'File Not Found';
 
-#: application/libraries/startup.php:274
+#: application/libraries/startup.php:275
 $lang['File Folder'] = 'File Folder';
 
 #: application/controllers/folder.php:60
@@ -549,6 +549,9 @@ $lang['View Image Gallery'] = 'View Image Gallery';
 #: application/controllers/image.php:129
 #: application/controllers/image.php:157
 $lang['Create Image Gallery'] = 'Create Image Gallery';
+
+#: application/controllers/image.php:169
+$lang['Edit Image Gallery'] = 'Edit Image Gallery';
 
 #: application/controllers/install/step2.php:62
 #: application/controllers/install/step2.php:78
@@ -624,20 +627,20 @@ $lang['Privacy Policy'] = 'Privacy Policy';
 #: application/controllers/payment/ipn.php:102
 $lang['Processing...'] = 'Processing...';
 
-#: application/libraries/startup.php:200
+#: application/libraries/startup.php:201
 $lang['URL Upload'] = 'URL Upload';
 
-#: application/controllers/upload.php:90
+#: application/controllers/upload.php:92
 $lang['Upload Complete!'] = 'Upload Complete!';
 
-#: application/controllers/upload.php:94
-#: application/controllers/upload.php:144
+#: application/controllers/upload.php:96
+#: application/controllers/upload.php:149
 $lang['Upload Failed!'] = 'Upload Failed!';
 
-#: application/controllers/upload.php:125
+#: application/controllers/upload.php:130
 $lang['Upload Completed!'] = 'Upload Completed!';
 
-#: application/controllers/upload.php:195
+#: application/controllers/upload.php:200
 $lang['OK'] = 'OK';
 
 #: application/views/default/user/compare.php:3
@@ -1109,7 +1112,7 @@ $lang['No Config Settings for this plugin.'] = 'No Config Settings for this plug
 #: application/views/install/step4.php:82
 $lang['Go Back'] = 'Go Back';
 
-#: application/libraries/startup.php:233
+#: application/libraries/startup.php:234
 $lang['Mass Emailer'] = 'Mass Emailer';
 
 #: application/views/default/admin/email.php:15
@@ -1136,6 +1139,7 @@ $lang['Installed Plugins'] = 'Installed Plugins';
 #: application/views/default/admin/servers/view.php:13
 #: application/views/default/admin/users/search_result.php:33
 #: application/views/default/admin/users/view.php:31
+#: application/views/default/image/gallery/view.php:5
 $lang['Name'] = 'Name';
 
 #: application/views/default/admin/extend/view.php:13
@@ -1245,7 +1249,7 @@ $lang['Delete'] = 'Delete';
 #: application/views/default/admin/folders/view.php:45
 $lang['Ban'] = 'Ban';
 
-#: application/libraries/startup.php:206
+#: application/libraries/startup.php:207
 $lang['Search'] = 'Search';
 
 #: application/views/default/admin/files/search_result.php:14
@@ -1375,7 +1379,7 @@ $lang['Created'] = 'Created';
 #: application/views/default/admin/gateways/edit.php:3
 $lang['Payment Gateway Settings'] = 'Payment Gateway Settings';
 
-#: application/libraries/startup.php:225
+#: application/libraries/startup.php:226
 $lang['Payment Gateways'] = 'Payment Gateways';
 
 #: application/views/default/admin/gateways/view.php:24
@@ -1424,6 +1428,7 @@ $lang['Edit Group'] = 'Edit Group';
 #: application/views/default/admin/groups/edit.php:76
 #: application/views/default/admin/translator/translateLang.php:50
 #: application/views/default/files/manage.php:84
+#: application/views/default/home.php:202
 #: application/views/default/home.php:238
 #: application/views/default/upload/url.php:88
 $lang['Save Changes'] = 'Save Changes';
@@ -1584,7 +1589,7 @@ $lang['Site Home'] = 'Site Home';
 #: application/views/default/admin/menu.php:33
 $lang['Server Load'] = 'Server Load';
 
-#: application/libraries/startup.php:226
+#: application/libraries/startup.php:227
 $lang['Plugins'] = 'Plugins';
 
 #: application/views/default/admin/menu_shortcuts/add.php:3
@@ -1840,7 +1845,7 @@ $lang['Downloads'] = 'Downloads';
 #: application/views/default/api/charts/all_downloads.php:5
 $lang['All Downloads'] = 'All Downloads';
 
-#: application/libraries/startup.php:228
+#: application/libraries/startup.php:229
 $lang['Servers'] = 'Servers';
 
 #: application/views/default/admin/stats.php:31
@@ -2294,6 +2299,9 @@ $lang['Please contact us about this error'] = 'Please contact us about this erro
 #: application/views/default/home.php:138
 $lang['Delete All?'] = 'Delete All?';
 
+#: application/views/default/home.php:202
+$lang['Discard Changes'] = 'Discard Changes';
+
 #: application/views/default/home.php:233
 #: application/views/default/upload/url.php:83
 $lang['Percent Complete'] = 'Percent Complete';
@@ -2339,11 +2347,8 @@ $lang['Create Gallery'] = 'Create Gallery';
 #: application/views/default/image/gallery/done.php:3
 $lang['Image Gallery - Created'] = 'Image Gallery - Created';
 
-#: application/libraries/startup.php:275
+#: application/libraries/startup.php:276
 $lang['Image Gallery'] = 'Image Gallery';
-
-#: application/views/default/image/gallery/view.php:5
-$lang['mage_gallys_view_'] = 'mage_gallys_view_';
 
 #: application/views/default/image/gallery/view.php:12
 #: application/views/default/image/links.php:9
@@ -2655,7 +2660,7 @@ $lang['here'] = 'here';
 #: application/views/default/user/profile/view.php:19
 $lang['User Info'] = 'User Info';
 
-#: application/models/users.php:286
+#: application/models/users.php:289
 $lang['Username: %s'] = 'Username: %s';
 
 #: application/views/default/user/profile/view.php:24
@@ -3005,96 +3010,96 @@ $lang['Please wait, your order is being processed and you will be redirected to 
 #: application/libraries/paypal_lib.php:195
 $lang['IPN Validation Failed.'] = 'IPN Validation Failed.';
 
-#: application/libraries/startup.php:212
+#: application/libraries/startup.php:213
 $lang['Admin'] = 'Admin';
 
-#: application/libraries/startup.php:218
-#: application/libraries/startup.php:273
+#: application/libraries/startup.php:219
+#: application/libraries/startup.php:274
 $lang['Manage'] = 'Manage';
 
-#: application/libraries/startup.php:219
+#: application/libraries/startup.php:220
 $lang['Files'] = 'Files';
 
-#: application/libraries/startup.php:220
+#: application/libraries/startup.php:221
 $lang['Transactions'] = 'Transactions';
 
-#: application/libraries/startup.php:221
+#: application/libraries/startup.php:222
 $lang['Users'] = 'Users';
 
-#: application/libraries/startup.php:223
+#: application/libraries/startup.php:224
 $lang['Configure'] = 'Configure';
 
-#: application/libraries/startup.php:224
+#: application/libraries/startup.php:225
 $lang['Site Config'] = 'Site Config';
 
-#: application/libraries/startup.php:227
+#: application/libraries/startup.php:228
 $lang['Skins'] = 'Skins';
 
-#: application/libraries/startup.php:229
+#: application/libraries/startup.php:230
 $lang['User Groups'] = 'User Groups';
 
-#: application/libraries/startup.php:231
+#: application/libraries/startup.php:232
 $lang['Misc'] = 'Misc';
 
-#: application/libraries/startup.php:232
+#: application/libraries/startup.php:233
 $lang['Admin Menu Shortcuts'] = 'Admin Menu Shortcuts';
 
-#: application/libraries/startup.php:236
+#: application/libraries/startup.php:237
 $lang['Translation'] = 'Translation';
 
-#: application/libraries/startup.php:237
+#: application/libraries/startup.php:238
 $lang['Tools/Maintenance'] = 'Tools/Maintenance';
 
-#: application/libraries/startup.php:239
+#: application/libraries/startup.php:240
 $lang['Plugin Config'] = 'Plugin Config';
 
-#: application/libraries/startup.php:244
+#: application/libraries/startup.php:245
 $lang['Shortcuts'] = 'Shortcuts';
 
-#: application/libraries/startup.php:245
+#: application/libraries/startup.php:246
 $lang['Add This Page'] = 'Add This Page';
 
-#: application/libraries/startup.php:272
+#: application/libraries/startup.php:273
 $lang['Upload'] = 'Upload';
 
-#: application/models/users.php:279
+#: application/models/users.php:282
 $lang['New user ad %s!'] = 'New user ad %s!';
 
-#: application/models/users.php:282
-#: application/models/users.php:328
+#: application/models/users.php:285
+#: application/models/users.php:331
 $lang['Hello %s,'] = 'Hello %s,';
 
-#: application/models/users.php:283
-#: application/models/users.php:329
+#: application/models/users.php:286
+#: application/models/users.php:332
 $lang['Welcome to %s!'] = 'Welcome to %s!';
 
-#: application/models/users.php:284
+#: application/models/users.php:287
 $lang['Here are your account details should you ever need them:'] = 'Here are your account details should you ever need them:';
 
-#: application/models/users.php:287
+#: application/models/users.php:290
 $lang['Group: %s'] = 'Group: %s';
 
-#: application/models/users.php:295
+#: application/models/users.php:298
 $lang['Ammount Paid: %s'] = 'Ammount Paid: %s';
 
-#: application/models/users.php:298
+#: application/models/users.php:301
 $lang['Billing Period: %s'] = 'Billing Period: %s';
 
-#: application/models/users.php:303
-#: application/models/users.php:332
+#: application/models/users.php:306
+#: application/models/users.php:335
 $lang['Thanks for joining our community!'] = 'Thanks for joining our community!';
 
-#: application/models/users.php:304
-#: application/models/users.php:333
+#: application/models/users.php:307
+#: application/models/users.php:336
 $lang['%s Administration'] = '%s Administration';
 
-#: application/models/users.php:325
+#: application/models/users.php:328
 $lang['New user at %s!'] = 'New user at %s!';
 
-#: application/models/users.php:330
+#: application/models/users.php:333
 $lang['Before you account is activated you need to pay using the following link. If you have already completed the payment process, please wait while we authorize your payment. Once complete you will recive a new email containg your details.'] = 'Before you account is activated you need to pay using the following link. If you have already completed the payment process, please wait while we authorize your payment. Once complete you will recive a new email containg your details.';
 
-#: application/models/users.php:331
+#: application/models/users.php:334
 $lang['Pay Here'] = 'Pay Here';
 
 /* End of file global_lang.php */

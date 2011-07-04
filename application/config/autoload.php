@@ -110,7 +110,7 @@ $autoload['language'] = array('global', 'html');
 |
 */
 
-$autoload['model'] = array('xu');
+$autoload['model'] = array();
 
 
 /* End of file autoload.php */

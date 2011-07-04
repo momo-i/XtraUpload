@@ -145,7 +145,7 @@ else
               return;
             }
             $.post(
-              '<?php echo site_url('upload/fileUploadProps'); ?>',
+              '<?php echo site_url('upload/file_upload_props'); ?>',
               {
                 fid: currentFileId,
                 password: fPass,

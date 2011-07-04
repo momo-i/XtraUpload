@@ -70,11 +70,13 @@ class Users extends CI_Model {
     {
 		if($this->session->userdata('id'))
 		{
+			log_message('debug', 'check_user_auth TRUE');
 			$this->load->vars(array('loggedin' => true));
 			$this->loggedin = true;
 		}
 		else
 		{
+			log_message('debug', 'check_user_auth FALSE');
 			$this->load->vars(array('loggedin' => false));
 			if(!stristr(uri_string(),'user/login'))
 			{
@@ -117,6 +119,7 @@ class Users extends CI_Model {
 	 */
 	public function user_logout()
     {
+		log_message('debug', 'User logouted.');
 		$this->session->sess_destroy();
 		return true;
     }

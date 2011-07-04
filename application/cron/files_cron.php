@@ -162,6 +162,7 @@ class Files_cron {
 		{
 			if (($file != 'index.php' && $file != '.gitignore' && $file != 'index.html' && $file != '.DS_Store' && $file != '.htaccess' && !is_dir(ROOTPATH.'/temp/' . $file)))
 			{
+				log_message('debug', "Removing $file");
 				unlink(ROOTPATH.'/temp/'.$file);
 			}
 		}

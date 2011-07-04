@@ -117,7 +117,7 @@ foreach ($users->result() as $user)
             {
               if(confirm('<?php echo lang('Are you sure you want to delete these users?'); ?>'))
               {
-                $('#userAdmin').attr('action', "<?php echo site_url('admin/user/massDelete/'.$query); ?>");
+                $('#userAdmin').attr('action', "<?php echo site_url('admin/user/mass_delete/'.$query); ?>");
                 $('#userAdmin').submit();
               }
             }
