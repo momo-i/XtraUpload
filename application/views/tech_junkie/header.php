@@ -1,11 +1,11 @@
 <?php
-if(!isset($headerTitle))
+if(!isset($header_title))
 {
-	$headerTitle = '';
+	$header_title = '';
 }
 else
 {
-	$headerTitle .= ' '.$this->startup->site_config['title_separator'].' ';
+	$header_title .= ' '.$this->startup->site_config['title_separator'].' ';
 }
 ?>
 <!DOCTYPE html>

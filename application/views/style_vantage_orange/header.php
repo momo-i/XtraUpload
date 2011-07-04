@@ -13,10 +13,12 @@ else
   <head>
     <meta charset="utf-8">
     <title><?php echo $header_title.$this->startup->site_config['sitename']?></title>
+    <meta name="robots" content="index, follow, noarchive">
+    <meta name="googlebot" content="noarchive">
     <link rel="shortcut icon" href="<?php echo base_url(); ?>favicon.ico">
-    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>css/main.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>css/citrus_island/citrus_island.css">
-    <!--[if lte IE 6]> 
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>?>css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>css/style_vantage_orange/style_vantage_orange.css">
+    <!--[if lte IE 6]>
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>css/ie6.css">
     <![endif]-->
     <script type="text/javascript">
@@ -35,7 +37,7 @@ if(isset($include_flash_upload_js) && $include_flash_upload_js === TRUE)
     <script src="<?php echo base_url(); ?>js/upload.js" type="text/javascript"></script>
 <?php
 }
-if(isset($include_url_upload_js) and $include_url_upload_js === TRUE)
+if(isset($include_url_upload_js) && $include_url_upload_js === TRUE)
 {
 ?>
     <script src="<?php echo base_url(); ?>js/url.js" type="text/javascript"></script>
@@ -47,23 +49,23 @@ if(isset($include_url_upload_js) and $include_url_upload_js === TRUE)
     <!-- wrap starts here -->
     <div id="wrap">
       <!--header starts-->
-      <div id="header">            
-        <h1 id="logo-text"><a href="<?php echo base_url(); ?>" title="home"><?php echo $this->startup->site_config['sitename']?></a></h1>
-        <p id="slogan"><?php echo $this->startup->site_config['slogan']?></p>
+      <div id="header">
+        <h1 id="logo-text"><?php echo $this->startup->site_config['sitename']; ?></h1>
+        <p id="slogan"><?php echo $this->startup->site_config['slogan']; ?></p>
         <!--
         <div id="top-menu">
-          <p><a href="index.html">rss feed</a> | <a href="index.html">contact</a> | <a href="index.html">login</a></p>
+            <p><a href="index.html">rss feed</a> | <a href="index.html">contact</a> | <a href="index.html">login</a></p>
         </div>
         -->
-        <!--header ends-->
+      <!--header ends-->
       </div>
       <!-- navigation starts-->
       <div id="nav">
         <ul>
           <?php echo $this->xu_api->menus->get_main_menu();?>
         </ul>
-      </div>
       <!-- navigation ends-->
+      </div>
       <!-- content starts -->
       <div id="content">
         <div id="main">
