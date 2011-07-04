@@ -667,6 +667,7 @@ $lang['The Captcha you submited was incorrect'] = 'The Captcha you submited was 
 #: application/views/default/home.php:10
 #: application/views/default/menu.php:35
 #: application/views/default/user/login.php:14
+#: application/views/tech_junkie/menu.php:36
 #: application/views/urban_artist/menu.php:35
 #: application/views/vector_lover/menu.php:36
 $lang['Login'] = 'Login';
@@ -691,6 +692,7 @@ $lang['Make Payment'] = 'Make Payment';
 
 #: application/views/citrus_island/menu.php:9
 #: application/views/default/menu.php:8
+#: application/views/tech_junkie/menu.php:9
 #: application/views/urban_artist/menu.php:8
 #: application/views/vector_lover/menu.php:9
 $lang['Manage Account'] = 'Manage Account';
@@ -709,6 +711,7 @@ $lang['New Password Confirmation'] = 'New Password Confirmation';
 #: application/views/default/menu.php:11
 #: application/views/default/user/password.php:9
 #: application/views/default/user/password.php:13
+#: application/views/tech_junkie/menu.php:14
 #: application/views/urban_artist/menu.php:11
 #: application/views/vector_lover/menu.php:14
 $lang['Change Password'] = 'Change Password';
@@ -763,18 +766,21 @@ $lang['MP3 Embed'] = 'MP3 Embed';
 
 #: application/views/citrus_island/footer.php:22
 #: application/views/default/footer.php:64
+#: application/views/tech_junkie/footer.php:71
 #: application/views/urban_artist/footer.php:23
 #: application/views/vector_lover/footer.php:22
 $lang['&copy; Copyright %s'] = '&copy; Copyright %s';
 
 #: application/views/citrus_island/footer.php:22
 #: application/views/default/footer.php:64
+#: application/views/tech_junkie/footer.php:71
 #: application/views/urban_artist/footer.php:23
 #: application/views/vector_lover/footer.php:22
 $lang['XtraFile'] = 'XtraFile';
 
 #: application/views/citrus_island/footer.php:24
 #: application/views/default/footer.php:65
+#: application/views/tech_junkie/footer.php:73
 #: application/views/urban_artist/footer.php:25
 #: application/views/vector_lover/footer.php:24
 $lang['Design By: %s'] = 'Design By: %s';
@@ -782,30 +788,35 @@ $lang['Design By: %s'] = 'Design By: %s';
 #: application/views/citrus_island/footer.php:26
 #: application/views/default/admin/home.php:228
 #: application/views/default/footer.php:68
+#: application/views/tech_junkie/footer.php:75
 #: application/views/urban_artist/footer.php:27
 #: application/views/vector_lover/footer.php:26
 $lang['Valid'] = 'Valid';
 
 #: application/views/citrus_island/footer.php:28
 #: application/views/default/footer.php:70
+#: application/views/tech_junkie/footer.php:77
 #: application/views/urban_artist/footer.php:33
 #: application/views/vector_lover/footer.php:28
 $lang['Debug Info'] = 'Debug Info';
 
 #: application/views/citrus_island/footer.php:30
 #: application/views/default/footer.php:72
+#: application/views/tech_junkie/footer.php:79
 #: application/views/urban_artist/footer.php:35
 #: application/views/vector_lover/footer.php:30
 $lang['Execution Time: %s sec'] = 'Execution Time: %s sec';
 
 #: application/views/citrus_island/footer.php:32
 #: application/views/default/footer.php:73
+#: application/views/tech_junkie/footer.php:81
 #: application/views/urban_artist/footer.php:36
 #: application/views/vector_lover/footer.php:32
 $lang['Memory Usage: %d KB'] = 'Memory Usage: %d KB';
 
 #: application/views/citrus_island/menu.php:5
 #: application/views/default/menu.php:5
+#: application/views/tech_junkie/menu.php:5
 #: application/views/urban_artist/menu.php:5
 #: application/views/vector_lover/menu.php:5
 $lang['Welcome %s!'] = 'Welcome %s!';
@@ -814,12 +825,14 @@ $lang['Welcome %s!'] = 'Welcome %s!';
 #: application/views/default/admin/menu.php:19
 #: application/views/default/menu.php:14
 #: application/views/default/user/logout.php:3
+#: application/views/tech_junkie/menu.php:19
 #: application/views/urban_artist/menu.php:14
 #: application/views/vector_lover/menu.php:19
 $lang['Logout'] = 'Logout';
 
 #: application/views/citrus_island/menu.php:28
 #: application/views/default/menu.php:22
+#: application/views/tech_junkie/menu.php:28
 #: application/views/urban_artist/menu.php:22
 #: application/views/vector_lover/menu.php:28
 $lang['Member Login'] = 'Member Login';
@@ -829,6 +842,7 @@ $lang['Member Login'] = 'Member Login';
 #: application/views/default/user/login.php:10
 #: application/views/default/user/manage.php:15
 #: application/views/install/step5.php:54
+#: application/views/tech_junkie/menu.php:32
 #: application/views/urban_artist/menu.php:27
 #: application/views/vector_lover/menu.php:32
 $lang['Username:'] = 'Username:';
@@ -838,30 +852,35 @@ $lang['Username:'] = 'Username:';
 #: application/views/default/menu.php:31
 #: application/views/default/user/login.php:12
 #: application/views/install/step5.php:55
+#: application/views/tech_junkie/menu.php:34
 #: application/views/urban_artist/menu.php:31
 #: application/views/vector_lover/menu.php:34
 $lang['Password:'] = 'Password:';
 
 #: application/views/citrus_island/menu.php:42
 #: application/views/default/menu.php:40
+#: application/views/tech_junkie/menu.php:42
 #: application/views/urban_artist/menu.php:40
 #: application/views/vector_lover/menu.php:42
 $lang['Forgot Your Password?'] = 'Forgot Your Password?';
 
 #: application/views/citrus_island/menu.php:47
 #: application/views/default/menu.php:43
+#: application/views/tech_junkie/menu.php:47
 #: application/views/urban_artist/menu.php:43
 #: application/views/vector_lover/menu.php:47
 $lang['New? Register Here!'] = 'New? Register Here!';
 
 #: application/views/citrus_island/menu.php:59
 #: application/views/default/footer.php:27
+#: application/views/tech_junkie/footer.php:28
 #: application/views/urban_artist/menu.php:54
 #: application/views/vector_lover/menu.php:59
 $lang['Recently Uploaded Files'] = 'Recently Uploaded Files';
 
 #: application/views/citrus_island/menu.php:80
 #: application/views/default/footer.php:51
+#: application/views/tech_junkie/footer.php:54
 #: application/views/urban_artist/menu.php:75
 #: application/views/vector_lover/menu.php:80
 $lang['About'] = 'About';
@@ -871,6 +890,8 @@ $lang['About'] = 'About';
 #: application/views/citrus_island/menu.php:87
 #: application/views/default/footer.php:54
 #: application/views/default/footer.php:57
+#: application/views/tech_junkie/footer.php:57
+#: application/views/tech_junkie/footer.php:60
 #: application/views/urban_artist/menu.php:78
 #: application/views/urban_artist/menu.php:79
 #: application/views/urban_artist/menu.php:82
@@ -881,48 +902,56 @@ $lang['XtraUpload v3'] = 'XtraUpload v3';
 
 #: application/views/citrus_island/menu.php:84
 #: application/views/default/footer.php:54
+#: application/views/tech_junkie/footer.php:57
 #: application/views/urban_artist/menu.php:79
 #: application/views/vector_lover/menu.php:84
 $lang['%s is a next generation file hosting solution, blurring the lines between file hosting and ease of use.'] = '%s is a next generation file hosting solution, blurring the lines between file hosting and ease of use.';
 
 #: application/views/citrus_island/menu.php:85
 #: application/views/default/footer.php:55
+#: application/views/tech_junkie/footer.php:58
 #: application/views/urban_artist/menu.php:80
 #: application/views/vector_lover/menu.php:85
 $lang['Our revolutionary flash-based file uploader technology gets what you want done.'] = 'Our revolutionary flash-based file uploader technology gets what you want done.';
 
 #: application/views/citrus_island/menu.php:86
 #: application/views/default/footer.php:56
+#: application/views/tech_junkie/footer.php:59
 #: application/views/urban_artist/menu.php:81
 #: application/views/vector_lover/menu.php:86
 $lang['Upload up to 500 files at once, and get links to them all on the same page.'] = 'Upload up to 500 files at once, and get links to them all on the same page.';
 
 #: application/views/citrus_island/menu.php:87
 #: application/views/default/footer.php:57
+#: application/views/tech_junkie/footer.php:60
 #: application/views/urban_artist/menu.php:82
 #: application/views/vector_lover/menu.php:87
 $lang['%s is also pushing the envelope on extensibility. Built on the wonderful'] = '%s is also pushing the envelope on extensibility. Built on the wonderful';
 
 #: application/views/citrus_island/menu.php:88
 #: application/views/default/footer.php:58
+#: application/views/tech_junkie/footer.php:61
 #: application/views/urban_artist/menu.php:83
 #: application/views/vector_lover/menu.php:88
 $lang['CodeIgniter'] = 'CodeIgniter';
 
 #: application/views/citrus_island/menu.php:89
 #: application/views/default/footer.php:59
+#: application/views/tech_junkie/footer.php:62
 #: application/views/urban_artist/menu.php:84
 #: application/views/vector_lover/menu.php:89
 $lang['PHP Framework, XtraUpload is fully OpenSource and extendable.'] = 'PHP Framework, XtraUpload is fully OpenSource and extendable.';
 
 #: application/views/citrus_island/menu.php:90
 #: application/views/default/footer.php:60
+#: application/views/tech_junkie/footer.php:63
 #: application/views/urban_artist/menu.php:85
 #: application/views/vector_lover/menu.php:90
 $lang['The documentation is extensive, concise, and clear.'] = 'The documentation is extensive, concise, and clear.';
 
 #: application/views/citrus_island/menu.php:91
 #: application/views/default/footer.php:61
+#: application/views/tech_junkie/footer.php:64
 #: application/views/urban_artist/menu.php:86
 #: application/views/vector_lover/menu.php:91
 $lang['Database abstraction, page caching, configurable downloads, secure file storage, secure file links, and so much more combine to create the new leader in file hosting technology, XtraUpload. Oh, and its Free.'] = 'Database abstraction, page caching, configurable downloads, secure file storage, secure file links, and so much more combine to create the new leader in file hosting technology, XtraUpload. Oh, and its Free.';
