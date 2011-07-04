@@ -2,7 +2,7 @@
           <img src="<?php echo base_url(); ?>img/other/images_32.png" class="nb" alt="">
           <?php echo lang('Image Gallery') ?> 
         </h2>
-        <h3><?php echo lang('mage_gallys_view_') ?><?php echo $gall->name; ?></h3>
+        <h3><?php echo lang('Name'); ?>: <?php echo $gall->name; ?></h3>
         <pre><code><?php echo $gall->descr; ?></code></pre>
         <div id="gall">
 <?php

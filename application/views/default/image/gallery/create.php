@@ -15,7 +15,7 @@ if($files->num_rows() == 0)
 else
 {
 ?>
-        <form action="<?php echo site_url('image/processNewGallery'); ?>" method="post">
+        <form action="<?php echo site_url('image/process_new_gallery'); ?>" method="post">
           <p>
             <label for="name"><?php echo lang('Name:'); ?></label>
             <input id="name" size="75" type="text" name="name">
