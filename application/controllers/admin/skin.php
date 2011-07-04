@@ -56,12 +56,12 @@ class Skin extends CI_Controller {
 
 	public function install_new()
 	{
-		if ($handle = opendir('system/application/views'))
+		if ($handle = opendir(APPPATH.'views'))
 		{
 			$i = 0;
 			while (false !== ($file = readdir($handle)))
 			{
-				if (($file != "." && $file != ".." && $file != ".svn" && $file != "_protected") && is_dir('system/application/views/'.$file))
+				if (($file != "." && $file != ".." && $file != ".svn" && $file != "_protected") && is_dir(APPPATH.'views/'.$file))
 				{
 					$skin = $this->db->get_where('skin', array('name' => $file));
 					if($skin->num_rows() == '0')
@@ -107,7 +107,7 @@ class Skin extends CI_Controller {
 
 	private function _new_skins_to_install()
 	{
-		if ($handle = opendir('./system/application/views/'))
+		if ($handle = opendir(APPPATH.'views/'))
 		{
 			$i = 0;
 			while (false !== ($file = readdir($handle)))

@@ -430,7 +430,7 @@ class User extends CI_Controller {
 			array(
 				'field' => 'oldpassword',
 				'label' => lang('Old Password'),
-				'rules' => 'trim|required|min_length[4]|callback__password_check'
+				'rules' => 'trim|required|min_length[4]|callback_password_check'
 			),
 			array(
 				'field' => 'newpassword',
@@ -475,7 +475,7 @@ class User extends CI_Controller {
 		}
 		else
 		{
-			$this->_passwordUpdate();
+			$this->_password_update();
 		}
 	}
 
@@ -618,7 +618,7 @@ class User extends CI_Controller {
 		}
 	}
 
-	private function _password_check($str)
+	public function password_check($str)
 	{
 		$data =  array(
 			'username' => $this->session->userdata('username'),

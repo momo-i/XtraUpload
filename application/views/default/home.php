@@ -148,7 +148,7 @@ else
           <div id="filesHidden" style="display:none"></div>
           <script type="text/javascript">
             //<![CDATA[
-            var fileObj = new Array();
+            var file_obj = new Array();
             var prevFile = false;
             var fileToBig = false;
             var fileNotAllowed = false;

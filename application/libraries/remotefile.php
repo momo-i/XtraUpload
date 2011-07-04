@@ -216,13 +216,13 @@ class CI_Remotefile {
 		
 		
 		$i = $p = 0;
-		$endHeaders = false;
+		$end_headers = false;
 		$rstr='';
 		// download the file
 		while(!feof($sh))
 		{
 			$string = fread($sh, $this->buffer);
-			if(!$endHeaders)
+			if(!$end_headers)
 			{
 				if($test = stristr($string, "\r\n\r\n"))
 				{
@@ -236,7 +236,7 @@ class CI_Remotefile {
 						$this->CI->db->update('progress', array('total' => $size));
 					}
 					$string = str_replace("\r\n\r\n", '', $test);
-					$endHeaders = true;
+					$end_headers = true;
 				}
 				else
 				{

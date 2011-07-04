@@ -49,7 +49,7 @@ class Folders extends CI_Controller {
 		$per_page = 50;
 
 		$config['base_url'] = site_url('admin/folders/view');
-		$config['total_rows'] = $this->folders_db->getNumFolders();
+		$config['total_rows'] = $this->folders_db->get_num_folders();
 		$config['per_page'] = $per_page;
 		$config['uri_segment'] = 4;
 		$this->pagination->initialize($config);

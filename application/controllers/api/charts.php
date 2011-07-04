@@ -89,7 +89,7 @@ class Charts extends CI_Controller {
         $this->load->view($this->startup->skin.'/api/charts/total_new_users_weekly', array('width' => $width, 'height' => $height));
     }
 
-public function uploads_weekly($height=300,$width=300,$ignore='')
+	public function uploads_weekly($height=300,$width=300,$ignore='')
     {
         $this->load->view($this->startup->skin.'/api/charts/uploads_weekly', array('width' => $width, 'height' => $height));
     }

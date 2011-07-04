@@ -148,10 +148,10 @@ class Image extends CI_Controller {
 		$files = $this->input->post('files');
 		foreach($files as $file)
 		{
-			$fileObj = $this->files_db->_get_file_object($file);
-			$image = $this->files_db->get_image_links($fileObj->file_id);
+			$file_obj = $this->files_db->_get_file_object($file);
+			$image = $this->files_db->get_image_links($file_obj->file_id);
 
-			$this->db->insert('g_items', array('gid' => $gid, 'thumb' => $image['thumb_url'], 'direct' => $image['direct_url'], 'view' => $image['img_url'], 'fid' => $fileObj->file_id));
+			$this->db->insert('g_items', array('gid' => $gid, 'thumb' => $image['thumb_url'], 'direct' => $image['direct_url'], 'view' => $image['img_url'], 'fid' => $file_obj->file_id));
 		}
 
 		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Create Image Gallery').' '.$this->startup->site_config['title_separator'].' '.lang('Done')));

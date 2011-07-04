@@ -76,7 +76,7 @@ class Users extends CI_Model {
 		else
 		{
 			$this->load->vars(array('loggedin' => false));
-			if(!stristr($this->uri->uri_string(),'/user/login'))
+			if(!stristr(uri_string(),'user/login'))
 			{
 				// Force all users to login by uncommenting the following line
 				//redirect('/user/login');

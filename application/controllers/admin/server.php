@@ -277,7 +277,7 @@ class Server extends CI_Controller {
 	public function delete($id)
 	{
 		$this->session->set_flashdata('msg', lang('Server removed'));
-		$this->server_db->deleteServer($id);
+		$this->server_db->delete_server($id);
 		redirect('admin/server/view');
 	}
 }

@@ -88,7 +88,7 @@ class TwoCo extends PaymentGateway
     {
         foreach ($_POST as $field=>$value)
         {
-            $this->ipn_data["$field"] = $value;
+            $this->ipn_data[$field] = $value;
         }
 
         $vendor_number   = ($this->ipn_data["vendor_number"] != '') ? $this->ipn_data["vendor_number"] : $this->ipn_data["sid"];

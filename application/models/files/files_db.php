@@ -212,19 +212,19 @@ class Files_db extends CI_Model {
 		return $query;
 	}
 	
-	public function get_links($secid, $fileObject=false)
+	public function get_links($secid, $file_object=false)
 	{
 		$links = array();
 		
 		// Use provided file object
-		if($fileObject)
+		if($file_object)
 		{
-			$links['down'] = site_url('/files/get/'.$fileObject->file_id.'/'.$fileObject->link_name);
-			$links['del'] = site_url('/files/delete/'.$fileObject->file_id.'/'.$fileObject->secid.'/'.$fileObject->link_name);
+			$links['down'] = site_url('/files/get/'.$file_object->file_id.'/'.$file_object->link_name);
+			$links['del'] = site_url('/files/delete/'.$file_object->file_id.'/'.$file_object->secid.'/'.$file_object->link_name);
 			
-			if($fileObject->is_image)
+			if($file_object->is_image)
 			{
-				$links['img'] = site_url('/image/links/'.$fileObject->file_id.'/'.$fileObject->link_name);
+				$links['img'] = site_url('/image/links/'.$file_object->file_id.'/'.$file_object->link_name);
 			}
 			$links = $this->xu_api->hooks->run_hooks('files_db::get_links', $links);
 			return $links;
@@ -429,8 +429,7 @@ class Files_db extends CI_Model {
 		}
 		
 		log_message('debug', "File uploaded to User Group: ".$this->startup->group_config->name);
-		
-		
+
 		// Generate an awesome file_id for our new friend
 		$file_id = $this->functions->get_rand_id();
 		
@@ -438,12 +437,12 @@ class Files_db extends CI_Model {
 		{
 			$user = '';
 		}
-			
+
 		// Has the file been uploaded before?
-		$realFile = $this->db->select('id, type, is_image')->get_where('files', array('md5' => $md5));
-		if($realFile->num_rows() == 0)
+		$real_file = $this->db->select('id, type, is_image')->get_where('files', array('md5' => $md5));
+		if($real_file->num_rows() == 0)
 		{// Nope, original content!
-			
+
 			// Get some file information
 			$type =  str_replace('.','',strtolower(strrchr(basename($file), '.')));
 			$rType =  str_replace('.','',strrchr(basename($file), '.'));
@@ -491,15 +490,15 @@ class Files_db extends CI_Model {
 				'prefix' => $prefix
 			);
 			$this->db->insert('files', $data); unset($data);
-			$fileLinkId = $this->db->insert_id();
+			$file_link_id = $this->db->insert_id();
 		}
 		else
 		{
 			// Oops, we have a dupe. Lets save the user some trouble and not tell them, mmmk?
-			$fileObj = $realFile->row();
-			$type = $fileObj->type;
-			$fileLinkId = $fileObj->id;
-			$is_image = $fileObj->is_image;
+			$file_obj = $real_file->row();
+			$type = $file_obj->type;
+			$file_link_id = $file_obj->id;
+			$is_image = $file_obj->is_image;
 			@unlink($file);
 		}
 		
@@ -514,7 +513,7 @@ class Files_db extends CI_Model {
 		$data = array(
 			'o_filename' => basename($file), 
 			'file_id' => $file_id,
-			'link_id' => $fileLinkId,
+			'link_id' => $file_link_id,
 			'status' => 1,
 			'type' => $type,
 			'is_image' => $is_image,

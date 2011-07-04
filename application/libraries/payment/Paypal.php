@@ -77,7 +77,7 @@ class Paypal extends PaymentGateway
 
 		foreach ($_POST as $field=>$value)
 		{
-			$this->ipn_data["$field"] = $value;
+			$this->ipn_data[$field] = $value;
 			$post_string .= $field .'=' . urlencode(stripslashes($value)) . '&';
 		}
 

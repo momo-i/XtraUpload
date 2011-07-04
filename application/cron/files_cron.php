@@ -114,7 +114,7 @@ class Files_cron {
 					echo "DELETE DEBUG _prune_expired_files -> ".$file->last_download." < ".(time() - (3600 * 24 * $group->file_expire))." -> ".ROOTPATH.'/filestore/'.$file->prefix.'/'.$file->filename."<br />\n";
 				}
 
-				$this->CI->files_db->deleteFile($file->file_id, $file->secid, $file->link_name);
+				$this->CI->files_db->delete_file($file->file_id, $file->secid, $file->link_name);
 			}
 		}
 	}

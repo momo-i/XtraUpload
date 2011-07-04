@@ -128,7 +128,7 @@ class Functions {
 	
 	public function get_file_type_icon($type)
 	{
-		if(file_exists('./img/files/'.$type.'.png'))
+		if(file_exists(ROOTPATH.'/img/files/'.$type.'.png'))
 		{
 			return $type.'.png';
 		}
@@ -196,7 +196,6 @@ class Functions {
 				{
 					$version .= ' [STABLE]';
 				}
-				
 			}
 		}
 		return $version;

@@ -297,7 +297,7 @@ class Files extends CI_Controller {
 		$code = $this->xu_api->embed->get_embed_code($file->type);
 		if(is_array($code))
 		{
-			$serv = $this->server_db->get_serverForDownload($file);
+			$serv = $this->server_db->get_server_for_download($file);
 
 			if($serv != base_url())
 			{
@@ -472,7 +472,7 @@ class Files extends CI_Controller {
 	{
 		if($this->files_db->file_exists($id, $secid))
 		{
-			$this->files_db->deleteFile($id, $secid, $name);
+			$this->files_db->delete_file($id, $secid, $name);
 			$this->session->set_flashdata('msg', lang('File Deleted'));
 			if($this->session->userdata('id'))
 			{
@@ -576,9 +576,9 @@ class Files extends CI_Controller {
 			'time'	  => time()
 		);
 
-		if($file->direct and !$this1->startup->group_config->auto_download)
+		if($file->direct && !$this1->startup->group_config->auto_download)
 		{
-			$this1->files_db->editPremiumBandwith($file->file_id, $dl_obj->bandwidth);
+			$this1->files_db->edit_premium_bandwith($file->file_id, $dl_obj->bandwidth);
 		}
 
 		$this1->db->insert('downloads', $data);
@@ -592,7 +592,7 @@ class Files extends CI_Controller {
 		{
 			foreach($this->input->post('files') as $id)
 			{
-				$this->files_db->deleteFileUser($id, $this->session->userdata('id'));
+				$this->files_db->delete_file_user($id, $this->session->userdata('id'));
 			}
 
 			$this->session->set_flashdata('msg', sprintf(lang('%d File(s) have been deleted'), count($this->input->post('files'))));
