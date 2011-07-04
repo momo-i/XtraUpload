@@ -30,8 +30,8 @@ else
           <?php printf(lang('Execution Time: %s sec'), $this->benchmark->elapsed_time()); ?> 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <?php printf(lang('Memory Usage: %d KB'), round(memory_get_usage() / 1024)); ?> 
-        </span>
-      </p>     
+         </span>
+        </p>
       <!-- footer ends-->
       </div>
     <!-- wrap ends here -->
