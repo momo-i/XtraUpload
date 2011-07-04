@@ -16,6 +16,7 @@ class Startup {
 
 	public function __construct()
 	{
+		log_message('debug', "Startup Class Initialized");
 		// Define the path to the cache folder
 		define('CACHEPATH', APPPATH.'cache/');
 

@@ -23,8 +23,8 @@ else
     <![endif]-->
     <script type="text/javascript">
       //<![CDATA[
-      function ___imageClose(){return '<?php echo base_url(); ?>'images/lightbox-btn-close.gif';}
-      function ___imageLoading(){return '<?php echo base_url(); ?>'images/loading.gif';}
+      function ___imageClose(){return '<?php echo base_url(); ?>images/lightbox-btn-close.gif';}
+      function ___imageLoading(){return '<?php echo base_url(); ?>images/loading.gif';}
       function ___baseUrl(){return '<?php echo base_url(); ?>';}
       function ___siteUrl(){return '<?php echo site_url(); ?>';}
       //--]]>
