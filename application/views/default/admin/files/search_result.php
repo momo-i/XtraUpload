@@ -63,7 +63,7 @@ foreach ($files->result() as $file)
                 <?php echo $this->functions->get_filesize_prefix($file->size); ?> 
               </td>
               <td>
-                <?php echo unix_to_human($file->time); //echo unix_to_small($file->time); ?> 
+                <?php echo unix_to_small($file->time); ?> 
               </td>
               <td>
                 <a title=<?php echo lang("Delete This File"); ?> onclick="return confirm('<?php echo lang('Are you sure you want to delete this file?'); ?>')" href="<?php echo site_url('admin/files/delete/'.$file->file_id); ?>">

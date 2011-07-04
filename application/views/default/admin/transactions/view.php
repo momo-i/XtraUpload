@@ -39,7 +39,7 @@ foreach ($transactions->result() as $transaction)
               <?php echo $gate->display_name; ?>
             </td>
             <td>
-              <?php echo unix_to_human($transaction->time); //unix_to_small($transaction->time)?>
+              <?php echo unix_to_small($transaction->time)?>
             </td>
             <td>
 <?php

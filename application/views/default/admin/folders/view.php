@@ -32,7 +32,7 @@ foreach ($files->result() as $file)
               <?php echo $this->functions->get_filesize_prefix($file->size); ?> 
             </td>
             <td>
-              <?php echo unix_to_human($file->time); //unix_to_small($file->time); ?>
+              <?php echo unix_to_small($file->time); ?>
             </td>
             <td>
               <a title="<?php echo lang('Edit This File'); ?>" href="<?=site_url('admin/files/edit/'.$file->file_id); ?>">

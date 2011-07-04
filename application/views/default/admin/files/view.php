@@ -59,7 +59,7 @@ foreach ($files->result() as $file)
                 <?php echo $this->functions->get_filesize_prefix($file->size); ?> 
               </td>
               <td>
-                <?php echo unix_to_human($file->time); // echo unix_to_small($file->time); ?> 
+                <?php echo unix_to_small($file->time); ?> 
               </td>
               <td>
                 <a title="<?php echo lang('Edit This File'); ?>" href="<?php echo site_url('admin/files/edit/'.$file->file_id); ?>"><img src="<?php echo base_url(); ?>img/icons/edit_16.png" class="nb" alt="Edit"></a>
