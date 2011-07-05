@@ -162,7 +162,7 @@ class Step5 extends CI_Controller {
 
 		// Main Settings => 0
 		// INSERT initnal data
-		$data = array('id' => NULL,'name' => 'sitename','value' => 'XtraUpload v2','description1' => 'Site Name:','description2' => '(Site Name)','group' => 0,'type' => 'text','invincible' => 1);
+		$data = array('id' => NULL,'name' => 'sitename','value' => 'XtraUpload v3','description1' => 'Site Name:','description2' => '(Site Name)','group' => 0,'type' => 'text','invincible' => 1);
 		$this->db->insert('config', $data);
 
 		$data = array('id' => NULL,'name' => 'slogan','value' => 'Preview','description1' => 'Your Site Slogan','description2' => '','group' => 0,'type' => 'text','invincible' => 1);

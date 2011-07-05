@@ -10,7 +10,7 @@ foreach ($configs->result() as $config)
 {
 ?>
             <tr <?php echo alternator('class="odd"', 'class="even"'); ?>>
-              <td width="150"><?php echo $config->description1; ?></td>
+              <td width="150"><?php echo $this->lang->line($config->description1); ?></td>
               <td width="350">
 <?php
 	if($config->type == 'text')
@@ -18,7 +18,7 @@ foreach ($configs->result() as $config)
 ?>
                 <input type="text" name="<?php echo $config->name; ?>" id="<?php echo $config->name; ?>" value="<?php echo $config->value; ?>">
                 <img src="<?php echo base_url(); ?>img/icons/about_16.png" style="cursor:pointer" onclick="$('#d_<?php echo $config->name; ?>').slideToggle()" class="nb">
-                <span style="display:none" id="d_<?php echo $config->name; ?>"><?php echo $config->description2; ?></span>
+                <span style="display:none" id="d_<?php echo $config->name; ?>"><?php echo $this->lang->line($config->description2); ?></span>
 <?php
 	}
 	elseif($config->type == 'box')
@@ -46,7 +46,7 @@ foreach ($configs->result() as $config)
 	}
 	else
 	{
-		$description = $config->description2;
+		$description = lang($config->description2);
 		$description = explode('|-|',$description);
 		$checked1 = ($config->value == '1') ? ' checked="checked"' : "";
 		$checked2 = ($config->value == '0') ? ' checked="checked"' : "";
