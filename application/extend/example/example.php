@@ -5,8 +5,9 @@ class Example extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->xu_api->menus->add_admin_menu_link('admin/example/manage', lang('Example'), base_url().'img/other/plugin_16.png');
-		$this->xu_api->menus->add_admin_menu_link('example', lang('Example'), base_url().'img/other/plugin_16.png');
+		$id = $this->xu_api->menus->add_admin_menu(lang('Example'));
+		$this->xu_api->menus->add_admin_menu_link($id, 'admin/example/manage', lang('Example Manage'), base_url().'img/other/plugin_16.png');
+		$this->xu_api->menus->add_admin_menu_link($id, 'example', lang('Example'), base_url().'img/other/plugin_16.png');
 	}
 
 	public function install()
@@ -35,6 +36,11 @@ class Example extends CI_Model {
 		$this->load->dbforge();
 		$this->dbforge->drop_table('example');
 		return;
+	}
+
+	public function assign_libraries()
+	{
+		return true;
 	}
 }
 

@@ -1201,7 +1201,7 @@ class XU_Loader extends CI_Loader {
 		$extention = ucfirst($extention);
 
 		$CI->$name = new $extention();
-		$CI->$name->_assign_libraries();
+		$CI->$name->assign_libraries();
 
 		$this->_ci_models[] = $name;
 	}

@@ -40,6 +40,7 @@ foreach ($installed as $name => $plugin)
 	}
 	if($this->startup->site_config->allow_version_check && isset($plugin->version->latest_link))
 	{
+		$this->load->helper('admin/version');
 		$latest_version = check_version($plugin->version->latest_link);
 		if($plugin->version->local < $latest_version && $latest_version != false)
 		{
