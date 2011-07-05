@@ -34,6 +34,7 @@ class Extend extends CI_Controller {
 		$this->load->model('admin_access');
 		$this->load->helper('string');
 		$this->load->helper('text');
+		log_message('debug', 'Extend Controller Initialized');
 	}
 
 	public function index()
@@ -51,12 +52,12 @@ class Extend extends CI_Controller {
 
 		foreach($this->installed as $name)
 		{
-			$data['installed'][$name] = simplexml_load_file(APPPATH."extend/".$name."/main.xml");
+			$data['installed'][$name] = simplexml_load_file(APPPATH."extend/".$name."/".$name.".xml");
 		}
 
 		foreach($this->not_installed as $name)
 		{
-			$data['not_installed'][$name] = simplexml_load_file(APPPATH."extend/".$name."/main.xml");
+			$data['not_installed'][$name] = simplexml_load_file(APPPATH."extend/".$name."/".$name.".xml");
 		}
 
 		$data['flash_message'] = '';
@@ -74,11 +75,13 @@ class Extend extends CI_Controller {
 
 	public function install($name)
 	{
+		log_message('debug', "Install Plugin $name Start.");
 		$name = str_replace(array('../', '..'), '', $name);
 		$num_rows = $this->db->get_where('extend', array('file_name' => $name))->num_rows();
-		if(file_exists(APPPATH."extend/".$name.'/main.php') && file_exists(APPPATH."extend/".$name."/main.xml") && $num_rows == 0)
+		if(file_exists(APPPATH."extend/".$name.'/'.$name.'.php') && file_exists(APPPATH."extend/".$name."/".$name.".xml") && $num_rows == 0)
 		{
-			$xml = simplexml_load_file(APPPATH."extend/".$name."/main.xml");
+			log_message('debug', "Parsing Plugin.");
+			$xml = simplexml_load_file(APPPATH."extend/".$name."/".$name.".xml");
 			$data = array(
 				'data' => serialize($xml),
 				'file_name' => $name,

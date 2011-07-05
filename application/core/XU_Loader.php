@@ -1120,6 +1120,91 @@ class XU_Loader extends CI_Loader {
 		}
 	}
 
+	/**
+	 * Extention Loader
+	 *
+	 * This function lets users load and instantiate extentions.
+	 *
+	 * @access	public
+	 * @param	string  the name of the class
+	 * @param	string  name for the extention
+	 * @param	bool	database connection
+	 * @return	void
+	 */
+	public function extention($extention, $name = '', $db_conn = FALSE)
+	{
+		if (is_array($extention))
+		{
+			foreach($extention as $babe)
+			{
+				$this->extention($babe);
+			}
+			return;
+		}
+
+		if ($extention == '')
+		{
+			return;
+		}
+
+		// Is the model in a sub-folder? If so, parse out the filename and path.
+		if (strpos($extention, '/') === FALSE)
+		{
+			$path = '';
+		}
+		else
+		{
+			$x = explode('/', $extention);
+			$extention = end($x);
+			unset($x[count($x)-1]);
+			$path = implode('/', $x).'/';
+		}
+
+		if ($name == '')
+		{
+			$name = $extention;
+		}
+
+		if (in_array($name, $this->_ci_models, TRUE))
+		{
+			return;
+		}
+
+		$CI =& get_instance();
+		if (isset($CI->$name))
+		{
+			show_error('The extention name you are loading is the name of a resource that is already being used: '.$name);
+		}
+
+		$extention = strtolower($extention);
+
+		if ( ! file_exists(APPPATH.'extend/'.$path.$extention.'/'.$extention.EXT))
+		{
+			show_error('Unable to locate the extention you have specified: '.$extention);
+		}
+
+		if ($db_conn !== FALSE AND ! class_exists('CI_DB'))
+		{
+			if ($db_conn === TRUE)
+				$db_conn = '';
+
+			$CI->load->database($db_conn, FALSE, TRUE);
+		}
+
+		if ( ! class_exists('Model'))
+		{
+			load_class('Model', FALSE);
+		}
+
+		require_once(APPPATH.'extend/'.$path.$extention.'/'.$extention.EXT);
+
+		$extention = ucfirst($extention);
+
+		$CI->$name = new $extention();
+		$CI->$name->_assign_libraries();
+
+		$this->_ci_models[] = $name;
+	}
 
 }
 

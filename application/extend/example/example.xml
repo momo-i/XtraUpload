@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xu_extend version="1.1">
+	<name>Example Plugin</name>
+	<date>1221200127</date>
+	<version>
+		<latest_link>http://localhost</latest_link>
+		<download_link>http://localhost</download_link>
+		<local>1.0.0,0.0.0.1</local>
+	</version>
+	
+	<description>This is a very simple Example Plugins.</description>
+	<link>http://localhost/</link>
+	<author>
+		<name>momo-i</name>
+		<link>http://localhost/</link>
+	</author>
+	<image>
+		<width>48</width>
+		<height>48</height>
+		<link>img/icons/applications_48.png</link>
+		<alt>applications</alt>
+	</image>
+</xu_extend>
