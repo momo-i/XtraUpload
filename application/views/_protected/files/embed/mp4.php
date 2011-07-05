@@ -12,11 +12,13 @@
   </head>
   <body>
     <video id="player2" src="<?php echo site_url('files/stream/'.$file->file_id.'/'.md5($this->config->config['encryption_key'].$file->file_id.$this->input->ip_address()).'/'.$file->link_name); ?>" controls="controls" width="470" height="320" preload="none" type="video/mp4"></video> 
+    <span id="player2-mode"></span>
     <script type="text/javascript">
       //<![CDATA[
-      $('video').mediaelementplayer({
-        defaultVideoWidth: 470,
-        defaultVideoHeight: 320,
+      $('audio,video').mediaelementplayer({
+        success: function(player, node) {
+          $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+        }
       });
       //--]]>
     </script>

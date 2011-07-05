@@ -124,6 +124,7 @@ if($this->startup->site_config['show_preview'] && $this->xu_api->embed->get_embe
 			$icon = 'music';
 		break;
 		case 'flv':
+		case 'mp4':
 			$icon = 'tv';
 		break;
 		default:
@@ -137,7 +138,7 @@ if($this->startup->site_config['show_preview'] && $this->xu_api->embed->get_embe
           <a href="javascript:;" onclick="$('#<?php echo $file->type; ?>_embed_code').slideToggle('normal')">
             <img src="<?php echo base_url(); ?>img/icons/add_16.png" class="nb" alt=""> <?php echo lang('Get Embed Code'); ?>
           </a><br>
-          <input style="display:none" id="<?php echo $file->type; ?>_embed_code" type="text" size="60" onclick="this.select();" onfocus="this.select()" value="<iframe src="<?php echo site_url('files/embed/'.$file->type.'/'.$file->file_id); ?>" width="<?php echo $embed['width']; ?>" height="<?php echo $embed['height']; ?>" scrolling="no" frameborder="0"></iframe>">
+          <input style="display:none" id="<?php echo $file->type; ?>_embed_code" type="text" size="60" onclick="this.select();" onfocus="this.select()" value="<iframe src='<?php echo site_url('files/embed/'.$file->type.'/'.$file->file_id); ?>' width='<?php echo $embed['width']; ?>' height='<?php echo $embed['height']; ?>' scrolling='no' frameborder='0'></iframe>">
         </p>
 <?php
 }

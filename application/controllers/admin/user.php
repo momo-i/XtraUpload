@@ -352,7 +352,7 @@ class User extends CI_Controller {
 
 	public function check_user()
 	{
-		$query = $this->db->getwhere('users', array('username' => $this->input->post('username')));
+		$query = $this->db->get_where('users', array('username' => $this->input->post('username')));
 		$num = $query->num_rows();
 		if($num != 1)
 		{
