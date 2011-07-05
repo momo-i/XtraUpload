@@ -118,16 +118,30 @@ $tags = array_map('ucwords', $tags);
 if($this->startup->site_config['show_preview'] && $this->xu_api->embed->get_embed_code($file->type))
 {
     $embed = $this->xu_api->embed->get_embed_code($file->type);
+	switch($file->type)
+	{
+		case 'mp3':
+			$icon = 'music';
+		break;
+		case 'flv':
+			$icon = 'tv';
+		break;
+		default:
+			$icon = 'music';
+		break;
+	}
 ?>
-        <h3 id="dlhere"><img src="<?php echo base_url(); ?>img/icons/music_16.png" class="nb" alt=""> <?php echo lang('Preview File'); ?></h3>
+        <h3 id="dlhere"><img src="<?php echo base_url(); ?>img/icons/<?php echo $icon; ?>_16.png" class="nb" alt=""> <?php echo lang('Preview File'); ?></h3>
         <p>
           <iframe src="<?php echo site_url('files/embed/'.$file->type.'/'.$file->file_id); ?>" width="<?php echo $embed['width']; ?>" height="<?php echo $embed['height']; ?>" scrolling="no" frameborder="0"></iframe><br>
-          <a href="javascript:;" onclick="$('#mp3_embed_code').slideToggle('normal')">
+          <a href="javascript:;" onclick="$('#<?php echo $file->type; ?>_embed_code').slideToggle('normal')">
             <img src="<?php echo base_url(); ?>img/icons/add_16.png" class="nb" alt=""> <?php echo lang('Get Embed Code'); ?>
           </a><br>
           <input style="display:none" id="<?php echo $file->type; ?>_embed_code" type="text" size="60" onclick="this.select();" onfocus="this.select()" value="<iframe src="<?php echo site_url('files/embed/'.$file->type.'/'.$file->file_id); ?>" width="<?php echo $embed['width']; ?>" height="<?php echo $embed['height']; ?>" scrolling="no" frameborder="0"></iframe>">
         </p>
-<? } ?>
+<?php
+}
+?>
 <?php /*File Page Hooks*/ $this->xu_api->hooks->run_hooks('files::get::add_section::before_download', null); ?>
 
         <h3 id="dlhere"><img src="<?php echo base_url(); ?>img/other/download_16.png" class="nb" alt=""> <?php echo lang('Download Here'); ?></h3>

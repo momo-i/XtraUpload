@@ -277,7 +277,11 @@ class Startup {
 		}
 
 		// Enable embed code for MP3s
-		$this->CI->xu_api->embed->add_embed_type('mp3', array('width' => '470', 'height' => '20', 'speed' => '50'));
+		$this->CI->xu_api->embed->add_embed_type('mp3', array('width' => '470', 'height' => '30', 'speed' => '50'));
+		// Enable embed code for Flash Video
+		$this->CI->xu_api->embed->add_embed_type('flv', array('width' => '470', 'height' => '320', 'speed' => '4000'));
+		// Enable embed code for MP4s
+		$this->CI->xu_api->embed->add_embed_type('mp4', array('width' => '470', 'height' => '320', 'speed' => '8000'));
 	}
 
 	// new functions
