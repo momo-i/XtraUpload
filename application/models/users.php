@@ -277,9 +277,9 @@ class Users extends CI_Model {
 		);
 		
 		// Set email options
-		$this->email->from($this->startup->site_config['site_email'], $this->startup->site_config['sitename'].' Support');
+		$this->email->from($this->startup->site_config->site_email, $this->startup->site_config->sitename.' Support');
 		$this->email->to($to);
-		$subject = sprintf(lang('New user ad %s!'), $this->startup->site_config['sitename']);
+		$subject = sprintf(lang('New user ad %s!'), $this->startup->site_config->sitename);
 		$this->email->subject($subject);
 
 		$msg  = lang('Hello %s,')."<br>\n";
@@ -289,9 +289,7 @@ class Users extends CI_Model {
 		$msg .= lang('Username: %s')."<br>\n";
 		$msg .= lang('Group: %s')."<br>\n";
 
-		$msg = sprintf($msg, $user->username, $this->startup->site_config['sitename'], $user->username, ucwords($group->name));
-
-		//$msg = 'Hello '.$user->username.',<br />Welcome to '.$this->startup->site_config['sitename'].'!<br /><br />Here are your account details should you ever need them:<br /><br />--------------------------<br />Username: '.$user->username.'<br />Group: '.ucwords($group->name).'<br />';
+		$msg = sprintf($msg, $user->username, $this->startup->site_config->sitename, $user->username, ucwords($group->name));
 
 		if($group->price > 0.00)
 		{
@@ -304,8 +302,7 @@ class Users extends CI_Model {
 
 		$msg .= '--------------------------'."<br><br>\n\n";
 		$msg .= lang('Thanks for joining our community!')."<br>\n";
-		$msg .= sprintf(lang('%s Administration'), $this->startup->site_config['sitename'])."\n";
-		//$msg .= '--------------------------<br /><br />Thanks for joining our community!<br />'.$this->startup->site_config['sitename'].' Administration';
+		$msg .= sprintf(lang('%s Administration'), $this->startup->site_config->sitename)."\n";
 
 		$this->email->message($msg);
 		
@@ -323,19 +320,17 @@ class Users extends CI_Model {
 		$this->email->initialize($config);
 		
 		// Set email options
-		$this->email->from($this->startup->site_config['site_email'], $this->startup->site_config['sitename'].' Support');
+		$this->email->from($this->startup->site_config->site_email, $this->startup->site_config->sitename.' Support');
 		$this->email->to($to);
-		$subject = sprintf(lang('New user at %s!'), $this->startup->site_config['sitename']);
+		$subject = sprintf(lang('New user at %s!'), $this->startup->site_config->sitename);
 		$this->email->subject($subject);
 
 		$msg  = sprintf(lang('Hello %s,'), $user->username)."<br>\n";
-		$msg .= sprintf(lang('Welcome to %s!'), $this->startup->site_config['sitename'])."<br>\n";
+		$msg .= sprintf(lang('Welcome to %s!'), $this->startup->site_config->sitename)."<br>\n";
 		$msg .= lang('Before you account is activated you need to pay using the following link. If you have already completed the payment process, please wait while we authorize your payment. Once complete you will recive a new email containg your details.')."<br><br>\n\n";
 		$msg .= anchor('user/pay_new/'.$id.'/'.$user->gateway, lang('Pay Here'))."<br><br>\n\n";
 		$msg .= lang('Thanks for joining our community!')."<br>\n";
-		$msg .= sprintf(lang('%s Administration'), $this->startup->site_config['sitename'])."\n";
-
-		//$msg = 'Hello '.$user->username.',<br />Welcome to '.$this->startup->site_config['sitename'].'!<br /><br />Before you account is activated you need to pay using the following link. If you have already completed the payment process, please wait while we authorize your payment. Once complete you will recive a new email containg your details.<br /><br /><a href="'.site_url('user/pay_new/'.$id.'/'.$user->gateway).'">Pay Here</a><br /><br />Thanks for joining our community!<br />'.$this->startup->site_config['sitename'].' Administration';
+		$msg .= sprintf(lang('%s Administration'), $this->startup->site_config->sitename)."\n";
 
 		$this->email->message($msg);
 		

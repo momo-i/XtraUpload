@@ -108,7 +108,7 @@ class Transactions extends CI_Controller {
 		if($this->input->post('valid'))
 		{
 			$gate = $this->db->get_where('transactions', array('id' => $id))->row();
-			$settings = unserialize($gate->settings);
+			$settings = json_decode($gate->settings);
 			foreach($settings as $key => $type)
 			{
 				$data[$key] = $this->input->post($key);

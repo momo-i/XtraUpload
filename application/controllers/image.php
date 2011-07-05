@@ -46,7 +46,7 @@ class Image extends CI_Controller {
         }
         $links['down'] = $this->files_db->get_download_link($id);
         $links['file'] = $this->files_db->get_file_object($id);
-        $this->load->view($this->startup->skin.'/header', array('header_title' => lang('View Image').' '.$this->startup->site_config['title_separator'].' '.$name));
+        $this->load->view($this->startup->skin.'/header', array('header_title' => lang('View Image').' '.$this->startup->site_config->title_separator.' '.$name));
         $this->load->view($this->startup->skin.'/image/home', $links);
         $this->load->view($this->startup->skin.'/footer');
     }
@@ -59,7 +59,7 @@ class Image extends CI_Controller {
             redirect('home');
         }
 
-        if($this->startup->site_config['no_php_images'])
+        if($this->startup->site_config->no_php_images)
         {
             $links['direct_url'] = base_url().$links['img_path'];
             $links['thumb_url'] = base_url().$links['thumb_path'];
@@ -116,7 +116,7 @@ class Image extends CI_Controller {
         $data['gall'] = $this->db->get_where('gallery', array('g_id' => $id))->row();
         $data['gall_imgs'] = $this->db->get_where('g_items', array('gid' => $id));
         $data['id'] = $id;
-        $this->load->view($this->startup->skin.'/header', array('header_title' => lang('View Image Gallery').' '.$this->startup->site_config['title_separator'].' '.$data['gall']->name));
+        $this->load->view($this->startup->skin.'/header', array('header_title' => lang('View Image Gallery').' '.$this->startup->site_config->title_separator.' '.$data['gall']->name));
         $this->load->view($this->startup->skin.'/image/gallery/view', $data);
         $this->load->view($this->startup->skin.'/footer');
     }
@@ -154,7 +154,7 @@ class Image extends CI_Controller {
             $this->db->insert('g_items', array('gid' => $gid, 'thumb' => $image['thumb_url'], 'direct' => $image['direct_url'], 'view' => $image['img_url'], 'fid' => $file_obj->file_id));
         }
 
-        $this->load->view($this->startup->skin.'/header', array('header_title' => lang('Create Image Gallery').' '.$this->startup->site_config['title_separator'].' '.lang('Done')));
+        $this->load->view($this->startup->skin.'/header', array('header_title' => lang('Create Image Gallery').' '.$this->startup->site_config->title_separator.' '.lang('Done')));
         $this->load->view($this->startup->skin.'/image/gallery/done', $data);
         $this->load->view($this->startup->skin.'/footer');
     }

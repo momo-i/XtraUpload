@@ -130,7 +130,7 @@ class Files extends CI_Controller {
 		}
 
 		// Send the information to the user
-		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Download File').' '.$this->startup->site_config['title_separator'].' '.$name));
+		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Download File').' '.$this->startup->site_config->title_separator.' '.$name));
 		$this->load->view($this->startup->skin.'/files/get', $data);
 		$this->load->view($this->startup->skin.'/footer');
 	}

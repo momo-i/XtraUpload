@@ -776,7 +776,7 @@ $lang['Support'] = 'Support';
 $lang['Password Reset Request'] = 'Password Reset Request';
 
 #: application/models/users.php:285
-#: application/models/users.php:331
+#: application/models/users.php:328
 $lang['Hello %s,'] = 'Hello %s,';
 
 #: application/controllers/user.php:790
@@ -794,8 +794,8 @@ $lang['Password: %s'] = 'Password: %s';
 #: application/controllers/user.php:796
 $lang['Thank You,'] = 'Thank You,';
 
-#: application/models/users.php:307
-#: application/models/users.php:336
+#: application/models/users.php:305
+#: application/models/users.php:333
 $lang['%s Administration'] = '%s Administration';
 
 #: application/controllers/user.php:804
@@ -2101,31 +2101,31 @@ $lang['Image BBCode/Links:'] = 'Image BBCode/Links:';
 #: application/views/default/image/gallery/create.php:22
 $lang['Description:'] = 'Description:';
 
-#: application/views/default/files/get.php:134
+#: application/views/default/files/get.php:135
 $lang['Preview File'] = 'Preview File';
 
-#: application/views/default/files/get.php:138
+#: application/views/default/files/get.php:139
 $lang['Get Embed Code'] = 'Get Embed Code';
 
-#: application/views/default/files/get.php:147
+#: application/views/default/files/get.php:148
 $lang['Download Here'] = 'Download Here';
 
-#: application/views/default/files/get.php:153
+#: application/views/default/files/get.php:154
 $lang['Please Wait %s more second(s) to download.'] = 'Please Wait %s more second(s) to download.';
 
-#: application/views/default/files/get.php:157
+#: application/views/default/files/get.php:158
 $lang['Captcha Test - Type the three(3) letters you see below:'] = 'Captcha Test - Type the three(3) letters you see below:';
 
-#: application/views/default/files/get.php:161
+#: application/views/default/files/get.php:162
 $lang['Get New Captcha'] = 'Get New Captcha';
 
-#: application/views/default/files/get.php:166
+#: application/views/default/files/get.php:167
 $lang['Download'] = 'Download';
 
-#: application/views/default/files/get.php:168
+#: application/views/default/files/get.php:169
 $lang['View This Image'] = 'View This Image';
 
-#: application/views/default/files/get.php:207
+#: application/views/default/files/get.php:208
 $lang['You need to wait %d more seconds before you can download this file.'] = 'You need to wait %d more seconds before you can download this file.';
 
 #: application/views/default/files/manage.php:12
@@ -3094,7 +3094,7 @@ $lang['Upload'] = 'Upload';
 $lang['New user ad %s!'] = 'New user ad %s!';
 
 #: application/models/users.php:286
-#: application/models/users.php:332
+#: application/models/users.php:329
 $lang['Welcome to %s!'] = 'Welcome to %s!';
 
 #: application/models/users.php:287
@@ -3103,23 +3103,23 @@ $lang['Here are your account details should you ever need them:'] = 'Here are yo
 #: application/models/users.php:290
 $lang['Group: %s'] = 'Group: %s';
 
-#: application/models/users.php:298
+#: application/models/users.php:296
 $lang['Ammount Paid: %s'] = 'Ammount Paid: %s';
 
-#: application/models/users.php:301
+#: application/models/users.php:299
 $lang['Billing Period: %s'] = 'Billing Period: %s';
 
-#: application/models/users.php:306
-#: application/models/users.php:335
+#: application/models/users.php:304
+#: application/models/users.php:332
 $lang['Thanks for joining our community!'] = 'Thanks for joining our community!';
 
-#: application/models/users.php:328
+#: application/models/users.php:325
 $lang['New user at %s!'] = 'New user at %s!';
 
-#: application/models/users.php:333
+#: application/models/users.php:330
 $lang['Before you account is activated you need to pay using the following link. If you have already completed the payment process, please wait while we authorize your payment. Once complete you will recive a new email containg your details.'] = 'Before you account is activated you need to pay using the following link. If you have already completed the payment process, please wait while we authorize your payment. Once complete you will recive a new email containg your details.';
 
-#: application/models/users.php:334
+#: application/models/users.php:331
 $lang['Pay Here'] = 'Pay Here';
 
 /* End of file global_lang.php */

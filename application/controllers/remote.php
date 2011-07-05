@@ -95,7 +95,7 @@ class Remote extends CI_Controller {
 		{
 			$site_config[$row->name] = $row->value;
 		}
-		file_put_contents(CACHEPATH . $config_file_name, base64_encode(serialize($site_config)));
+		file_put_contents(CACHEPATH . $config_file_name, base64_encode(json_encode($site_config)));
 
 		// update group config
 		$q = $this->db->get('groups');
@@ -103,7 +103,7 @@ class Remote extends CI_Controller {
 		{
 			$group_file_name = md5($this->config->config['encryption_key'].'group_'.$row->id);
 			$group_config = $row;
-			file_put_contents(CACHEPATH . $group_file_name, base64_encode(serialize($group_config)));
+			file_put_contents(CACHEPATH . $group_file_name, base64_encode(json_encode($group_config)));
 		}
 
 		// update extend cache
@@ -120,7 +120,7 @@ class Remote extends CI_Controller {
 		}
 		else
 		{
-			$final = base64_encode(serialize($data));
+			$final = base64_encode(json_encode($data));
 			file_put_contents(CACHEPATH . $extend_file_name, $final);
 		}
 

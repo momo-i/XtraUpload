@@ -132,7 +132,7 @@ class Startup {
 		$config_file_name = md5($this->CI->config->config['encryption_key'].'site_config');
 		if(file_exists(CACHEPATH . $config_file_name))
 		{
-			$this->site_config = unserialize(base64_decode($this->CI->load->file(CACHEPATH . $config_file_name, true)));
+			$this->site_config = json_decode(base64_decode($this->CI->load->file(CACHEPATH . $config_file_name, true)));
 		}
 		else
 		{
@@ -141,7 +141,7 @@ class Startup {
 			{
 				$this->site_config[$row->name] = $row->value;
 			}
-			file_put_contents(CACHEPATH . $config_file_name, base64_encode(serialize($this->site_config)));
+			file_put_contents(CACHEPATH . $config_file_name, base64_encode(json_encode($this->site_config)));
 		}
 	}
 
@@ -166,12 +166,12 @@ class Startup {
 		$group_file_name = md5($this->CI->config->config['encryption_key'].'group_'.$group);
 		if(file_exists(CACHEPATH . $group_file_name))
 		{
-			$this->group_config = unserialize(base64_decode($this->CI->load->file(CACHEPATH . $group_file_name, true)));
+			$this->group_config = json_decode(base64_decode($this->CI->load->file(CACHEPATH . $group_file_name, true)));
 		}
 		else
 		{
 			$this->group_config = $this->CI->db->get_where('groups', array('id' => $group))->row();
-			file_put_contents(CACHEPATH . $group_file_name, base64_encode(serialize($this->group_config)));
+			file_put_contents(CACHEPATH . $group_file_name, base64_encode(json_encode($this->group_config)));
 		}
 	}
 
@@ -180,7 +180,7 @@ class Startup {
 		$extend_file_name = md5($this->CI->config->config['encryption_key'].'extend');
 		if(file_exists(CACHEPATH . $extend_file_name))
 		{
-			$extend = unserialize(base64_decode($this->CI->load->file(CACHEPATH . $extend_file_name, true)));
+			$extend = json_decode(base64_decode($this->CI->load->file(CACHEPATH . $extend_file_name, true)));
 
 			// Open a known directory, and proceed to read its contents
 			foreach($extend as $app)

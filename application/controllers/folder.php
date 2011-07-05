@@ -47,7 +47,7 @@ class Folder extends CI_Controller {
 
 		$data['folder_files'] = $this->db->get_where('f_items', array('folder_id' => $id));
 		$data['id'] = $id;
-		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('File Folder').' '.$this->startup->site_config['title_separator'].' '.$data['folder']->name));
+		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('File Folder').' '.$this->startup->site_config->title_separator.' '.$data['folder']->name));
 		$this->load->view($this->startup->skin.'/folder/view', $data);
 		$this->load->view($this->startup->skin.'/footer');
 	}
@@ -86,7 +86,7 @@ class Folder extends CI_Controller {
 			}
 		}
 
-		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Create File Folder').' '.$this->startup->site_config['title_separator']. ' ' .lang('Done')));
+		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Create File Folder').' '.$this->startup->site_config->title_separator. ' ' .lang('Done')));
 		$this->load->view($this->startup->skin.'/folder/done', $data);
 		$this->load->view($this->startup->skin.'/footer');
 	}

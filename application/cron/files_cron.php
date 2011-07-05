@@ -124,7 +124,7 @@ class Files_cron {
 		$fh = @opendir($dir);
 		while ($file = @readdir($fh))
 		{
-			if (($file != '..' && $file != '.' && $file != '.gitignore' && $file != 'index.php' && $file != 'index.html' && $file != '.DS_Store' && $file != '.htaccess'))
+			if (($file != '..' && $file != '.' && !preg_match('#\.gitignore#', $file) && $file != 'index.php' && $file != 'index.html' && $file != '.DS_Store' && $file != '.htaccess'))
 			{
 				if(is_dir($dir . '/' . $file) and $file != '.svn')
 				{
@@ -160,7 +160,7 @@ class Files_cron {
 		$temp = @opendir(ROOTPATH.'/temp/');
 		while ($file = @readdir($temp))
 		{
-			if (($file != 'index.php' && $file != '.gitignore' && $file != 'index.html' && $file != '.DS_Store' && $file != '.htaccess' && !is_dir(ROOTPATH.'/temp/' . $file)))
+			if (($file != 'index.php' && !preg_match('#\.gitignore#', $file) && $file != 'index.html' && $file != '.DS_Store' && $file != '.htaccess' && !is_dir(ROOTPATH.'/temp/' . $file)))
 			{
 				log_message('debug', "Removing $file");
 				unlink(ROOTPATH.'/temp/'.$file);

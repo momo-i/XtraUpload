@@ -72,7 +72,7 @@ class Email extends CI_Controller {
 			$this->email->clear();
 
 			// Set email options
-			$this->email->from($this->startup->site_config['site_email'], $this->startup->site_config['sitename'].' Support');
+			$this->email->from($this->startup->site_config->site_email, $this->startup->site_config->sitename.' Support');
 			$this->email->to($user->email);
 			$this->email->subject($this->input->post('subject'));
 			$this->email->message($this->input->post('msg'));

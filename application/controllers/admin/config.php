@@ -131,7 +131,7 @@ class Config extends CI_Controller {
 	{
 		// Encrypt the cache file name for security
 		$config_file_name = md5($this->config->config['encryption_key'].'site_config');
-		$configData = array();
+		$config_data = array();
 
 		// Iterate over the submited values and update each config entry in the DB
 		foreach($_POST as $key => $value)
@@ -139,7 +139,7 @@ class Config extends CI_Controller {
 			if($key != 'valid' && $key != 'Submit' && $key != '_db_version')
 			{
 				// Save the name and value for caching later
-				$configData[$key] = $this->input->post($key);
+				$config_data[$key] = $this->input->post($key);
 
 				// Format the update query
 				$data = array(
@@ -153,7 +153,7 @@ class Config extends CI_Controller {
 		}
 
 		// Cache the results to the filesystem for quick loading
-		file_put_contents(CACHEPATH.$config_file_name, base64_encode(serialize($configData)));
+		file_put_contents(CACHEPATH.$config_file_name, base64_encode(json_encode($config_data)));
 
 		// Send updates to all servers
 		$this->load->library('Remote_server_xml_rpc');

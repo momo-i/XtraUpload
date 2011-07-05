@@ -79,7 +79,7 @@ class Ipn extends CI_Controller {
 		{
 			if ($my_paypal->ipn_data['payment_status'] == 'Completed')
 			{
-				$settings = unserialize(base64_decode($my_paypal->ipn_data['custom']));
+				$settings = json_decode(base64_decode($my_paypal->ipn_data['custom']));
 				if($settings['type'] == 'reg')
 				{
 					$this->_new_user_payment($settings['user_id'], $my_paypal->ipn_data['amount']);
@@ -102,7 +102,7 @@ class Ipn extends CI_Controller {
 		echo lang('Processing...'); flush();
 
 		$gate = $this->db->get_where('gateways', array('name' => 'authorize'))->row();
-		$gate_conf = unserialize($gate->settings);
+		$gate_conf = json_decode($gate->settings);
 
 		// Include the paypal library
 		include_once (APPPATH.'libraries/payment/Authorize.php');
@@ -123,7 +123,7 @@ class Ipn extends CI_Controller {
 		// Check validity and write down it
 		if ($my_authorize->validate_ipn())
 		{
-			$settings = unserialize(base64_decode($my_authorize->ipn_data['x_Cust_ID']));
+			$settings = json_decode(base64_decode($my_authorize->ipn_data['x_Cust_ID']));
 			if($settings['type'] == 'reg')
 			{
 				$this->_new_user_payment($settings['user_id'], $my_authorize->ipn_data['x_Amount']);
@@ -145,7 +145,7 @@ class Ipn extends CI_Controller {
 		$this->gateway = '3';
 
 		$gate = $this->db->get_where('gateways', array('name' => 'twoco'))->row();
-		$gate_conf = unserialize($gate->settings);
+		$gate_conf = json_decode($gate->settings);
 
 		// Create an instance of the authorize.net library
 		$my2_co = new TwoCo();
@@ -162,7 +162,7 @@ class Ipn extends CI_Controller {
 		// Check validity and write down it
 		if ($my2_co->validate_ipn())
 		{
-			$settings = unserialize(base64_decode($my2_co->ipn_data['custom']));
+			$settings = json_decode(base64_decode($my2_co->ipn_data['custom']));
 			if($settings['type'] == 'reg')
 			{
 				$this->_new_user_payment($settings['user_id'], $my2_co->ipn_data['total']);
@@ -195,8 +195,8 @@ class Ipn extends CI_Controller {
 			'time' => time(),
 			'status' => '1',
 			'ammount' => $amount,
-			'config' => serialize(array('type' => 'text', 'activated' => 'text', 'duration' => 'text', 'group' => 'text', 'email' => 'text' )),
-			'settings' => serialize(array('type' => 'New Registration', 'activated' => 'yes', 'duration' => $group->repeat_billing, 'group' => $group->id, 'email' => $user->email ))
+			'config' => json_encode(array('type' => 'text', 'activated' => 'text', 'duration' => 'text', 'group' => 'text', 'email' => 'text' )),
+			'settings' => json_encode(array('type' => 'New Registration', 'activated' => 'yes', 'duration' => $group->repeat_billing, 'group' => $group->id, 'email' => $user->email ))
 		);
 
 		$this->transactions_db->insert($id);
@@ -206,11 +206,11 @@ class Ipn extends CI_Controller {
 	{
 		if($this->gateway == 2)
 		{
-			$settings = @unserialize(@base64_decode(@$data['x_Cust_ID']));
+			$settings = @json_decode(@base64_decode(@$data['x_Cust_ID']));
 		}
 		else
 		{
-			$settings = @unserialize(@base64_decode(@$data['custom']));
+			$settings = @json_decode(@base64_decode(@$data['custom']));
 		}
 		if(!$settings)
 		{
@@ -241,8 +241,8 @@ class Ipn extends CI_Controller {
 			'time' => time(),
 			'status' => '0',
 			'ammount' => $amount,
-			'config' => serialize(array('type' => 'text', 'activated' => 'text', 'duration' => 'text', 'group' => 'text', 'email' => 'text' )),
-			'settings' => serialize(array('type' => 'New Registration', 'activated' => 'no', 'duration' => $group->repeat_billing, 'group' => $group->id, 'email' => $user->email ))
+			'config' => json_encode(array('type' => 'text', 'activated' => 'text', 'duration' => 'text', 'group' => 'text', 'email' => 'text' )),
+			'settings' => json_encode(array('type' => 'New Registration', 'activated' => 'no', 'duration' => $group->repeat_billing, 'group' => $group->id, 'email' => $user->email ))
 		);
 
 		$this->transactions_db->insert($id);

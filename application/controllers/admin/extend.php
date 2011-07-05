@@ -82,7 +82,7 @@ class Extend extends CI_Controller {
 			log_message('debug', "Parsing Plugin.");
 			$xml = simplexml_load_file(APPPATH."extend/".$name."/".$name.".xml");
 			$data = array(
-				'data' => serialize($xml),
+				'data' => json_encode($xml),
 				'file_name' => $name,
 				'date' => time(),
 				'active' => '1',
@@ -152,7 +152,7 @@ class Extend extends CI_Controller {
 		}
 		else
 		{
-			$final = base64_encode(serialize($data));
+			$final = base64_encode(json_encode($data));
 			file_put_contents(CACHEPATH . $extend_file_name, $final);
 		}
 

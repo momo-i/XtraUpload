@@ -68,7 +68,7 @@ class Group extends CI_Controller {
 			$group_config = $this->db->get_where('groups', array('id' => $id))->row();
 
 			// Save the group object to cache for increased performance
-			file_put_contents(CACHEPATH . $group_file_name, base64_encode(serialize($group_config)));
+			file_put_contents(CACHEPATH . $group_file_name, base64_encode(json_encode($group_config)));
 
 			// Send updates to all servers
 			$this->load->library('Remote_server_xml_rpc');
@@ -103,7 +103,7 @@ class Group extends CI_Controller {
 			$group_config = $this->db->get_where('groups', array('id' => $group))->row();
 
 			// Save the group object to cache for increased performance
-			file_put_contents(CACHEPATH . $group_file_name, base64_encode(serialize($group_config)));
+			file_put_contents(CACHEPATH . $group_file_name, base64_encode(json_encode($group_config)));
 
 			// Send updates to all servers
 			$this->load->library('Remote_server_xml_rpc');

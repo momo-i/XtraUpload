@@ -224,7 +224,7 @@ class User extends CI_Controller {
 		}
 
 		// get payment gateway settings
-		$gate_conf = unserialize($gate->settings);
+		$gate_conf = json_decode($gate->settings);
 
 		// load payment libs
 		include_once (APPPATH.'libraries/payment/PaymentGateway.php');
@@ -252,12 +252,12 @@ class User extends CI_Controller {
 			$my_paypal->add_field('notify_url', site_url('payment/ipn/paypal'));
 
 			// Specify the product information
-			$my_paypal->add_field('item_name', $this->startup->site_config['sitename'].' '.lang('Account Registration'));
+			$my_paypal->add_field('item_name', $this->startup->site_config->sitename.' '.lang('Account Registration'));
 			$my_paypal->add_field('amount', $group->price);
 			$my_paypal->add_field('item_number',  rand(1,1000).'-'.$user->id);
 
 			// Specify any custom value
-			$my_paypal->add_field('custom', base64_encode(serialize(array('user_id'=>$user->id, 'type'=>'reg'))));
+			$my_paypal->add_field('custom', base64_encode(json_encode(array('user_id'=>$user->id, 'type'=>'reg'))));
 
 			// Enable test mode if needed
 			if(defined('XUDEBUG') and XUDEBUG == true)
@@ -286,10 +286,10 @@ class User extends CI_Controller {
 			$my_authorize->add_field('x_Relay_URL', site_url('payment/ipn/authorize'));
 
 			// Specify the product information
-			$my_authorize->add_field('x_Description', $this->startup->site_config['sitename'].' '.lang('Account Registration'));
+			$my_authorize->add_field('x_Description', $this->startup->site_config->sitename.' '.lang('Account Registration'));
 			$my_authorize->add_field('x_Amount', $group->price);
 			$my_authorize->add_field('x_Invoice_num',  rand(1,1000).'-'.$user->id);
-			$my_authorize->add_field('x_Cust_ID', base64_encode(serialize(array('user_id' => $user->id, 'type' => 'reg'))));
+			$my_authorize->add_field('x_Cust_ID', base64_encode(json_encode(array('user_id' => $user->id, 'type' => 'reg'))));
 
 			// Enable test mode if needed
 			if(defined('XUDEBUG') and XUDEBUG == true)
@@ -318,7 +318,7 @@ class User extends CI_Controller {
 			// Specify the url where authorize.net will send the IPN
 			$my2_co->add_field('x_Receipt_Link_URL', site_url('payment/ipn/two_checkout'));
 			$my2_co->add_field('tco_currency', $gate_conf['currency']);
-			$my2_co->add_field('custom', base64_encode(serialize(array('user_id' => $user->id, 'type'=>'reg'))));
+			$my2_co->add_field('custom', base64_encode(json_encode(array('user_id' => $user->id, 'type'=>'reg'))));
 
 			// Enable test mode if needed
 			if(defined('XUDEBUG') and XUDEBUG == true)
@@ -782,19 +782,19 @@ class User extends CI_Controller {
 
 		$result = $this->users->user_update_forgot($new_passMD5, $username);
 
-		$this->email->from($this->startup->site_config['site_email'], $this->startup->site_config['sitename'].lang('Support'));
+		$this->email->from($this->startup->site_config->site_email, $this->startup->site_config->sitename.lang('Support'));
 		$this->email->to($this->input->post('email'));
 
 		$this->email->subject(lang('Password Reset Request'));
 		$body  = sprintf(lang('Hello %s,'), $username)."\n\n";
-		$body .= sprintf(lang('You have requested that your password for %s be reset.'), $this->startup->site_config['sitename'])."\n";
+		$body .= sprintf(lang('You have requested that your password for %s be reset.'), $this->startup->site_config->sitename)."\n";
 		$body .= lang('Here is your new password:')."\n\n";
 		$body .= '--------------------------'."\n";
 		$body .= sprintf(lang('Username: %s'), $username)."\n";
 		$body .= sprintf(lang('Password: %s'), $new_pass)."\n";
 		$body .= '--------------------------'."\n\n";
 		$body .= lang('Thank You,')."\n";
-		$body .= sprintf(lang('%s Administration'), $this->startup->site_config['sitename'])."\n\n";
+		$body .= sprintf(lang('%s Administration'), $this->startup->site_config->sitename)."\n\n";
 
 		$this->email->message($body);
 		$this->email->send();

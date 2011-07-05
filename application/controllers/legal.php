@@ -40,7 +40,7 @@ class Legal extends CI_Controller {
 	public function tos()
 	{
 		$data=array();
-		$data['site_name'] = $this->startup->site_config['sitename'];
+		$data['site_name'] = $this->startup->site_config->sitename;
 		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Terms of Service')));
 		$this->load->view($this->startup->skin.'/legal/tos', $data);
 		$this->load->view($this->startup->skin.'/footer');

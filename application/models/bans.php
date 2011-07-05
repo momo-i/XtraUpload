@@ -93,7 +93,7 @@ class Bans extends CI_Model {
 		}
 		
 		// Save the group object to cache for increased performance
-		file_put_contents(CACHEPATH . $ban_file_name, base64_encode(serialize($this->ban_list)));
+		file_put_contents(CACHEPATH . $ban_file_name, base64_encode(json_encode($this->ban_list)));
 	}
 	
 	private function _get_bans()
@@ -105,7 +105,7 @@ class Bans extends CI_Model {
 		if(file_exists(CACHEPATH . $ban_file_name))
 		{
 			// Dont wast time with the DB, load the cached version
-			$this->ban_list = unserialize(base64_decode($this->CI->load->file(CACHEPATH . $ban_file_name, true)));
+			$this->ban_list = json_decode(base64_decode($this->CI->load->file(CACHEPATH . $ban_file_name, true)));
 		}
 		else
 		{
@@ -117,7 +117,7 @@ class Bans extends CI_Model {
 			}
 			
 			// Save the group object to cache for increased performance
-			file_put_contents(CACHEPATH . $ban_file_name, base64_encode(serialize($this->ban_list)));
+			file_put_contents(CACHEPATH . $ban_file_name, base64_encode(json_encode($this->ban_list)));
 		}
 	}
 }

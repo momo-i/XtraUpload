@@ -94,14 +94,14 @@ class Gateways extends CI_Controller {
 		if($this->input->post('valid'))
 		{
 			$gate = $this->db->get_where('gateways', array('id' => $id))->row();
-			$settings = unserialize($gate->settings);
+			$settings = json_decode($gate->settings);
 			foreach($settings as $key => $type)
 			{
 				$data[$key] = $this->input->post($key);
 			}
 
 			$this->db->where('id', $id);
-			$this->db->update('gateways', array('settings' => serialize($data)));
+			$this->db->update('gateways', array('settings' => json_encode($data)));
 			$this->session->set_flashdata('msg', lang('Payment Gateway Edited!'));
 			redirect('admin/gateways/view');
 		}

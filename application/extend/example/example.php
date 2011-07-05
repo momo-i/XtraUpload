@@ -5,8 +5,8 @@ class Example extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->xu_api->add_admin_menu_link('admin/example/manage', lang('Example'), base_url().'img/other/plugin_16.png');
-		$this->xu_api->add_admin_menu_link('example', lang('Example'), base_url().'img/other/plugin_16.png');
+		$this->xu_api->menus->add_admin_menu_link('admin/example/manage', lang('Example'), base_url().'img/other/plugin_16.png');
+		$this->xu_api->menus->add_admin_menu_link('example', lang('Example'), base_url().'img/other/plugin_16.png');
 	}
 
 	public function install()
