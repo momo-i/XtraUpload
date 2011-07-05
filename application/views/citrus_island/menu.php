@@ -53,7 +53,7 @@ else
 ?>
         <?php echo $this->xu_api->menus->get_sub_menu();?>
 <?php
-if($this->startup->site_config['show_recent_uploads'])
+if($this->startup->site_config->show_recent_uploads)
 {
 ?>
         <h3><?php echo lang('Recently Uploaded Files')?></h3>

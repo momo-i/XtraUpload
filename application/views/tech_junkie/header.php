@@ -5,14 +5,14 @@ if(!isset($header_title))
 }
 else
 {
-	$header_title .= ' '.$this->startup->site_config['title_separator'].' ';
+	$header_title .= ' '.$this->startup->site_config->title_separator.' ';
 }
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo lang('html_lang'); ?>">
   <head>
     <meta charset="utf-8">
-    <title><?php echo $header_title.$this->startup->site_config['sitename']?></title>
+    <title><?php echo $header_title.$this->startup->site_config->sitename; ?></title>
     <link rel="shortcut icon" href="<?php echo base_url(); ?>favicon.ico">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>css/main.css">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>css/tech_junkie/tech_junkie.css">
@@ -48,8 +48,8 @@ if(isset($include_url_upload_js) and $include_url_upload_js === TRUE)
     <div id="wrap">
       <!--header starts-->
       <div id="header">            
-        <h1 id="logo-text"><a href="<?php echo base_url(); ?>" title="home"><?php echo $this->startup->site_config['sitename']; ?></a></h1>
-        <p id="slogan"><?php echo $this->startup->site_config['slogan']; ?></p>
+        <h1 id="logo-text"><a href="<?php echo base_url(); ?>" title="home"><?php echo $this->startup->site_config->sitename; ?></a></h1>
+        <p id="slogan"><?php echo $this->startup->site_config->slogan; ?></p>
       <!--header ends-->
       </div>
       <!-- navigation starts-->

@@ -21,7 +21,7 @@ else
         <div id="footer-content">
           <div class="col float-left space-sep">
 <?php
-if($this->startup->site_config['show_recent_uploads'])
+if($this->startup->site_config->show_recent_uploads)
 {
 ?>
             <h3><?php echo lang('Recently Uploaded Files'); ?></h3>

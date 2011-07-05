@@ -48,10 +48,10 @@ else
 ?>
           <?php echo $this->xu_api->menus->get_sub_menu();?>
 <?php
-if($this->startup->site_config['show_recent_uploads'])
+if($this->startup->site_config->show_recent_uploads)
 {
 ?>
-          <h3><?php echo lang('Recently Uploaded Files')?></h3>
+          <h3><?php echo lang('Recently Uploaded Files'); ?></h3>
           <ul class="sidemenu">
 <?php 
 	$query = $this->files_db->get_recent_files(5);

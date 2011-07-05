@@ -5,14 +5,14 @@ if( ! isset($header_title))
 }
 else
 {
-    $header_title .= ' '.$this->startup->site_config['title_separator'].' ';
+    $header_title .= ' '.$this->startup->site_config->title_separator.' ';
 }
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo lang('html_lang'); ?>">
   <head>
     <meta charset="utf-8">
-    <title><?php echo $header_title.$this->startup->site_config['sitename']?></title>
+    <title><?php echo $header_title.$this->startup->site_config->sitename; ?></title>
     <meta name="robots" content="index, follow, noarchive">
     <meta name="googlebot" content="noarchive">
     <link rel="shortcut icon" href="<?php echo base_url(); ?>favicon.ico">
@@ -56,7 +56,7 @@ if(isset($include_url_upload_js) && $include_url_upload_js === TRUE)
           </ul>
         </div>
         <form id="quick-search" action="index.html" method="get">
-          <h1><?php echo $this->startup->site_config['sitename']; ?></h1>
+          <h1><?php echo $this->startup->site_config->sitename; ?></h1>
         </form>
       <!--header ends-->
       </div>

@@ -22,7 +22,7 @@ else
           <div id="footer-columns">    
             <div class="col3">
 <?php
-if($this->startup->site_config['show_recent_uploads'])
+if($this->startup->site_config->show_recent_uploads)
 {
 ?>
               <h3><?php echo lang('Recently Uploaded Files'); ?></h3>

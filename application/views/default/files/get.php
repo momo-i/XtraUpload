@@ -115,7 +115,7 @@ $tags = array_map('ucwords', $tags);
           </tr>
         </table>
 <?php
-if($this->startup->site_config['show_preview'] && $this->xu_api->embed->get_embed_code($file->type))
+if($this->startup->site_config->show_preview && $this->xu_api->embed->get_embed_code($file->type))
 {
     $embed = $this->xu_api->embed->get_embed_code($file->type);
 	switch($file->type)

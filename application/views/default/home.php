@@ -27,10 +27,10 @@ else
 	}
 ?>
 <?php
-	if( ! empty($this->startup->site_config['home_info_msg']))
+	if( ! empty($this->startup->site_config->home_info_msg))
 	{
 ?>
-          <span class="note"><?php echo $this->startup->site_config['home_info_msg']; ?></span>
+          <span class="note"><?php echo $this->startup->site_config->home_info_msg; ?></span>
 <?php
 	}
 ?>

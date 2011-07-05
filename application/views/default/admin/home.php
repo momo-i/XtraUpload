@@ -128,7 +128,7 @@ else
         </script>
 <?php
 }
-if($this->startup->site_config['allow_version_check'])
+if($this->startup->site_config->allow_version_check)
 {
 	$this->load->helper('admin/version');
 	$latest_version = check_version(); //@file_get_contents('http://xtrafile.com/xu_version.txt');

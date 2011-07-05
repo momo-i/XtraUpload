@@ -6,8 +6,8 @@
         <form method="post" action="<?php echo site_url('admin/gateways/update/'.$gate->id); ?>">
           <h3><?php printf(lang('%s Config'), $gate->display_name); ?></h3>
 <?php
-$set = unserialize($gate->settings);
-$config = unserialize($gate->config);
+$set = json_decode($gate->settings);
+$config = json_decode($gate->config);
 foreach ($config as $name => $type)
 {
 ?>

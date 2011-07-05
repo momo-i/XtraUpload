@@ -6,8 +6,8 @@
         <form method="post" action="<?php echo site_url('admin/transactions/update/'.$transaction->id); ?>">
           <h3><?php echo lang('Transaction Info'); ?></h3>
 <?php
-$set = unserialize($transaction->settings);
-$config = unserialize($transaction->config);
+$set = json_decode($transaction->settings);
+$config = json_decode($transaction->config);
 foreach ($config as $name => $type)
 {
 	if($type == 'text')

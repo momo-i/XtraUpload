@@ -38,7 +38,7 @@ foreach ($installed as $name => $plugin)
               <?php echo anchor('admin/extend/turn_on/'.$name, '<img src="'.base_url().'img/icons/off_16.png" alt="" class="">'); ?> 
 <?php
 	}
-	if($this->startup->site_config['allow_version_check'] && isset($plugin->version->latest_link))
+	if($this->startup->site_config->allow_version_check && isset($plugin->version->latest_link))
 	{
 		$latest_version = check_version($plugin->version->latest_link);
 		if($plugin->version->local < $latest_version && $latest_version != false)
