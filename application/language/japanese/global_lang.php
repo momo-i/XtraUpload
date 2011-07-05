@@ -77,16 +77,16 @@ $lang['Email sent!'] = 'Email sent!';
 #: application/views/default/admin/extend/view.php:3
 $lang['Plugin Manager'] = 'Plugin Manager';
 
-#: application/controllers/admin/extend.php:95
+#: application/controllers/admin/extend.php:97
 $lang['Plugin "%s" Installed'] = 'Plugin "%s" Installed';
 
-#: application/controllers/admin/extend.php:109
+#: application/controllers/admin/extend.php:111
 $lang['Plugin "%s" Uninstalled'] = 'Plugin "%s" Uninstalled';
 
-#: application/controllers/admin/extend.php:119
+#: application/controllers/admin/extend.php:121
 $lang['Plugin "%s" Activated'] = 'Plugin "%s" Activated';
 
-#: application/controllers/admin/extend.php:129
+#: application/controllers/admin/extend.php:131
 $lang['Plugin "%s" Deactivated'] = 'Plugin "%s" Deactivated';
 
 #: application/views/default/admin/files/edit.php:8
@@ -775,12 +775,41 @@ $lang['Support'] = 'Support';
 #: application/controllers/user.php:788
 $lang['Password Reset Request'] = 'Password Reset Request';
 
-#: application/controllers/user.php:809
-#: application/controllers/user.php:816
+#: application/models/users.php:285
+#: application/models/users.php:331
+$lang['Hello %s,'] = 'Hello %s,';
+
+#: application/controllers/user.php:790
+$lang['You have requested that your password for %s be reset.'] = 'You have requested that your password for %s be reset.';
+
+#: application/controllers/user.php:791
+$lang['Here is your new password:'] = 'Here is your new password:';
+
+#: application/models/users.php:289
+$lang['Username: %s'] = 'Username: %s';
+
+#: application/controllers/user.php:794
+$lang['Password: %s'] = 'Password: %s';
+
+#: application/controllers/user.php:796
+$lang['Thank You,'] = 'Thank You,';
+
+#: application/models/users.php:307
+#: application/models/users.php:336
+$lang['%s Administration'] = '%s Administration';
+
+#: application/controllers/user.php:804
+#: application/controllers/user.php:811
 $lang['New Password Sent!'] = 'New Password Sent!';
+
+#: application/views/_protected/files/embed/flv.php:8
+$lang['Flash Video Embed'] = 'Flash Video Embed';
 
 #: application/views/_protected/files/embed/mp3.php:8
 $lang['MP3 Embed'] = 'MP3 Embed';
+
+#: application/views/_protected/files/embed/mp4.php:8
+$lang['MP4 Embed'] = 'MP4 Embed';
 
 #: application/views/citrus_island/footer.php:22
 #: application/views/default/footer.php:64
@@ -2072,31 +2101,31 @@ $lang['Image BBCode/Links:'] = 'Image BBCode/Links:';
 #: application/views/default/image/gallery/create.php:22
 $lang['Description:'] = 'Description:';
 
-#: application/views/default/files/get.php:122
+#: application/views/default/files/get.php:134
 $lang['Preview File'] = 'Preview File';
 
-#: application/views/default/files/get.php:126
+#: application/views/default/files/get.php:138
 $lang['Get Embed Code'] = 'Get Embed Code';
 
-#: application/views/default/files/get.php:133
+#: application/views/default/files/get.php:147
 $lang['Download Here'] = 'Download Here';
 
-#: application/views/default/files/get.php:139
+#: application/views/default/files/get.php:153
 $lang['Please Wait %s more second(s) to download.'] = 'Please Wait %s more second(s) to download.';
 
-#: application/views/default/files/get.php:143
+#: application/views/default/files/get.php:157
 $lang['Captcha Test - Type the three(3) letters you see below:'] = 'Captcha Test - Type the three(3) letters you see below:';
 
-#: application/views/default/files/get.php:147
+#: application/views/default/files/get.php:161
 $lang['Get New Captcha'] = 'Get New Captcha';
 
-#: application/views/default/files/get.php:152
+#: application/views/default/files/get.php:166
 $lang['Download'] = 'Download';
 
-#: application/views/default/files/get.php:154
+#: application/views/default/files/get.php:168
 $lang['View This Image'] = 'View This Image';
 
-#: application/views/default/files/get.php:193
+#: application/views/default/files/get.php:207
 $lang['You need to wait %d more seconds before you can download this file.'] = 'You need to wait %d more seconds before you can download this file.';
 
 #: application/views/default/files/manage.php:12
@@ -2665,9 +2694,6 @@ $lang['here'] = 'here';
 #: application/views/default/user/profile/view.php:19
 $lang['User Info'] = 'User Info';
 
-#: application/models/users.php:289
-$lang['Username: %s'] = 'Username: %s';
-
 #: application/views/default/user/profile/view.php:24
 $lang['User Stats'] = 'User Stats';
 
@@ -3067,10 +3093,6 @@ $lang['Upload'] = 'Upload';
 #: application/models/users.php:282
 $lang['New user ad %s!'] = 'New user ad %s!';
 
-#: application/models/users.php:285
-#: application/models/users.php:331
-$lang['Hello %s,'] = 'Hello %s,';
-
 #: application/models/users.php:286
 #: application/models/users.php:332
 $lang['Welcome to %s!'] = 'Welcome to %s!';
@@ -3090,10 +3112,6 @@ $lang['Billing Period: %s'] = 'Billing Period: %s';
 #: application/models/users.php:306
 #: application/models/users.php:335
 $lang['Thanks for joining our community!'] = 'Thanks for joining our community!';
-
-#: application/models/users.php:307
-#: application/models/users.php:336
-$lang['%s Administration'] = '%s Administration';
 
 #: application/models/users.php:328
 $lang['New user at %s!'] = 'New user at %s!';

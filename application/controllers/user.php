@@ -786,22 +786,17 @@ class User extends CI_Controller {
 		$this->email->to( $this->input->post('email'));
 
 		$this->email->subject(lang('Password Reset Request'));
-		$body = lang('Hello %s,
+		$body  = sprintf(lang('Hello %s,'), $username)."\n\n";
+		$body .= sprintf(lang('You have requested that your password for %s be reset.'), $this->startup->site_config['sitename'])."\n";
+		$body .= lang('Here is your new password:')."\n\n";
+		$body .= '--------------------------'."\n";
+		$body .= sprintf(lang('Username: %s'), $username)."\n";
+		$body .= sprintf(lang('Password: %s'), $new_pass)."\n";
+		$body .= '--------------------------'."\n\n";
+		$body .= lang('Thank You,')."\n";
+		$body .= sprintf(lang('%s Administration'), $this->startup->site_config['sitename'])."\n\n";
 
-You have requested that your password for %s be reset.
-Here is your new password:
-
---------------------------
-Username: %s
-Password: %s
---------------------------
-
-Thank You,
-%s Administration
-
-');
-
-		$this->email->message = sprintf($body, $username, $this->startup->site_config['sitename'], $username, $new_pass, $this->startup->site_config['sitename']);
+		$this->email->message = $body;
 		$this->email->send();
 
 		if($result)
