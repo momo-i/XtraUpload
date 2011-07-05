@@ -783,7 +783,7 @@ class User extends CI_Controller {
 		$result = $this->users->user_update_forgot($new_passMD5, $username);
 
 		$this->email->from($this->startup->site_config['site_email'], $this->startup->site_config['sitename'].lang('Support'));
-		$this->email->to( $this->input->post('email'));
+		$this->email->to($this->input->post('email'));
 
 		$this->email->subject(lang('Password Reset Request'));
 		$body  = sprintf(lang('Hello %s,'), $username)."\n\n";
@@ -796,7 +796,7 @@ class User extends CI_Controller {
 		$body .= lang('Thank You,')."\n";
 		$body .= sprintf(lang('%s Administration'), $this->startup->site_config['sitename'])."\n\n";
 
-		$this->email->message = $body;
+		$this->email->message($body);
 		$this->email->send();
 
 		if($result)
