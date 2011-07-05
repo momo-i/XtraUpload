@@ -53,7 +53,7 @@ class Startup {
 		{
 			redirect('install/setup');
 		}
-		elseif($this->CI->config->config['is_installed'] && preg_match('#(install|setup|step\d)#', uri_string()) && $this->_db_installed())
+		elseif($this->CI->config->config['is_installed'] && preg_match('#^(install|setup|step\d)#', uri_string()) && $this->_db_installed())
 		{
 			redirect('home');
 		}

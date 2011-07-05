@@ -10,9 +10,9 @@
           <p>
             <label style="font-weight:bold" for="username"><?php echo lang('Username'); ?></label>
             <!-- #must change!# echo set_value('username', $this->username); -->
-            <input type="text" name="username" value="<?php echo ($this->validation->username ? $this->validation->username : $user->username); ?>" size="50"><br>
+            <input type="text" name="username" value="<?php echo set_value('username', $user->username); ?>" size="50"><br>
             <label style="font-weight:bold" for="realname"><?php echo lang('Email'); ?></label>
-            <input type="text" name="email" value="<?php echo ($this->validation->email ? $this->validation->email : $user->email); ?>" size="50"><br>
+            <input type="text" name="email" value="<?php echo set_value('email', $user->email); ?>" size="50"><br>
             <label style="font-weight:bold" for="realname"><?php echo lang('User Group'); ?></label>
             <select name="group">
 <?php
@@ -26,7 +26,7 @@ foreach ($groups->result() as $group)
 ?>
             </select>
             <label style="font-weight:bold" for="realname"><?php echo lang('New Password'); ?></label>
-            <input type="text" name="password" value="<?php echo $this->validation->password; ?>" size="50"><br><br>
+            <input type="text" name="password" value="<?php echo set_value('password'); ?>" size="50"><br><br>
             <?php echo generate_submit_button(lang('Submit Changes'), base_url().'img/icons/ok_16.png', 'green'); ?><br>
           </p>
         </form>

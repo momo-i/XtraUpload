@@ -34,7 +34,6 @@ class Extend extends CI_Controller {
 		$this->load->model('admin_access');
 		$this->load->helper('string');
 		$this->load->helper('text');
-		log_message('debug', 'Extend Controller Initialized');
 	}
 
 	public function index()
@@ -75,7 +74,7 @@ class Extend extends CI_Controller {
 
 	public function install($name)
 	{
-		log_message('debug', "Install Plugin $name Start.");
+		log_message('debug', "Install Plugin $name.");
 		$name = str_replace(array('../', '..'), '', $name);
 		$num_rows = $this->db->get_where('extend', array('file_name' => $name))->num_rows();
 		if(file_exists(APPPATH."extend/".$name.'/'.$name.'.php') && file_exists(APPPATH."extend/".$name."/".$name.".xml") && $num_rows == 0)

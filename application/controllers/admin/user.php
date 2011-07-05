@@ -192,7 +192,7 @@ class User extends CI_Controller {
 			)
 		);
 		$this->form_validation->set_rules($config);
-		if ($this->validation->run() == FALSE)
+		if ($this->form_validation->run() == FALSE)
 		{
 			$this->form_validation->set_error_delimiters('<li>', '</li>');
 			$error = validation_errors();
@@ -241,7 +241,7 @@ class User extends CI_Controller {
 		);
 		$this->form_validation->set_rules($config);
 
-		if ($this->validation->run() == FALSE)
+		if ($this->form_validation->run() == FALSE)
 		{
 			$this->form_validation->set_error_delimiters('<li>', '</li>');
 			$error = validation_errors();
