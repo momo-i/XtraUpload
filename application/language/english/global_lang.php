@@ -415,6 +415,12 @@ $lang['Changes Saved'] = 'Changes Saved';
 #: application/controllers/admin/translator.php:100
 $lang['Failure'] = 'Failure';
 
+#: application/views/default/admin/translator/save_lang.php:33
+$lang['Confirm Changes'] = 'Confirm Changes';
+
+#: application/controllers/admin/translator.php:111
+$lang['Translate %s'] = 'Translate %s';
+
 #: application/controllers/admin/translator.php:160
 $lang['Select Language Directory'] = 'Select Language Directory';
 
@@ -630,17 +636,17 @@ $lang['Processing...'] = 'Processing...';
 #: application/libraries/startup.php:201
 $lang['URL Upload'] = 'URL Upload';
 
-#: application/controllers/upload.php:92
+#: application/controllers/upload.php:91
 $lang['Upload Complete!'] = 'Upload Complete!';
 
-#: application/controllers/upload.php:96
-#: application/controllers/upload.php:149
+#: application/controllers/upload.php:95
+#: application/controllers/upload.php:148
 $lang['Upload Failed!'] = 'Upload Failed!';
 
-#: application/controllers/upload.php:130
+#: application/controllers/upload.php:129
 $lang['Upload Completed!'] = 'Upload Completed!';
 
-#: application/controllers/upload.php:200
+#: application/controllers/upload.php:199
 $lang['OK'] = 'OK';
 
 #: application/views/default/user/compare.php:3
@@ -778,6 +784,7 @@ $lang['MP3 Embed'] = 'MP3 Embed';
 
 #: application/views/citrus_island/footer.php:22
 #: application/views/default/footer.php:64
+#: application/views/install/footer.php:3
 #: application/views/style_vantage_blue/footer.php:22
 #: application/views/style_vantage_green/footer.php:22
 #: application/views/style_vantage_orange/footer.php:22
@@ -788,6 +795,7 @@ $lang['&copy; Copyright %s'] = '&copy; Copyright %s';
 
 #: application/views/citrus_island/footer.php:22
 #: application/views/default/footer.php:64
+#: application/views/install/footer.php:3
 #: application/views/style_vantage_blue/footer.php:22
 #: application/views/style_vantage_green/footer.php:22
 #: application/views/style_vantage_orange/footer.php:22
@@ -1426,7 +1434,7 @@ $lang['"%s" Group - Edit'] = '"%s" Group - Edit';
 $lang['Edit Group'] = 'Edit Group';
 
 #: application/views/default/admin/groups/edit.php:76
-#: application/views/default/admin/translator/translateLang.php:50
+#: application/views/default/admin/translator/translate_lang.php:70
 #: application/views/default/files/manage.php:84
 #: application/views/default/home.php:202
 #: application/views/default/home.php:238
@@ -1886,24 +1894,21 @@ $lang['Delete Transaction'] = 'Delete Transaction';
 #: application/views/default/admin/transactions/view.php:74
 $lang['Are you sure you want to delete this transaction?'] = 'Are you sure you want to delete this transaction?';
 
-#: application/views/default/admin/translator/confirmLangSaved.php:12
+#: application/views/default/admin/translator/confirm_lang_saved.php:12
 $lang['Select Language'] = 'Select Language';
 
-#: application/views/default/admin/translator/saveLang.php:12
-#: application/views/default/admin/translator/translateLang.php:12
+#: application/views/default/admin/translator/save_lang.php:12
+#: application/views/default/admin/translator/translate_lang.php:12
 $lang['Key'] = 'Key';
 
-#: application/views/default/admin/translator/saveLang.php:33
-$lang['Confirm Changes'] = 'Confirm Changes';
-
-#: application/views/default/admin/translator/selectModule.php:7
+#: application/views/default/admin/translator/select_module.php:7
 $lang['Select Your Language Segement'] = 'Select Your Language Segement';
 
-#: application/views/default/admin/translator/selectModule.php:13
-#: application/views/default/admin/translator/selectSlaveLang.php:13
+#: application/views/default/admin/translator/select_module.php:13
+#: application/views/default/admin/translator/select_slave_lang.php:13
 $lang['Next Step'] = 'Next Step';
 
-#: application/views/default/admin/translator/selectSlaveLang.php:6
+#: application/views/default/admin/translator/select_slave_lang.php:6
 $lang['Select Your Language'] = 'Select Your Language';
 
 #: application/views/default/admin/users/add.php:3
@@ -2728,9 +2733,6 @@ $lang['Payment Complete'] = 'Payment Complete';
 
 #: application/views/default/user/register/pay_new.php:3
 $lang['Complete Payment'] = 'Complete Payment';
-
-#: application/views/install/footer.php:3
-$lang['&copy; <a href="http://www.xtrafile.com">XtraFile</a> 2006 - 2011'] = '&copy; <a href="http://www.xtrafile.com">XtraFile</a> 2006 - 2011';
 
 #: application/views/install/footer.php:4
 $lang['Page rendered in {elapsed_time} seconds'] = 'Page rendered in {elapsed_time} seconds';

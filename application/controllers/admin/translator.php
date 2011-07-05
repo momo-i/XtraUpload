@@ -103,12 +103,12 @@ class Translator extends CI_Controller {
 			elseif($this->validated && $this->input->post('save_lang'))
 			{
 				$this->data['page_content'] = 'admin/translator/save_lang';
-				$this->data['page_title'] = 'Confirm Changes';
+				$this->data['page_title'] = lang('Confirm Changes');
 			}
 			else
 			{
 				$this->data['page_content'] = 'admin/translator/translate_lang';
-				$this->data['page_title'] = 'Translate ' . $this->lang_module;
+				$this->data['page_title'] = sprintf(lang('Translate %s'), $this->lang_module);
 			}
 		}
 		$this->load->view($this->startup->skin.'/admin/translator/container', $this->data);
