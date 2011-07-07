@@ -191,6 +191,15 @@ if (defined('ENVIRONMENT'))
 		define('APPPATH', BASEPATH.$application_folder.'/');
 	}
 
+if(!file_exists(APPPATH.'config/config.php'))
+{
+	@rename(APPPATH.'config/config.php.dist', APPPATH.'config/config.php');
+}
+if(!file_exists(APPPATH.'config/database.php'))
+{
+	@rename(APPPATH.'config/database.php.dist', APPPATH.'config/database.php');
+}
+
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE

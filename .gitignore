@@ -1,2 +1,4 @@
+config.php
+database.php
 *.bak
 *.swp
