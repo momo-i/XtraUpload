@@ -191,6 +191,9 @@ class Step5 extends CI_Controller {
 		$data = array('id' =>  NULL, 'name' => '_db_version', 'value' => $this->_db_version, 'description1' => '', 'description2' => '', 'group' => 0, 'type' => 'text', 'invincible' => 1);
 		$this->db->insert('config', $data);
 
+		$data = array('id' => NULL, 'name' => 'locale', 'value' => $this->input->post('locale'), 'description1' => 'Site Locale', 'description2' => '', 'group' => 0, 'type' => 'select', 'invincible' => 1);
+		$this->db->insert('config', $data);
+
 		// counters Table
 		$fields = array(
 			'id' => array(
@@ -1073,6 +1076,11 @@ class Step5 extends CI_Controller {
 				'type' => 'TINYINT',
 				'default' => 0,
 				'constraint' => 1
+			),
+			'locale' => array(
+				'type' => 'VARCHAR',
+				'default' => 'en_US',
+				'constraint' => 6
 			)
 		);
 		$this->dbforge->add_field($fields);
@@ -1093,7 +1101,8 @@ class Step5 extends CI_Controller {
 			'gateway' => '0',
 			'ip' => $this->input->ip_address(),
 			'email' => $this->input->post('email'),
-			'group' => 2
+			'group' => 2,
+			'locale' => $this->input->post('locale')
 		);
 		$this->db->insert('users', $data);
 
