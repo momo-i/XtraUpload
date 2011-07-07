@@ -10,7 +10,12 @@
 |
 */
 
-
+$hook['pre_system'][] = array(
+	'class' => 'XuClass',
+	'function' => 'index',
+	'filename' => 'Xuclass.php',
+	'filepath' => 'hooks',
+);
 
 /* End of file hooks.php */
 /* Location: ./application/config/hooks.php */

@@ -1,5 +1,8 @@
+<?php
+$language = isset($this->startup->locale) ? $this->startup->locale : "en_US";
+?>
 <!DOCTYPE html>
-<html lang="<?php echo lang('html_lang'); ?>">
+<html lang="<?php echo get_language($language); ?>">
   <head>
     <meta charset="utf-8">
     <title><?php echo lang('XtraUpload V3'); ?></title>
@@ -9,7 +12,7 @@
   </head>
   <body>
     <div id="logostrip">
-      <img src="<?php echo base_url() ?>images/install/logo.png" alt="<?php echo lang('XtraUpload V3'); ?>" width="450" height="70" border="0">
+      <img src="<?php echo base_url(); ?>images/install/logo.png" alt="<?php echo lang('XtraUpload V3'); ?>" width="450" height="70" border="0">
     </div>
     <div class="fade"></div>
     <br>

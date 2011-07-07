@@ -6,17 +6,17 @@ class Startup {
 	public $site_config = "";
 	public $group_config = "";
 	private $CI = "";
-	private $is_installed = false;
-	private $is_upgradable = false;
-
-	private $ok_lang = array(
-		'ja' => 'japanese',
-		'en' => 'english',
-	);
+	private $is_installed = FALSE;
+	private $is_upgradable = FALSE;
 
 	public function __construct()
 	{
 		log_message('debug', "Startup Class Initialized");
+
+		//require_once 'Zend/Locale.php';
+		//require_once 'Zend/Translate.php';
+		//require_once 'Zend/Debug.php';
+
 		// Define the path to the cache folder
 		define('CACHEPATH', APPPATH.'cache/');
 
@@ -40,7 +40,7 @@ class Startup {
 			}
 			elseif(!$this->is_installed && $this->is_upgradable)
 			{
-				redirect('install/upgrade');
+				redirect('install/setup');
 				exit;
 			}
 			elseif($this->is_installed && isset($this->CI->config->config['is_installed']))
@@ -49,19 +49,28 @@ class Startup {
 			}
 			return;
 		}
-		elseif(!$this->is_installed && !preg_match('#(install|setup|step\d)#', $_SERVER['REQUEST_URI']))
+		elseif(!$this->is_installed && !preg_match('#^(install|setup|step\d)#', $_SERVER['REQUEST_URI']))
 		{
 			redirect('install/setup');
 		}
-		elseif($this->CI->config->config['is_installed'] && preg_match('#^(install|setup|step\d)#', uri_string()) && $this->_db_installed())
+		elseif($this->is_upgradable && !preg_match('#^install#', uri_string()))
+		{
+			$this->CI->load->library('session');
+			$this->_get_config();
+			$this->_get_locale();
+			redirect('install/update');
+			exit;
+		}
+		elseif($this->CI->config->config['is_installed'] && preg_match('#^(install|setup|step\d)#', uri_string()) && $this->_db_installed() && !$this->is_upgradable)
 		{
 			redirect('home');
 		}
 
-		if($this->_db_installed() == false)
+		if($this->_db_installed() === FALSE)
 		{
 			return;
 		}
+
 		$this->CI->load->library('session');
 
 		// Load 2 helpers
@@ -75,6 +84,9 @@ class Startup {
 
 		// Get the sitewide config settings
 		$this->_get_config();
+
+		// Get the user locale
+		$this->_get_locale();
 
 		// Get the user group config settings for the accessing user
 		$this->get_group();
@@ -90,12 +102,11 @@ class Startup {
 		$this->CI->load->library(array('functions', 'xu_api'));
 
 		define('XU_VERSION_READ', $this->CI->functions->parse_version(XU_VERSION));
+		define('XU_DB_VERSION_READ', $this->CI->functions->parse_version($this->db_version));
 		// Load site menus
 		$this->_setup_menu();
 		// Load the Files Subsystem and the USers subsystem
 		$this->CI->load->model(array('users', 'files/files_db', 'admin_logger'));
-		// Load the global language bits, header, footer, and menu
-		$this->CI->lang->load('global');
 		// load all custom startup files
 		$this->_run_startup();
 	}
@@ -104,6 +115,22 @@ class Startup {
 	{
 		if($this->is_installed) {
 			$this->CI->db->close();
+		}
+	}
+
+	private function _get_locale()
+	{
+		$locale = new Zend_Locale(Zend_Locale::BROWSER);
+		$this->locale = $locale;
+		if($this->CI->session->userdata('id'))
+		{
+			$query = $this->CI->db->get_where('users', array('id' => $this->CI->session->userdata('id')));
+			$user = $query->row();
+			$this->locale = $user->locale;
+		}
+		else
+		{
+			$this->locale = isset($this->site_config->site_locale) ? $this->site_config->site_locale : $locale;
 		}
 	}
 
@@ -296,7 +323,11 @@ class Startup {
 			$this->is_installed = true;
 		}
 		$this->CI->load->model('xu');
-		if(version_compare($this->CI->xu->get_version(), XU_VERSION) > 0)
+		$this->db_version = $this->CI->xu->get_version();
+		define('XU_DB_VERSION', $this->db_version);
+		$db_version = str_replace(array(',', '.'), '', $this->db_version);
+		$current_version = str_replace(array(',', '.'), '', XU_VERSION);
+		if($db_version < $current_version)
 		{
 			$this->is_upgradable = true;
 		}
@@ -304,6 +335,15 @@ class Startup {
 
 	private function _set_autolang()
 	{
+		try {
+			$this->locale = new Zend_Locale(Zend_Locale::BROWSER);
+		} catch(Zend_Locale_Exception $e) {
+			$this->locale = new Zend_Locale('en_US');
+		}
+		
+		$this->translate = new Zend_Translate('gettext', APPPATH."language/{$this->locale}/xtraupload.mo");
+
+		/*
 		$language = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? $_SERVER['HTTP_ACCEPT_LANGUAGE'] : $this->CI->config->item('language');
 		$language = preg_split('#,#', $language);
 		$language = strtolower($language[0]);
@@ -312,15 +352,16 @@ class Startup {
 
 		$this->CI->config->set_item('language', $language); 
 		$this->CI->lang->load('global');
+		*/
 	}
 
 	private function _db_installed()
 	{
 		if(!$this->CI->xu->get_version())
 		{
-			return false;
+			return FALSE;
 		}
-		return true;
+		return TRUE;
 	}
 
 }

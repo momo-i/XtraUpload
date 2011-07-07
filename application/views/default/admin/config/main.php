@@ -44,6 +44,15 @@ foreach ($configs->result() as $config)
                 <br>
 <?php
 	}
+	elseif($config->type == 'select')
+	{
+?>
+                <select name="<?php echo $config->name; ?>">
+<?php
+?>
+                </select>
+<?php
+	}
 	else
 	{
 		$description = lang($config->description2);

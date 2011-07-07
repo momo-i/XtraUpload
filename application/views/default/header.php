@@ -9,7 +9,7 @@ else
 }
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo lang('html_lang'); ?>">
+<html lang="<?php echo get_language($this->startup->site_config->site_locale); ?>">
   <head>
     <meta charset="utf-8">
     <title><?php echo $header_title.$this->startup->site_config->sitename; ?></title>

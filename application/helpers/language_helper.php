@@ -39,25 +39,31 @@
  */
 if ( ! function_exists('lang'))
 {
-	function lang($line, $id = '')
+	function lang($line)
 	{
 		$CI =& get_instance();
 		$lines = $CI->lang->line($line);
-		if(empty($lines))
-		{
-			if($CI->config->item('log_threshold') >= 4)
-			{
-				$line = "(Not imported words) {$line}";
-			}
-			return $line;
-		}
-
-		if ($id != '')
-		{
-			$lines = '<label for="'.$id.'">'.$lines."</label>";
-		}
-
 		return $lines;
+	}
+}
+
+if ( ! function_exists('get_language'))
+{
+	function get_language($lang = 'en_US')
+	{
+		$CI =& get_instance();
+		$locale = $CI->lang->get_language($lang);
+		return $locale;
+	}
+}
+
+if ( ! function_exists('get_region'))
+{
+	function get_region($lang = 'en_US')
+	{
+		$CI =& get_instance();
+		$region = $CI->lang->get_region($lang);
+		return $region;
 	}
 }
 
