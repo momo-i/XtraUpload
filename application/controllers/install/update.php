@@ -61,7 +61,7 @@ class Update extends CI_Controller {
 		$ret = $this->_update(XU_DB_VERSION, XU_VERSION);
 		if($ret === TRUE)
 		{
-			redirect('update/done');
+			redirect('install/update/done');
 		}
 		if($this->updated === FALSE)
 		{
@@ -135,19 +135,13 @@ class Update extends CI_Controller {
 		}
 
 		$data = array('id' => NULL, 'name' => 'site_locale', 'value' => $this->input->post('locale'), 'description1' => 'Site Locale', 'description2' => '', 'group' => 0, 'type' => 'select', 'invincible' => 1);
-		//$this->db->insert('config', $data);
+		$this->db->insert('config', $data);
 
-		$this->db->select('locale');
-		$this->db->where('id', 1);
-		$query = $this->db->get('users');
-		if($query->num_rows() > 0)
-		{
-			$this->updated = FALSE;
-			$this->_set_db_version();
-			return FALSE;
-		}
-		$data = array('locale' => array('type'=>'VARCHAR', 'defalut'=>'en_US', 'constraint'=>6));
-		//$this->dbforge->add_column('users', $data);
+		$data = array('locale' => array('type'=>'VARCHAR', 'default'=>'en_US', 'constraint'=>6));
+		$this->dbforge->add_column('users', $data);
+		$this->_set_db_version();
+
+		return TRUE;
 	}
 
 	private function _set_db_version()
