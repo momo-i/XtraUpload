@@ -80,9 +80,11 @@ class Startup {
 		$this->group_config = new stdClass();
 
 		// Get the active skin name
+		log_message('debug', 'Getting started for Skin.');
 		$this->_get_skin();
 
 		// Get the sitewide config settings
+		log_message('debug', 'Getting started for Config.');
 		$this->_get_config();
 
 		// Get the user locale
@@ -160,14 +162,16 @@ class Startup {
 		$config_file_name = md5($this->CI->config->config['encryption_key'].'site_config');
 		if(file_exists(CACHEPATH . $config_file_name))
 		{
+			log_message('debug', 'Config Loaded from Cache.');
 			$this->site_config = json_decode(base64_decode($this->CI->load->file(CACHEPATH . $config_file_name, true)));
 		}
 		else
 		{
+			log_message('debug', 'Config Loaded from Database.');
 			$q = $this->CI->db->get('config');
 			foreach($q->result() as $row)
 			{
-				$this->site_config[$row->name] = $row->value;
+				$this->site_config->{$row->name} = $row->value;
 			}
 			file_put_contents(CACHEPATH . $config_file_name, base64_encode(json_encode($this->site_config)));
 		}
