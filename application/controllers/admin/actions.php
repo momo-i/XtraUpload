@@ -4,38 +4,65 @@
  *
  * A turn-key open source web 2.0 PHP file uploading package requiring PHP v5
  *
- * @package	 XtraUpload
- * @author	  Matthew Glinski
+ * @package     XtraUpload
+ * @author      Matthew Glinski
+ * @author      momo-i
  * @copyright   Copyright (c) 2006, XtraFile.com
- * @license	 http://xtrafile.com/docs/license
- * @link		http://xtrafile.com
- * @since	   Version 2.0
+ * @copyright   Copyright (c) 2011-, www.momo-i.org
+ * @license     http://www.opensource.org/licenses/Apache-2.0
+ * @link        http://xtrafile.com
+ * @since       Version 2.0
  * @filesource
  */
 
 /**
  * XtraUpload Actions Controller
  *
- * @package	 XtraUpload
+ * @package     XtraUpload
  * @subpackage  Controllers
- * @category	Controllers
- * @author	  Matthew Glinski
- * @author	  momo-i
- * @link		http://xtrafile.com/docs
+ * @category    Controllers
+ * @author      Matthew Glinski
+ * @author      momo-i
+ * @link        https://gitorious.org/xtraupload-v3
  */
 class Actions extends CI_Controller {
 
+	/**
+	 * Constructor
+	 *
+	 * Load admin_access model
+	 *
+	 * @see    Admin_access
+	 * @author Matthew Glinski
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('admin_access');
 	}
 
+	/**
+	 * index
+	 *
+	 * Redirect actions view
+	 *
+	 * @see	   view()
+	 * @author Matthew Glinski
+	 * @return void
+	 */
 	public function index()
 	{
-		redirect('admin/email/view');
+		redirect('admin/actions/view');
 	}
 
+	/**
+	 * view
+	 *
+	 * Show some actions view.
+	 *
+	 * @author Matthew Glinski
+	 * @return void
+	 */
 	public function view()
 	{
 		$data['flash_message'] = '';
@@ -49,11 +76,41 @@ class Actions extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
-	public function php_info()
+	/**
+	 * php_info
+	 *
+	 * Display phpinfo()
+	 *
+	 * @author Matthew Glinski
+	 * @author momo-i
+	 * @return void
+	 */
+	public function php_info($type = INFO_ALL)
 	{
-		phpinfo();
+		ob_start();
+		phpinfo(1 | 4 | 8 | 16 | 32);
+		$phpinfo = ob_get_contents();
+		ob_end_clean();
+		$phpinfo = preg_replace('#(.*\n)+<body.*#', '', $phpinfo);
+		$phpinfo = preg_replace('#</div></body></html>#', '', $phpinfo);
+		$phpinfo = preg_replace('#h1 class="(.*?)"#', 'h1', $phpinfo);
+		$phpinfo = preg_replace('#tr class="(.*?)"#', 'tr', $phpinfo);
+		$phpinfo = preg_replace('#td class="(.*?)"#', 'td', $phpinfo);
+		$phpinfo = preg_replace('#table border="0" cellpadding="3" width="600"#', 'table id="file_list_table"', $phpinfo);
+		$data['phpinfo'] = $phpinfo;
+		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('PHP Info')));
+		$this->load->view($this->startup->skin.'/admin/actions/info', $data);
+		$this->load->view($this->startup->skin.'/footer');
+		//phpinfo();
 	}
 
+	/**
+	 * run_cron
+	 *
+	 * Run cron jobs.
+	 *
+	 * @return void
+	 */
 	public function run_cron()
 	{
 		define('IN_CRON', TRUE);
@@ -79,6 +136,13 @@ class Actions extends CI_Controller {
 		redirect('admin/actions/view');
 	}
 
+	/**
+	 * clear_cache
+	 *
+	 * Cleaning cache files.
+	 *
+	 * @return void
+	 */
 	public function clear_cache()
 	{
 		$this->load->helper('file');
@@ -109,6 +173,13 @@ EOF;
 		redirect('admin/actions/view');
 	}
 
+	/**
+	 * update_server_cache
+	 *
+	 * Update Remote Server Cache.
+	 *
+	 * @see Remote_server_xml_rpc::update_cache
+	 */
 	public function update_server_cache()
 	{
 		$this->load->library('Remote_server_xml_rpc');
