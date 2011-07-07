@@ -87,6 +87,7 @@ class Startup {
 
 		// Get the user locale
 		$this->_get_locale();
+		$this->CI->lang->set_locale($this->locale);
 
 		// Get the user group config settings for the accessing user
 		$this->get_group();

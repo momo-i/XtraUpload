@@ -81,6 +81,12 @@ class XU_Lang extends CI_Lang {
 		return $locale->getRegion();
 	}
 
+	public function set_locale($lang = 'en_US')
+	{
+		$this->_default_locale = new Zend_Locale($lang);
+		$this->_translate = new Zend_Translate('gettext', APPPATH."/language/{$this->_default_locale}/xtraupload.mo", $this->_default_locale->getLanguage());
+	}
+
 }
 // END Language Class
 
