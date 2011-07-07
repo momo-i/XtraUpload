@@ -4,24 +4,26 @@
  *
  * A turn-key open source web 2.0 PHP file uploading package requiring PHP v5
  *
- * @package	 XtraUpload
- * @author	  Matthew Glinski
+ * @package     XtraUpload
+ * @author      Matthew Glinski
+ * @author      momo-i
  * @copyright   Copyright (c) 2006, XtraFile.com
- * @license	 http://xtrafile.com/docs/license
- * @link		http://xtrafile.com
- * @since	   Version 2.0
+ * @copyright   Copyright (c) 2011-, www.momo-i.org
+ * @license     http://www.opensource.org/licenses/Apache-2.0
+ * @link        http://xtrafile.com
+ * @since       Version 2.0
  * @filesource
  */
 
 /**
  * XtraUpload Email Controller
  *
- * @package	 XtraUpload
+ * @package     XtraUpload
  * @subpackage  Controllers
- * @category	Controllers
- * @author	  Matthew Glinski
- * @author	  momo-i
- * @link		http://xtrafile.com/docs
+ * @category    Controllers
+ * @author      Matthew Glinski
+ * @author      momo-i
+ * @link        https://gitorious.org/xtraupload-v3
  */
 class Email extends CI_Controller {
 
