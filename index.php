@@ -200,6 +200,11 @@ if(!file_exists(APPPATH.'config/database.php'))
 	@rename(APPPATH.'config/database.php.dist', APPPATH.'config/database.php');
 }
 
+if(PHP_SAPI == 'cli')
+{
+	exit('Do not run this file on command line.');
+}
+
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
