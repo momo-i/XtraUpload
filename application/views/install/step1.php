@@ -2,7 +2,7 @@
     <div class="progressMenu">
       <ul>
         <li class="current">
-          <img src="<?php echo site_url() ?>img/icons/about_16.png" border="0" alt="<?php printf(lang('Step %d'), 1); ?>">
+          <img src="<?php echo base_url(); ?>img/icons/about_16.png" border="0" alt="<?php printf(lang('Step %d'), 1); ?>">
           <?php printf(lang('Step %d'), 1); ?>
 
         </li>
@@ -27,7 +27,7 @@
         <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
           <tr>
             <td width="12%" valign="middle" style="text-align:middle">
-              <img style="vertical-align:middle;" src="<?php echo site_url() ?>images/install/angle/install.png" width="128" height="128">
+              <img style="vertical-align:middle;" src="<?php echo base_url(); ?>images/install/angle/install.png" width="128" height="128">
             </td>
             <td width="88%">
               <p class="style2">
@@ -52,7 +52,7 @@
           <div style="float:left">
             <span class="cssbutton">
               <a class="buttonRed" href="<?php echo site_url('install/setup'); ?>">
-                <img src="<?php echo site_url() ?>img/icons/back_16.png" border="0" alt=""><?php echo lang('Go Back'); ?>
+                <img src="<?php echo base_url(); ?>img/icons/back_16.png" border="0" alt=""><?php echo lang('Go Back'); ?>
 
               </a>
             </span>
@@ -60,7 +60,7 @@
           <div style="float:right">
             <span class="cssbutton">
               <a class="buttonGreen" href="<?php echo site_url('install/step/2'); ?>">
-                <img src="<?php echo site_url() ?>img/icons/ok_16.png" border="0" alt=""><?php echo lang('Continue'); ?>
+                <img src="<?php echo base_url(); ?>img/icons/ok_16.png" border="0" alt=""><?php echo lang('Continue'); ?>
 
               </a>
             </span>
