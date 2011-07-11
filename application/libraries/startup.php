@@ -123,7 +123,11 @@ class Startup {
 
 	private function _get_locale()
 	{
-		$locale = new Zend_Locale();
+		try {
+			$locale = new Zend_Locale(Zend_Locale::BROWSER);
+		} catch(Exception $e) {
+			$locale = new Zend_Locale('en_US');
+		}
 		$this->locale = $locale;
 		if($this->CI->session->userdata('id'))
 		{

@@ -37,8 +37,12 @@ class XU_Lang extends CI_Lang {
 	public function __construct()
 	{
 		parent::__construct();
-		log_message('debug', "Zend Locale Class Initialized");
-		$this->_default_locale = new Zend_Locale();
+		log_message('debug', "XtraUpload Zend Locale Class Initialized");
+		try {
+			$this->_default_locale = new Zend_Locale();
+		} catch(Exception $e) {
+			$this->_default_locale = new Zend_Locale('en_US');
+		}
 		if( ! Zend_Locale::isLocale($this->_default_locale, true, false))
 		{
 			if( ! Zend_Locale::isLocale($this->_default_locale, false, false))
