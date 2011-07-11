@@ -123,7 +123,7 @@ class Startup {
 
 	private function _get_locale()
 	{
-		$locale = new Zend_Locale(Zend_Locale::BROWSER);
+		$locale = new Zend_Locale();
 		$this->locale = $locale;
 		if($this->CI->session->userdata('id'))
 		{
@@ -347,17 +347,6 @@ class Startup {
 		}
 		
 		$this->translate = new Zend_Translate('gettext', APPPATH."language/{$this->locale}/xtraupload.mo");
-
-		/*
-		$language = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? $_SERVER['HTTP_ACCEPT_LANGUAGE'] : $this->CI->config->item('language');
-		$language = preg_split('#,#', $language);
-		$language = strtolower($language[0]);
-		$language = preg_split('#-#', $language);
-		$language = $this->ok_lang[$language[0]];
-
-		$this->CI->config->set_item('language', $language); 
-		$this->CI->lang->load('global');
-		*/
 	}
 
 	private function _db_installed()

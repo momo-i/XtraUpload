@@ -130,9 +130,9 @@ class User extends CI_Controller {
 				$error = validation_errors();
 				if(!$rows)
 				{
-					$error .= lang('The Captcha you submited was incorrect').'<br>';
+					$error .= '<li>'.lang('The Captcha you submited was incorrect').'</li>';
 				}
-				$data['error_message'] = '<p><span class="alert"><strong>'.lang('Error:').'</strong><br>'.$error.'</span></p>'."\n";
+				$data['error_message'] = '<p><span class="alert"><strong>'.lang('Error:').'</strong><br><ul>'.$error.'</ul></span></p>'."\n";
 
 				$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Register')));
 				$this->load->view($this->startup->skin.'/user/register/begin', $data);

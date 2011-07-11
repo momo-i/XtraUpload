@@ -56,6 +56,8 @@ class XU_Upload extends CI_Upload {
 
 	protected $_file_name_override	= '';
 
+	private $_types = array();
+
 	/**
 	 * Constructor
 	 *
@@ -64,6 +66,26 @@ class XU_Upload extends CI_Upload {
 	public function __construct($props = array())
 	{
 		parent::__construct();
+
+		$this->_types = array(
+			'upload_userfile_not_set' => lang('Unable to find a post variable called userfile.'),
+			'upload_file_exceeds_limit' => lang('The uploaded file exceeds the maximum allowed size in your PHP configuration file.'),
+			'upload_file_exceeds_form_limit' => lang('The uploaded file exceeds the maximum size allowed by the submission form.'),
+			'upload_file_partial' => lang('The file was only partially uploaded.'),
+			'upload_no_temp_directory' => lang('The temporary folder is missing.'),
+			'upload_unable_to_write_file' => lang('The file could not be written to disk.'),
+			'upload_stopped_by_extension' => lang('The file upload was stopped by extension.'),
+			'upload_no_file_selected' => lang('You did not select a file to upload.'),
+			'upload_invalid_filetype' => lang('The filetype you are attempting to upload is not allowed.'),
+			'upload_invalid_filesize' => lang('The file you are attempting to upload is larger than the permitted size.'),
+			'upload_invalid_dimensions' => lang('The image you are attempting to upload exceedes the maximum height or width.'),
+			'upload_destination_error' => lang('A problem was encountered while attempting to move the uploaded file to the final destination.'),
+			'upload_no_filepath' => lang('The upload path does not appear to be valid.'),
+			'upload_no_file_types' => lang('You have not specified any allowed file types.'),
+			'upload_bad_filename' => lang('The file name you submitted already exists on the server.'),
+			'upload_not_writable' => lang('The upload destination folder does not appear to be writable.'),
+		);
+
 		if (count($props) > 0)
 		{
 			$this->initialize($props);
@@ -932,21 +954,20 @@ class XU_Upload extends CI_Upload {
 	public function set_error($msg)
 	{
 		$CI =& get_instance();
-		$CI->lang->load('upload');
 
 		if (is_array($msg))
 		{
 			foreach ($msg as $val)
 			{
 				$this->error_num[] = $val;
-				$msg = ($CI->lang->line($val) == FALSE) ? $val : $CI->lang->line($val);
+				$msg = isset($this->_types[$val]) ? $this->_types[$val] : $val;
 				$this->error_msg[] = $msg;
 				log_message('error', $msg);
 			}
 		}
 		else
 		{
-			$msg = ($CI->lang->line($msg) == FALSE) ? $msg : $CI->lang->line($msg);
+			$msg = isset($this->_types[$msg]) ? $this->_types[$msg] : $msg;
 			$this->error_msg[] = $msg;
 			log_message('error', $msg);
 		}

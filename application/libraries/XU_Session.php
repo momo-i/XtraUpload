@@ -24,13 +24,13 @@
 * @author        Dariusz Debowczyk
 * @link        http://www.codeigniter.com/user_guide/libraries/sessions.html
 */
-class CI_session 
-{
+class XU_session extends CI_session {
+
     public $session_id_ttl; // session id time to live (TTL) in seconds
 	public $object;
     public $flash_key = 'flash'; // prefix for "flash" variables (eg. flash:new:message)
     
-    function CI_session()
+    public function __construct()
     {
         log_message('debug', "Native_session Class Initialized");
 		$this->object =& get_instance(); 

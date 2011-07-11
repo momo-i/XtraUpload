@@ -144,8 +144,15 @@ class Extend extends CI_Controller {
 		redirect('admin/extend/view');
 	}
 
-	// ------------------------------------------------------------------------
-
+	/**
+	 * remove
+	 *
+	 * Uninstall Extends.
+	 *
+	 * @param  string $name Plugin name
+	 * @author Matthew Glinski
+	 * @return void
+	 */
 	public function remove($name)
 	{	 $name = str_replace(array('../', '..'), '', $name);
 		$this->load->extention($name);
@@ -157,8 +164,15 @@ class Extend extends CI_Controller {
 		redirect('admin/extend/view');
 	}
 
-	// ------------------------------------------------------------------------
-
+	/**
+	 * turn_on
+	 *
+	 * Activate Plugin
+	 *
+	 * @param  string $name Plugin name
+	 * @author Matthew Glinski
+	 * @return void
+	 */
 	public function turn_on($name)
 	{
 		$this->db->where('file_name', $name)->update('extend', array('active' => 1));
@@ -167,8 +181,15 @@ class Extend extends CI_Controller {
 		redirect('admin/extend/view');
 	}
 
-	// ------------------------------------------------------------------------
-
+	/**
+	 * turn_off
+	 *
+	 * Deactivate Plugins
+	 *
+	 * @param  string $name Plugin name
+	 * @author Matthew Glinski
+	 * @return void
+	 */
 	public function turn_off($name)
 	{
 		$this->db->where('file_name', $name)->update('extend', array('active' => 0));
@@ -177,8 +198,14 @@ class Extend extends CI_Controller {
 		redirect('admin/extend/view');
 	}
 
-	// ------------------------------------------------------------------------
-
+	/**
+	 * _update_cache
+	 *
+	 * Update Cache file
+	 *
+	 * @author Matthew Glinski
+	 * @return void
+	 */
 	private function _update_cache()
 	{
 		$extend_file_name = md5($this->config->config['encryption_key'].'extend');
@@ -204,8 +231,14 @@ class Extend extends CI_Controller {
 		$this->remote_server_xml_rpc->update_cache();
 	}
 
-	// ------------------------------------------------------------------------
-
+	/**
+	 * _get_installed_plugins
+	 *
+	 * Get Installed plugins
+	 *
+	 * @author Matthew Glinski
+	 * @return array Installed Plugins
+	 */
 	private function _get_installed_plugins()
 	{
 		if(is_array($this->installed))
@@ -222,8 +255,14 @@ class Extend extends CI_Controller {
 		return $this->installed;
 	}
 
-	// ------------------------------------------------------------------------
-
+	/**
+	 * _get_not_installed_plugins
+	 *
+	 * Get not installed plugins
+	 *
+	 * @author Matthew Glinski
+	 * @return array Not installed plugins
+	 */
 	private function _get_not_installed_plugins()
 	{
 		if(is_array($this->not_installed))
