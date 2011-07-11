@@ -135,6 +135,8 @@ class Startup {
 		{
 			$this->locale = isset($this->site_config->site_locale) ? $this->site_config->site_locale : $locale;
 		}
+		$is_rtl = is_rtl($this->locale);
+		$this->is_rtl = !empty($is_rtl['characters']) ? 'rtl' : 'ltr';
 	}
 
 	private function _get_skin()

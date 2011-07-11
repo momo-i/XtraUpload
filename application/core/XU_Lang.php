@@ -81,6 +81,12 @@ class XU_Lang extends CI_Lang {
 		return $locale->getRegion();
 	}
 
+	public function is_rtl($lang = 'en_US')
+	{
+		$is_rtl = Zend_Locale_Data::getList($lang, 'layout');
+		return $is_rtl;
+	}
+
 	public function set_locale($lang = 'en_US')
 	{
 		$this->_default_locale = new Zend_Locale($lang);

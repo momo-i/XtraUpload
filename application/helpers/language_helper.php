@@ -67,6 +67,16 @@ if ( ! function_exists('get_region'))
 	}
 }
 
+if ( ! function_exists('is_rtl'))
+{
+	function is_rtl($lang = 'en_US')
+	{
+		$CI =& get_instance();
+		$is_rtl = $CI->lang->is_rtl($lang);
+		return $is_rtl;
+	}
+}
+
 // ------------------------------------------------------------------------
 /* End of file language_helper.php */
 /* Location: ./system/helpers/language_helper.php */

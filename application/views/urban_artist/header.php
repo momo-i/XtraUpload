@@ -9,7 +9,7 @@ else
 }
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo lang('html_lang'); ?>">
+<html lang="<?php echo get_language($this->startup->locale); ?>">
   <head>
     <meta charset="utf-8">
     <title><?php echo $header_title.$this->startup->site_config->sitename; ?></title>
@@ -45,7 +45,7 @@ if(isset($include_url_upload_js) && $include_url_upload_js === TRUE)
 }
 ?>
   </head>
-  <body dir="<?php echo lang('language_direction'); ?>">
+  <body dir="<?php echo $this->startup->is_rtl; ?>">
     <!-- wrap starts here -->
     <div id="wrap">
       <!--header -->

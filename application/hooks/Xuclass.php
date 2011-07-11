@@ -8,6 +8,7 @@ class XuClass {
 		ini_set('include_path', APPPATH.'xu_class/');
 		require_once 'Zend/Debug.php';
 		require_once 'Zend/Locale.php';
+		require_once 'Zend/Locale/Data.php';
 		require_once 'Zend/Translate.php';
 	}
 

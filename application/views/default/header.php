@@ -45,7 +45,7 @@ if(isset($include_url_upload_js) && $include_url_upload_js === TRUE)
 }
 ?>
   </head>
-  <body dir="<?php echo lang('language_direction'); ?>">
+  <body dir="<?php echo $this->startup->is_rtl; ?>">
     <!-- wrap starts here -->
     <div id="wrap">
       <!--header -->
