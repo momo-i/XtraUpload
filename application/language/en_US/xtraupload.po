@@ -1,16 +1,16 @@
-# English translations for XtraUpload package.
-# Copyright (C) 2011 THE XtraUpload'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the XtraUpload package.
-# root <webmaster@momo-i.org>, 2011.
+# English translations for XtraUpload 3.0.0 package.
+# Copyright (C) 2011 XtraUpload
+# This file is distributed under the same license as the XtraUpload 3.0.0 package.
+# Automatically generated, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: XtraUpload 3.0.0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-11 14:50+0900\n"
-"PO-Revision-Date: 2011-07-07 07:14+0900\n"
-"Last-Translator: root <webmaster@momo-i.org>\n"
-"Language-Team: English\n"
+"Project-Id-Version: XtraUpload 3.0.0 Alpha2\n"
+"Report-Msgid-Bugs-To: translator at xtrafile.com\n"
+"POT-Creation-Date: 2011-07-11 17:03+0900\n"
+"PO-Revision-Date: 2011-07-11 17:03+0900\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,87 +18,84 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../../application/config/lang_db.php:4
-#, fuzzy
 msgid "Site Name:"
-msgstr "File Name"
+msgstr "Site Name:"
 
 #: ../../../application/config/lang_db.php:5
-#, fuzzy
 msgid "(Site Name)"
-msgstr "File Name"
+msgstr "(Site Name)"
 
 #: ../../../application/config/lang_db.php:6
-#, fuzzy
 msgid "Your Site Slogan"
-msgstr "Run Site Cron"
+msgstr "Your Site Slogan"
 
 #: ../../../application/config/lang_db.php:7
-#, fuzzy
 msgid "Site EMail"
-msgstr "Send Mass EMail"
+msgstr "Site EMail"
 
 #: ../../../application/config/lang_db.php:8
-#, fuzzy
 msgid "Email address used to send emails"
-msgstr "Email Address Confirmation"
+msgstr "Email address used to send emails"
 
 #: ../../../application/config/lang_db.php:9
 msgid "Title Separator"
-msgstr ""
+msgstr "Title Separator"
 
 #: ../../../application/config/lang_db.php:10
-#, fuzzy
 msgid "Use Static Image Links"
-msgstr "Image Links"
+msgstr "Use Static Image Links"
 
 #: ../../../application/config/lang_db.php:11
 msgid ""
 "Use actual filesystem URLs to serve image thumbnails and direct images. Will "
 "save memory and server cycles on large sites."
 msgstr ""
+"Use actual filesystem URLs to serve image thumbnails and direct images. Will "
+"save memory and server cycles on large sites."
 
 #: ../../../application/config/lang_db.php:12
-#, fuzzy
 msgid "Allow Version Check"
-msgstr "Version Checks"
+msgstr "Allow Version Check"
 
 #: ../../../application/config/lang_db.php:13
 msgid ""
 "Allow XtraUpload to call home to check for new versions and security updates?"
 msgstr ""
+"Allow XtraUpload to call home to check for new versions and security updates?"
 
 #: ../../../application/config/lang_db.php:14
 msgid "Home Page Message"
-msgstr ""
+msgstr "Home Page Message"
 
 #: ../../../application/config/lang_db.php:15
 msgid ""
 "Message to display to all your users on the home page. Like an announcement"
 msgstr ""
+"Message to display to all your users on the home page. Like an announcement"
 
 #: ../../../application/config/lang_db.php:16
 msgid "Show File Preview"
-msgstr ""
+msgstr "Show File Preview"
 
 #: ../../../application/config/lang_db.php:17
 msgid ""
 "Show a preview of some file types on download(mp3, wmv, mov) and an embed "
 "code."
 msgstr ""
+"Show a preview of some file types on download(mp3, wmv, mov) and an embed "
+"code."
 
 #: ../../../application/config/lang_db.php:18
-#, fuzzy
 msgid "Show Recent Uploads"
-msgstr "Recently Uploaded Files"
+msgstr "Show Recent Uploads"
 
 #: ../../../application/config/lang_db.php:19
 msgid "Show a list of the 5 most recently uploaded files?"
-msgstr ""
+msgstr "Show a list of the 5 most recently uploaded files?"
 
 #: ../../../application/config/lang_db.php:20
-#, fuzzy
 msgid "Site Locale"
-msgstr "Site Home"
+msgstr "Site Locale"
 
 #: ../../../application/models/users.php:272
 #: ../../../application/views/default/user/compare.php:172
@@ -3443,9 +3440,8 @@ msgid "If you chose to continue you do so at your own risk."
 msgstr "If you chose to continue you do so at your own risk."
 
 #: ../../../application/views/install/update.php:12
-#, fuzzy
 msgid "Welcome to XtraUpload Updater"
-msgstr "Welcome to XtraUpload Installer"
+msgstr "Welcome to XtraUpload Updater"
 
 #: ../../../application/views/install/update.php:13
 #: ../../../application/views/install/setup.php:4
@@ -3455,7 +3451,7 @@ msgstr "Details about the system requirements are below."
 #: ../../../application/views/install/update.php:21
 #, php-format
 msgid "Update %s from %s"
-msgstr ""
+msgstr "Update %s from %s"
 
 #: ../../../application/views/install/header.php:8
 #: ../../../application/views/install/header.php:15
@@ -3483,7 +3479,7 @@ msgstr "XtraUpload was installed successfully!"
 
 #: ../../../application/views/install/step5.php:51
 msgid "The admin login information is:"
-msgstr ""
+msgstr "The admin login information is:"
 
 #: ../../../application/views/install/footer.php:4
 msgid "Page rendered in {elapsed_time} seconds"
@@ -3750,77 +3746,81 @@ msgstr "IPN Validation Failed."
 
 #: ../../../application/libraries/XU_Upload.php:71
 msgid "Unable to find a post variable called userfile."
-msgstr ""
+msgstr "Unable to find a post variable called userfile."
 
 #: ../../../application/libraries/XU_Upload.php:72
 msgid ""
 "The uploaded file exceeds the maximum allowed size in your PHP configuration "
 "file."
 msgstr ""
+"The uploaded file exceeds the maximum allowed size in your PHP configuration "
+"file."
 
 #: ../../../application/libraries/XU_Upload.php:73
 msgid ""
 "The uploaded file exceeds the maximum size allowed by the submission form."
 msgstr ""
+"The uploaded file exceeds the maximum size allowed by the submission form."
 
 #: ../../../application/libraries/XU_Upload.php:74
 msgid "The file was only partially uploaded."
-msgstr ""
+msgstr "The file was only partially uploaded."
 
 #: ../../../application/libraries/XU_Upload.php:75
 msgid "The temporary folder is missing."
-msgstr ""
+msgstr "The temporary folder is missing."
 
 #: ../../../application/libraries/XU_Upload.php:76
 msgid "The file could not be written to disk."
-msgstr ""
+msgstr "The file could not be written to disk."
 
 #: ../../../application/libraries/XU_Upload.php:77
 msgid "The file upload was stopped by extension."
-msgstr ""
+msgstr "The file upload was stopped by extension."
 
 #: ../../../application/libraries/XU_Upload.php:78
-#, fuzzy
 msgid "You did not select a file to upload."
-msgstr "You have selected previously selected files for upload."
+msgstr "You did not select a file to upload."
 
 #: ../../../application/libraries/XU_Upload.php:79
 msgid "The filetype you are attempting to upload is not allowed."
-msgstr ""
+msgstr "The filetype you are attempting to upload is not allowed."
 
 #: ../../../application/libraries/XU_Upload.php:80
 msgid ""
 "The file you are attempting to upload is larger than the permitted size."
 msgstr ""
+"The file you are attempting to upload is larger than the permitted size."
 
 #: ../../../application/libraries/XU_Upload.php:81
 msgid ""
 "The image you are attempting to upload exceedes the maximum height or width."
 msgstr ""
+"The image you are attempting to upload exceedes the maximum height or width."
 
 #: ../../../application/libraries/XU_Upload.php:82
 msgid ""
 "A problem was encountered while attempting to move the uploaded file to the "
 "final destination."
 msgstr ""
+"A problem was encountered while attempting to move the uploaded file to the "
+"final destination."
 
 #: ../../../application/libraries/XU_Upload.php:83
 msgid "The upload path does not appear to be valid."
-msgstr ""
+msgstr "The upload path does not appear to be valid."
 
 #: ../../../application/libraries/XU_Upload.php:84
-#, fuzzy
 msgid "You have not specified any allowed file types."
-msgstr "You do not have any uploaded files."
+msgstr "You have not specified any allowed file types."
 
 #: ../../../application/libraries/XU_Upload.php:85
-#, fuzzy
 msgid "The file name you submitted already exists on the server."
-msgstr "The email address you supplied is already registered with us"
+msgstr "The file name you submitted already exists on the server."
 
 #: ../../../application/libraries/XU_Upload.php:86
 msgid "The upload destination folder does not appear to be writable."
-msgstr ""
+msgstr "The upload destination folder does not appear to be writable."
 
 #: ../../../application/libraries/startup.php:235
 #: ../../../application/controllers/upload.php:47
@@ -3896,60 +3896,156 @@ msgstr "Add This Page"
 msgid "Upload"
 msgstr "Upload"
 
+#: ../../../application/libraries/XU_Email.php:89
+msgid "The email validation method must be passed an array."
+msgstr "The email validation method must be passed an array."
+
+#: ../../../application/libraries/XU_Email.php:90
+#, php-format
+msgid "Invalid email address: %s"
+msgstr "Invalid email address: %s"
+
+#: ../../../application/libraries/XU_Email.php:91
+#, php-format
+msgid "Unable to locate the following email attachment: %s"
+msgstr "Unable to locate the following email attachment: %s"
+
+#: ../../../application/libraries/XU_Email.php:92
+#, php-format
+msgid "Unable to open this attachment: %s"
+msgstr "Unable to open this attachment: %s"
+
+#: ../../../application/libraries/XU_Email.php:93
+msgid "You must include recipients: To, Cc, or Bcc"
+msgstr "You must include recipients: To, Cc, or Bcc"
+
+#: ../../../application/libraries/XU_Email.php:94
+msgid ""
+"Unable to send email using PHP mail().  Your server might not be configured "
+"to send mail using this method."
+msgstr ""
+"Unable to send email using PHP mail().  Your server might not be configured "
+"to send mail using this method."
+
+#: ../../../application/libraries/XU_Email.php:95
+msgid ""
+"Unable to send email using PHP Sendmail.  Your server might not be "
+"configured to send mail using this method."
+msgstr ""
+"Unable to send email using PHP Sendmail.  Your server might not be "
+"configured to send mail using this method."
+
+#: ../../../application/libraries/XU_Email.php:96
+msgid ""
+"Unable to send email using PHP SMTP.  Your server might not be configured to "
+"send mail using this method."
+msgstr ""
+"Unable to send email using PHP SMTP.  Your server might not be configured to "
+"send mail using this method."
+
+#: ../../../application/libraries/XU_Email.php:97
+#, php-format
+msgid ""
+"Your message has been successfully sent using the following protocol: %s"
+msgstr ""
+"Your message has been successfully sent using the following protocol: %s"
+
+#: ../../../application/libraries/XU_Email.php:98
+msgid "Unable to open a socket to Sendmail. Please check settings."
+msgstr "Unable to open a socket to Sendmail. Please check settings."
+
+#: ../../../application/libraries/XU_Email.php:99
+msgid "You did not specify a SMTP hostname."
+msgstr "You did not specify a SMTP hostname."
+
+#: ../../../application/libraries/XU_Email.php:100
+#, php-format
+msgid "The following SMTP error was encountered: %s"
+msgstr "The following SMTP error was encountered: %s"
+
+#: ../../../application/libraries/XU_Email.php:101
+msgid "Error: You must assign a SMTP username and password."
+msgstr "Error: You must assign a SMTP username and password."
+
+#: ../../../application/libraries/XU_Email.php:102
+#, php-format
+msgid "Failed to send AUTH LOGIN command. Error: %s"
+msgstr "Failed to send AUTH LOGIN command. Error: %s"
+
+#: ../../../application/libraries/XU_Email.php:103
+#, php-format
+msgid "Failed to authenticate username. Error: %s"
+msgstr "Failed to authenticate username. Error: %s"
+
+#: ../../../application/libraries/XU_Email.php:104
+#, php-format
+msgid "Failed to authenticate password. Error: %s"
+msgstr "Failed to authenticate password. Error: %s"
+
+#: ../../../application/libraries/XU_Email.php:105
+#, php-format
+msgid "Unable to send data: %s"
+msgstr "Unable to send data: %s"
+
+#: ../../../application/libraries/XU_Email.php:106
+#, php-format
+msgid "Exit status code: %s"
+msgstr "Exit status code: %s"
+
 #: ../../../application/libraries/XU_Form_validation.php:48
-#, fuzzy, php-format
+#, php-format
 msgid "The %s field is required."
-msgstr "Trailing slash is required!"
+msgstr "The %s field is required."
 
 #: ../../../application/libraries/XU_Form_validation.php:49
-#, fuzzy, php-format
+#, php-format
 msgid "The %s field must have a value."
-msgstr "These files have been removed."
+msgstr "The %s field must have a value."
 
 #: ../../../application/libraries/XU_Form_validation.php:50
 #, php-format
 msgid "The %s field must contain a valid email address."
-msgstr ""
+msgstr "The %s field must contain a valid email address."
 
 #: ../../../application/libraries/XU_Form_validation.php:51
 #, php-format
 msgid "The %s field must contain all valid email addresses."
-msgstr ""
+msgstr "The %s field must contain all valid email addresses."
 
 #: ../../../application/libraries/XU_Form_validation.php:52
 #, php-format
 msgid "The %s field must contain a valid URL."
-msgstr ""
+msgstr "The %s field must contain a valid URL."
 
 #: ../../../application/libraries/XU_Form_validation.php:53
 #, php-format
 msgid "The %s field must contain a valid IP."
-msgstr ""
+msgstr "The %s field must contain a valid IP."
 
 #: ../../../application/libraries/XU_Form_validation.php:54
 #, php-format
 msgid "The %s field must be at least %s characters in length."
-msgstr ""
+msgstr "The %s field must be at least %s characters in length."
 
 #: ../../../application/libraries/XU_Form_validation.php:55
 #, php-format
 msgid "The %s field can not exceed %s characters in length."
-msgstr ""
+msgstr "The %s field can not exceed %s characters in length."
 
 #: ../../../application/libraries/XU_Form_validation.php:56
 #, php-format
 msgid "The %s field must be exactly %s characters in length."
-msgstr ""
+msgstr "The %s field must be exactly %s characters in length."
 
 #: ../../../application/libraries/XU_Form_validation.php:57
 #, php-format
 msgid "The %s field may only contain alphabetical characters."
-msgstr ""
+msgstr "The %s field may only contain alphabetical characters."
 
 #: ../../../application/libraries/XU_Form_validation.php:58
 #, php-format
 msgid "The %s field may only contain alpha-numeric characters."
-msgstr ""
+msgstr "The %s field may only contain alpha-numeric characters."
 
 #: ../../../application/libraries/XU_Form_validation.php:59
 #, php-format
@@ -3957,64 +4053,66 @@ msgid ""
 "The %s field may only contain alpha-numeric characters, underscores, and "
 "dashes."
 msgstr ""
+"The %s field may only contain alpha-numeric characters, underscores, and "
+"dashes."
 
 #: ../../../application/libraries/XU_Form_validation.php:60
 #, php-format
 msgid "The %s field must contain only numbers."
-msgstr ""
+msgstr "The %s field must contain only numbers."
 
 #: ../../../application/libraries/XU_Form_validation.php:61
 #, php-format
 msgid "The %s field must contain only numeric characters."
-msgstr ""
+msgstr "The %s field must contain only numeric characters."
 
 #: ../../../application/libraries/XU_Form_validation.php:62
 #, php-format
 msgid "The %s field must contain an integer."
-msgstr ""
+msgstr "The %s field must contain an integer."
 
 #: ../../../application/libraries/XU_Form_validation.php:63
 #, php-format
 msgid "The %s field is not in the correct format."
-msgstr ""
+msgstr "The %s field is not in the correct format."
 
 #: ../../../application/libraries/XU_Form_validation.php:64
 #, php-format
 msgid "The %s field does not match the %s field."
-msgstr ""
+msgstr "The %s field does not match the %s field."
 
 #: ../../../application/libraries/XU_Form_validation.php:65
 #, php-format
 msgid "The %s field must contain only positive numbers."
-msgstr ""
+msgstr "The %s field must contain only positive numbers."
 
 #: ../../../application/libraries/XU_Form_validation.php:66
 #, php-format
 msgid "The %s field must contain a number greater than zero."
-msgstr ""
+msgstr "The %s field must contain a number greater than zero."
 
 #: ../../../application/libraries/XU_Form_validation.php:67
 #, php-format
 msgid "The %s field must contain a decimal number."
-msgstr ""
+msgstr "The %s field must contain a decimal number."
 
 #: ../../../application/libraries/XU_Form_validation.php:68
 #, php-format
 msgid "The %s field must contain a number less than %s."
-msgstr ""
+msgstr "The %s field must contain a number less than %s."
 
 #: ../../../application/libraries/XU_Form_validation.php:69
 #, php-format
 msgid "The %s field must contain a number greater than %s."
-msgstr ""
+msgstr "The %s field must contain a number greater than %s."
 
-#: ../../../application/libraries/XU_Form_validation.php:541
+#: ../../../application/libraries/XU_Form_validation.php:540
 msgid "The field was not set"
-msgstr ""
+msgstr "The field was not set"
 
-#: ../../../application/libraries/XU_Form_validation.php:678
+#: ../../../application/libraries/XU_Form_validation.php:677
 msgid "Unable to access an error message corresponding to your field name."
-msgstr ""
+msgstr "Unable to access an error message corresponding to your field name."
 
 #: ../../../application/extend/example/example.php:8
 #: ../../../application/extend/example/example.php:10
@@ -4287,21 +4385,20 @@ msgstr "FTP support"
 #: ../../../application/controllers/install/update.php:52
 #: ../../../application/controllers/install/update.php:69
 msgid "No Updates Needed"
-msgstr ""
+msgstr "No Updates Needed"
 
 #: ../../../application/controllers/install/update.php:70
-#, fuzzy
 msgid "Back Home"
-msgstr "Home"
+msgstr "Back Home"
 
 #: ../../../application/controllers/install/update.php:72
 #, php-format
 msgid "Cannot Update %s from %s"
-msgstr ""
+msgstr "Cannot Update %s from %s"
 
 #: ../../../application/controllers/install/update.php:91
 msgid "Database version too old, please re-install fresh."
-msgstr ""
+msgstr "Database version too old, please re-install fresh."
 
 #: ../../../application/controllers/legal.php:44
 msgid "Terms of Service"
@@ -4592,7 +4689,7 @@ msgstr "Maintenance Actions"
 
 #: ../../../application/controllers/admin/actions.php:101
 msgid "PHP Info"
-msgstr ""
+msgstr "PHP Info"
 
 #: ../../../application/controllers/admin/actions.php:135
 msgid "Cron Actions Completed!"
@@ -4808,9 +4905,3 @@ msgstr "Manage %s Plugin Config"
 #: ../../../application/controllers/admin/config.php:121
 msgid "Config Updated!"
 msgstr "Config Updated!"
-
-#~ msgid "html_lang"
-#~ msgstr "html_lang"
-
-#~ msgid "language_direction"
-#~ msgstr "language_direction"
