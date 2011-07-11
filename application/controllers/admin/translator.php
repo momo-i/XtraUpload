@@ -50,6 +50,7 @@ class Translator extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		return;
 		$this->load->model('admin_access');
 		$this->load->helper(array('form', 'url', 'file'));
 		$this->lang_dirs = array( BASEPATH . 'language', APPPATH . 'language' );
@@ -64,6 +65,7 @@ class Translator extends CI_Controller {
 	 */
 	public function index()
 	{
+		redirect('admin');
 		if($this->_configured())
 		{
 			$this->master_module_path = $this->lang_dir . '/' . $this->master_lang . '/' . $this->lang_module;

@@ -27,17 +27,39 @@
  */
 class Email extends CI_Controller {
 
+	/**
+	 * Constructor
+	 *
+	 * @see    Admin_access
+	 * @author Matthew Glinski
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('admin_access');
 	}
 
+	/**
+	 * index
+	 *
+	 * Redirect email view
+	 *
+	 * @author Matthew Glinski
+	 * @return void
+	 */
 	public function index()
 	{
 		redirect('admin/email/view');
 	}
 
+	/**
+	 * view
+	 *
+	 * mass email view
+	 *
+	 * @author Matthew Glinski
+	 * @return void
+	 */
 	public function view()
 	{
 		$data['flash_message'] = '';
@@ -51,6 +73,14 @@ class Email extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * send
+	 *
+	 * Send mail
+	 *
+	 * @author Matthew Glinski
+	 * @return void
+	 */
 	public function send()
 	{
 		if($this->input->post('group') == '0')

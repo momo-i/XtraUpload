@@ -24,6 +24,7 @@
  * @author      Matthew Glinski
  * @author      momo-i
  * @link        https://gitorious.org/xtraupload-v3
+ * @todo        Create Models, and Views
  */
 class Ads extends CI_Controller {
 

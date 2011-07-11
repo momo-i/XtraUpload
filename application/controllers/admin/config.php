@@ -27,6 +27,13 @@
  */
 class Config extends CI_Controller {
 
+	/**
+	 * Constructor
+	 *
+	 * @see    Admin_access
+	 * @see    Users
+	 * @author Matthew Glinski
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -35,15 +42,13 @@ class Config extends CI_Controller {
 		$this->load->helper('string');
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
 	 * Config->index()
 	 *
 	 * Load the site config into xHTML for editing/viewing
 	 *
-	 * @access  public
-	 * @return  none
+	 * @author Matthew Glinski
+	 * @return void
 	 */
 	public function index()
 	{
@@ -63,6 +68,12 @@ class Config extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * plugin
+	 *
+	 * @author Matthew Glinski
+	 * @return void
+	 */
 	public function plugin($name='')
 	{
 		// Get the DB config object
@@ -90,15 +101,13 @@ class Config extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
 	 * Config->update()
 	 *
 	 * Process a new config object save request
 	 *
-	 * @access  public
-	 * @return  none
+	 * @author Matthew Glinski
+	 * @return void
 	 */
 	public function update()
 	{
@@ -119,15 +128,13 @@ class Config extends CI_Controller {
 		}
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
 	 * Config->_update_site_config()
 	 *
 	 * Save a new config object and write it to the cache
 	 *
-	 * @access  public
-	 * @return  none
+	 * @author Matthew Glinski
+	 * @return void
 	 */
 	private function _update_site_config()
 	{

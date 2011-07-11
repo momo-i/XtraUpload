@@ -1,3 +1,7 @@
+	v3.0.0-Alpha2
+		- Auto Upgrader.
+		- embed page update
+		  mp3/mp4/flv displayed by html5 player.
 	v3.0.0-Alpha1
 		- Upgrade CodeIgniter 2.0.2 from 1.7.2
 		- Update Language system

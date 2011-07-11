@@ -27,9 +27,29 @@
  */
 class Extend extends CI_Controller {
 
+	// {{{ property
+
+	/**
+	 * Installed packages
+	 *
+	 * @var array
+	 */
 	private $installed='';
+
+	/**
+	 * Not installed packages
+	 *
+	 * @var array
+	 */
 	private $not_installed='';
 
+	// }}}
+
+	/**
+	 * Constructor
+	 *
+	 * @see Admin_access
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -38,11 +58,26 @@ class Extend extends CI_Controller {
 		$this->load->helper('text');
 	}
 
+	/**
+	 * index
+	 *
+	 * Redirect extend view
+	 *
+	 * @return void
+	 */
 	public function index()
 	{
 		redirect('admin/extend/view');
 	}
 
+	/**
+	 * view
+	 *
+	 * Install, uninstall plugins.
+	 *
+	 * @author Matthew Glinski
+	 * @return void
+	 */
 	public function view()
 	{
 		$this->_get_installed_plugins();
@@ -72,8 +107,15 @@ class Extend extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
-	// ------------------------------------------------------------------------
-
+	/**
+	 * install
+	 *
+	 * Install plugin
+	 *
+	 * @param  string $name Plugin name
+	 * @author Matthew Glinski
+	 * @return void
+	 */
 	public function install($name)
 	{
 		log_message('debug', "Install Plugin $name.");
