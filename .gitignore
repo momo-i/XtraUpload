@@ -3,3 +3,4 @@ database.php
 *.bak
 *.swp
 developer_guide
+*~

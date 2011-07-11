@@ -531,8 +531,7 @@ class XU_Form_Validation extends CI_Form_validation {
 			if (in_array('isset', $rules, TRUE) OR in_array('required', $rules))
 			{
 				// Set the message type
-				//$type = (in_array('required', $rules)) ? 'required' : 'isset';
-				$type = (in_array('required', $rules)) ? $this->_types['required'] : $this->_types['isset'];
+				$type = (in_array('required', $rules)) ? 'required' : 'isset';
 
 				if ( ! isset($this->_error_messages[$type]))
 				{

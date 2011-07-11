@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-11 14:21+0900\n"
+"POT-Creation-Date: 2011-07-11 14:50+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,80 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../application/config/lang_db.php:4
+msgid "Site Name:"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:5
+msgid "(Site Name)"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:6
+msgid "Your Site Slogan"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:7
+msgid "Site EMail"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:8
+msgid "Email address used to send emails"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:9
+msgid "Title Separator"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:10
+msgid "Use Static Image Links"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:11
+msgid ""
+"Use actual filesystem URLs to serve image thumbnails and direct images. Will "
+"save memory and server cycles on large sites."
+msgstr ""
+
+#: ../../../application/config/lang_db.php:12
+msgid "Allow Version Check"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:13
+msgid ""
+"Allow XtraUpload to call home to check for new versions and security updates?"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:14
+msgid "Home Page Message"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:15
+msgid ""
+"Message to display to all your users on the home page. Like an announcement"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:16
+msgid "Show File Preview"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:17
+msgid ""
+"Show a preview of some file types on download(mp3, wmv, mov) and an embed "
+"code."
+msgstr ""
+
+#: ../../../application/config/lang_db.php:18
+msgid "Show Recent Uploads"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:19
+msgid "Show a list of the 5 most recently uploaded files?"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:20
+msgid "Site Locale"
+msgstr ""
 
 #: ../../../application/models/users.php:272
 #: ../../../application/views/default/user/compare.php:172
@@ -122,18 +196,6 @@ msgstr ""
 
 #: ../../../application/models/users.php:331
 msgid "Pay Here"
-msgstr ""
-
-#: ../../../application/views/vector_lover/header.php:48
-#: ../../../application/views/style_vantage_green/header.php:48
-#: ../../../application/views/default/header.php:48
-#: ../../../application/views/default/.header.php.swp:8
-#: ../../../application/views/style_vantage_blue/header.php:48
-#: ../../../application/views/style_vantage_orange/header.php:48
-#: ../../../application/views/urban_artist/header.php:48
-#: ../../../application/views/citrus_island/header.php:46
-#: ../../../application/views/tech_junkie/header.php:46
-msgid "language_direction"
 msgstr ""
 
 #: ../../../application/views/vector_lover/menu.php:5
@@ -499,7 +561,7 @@ msgstr ""
 
 #: ../../../application/views/default/home.php:7
 #: ../../../application/views/default/home.php:19
-#: ../../../application/libraries/startup.php:228
+#: ../../../application/libraries/startup.php:230
 #: ../../../application/controllers/home.php:81
 #: ../../../application/controllers/admin/home.php:80
 msgid "Home"
@@ -1000,7 +1062,7 @@ msgid ""
 msgstr ""
 
 #: ../../../application/views/default/folder/view.php:3
-#: ../../../application/libraries/startup.php:307
+#: ../../../application/libraries/startup.php:309
 #: ../../../application/controllers/folder.php:50
 msgid "File Folder"
 msgstr ""
@@ -1122,7 +1184,7 @@ msgid "Direct link to image:"
 msgstr ""
 
 #: ../../../application/views/default/image/gallery/view.php:3
-#: ../../../application/libraries/startup.php:308
+#: ../../../application/libraries/startup.php:310
 msgid "Image Gallery"
 msgstr ""
 
@@ -1943,7 +2005,7 @@ msgid "Past 7 Days Uploads"
 msgstr ""
 
 #: ../../../application/views/default/admin/email.php:4
-#: ../../../application/libraries/startup.php:266
+#: ../../../application/libraries/startup.php:268
 msgid "Mass Emailer"
 msgstr ""
 
@@ -2164,7 +2226,7 @@ msgstr ""
 #: ../../../application/views/default/admin/users/view.php:13
 #: ../../../application/views/default/admin/folders/search_result.php:13
 #: ../../../application/views/default/admin/folders/view.php:8
-#: ../../../application/libraries/startup.php:239
+#: ../../../application/libraries/startup.php:241
 msgid "Search"
 msgstr ""
 
@@ -2234,7 +2296,7 @@ msgid "Update"
 msgstr ""
 
 #: ../../../application/views/default/admin/stats.php:4
-#: ../../../application/libraries/startup.php:268
+#: ../../../application/libraries/startup.php:270
 #: ../../../application/controllers/admin/stats.php:41
 msgid "Site Stats"
 msgstr ""
@@ -2276,7 +2338,7 @@ msgstr ""
 
 #: ../../../application/views/default/admin/stats.php:28
 #: ../../../application/views/default/admin/stats.php:29
-#: ../../../application/libraries/startup.php:261
+#: ../../../application/libraries/startup.php:263
 msgid "Servers"
 msgstr ""
 
@@ -2361,7 +2423,7 @@ msgid "Server Load"
 msgstr ""
 
 #: ../../../application/views/default/admin/menu.php:47
-#: ../../../application/libraries/startup.php:259
+#: ../../../application/libraries/startup.php:261
 msgid "Plugins"
 msgstr ""
 
@@ -2802,7 +2864,7 @@ msgid "General Config"
 msgstr ""
 
 #: ../../../application/views/default/admin/gateways/view.php:3
-#: ../../../application/libraries/startup.php:258
+#: ../../../application/libraries/startup.php:260
 msgid "Payment Gateways"
 msgstr ""
 
@@ -3572,77 +3634,77 @@ msgstr ""
 msgid "The upload destination folder does not appear to be writable."
 msgstr ""
 
-#: ../../../application/libraries/startup.php:233
+#: ../../../application/libraries/startup.php:235
 #: ../../../application/controllers/upload.php:47
 msgid "URL Upload"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:245
+#: ../../../application/libraries/startup.php:247
 msgid "Admin"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:251
-#: ../../../application/libraries/startup.php:306
+#: ../../../application/libraries/startup.php:253
+#: ../../../application/libraries/startup.php:308
 msgid "Manage"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:252
+#: ../../../application/libraries/startup.php:254
 msgid "Files"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:253
+#: ../../../application/libraries/startup.php:255
 msgid "Transactions"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:254
+#: ../../../application/libraries/startup.php:256
 msgid "Users"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:256
+#: ../../../application/libraries/startup.php:258
 msgid "Configure"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:257
+#: ../../../application/libraries/startup.php:259
 msgid "Site Config"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:260
+#: ../../../application/libraries/startup.php:262
 msgid "Skins"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:262
+#: ../../../application/libraries/startup.php:264
 msgid "User Groups"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:264
+#: ../../../application/libraries/startup.php:266
 msgid "Misc"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:265
+#: ../../../application/libraries/startup.php:267
 msgid "Admin Menu Shortcuts"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:269
+#: ../../../application/libraries/startup.php:271
 msgid "Translation"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:270
+#: ../../../application/libraries/startup.php:272
 msgid "Tools/Maintenance"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:272
+#: ../../../application/libraries/startup.php:274
 msgid "Plugin Config"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:277
+#: ../../../application/libraries/startup.php:279
 msgid "Shortcuts"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:278
+#: ../../../application/libraries/startup.php:280
 msgid "Add This Page"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:305
+#: ../../../application/libraries/startup.php:307
 msgid "Upload"
 msgstr ""
 
