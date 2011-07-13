@@ -1,7 +1,8 @@
 TODO
 	* 3.0.0
+	- Convert Zend_Translate from CodeIgniter DB language.
 	- Completing the original TODO
-	- Upgrader system.
+	- Upgrader system. done
 	- User Guide for 3.0.0
 
 Original TODO.

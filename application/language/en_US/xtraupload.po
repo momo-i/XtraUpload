@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XtraUpload 3.0.0 Alpha2\n"
 "Report-Msgid-Bugs-To: translator at xtrafile.com\n"
-"POT-Creation-Date: 2011-07-13 14:09+0900\n"
-"PO-Revision-Date: 2011-07-13 14:09+0900\n"
+"POT-Creation-Date: 2011-07-13 14:48+0900\n"
+"PO-Revision-Date: 2011-07-13 14:48+0900\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: en_US\n"
@@ -16,6 +16,98 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../../application/core/XU_Lang.php:64
+msgid ""
+"Unable to determine the database settings based on the connection string you "
+"submitted."
+msgstr ""
+"Unable to determine the database settings based on the connection string you "
+"submitted."
+
+#: ../../../application/core/XU_Lang.php:65
+msgid "Unable to connect to your database server using the provided settings."
+msgstr "Unable to connect to your database server using the provided settings."
+
+#: ../../../application/core/XU_Lang.php:66
+msgid "The query you submitted is not valid."
+msgstr "The query you submitted is not valid."
+
+#: ../../../application/core/XU_Lang.php:67
+msgid "You must set the database table to be used with your query."
+msgstr "You must set the database table to be used with your query."
+
+#: ../../../application/core/XU_Lang.php:68
+msgid "You must use the \"set\" method to update an entry."
+msgstr "You must use the \"set\" method to update an entry."
+
+#: ../../../application/core/XU_Lang.php:69
+msgid "You must specify an index to match on for batch updates."
+msgstr "You must specify an index to match on for batch updates."
+
+#: ../../../application/core/XU_Lang.php:70
+msgid ""
+"One or more rows submitted for batch updating is missing the specified index."
+msgstr ""
+"One or more rows submitted for batch updating is missing the specified index."
+
+#: ../../../application/core/XU_Lang.php:71
+msgid "Updates are not allowed unless they contain a \"where\" clause."
+msgstr "Updates are not allowed unless they contain a \"where\" clause."
+
+#: ../../../application/core/XU_Lang.php:72
+msgid ""
+"Deletes are not allowed unless they contain a \"where\" or \"like\" clause."
+msgstr ""
+"Deletes are not allowed unless they contain a \"where\" or \"like\" clause."
+
+#: ../../../application/core/XU_Lang.php:73
+msgid "To fetch fields requires the name of the table as a parameter."
+msgstr "To fetch fields requires the name of the table as a parameter."
+
+#: ../../../application/core/XU_Lang.php:74
+msgid "This feature is not available for the database you are using."
+msgstr "This feature is not available for the database you are using."
+
+#: ../../../application/core/XU_Lang.php:75
+msgid "Transaction failure: Rollback performed."
+msgstr "Transaction failure: Rollback performed."
+
+#: ../../../application/core/XU_Lang.php:76
+msgid "Unable to drop the specified database."
+msgstr "Unable to drop the specified database."
+
+#: ../../../application/core/XU_Lang.php:77
+msgid "Unsupported feature of the database platform you are using."
+msgstr "Unsupported feature of the database platform you are using."
+
+#: ../../../application/core/XU_Lang.php:78
+msgid "The file compression format you chose is not supported by your server."
+msgstr "The file compression format you chose is not supported by your server."
+
+#: ../../../application/core/XU_Lang.php:79
+msgid "Unable to write data to the file path you have submitted."
+msgstr "Unable to write data to the file path you have submitted."
+
+#: ../../../application/core/XU_Lang.php:80
+msgid "The cache path you submitted is not valid or writable."
+msgstr "The cache path you submitted is not valid or writable."
+
+#: ../../../application/core/XU_Lang.php:81
+msgid "A table name is required for that operation."
+msgstr "A table name is required for that operation."
+
+#: ../../../application/core/XU_Lang.php:82
+msgid "A column name is required for that operation."
+msgstr "A column name is required for that operation."
+
+#: ../../../application/core/XU_Lang.php:83
+msgid "A column definition is required for that operation."
+msgstr "A column definition is required for that operation."
+
+#: ../../../application/core/XU_Lang.php:84
+msgid "A Database Error Occurred"
+msgstr "A Database Error Occurred"
 
 #: ../../../application/helpers/number_helper.php:46
 msgid "TB"
