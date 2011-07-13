@@ -76,8 +76,6 @@ class XU_Email extends CI_Email {
 	var	$_bit_depths	= array('7bit', '8bit');
 	var	$_priorities	= array('1 (Highest)', '2 (High)', '3 (Normal)', '4 (Low)', '5 (Lowest)');
 
-	private $_types = array();
-
 	/**
 	 * Constructor - Sets Email Preferences
 	 *
@@ -85,27 +83,6 @@ class XU_Email extends CI_Email {
 	 */
 	public function __construct($config = array())
 	{
-		$this->_types = array(
-			'email_must_be_array' => lang('The email validation method must be passed an array.'),
-			'email_invalid_address' => lang('Invalid email address: %s'),
-			'email_attachment_missing' => lang('Unable to locate the following email attachment: %s'),
-			'email_attachment_unreadable' => lang('Unable to open this attachment: %s'),
-			'email_no_recipients' => lang('You must include recipients: To, Cc, or Bcc'),
-			'email_send_failure_phpmail' => lang('Unable to send email using PHP mail().  Your server might not be configured to send mail using this method.'),
-			'email_send_failure_sendmail' => lang('Unable to send email using PHP Sendmail.  Your server might not be configured to send mail using this method.'),
-			'email_send_failure_smtp' => lang('Unable to send email using PHP SMTP.  Your server might not be configured to send mail using this method.'),
-			'email_sent' => lang('Your message has been successfully sent using the following protocol: %s'),
-			'email_no_socket' => lang('Unable to open a socket to Sendmail. Please check settings.'),
-			'email_no_hostname' => lang('You did not specify a SMTP hostname.'),
-			'email_smtp_error' => lang('The following SMTP error was encountered: %s'),
-			'email_no_smtp_unpw' => lang('Error: You must assign a SMTP username and password.'),
-			'email_failed_smtp_login' => lang('Failed to send AUTH LOGIN command. Error: %s'),
-			'email_smtp_auth_un' => lang('Failed to authenticate username. Error: %s'),
-			'email_smtp_auth_pw' => lang('Failed to authenticate password. Error: %s'),
-			'email_smtp_data_failure' => lang('Unable to send data: %s'),
-			'email_exit_status' => lang('Exit status code: %s'),
-		);
-
 		if (count($config) > 0)
 		{
 			$this->initialize($config);
@@ -744,7 +721,7 @@ class XU_Email extends CI_Email {
 	{
 		if ( ! is_array($email))
 		{
-			$this->_set_error_message('email_must_be_array');
+			$this->_set_error_message(lang('The email validation method must be passed an array.'));
 			return FALSE;
 		}
 
@@ -752,7 +729,7 @@ class XU_Email extends CI_Email {
 		{
 			if ( ! $this->valid_email($val))
 			{
-				$this->_set_error_message('email_invalid_address', $val);
+				$this->_set_error_message(sprintf(lang('Invalid email address: %s'), $val));
 				return FALSE;
 			}
 		}
@@ -1153,7 +1130,7 @@ class XU_Email extends CI_Email {
 
 			if ( ! file_exists($filename))
 			{
-				$this->_set_error_message('email_attachment_missing', $filename);
+				$this->_set_error_message(sprintf(lang('Unable to locate the following email attachment: %s'), $filename));
 				return FALSE;
 			}
 
@@ -1168,7 +1145,7 @@ class XU_Email extends CI_Email {
 
 			if ( ! $fp = fopen($filename, FOPEN_READ))
 			{
-				$this->_set_error_message('email_attachment_unreadable', $filename);
+				$this->_set_error_message(sprintf(lang('Unable to open this attachment: %s'), $filename));
 				return FALSE;
 			}
 
@@ -1375,7 +1352,7 @@ class XU_Email extends CI_Email {
 			( ! isset($this->_bcc_array) AND ! isset($this->_headers['Bcc'])) AND
 			( ! isset($this->_headers['Cc'])))
 		{
-			$this->_set_error_message('email_no_recipients');
+			$this->_set_error_message(lang('You must include recipients: To, Cc, or Bcc'));
 			return FALSE;
 		}
 
@@ -1506,7 +1483,7 @@ class XU_Email extends CI_Email {
 
 					if ( ! $this->_send_with_mail())
 					{
-						$this->_set_error_message('email_send_failure_phpmail');
+						$this->_set_error_message(lang('Unable to send email using PHP mail().  Your server might not be configured to send mail using this method.'));
 						return FALSE;
 					}
 			break;
@@ -1514,7 +1491,7 @@ class XU_Email extends CI_Email {
 
 					if ( ! $this->_send_with_sendmail())
 					{
-						$this->_set_error_message('email_send_failure_sendmail');
+						$this->_set_error_message(lang('Unable to send email using PHP Sendmail.  Your server might not be configured to send mail using this method.'));
 						return FALSE;
 					}
 			break;
@@ -1522,14 +1499,14 @@ class XU_Email extends CI_Email {
 
 					if ( ! $this->_send_with_smtp())
 					{
-						$this->_set_error_message('email_send_failure_smtp');
+						$this->_set_error_message(lang('Unable to send email using PHP SMTP.  Your server might not be configured to send mail using this method.'));
 						return FALSE;
 					}
 			break;
 
 		}
 
-		$this->_set_error_message('email_sent', $this->_get_protocol());
+		$this->_set_error_message(sprintf(lang('Your message has been successfully sent using the following protocol: %s'), $this->_get_protocol()));
 		return TRUE;
 	}
 
@@ -1600,8 +1577,8 @@ class XU_Email extends CI_Email {
 
 		if ($status != 0)
 		{
-			$this->_set_error_message('email_exit_status', $status);
-			$this->_set_error_message('email_no_socket');
+			$this->_set_error_message(sprintf(lang('Exit status code: %s'), $status));
+			$this->_set_error_message(lang('Unable to open a socket to Sendmail. Please check settings.'));
 			return FALSE;
 		}
 
@@ -1620,7 +1597,7 @@ class XU_Email extends CI_Email {
 	{
 		if ($this->smtp_host == '')
 		{
-			$this->_set_error_message('email_no_hostname');
+			$this->_set_error_message(lang('You did not specify a SMTP hostname.'));
 			return FALSE;
 		}
 
@@ -1669,7 +1646,7 @@ class XU_Email extends CI_Email {
 
 		if (strncmp($reply, '250', 3) != 0)
 		{
-			$this->_set_error_message('email_smtp_error', $reply);
+			$this->_set_error_message(sprintf(lang('The following SMTP error was encountered: %s'), $reply));
 			return FALSE;
 		}
 
@@ -1696,7 +1673,7 @@ class XU_Email extends CI_Email {
 
 		if ( ! is_resource($this->_smtp_connect))
 		{
-			$this->_set_error_message('email_smtp_error', $errno." ".$errstr);
+			$this->_set_error_message(sprintf(lang('The following SMTP error was encountered: %s'), $errno." ".$errstr));
 			return FALSE;
 		}
 
@@ -1759,7 +1736,7 @@ class XU_Email extends CI_Email {
 
 		if (substr($reply, 0, 3) != $resp)
 		{
-			$this->_set_error_message('email_smtp_error', $reply);
+			$this->_set_error_message(sprintf(lang('The following SMTP error was encountered: %s'), $reply));
 			return FALSE;
 		}
 
@@ -1788,7 +1765,7 @@ class XU_Email extends CI_Email {
 
 		if ($this->smtp_user == ""  AND  $this->smtp_pass == "")
 		{
-			$this->_set_error_message('email_no_smtp_unpw');
+			$this->_set_error_message(lang('Error: You must assign a SMTP username and password.'));
 			return FALSE;
 		}
 
@@ -1798,7 +1775,7 @@ class XU_Email extends CI_Email {
 
 		if (strncmp($reply, '334', 3) != 0)
 		{
-			$this->_set_error_message('email_failed_smtp_login', $reply);
+			$this->_set_error_message(sprintf(lang('Failed to send AUTH LOGIN command. Error: %s'), $reply));
 			return FALSE;
 		}
 
@@ -1808,7 +1785,7 @@ class XU_Email extends CI_Email {
 
 		if (strncmp($reply, '334', 3) != 0)
 		{
-			$this->_set_error_message('email_smtp_auth_un', $reply);
+			$this->_set_error_message(sprintf(lang('Failed to authenticate username. Error: %s'), $reply));
 			return FALSE;
 		}
 
@@ -1818,7 +1795,7 @@ class XU_Email extends CI_Email {
 
 		if (strncmp($reply, '235', 3) != 0)
 		{
-			$this->_set_error_message('email_smtp_auth_pw', $reply);
+			$this->_set_error_message(sprintf(lang('Failed to authenticate password. Error: %s'), $reply));
 			return FALSE;
 		}
 
@@ -1837,7 +1814,7 @@ class XU_Email extends CI_Email {
 	{
 		if ( ! fwrite($this->_smtp_connect, $data . $this->newline))
 		{
-			$this->_set_error_message('email_smtp_data_failure', $data);
+			$this->_set_error_message(sprintf(lang('Unable to send data: %s'), $data));
 			return FALSE;
 		}
 		else

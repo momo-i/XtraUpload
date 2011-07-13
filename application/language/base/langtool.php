@@ -34,12 +34,10 @@ xgettext \
 	--package-version="$version" \
 	--msgid-bugs-address="$mailaddr" \
 	--add-comments=HINT: \
-	--keyword="_m:1,1t" \
-	--keyword="_m:1c,2,2t" \
-	--keyword="_m:1,2,3t" \
-	--keyword="_m:1c,2,3,4t" \
-	--keyword="pgettext:1c,2" \
-	--keyword="npgettext:1c,2,3" \
+	--keyword="nlang:1,1t" \
+	--keyword="nlang:1c,2,2t" \
+	--keyword="nlang:1,2,3t" \
+	--keyword="nlang:1c,2,3,4t" \
 	--keyword="lang" \
 	`find ../../../application -type f`
 END
@@ -62,6 +60,7 @@ function merge_translations($dir)
 	{
 		if (preg_match('#^(index\.html|Makefile|base|\.)#', $lang))
 		{
+			print "ignoring $lang continue.\n";
 			continue;
 		}
 		$pofile = "{$langdir}/{$lang}/xtraupload.po";
@@ -76,8 +75,8 @@ function merge_translations($dir)
 		}
 		else
 		{
-			echo "Updating {$lang}\n";
-			$merge = sprintf($merge_cmd, $potfile, $pofile);
+			echo "Merging {$lang}\n";
+			$merge = sprintf($merge_cmd, $pofile, $potfile);
 			shell_exec($merge);
 		}
 		echo "Compiling {$lang}\n";

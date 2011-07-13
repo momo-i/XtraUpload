@@ -56,8 +56,6 @@ class XU_Upload extends CI_Upload {
 
 	protected $_file_name_override	= '';
 
-	private $_types = array();
-
 	/**
 	 * Constructor
 	 *
@@ -66,25 +64,6 @@ class XU_Upload extends CI_Upload {
 	public function __construct($props = array())
 	{
 		parent::__construct();
-
-		$this->_types = array(
-			'upload_userfile_not_set' => lang('Unable to find a post variable called userfile.'),
-			'upload_file_exceeds_limit' => lang('The uploaded file exceeds the maximum allowed size in your PHP configuration file.'),
-			'upload_file_exceeds_form_limit' => lang('The uploaded file exceeds the maximum size allowed by the submission form.'),
-			'upload_file_partial' => lang('The file was only partially uploaded.'),
-			'upload_no_temp_directory' => lang('The temporary folder is missing.'),
-			'upload_unable_to_write_file' => lang('The file could not be written to disk.'),
-			'upload_stopped_by_extension' => lang('The file upload was stopped by extension.'),
-			'upload_no_file_selected' => lang('You did not select a file to upload.'),
-			'upload_invalid_filetype' => lang('The filetype you are attempting to upload is not allowed.'),
-			'upload_invalid_filesize' => lang('The file you are attempting to upload is larger than the permitted size.'),
-			'upload_invalid_dimensions' => lang('The image you are attempting to upload exceedes the maximum height or width.'),
-			'upload_destination_error' => lang('A problem was encountered while attempting to move the uploaded file to the final destination.'),
-			'upload_no_filepath' => lang('The upload path does not appear to be valid.'),
-			'upload_no_file_types' => lang('You have not specified any allowed file types.'),
-			'upload_bad_filename' => lang('The file name you submitted already exists on the server.'),
-			'upload_not_writable' => lang('The upload destination folder does not appear to be writable.'),
-		);
 
 		if (count($props) > 0)
 		{
@@ -171,7 +150,7 @@ class XU_Upload extends CI_Upload {
 	// Is $_FILES[$field] set? If not, no reason to continue.
 		if ( ! isset($_FILES[$field]))
 		{
-			$this->set_error('upload_no_file_selected');
+			$this->set_error(lang('You did not select a file to upload.'));
 			return FALSE;
 		}
 
@@ -190,27 +169,27 @@ class XU_Upload extends CI_Upload {
 			switch($error)
 			{
 				case 1:	// UPLOAD_ERR_INI_SIZE
-					$this->set_error('upload_file_exceeds_limit');
+					$this->set_error(lang('The uploaded file exceeds the maximum allowed size in your PHP configuration file.'));
 					break;
 				case 2: // UPLOAD_ERR_FORM_SIZE
-					$this->set_error('upload_file_exceeds_form_limit');
+					$this->set_error(lang('The uploaded file exceeds the maximum size allowed by the submission form.'));
 					break;
 				case 3: // UPLOAD_ERR_PARTIAL
-					$this->set_error('upload_file_partial');
+					$this->set_error(lang('The file was only partially uploaded.'));
 					break;
 				case 4: // UPLOAD_ERR_NO_FILE
-					$this->set_error('upload_no_file_selected');
+					$this->set_error(lang('You did not select a file to upload.'));
 					break;
 				case 6: // UPLOAD_ERR_NO_TMP_DIR
-					$this->set_error('upload_no_temp_directory');
+					$this->set_error(lang('The temporary folder is missing.'));
 					break;
 				case 7: // UPLOAD_ERR_CANT_WRITE
-					$this->set_error('upload_unable_to_write_file');
+					$this->set_error(lang('The file could not be written to disk.'));
 					break;
 				case 8: // UPLOAD_ERR_EXTENSION
-					$this->set_error('upload_stopped_by_extension');
+					$this->set_error(lang('The file upload was stopped by extension.'));
 					break;
-				default :   $this->set_error('upload_no_file_selected');
+				default :   $this->set_error(lang('You did not select a file to upload.'));
 					break;
 			}
 
@@ -230,7 +209,7 @@ class XU_Upload extends CI_Upload {
 		if ( ! $this->is_allowed_filetype())
 		{
 			log_message('debug', "Filetype: {$this->file_type}");
-			$this->set_error('upload_invalid_filetype');
+			$this->set_error(lang('The filetype you are attempting to upload is not allowed.'));
 			return FALSE;
 		}
 
@@ -253,7 +232,7 @@ class XU_Upload extends CI_Upload {
 
 			if ( ! $this->is_allowed_filetype(TRUE))
 			{
-				$this->set_error('upload_invalid_filetype');
+				$this->set_error(lang('The filetype you are attempting to upload is not allowed.'));
 				return FALSE;
 			}
 		}
@@ -267,7 +246,7 @@ class XU_Upload extends CI_Upload {
 		// Is the file size within the allowed maximum?
 		if ( ! $this->is_allowed_filesize())
 		{
-			$this->set_error('upload_invalid_filesize');
+			$this->set_error(lang('The file you are attempting to upload is larger than the permitted size.'));
 			return FALSE;
 		}
 
@@ -275,7 +254,7 @@ class XU_Upload extends CI_Upload {
 		// Note: This can fail if the server has an open_basdir restriction.
 		if ( ! $this->is_allowed_dimensions())
 		{
-			$this->set_error('upload_invalid_dimensions');
+			$this->set_error(lang('The image you are attempting to upload exceedes the maximum height or width.'));
 			return FALSE;
 		}
 
@@ -322,7 +301,7 @@ class XU_Upload extends CI_Upload {
 		{
 			if ($this->do_xss_clean() === FALSE)
 			{
-				$this->set_error('upload_unable_to_write_file');
+				$this->set_error(lang('The file could not be written to disk.'));
 				return FALSE;
 			}
 		}
@@ -338,7 +317,7 @@ class XU_Upload extends CI_Upload {
 		{
 			if ( ! @move_uploaded_file($this->file_temp, $this->upload_path.$this->file_name))
 			{
-				$this->set_error('upload_destination_error');
+				$this->set_error(lang('A problem was encountered while attempting to move the uploaded file to the final destination.'));
 				return FALSE;
 			}
 		}
@@ -438,7 +417,7 @@ class XU_Upload extends CI_Upload {
 
 		if ($new_filename == '')
 		{
-			$this->set_error('upload_bad_filename');
+			$this->set_error(lang('The file name you submitted already exists on the server.'));
 			return FALSE;
 		}
 		else
@@ -616,7 +595,7 @@ class XU_Upload extends CI_Upload {
 
 		if (count($this->allowed_types) == 0 OR ! is_array($this->allowed_types))
 		{
-			$this->set_error('upload_no_file_types');
+			$this->set_error(lang('You have not specified any allowed file types.'));
 			return FALSE;
 		}
 
@@ -765,7 +744,7 @@ class XU_Upload extends CI_Upload {
 	{
 		if ($this->upload_path == '')
 		{
-			$this->set_error('upload_no_filepath');
+			$this->set_error(lang('The upload path does not appear to be valid.'));
 			return FALSE;
 		}
 
@@ -776,13 +755,13 @@ class XU_Upload extends CI_Upload {
 
 		if ( ! @is_dir($this->upload_path))
 		{
-			$this->set_error('upload_no_filepath');
+			$this->set_error(lang('The upload path does not appear to be valid.'));
 			return FALSE;
 		}
 
 		if ( ! is_really_writable($this->upload_path))
 		{
-			$this->set_error('upload_not_writable');
+			$this->set_error(lang('The upload destination folder does not appear to be writable.'));
 			return FALSE;
 		}
 
@@ -960,14 +939,14 @@ class XU_Upload extends CI_Upload {
 			foreach ($msg as $val)
 			{
 				$this->error_num[] = $val;
-				$msg = isset($this->_types[$val]) ? $this->_types[$val] : $val;
-				$this->error_msg[] = $msg;
+				//$msg = isset($this->_types[$val]) ? $this->_types[$val] : $val;
+				$this->error_msg[] = $val;
 				log_message('error', $msg);
 			}
 		}
 		else
 		{
-			$msg = isset($this->_types[$msg]) ? $this->_types[$msg] : $msg;
+			//$msg = isset($this->_types[$msg]) ? $this->_types[$msg] : $msg;
 			$this->error_msg[] = $msg;
 			log_message('error', $msg);
 		}

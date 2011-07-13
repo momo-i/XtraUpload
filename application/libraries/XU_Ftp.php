@@ -36,6 +36,7 @@ class XU_FTP extends CI_FTP {
 	var $error		= FALSE;
 	var $conn_id	= FALSE;
 
+	private $_types = array();
 
 	/**
 	 * Constructor - Sets Preferences
@@ -48,6 +49,21 @@ class XU_FTP extends CI_FTP {
 		{
 			$this->initialize($config);
 		}
+
+		$this->_types = array(
+			'ftp_no_connection' => lang('Unable to locate a valid connection ID. Please make sure you are connected before peforming any file routines.'),
+			'ftp_unable_to_connect' => lang('Unable to connect to your FTP server using the supplied hostname.'),
+			'ftp_unable_to_login' => lang('Unable to login to your FTP server. Please check your username and password.'),
+			'ftp_unable_to_makdir' => lang('Unable to create the directory you have specified.'),
+			'ftp_unable_to_changedir' => lang('Unable to change directories.'),
+			'ftp_unable_to_chmod' => lang('Unable to set file permissions. Please check your path. Note: This feature is only available in PHP 5 or higher.'),
+			'ftp_unable_to_upload' => lang('Unable to upload the specified file. Please check your path.'),
+			'ftp_unable_to_download' => lang('Unable to download the specified file. Please check your path.'),
+			'ftp_no_source_file' => lang('Unable to locate the source file. Please check your path.'),
+			'ftp_unable_to_rename' => lang('Unable to rename the file.'),
+			'ftp_unable_to_delete' => lang('Unable to delete the file.'),
+			'ftp_unable_to_move' => lang('Unable to move the file. Please make sure the destination directory exists.')
+		);
 
 		log_message('debug', "FTP Class Initialized");
 	}
@@ -808,8 +824,7 @@ class XU_FTP extends CI_FTP {
 	function get_error()
 	{
 		$CI =& get_instance();
-		$CI->lang->load('ftp');
-		return $CI->lang->line($this->error_msg);
+		return $this->_types[$this->error_msg];
 	}
 
 	// ------------------------------------------------------------------------
@@ -824,8 +839,7 @@ class XU_FTP extends CI_FTP {
 	function _error($line)
 	{
 		$CI =& get_instance();
-		$CI->lang->load('ftp');
-		show_error($CI->lang->line($line));
+		show_error($this->_types[$line]);
 	}
 
 

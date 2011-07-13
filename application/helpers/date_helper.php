@@ -150,7 +150,7 @@ if ( ! function_exists('timespan'))
 	function timespan($seconds = 1, $time = '')
 	{
 		$CI =& get_instance();
-		$CI->lang->load('date');
+		$counter = 0;
 
 		if ( ! is_numeric($seconds))
 		{
@@ -171,12 +171,14 @@ if ( ! function_exists('timespan'))
 			$seconds = $time - $seconds;
 		}
 
-		$str = '';
+		$str = array();
 		$years = floor($seconds / 31536000);
 
 		if ($years > 0)
 		{
-			$str .= $years.' '.$CI->lang->line((($years	> 1) ? 'date_years' : 'date_year')).', ';
+			$str[] = sprintf(nlang('%d Year', '%d Years', $years), $years);
+			++$counter;
+			//$str .= $years.' '.$CI->lang->line((($years	> 1) ? 'date_years' : 'date_year')).', ';
 		}
 
 		$seconds -= $years * 31536000;
@@ -186,7 +188,9 @@ if ( ! function_exists('timespan'))
 		{
 			if ($months > 0)
 			{
-				$str .= $months.' '.$CI->lang->line((($months	> 1) ? 'date_months' : 'date_month')).', ';
+				$str[] = sprintf(nlang('%d Month', '%d Months', $months), $months);
+				++$counter;
+				//$str .= $months.' '.$CI->lang->line((($months	> 1) ? 'date_months' : 'date_month')).', ';
 			}
 
 			$seconds -= $months * 2628000;
@@ -198,7 +202,9 @@ if ( ! function_exists('timespan'))
 		{
 			if ($weeks > 0)
 			{
-				$str .= $weeks.' '.$CI->lang->line((($weeks	> 1) ? 'date_weeks' : 'date_week')).', ';
+				$str[] = sprintf(nlang('%d Week', '%d Weeks', $weeks), $weeks);
+				++$counter;
+				//$str .= $weeks.' '.$CI->lang->line((($weeks	> 1) ? 'date_weeks' : 'date_week')).', ';
 			}
 
 			$seconds -= $weeks * 604800;
@@ -210,7 +216,9 @@ if ( ! function_exists('timespan'))
 		{
 			if ($days > 0)
 			{
-				$str .= $days.' '.$CI->lang->line((($days	> 1) ? 'date_days' : 'date_day')).', ';
+				$str[] = sprintf(nlang('%d Day', '%d Days', $days), $days);
+				++$counter;
+				//$str .= $days.' '.$CI->lang->line((($days	> 1) ? 'date_days' : 'date_day')).', ';
 			}
 
 			$seconds -= $days * 86400;
@@ -222,7 +230,9 @@ if ( ! function_exists('timespan'))
 		{
 			if ($hours > 0)
 			{
-				$str .= $hours.' '.$CI->lang->line((($hours	> 1) ? 'date_hours' : 'date_hour')).', ';
+				$str[] = sprintf(nlang('%d Hour', '%d Hours', $hours), $hours);
+				++$counter;
+				//$str .= $hours.' '.$CI->lang->line((($hours	> 1) ? 'date_hours' : 'date_hour')).', ';
 			}
 
 			$seconds -= $hours * 3600;
@@ -234,7 +244,9 @@ if ( ! function_exists('timespan'))
 		{
 			if ($minutes > 0)
 			{
-				$str .= $minutes.' '.$CI->lang->line((($minutes	> 1) ? 'date_minutes' : 'date_minute')).', ';
+				$str[] = sprintf(nlang('%d Minute', '%d Minutes', $minutes), $minutes);
+				++$counter;
+				//$str .= $minutes.' '.$CI->lang->line((($minutes	> 1) ? 'date_minutes' : 'date_minute')).', ';
 			}
 
 			$seconds -= $minutes * 60;
@@ -242,7 +254,14 @@ if ( ! function_exists('timespan'))
 
 		if ($str == '')
 		{
-			$str .= $seconds.' '.$CI->lang->line((($seconds	> 1) ? 'date_seconds' : 'date_second')).', ';
+			$str = sprintf('%d Second', '%d Seconds', $seconds), $seconds);
+			$counter = 0;
+			//$str .= $seconds.' '.$CI->lang->line((($seconds	> 1) ? 'date_seconds' : 'date_second')).', ';
+		}
+
+		if($counter > 0)
+		{
+			$str = implode(', ', $str);
 		}
 
 		return substr(trim($str), 0, -1);

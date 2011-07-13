@@ -68,8 +68,12 @@ class XU_Lang extends CI_Lang {
 	 * @param	string	$line	the language line
 	 * @return	string
 	 */
-	public function line($line = 'nolang')
+	public function line($line = 'nolang', $lines = NULL, $int = 0)
 	{
+		if($lines && $int)
+		{
+			return $this->_translate->plural($line, $lines, $int);
+		}
 		return $this->_translate->_($line);
 	}
 

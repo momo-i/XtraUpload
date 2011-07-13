@@ -8,15 +8,71 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XtraUpload 3.0.0 Alpha2\n"
 "Report-Msgid-Bugs-To: translator at xtrafile.com\n"
-"POT-Creation-Date: 2011-07-12 07:04+0900\n"
-"PO-Revision-Date: 2011-07-12 07:04+0900\n"
+"POT-Creation-Date: 2011-07-13 13:38+0900\n"
+"PO-Revision-Date: 2011-07-13 11:54+0900\n"
 "Last-Translator: Automatically generated\n"
-"Language-Team: Japanese\n"
+"Language-Team: none\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../../application/helpers/number_helper.php:46
+msgid "TB"
+msgstr ""
+
+#: ../../../application/helpers/number_helper.php:51
+msgid "GB"
+msgstr ""
+
+#: ../../../application/helpers/number_helper.php:56
+msgid "MB"
+msgstr ""
+
+#: ../../../application/helpers/number_helper.php:61
+msgid "KB"
+msgstr ""
+
+#: ../../../application/helpers/number_helper.php:65
+msgid "bytes"
+msgstr ""
+
+#: ../../../application/helpers/date_helper.php:179
+#, php-format
+msgid "%d Year"
+msgid_plural "%d Years"
+msgstr[0] ""
+
+#: ../../../application/helpers/date_helper.php:191
+#, php-format
+msgid "%d Month"
+msgid_plural "%d Months"
+msgstr[0] ""
+
+#: ../../../application/helpers/date_helper.php:205
+#, php-format
+msgid "%d Week"
+msgid_plural "%d Weeks"
+msgstr[0] ""
+
+#: ../../../application/helpers/date_helper.php:219
+#, php-format
+msgid "%d Day"
+msgid_plural "%d Days"
+msgstr[0] ""
+
+#: ../../../application/helpers/date_helper.php:233
+#, php-format
+msgid "%d Hour"
+msgid_plural "%d Hours"
+msgstr[0] ""
+
+#: ../../../application/helpers/date_helper.php:247
+#, php-format
+msgid "%d Minute"
+msgid_plural "%d Minutes"
+msgstr[0] ""
 
 #: ../../../application/config/lang_db.php:4
 msgid "Site Name:"
@@ -142,7 +198,7 @@ msgstr ""
 #: ../../../application/models/users.php:329
 #, php-format
 msgid "Welcome to %s!"
-msgstr "%sさんようこそ！"
+msgstr ""
 
 #: ../../../application/models/users.php:287
 msgid "Here are your account details should you ever need them:"
@@ -562,7 +618,7 @@ msgstr ""
 
 #: ../../../application/views/default/home.php:7
 #: ../../../application/views/default/home.php:19
-#: ../../../application/libraries/startup.php:230
+#: ../../../application/libraries/startup.php:234
 #: ../../../application/controllers/home.php:81
 #: ../../../application/controllers/admin/home.php:80
 msgid "Home"
@@ -1063,7 +1119,7 @@ msgid ""
 msgstr ""
 
 #: ../../../application/views/default/folder/view.php:3
-#: ../../../application/libraries/startup.php:309
+#: ../../../application/libraries/startup.php:313
 #: ../../../application/controllers/folder.php:50
 msgid "File Folder"
 msgstr ""
@@ -1185,7 +1241,7 @@ msgid "Direct link to image:"
 msgstr ""
 
 #: ../../../application/views/default/image/gallery/view.php:3
-#: ../../../application/libraries/startup.php:310
+#: ../../../application/libraries/startup.php:314
 msgid "Image Gallery"
 msgstr ""
 
@@ -2006,7 +2062,7 @@ msgid "Past 7 Days Uploads"
 msgstr ""
 
 #: ../../../application/views/default/admin/email.php:4
-#: ../../../application/libraries/startup.php:268
+#: ../../../application/libraries/startup.php:272
 msgid "Mass Emailer"
 msgstr ""
 
@@ -2227,7 +2283,7 @@ msgstr ""
 #: ../../../application/views/default/admin/users/view.php:13
 #: ../../../application/views/default/admin/folders/search_result.php:13
 #: ../../../application/views/default/admin/folders/view.php:8
-#: ../../../application/libraries/startup.php:241
+#: ../../../application/libraries/startup.php:245
 msgid "Search"
 msgstr ""
 
@@ -2297,7 +2353,7 @@ msgid "Update"
 msgstr ""
 
 #: ../../../application/views/default/admin/stats.php:4
-#: ../../../application/libraries/startup.php:270
+#: ../../../application/libraries/startup.php:274
 #: ../../../application/controllers/admin/stats.php:41
 msgid "Site Stats"
 msgstr ""
@@ -2339,7 +2395,7 @@ msgstr ""
 
 #: ../../../application/views/default/admin/stats.php:28
 #: ../../../application/views/default/admin/stats.php:29
-#: ../../../application/libraries/startup.php:263
+#: ../../../application/libraries/startup.php:267
 msgid "Servers"
 msgstr ""
 
@@ -2424,7 +2480,7 @@ msgid "Server Load"
 msgstr ""
 
 #: ../../../application/views/default/admin/menu.php:47
-#: ../../../application/libraries/startup.php:261
+#: ../../../application/libraries/startup.php:265
 msgid "Plugins"
 msgstr ""
 
@@ -2865,7 +2921,7 @@ msgid "General Config"
 msgstr ""
 
 #: ../../../application/views/default/admin/gateways/view.php:3
-#: ../../../application/libraries/startup.php:260
+#: ../../../application/libraries/startup.php:264
 msgid "Payment Gateways"
 msgstr ""
 
@@ -3538,6 +3594,84 @@ msgid ""
 "including Section 10: ammendments to the Apache License v2.0."
 msgstr ""
 
+#: ../../../application/libraries/XU_Image_lib.php:148
+msgid "You must specify a source image in your preferences."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:162
+msgid ""
+"Your server must support the GD image library in order to determine the "
+"image properties."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:401
+msgid "An angle of rotation is required to rotate the image."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:564
+#: ../../../application/libraries/XU_Image_lib.php:633
+msgid ""
+"The path to your image library is not correct.  Please set the correct path "
+"in your image preferences."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:608
+#: ../../../application/libraries/XU_Image_lib.php:690
+msgid ""
+"Image processing failed.  Please verify that your server supports the chosen "
+"protocol and that the path to your image library is correct."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:875
+msgid "The GD image library is required for this feature."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:993
+msgid "Unable to find a font to use."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:1142
+#: ../../../application/libraries/XU_Image_lib.php:1151
+#: ../../../application/libraries/XU_Image_lib.php:1160
+#: ../../../application/libraries/XU_Image_lib.php:1169
+#: ../../../application/libraries/XU_Image_lib.php:1192
+#: ../../../application/libraries/XU_Image_lib.php:1205
+#: ../../../application/libraries/XU_Image_lib.php:1218
+#: ../../../application/libraries/XU_Image_lib.php:1229
+msgid ""
+"Your server does not support the GD function required to process this type "
+"of image."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:1142
+#: ../../../application/libraries/XU_Image_lib.php:1192
+msgid ""
+"GIF images are often not supported due to licensing restrictions.  You may "
+"have to use JPG or PNG images instead."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:1151
+#: ../../../application/libraries/XU_Image_lib.php:1205
+msgid "JPG images are not supported."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:1160
+#: ../../../application/libraries/XU_Image_lib.php:1218
+msgid "PNG images are not supported."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:1198
+#: ../../../application/libraries/XU_Image_lib.php:1211
+#: ../../../application/libraries/XU_Image_lib.php:1224
+msgid ""
+"Unable to save the image. Please make sure the image and file directory are "
+"writable."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:1333
+msgid "The path to the image is not correct."
+msgstr ""
+
 #: ../../../application/libraries/functions.php:161
 msgid "Not Valid Version Number!"
 msgstr ""
@@ -3564,238 +3698,299 @@ msgstr ""
 msgid "IPN Validation Failed."
 msgstr ""
 
-#: ../../../application/libraries/XU_Upload.php:71
-msgid "Unable to find a post variable called userfile."
+#: ../../../application/libraries/XU_Upload.php:153
+#: ../../../application/libraries/XU_Upload.php:181
+#: ../../../application/libraries/XU_Upload.php:192
+msgid "You did not select a file to upload."
 msgstr ""
 
-#: ../../../application/libraries/XU_Upload.php:72
+#: ../../../application/libraries/XU_Upload.php:172
 msgid ""
 "The uploaded file exceeds the maximum allowed size in your PHP configuration "
 "file."
 msgstr ""
 
-#: ../../../application/libraries/XU_Upload.php:73
+#: ../../../application/libraries/XU_Upload.php:175
 msgid ""
 "The uploaded file exceeds the maximum size allowed by the submission form."
 msgstr ""
 
-#: ../../../application/libraries/XU_Upload.php:74
+#: ../../../application/libraries/XU_Upload.php:178
 msgid "The file was only partially uploaded."
 msgstr ""
 
-#: ../../../application/libraries/XU_Upload.php:75
+#: ../../../application/libraries/XU_Upload.php:184
 msgid "The temporary folder is missing."
 msgstr ""
 
-#: ../../../application/libraries/XU_Upload.php:76
+#: ../../../application/libraries/XU_Upload.php:187
+#: ../../../application/libraries/XU_Upload.php:304
 msgid "The file could not be written to disk."
 msgstr ""
 
-#: ../../../application/libraries/XU_Upload.php:77
+#: ../../../application/libraries/XU_Upload.php:190
 msgid "The file upload was stopped by extension."
 msgstr ""
 
-#: ../../../application/libraries/XU_Upload.php:78
-msgid "You did not select a file to upload."
-msgstr ""
-
-#: ../../../application/libraries/XU_Upload.php:79
+#: ../../../application/libraries/XU_Upload.php:212
+#: ../../../application/libraries/XU_Upload.php:235
 msgid "The filetype you are attempting to upload is not allowed."
 msgstr ""
 
-#: ../../../application/libraries/XU_Upload.php:80
+#: ../../../application/libraries/XU_Upload.php:249
 msgid ""
 "The file you are attempting to upload is larger than the permitted size."
 msgstr ""
 
-#: ../../../application/libraries/XU_Upload.php:81
+#: ../../../application/libraries/XU_Upload.php:257
 msgid ""
 "The image you are attempting to upload exceedes the maximum height or width."
 msgstr ""
 
-#: ../../../application/libraries/XU_Upload.php:82
+#: ../../../application/libraries/XU_Upload.php:320
 msgid ""
 "A problem was encountered while attempting to move the uploaded file to the "
 "final destination."
 msgstr ""
 
-#: ../../../application/libraries/XU_Upload.php:83
-msgid "The upload path does not appear to be valid."
-msgstr ""
-
-#: ../../../application/libraries/XU_Upload.php:84
-msgid "You have not specified any allowed file types."
-msgstr ""
-
-#: ../../../application/libraries/XU_Upload.php:85
+#: ../../../application/libraries/XU_Upload.php:420
 msgid "The file name you submitted already exists on the server."
 msgstr ""
 
-#: ../../../application/libraries/XU_Upload.php:86
+#: ../../../application/libraries/XU_Upload.php:598
+msgid "You have not specified any allowed file types."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:747
+#: ../../../application/libraries/XU_Upload.php:758
+msgid "The upload path does not appear to be valid."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:764
 msgid "The upload destination folder does not appear to be writable."
 msgstr ""
 
-#: ../../../application/libraries/startup.php:235
+#: ../../../application/libraries/startup.php:239
 #: ../../../application/controllers/upload.php:47
 msgid "URL Upload"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:247
+#: ../../../application/libraries/startup.php:251
 msgid "Admin"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:253
-#: ../../../application/libraries/startup.php:308
+#: ../../../application/libraries/startup.php:257
+#: ../../../application/libraries/startup.php:312
 msgid "Manage"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:254
+#: ../../../application/libraries/startup.php:258
 msgid "Files"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:255
+#: ../../../application/libraries/startup.php:259
 msgid "Transactions"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:256
+#: ../../../application/libraries/startup.php:260
 msgid "Users"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:258
+#: ../../../application/libraries/startup.php:262
 msgid "Configure"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:259
+#: ../../../application/libraries/startup.php:263
 msgid "Site Config"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:262
+#: ../../../application/libraries/startup.php:266
 msgid "Skins"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:264
+#: ../../../application/libraries/startup.php:268
 msgid "User Groups"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:266
+#: ../../../application/libraries/startup.php:270
 msgid "Misc"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:267
+#: ../../../application/libraries/startup.php:271
 msgid "Admin Menu Shortcuts"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:271
+#: ../../../application/libraries/startup.php:275
 msgid "Translation"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:272
+#: ../../../application/libraries/startup.php:276
 msgid "Tools/Maintenance"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:274
+#: ../../../application/libraries/startup.php:278
 msgid "Plugin Config"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:279
+#: ../../../application/libraries/startup.php:283
 msgid "Shortcuts"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:280
+#: ../../../application/libraries/startup.php:284
 msgid "Add This Page"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:307
+#: ../../../application/libraries/startup.php:311
 msgid "Upload"
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:89
+#: ../../../application/libraries/XU_Ftp.php:54
+msgid ""
+"Unable to locate a valid connection ID. Please make sure you are connected "
+"before peforming any file routines."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:55
+msgid "Unable to connect to your FTP server using the supplied hostname."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:56
+msgid ""
+"Unable to login to your FTP server. Please check your username and password."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:57
+msgid "Unable to create the directory you have specified."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:58
+msgid "Unable to change directories."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:59
+msgid ""
+"Unable to set file permissions. Please check your path. Note: This feature "
+"is only available in PHP 5 or higher."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:60
+msgid "Unable to upload the specified file. Please check your path."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:61
+msgid "Unable to download the specified file. Please check your path."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:62
+msgid "Unable to locate the source file. Please check your path."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:63
+msgid "Unable to rename the file."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:64
+msgid "Unable to delete the file."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:65
+msgid ""
+"Unable to move the file. Please make sure the destination directory exists."
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:724
 msgid "The email validation method must be passed an array."
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:90
+#: ../../../application/libraries/XU_Email.php:732
 #, php-format
 msgid "Invalid email address: %s"
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:91
+#: ../../../application/libraries/XU_Email.php:1133
 #, php-format
 msgid "Unable to locate the following email attachment: %s"
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:92
+#: ../../../application/libraries/XU_Email.php:1148
 #, php-format
 msgid "Unable to open this attachment: %s"
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:93
+#: ../../../application/libraries/XU_Email.php:1355
 msgid "You must include recipients: To, Cc, or Bcc"
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:94
+#: ../../../application/libraries/XU_Email.php:1486
 msgid ""
 "Unable to send email using PHP mail().  Your server might not be configured "
 "to send mail using this method."
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:95
+#: ../../../application/libraries/XU_Email.php:1494
 msgid ""
 "Unable to send email using PHP Sendmail.  Your server might not be "
 "configured to send mail using this method."
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:96
+#: ../../../application/libraries/XU_Email.php:1502
 msgid ""
 "Unable to send email using PHP SMTP.  Your server might not be configured to "
 "send mail using this method."
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:97
+#: ../../../application/libraries/XU_Email.php:1509
 #, php-format
 msgid ""
 "Your message has been successfully sent using the following protocol: %s"
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:98
+#: ../../../application/libraries/XU_Email.php:1580
+#, php-format
+msgid "Exit status code: %s"
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1581
 msgid "Unable to open a socket to Sendmail. Please check settings."
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:99
+#: ../../../application/libraries/XU_Email.php:1600
 msgid "You did not specify a SMTP hostname."
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:100
+#: ../../../application/libraries/XU_Email.php:1649
+#: ../../../application/libraries/XU_Email.php:1676
+#: ../../../application/libraries/XU_Email.php:1739
 #, php-format
 msgid "The following SMTP error was encountered: %s"
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:101
+#: ../../../application/libraries/XU_Email.php:1768
 msgid "Error: You must assign a SMTP username and password."
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:102
+#: ../../../application/libraries/XU_Email.php:1778
 #, php-format
 msgid "Failed to send AUTH LOGIN command. Error: %s"
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:103
+#: ../../../application/libraries/XU_Email.php:1788
 #, php-format
 msgid "Failed to authenticate username. Error: %s"
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:104
+#: ../../../application/libraries/XU_Email.php:1798
 #, php-format
 msgid "Failed to authenticate password. Error: %s"
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:105
+#: ../../../application/libraries/XU_Email.php:1817
 #, php-format
 msgid "Unable to send data: %s"
 msgstr ""
 
-#: ../../../application/libraries/XU_Email.php:106
-#, php-format
-msgid "Exit status code: %s"
+#: ../../../application/libraries/XU_Pagination.php:152
+msgid "Your number of links must be a positive number."
 msgstr ""
 
 #: ../../../application/libraries/XU_Form_validation.php:48

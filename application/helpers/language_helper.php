@@ -39,10 +39,20 @@
  */
 if ( ! function_exists('lang'))
 {
-	function lang($line)
+	function lang($line, $lines=null, $int=0)
 	{
 		$CI =& get_instance();
 		$lines = $CI->lang->line($line);
+		return $lines;
+	}
+}
+
+if ( ! function_exists('nlang'))
+{
+	function nlang($line, $lines, $int=0)
+	{
+		$CI =& get_instance();
+		$lines = $CI->lang->line($line, $lines, $int);
 		return $lines;
 	}
 }

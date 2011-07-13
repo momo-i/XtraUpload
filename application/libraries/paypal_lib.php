@@ -61,7 +61,7 @@ class Paypal_Lib {
 	public function __construct()
 	{
 		$this->CI =& get_instance();
-		$this->CI->load->helper(array('url', 'form', 'language'));
+		$this->CI->load->helper(array('url', 'form'));
 		$this->CI->load->config('paymentlib_config');
 		
 		$this->paypal_url = 'https://www.paypal.com/cgi-bin/webscr';
