@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XtraUpload 3.0.0 Alpha2\n"
 "Report-Msgid-Bugs-To: translator at xtrafile.com\n"
-"POT-Creation-Date: 2011-07-13 13:38+0900\n"
+"POT-Creation-Date: 2011-07-13 14:09+0900\n"
 "PO-Revision-Date: 2011-07-13 11:54+0900\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -36,6 +36,169 @@ msgstr ""
 
 #: ../../../application/helpers/number_helper.php:65
 msgid "bytes"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:95
+msgid "(UTC -12:00) Baker/Howland Island"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:96
+msgid "(UTC -11:00) Samoa Time Zone, Niue"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:97
+msgid "(UTC -10:00) Hawaii-Aleutian Standard Time, Cook Islands, Tahiti"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:98
+msgid "(UTC -9:30) Marquesas Islands"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:99
+msgid "(UTC -9:00) Alaska Standard Time, Gambier Islands"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:100
+msgid "(UTC -8:00) Pacific Standard Time, Clipperton Island"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:101
+msgid "(UTC -7:00) Mountain Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:102
+msgid "(UTC -6:00) Central Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:103
+msgid "(UTC -5:00) Eastern Standard Time, Western Caribbean Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:104
+msgid "(UTC -4:30) Venezuelan Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:105
+msgid "(UTC -4:00) Atlantic Standard Time, Eastern Caribbean Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:106
+msgid "(UTC -3:30) Newfoundland Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:107
+msgid "(UTC -3:00) Argentina, Brazil, French Guiana, Uruguay"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:108
+msgid "(UTC -2:00) South Georgia/South Sandwich Islands"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:109
+msgid "(UTC -1:00) Azores, Cape Verde Islands"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:110
+msgid "(UTC) Greenwich Mean Time, Western European Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:111
+msgid "(UTC +1:00) Central European Time, West Africa Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:112
+msgid ""
+"(UTC +2:00) Central Africa Time, Eastern European Time, Kaliningrad Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:113
+msgid "(UTC +3:00) Moscow Time, East Africa Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:114
+msgid "(UTC +3:30) Iran Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:115
+msgid "(UTC +4:00) Azerbaijan Standard Time, Samara Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:116
+msgid "(UTC +4:30) Afghanistan"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:117
+msgid "(UTC +5:00) Pakistan Standard Time, Yekaterinburg Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:118
+msgid "(UTC +5:30) Indian Standard Time, Sri Lanka Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:119
+msgid "(UTC +5:45) Nepal Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:120
+msgid "(UTC +6:00) Bangladesh Standard Time, Bhutan Time, Omsk Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:121
+msgid "(UTC +6:30) Cocos Islands, Myanmar"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:122
+msgid "(UTC +7:00) Krasnoyarsk Time, Cambodia, Laos, Thailand, Vietnam"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:123
+msgid ""
+"(UTC +8:00) Australian Western Standard Time, Beijing Time, Irkutsk Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:124
+msgid "(UTC +8:45) Australian Central Western Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:125
+msgid "(UTC +9:00) Japan Standard Time, Korea Standard Time, Yakutsk Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:126
+msgid "(UTC +9:30) Australian Central Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:127
+msgid "(UTC +10:00) Australian Eastern Standard Time, Vladivostok Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:128
+msgid "(UTC +10:30) Lord Howe Island"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:129
+msgid "(UTC +11:00) Magadan Time, Solomon Islands, Vanuatu"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:130
+msgid "(UTC +11:30) Norfolk Island"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:131
+msgid ""
+"(UTC +12:00) Fiji, Gilbert Islands, Kamchatka Time, New Zealand Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:132
+msgid "(UTC +12:45) Chatham Islands Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:133
+msgid "(UTC +13:00) Phoenix Islands Time, Tonga"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:134
+msgid "(UTC +14:00) Line Islands"
 msgstr ""
 
 #: ../../../application/helpers/date_helper.php:179
@@ -74,77 +237,83 @@ msgid "%d Minute"
 msgid_plural "%d Minutes"
 msgstr[0] ""
 
-#: ../../../application/config/lang_db.php:4
+#: ../../../application/helpers/date_helper.php:257
+#, php-format
+msgid "%d Second"
+msgid_plural "%d Seconds"
+msgstr[0] ""
+
+#: ../../../application/config/lang_db.php:5
 msgid "Site Name:"
 msgstr ""
 
-#: ../../../application/config/lang_db.php:5
+#: ../../../application/config/lang_db.php:6
 msgid "(Site Name)"
 msgstr ""
 
-#: ../../../application/config/lang_db.php:6
+#: ../../../application/config/lang_db.php:7
 msgid "Your Site Slogan"
 msgstr ""
 
-#: ../../../application/config/lang_db.php:7
+#: ../../../application/config/lang_db.php:8
 msgid "Site EMail"
 msgstr ""
 
-#: ../../../application/config/lang_db.php:8
+#: ../../../application/config/lang_db.php:9
 msgid "Email address used to send emails"
 msgstr ""
 
-#: ../../../application/config/lang_db.php:9
+#: ../../../application/config/lang_db.php:10
 msgid "Title Separator"
 msgstr ""
 
-#: ../../../application/config/lang_db.php:10
+#: ../../../application/config/lang_db.php:11
 msgid "Use Static Image Links"
 msgstr ""
 
-#: ../../../application/config/lang_db.php:11
+#: ../../../application/config/lang_db.php:12
 msgid ""
 "Use actual filesystem URLs to serve image thumbnails and direct images. Will "
 "save memory and server cycles on large sites."
 msgstr ""
 
-#: ../../../application/config/lang_db.php:12
+#: ../../../application/config/lang_db.php:13
 msgid "Allow Version Check"
 msgstr ""
 
-#: ../../../application/config/lang_db.php:13
+#: ../../../application/config/lang_db.php:14
 msgid ""
 "Allow XtraUpload to call home to check for new versions and security updates?"
 msgstr ""
 
-#: ../../../application/config/lang_db.php:14
+#: ../../../application/config/lang_db.php:15
 msgid "Home Page Message"
 msgstr ""
 
-#: ../../../application/config/lang_db.php:15
+#: ../../../application/config/lang_db.php:16
 msgid ""
 "Message to display to all your users on the home page. Like an announcement"
 msgstr ""
 
-#: ../../../application/config/lang_db.php:16
+#: ../../../application/config/lang_db.php:17
 msgid "Show File Preview"
 msgstr ""
 
-#: ../../../application/config/lang_db.php:17
+#: ../../../application/config/lang_db.php:18
 msgid ""
 "Show a preview of some file types on download(mp3, wmv, mov) and an embed "
 "code."
 msgstr ""
 
-#: ../../../application/config/lang_db.php:18
+#: ../../../application/config/lang_db.php:19
 msgid "Show Recent Uploads"
 msgstr ""
 
-#: ../../../application/config/lang_db.php:19
+#: ../../../application/config/lang_db.php:20
 msgid "Show a list of the 5 most recently uploaded files?"
 msgstr ""
 
-#: ../../../application/config/lang_db.php:20
+#: ../../../application/config/lang_db.php:21
 msgid "Site Locale"
 msgstr ""
 

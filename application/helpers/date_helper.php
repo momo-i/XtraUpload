@@ -254,7 +254,7 @@ if ( ! function_exists('timespan'))
 
 		if ($str == '')
 		{
-			$str = sprintf('%d Second', '%d Seconds', $seconds), $seconds);
+			$str = sprintf(nlang('%d Second', '%d Seconds', $seconds), $seconds);
 			$counter = 0;
 			//$str .= $seconds.' '.$CI->lang->line((($seconds	> 1) ? 'date_seconds' : 'date_second')).', ';
 		}
@@ -525,7 +525,6 @@ if ( ! function_exists('timezone_menu'))
 	function timezone_menu($default = 'UTC', $class = "", $name = 'timezones')
 	{
 		$CI =& get_instance();
-		$CI->lang->load('date');
 
 		if ($default == 'GMT')
 			$default = 'UTC';
@@ -542,7 +541,7 @@ if ( ! function_exists('timezone_menu'))
 		foreach (timezones() as $key => $val)
 		{
 			$selected = ($default == $key) ? " selected='selected'" : '';
-			$menu .= "<option value='{$key}'{$selected}>".$CI->lang->line($key)."</option>\n";
+			$menu .= "<option value='{$key}'{$selected}>".lang_timezone($key)."</option>\n";
 		}
 
 		$menu .= "</select>";

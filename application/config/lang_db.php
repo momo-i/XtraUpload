@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-// Config table translation.
+return ;
+// Database Config table translation.
 lang('Site Name:');
 lang('(Site Name)');
 lang('Your Site Slogan');
