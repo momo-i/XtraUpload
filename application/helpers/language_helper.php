@@ -77,6 +77,26 @@ if ( ! function_exists('get_region'))
 	}
 }
 
+if ( ! function_exists('available_lang'))
+{
+	function available_lang()
+	{
+		$CI =& get_instance();
+		$CI->config->load('language');
+		$available_lang = $CI->config->item('available_lang');
+		$langs = array('en_US' => 'English');
+		$paths = scandir(APPPATH.'/language');
+		foreach ($paths as $lang)
+		{
+			if(isset($available_lang[$lang]))
+			{
+				$langs[$lang] = $available_lang[$lang];
+			}
+		}
+		return $langs;
+	}
+}
+
 if ( ! function_exists('is_rtl'))
 {
 	function is_rtl($lang = 'en_US')

@@ -54,6 +54,7 @@ class Config extends CI_Controller {
 	{
 		// Get the DB config object
 		$data['configs'] = $this->db->get_where('config', array('name !=' => '_db_version', 'group' => 0));
+		$data['langs'] = available_lang();
 
 		// Load a message
 		$data['flash_message'] = '';

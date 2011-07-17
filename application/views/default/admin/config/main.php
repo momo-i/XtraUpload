@@ -49,8 +49,21 @@ foreach ($configs->result() as $config)
 ?>
                 <select name="<?php echo $config->name; ?>">
 <?php
+		foreach($langs as $code => $name)
+		{
+			$selected = "";
+			if(strcmp($config->value, $code) === 0)
+			{
+				$selected = ' selected="selected"';
+			}
+?>
+                  <option value="<?php echo $code; ?>"<?php echo $selected; ?>><?php echo $name; ?></option>
+<?php
+		}
 ?>
                 </select>
+                <br>
+                <?php echo $config->description2; ?>
 <?php
 	}
 	else
