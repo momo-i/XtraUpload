@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XtraUpload 3.0.0 Alpha2\n"
 "Report-Msgid-Bugs-To: translator at xtrafile.com\n"
-"POT-Creation-Date: 2011-07-18 08:02+0900\n"
+"POT-Creation-Date: 2011-07-18 10:29+0900\n"
 "PO-Revision-Date: 2011-07-13 11:54+0900\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -124,6 +124,10 @@ msgstr ""
 
 #: ../../../application/helpers/number_helper.php:65
 msgid "bytes"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:87
+msgid "English"
 msgstr ""
 
 #: ../../../application/helpers/language_helper.php:115
@@ -403,18 +407,202 @@ msgstr ""
 
 #: ../../../application/config/lang_db.php:21
 msgid "Site Locale"
-msgstr ""
+msgstr "サイトの言語"
 
 #: ../../../application/config/language.php:4
-msgid "English (US)"
+msgid "Afrikaans"
 msgstr ""
 
 #: ../../../application/config/language.php:5
-msgid "English (UK)"
+msgid "Arabic"
 msgstr ""
 
 #: ../../../application/config/language.php:6
+msgid "Bulgarian"
+msgstr ""
+
+#: ../../../application/config/language.php:7
+msgid "BengaliBangla"
+msgstr ""
+
+#: ../../../application/config/language.php:8
+msgid "Catalan"
+msgstr ""
+
+#: ../../../application/config/language.php:9
+msgid "Czech"
+msgstr ""
+
+#: ../../../application/config/language.php:10
+msgid "Danish"
+msgstr ""
+
+#: ../../../application/config/language.php:11
+msgid "German"
+msgstr ""
+
+#: ../../../application/config/language.php:12
+msgid "Greek"
+msgstr ""
+
+#: ../../../application/config/language.php:13
+msgid "English (UK)"
+msgstr ""
+
+#: ../../../application/config/language.php:14
+msgid "English (US)"
+msgstr ""
+
+#: ../../../application/config/language.php:15
+msgid "Spanish (Argentina)"
+msgstr ""
+
+#: ../../../application/config/language.php:16
+msgid "Spanish (Spain)"
+msgstr ""
+
+#: ../../../application/config/language.php:17
+msgid "Spanish (Mexico)"
+msgstr ""
+
+#: ../../../application/config/language.php:18
+msgid "Estonian"
+msgstr ""
+
+#: ../../../application/config/language.php:19
+msgid "Basque"
+msgstr ""
+
+#: ../../../application/config/language.php:20
+msgid "Persian"
+msgstr ""
+
+#: ../../../application/config/language.php:21
+msgid "Finnish"
+msgstr ""
+
+#: ../../../application/config/language.php:22
+msgid "Faroese"
+msgstr ""
+
+#: ../../../application/config/language.php:23
+msgid "French"
+msgstr ""
+
+#: ../../../application/config/language.php:24
+msgid "Irish"
+msgstr ""
+
+#: ../../../application/config/language.php:25
+msgid "Hebrew"
+msgstr ""
+
+#: ../../../application/config/language.php:26
+msgid "Croatian"
+msgstr ""
+
+#: ../../../application/config/language.php:27
+msgid "Hungarian"
+msgstr ""
+
+#: ../../../application/config/language.php:28
+msgid "Icelandic"
+msgstr ""
+
+#: ../../../application/config/language.php:29
+msgid "Italian"
+msgstr ""
+
+#: ../../../application/config/language.php:30
 msgid "Japanese"
+msgstr "日本語"
+
+#: ../../../application/config/language.php:31
+msgid "Korean"
+msgstr "韓国語"
+
+#: ../../../application/config/language.php:32
+msgid "Lithuanian"
+msgstr ""
+
+#: ../../../application/config/language.php:33
+msgid "Latvian"
+msgstr ""
+
+#: ../../../application/config/language.php:34
+msgid "Macedonian"
+msgstr ""
+
+#: ../../../application/config/language.php:35
+msgid "Malay"
+msgstr ""
+
+#: ../../../application/config/language.php:36
+msgid "Dutch"
+msgstr ""
+
+#: ../../../application/config/language.php:37
+msgid "Norwegian (Bokmal)"
+msgstr ""
+
+#: ../../../application/config/language.php:38
+msgid "Polish"
+msgstr ""
+
+#: ../../../application/config/language.php:39
+msgid "Portuguese (Brasil)"
+msgstr ""
+
+#: ../../../application/config/language.php:40
+msgid "Portuguese (Portugal)"
+msgstr ""
+
+#: ../../../application/config/language.php:41
+msgid "Romanian"
+msgstr ""
+
+#: ../../../application/config/language.php:42
+msgid "Russian"
+msgstr ""
+
+#: ../../../application/config/language.php:43
+msgid "Slovak"
+msgstr ""
+
+#: ../../../application/config/language.php:44
+msgid "Slovenian"
+msgstr ""
+
+#: ../../../application/config/language.php:45
+msgid "Serbian"
+msgstr ""
+
+#: ../../../application/config/language.php:46
+msgid "Swedish"
+msgstr ""
+
+#: ../../../application/config/language.php:47
+msgid "Tswana"
+msgstr ""
+
+#: ../../../application/config/language.php:48
+msgid "Turkish"
+msgstr ""
+
+#: ../../../application/config/language.php:49
+msgid "Ukrainian"
+msgstr ""
+
+#: ../../../application/config/language.php:50
+msgid "Vietnamese"
+msgstr ""
+
+#: ../../../application/config/language.php:51
+msgid "Chinese (simplified)"
+msgstr ""
+
+#: ../../../application/config/language.php:52
+msgid "Chinese (traditional)"
 msgstr ""
 
 #: ../../../application/models/users.php:272
@@ -534,7 +722,7 @@ msgstr ""
 #: ../../../application/views/tech_junkie/menu.php:5
 #, php-format
 msgid "Welcome %s!"
-msgstr ""
+msgstr "%sさんようこそ！"
 
 #: ../../../application/views/vector_lover/menu.php:9
 #: ../../../application/views/style_vantage_green/menu.php:9
@@ -2616,7 +2804,7 @@ msgstr ""
 
 #: ../../../application/views/default/admin/transactions/edit.php:30
 #: ../../../application/views/default/admin/config/plugin.php:81
-#: ../../../application/views/default/admin/config/main.php:83
+#: ../../../application/views/default/admin/config/main.php:90
 #: ../../../application/views/default/admin/gateways/edit.php:31
 msgid "Update"
 msgstr ""

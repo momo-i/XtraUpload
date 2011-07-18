@@ -84,7 +84,7 @@ if ( ! function_exists('available_lang'))
 		$CI =& get_instance();
 		$CI->config->load('language');
 		$available_lang = $CI->config->item('available_lang');
-		$langs = array('en_US' => 'English');
+		$langs = array('en_US' => lang('English'));
 		$paths = scandir(APPPATH.'/language');
 		foreach ($paths as $lang)
 		{

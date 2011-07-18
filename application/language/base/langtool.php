@@ -53,7 +53,8 @@ function merge_translations($dir)
 	$potfile = BASEDIR."/xtraupload.pot";
 	$merge_cmd = 'msgmerge -U --backup=off %s %s';
 	$compile_cmd = 'msgfmt -v -c %s -o %s';
-	$init_cmd = 'msginit -l %s.UTF-8 --no-translator -i %s -o %s';
+	$init_cmd = 'LANG=%s.UTF-8 msginit -l %s.UTF-8 --no-translator -i %s -o %s';
+	$init_cmd2 = 'LANG=%s.UTF-8 msginit -l %s.UTF-8 -i %s -o %s';
 
 	$opendir = scandir($langdir);
 	foreach ( $opendir as $lang)
@@ -70,7 +71,14 @@ function merge_translations($dir)
 			echo "Recompiling {$lang}\n";
 			@unlink($pofile);
 			@unlink($mofile);
-			$init = sprintf($init_cmd, $lang, $potfile, $pofile);
+			if (strcmp($lang, 'en_US') === 0 OR strcmp($lang, 'en_GB') === 0)
+			{
+				$init = sprintf($init_cmd, $lang, $lang, $potfile, $pofile);
+			}
+			else
+			{
+				$init = sprintf($init_cmd2, $lang, $lang, $potfile, $pofile);
+			}
 			shell_exec($init);
 		}
 		else
