@@ -272,7 +272,7 @@ class Startup {
 			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/email/view', lang('Mass Emailer'), 'img/icons/mail_16.png');
 
 			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/stats/view', lang('Site Stats'), 'img/icons/chart_16.png');
-			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/translator', lang('Translation'), 'img/icons/spelling_16.png');
+			//$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/translator', lang('Translation'), 'img/icons/spelling_16.png');
 			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/actions/view', lang('Tools/Maintenance'), 'img/icons/tools_16.png');
 
 			$this->CI->xu_api->menus->add_plugin_menu_link('/admin/config/plugin', lang('Plugin Config'), 'img/icons/options_16.png');
