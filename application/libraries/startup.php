@@ -13,10 +13,6 @@ class Startup {
 	{
 		log_message('debug', "Startup Class Initialized");
 
-		//require_once 'Zend/Locale.php';
-		//require_once 'Zend/Translate.php';
-		//require_once 'Zend/Debug.php';
-
 		// Define the path to the cache folder
 		define('CACHEPATH', APPPATH.'cache/');
 

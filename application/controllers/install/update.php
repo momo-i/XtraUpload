@@ -123,6 +123,9 @@ class Update extends CI_Controller {
 
 		$version[] = array('version' => '3000002', 'description' => $update_string);
 
+		$update_string = '- New Ads System.<br>';
+		$version[] = array('version' => '3001000', 'description' => $update_string);
+
 		return $version;
 	}
 
@@ -146,6 +149,10 @@ class Update extends CI_Controller {
 		return TRUE;
 	}
 
+	private function _update_3000100()
+	{
+		return TRUE;
+	}
 	private function _set_db_version()
 	{
 		$data = array('value' => XU_VERSION);
