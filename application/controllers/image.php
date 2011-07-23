@@ -61,8 +61,8 @@ class Image extends CI_Controller {
 
         if($this->startup->site_config->no_php_images)
         {
-            $links['direct_url'] = base_url().$links['img_path'];
-            $links['thumb_url'] = base_url().$links['thumb_path'];
+            $links['direct_url'] = base_url().$links['img_url'];
+            $links['thumb_url'] = base_url().$links['thumb_url'];
         }
 
         $links['down'] = $this->files_db->get_download_link($id);
