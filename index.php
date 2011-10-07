@@ -194,6 +194,10 @@ if (defined('ENVIRONMENT'))
 if(!file_exists(APPPATH.'config/config.php'))
 {
 	@rename(APPPATH.'config/config.php.dist', APPPATH.'config/config.php');
+	if(!file_exists(APPPATH.'config/config.php'))
+	{
+		exit('Cannot rename config.php.dist to config.php. Please change '.APPPATH.'config/config.php.dist manually.');
+	}
 }
 if(!file_exists(APPPATH.'config/database.php'))
 {

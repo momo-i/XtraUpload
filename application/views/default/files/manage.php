@@ -12,12 +12,12 @@
           <?php echo lang('Your changes have been saved.'); ?> 
         </span>
         <?php echo $flash_message; ?> 
-<?php if($this->startup->group_config->storage_limit > '0'): ?>
+<?php if($this->startup->group_config->storage_limit > '0') { ?>
         <span class="info">
           <strong><?php echo lang('Your account is limited by storage space:'); ?></strong><br>
           <?php printf(lang('You have %d of %d MB remaining.'), '<strong>'.$this->functions->get_filesize_prefix(($this->startup->group_config->storage_limit * 1024 * 1024) - $this->files_db->get_files_usage_space()).'</strong>', '<strong>'.$this->startup->group_config->storage_limit.'</strong>'); ?>
         </span>
-<?php endif; ?><? $this->load->helper('string'); ?>
+<?php } //endif; ?><?php $this->load->helper('string'); ?>
         <form action="<?php echo site_url('files/manage'); ?>" id="userAdmin" method="post" style="padding:0; margin:0; border:0;">
           <table border="0" style="width:95%" id="file_list_table">
             <tr>
@@ -31,7 +31,7 @@
             </tr>
 <?php
 $i=0;
-foreach ($files->result() as $file):
+foreach ($files->result() as $file) {
 	$id = $file->id;
 	$link = $this->files_db->get_links($file->secid);
 ?>
@@ -63,9 +63,9 @@ foreach ($files->result() as $file):
               <td colspan="5" id="<?php echo $file->file_id; ?>-details-inner">
                 <?php echo lang('Download Link'); ?>: <input class="down_link" readonly="readonly" type="text" size="65" value="<?php echo $link['down']; ?>" onfocus="this.select()" onclick="this.select()" ondblclick="this.select()"><br>
                 <?php echo lang('Delete Link:'); ?> <a href="<?php echo $link['del']; ?>"><?php echo $link['del']; ?></a>
-<? if(isset($link['img'])): ?>
+<?php if(isset($link['img'])) { ?>
                 <br><?php echo lang('Image Links'); ?><a href="<?php echo $link['img']; ?>"><?php echo $link['img']; ?></a>
-<? endif; ?>
+<?php } // endif; ?>
                </td>
             </tr>
             <tr class="details" style="display:none; border-top:none;" id="<?php echo $file->id; ?>-edit">
@@ -87,7 +87,7 @@ foreach ($files->result() as $file):
             </tr>
 <?php
 	$i++;
-endforeach;
+} //endforeach;
 ?>
           </table>
         </form>
