@@ -134,7 +134,12 @@ class XU_Lang extends CI_Lang {
 		{
 			$mofile = APPPATH."language/{$this->_default_locale}/xtraupload.mo";
 		}
-		$this->_translate = new Zend_Translate('gettext', $mofile, $this->_default_locale->getLanguage());
+		$language = $this->_default_locale->getLanguage() ? $this->_default_locale->getLanguage() : 'en';
+		try {
+			$this->_translate = new Zend_Translate('gettext', $mofile, $language);
+		} catch(Exception $e) {
+			$this->_translate = new Zend_Translate('gettext', $mofile, 'en');
+		}
 	}
 
 	private function _check_database(&$line)
