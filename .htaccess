@@ -1,3 +1,4 @@
+<IfModule rewrite_module>
 RewriteEngine on
 
 RewriteBase /
@@ -7,6 +8,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteCond $1 !^(index\.php|images|img|css|js|robots\.txt)
 RewriteRule (.*) index.php?/$1 [L]
+</IfModule>
 
 #php_flag register_globals Off
 #php_flag magic_quotes_gpc Off

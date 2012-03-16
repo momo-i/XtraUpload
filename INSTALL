@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+---------                INSTALL - XtraUpload v.3.0.0               -----------
+-------------------------------------------------------------------------------
+
+  It is very simple to install.
+
+  1. If you can use mod_rewrite, edit RewriteBase into .htaccess.
+     ex: RewriteBase /xtraupload-v3
+
+  2. Just put the Web server simply.
+     ex: /var/www/html/xtraupload-v3
+
+  3. Go to your web site!
+     ex: http://yoursite.ltd/xtraupload-v3/
