@@ -151,8 +151,10 @@ class Update extends CI_Controller {
 
 	private function _update_3000100()
 	{
+		$this->_set_db_version();
 		return TRUE;
 	}
+
 	private function _set_db_version()
 	{
 		$data = array('value' => XU_VERSION);
