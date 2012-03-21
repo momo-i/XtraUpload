@@ -124,7 +124,7 @@ abstract class PaymentGateway {
         $html .= "<p style=\"text-align:center;\"><br/><br/>";
 		$html .= $text;
 		$html .= "<br/><br/>\n";
-        $html .= "<input type=\"submit\" value=\"Make Payment\"></p>\n";
+        $html .= "<input type=\"submit\" value=\"".lang('Make Payment')."\"></p>\n";
 
         $html .= "</form>\n";
 		return $html;

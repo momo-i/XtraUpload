@@ -6,7 +6,7 @@ if(strcmp(PHP_SAPI, 'cli') !== 0)
 }
 
 define('BASEDIR', __DIR__);
-define('VERSION', '3.0.0 Alpha2');
+define('VERSION', '3.0.0 Beta1');
 define('MAILADDR', 'translator at xtrafile.com');
 
 update_core(BASEDIR, 'xtraupload');

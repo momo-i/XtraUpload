@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XtraUpload 3.0.0 Alpha2\n"
 "Report-Msgid-Bugs-To: translator at xtrafile.com\n"
-"POT-Creation-Date: 2011-07-18 10:29+0900\n"
+"POT-Creation-Date: 2012-03-21 13:57+0900\n"
 "PO-Revision-Date: 2011-07-13 11:54+0900\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -1075,7 +1075,7 @@ msgstr ""
 
 #: ../../../application/views/default/home.php:7
 #: ../../../application/views/default/home.php:19
-#: ../../../application/libraries/startup.php:234
+#: ../../../application/libraries/startup.php:230
 #: ../../../application/controllers/home.php:81
 #: ../../../application/controllers/admin/home.php:80
 msgid "Home"
@@ -1576,7 +1576,7 @@ msgid ""
 msgstr ""
 
 #: ../../../application/views/default/folder/view.php:3
-#: ../../../application/libraries/startup.php:313
+#: ../../../application/libraries/startup.php:309
 #: ../../../application/controllers/folder.php:50
 msgid "File Folder"
 msgstr ""
@@ -1698,7 +1698,7 @@ msgid "Direct link to image:"
 msgstr ""
 
 #: ../../../application/views/default/image/gallery/view.php:3
-#: ../../../application/libraries/startup.php:314
+#: ../../../application/libraries/startup.php:310
 msgid "Image Gallery"
 msgstr ""
 
@@ -2519,7 +2519,7 @@ msgid "Past 7 Days Uploads"
 msgstr ""
 
 #: ../../../application/views/default/admin/email.php:4
-#: ../../../application/libraries/startup.php:272
+#: ../../../application/libraries/startup.php:268
 msgid "Mass Emailer"
 msgstr ""
 
@@ -2740,7 +2740,7 @@ msgstr ""
 #: ../../../application/views/default/admin/users/view.php:13
 #: ../../../application/views/default/admin/folders/search_result.php:13
 #: ../../../application/views/default/admin/folders/view.php:8
-#: ../../../application/libraries/startup.php:245
+#: ../../../application/libraries/startup.php:241
 msgid "Search"
 msgstr ""
 
@@ -2810,7 +2810,7 @@ msgid "Update"
 msgstr ""
 
 #: ../../../application/views/default/admin/stats.php:4
-#: ../../../application/libraries/startup.php:274
+#: ../../../application/libraries/startup.php:270
 #: ../../../application/controllers/admin/stats.php:41
 msgid "Site Stats"
 msgstr ""
@@ -2852,7 +2852,7 @@ msgstr ""
 
 #: ../../../application/views/default/admin/stats.php:28
 #: ../../../application/views/default/admin/stats.php:29
-#: ../../../application/libraries/startup.php:267
+#: ../../../application/libraries/startup.php:263
 msgid "Servers"
 msgstr ""
 
@@ -2937,7 +2937,7 @@ msgid "Server Load"
 msgstr ""
 
 #: ../../../application/views/default/admin/menu.php:47
-#: ../../../application/libraries/startup.php:265
+#: ../../../application/libraries/startup.php:261
 msgid "Plugins"
 msgstr ""
 
@@ -3378,7 +3378,7 @@ msgid "General Config"
 msgstr ""
 
 #: ../../../application/views/default/admin/gateways/view.php:3
-#: ../../../application/libraries/startup.php:264
+#: ../../../application/libraries/startup.php:260
 msgid "Payment Gateways"
 msgstr ""
 
@@ -4227,77 +4227,73 @@ msgstr ""
 msgid "The upload destination folder does not appear to be writable."
 msgstr ""
 
-#: ../../../application/libraries/startup.php:239
+#: ../../../application/libraries/startup.php:235
 #: ../../../application/controllers/upload.php:47
 msgid "URL Upload"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:251
+#: ../../../application/libraries/startup.php:247
 msgid "Admin"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:257
-#: ../../../application/libraries/startup.php:312
+#: ../../../application/libraries/startup.php:253
+#: ../../../application/libraries/startup.php:308
 msgid "Manage"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:258
+#: ../../../application/libraries/startup.php:254
 msgid "Files"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:259
+#: ../../../application/libraries/startup.php:255
 msgid "Transactions"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:260
+#: ../../../application/libraries/startup.php:256
 msgid "Users"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:262
+#: ../../../application/libraries/startup.php:258
 msgid "Configure"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:263
+#: ../../../application/libraries/startup.php:259
 msgid "Site Config"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:266
+#: ../../../application/libraries/startup.php:262
 msgid "Skins"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:268
+#: ../../../application/libraries/startup.php:264
 msgid "User Groups"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:270
+#: ../../../application/libraries/startup.php:266
 msgid "Misc"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:271
+#: ../../../application/libraries/startup.php:267
 msgid "Admin Menu Shortcuts"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:275
-msgid "Translation"
-msgstr ""
-
-#: ../../../application/libraries/startup.php:276
+#: ../../../application/libraries/startup.php:272
 msgid "Tools/Maintenance"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:278
+#: ../../../application/libraries/startup.php:274
 msgid "Plugin Config"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:283
+#: ../../../application/libraries/startup.php:279
 msgid "Shortcuts"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:284
+#: ../../../application/libraries/startup.php:280
 msgid "Add This Page"
 msgstr ""
 
-#: ../../../application/libraries/startup.php:311
+#: ../../../application/libraries/startup.php:307
 msgid "Upload"
 msgstr ""
 
@@ -4570,6 +4566,11 @@ msgstr ""
 msgid "Unable to access an error message corresponding to your field name."
 msgstr ""
 
+#: ../../../application/libraries/payment/PaymentGateway.php:127
+#: ../../../application/controllers/user.php:333
+msgid "Make Payment"
+msgstr ""
+
 #: ../../../application/extend/example/example.php:8
 #: ../../../application/extend/example/example.php:10
 msgid "Example"
@@ -4696,10 +4697,6 @@ msgstr ""
 msgid ""
 "If you are not automatically redirected to payment website within 5 seconds,"
 "<br> click 'Make Payment' below to begin the payment procedure."
-msgstr ""
-
-#: ../../../application/controllers/user.php:333
-msgid "Make Payment"
 msgstr ""
 
 #: ../../../application/controllers/user.php:442
