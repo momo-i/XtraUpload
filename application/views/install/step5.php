@@ -23,7 +23,7 @@
         <li>&raquo;</li>
         <li class="complete">
           <a href="<?php echo site_url('install/step/4') ?>">
-            <img src="<?php echo base_url(): ?>img/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 4); ?>">
+            <img src="<?php echo base_url(); ?>img/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 4); ?>">
             <?php printf(lang('Step %d'), 3); ?> 
           </a>
         </li>
