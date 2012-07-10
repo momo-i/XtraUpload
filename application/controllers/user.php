@@ -223,8 +223,14 @@ class User extends CI_Controller {
 			show_404();
 		}
 
+		$gate = $this->db->get_where('gateways', array('id' => $gate_id))->row();
+		if(!$gate)
+		{
+			show_404();
+		}
+
 		// get payment gateway settings
-		$gate_conf = json_decode($gate->settings);
+		$gate_conf = unserialize($gate->settings);
 
 		// load payment libs
 		include_once (APPPATH.'libraries/payment/PaymentGateway.php');

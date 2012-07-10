@@ -25,9 +25,10 @@ Contents:
 
 2. Getting all the components
 
-  Apache >= 2.2.x http://www.apache.org OR other web server
-  PHP >= 5.3.x http://www.php.net **
-  MySQL >= 5.x+ http://www.mysql.com
+  Apache >= 2.4.x http://httpd.apache.org/ OR other web server
+  PHP >= 5.4.x http://www.php.net/
+  MySQL >= 5.x+ http://www.mysql.com/
+  OR mariadb >= 5.x+ http://mariadb.org/
 
   12mb of free disk space (plus space to store uploaded files)
   mod_rewrite support for your webserver(apache config file included)
