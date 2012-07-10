@@ -58,18 +58,24 @@ class Update extends CI_Controller {
 
 	public function do_update()
 	{
-		$ret = $this->_update(XU_DB_VERSION, XU_VERSION);
-		if($ret === TRUE)
-		{
-			redirect('install/update/done');
-		}
 		if($this->updated === FALSE)
 		{
 			$this->_set_db_version();
 			$data['flash_message'] = "<span class\"info\">".lang('No Updates Needed')."</span>\n";
 			$data['flash_message'] = '<a href="'.site_url().'">'.lang('Back Home').'</a>';
 		}
-		$data['error_message'] = sprintf(lang('Cannot Update %s from %s'), XU_VERSION_READ, XU_DB_VERSION_READ);
+		else
+		{
+			$ret = $this->_update(XU_DB_VERSION, XU_VERSION);
+			if($ret === TRUE)
+			{
+				redirect('install/update/done');
+			}
+			else
+			{
+				$data['error_message'] = sprintf(lang('Cannot Update %s from %s'), XU_VERSION_READ, XU_DB_VERSION_READ);
+			}
+		}
 		$this->load->view('install/header');
 		$this->load->view('install/update', $data);
 		$this->load->view('install/footer');
@@ -150,6 +156,12 @@ class Update extends CI_Controller {
 	}
 
 	private function _update_3000100()
+	{
+		$this->_set_db_version();
+		return TRUE;
+	}
+
+	private function _update_3000200()
 	{
 		$this->_set_db_version();
 		return TRUE;
