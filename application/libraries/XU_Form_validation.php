@@ -690,7 +690,14 @@ class XU_Form_Validation extends CI_Form_validation {
 				}
 
 				// Build the error message
-				$message = sprintf($this->_types[$line], $this->_translate_fieldname($row['label']), $param);
+				if(isset($this->_types[$line]))
+				{
+					$message = sprintf($this->_types[$line], $this->_translate_fieldname($row['label']), $param);
+				}
+				else
+				{
+					$message = $line;
+				}
 
 				// Save the error message
 				$this->_field_data[$row['field']]['error'] = $message;
