@@ -1,3 +1,8 @@
+	v3.0.0-Beta2
+		- Update payment settings
+		- Fixed form validation message.
+		- Update CodeIgniter 2.0.2 to 2.1.3
+		- Fixed installer: for no use mod_rewrite
 	v3.0.0-Alpha2
 		- Auto Upgrader.
 		- embed page update
