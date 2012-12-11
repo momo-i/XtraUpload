@@ -204,7 +204,7 @@ if(!file_exists(APPPATH.'config/database.php'))
 	@rename(APPPATH.'config/database.php.dist', APPPATH.'config/database.php');
 }
 
-if(PHP_SAPI == 'cli')
+if(PHP_SAPI == 'cli' AND !defined('IN_CRON'))
 {
 	exit('Do not run this file on command line.');
 }
