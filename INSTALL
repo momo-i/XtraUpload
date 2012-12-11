@@ -7,6 +7,8 @@
   1. If you can use mod_rewrite, edit RewriteBase into .htaccess.
      ex: RewriteBase /xtraupload-v3
 
+     If you cannot use mod_rewrite, edit $config['index_page'] = 'index.php'; in application/config/config.php.template.
+
   2. Just put the Web server simply.
      ex: /var/www/html/xtraupload-v3
 
