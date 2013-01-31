@@ -347,8 +347,15 @@ class Startup {
 		} catch(Zend_Locale_Exception $e) {
 			$this->locale = new Zend_Locale('en_US');
 		}
-		
-		$this->translate = new Zend_Translate('gettext', APPPATH."language/{$this->locale}/xtraupload.mo");
+		$mofile = APPPATH."language/{$this->locale}/xtraupload.mo";
+		if(file_exists($mofile))
+		{
+			$this->translate = new Zend_Translate('gettext', $mofile);
+		}
+		else
+		{
+			$this->translate = new Zend_Translate('gettext', APPPATH."language/en_US/xtraupload.mo");
+		}
 	}
 
 	private function _db_installed()
