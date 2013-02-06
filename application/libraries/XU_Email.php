@@ -36,6 +36,7 @@ class XU_Email extends CI_Email {
 	var	$smtp_pass		= "";		// SMTP Password
 	var	$smtp_port		= "25";		// SMTP Port
 	var	$smtp_timeout	= 5;		// SMTP Timeout in seconds
+	var	$smtp_crypto	= "";		// SMTP Encryption. Can be null, tls or ssl.
 	var	$wordwrap		= TRUE;		// TRUE/FALSE  Turns word-wrap on/off
 	var	$wrapchars		= "76";		// Number of characters to wrap at.
 	var	$mailtype		= "text";	// text/html  Defines email formatting
@@ -75,6 +76,7 @@ class XU_Email extends CI_Email {
 	var	$_base_charsets	= array('us-ascii', 'iso-2022-');	// 7-bit charsets (excluding language suffix)
 	var	$_bit_depths	= array('7bit', '8bit');
 	var	$_priorities	= array('1 (Highest)', '2 (High)', '3 (Normal)', '4 (Low)', '5 (Lowest)');
+
 
 	/**
 	 * Constructor - Sets Email Preferences
@@ -378,7 +380,19 @@ class XU_Email extends CI_Email {
 	 */
 	public function message($body)
 	{
-		$this->_body = stripslashes(rtrim(str_replace("\r", "", $body)));
+		$this->_body = rtrim(str_replace("\r", "", $body));
+
+		/* strip slashes only if magic quotes is ON
+		   if we do it with magic quotes OFF, it strips real, user-inputted chars.
+
+		   NOTE: In PHP 5.4 get_magic_quotes_gpc() will always return 0 and
+			 it will probably not exist in future versions at all.
+		*/
+		if ( ! is_php('5.4') && get_magic_quotes_gpc())
+		{
+			$this->_body = stripslashes($this->_body);
+		}
+
 		return $this;
 	}
 
@@ -394,7 +408,7 @@ class XU_Email extends CI_Email {
 	public function attach($filename, $disposition = 'attachment')
 	{
 		$this->_attach_name[] = $filename;
-		$this->_attach_type[] = $this->_mime_types(next(explode('.', basename($filename))));
+		$this->_attach_type[] = $this->_mime_types(pathinfo($filename, PATHINFO_EXTENSION));
 		$this->_attach_disp[] = $disposition; // Can also be 'inline'  Not sure if it matters
 		return $this;
 	}
@@ -451,7 +465,7 @@ class XU_Email extends CI_Email {
 	 */
 	public function set_alt_message($str = '')
 	{
-		$this->alt_message = ($str == '') ? '' : $str;
+		$this->alt_message = $str;
 		return $this;
 	}
 
@@ -1665,7 +1679,10 @@ class XU_Email extends CI_Email {
 	 */
 	protected function _smtp_connect()
 	{
-		$this->_smtp_connect = fsockopen($this->smtp_host,
+		$ssl = NULL;
+		if ($this->smtp_crypto == 'ssl')
+			$ssl = 'ssl://';
+		$this->_smtp_connect = fsockopen($ssl.$this->smtp_host,
 										$this->smtp_port,
 										$errno,
 										$errstr,
@@ -1678,6 +1695,14 @@ class XU_Email extends CI_Email {
 		}
 
 		$this->_set_error_message($this->_get_smtp_data());
+
+		if ($this->smtp_crypto == 'tls')
+		{
+			$this->_send_command('hello');
+			$this->_send_command('starttls');
+			stream_socket_enable_crypto($this->_smtp_connect, TRUE, STREAM_CRYPTO_METHOD_TLS_CLIENT);
+		}
+
 		return $this->_send_command('hello');
 	}
 
@@ -1703,6 +1728,12 @@ class XU_Email extends CI_Email {
 						$this->_send_data('HELO '.$this->_get_hostname());
 
 						$resp = 250;
+			break;
+			case 'starttls' :
+
+						$this->_send_data('STARTTLS');
+
+						$resp = 220;
 			break;
 			case 'from' :
 
