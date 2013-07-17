@@ -25,16 +25,34 @@
  */
 class Setup extends CI_Controller {
 
+	private $os = false;
+
 	public function __construct()
 	{
 		parent::__construct();
+		$this->_check_os();
 	}
 
 	public function index()
 	{
 		$this->load->view('install/header');
-		$this->load->view('install/setup');
+		if(strcmp($this->os, 'LINUX') === 0)
+		{
+			$this->load->view('install/setup');
+		}
+		else
+		{
+			$this->load->view('install/error');
+		}
 		$this->load->view('install/footer');
+	}
+
+	private function _check_os()
+	{
+		if(defined('PHP_OS'))
+		{
+			$this->os = strtoupper(PHP_OS);
+		}
 	}
 
 }
