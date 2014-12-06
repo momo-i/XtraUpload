@@ -1055,17 +1055,16 @@ class XU_Upload extends CI_Upload {
 	 */
 	private function _get_fileinfo($tmpfile)
 	{
-		$finfo = finfo_open(FILEINFO_MIME);
-		if(!$finfo)
+		if(function_exists('finfo_open'))
 		{
-			$info = preg_replace("/^(.+?);.*$/", "\\1", $_FILES[$field]['type']);
-
+			$finfo = finfo_open(FILEINFO_MIME);
+			$info = finfo_file($finfo, $tmpfile);
+			$info = preg_replace("/^(.+?);.*$/", "\\1", $info);
 			$info = strtolower(trim(stripslashes($info), '"'));
 		}
 		else
 		{
-			$info = finfo_file($finfo, $tmpfile);
-			$info = preg_replace("/^(.+?);.*$/", "\\1", $info);
+			$info = preg_replace("/^(.+?);.*$/", "\\1", $_FILES[$field]['type']);
 			$info = strtolower(trim(stripslashes($info), '"'));
 		}
 
