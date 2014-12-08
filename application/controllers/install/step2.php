@@ -88,7 +88,7 @@ class Step2 extends CI_Controller {
 		{
 			$data['safemode'] = lang('On');
 			$data['safemsg'] = '<span style="color: #FF0000; font-size: 4"><strong>'.lang('Failed').'</strong></span><br>';
-			$data['safemsg' = lang('XtraUpload requires SafeMode Off.');
+			$data['safemsg'] = lang('XtraUpload requires SafeMode Off.');
 		}
 		else
 		{
