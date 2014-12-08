@@ -824,12 +824,17 @@ class User extends CI_Controller {
 	private function _get_captcha()
 	{
 		$this->load->helper('captcha');
-
+		$query = $this->db->get_where('config', array('name' => 'captcha_width'));
+		$result = $query->result();
+		$img_widgh = $result[0]->value;
+		$query = $this->db->get_where('config', array('name' => 'captcha_height'));
+		$result = $query->result();
+		$img_height = $result[0]->value;
 		$vals = array(
 			'img_path'  => ROOTPATH.'/temp/',
 			'word'	  => $this->users->gen_pass(5, false),
-			'img_width' => 120,
-			'img_height' => 30,
+			'img_width' => $img_widgh,
+			'img_height' => $img_height,
 			'img_url'   => base_url().'temp/',
 			'font_path' => BASEPATH.'fonts/MyriadWebPro-Bold.ttf'
 		);
