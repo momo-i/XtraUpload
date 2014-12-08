@@ -54,8 +54,17 @@ class Functions {
 	
 	public function get_server_load($movingAverage=0) 
     { 
-        $stats = explode(' ', substr(exec('uptime'), -14));
-        return str_replace(',', '', $stats[$movingAverage]);
+        //$stats = explode(' ', substr(@exec('uptime'), -14));
+		if(is_readable('/proc/loadavg'))
+		{
+			$fp = fopen('/proc/loadavg', 'r');
+			$stats = substr(fgets($fp), 2, 2);
+    	    return str_replace(',', '', $stats[$movingAverage]);
+		}
+		else
+		{
+			return 0;
+		}
     }
 	
 	public function gen_pass($length, $caps=true)

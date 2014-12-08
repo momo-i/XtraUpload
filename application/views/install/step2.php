@@ -60,7 +60,14 @@
             </td>
             <td class="pformright">
               <?php echo $phpver; ?>
-
+            </td>
+          </tr>
+            <td class="pformleftw">
+              <?php echo lang('PHP Safe Mode'); ?><br>
+              <?php echo lang('Safe Mode:'); ?> <strong><?php echo $safemode; ?></strong>
+            </td>
+            <td class="pformright">
+              <?php echo $safemsg; ?>
             </td>
           </tr>
           <tr>

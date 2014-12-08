@@ -72,7 +72,8 @@ class Step2 extends CI_Controller {
 			}
 		}
 
-		if(( (int)str_replace('.', '', (string)phpversion()) < 530))
+		$phpver = (int)str_replace('.', '', (string)phpversion());
+		if($phpver < 530)
 		{
 			$data['is_chmod'] = false;
 			$data['phpver']  = '<span style="color: #FF0000; font-size: 4"><strong>'.lang('Failed').'</strong></span><br>';
@@ -81,6 +82,18 @@ class Step2 extends CI_Controller {
 		else
 		{
 			$data['phpver'] = '<span style="color: #009900; font-size: 4"><strong>'.lang('Passed').'</strong></span>'."\n";
+		}
+
+		if((bool)ini_get('safe_mode') && $phpver < 530)
+		{
+			$data['safemode'] = lang('On');
+			$data['safemsg'] = '<span style="color: #FF0000; font-size: 4"><strong>'.lang('Failed').'</strong></span><br>';
+			$data['safemsg' = lang('XtraUpload requires SafeMode Off.');
+		}
+		else
+		{
+			$data['safemode'] = lang('Off');
+			$data['safemsg'] = '<span style="color: #009900; font-size: 4"><strong>'.lang('Passed').'</strong></span>'."\n";
 		}
 
 		if(function_exists('gd_info'))
