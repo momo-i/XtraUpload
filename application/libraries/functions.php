@@ -54,7 +54,6 @@ class Functions {
 	
 	public function get_server_load($movingAverage=0) 
     { 
-        //$stats = explode(' ', substr(@exec('uptime'), -14));
 		if(is_readable('/proc/loadavg'))
 		{
 			$fp = fopen('/proc/loadavg', 'r');
