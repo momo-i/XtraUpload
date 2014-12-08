@@ -194,6 +194,12 @@ class Step5 extends CI_Controller {
 		$data = array('id' => NULL, 'name' => 'locale', 'value' => $this->input->post('locale'), 'description1' => 'Site Locale', 'description2' => '', 'group' => 0, 'type' => 'select', 'invincible' => 1);
 		$this->db->insert('config', $data);
 
+		$data = array('id' => NULL,'name' => 'captcha_width','value' => '70','description1' => 'Captcha image width:','description2' => '','group' => 0,'type' => 'text','invincible' => 1);
+		$this->db->insert('config', $data);
+
+		$data = array('id' => NULL,'name' => 'captcha_height','value' => '20','description1' => 'Captcha image height:','description2' => '','group' => 0,'type' => 'text','invincible' => 1);
+		$this->db->insert('config', $data);
+
 		// counters Table
 		$fields = array(
 			'id' => array(

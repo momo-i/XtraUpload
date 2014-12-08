@@ -34,13 +34,14 @@ class Update extends CI_Controller {
 		$this->load->database();
 		$this->load->dbforge();
 		$this->_versions = $this->_populate_version();
+		$this->_xu_db_version = str_replace(array('.', ','), '', XU_DB_VERSION);
 	}
 
 	public function index()
 	{
 		foreach ($this->_versions as $version)
 		{
-			if($version['version'] > XU_DB_VERSION)
+			if($version['version'] > $this->_xu_db_version)
 			{
 				$this->updated = TRUE;
 				$data['flash_message']  = "<li><strong>Version: {$version['version']}</strong><br>";
@@ -58,6 +59,7 @@ class Update extends CI_Controller {
 
 	public function do_update()
 	{
+		$this->_check_versions();
 		if($this->updated === FALSE)
 		{
 			$this->_set_db_version();
@@ -130,7 +132,11 @@ class Update extends CI_Controller {
 		$version[] = array('version' => '3000002', 'description' => $update_string);
 
 		$update_string = '- New Ads System.<br>';
-		$version[] = array('version' => '3001000', 'description' => $update_string);
+		$version[] = array('version' => '3000010', 'description' => $update_string);
+
+		// 3.0.0 Beta4
+		$update_string = '- Captcha Image Size editable in admin page';
+		$version[] = array('version' => '3000040', 'description' => $update_string);
 
 		return $version;
 	}
@@ -155,20 +161,39 @@ class Update extends CI_Controller {
 		return TRUE;
 	}
 
-	private function _update_3000100()
+	private function _update_3000010()
 	{
 		$this->_set_db_version();
 		return TRUE;
 	}
 
-	private function _update_3000200()
+	private function _update_3000020()
 	{
 		$this->_set_db_version();
 		return TRUE;
 	}
 
-	private function _update_3000300()
+	private function _update_3000030()
 	{
+		$this->_set_db_version();
+		return TRUE;
+	}
+
+	private function _update_3000040()
+	{
+		$query = $this->db->get_where('config', array('name' => 'captcha_width'));
+		if($query->num_rows() > 0)
+		{
+			$this->updated = FALSE;
+			$this->_set_db_version();
+			return false;
+		}
+
+		$data = array('id' => NULL,'name' => 'captcha_width','value' => '70','description1' => 'Captcha image width:','description2' => '','group' => 0,'type' => 'text','invincible' => 1);
+		$this->db->insert('config', $data);
+		$data = array('id' => NULL,'name' => 'captcha_height','value' => '20','description1' => 'Captcha image height:','description2' => '','group' => 0,'type' => 'text','invincible' => 1);
+		$this->db->insert('config', $data);
+
 		$this->_set_db_version();
 		return TRUE;
 	}
@@ -178,6 +203,17 @@ class Update extends CI_Controller {
 		$data = array('value' => XU_VERSION);
 		$this->db->where('name', '_db_version');
 		$this->db->update('config', $data);
+	}
+
+	private function _check_versions()
+	{
+		foreach ($this->_versions as $version)
+		{
+			if($version['version'] > $this->_xu_db_version)
+			{
+				$this->updated = TRUE;
+			}
+		}
 	}
 
 }
