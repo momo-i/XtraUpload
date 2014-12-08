@@ -96,7 +96,7 @@ class Ads extends CI_Controller {
 	{
 		if($this->input->post('name'))
 		{
-			$this->ads_db->insert($_POST);
+			$this->ads_db->insert($this->input->post());
 			$this->session->set_flashdata('msg', lang('Advert Added!'));
 			redirect();
 		}
@@ -134,7 +134,7 @@ class Ads extends CI_Controller {
 
 		if($this->input->post('name'))
 		{
-			$this->ads_db->edit_ads($id, $_POST);
+			$this->ads_db->edit_ads($id, $this->input->post());
 			$this->session->set_flashdata('msg', lang('Advert Edited!'));
 			redirect();
 		}
