@@ -660,16 +660,12 @@ class Files extends CI_Controller {
 	private function _get_captcha()
 	{
 		$this->load->helper('captcha');
-		$query = $this->db->get_where('config', array('name' => 'captcha_width'));
-		$result = $query->result();
-		$img_widgh = $result[0]->value;
-		$query = $this->db->get_where('config', array('name' => 'captcha_height'));
-		$result = $query->result();
-		$img_height = $result[0]->value;
+		$img_width = $this->startup->site_config->captcha_width;
+		$img_height = $this->startup->site_config->captcha_height;
 		$vals = array(
 			'img_path'  => ROOTPATH.'/temp/',
 			'word'	  => $this->users->gen_pass(3, false),
-			'img_width' => $img_widgh,
+			'img_width' => $img_width,
 			'img_height' => $img_height,
 			'img_url'   => base_url().'temp/',
 			'fonts' => BASEPATH.'fonts/MyriadWebPro-Bold.ttf'
