@@ -129,6 +129,57 @@ class Files extends CI_Controller {
 			$data['sec'] = 1;
 		}
 
+		// video code
+		$src = site_url('files/stream/'.$file->file_id.'/'.md5($this->config->config['encryption_key'].$file->file_id.$this->input->ip_address()).'/'.$file->link_name);
+		$swf = site_url('players/flashmediaelement.swf');
+		switch($file->type)
+		{
+			case 'flv':
+				$data['icon'] = 'tv';
+				$data['code'] = <<<EOF
+          <video id="player2" controls="controls" width="470" height="320" preload="none">
+            <source type="video/flv" src="$src">
+          </video>
+            <script type="text/javascript">
+              $('audio,video').mediaelementplayer({
+                success: function(player, node) {
+                  $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+                }
+              });
+            </script>
+EOF;
+			break;
+			case 'mp4':
+				$data['icon'] = 'tv';
+				$data['code'] = <<<EOF
+          <video id="player2" controls="controls" width="470" height="320" preload="none">
+            <source type="video/mp4" src="$src">
+            <object width="640" height="360" type="application/x-shockwave-flash" data="$swf">
+            <param name="movie" value="$swf" />
+            <param name="flashvars" value="controls=true&amp;file=$src" />
+          </video>
+          <span id="player2-mode"></span>
+            <script type="text/javascript">
+              $('audio,video').mediaelementplayer({
+                success: function(player, node) {
+                  $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+                }
+              });
+            </script>
+EOF;
+			break;
+			case 'mp3':
+			default:
+				$data['icon'] = 'music';
+				$data['code'] = <<<EOF
+          <audio id="player2" src="$src" controls="controls" type="audio/mp3"></audio>
+          <script type="text/javascript">
+            $('audio').mediaelementplayer();
+          </script>
+EOF;
+			break;
+		}
+
 		// Send the information to the user
 		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Download File').' '.$this->startup->site_config->title_separator.' '.$name));
 		$this->load->view($this->startup->skin.'/files/get', $data);

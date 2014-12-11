@@ -121,68 +121,10 @@ $tags = array_map('ucwords', $tags);
 if($this->startup->site_config->show_preview && $this->xu_api->embed->get_embed_code($file->type))
 {
     $embed = $this->xu_api->embed->get_embed_code($file->type);
-	$src = site_url('files/stream/'.$file->file_id.'/'.md5($this->config->config['encryption_key'].$file->file_id.$this->input->ip_address()).'/'.$file->link_name);
-	switch($file->type)
-	{
-		case 'mp3':
-			$icon = 'music';
-			$code = <<<EOF
-          <audio id="player2" src="$src" controls="controls" type="audio/mp3"></audio>
-          <script type="text/javascript">
-          //<![CDATA[
-            $('audio').mediaelementplayer();
-          //--]]>
-          </script>
-EOF;
-		break;
-		case 'flv':
-			$icon = 'tv';
-			$code = <<<EOF
-          <video id="player2" src="$src" controls="controls" width="470" height="320" preload="none" type="video/x-flv"></video>
-            <script type="text/javascript">
-              //<![CDATA[
-              $('audio,video').mediaelementplayer({
-                success: function(player, node) {
-                  $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
-                }
-              });
-              //--]]>
-            </script>
-EOF;
-		break;
-		case 'mp4':
-			$icon = 'tv';
-			$code = <<<EOF
-          <video id="player2" src="$src" controls="controls" width="470" height="320" preload="none" type="video/mp4"></video>
-          <span id="player2-mode"></span>
-            <script type="text/javascript">
-            //<![CDATA[
-              $('audio,video').mediaelementplayer({
-                success: function(player, node) {
-                  $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
-                }
-              });
-            //--]]>
-            </script>
-EOF;
-		break;
-		default:
-			$icon = 'music';
-			$code = <<<EOF
-          <audio id="player2" src="$src" controls="controls" type="audio/mp3"></audio>
-          <script type="text/javascript">
-          //<![CDATA[
-            $('audio').mediaelementplayer();
-          //--]]>
-          </script>
-EOF;
-		break;
-	}
 ?>
         <h3 id="dlhere"><img src="<?php echo base_url(); ?>img/icons/<?php echo $icon; ?>_16.png" class="nb" alt=""> <?php echo lang('Preview File'); ?></h3>
         <p>
 <?php echo $code; ?>
-          <!--iframe src="<?php echo site_url('files/embed/'.$file->type.'/'.$file->file_id); ?>" width="<?php echo $embed['width']; ?>" height="<?php echo $embed['height']; ?>" scrolling="no" frameborder="0"></iframe--><br>
           <a href="javascript:;" onclick="$('#<?php echo $file->type; ?>_embed_code').slideToggle('normal')">
             <img src="<?php echo base_url(); ?>img/icons/add_16.png" class="nb" alt=""> <?php echo lang('Get Embed Code'); ?>
           </a><br>

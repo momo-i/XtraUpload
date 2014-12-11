@@ -1,13 +1,12 @@
 <IfModule rewrite_module>
-RewriteEngine on
+	RewriteEngine on
+	RewriteBase /
 
-RewriteBase /
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-RewriteCond $1 !^(index\.php|images|img|css|js|robots\.txt)
-RewriteRule (.*) index.php?/$1 [L]
+	RewriteCond $1 !^(index\.php|images|img|css|js|robots\.txt)
+	RewriteRule (.*) index.php?/$1 [L]
 </IfModule>
 
 #php_flag register_globals Off
