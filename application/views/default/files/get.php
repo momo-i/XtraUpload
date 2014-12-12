@@ -114,7 +114,6 @@ $tags = array_map('ucwords', $tags);
             </td>
           </tr>
         </table>
-        <script src="<?php echo base_url(); ?>players/jquery.js"></script>
         <script src="<?php echo base_url(); ?>players/mediaelement-and-player.min.js"></script>
         <link rel="stylesheet" href="<?php echo base_url(); ?>players/mediaelementplayer.min.css">
 <?php
