@@ -100,7 +100,7 @@ if($this->startup->site_config->show_recent_uploads)
         {
           $(this).animate({backgroundColor:"#FFFFFF"}, "fast");
         });
-        $("a[@rel='external']").attr('target', '_blank');
+        $("a[rel='external']").attr('target', '_blank');
         if($.browser.opera)
         {
           $(".pasteButton").remove();

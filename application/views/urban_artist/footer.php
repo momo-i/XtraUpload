@@ -53,7 +53,7 @@ else
         {
           $(this).animate({backgroundColor:"#FFFFFF"}, "fast");
         });
-        $("a[@rel='external']").attr('target', '_blank');
+        $("a[rel='external']").attr('target', '_blank');
         if($.browser.opera)
         {
           $(".pasteButton").remove();

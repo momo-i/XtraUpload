@@ -249,7 +249,8 @@ Usage:
 			var leftPadding     = $$.css("paddingLeft");
 			var rightPadding    = $$.css("paddingRight");
 			var border          = $$.css("border");
-			var filter = jQuery.browser.version > 7 && $.browser.msie ? $$.css("filter") : null; // IE8 bug fix
+			//var filter = jQuery.browser.version > 7 && $.browser.msie ? $$.css("filter") : null; // IE8 bug fix
+			var filter = null;
 			
 			var topMaxRadius    = this.spec.get('tR');
 			var botMaxRadius    = this.spec.get('bR');
@@ -1109,7 +1110,7 @@ Usage:
 		
 		// Detect styles and apply corners in browsers with no native border-radius support
 		if ($.browser.msie) {	
-			/* Force caching of bg images in IE6 */
+			// Force caching of bg images in IE6
 			try {	document.execCommand("BackgroundImageCache", false, true);	}	catch(e) {};
 			
 			function units(num) {
@@ -1118,7 +1119,7 @@ Usage:
 				return matches[1];
 			};
 			
-			/* Detect and Apply Corners */
+			// Detect and Apply Corners 
 			var t, i, j;
 			
 			function procIEStyles(rule) {
