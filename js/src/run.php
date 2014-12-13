@@ -29,7 +29,7 @@ $filePrefix = 'main';
 
 // Comma seperated list of files to load first, before all others. 
 // Useful for jQuery, where you are most likely to load plugins that need jquery first
-$loadFirst = 'jquery.js,misc.js'; 
+$loadFirst = 'jquery.js,jquery-ui.js,misc.js'; 
 
 // The folder to load relative to this file, use '.' if you place this file in the 
 // folder you want to combine.

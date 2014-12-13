@@ -218,8 +218,9 @@ $rand1 = 'y'.str_replace('-', '', $this->functions->get_rand_id(32));
         }
         function getNewCaptcha()
         {
-          var id = $('#captchaImg img').attr('id').split('t_')[1];
-          $('#captchaImg').load('<?php echo site_url('api/captcha/get'); ?>/'+escape(id));
+          //var id = $('#captchaImg img').prop('id').split('t_')[1];
+          //$('#captchaImg').load('<?php echo site_url('api/captcha/get'); ?>/'+escape(id));
+          $('#captchaImg').load('<?php echo site_url('api/captcha/get'); ?>');
         }
         function toggleDetails()
         {
