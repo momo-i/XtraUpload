@@ -155,8 +155,9 @@ EOF;
           <video id="player2" controls="controls" width="470" height="320" preload="none">
             <source type="video/mp4" src="$src">
             <object width="640" height="360" type="application/x-shockwave-flash" data="$swf">
-            <param name="movie" value="$swf" />
-            <param name="flashvars" value="controls=true&amp;file=$src" />
+              <param name="movie" value="$swf" />
+              <param name="flashvars" value="controls=true&amp;file=$src" />
+            </opject>
           </video>
           <span id="player2-mode"></span>
             <script type="text/javascript">
