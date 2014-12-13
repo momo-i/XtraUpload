@@ -140,13 +140,14 @@ class Files extends CI_Controller {
           <video id="player2" controls="controls" width="470" height="320" preload="none">
             <source type="video/flv" src="$src">
           </video>
-            <script type="text/javascript">
-              $('audio,video').mediaelementplayer({
-                success: function(player, node) {
-                  $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
-                }
-              });
-            </script>
+          <script type="text/javascript">
+            $('audio,video').mediaelementplayer({
+              success: function(player, node) {
+                $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+              }
+            });
+          </script>
+
 EOF;
 			break;
 			case 'mp4':
@@ -155,8 +156,9 @@ EOF;
           <video id="player2" controls="controls" width="470" height="320" preload="none">
             <source type="video/mp4" src="$src">
             <object width="640" height="360" type="application/x-shockwave-flash" data="$swf">
-            <param name="movie" value="$swf" />
-            <param name="flashvars" value="controls=true&amp;file=$src" />
+              <param name="movie" value="$swf" />
+              <param name="flashvars" value="controls=true&amp;file=$src" />
+            </object>
           </video>
           <span id="player2-mode"></span>
             <script type="text/javascript">
@@ -166,6 +168,7 @@ EOF;
                 }
               });
             </script>
+
 EOF;
 			break;
 			case 'mp3':
@@ -176,6 +179,7 @@ EOF;
           <script type="text/javascript">
             $('audio').mediaelementplayer();
           </script>
+
 EOF;
 			break;
 		}

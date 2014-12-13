@@ -114,8 +114,6 @@ $tags = array_map('ucwords', $tags);
             </td>
           </tr>
         </table>
-        <script src="<?php echo base_url(); ?>players/mediaelement-and-player.min.js"></script>
-        <link rel="stylesheet" href="<?php echo base_url(); ?>players/mediaelementplayer.min.css">
 <?php
 if($this->startup->site_config->show_preview && $this->xu_api->embed->get_embed_code($file->type))
 {
