@@ -1,0 +1,5367 @@
+# Language {it translations for XtraUpload 3.0.0 package.
+# Copyright (C) 2014 XtraUpload
+# This file is distributed under the same license as the XtraUpload 3.0.0 package.
+# momo-i <webmaster@momo-i.org>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: XtraUpload 3.0.0 Beta4\n"
+"Report-Msgid-Bugs-To: translator at xtrafile.com\n"
+"POT-Creation-Date: 2014-12-08 11:32+0900\n"
+"PO-Revision-Date: 2014-12-14 10:46+0900\n"
+"Last-Translator: momo-i <webmaster@momo-i.org>\n"
+"Language-Team: Language {it\n"
+"Language: {it_IT}\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: ../../../application/config/lang_db.php:5
+msgid "Site Name:"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:6
+msgid "(Site Name)"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:7
+msgid "Your Site Slogan"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:8
+msgid "Site EMail"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:9
+msgid "Email address used to send emails"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:10
+msgid "Title Separator"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:11
+msgid "Use Static Image Links"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:12
+msgid ""
+"Use actual filesystem URLs to serve image thumbnails and direct images. Will "
+"save memory and server cycles on large sites."
+msgstr ""
+
+#: ../../../application/config/lang_db.php:13
+msgid "Allow Version Check"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:14
+msgid ""
+"Allow XtraUpload to call home to check for new versions and security updates?"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:15
+msgid "Home Page Message"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:16
+msgid ""
+"Message to display to all your users on the home page. Like an announcement"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:17
+msgid "Show File Preview"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:18
+msgid ""
+"Show a preview of some file types on download(mp3, wmv, mov) and an embed "
+"code."
+msgstr ""
+
+#: ../../../application/config/lang_db.php:19
+msgid "Show Recent Uploads"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:20
+msgid "Show a list of the 5 most recently uploaded files?"
+msgstr ""
+
+#: ../../../application/config/lang_db.php:21
+msgid "Site Locale"
+msgstr ""
+
+#: ../../../application/config/language.php:4
+msgid "Afrikaans"
+msgstr ""
+
+#: ../../../application/config/language.php:5
+msgid "Arabic"
+msgstr ""
+
+#: ../../../application/config/language.php:6
+msgid "Bulgarian"
+msgstr ""
+
+#: ../../../application/config/language.php:7
+msgid "BengaliBangla"
+msgstr ""
+
+#: ../../../application/config/language.php:8
+msgid "Catalan"
+msgstr ""
+
+#: ../../../application/config/language.php:9
+msgid "Czech"
+msgstr ""
+
+#: ../../../application/config/language.php:10
+msgid "Danish"
+msgstr ""
+
+#: ../../../application/config/language.php:11
+msgid "German"
+msgstr ""
+
+#: ../../../application/config/language.php:12
+msgid "Greek"
+msgstr ""
+
+#: ../../../application/config/language.php:13
+msgid "English (UK)"
+msgstr ""
+
+#: ../../../application/config/language.php:14
+msgid "English (US)"
+msgstr ""
+
+#: ../../../application/config/language.php:15
+msgid "Spanish (Argentina)"
+msgstr ""
+
+#: ../../../application/config/language.php:16
+msgid "Spanish (Spain)"
+msgstr ""
+
+#: ../../../application/config/language.php:17
+msgid "Spanish (Mexico)"
+msgstr ""
+
+#: ../../../application/config/language.php:18
+msgid "Estonian"
+msgstr ""
+
+#: ../../../application/config/language.php:19
+msgid "Basque"
+msgstr ""
+
+#: ../../../application/config/language.php:20
+msgid "Persian"
+msgstr ""
+
+#: ../../../application/config/language.php:21
+msgid "Finnish"
+msgstr ""
+
+#: ../../../application/config/language.php:22
+msgid "Faroese"
+msgstr ""
+
+#: ../../../application/config/language.php:23
+msgid "French"
+msgstr ""
+
+#: ../../../application/config/language.php:24
+msgid "Irish"
+msgstr ""
+
+#: ../../../application/config/language.php:25
+msgid "Hebrew"
+msgstr ""
+
+#: ../../../application/config/language.php:26
+msgid "Croatian"
+msgstr ""
+
+#: ../../../application/config/language.php:27
+msgid "Hungarian"
+msgstr ""
+
+#: ../../../application/config/language.php:28
+msgid "Icelandic"
+msgstr ""
+
+#: ../../../application/config/language.php:29
+msgid "Italian"
+msgstr ""
+
+#: ../../../application/config/language.php:30
+msgid "Japanese"
+msgstr ""
+
+#: ../../../application/config/language.php:31
+msgid "Korean"
+msgstr ""
+
+#: ../../../application/config/language.php:32
+msgid "Lithuanian"
+msgstr ""
+
+#: ../../../application/config/language.php:33
+msgid "Latvian"
+msgstr ""
+
+#: ../../../application/config/language.php:34
+msgid "Macedonian"
+msgstr ""
+
+#: ../../../application/config/language.php:35
+msgid "Malay"
+msgstr ""
+
+#: ../../../application/config/language.php:36
+msgid "Dutch"
+msgstr ""
+
+#: ../../../application/config/language.php:37
+msgid "Norwegian (Bokmal)"
+msgstr ""
+
+#: ../../../application/config/language.php:38
+msgid "Polish"
+msgstr ""
+
+#: ../../../application/config/language.php:39
+msgid "Portuguese (Brasil)"
+msgstr ""
+
+#: ../../../application/config/language.php:40
+msgid "Portuguese (Portugal)"
+msgstr ""
+
+#: ../../../application/config/language.php:41
+msgid "Romanian"
+msgstr ""
+
+#: ../../../application/config/language.php:42
+msgid "Russian"
+msgstr ""
+
+#: ../../../application/config/language.php:43
+msgid "Slovak"
+msgstr ""
+
+#: ../../../application/config/language.php:44
+msgid "Slovenian"
+msgstr ""
+
+#: ../../../application/config/language.php:45
+msgid "Serbian"
+msgstr ""
+
+#: ../../../application/config/language.php:46
+msgid "Swedish"
+msgstr ""
+
+#: ../../../application/config/language.php:47
+msgid "Tswana"
+msgstr ""
+
+#: ../../../application/config/language.php:48
+msgid "Turkish"
+msgstr ""
+
+#: ../../../application/config/language.php:49
+msgid "Ukrainian"
+msgstr ""
+
+#: ../../../application/config/language.php:50
+msgid "Vietnamese"
+msgstr ""
+
+#: ../../../application/config/language.php:51
+msgid "Chinese (simplified)"
+msgstr ""
+
+#: ../../../application/config/language.php:52
+msgid "Chinese (traditional)"
+msgstr ""
+
+#: ../../../application/models/users.php:272
+#: ../../../application/controllers/admin/group.php:232
+#: ../../../application/views/default/user/compare.php:172
+msgid "Daily"
+msgstr ""
+
+#: ../../../application/models/users.php:273
+#: ../../../application/controllers/admin/group.php:233
+#: ../../../application/views/default/admin/stats.php:15
+#: ../../../application/views/default/admin/stats.php:21
+#: ../../../application/views/default/admin/stats.php:22
+#: ../../../application/views/default/admin/stats.php:26
+#: ../../../application/views/default/admin/stats.php:32
+#: ../../../application/views/default/user/compare.php:173
+msgid "Weekly"
+msgstr ""
+
+#: ../../../application/models/users.php:274
+#: ../../../application/controllers/admin/group.php:234
+#: ../../../application/views/default/user/compare.php:174
+msgid "Monthly"
+msgstr ""
+
+#: ../../../application/models/users.php:275
+#: ../../../application/controllers/admin/group.php:235
+#: ../../../application/views/default/user/compare.php:175
+msgid "Yearly"
+msgstr ""
+
+#: ../../../application/models/users.php:276
+#: ../../../application/controllers/admin/group.php:236
+msgid "Bi-Yearly"
+msgstr ""
+
+#: ../../../application/models/users.php:282
+#, php-format
+msgid "New user ad %s!"
+msgstr ""
+
+#: ../../../application/models/users.php:285
+#: ../../../application/models/users.php:328
+#: ../../../application/controllers/user.php:795
+#, php-format
+msgid "Hello %s,"
+msgstr ""
+
+#: ../../../application/models/users.php:286
+#: ../../../application/models/users.php:329
+#, php-format
+msgid "Welcome to %s!"
+msgstr ""
+
+#: ../../../application/models/users.php:287
+msgid "Here are your account details should you ever need them:"
+msgstr ""
+
+#: ../../../application/models/users.php:289
+#: ../../../application/controllers/user.php:799
+#: ../../../application/views/default/user/profile/view.php:21
+#, php-format
+msgid "Username: %s"
+msgstr ""
+
+#: ../../../application/models/users.php:290
+#, php-format
+msgid "Group: %s"
+msgstr ""
+
+#: ../../../application/models/users.php:296
+#, php-format
+msgid "Ammount Paid: %s"
+msgstr ""
+
+#: ../../../application/models/users.php:299
+#, php-format
+msgid "Billing Period: %s"
+msgstr ""
+
+#: ../../../application/models/users.php:304
+#: ../../../application/models/users.php:332
+msgid "Thanks for joining our community!"
+msgstr ""
+
+#: ../../../application/models/users.php:305
+#: ../../../application/models/users.php:333
+#: ../../../application/controllers/user.php:803
+#, php-format
+msgid "%s Administration"
+msgstr ""
+
+#: ../../../application/models/users.php:325
+#, php-format
+msgid "New user at %s!"
+msgstr ""
+
+#: ../../../application/models/users.php:330
+msgid ""
+"Before you account is activated you need to pay using the following link. If "
+"you have already completed the payment process, please wait while we "
+"authorize your payment. Once complete you will recive a new email containg "
+"your details."
+msgstr ""
+
+#: ../../../application/models/users.php:331
+msgid "Pay Here"
+msgstr ""
+
+#: ../../../application/extend/example/example.php:8
+#: ../../../application/extend/example/example.php:10
+msgid "Example"
+msgstr ""
+
+#: ../../../application/extend/example/example.php:9
+msgid "Example Manage"
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:64
+msgid ""
+"Unable to determine the database settings based on the connection string you "
+"submitted."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:65
+msgid "Unable to connect to your database server using the provided settings."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:66
+msgid "The query you submitted is not valid."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:67
+msgid "You must set the database table to be used with your query."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:68
+msgid "You must use the \"set\" method to update an entry."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:69
+msgid "You must specify an index to match on for batch updates."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:70
+msgid ""
+"One or more rows submitted for batch updating is missing the specified index."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:71
+msgid "Updates are not allowed unless they contain a \"where\" clause."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:72
+msgid ""
+"Deletes are not allowed unless they contain a \"where\" or \"like\" clause."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:73
+msgid "To fetch fields requires the name of the table as a parameter."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:74
+msgid "This feature is not available for the database you are using."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:75
+msgid "Transaction failure: Rollback performed."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:76
+msgid "Unable to drop the specified database."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:77
+msgid "Unsupported feature of the database platform you are using."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:78
+msgid "The file compression format you chose is not supported by your server."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:79
+msgid "Unable to write data to the file path you have submitted."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:80
+msgid "The cache path you submitted is not valid or writable."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:81
+msgid "A table name is required for that operation."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:82
+msgid "A column name is required for that operation."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:83
+msgid "A column definition is required for that operation."
+msgstr ""
+
+#: ../../../application/core/XU_Lang.php:84
+msgid "A Database Error Occurred"
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:54
+msgid ""
+"Unable to locate a valid connection ID. Please make sure you are connected "
+"before peforming any file routines."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:55
+msgid "Unable to connect to your FTP server using the supplied hostname."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:56
+msgid ""
+"Unable to login to your FTP server. Please check your username and password."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:57
+msgid "Unable to create the directory you have specified."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:58
+msgid "Unable to change directories."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:59
+msgid ""
+"Unable to set file permissions. Please check your path. Note: This feature "
+"is only available in PHP 5 or higher."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:60
+msgid "Unable to upload the specified file. Please check your path."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:61
+msgid "Unable to download the specified file. Please check your path."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:62
+msgid "Unable to locate the source file. Please check your path."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:63
+msgid "Unable to rename the file."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:64
+msgid "Unable to delete the file."
+msgstr ""
+
+#: ../../../application/libraries/XU_Ftp.php:65
+msgid ""
+"Unable to move the file. Please make sure the destination directory exists."
+msgstr ""
+
+#: ../../../application/libraries/payment/PaymentGateway.php:127
+#: ../../../application/controllers/user.php:339
+msgid "Make Payment"
+msgstr ""
+
+#: ../../../application/libraries/XU_Pagination.php:152
+msgid "Your number of links must be a positive number."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:153
+#: ../../../application/libraries/XU_Upload.php:181
+#: ../../../application/libraries/XU_Upload.php:192
+msgid "You did not select a file to upload."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:172
+msgid ""
+"The uploaded file exceeds the maximum allowed size in your PHP configuration "
+"file."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:175
+msgid ""
+"The uploaded file exceeds the maximum size allowed by the submission form."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:178
+msgid "The file was only partially uploaded."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:184
+msgid "The temporary folder is missing."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:187
+#: ../../../application/libraries/XU_Upload.php:304
+msgid "The file could not be written to disk."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:190
+msgid "The file upload was stopped by extension."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:212
+#: ../../../application/libraries/XU_Upload.php:235
+msgid "The filetype you are attempting to upload is not allowed."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:249
+msgid ""
+"The file you are attempting to upload is larger than the permitted size."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:257
+msgid ""
+"The image you are attempting to upload exceedes the maximum height or width."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:320
+msgid ""
+"A problem was encountered while attempting to move the uploaded file to the "
+"final destination."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:420
+msgid "The file name you submitted already exists on the server."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:598
+msgid "You have not specified any allowed file types."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:747
+#: ../../../application/libraries/XU_Upload.php:758
+msgid "The upload path does not appear to be valid."
+msgstr ""
+
+#: ../../../application/libraries/XU_Upload.php:764
+msgid "The upload destination folder does not appear to be writable."
+msgstr ""
+
+#: ../../../application/libraries/startup.php:230
+#: ../../../application/controllers/home.php:81
+#: ../../../application/controllers/admin/home.php:80
+#: ../../../application/views/default/home.php:7
+#: ../../../application/views/default/home.php:19
+msgid "Home"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:235
+#: ../../../application/controllers/upload.php:47
+msgid "URL Upload"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:241
+#: ../../../application/views/default/admin/files/view.php:13
+#: ../../../application/views/default/admin/files/search_result.php:13
+#: ../../../application/views/default/admin/users/view.php:13
+#: ../../../application/views/default/admin/users/search_result.php:13
+#: ../../../application/views/default/admin/folders/view.php:8
+#: ../../../application/views/default/admin/folders/search_result.php:13
+#: ../../../application/views/default/admin/transactions/view.php:9
+msgid "Search"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:247
+msgid "Admin"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:253
+#: ../../../application/libraries/startup.php:308
+msgid "Manage"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:254
+msgid "Files"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:255
+msgid "Transactions"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:256
+msgid "Users"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:258
+msgid "Configure"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:259
+msgid "Site Config"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:260
+#: ../../../application/views/default/admin/gateways/view.php:3
+msgid "Payment Gateways"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:261
+#: ../../../application/views/default/admin/menu.php:47
+msgid "Plugins"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:262
+msgid "Skins"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:263
+#: ../../../application/views/default/admin/stats.php:28
+#: ../../../application/views/default/admin/stats.php:29
+msgid "Servers"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:264
+msgid "User Groups"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:266
+msgid "Misc"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:267
+msgid "Admin Menu Shortcuts"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:268
+#: ../../../application/views/default/admin/email.php:4
+msgid "Mass Emailer"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:270
+#: ../../../application/controllers/admin/stats.php:41
+#: ../../../application/views/default/admin/stats.php:4
+msgid "Site Stats"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:272
+msgid "Tools/Maintenance"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:274
+msgid "Plugin Config"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:279
+msgid "Shortcuts"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:280
+msgid "Add This Page"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:307
+msgid "Upload"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:309
+#: ../../../application/controllers/folder.php:50
+#: ../../../application/views/default/folder/view.php:3
+msgid "File Folder"
+msgstr ""
+
+#: ../../../application/libraries/startup.php:310
+#: ../../../application/views/default/image/gallery/view.php:3
+msgid "Image Gallery"
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:738
+msgid "The email validation method must be passed an array."
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:746
+#, php-format
+msgid "Invalid email address: %s"
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1147
+#, php-format
+msgid "Unable to locate the following email attachment: %s"
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1162
+#, php-format
+msgid "Unable to open this attachment: %s"
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1369
+msgid "You must include recipients: To, Cc, or Bcc"
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1500
+msgid ""
+"Unable to send email using PHP mail().  Your server might not be configured "
+"to send mail using this method."
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1508
+msgid ""
+"Unable to send email using PHP Sendmail.  Your server might not be "
+"configured to send mail using this method."
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1516
+msgid ""
+"Unable to send email using PHP SMTP.  Your server might not be configured to "
+"send mail using this method."
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1523
+#, php-format
+msgid ""
+"Your message has been successfully sent using the following protocol: %s"
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1594
+#, php-format
+msgid "Exit status code: %s"
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1595
+msgid "Unable to open a socket to Sendmail. Please check settings."
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1614
+msgid "You did not specify a SMTP hostname."
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1663
+#: ../../../application/libraries/XU_Email.php:1693
+#: ../../../application/libraries/XU_Email.php:1770
+#, php-format
+msgid "The following SMTP error was encountered: %s"
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1799
+msgid "Error: You must assign a SMTP username and password."
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1809
+#, php-format
+msgid "Failed to send AUTH LOGIN command. Error: %s"
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1819
+#, php-format
+msgid "Failed to authenticate username. Error: %s"
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1829
+#, php-format
+msgid "Failed to authenticate password. Error: %s"
+msgstr ""
+
+#: ../../../application/libraries/XU_Email.php:1848
+#, php-format
+msgid "Unable to send data: %s"
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:48
+#, php-format
+msgid "The %s field is required."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:49
+#, php-format
+msgid "The %s field must have a value."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:50
+#, php-format
+msgid "The %s field must contain a valid email address."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:51
+#, php-format
+msgid "The %s field must contain all valid email addresses."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:52
+#, php-format
+msgid "The %s field must contain a valid URL."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:53
+#, php-format
+msgid "The %s field must contain a valid IP."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:54
+#, php-format
+msgid "The %s field must be at least %s characters in length."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:55
+#, php-format
+msgid "The %s field can not exceed %s characters in length."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:56
+#, php-format
+msgid "The %s field must be exactly %s characters in length."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:57
+#, php-format
+msgid "The %s field may only contain alphabetical characters."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:58
+#, php-format
+msgid "The %s field may only contain alpha-numeric characters."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:59
+#, php-format
+msgid ""
+"The %s field may only contain alpha-numeric characters, underscores, and "
+"dashes."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:60
+#, php-format
+msgid "The %s field must contain only numbers."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:61
+#, php-format
+msgid "The %s field must contain only numeric characters."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:62
+#, php-format
+msgid "The %s field must contain an integer."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:63
+#, php-format
+msgid "The %s field is not in the correct format."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:64
+#, php-format
+msgid "The %s field does not match the %s field."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:65
+#, php-format
+msgid "The %s field must contain only positive numbers."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:66
+#, php-format
+msgid "The %s field must contain a number greater than zero."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:67
+#, php-format
+msgid "The %s field must contain a decimal number."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:68
+#, php-format
+msgid "The %s field must contain a number less than %s."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:69
+#, php-format
+msgid "The %s field must contain a number greater than %s."
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:540
+msgid "The field was not set"
+msgstr ""
+
+#: ../../../application/libraries/XU_Form_validation.php:677
+msgid "Unable to access an error message corresponding to your field name."
+msgstr ""
+
+#: ../../../application/libraries/functions.php:169
+msgid "Not Valid Version Number!"
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:148
+msgid "You must specify a source image in your preferences."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:162
+msgid ""
+"Your server must support the GD image library in order to determine the "
+"image properties."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:401
+msgid "An angle of rotation is required to rotate the image."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:564
+#: ../../../application/libraries/XU_Image_lib.php:633
+msgid ""
+"The path to your image library is not correct.  Please set the correct path "
+"in your image preferences."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:608
+#: ../../../application/libraries/XU_Image_lib.php:690
+msgid ""
+"Image processing failed.  Please verify that your server supports the chosen "
+"protocol and that the path to your image library is correct."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:875
+msgid "The GD image library is required for this feature."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:993
+msgid "Unable to find a font to use."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:1142
+#: ../../../application/libraries/XU_Image_lib.php:1151
+#: ../../../application/libraries/XU_Image_lib.php:1160
+#: ../../../application/libraries/XU_Image_lib.php:1169
+#: ../../../application/libraries/XU_Image_lib.php:1192
+#: ../../../application/libraries/XU_Image_lib.php:1205
+#: ../../../application/libraries/XU_Image_lib.php:1218
+#: ../../../application/libraries/XU_Image_lib.php:1229
+msgid ""
+"Your server does not support the GD function required to process this type "
+"of image."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:1142
+#: ../../../application/libraries/XU_Image_lib.php:1192
+msgid ""
+"GIF images are often not supported due to licensing restrictions.  You may "
+"have to use JPG or PNG images instead."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:1151
+#: ../../../application/libraries/XU_Image_lib.php:1205
+msgid "JPG images are not supported."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:1160
+#: ../../../application/libraries/XU_Image_lib.php:1218
+msgid "PNG images are not supported."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:1198
+#: ../../../application/libraries/XU_Image_lib.php:1211
+#: ../../../application/libraries/XU_Image_lib.php:1224
+msgid ""
+"Unable to save the image. Please make sure the image and file directory are "
+"writable."
+msgstr ""
+
+#: ../../../application/libraries/XU_Image_lib.php:1333
+msgid "The path to the image is not correct."
+msgstr ""
+
+#: ../../../application/libraries/paypal_lib.php:85
+msgid "Pay Now!"
+msgstr ""
+
+#: ../../../application/libraries/paypal_lib.php:117
+msgid "Click here if you're not automatically redirected..."
+msgstr ""
+
+#: ../../../application/libraries/paypal_lib.php:120
+msgid "Processing Payment..."
+msgstr ""
+
+#: ../../../application/libraries/paypal_lib.php:122
+msgid ""
+"Please wait, your order is being processed and you will be redirected to the "
+"paypal website."
+msgstr ""
+
+#: ../../../application/libraries/paypal_lib.php:195
+msgid "IPN Validation Failed."
+msgstr ""
+
+#: ../../../application/controllers/payment/ipn.php:102
+msgid "Processing..."
+msgstr ""
+
+#: ../../../application/controllers/user.php:56
+#: ../../../application/views/default/user/compare.php:3
+msgid "User Package Comparison"
+msgstr ""
+
+#: ../../../application/controllers/user.php:66
+#: ../../../application/controllers/user.php:137
+#: ../../../application/controllers/user.php:149
+#: ../../../application/controllers/user.php:705
+msgid "Register"
+msgstr ""
+
+#: ../../../application/controllers/user.php:92
+#: ../../../application/controllers/user.php:161
+#: ../../../application/controllers/user.php:493
+#: ../../../application/controllers/admin/user.php:185
+#: ../../../application/controllers/admin/user.php:233
+#: ../../../application/views/default/admin/home.php:225
+#: ../../../application/views/default/admin/users/add.php:11
+#: ../../../application/views/default/admin/users/edit.php:11
+#: ../../../application/views/default/user/profile/view.php:12
+#: ../../../application/views/default/user/forgot.php:10
+#: ../../../application/views/default/user/register/begin.php:8
+msgid "Username"
+msgstr ""
+
+#: ../../../application/controllers/user.php:97
+#: ../../../application/controllers/user.php:166
+#: ../../../application/controllers/admin/user.php:190
+#: ../../../application/controllers/admin/user.php:238
+#: ../../../application/views/default/files/manage.php:78
+#: ../../../application/views/default/home.php:87
+#: ../../../application/views/default/admin/users/add.php:26
+#: ../../../application/views/default/user/register/begin.php:98
+#: ../../../application/views/install/step4.php:53
+msgid "Password"
+msgstr ""
+
+#: ../../../application/controllers/user.php:102
+#: ../../../application/views/default/user/register/begin.php:100
+#: ../../../application/views/install/step4.php:61
+msgid "Password Confirmation"
+msgstr ""
+
+#: ../../../application/controllers/user.php:107
+#: ../../../application/controllers/user.php:498
+#: ../../../application/views/default/user/forgot.php:12
+#: ../../../application/views/default/user/register/begin.php:94
+msgid "Email Address"
+msgstr ""
+
+#: ../../../application/controllers/user.php:112
+#: ../../../application/views/default/user/register/begin.php:96
+msgid "Email Address Confirmation"
+msgstr ""
+
+#: ../../../application/controllers/user.php:133
+msgid "The Captcha you submited was incorrect"
+msgstr ""
+
+#: ../../../application/controllers/user.php:135
+#: ../../../application/controllers/user.php:177
+#: ../../../application/controllers/user.php:363
+#: ../../../application/controllers/user.php:460
+#: ../../../application/controllers/user.php:523
+#: ../../../application/controllers/admin/user.php:201
+#: ../../../application/controllers/admin/user.php:250
+msgid "Error:"
+msgstr ""
+
+#: ../../../application/controllers/user.php:183
+#: ../../../application/controllers/user.php:665
+#: ../../../application/views/style_vantage_green/menu.php:36
+#: ../../../application/views/tech_junkie/menu.php:36
+#: ../../../application/views/urban_artist/menu.php:35
+#: ../../../application/views/style_vantage_orange/menu.php:36
+#: ../../../application/views/vector_lover/menu.php:36
+#: ../../../application/views/citrus_island/menu.php:36
+#: ../../../application/views/style_vantage_blue/menu.php:36
+#: ../../../application/views/default/home.php:10
+#: ../../../application/views/default/user/login.php:14
+#: ../../../application/views/default/menu.php:35
+msgid "Login"
+msgstr ""
+
+#: ../../../application/controllers/user.php:195
+msgid "Payment Canceled"
+msgstr ""
+
+#: ../../../application/controllers/user.php:202
+msgid "Payment Processing"
+msgstr ""
+
+#: ../../../application/controllers/user.php:261
+#: ../../../application/controllers/user.php:295
+msgid "Account Registration"
+msgstr ""
+
+#: ../../../application/controllers/user.php:275
+#: ../../../application/controllers/user.php:307
+#: ../../../application/controllers/user.php:336
+msgid ""
+"If you are not automatically redirected to payment website within 5 seconds,"
+"<br> click 'Make Payment' below to begin the payment procedure."
+msgstr ""
+
+#: ../../../application/controllers/user.php:367
+#: ../../../application/controllers/user.php:378
+#: ../../../application/views/style_vantage_green/menu.php:9
+#: ../../../application/views/tech_junkie/menu.php:9
+#: ../../../application/views/urban_artist/menu.php:8
+#: ../../../application/views/style_vantage_orange/menu.php:9
+#: ../../../application/views/vector_lover/menu.php:9
+#: ../../../application/views/citrus_island/menu.php:9
+#: ../../../application/views/style_vantage_blue/menu.php:9
+#: ../../../application/views/default/menu.php:8
+msgid "Manage Account"
+msgstr ""
+
+#: ../../../application/controllers/user.php:424
+#: ../../../application/controllers/files.php:383
+#: ../../../application/controllers/files.php:414
+#: ../../../application/controllers/files.php:451
+msgid "Manage Your Files"
+msgstr ""
+
+#: ../../../application/controllers/user.php:438
+#: ../../../application/views/default/user/password.php:17
+msgid "Old Password"
+msgstr ""
+
+#: ../../../application/controllers/user.php:443
+#: ../../../application/views/default/admin/users/edit.php:28
+#: ../../../application/views/default/user/password.php:19
+msgid "New Password"
+msgstr ""
+
+#: ../../../application/controllers/user.php:448
+msgid "New Password Confirmation"
+msgstr ""
+
+#: ../../../application/controllers/user.php:466
+#: ../../../application/controllers/user.php:478
+#: ../../../application/controllers/user.php:767
+#: ../../../application/controllers/user.php:774
+#: ../../../application/views/style_vantage_green/menu.php:14
+#: ../../../application/views/tech_junkie/menu.php:14
+#: ../../../application/views/urban_artist/menu.php:11
+#: ../../../application/views/style_vantage_orange/menu.php:14
+#: ../../../application/views/vector_lover/menu.php:14
+#: ../../../application/views/citrus_island/menu.php:14
+#: ../../../application/views/style_vantage_blue/menu.php:14
+#: ../../../application/views/default/user/password.php:9
+#: ../../../application/views/default/user/password.php:13
+#: ../../../application/views/default/menu.php:11
+msgid "Change Password"
+msgstr ""
+
+#: ../../../application/controllers/user.php:519
+msgid "No User is registered with that username/email address combination."
+msgstr ""
+
+#: ../../../application/controllers/user.php:529
+#: ../../../application/controllers/user.php:542
+#: ../../../application/controllers/user.php:811
+#: ../../../application/controllers/user.php:818
+#: ../../../application/views/default/user/forgot.php:3
+msgid "Forgot Password"
+msgstr ""
+
+#: ../../../application/controllers/user.php:562
+msgid "User Profile:"
+msgstr ""
+
+#: ../../../application/controllers/user.php:573
+msgid "The username you requested has already been taken"
+msgstr ""
+
+#: ../../../application/controllers/user.php:592
+msgid "That username does not exist in our records"
+msgstr ""
+
+#: ../../../application/controllers/user.php:603
+msgid "The email address you supplied is already registered with us"
+msgstr ""
+
+#: ../../../application/controllers/user.php:618
+msgid "The email address you supplied is not registered with us."
+msgstr ""
+
+#: ../../../application/controllers/user.php:638
+msgid "The Old Password you supplied did not match our records"
+msgstr ""
+
+#: ../../../application/controllers/user.php:663
+msgid "Login Failed, Please Try Again"
+msgstr ""
+
+#: ../../../application/controllers/user.php:732
+#: ../../../application/controllers/user.php:766
+msgid "User Modification Completed!"
+msgstr ""
+
+#: ../../../application/controllers/user.php:737
+#: ../../../application/controllers/user.php:773
+msgid "User Modification Failed:"
+msgstr ""
+
+#: ../../../application/controllers/user.php:791
+msgid "Support"
+msgstr ""
+
+#: ../../../application/controllers/user.php:794
+msgid "Password Reset Request"
+msgstr ""
+
+#: ../../../application/controllers/user.php:796
+#, php-format
+msgid "You have requested that your password for %s be reset."
+msgstr ""
+
+#: ../../../application/controllers/user.php:797
+msgid "Here is your new password:"
+msgstr ""
+
+#: ../../../application/controllers/user.php:800
+#, php-format
+msgid "Password: %s"
+msgstr ""
+
+#: ../../../application/controllers/user.php:802
+msgid "Thank You,"
+msgstr ""
+
+#: ../../../application/controllers/user.php:810
+#: ../../../application/controllers/user.php:817
+msgid "New Password Sent!"
+msgstr ""
+
+#: ../../../application/controllers/files.php:133
+#: ../../../application/views/default/files/get.php:3
+msgid "Download File"
+msgstr ""
+
+#: ../../../application/controllers/files.php:155
+#: ../../../application/controllers/files.php:191
+msgid "The Captcha you submited was incorrect."
+msgstr ""
+
+#: ../../../application/controllers/files.php:437
+msgid "Your query returned 0 results, please try again."
+msgstr ""
+
+#: ../../../application/controllers/files.php:476
+#: ../../../application/controllers/admin/files.php:240
+msgid "File Deleted"
+msgstr ""
+
+#: ../../../application/controllers/files.php:598
+#, php-format
+msgid "%d File(s) have been deleted"
+msgstr ""
+
+#: ../../../application/controllers/files.php:643
+msgid "Password Protected File"
+msgstr ""
+
+#: ../../../application/controllers/files.php:706
+msgid "File Not Found"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:52
+#: ../../../application/views/default/admin/groups/add.php:6
+#: ../../../application/views/default/admin/groups/edit.php:6
+msgid "Manage Groups"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:77
+#: ../../../application/controllers/admin/group.php:113
+msgid "Group Edited!"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:86
+msgid "Edit User Group"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:122
+msgid "Add New User Group"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:133
+msgid "Group is now Public"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:144
+msgid "Group is now Private"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:154
+msgid "Group has been deleted"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:162
+msgid "Group Name"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:163
+msgid "Registration Price"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:164
+msgid "Group Description"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:165
+msgid "Can Access Admin Panel?"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:166
+msgid "Allow Search Access"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:167
+msgid "Download speed limit"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:168
+msgid "File Size Limit"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:169
+#: ../../../application/views/default/user/compare.php:13
+msgid "Download Wait Time"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:170
+msgid "File Types"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:171
+msgid "File Types are Allowed/Restricted"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:172
+msgid "Captcha for downloads"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:173
+#: ../../../application/views/default/user/compare.php:15
+msgid "Direct Links?"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:174
+msgid "Mass Upload File Count"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:175
+msgid "Account Storage Limit"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:176
+msgid "Billing Interval"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:177
+msgid "Can Upload Using Flash"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:178
+msgid "Can Upload Using URLs"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:179
+msgid "File Expire Time"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:187
+msgid "The name for your Group"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:188
+msgid ""
+"The price someone has to pay to register or extend a user account with this "
+"group"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:189
+msgid "The group description"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:190
+msgid "Are users in this group allowed to access the admin panel?"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:191
+msgid ""
+"Can users in this group use the sitewide file search(only for public files)?"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:192
+msgid "The download speed limit, in KBps"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:193
+msgid "The max filesize for uploads, in MB"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:194
+msgid "The time a user has to wait before they can download a file."
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:195
+msgid ""
+"A Pipe(\"|\") seperated list of file types to allow or deny on upload. "
+"<br>Leave blank to remove restrictions. The setting below controls this "
+"setting."
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:196
+msgid "Allow or deny the above file list."
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:197
+msgid "Force a captcha on users in this group before they can download a file"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:198
+msgid ""
+"If captcha is off, the wait time is 1 or less and this is set to yes, file "
+"links will auto download."
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:199
+msgid ""
+"The number of files a user can upload at once without refreshing the page."
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:200
+msgid ""
+"The total size in megabytes that any user in thes group can store at one "
+"time."
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:201
+msgid "The period of time where an account is billed for service"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:202
+msgid "Can the user search through public files?"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:203
+msgid "Can the user upload files using flash?"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:204
+msgid "Can the user upload files from other sites(URL Upload)?"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:205
+msgid ""
+"The ammount of time in days that a file uploaded by this group is kept on "
+"the server."
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:231
+#: ../../../application/views/default/user/compare.php:170
+#: ../../../application/views/default/user/compare.php:171
+#: ../../../application/views/default/user/register/begin.php:17
+msgid "None"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:239
+msgid "Never"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:240
+msgid "First Download"
+msgstr ""
+
+#: ../../../application/controllers/admin/group.php:241
+msgid "Always"
+msgstr ""
+
+#: ../../../application/controllers/admin/user.php:100
+#: ../../../application/views/default/admin/users/add.php:7
+#: ../../../application/views/default/admin/users/edit.php:7
+msgid "Manage Users"
+msgstr ""
+
+#: ../../../application/controllers/admin/user.php:161
+#: ../../../application/controllers/admin/files.php:211
+#: ../../../application/views/default/files/search/new.php:3
+#: ../../../application/views/default/files/search/new.php:22
+#: ../../../application/views/default/files/search/query.php:3
+#: ../../../application/views/default/admin/files/search.php:9
+#: ../../../application/views/default/admin/folders/search.php:9
+msgid "Search Files"
+msgstr ""
+
+#: ../../../application/controllers/admin/user.php:167
+#: ../../../application/views/default/admin/users/search.php:9
+msgid "Search Users"
+msgstr ""
+
+#: ../../../application/controllers/admin/user.php:180
+#: ../../../application/controllers/admin/user.php:228
+#: ../../../application/views/default/admin/users/add.php:13
+#: ../../../application/views/default/admin/users/edit.php:14
+#: ../../../application/views/default/admin/users/view.php:38
+#: ../../../application/views/default/admin/users/search_result.php:40
+#: ../../../application/views/install/step4.php:69
+msgid "Email"
+msgstr ""
+
+#: ../../../application/controllers/admin/user.php:211
+msgid "User Edited!"
+msgstr ""
+
+#: ../../../application/controllers/admin/user.php:218
+#: ../../../application/views/default/admin/users/edit.php:9
+msgid "Edit User"
+msgstr ""
+
+#: ../../../application/controllers/admin/user.php:263
+msgid "New User Added!"
+msgstr ""
+
+#: ../../../application/controllers/admin/user.php:268
+#: ../../../application/views/default/admin/users/add.php:28
+msgid "Add User"
+msgstr ""
+
+#: ../../../application/controllers/admin/user.php:276
+msgid "User has been deleted"
+msgstr ""
+
+#: ../../../application/controllers/admin/user.php:283
+msgid "User has been Deactivated"
+msgstr ""
+
+#: ../../../application/controllers/admin/user.php:290
+msgid "User has been Activated"
+msgstr ""
+
+#: ../../../application/controllers/admin/user.php:341
+#, php-format
+msgid "%d User(s) have been deleted"
+msgstr ""
+
+#: ../../../application/controllers/admin/skin.php:52
+msgid "Manage Skins"
+msgstr ""
+
+#: ../../../application/controllers/admin/skin.php:76
+#, php-format
+msgid "%s New Skin(s) were installed."
+msgstr ""
+
+#: ../../../application/controllers/admin/skin.php:85
+#, php-format
+msgid "The Skin \"%s\" has been Uninstalled."
+msgstr ""
+
+#: ../../../application/controllers/admin/skin.php:95
+#, php-format
+msgid "Skin \"%s\" set as active."
+msgstr ""
+
+#: ../../../application/controllers/admin/config.php:67
+msgid "Manage Site Config"
+msgstr ""
+
+#: ../../../application/controllers/admin/config.php:100
+#, php-format
+msgid "Manage %s Plugin Config"
+msgstr ""
+
+#: ../../../application/controllers/admin/config.php:122
+msgid "Config Updated!"
+msgstr ""
+
+#: ../../../application/controllers/admin/files.php:90
+#: ../../../application/controllers/admin/files.php:205
+#: ../../../application/controllers/admin/menu_shortcuts.php:65
+#: ../../../application/views/default/files/manage.php:3
+#: ../../../application/views/default/admin/files/edit.php:8
+msgid "Manage Files"
+msgstr ""
+
+#: ../../../application/controllers/admin/files.php:144
+msgid "Manage Files in Folder"
+msgstr ""
+
+#: ../../../application/controllers/admin/files.php:224
+msgid "File Edited"
+msgstr ""
+
+#: ../../../application/controllers/admin/files.php:232
+#: ../../../application/views/default/admin/files/edit.php:3
+msgid "Edit File"
+msgstr ""
+
+#: ../../../application/controllers/admin/files.php:247
+msgid "File Banned"
+msgstr ""
+
+#: ../../../application/controllers/admin/files.php:299
+#, php-format
+msgid "%d File(s) have been Banned"
+msgstr ""
+
+#: ../../../application/controllers/admin/files.php:321
+#, php-format
+msgid "%d Files(s) have been deleted"
+msgstr ""
+
+#: ../../../application/controllers/admin/gateways.php:62
+msgid "Manage Payment Gateways"
+msgstr ""
+
+#: ../../../application/controllers/admin/gateways.php:76
+msgid "Edit Payment Gateway"
+msgstr ""
+
+#: ../../../application/controllers/admin/gateways.php:105
+msgid "Payment Gateway Edited!"
+msgstr ""
+
+#: ../../../application/controllers/admin/gateways.php:124
+msgid "New Payment Gateway Set as Default!"
+msgstr ""
+
+#: ../../../application/controllers/admin/gateways.php:133
+msgid "Payment Gateway turned on!"
+msgstr ""
+
+#: ../../../application/controllers/admin/gateways.php:142
+msgid "Payment Gateway turned off!"
+msgstr ""
+
+#: ../../../application/controllers/admin/email.php:71
+msgid "Bulk Email"
+msgstr ""
+
+#: ../../../application/controllers/admin/email.php:116
+msgid "Email sent!"
+msgstr ""
+
+#: ../../../application/controllers/admin/server.php:52
+#: ../../../application/views/default/admin/servers/install-step1.php:7
+#: ../../../application/views/default/admin/servers/install.php:7
+#: ../../../application/views/default/admin/servers/add.php:7
+#: ../../../application/views/default/admin/servers/edit.php:7
+#: ../../../application/views/default/admin/servers/install-step2.php:7
+#: ../../../application/views/default/admin/servers/install_error.php:7
+msgid "Manage Servers"
+msgstr ""
+
+#: ../../../application/controllers/admin/server.php:75
+#, php-format
+msgid "New Server Installed, %s"
+msgstr ""
+
+#: ../../../application/controllers/admin/server.php:75
+msgid "FTP Install this server?"
+msgstr ""
+
+#: ../../../application/controllers/admin/server.php:80
+#: ../../../application/views/default/admin/servers/add.php:3
+#: ../../../application/views/default/admin/servers/add.php:13
+#: ../../../application/views/default/admin/servers/view.php:8
+msgid "Add New Server"
+msgstr ""
+
+#: ../../../application/controllers/admin/server.php:103
+msgid "Server Edited"
+msgstr ""
+
+#: ../../../application/controllers/admin/server.php:110
+#: ../../../application/views/default/admin/servers/edit.php:3
+#: ../../../application/views/default/admin/servers/view.php:62
+msgid "Edit Server"
+msgstr ""
+
+#: ../../../application/controllers/admin/server.php:127
+#: ../../../application/controllers/admin/server.php:178
+#: ../../../application/controllers/admin/server.php:185
+#: ../../../application/controllers/admin/server.php:252
+#: ../../../application/controllers/admin/server.php:258
+#: ../../../application/views/default/admin/servers/install-step1.php:3
+#: ../../../application/views/default/admin/servers/install-step1.php:33
+#: ../../../application/views/default/admin/servers/install.php:3
+#: ../../../application/views/default/admin/servers/install-step2.php:3
+#: ../../../application/views/default/admin/servers/install_error.php:3
+msgid "Install Server Software"
+msgstr ""
+
+#: ../../../application/controllers/admin/server.php:265
+msgid "Server turned On"
+msgstr ""
+
+#: ../../../application/controllers/admin/server.php:272
+msgid "Server turned Off"
+msgstr ""
+
+#: ../../../application/controllers/admin/server.php:279
+msgid "Server removed"
+msgstr ""
+
+#: ../../../application/controllers/admin/transactions.php:76
+msgid "Manage Transactions"
+msgstr ""
+
+#: ../../../application/controllers/admin/transactions.php:90
+#: ../../../application/views/default/admin/transactions/edit.php:3
+#: ../../../application/views/default/admin/transactions/view.php:71
+msgid "Edit Transaction"
+msgstr ""
+
+#: ../../../application/controllers/admin/transactions.php:118
+msgid "Transaction Edited!"
+msgstr ""
+
+#: ../../../application/controllers/admin/transactions.php:132
+msgid "Transaction Deleted!"
+msgstr ""
+
+#: ../../../application/controllers/admin/extend.php:105
+#: ../../../application/views/default/admin/extend/view.php:3
+msgid "Plugin Manager"
+msgstr ""
+
+#: ../../../application/controllers/admin/extend.php:141
+#, php-format
+msgid "Plugin \"%s\" Installed"
+msgstr ""
+
+#: ../../../application/controllers/admin/extend.php:162
+#, php-format
+msgid "Plugin \"%s\" Uninstalled"
+msgstr ""
+
+#: ../../../application/controllers/admin/extend.php:179
+#, php-format
+msgid "Plugin \"%s\" Activated"
+msgstr ""
+
+#: ../../../application/controllers/admin/extend.php:196
+#, php-format
+msgid "Plugin \"%s\" Deactivated"
+msgstr ""
+
+#: ../../../application/controllers/admin/translator.php:97
+msgid "Changes Saved"
+msgstr ""
+
+#: ../../../application/controllers/admin/translator.php:102
+msgid "Failure"
+msgstr ""
+
+#: ../../../application/controllers/admin/translator.php:108
+#: ../../../application/views/default/admin/translator/save_lang.php:33
+msgid "Confirm Changes"
+msgstr ""
+
+#: ../../../application/controllers/admin/translator.php:113
+#, php-format
+msgid "Translate %s"
+msgstr ""
+
+#: ../../../application/controllers/admin/translator.php:162
+msgid "Select Language Directory"
+msgstr ""
+
+#: ../../../application/controllers/admin/translator.php:168
+msgid "Select Master Language"
+msgstr ""
+
+#: ../../../application/controllers/admin/translator.php:175
+msgid "Select Language to Translate"
+msgstr ""
+
+#: ../../../application/controllers/admin/translator.php:182
+msgid "Select File to Translate"
+msgstr ""
+
+#: ../../../application/controllers/admin/translator.php:357
+msgid "Mismatch - does not exist in master translation"
+msgstr ""
+
+#: ../../../application/controllers/admin/translator.php:373
+msgid "Invalid syntax - check for unbalanced quotation marks"
+msgstr ""
+
+#: ../../../application/controllers/admin/translator.php:378
+msgid "Entry cannot be blank. Defaulted to master translation."
+msgstr ""
+
+#: ../../../application/controllers/admin/translator.php:383
+msgid "Invalid PHP syntax"
+msgstr ""
+
+#: ../../../application/controllers/admin/ads.php:80
+#: ../../../application/controllers/admin/ads.php:112
+#: ../../../application/controllers/admin/ads.php:150
+msgid "Advert Manager"
+msgstr ""
+
+#: ../../../application/controllers/admin/ads.php:100
+msgid "Advert Added!"
+msgstr ""
+
+#: ../../../application/controllers/admin/ads.php:138
+msgid "Advert Edited!"
+msgstr ""
+
+#: ../../../application/controllers/admin/ads.php:170
+msgid "Advert Turned On!"
+msgstr ""
+
+#: ../../../application/controllers/admin/ads.php:190
+msgid "Advert Turned Off!"
+msgstr ""
+
+#: ../../../application/controllers/admin/ads.php:210
+msgid "Advert Deleted!"
+msgstr ""
+
+#: ../../../application/controllers/admin/menu_shortcuts.php:76
+msgid "Shortcut Edited"
+msgstr ""
+
+#: ../../../application/controllers/admin/menu_shortcuts.php:84
+#: ../../../application/views/default/admin/menu_shortcuts/edit.php:7
+msgid "Edit Shortcut"
+msgstr ""
+
+#: ../../../application/controllers/admin/menu_shortcuts.php:95
+msgid "New Shortcut Added"
+msgstr ""
+
+#: ../../../application/controllers/admin/menu_shortcuts.php:114
+#: ../../../application/views/default/admin/menu_shortcuts/add.php:8
+msgid "Add Shortcut"
+msgstr ""
+
+#: ../../../application/controllers/admin/menu_shortcuts.php:122
+msgid "Shortcut Deleted"
+msgstr ""
+
+#: ../../../application/controllers/admin/menu_shortcuts.php:129
+msgid "Shortcut Hidden"
+msgstr ""
+
+#: ../../../application/controllers/admin/menu_shortcuts.php:136
+msgid "Shortcut Shown"
+msgstr ""
+
+#: ../../../application/controllers/admin/folders.php:60
+msgid "File Folder Manager"
+msgstr ""
+
+#: ../../../application/controllers/admin/folders.php:75
+msgid "Search File Folder"
+msgstr ""
+
+#: ../../../application/controllers/admin/folders.php:93
+msgid "File Folder Search Results"
+msgstr ""
+
+#: ../../../application/controllers/admin/folders.php:103
+msgid "Folder Deleted!"
+msgstr ""
+
+#: ../../../application/controllers/admin/actions.php:74
+msgid "Maintenance Actions"
+msgstr ""
+
+#: ../../../application/controllers/admin/actions.php:101
+msgid "PHP Info"
+msgstr ""
+
+#: ../../../application/controllers/admin/actions.php:135
+msgid "Cron Actions Completed!"
+msgstr ""
+
+#: ../../../application/controllers/admin/actions.php:172
+msgid "Cache Files Deleted!"
+msgstr ""
+
+#: ../../../application/controllers/admin/actions.php:187
+msgid "Server Cache Updating Complete!"
+msgstr ""
+
+#: ../../../application/controllers/image.php:49
+msgid "View Image"
+msgstr ""
+
+#: ../../../application/controllers/image.php:70
+msgid "Forum/BBCode Image Links"
+msgstr ""
+
+#: ../../../application/controllers/image.php:119
+msgid "View Image Gallery"
+msgstr ""
+
+#: ../../../application/controllers/image.php:129
+#: ../../../application/controllers/image.php:157
+msgid "Create Image Gallery"
+msgstr ""
+
+#: ../../../application/controllers/image.php:157
+#: ../../../application/controllers/folder.php:89
+msgid "Done"
+msgstr ""
+
+#: ../../../application/controllers/image.php:169
+msgid "Edit Image Gallery"
+msgstr ""
+
+#: ../../../application/controllers/legal.php:44
+msgid "Terms of Service"
+msgstr ""
+
+#: ../../../application/controllers/legal.php:52
+#: ../../../application/views/default/legal/privacy.php:3
+#: ../../../application/views/default/footer.php:67
+msgid "Privacy Policy"
+msgstr ""
+
+#: ../../../application/controllers/folder.php:60
+#: ../../../application/controllers/folder.php:89
+msgid "Create File Folder"
+msgstr ""
+
+#: ../../../application/controllers/upload.php:91
+msgid "Upload Complete!"
+msgstr ""
+
+#: ../../../application/controllers/upload.php:95
+#: ../../../application/controllers/upload.php:148
+msgid "Upload Failed!"
+msgstr ""
+
+#: ../../../application/controllers/upload.php:129
+msgid "Upload Completed!"
+msgstr ""
+
+#: ../../../application/controllers/upload.php:199
+msgid "OK"
+msgstr ""
+
+#: ../../../application/controllers/install/step2.php:62
+#: ../../../application/controllers/install/step2.php:79
+#: ../../../application/controllers/install/step2.php:90
+#: ../../../application/controllers/install/step2.php:113
+#: ../../../application/controllers/install/step2.php:134
+#: ../../../application/controllers/install/step2.php:155
+#: ../../../application/controllers/install/step2.php:176
+msgid "Failed"
+msgstr ""
+
+#: ../../../application/controllers/install/step2.php:66
+#: ../../../application/controllers/install/step2.php:71
+#: ../../../application/controllers/install/step2.php:84
+#: ../../../application/controllers/install/step2.php:96
+#: ../../../application/controllers/install/step2.php:118
+#: ../../../application/controllers/install/step2.php:139
+#: ../../../application/controllers/install/step2.php:160
+#: ../../../application/controllers/install/step2.php:181
+msgid "Passed"
+msgstr ""
+
+#: ../../../application/controllers/install/step2.php:80
+#, php-format
+msgid "Please update php to the latest version in the %s"
+msgstr ""
+
+#: ../../../application/controllers/install/step2.php:80
+msgid "v5.3 code branch"
+msgstr ""
+
+#: ../../../application/controllers/install/step2.php:89
+#: ../../../application/views/default/admin/home.php:66
+#: ../../../application/views/default/admin/home.php:90
+msgid "On"
+msgstr ""
+
+#: ../../../application/controllers/install/step2.php:91
+msgid "XtraUpload requires SafeMode Off."
+msgstr ""
+
+#: ../../../application/controllers/install/step2.php:95
+#: ../../../application/views/default/admin/home.php:70
+msgid "Off"
+msgstr ""
+
+#: ../../../application/controllers/install/step2.php:114
+#: ../../../application/controllers/install/step2.php:135
+#: ../../../application/controllers/install/step2.php:156
+#: ../../../application/controllers/install/step2.php:177
+#, php-format
+msgid "Please recompile php with %s"
+msgstr ""
+
+#: ../../../application/controllers/install/step2.php:114
+msgid "GD2 support"
+msgstr ""
+
+#: ../../../application/controllers/install/step2.php:123
+#: ../../../application/controllers/install/step2.php:144
+#: ../../../application/controllers/install/step2.php:165
+#: ../../../application/views/default/files/manage.php:83
+#: ../../../application/views/default/home.php:242
+#: ../../../application/views/default/admin/groups/add.php:26
+#: ../../../application/views/default/admin/groups/edit.php:29
+#: ../../../application/views/default/admin/servers/add.php:20
+#: ../../../application/views/default/admin/servers/edit.php:23
+#: ../../../application/views/default/user/compare.php:95
+#: ../../../application/views/default/user/compare.php:109
+#: ../../../application/views/default/user/compare.php:123
+#: ../../../application/views/default/user/compare.php:137
+#: ../../../application/views/default/user/compare.php:151
+#: ../../../application/views/default/upload/url.php:92
+msgid "Yes"
+msgstr ""
+
+#: ../../../application/controllers/install/step2.php:128
+#: ../../../application/controllers/install/step2.php:149
+#: ../../../application/controllers/install/step2.php:170
+#: ../../../application/views/default/admin/groups/add.php:27
+#: ../../../application/views/default/admin/groups/edit.php:30
+#: ../../../application/views/default/user/compare.php:99
+#: ../../../application/views/default/user/compare.php:113
+#: ../../../application/views/default/user/compare.php:127
+#: ../../../application/views/default/user/compare.php:141
+#: ../../../application/views/default/user/compare.php:155
+msgid "No"
+msgstr ""
+
+#: ../../../application/controllers/install/step2.php:135
+msgid "FreeType support"
+msgstr ""
+
+#: ../../../application/controllers/install/step2.php:156
+msgid "SimpleXML support"
+msgstr ""
+
+#: ../../../application/controllers/install/step2.php:177
+msgid "FTP support"
+msgstr ""
+
+#: ../../../application/controllers/install/update.php:53
+#: ../../../application/controllers/install/update.php:66
+msgid "No Updates Needed"
+msgstr ""
+
+#: ../../../application/controllers/install/update.php:67
+msgid "Back Home"
+msgstr ""
+
+#: ../../../application/controllers/install/update.php:78
+#, php-format
+msgid "Cannot Update %s from %s"
+msgstr ""
+
+#: ../../../application/controllers/install/update.php:99
+msgid "Database version too old, please re-install fresh."
+msgstr ""
+
+#: ../../../application/helpers/date_helper.php:179
+#, php-format
+msgid "%d Year"
+msgid_plural "%d Years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../../../application/helpers/date_helper.php:191
+#, php-format
+msgid "%d Month"
+msgid_plural "%d Months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../../../application/helpers/date_helper.php:205
+#, php-format
+msgid "%d Week"
+msgid_plural "%d Weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../../../application/helpers/date_helper.php:219
+#, php-format
+msgid "%d Day"
+msgid_plural "%d Days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../../../application/helpers/date_helper.php:233
+#, php-format
+msgid "%d Hour"
+msgid_plural "%d Hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../../../application/helpers/date_helper.php:247
+#, php-format
+msgid "%d Minute"
+msgid_plural "%d Minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../../../application/helpers/date_helper.php:257
+#, php-format
+msgid "%d Second"
+msgid_plural "%d Seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../../../application/helpers/number_helper.php:46
+msgid "TB"
+msgstr ""
+
+#: ../../../application/helpers/number_helper.php:51
+msgid "GB"
+msgstr ""
+
+#: ../../../application/helpers/number_helper.php:56
+msgid "MB"
+msgstr ""
+
+#: ../../../application/helpers/number_helper.php:61
+msgid "KB"
+msgstr ""
+
+#: ../../../application/helpers/number_helper.php:65
+msgid "bytes"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:87
+msgid "English"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:115
+msgid "(UTC -12:00) Baker/Howland Island"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:116
+msgid "(UTC -11:00) Samoa Time Zone, Niue"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:117
+msgid "(UTC -10:00) Hawaii-Aleutian Standard Time, Cook Islands, Tahiti"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:118
+msgid "(UTC -9:30) Marquesas Islands"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:119
+msgid "(UTC -9:00) Alaska Standard Time, Gambier Islands"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:120
+msgid "(UTC -8:00) Pacific Standard Time, Clipperton Island"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:121
+msgid "(UTC -7:00) Mountain Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:122
+msgid "(UTC -6:00) Central Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:123
+msgid "(UTC -5:00) Eastern Standard Time, Western Caribbean Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:124
+msgid "(UTC -4:30) Venezuelan Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:125
+msgid "(UTC -4:00) Atlantic Standard Time, Eastern Caribbean Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:126
+msgid "(UTC -3:30) Newfoundland Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:127
+msgid "(UTC -3:00) Argentina, Brazil, French Guiana, Uruguay"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:128
+msgid "(UTC -2:00) South Georgia/South Sandwich Islands"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:129
+msgid "(UTC -1:00) Azores, Cape Verde Islands"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:130
+msgid "(UTC) Greenwich Mean Time, Western European Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:131
+msgid "(UTC +1:00) Central European Time, West Africa Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:132
+msgid ""
+"(UTC +2:00) Central Africa Time, Eastern European Time, Kaliningrad Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:133
+msgid "(UTC +3:00) Moscow Time, East Africa Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:134
+msgid "(UTC +3:30) Iran Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:135
+msgid "(UTC +4:00) Azerbaijan Standard Time, Samara Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:136
+msgid "(UTC +4:30) Afghanistan"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:137
+msgid "(UTC +5:00) Pakistan Standard Time, Yekaterinburg Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:138
+msgid "(UTC +5:30) Indian Standard Time, Sri Lanka Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:139
+msgid "(UTC +5:45) Nepal Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:140
+msgid "(UTC +6:00) Bangladesh Standard Time, Bhutan Time, Omsk Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:141
+msgid "(UTC +6:30) Cocos Islands, Myanmar"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:142
+msgid "(UTC +7:00) Krasnoyarsk Time, Cambodia, Laos, Thailand, Vietnam"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:143
+msgid ""
+"(UTC +8:00) Australian Western Standard Time, Beijing Time, Irkutsk Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:144
+msgid "(UTC +8:45) Australian Central Western Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:145
+msgid "(UTC +9:00) Japan Standard Time, Korea Standard Time, Yakutsk Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:146
+msgid "(UTC +9:30) Australian Central Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:147
+msgid "(UTC +10:00) Australian Eastern Standard Time, Vladivostok Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:148
+msgid "(UTC +10:30) Lord Howe Island"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:149
+msgid "(UTC +11:00) Magadan Time, Solomon Islands, Vanuatu"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:150
+msgid "(UTC +11:30) Norfolk Island"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:151
+msgid ""
+"(UTC +12:00) Fiji, Gilbert Islands, Kamchatka Time, New Zealand Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:152
+msgid "(UTC +12:45) Chatham Islands Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:153
+msgid "(UTC +13:00) Phoenix Islands Time, Tonga"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:154
+msgid "(UTC +14:00) Line Islands"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:5
+#: ../../../application/views/tech_junkie/menu.php:5
+#: ../../../application/views/urban_artist/menu.php:5
+#: ../../../application/views/style_vantage_orange/menu.php:5
+#: ../../../application/views/vector_lover/menu.php:5
+#: ../../../application/views/citrus_island/menu.php:5
+#: ../../../application/views/style_vantage_blue/menu.php:5
+#: ../../../application/views/default/menu.php:5
+#, php-format
+msgid "Welcome %s!"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:19
+#: ../../../application/views/tech_junkie/menu.php:19
+#: ../../../application/views/urban_artist/menu.php:14
+#: ../../../application/views/style_vantage_orange/menu.php:19
+#: ../../../application/views/vector_lover/menu.php:19
+#: ../../../application/views/citrus_island/menu.php:19
+#: ../../../application/views/style_vantage_blue/menu.php:19
+#: ../../../application/views/default/admin/menu.php:19
+#: ../../../application/views/default/user/logout.php:3
+#: ../../../application/views/default/menu.php:14
+msgid "Logout"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:28
+#: ../../../application/views/tech_junkie/menu.php:28
+#: ../../../application/views/urban_artist/menu.php:22
+#: ../../../application/views/style_vantage_orange/menu.php:28
+#: ../../../application/views/vector_lover/menu.php:28
+#: ../../../application/views/citrus_island/menu.php:28
+#: ../../../application/views/style_vantage_blue/menu.php:28
+#: ../../../application/views/default/menu.php:22
+msgid "Member Login"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:32
+#: ../../../application/views/tech_junkie/menu.php:32
+#: ../../../application/views/urban_artist/menu.php:27
+#: ../../../application/views/style_vantage_orange/menu.php:32
+#: ../../../application/views/vector_lover/menu.php:32
+#: ../../../application/views/citrus_island/menu.php:32
+#: ../../../application/views/style_vantage_blue/menu.php:32
+#: ../../../application/views/default/user/manage.php:15
+#: ../../../application/views/default/user/login.php:10
+#: ../../../application/views/default/menu.php:27
+#: ../../../application/views/install/step5.php:53
+msgid "Username:"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:34
+#: ../../../application/views/tech_junkie/menu.php:34
+#: ../../../application/views/urban_artist/menu.php:31
+#: ../../../application/views/style_vantage_orange/menu.php:34
+#: ../../../application/views/vector_lover/menu.php:34
+#: ../../../application/views/citrus_island/menu.php:34
+#: ../../../application/views/style_vantage_blue/menu.php:34
+#: ../../../application/views/default/files/get.php:84
+#: ../../../application/views/default/user/login.php:12
+#: ../../../application/views/default/menu.php:31
+#: ../../../application/views/install/step5.php:54
+msgid "Password:"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:42
+#: ../../../application/views/tech_junkie/menu.php:42
+#: ../../../application/views/urban_artist/menu.php:40
+#: ../../../application/views/style_vantage_orange/menu.php:42
+#: ../../../application/views/vector_lover/menu.php:42
+#: ../../../application/views/citrus_island/menu.php:42
+#: ../../../application/views/style_vantage_blue/menu.php:42
+#: ../../../application/views/default/menu.php:40
+msgid "Forgot Your Password?"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:47
+#: ../../../application/views/tech_junkie/menu.php:47
+#: ../../../application/views/urban_artist/menu.php:43
+#: ../../../application/views/style_vantage_orange/menu.php:47
+#: ../../../application/views/vector_lover/menu.php:47
+#: ../../../application/views/citrus_island/menu.php:47
+#: ../../../application/views/style_vantage_blue/menu.php:47
+#: ../../../application/views/default/menu.php:43
+msgid "New? Register Here!"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:59
+#: ../../../application/views/tech_junkie/footer.php:28
+#: ../../../application/views/urban_artist/menu.php:54
+#: ../../../application/views/style_vantage_orange/menu.php:59
+#: ../../../application/views/vector_lover/menu.php:59
+#: ../../../application/views/citrus_island/menu.php:59
+#: ../../../application/views/style_vantage_blue/menu.php:59
+#: ../../../application/views/default/footer.php:27
+msgid "Recently Uploaded Files"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:80
+#: ../../../application/views/tech_junkie/footer.php:54
+#: ../../../application/views/urban_artist/menu.php:75
+#: ../../../application/views/style_vantage_orange/menu.php:80
+#: ../../../application/views/vector_lover/menu.php:80
+#: ../../../application/views/citrus_island/menu.php:80
+#: ../../../application/views/style_vantage_blue/menu.php:80
+#: ../../../application/views/default/footer.php:51
+msgid "About"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:83
+#: ../../../application/views/style_vantage_green/menu.php:84
+#: ../../../application/views/style_vantage_green/menu.php:87
+#: ../../../application/views/tech_junkie/footer.php:57
+#: ../../../application/views/tech_junkie/footer.php:60
+#: ../../../application/views/urban_artist/menu.php:78
+#: ../../../application/views/urban_artist/menu.php:79
+#: ../../../application/views/urban_artist/menu.php:82
+#: ../../../application/views/style_vantage_orange/menu.php:83
+#: ../../../application/views/style_vantage_orange/menu.php:84
+#: ../../../application/views/style_vantage_orange/menu.php:87
+#: ../../../application/views/vector_lover/menu.php:83
+#: ../../../application/views/vector_lover/menu.php:84
+#: ../../../application/views/vector_lover/menu.php:87
+#: ../../../application/views/citrus_island/menu.php:83
+#: ../../../application/views/citrus_island/menu.php:84
+#: ../../../application/views/citrus_island/menu.php:87
+#: ../../../application/views/style_vantage_blue/menu.php:83
+#: ../../../application/views/style_vantage_blue/menu.php:84
+#: ../../../application/views/style_vantage_blue/menu.php:87
+#: ../../../application/views/default/footer.php:54
+#: ../../../application/views/default/footer.php:57
+msgid "XtraUpload v3"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:84
+#: ../../../application/views/tech_junkie/footer.php:57
+#: ../../../application/views/urban_artist/menu.php:79
+#: ../../../application/views/style_vantage_orange/menu.php:84
+#: ../../../application/views/vector_lover/menu.php:84
+#: ../../../application/views/citrus_island/menu.php:84
+#: ../../../application/views/style_vantage_blue/menu.php:84
+#: ../../../application/views/default/footer.php:54
+#, php-format
+msgid ""
+"%s is a next generation file hosting solution, blurring the lines between "
+"file hosting and ease of use."
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:85
+#: ../../../application/views/tech_junkie/footer.php:58
+#: ../../../application/views/urban_artist/menu.php:80
+#: ../../../application/views/style_vantage_orange/menu.php:85
+#: ../../../application/views/vector_lover/menu.php:85
+#: ../../../application/views/citrus_island/menu.php:85
+#: ../../../application/views/style_vantage_blue/menu.php:85
+#: ../../../application/views/default/footer.php:55
+msgid ""
+"Our revolutionary flash-based file uploader technology gets what you want "
+"done."
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:86
+#: ../../../application/views/tech_junkie/footer.php:59
+#: ../../../application/views/urban_artist/menu.php:81
+#: ../../../application/views/style_vantage_orange/menu.php:86
+#: ../../../application/views/vector_lover/menu.php:86
+#: ../../../application/views/citrus_island/menu.php:86
+#: ../../../application/views/style_vantage_blue/menu.php:86
+#: ../../../application/views/default/footer.php:56
+msgid ""
+"Upload up to 500 files at once, and get links to them all on the same page."
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:87
+#: ../../../application/views/tech_junkie/footer.php:60
+#: ../../../application/views/urban_artist/menu.php:82
+#: ../../../application/views/style_vantage_orange/menu.php:87
+#: ../../../application/views/vector_lover/menu.php:87
+#: ../../../application/views/citrus_island/menu.php:87
+#: ../../../application/views/style_vantage_blue/menu.php:87
+#: ../../../application/views/default/footer.php:57
+#, php-format
+msgid ""
+"%s is also pushing the envelope on extensibility. Built on the wonderful"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:88
+#: ../../../application/views/tech_junkie/footer.php:61
+#: ../../../application/views/urban_artist/menu.php:83
+#: ../../../application/views/style_vantage_orange/menu.php:88
+#: ../../../application/views/vector_lover/menu.php:88
+#: ../../../application/views/citrus_island/menu.php:88
+#: ../../../application/views/style_vantage_blue/menu.php:88
+#: ../../../application/views/default/footer.php:58
+msgid "CodeIgniter"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:89
+#: ../../../application/views/tech_junkie/footer.php:62
+#: ../../../application/views/urban_artist/menu.php:84
+#: ../../../application/views/style_vantage_orange/menu.php:89
+#: ../../../application/views/vector_lover/menu.php:89
+#: ../../../application/views/citrus_island/menu.php:89
+#: ../../../application/views/style_vantage_blue/menu.php:89
+#: ../../../application/views/default/footer.php:59
+msgid "PHP Framework, XtraUpload is fully OpenSource and extendable."
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:90
+#: ../../../application/views/tech_junkie/footer.php:63
+#: ../../../application/views/urban_artist/menu.php:85
+#: ../../../application/views/style_vantage_orange/menu.php:90
+#: ../../../application/views/vector_lover/menu.php:90
+#: ../../../application/views/citrus_island/menu.php:90
+#: ../../../application/views/style_vantage_blue/menu.php:90
+#: ../../../application/views/default/footer.php:60
+msgid "The documentation is extensive, concise, and clear."
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/menu.php:91
+#: ../../../application/views/tech_junkie/footer.php:64
+#: ../../../application/views/urban_artist/menu.php:86
+#: ../../../application/views/style_vantage_orange/menu.php:91
+#: ../../../application/views/vector_lover/menu.php:91
+#: ../../../application/views/citrus_island/menu.php:91
+#: ../../../application/views/style_vantage_blue/menu.php:91
+#: ../../../application/views/default/footer.php:61
+msgid ""
+"Database abstraction, page caching, configurable downloads, secure file "
+"storage, secure file links, and so much more combine to create the new "
+"leader in file hosting technology, XtraUpload. Oh, and its Free."
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/footer.php:22
+#: ../../../application/views/tech_junkie/footer.php:71
+#: ../../../application/views/urban_artist/footer.php:23
+#: ../../../application/views/style_vantage_orange/footer.php:22
+#: ../../../application/views/vector_lover/footer.php:22
+#: ../../../application/views/citrus_island/footer.php:22
+#: ../../../application/views/style_vantage_blue/footer.php:22
+#: ../../../application/views/default/footer.php:64
+#: ../../../application/views/install/footer.php:3
+#, php-format
+msgid "&copy; Copyright %s"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/footer.php:22
+#: ../../../application/views/tech_junkie/footer.php:71
+#: ../../../application/views/urban_artist/footer.php:23
+#: ../../../application/views/style_vantage_orange/footer.php:22
+#: ../../../application/views/vector_lover/footer.php:22
+#: ../../../application/views/citrus_island/footer.php:22
+#: ../../../application/views/style_vantage_blue/footer.php:22
+#: ../../../application/views/default/footer.php:64
+#: ../../../application/views/install/footer.php:3
+msgid "XtraFile"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/footer.php:24
+#: ../../../application/views/tech_junkie/footer.php:73
+#: ../../../application/views/urban_artist/footer.php:25
+#: ../../../application/views/style_vantage_orange/footer.php:24
+#: ../../../application/views/vector_lover/footer.php:24
+#: ../../../application/views/citrus_island/footer.php:24
+#: ../../../application/views/style_vantage_blue/footer.php:24
+#: ../../../application/views/default/footer.php:65
+#, php-format
+msgid "Design By: %s"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/footer.php:26
+#: ../../../application/views/tech_junkie/footer.php:75
+#: ../../../application/views/urban_artist/footer.php:27
+#: ../../../application/views/style_vantage_orange/footer.php:26
+#: ../../../application/views/vector_lover/footer.php:26
+#: ../../../application/views/citrus_island/footer.php:26
+#: ../../../application/views/style_vantage_blue/footer.php:26
+#: ../../../application/views/default/admin/home.php:228
+#: ../../../application/views/default/footer.php:68
+msgid "Valid"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/footer.php:28
+#: ../../../application/views/tech_junkie/footer.php:77
+#: ../../../application/views/urban_artist/footer.php:33
+#: ../../../application/views/style_vantage_orange/footer.php:28
+#: ../../../application/views/vector_lover/footer.php:28
+#: ../../../application/views/citrus_island/footer.php:28
+#: ../../../application/views/style_vantage_blue/footer.php:28
+#: ../../../application/views/default/footer.php:70
+msgid "Debug Info"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/footer.php:30
+#: ../../../application/views/tech_junkie/footer.php:79
+#: ../../../application/views/urban_artist/footer.php:35
+#: ../../../application/views/style_vantage_orange/footer.php:30
+#: ../../../application/views/vector_lover/footer.php:30
+#: ../../../application/views/citrus_island/footer.php:30
+#: ../../../application/views/style_vantage_blue/footer.php:30
+#: ../../../application/views/default/footer.php:72
+#, php-format
+msgid "Execution Time: %s sec"
+msgstr ""
+
+#: ../../../application/views/style_vantage_green/footer.php:32
+#: ../../../application/views/tech_junkie/footer.php:81
+#: ../../../application/views/urban_artist/footer.php:36
+#: ../../../application/views/style_vantage_orange/footer.php:32
+#: ../../../application/views/vector_lover/footer.php:32
+#: ../../../application/views/citrus_island/footer.php:32
+#: ../../../application/views/style_vantage_blue/footer.php:32
+#: ../../../application/views/default/footer.php:73
+#, php-format
+msgid "Memory Usage: %d KB"
+msgstr ""
+
+#: ../../../application/views/_protected/files/embed/flv.php:8
+msgid "Flash Video Embed"
+msgstr ""
+
+#: ../../../application/views/_protected/files/embed/mp3.php:8
+msgid "MP3 Embed"
+msgstr ""
+
+#: ../../../application/views/_protected/files/embed/mp4.php:8
+msgid "MP4 Embed"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:12
+msgid "Your changes have been saved."
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:17
+#: ../../../application/views/default/home.php:60
+msgid "Your account is limited by storage space:"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:18
+#: ../../../application/views/default/home.php:62
+#, php-format
+msgid "You have %d of %d MB remaining."
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:27
+#: ../../../application/views/default/files/search/query.php:27
+#: ../../../application/views/default/home.php:136
+#: ../../../application/views/default/admin/files/view.php:26
+#: ../../../application/views/default/admin/files/search_result.php:30
+#: ../../../application/views/default/admin/folders/search_result.php:30
+#: ../../../application/views/default/user/files.php:24
+msgid "File name"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:28
+#: ../../../application/views/default/files/search/query.php:28
+#: ../../../application/views/default/home.php:137
+#: ../../../application/views/default/admin/files/view.php:31
+#: ../../../application/views/default/admin/files/search_result.php:35
+#: ../../../application/views/default/admin/folders/search_result.php:35
+#: ../../../application/views/default/user/files.php:25
+#: ../../../application/views/default/image/gallery/create.php:28
+#: ../../../application/views/default/folder/create.php:22
+#: ../../../application/views/default/folder/view.php:11
+msgid "Size"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:29
+#: ../../../application/views/default/admin/stats.php:24
+#: ../../../application/views/default/user/files.php:26
+msgid "Downloads"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:30
+#: ../../../application/views/default/files/search/query.php:29
+#: ../../../application/views/default/home.php:138
+#: ../../../application/views/default/admin/files/view.php:39
+#: ../../../application/views/default/admin/files/search_result.php:43
+#: ../../../application/views/default/admin/users/view.php:43
+#: ../../../application/views/default/admin/users/search_result.php:45
+#: ../../../application/views/default/admin/groups/view.php:21
+#: ../../../application/views/default/admin/menu_shortcuts/view.php:17
+#: ../../../application/views/default/admin/folders/view.php:17
+#: ../../../application/views/default/admin/folders/search_result.php:43
+#: ../../../application/views/default/admin/transactions/view.php:21
+#: ../../../application/views/default/admin/gateways/view.php:9
+#: ../../../application/views/default/admin/servers/view.php:17
+#: ../../../application/views/default/upload/url.php:52
+msgid "Actions"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:57
+#: ../../../application/views/default/files/search/query.php:46
+#: ../../../application/views/default/user/files.php:45
+msgid "Show/Hide Links"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:58
+#: ../../../application/views/default/admin/files/edit.php:23
+#: ../../../application/views/default/admin/users/view.php:76
+#: ../../../application/views/default/admin/users/search_result.php:83
+#: ../../../application/views/default/admin/groups/view.php:55
+#: ../../../application/views/default/admin/menu_shortcuts/edit.php:16
+#: ../../../application/views/default/admin/menu_shortcuts/view.php:50
+#: ../../../application/views/default/admin/folders/view.php:39
+#: ../../../application/views/default/admin/transactions/view.php:72
+#: ../../../application/views/default/admin/gateways/view.php:53
+#: ../../../application/views/default/admin/servers/view.php:63
+msgid "Edit"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:59
+msgid "Are you SURE you want to do this?"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:59
+msgid "Delete file"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:64
+#: ../../../application/views/default/files/search/query.php:52
+#: ../../../application/views/default/user/files.php:51
+msgid "Download Link"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:65
+#: ../../../application/views/default/upload/complete.php:13
+#: ../../../application/views/default/upload/failed.php:19
+#: ../../../application/views/default/upload/links.php:18
+msgid "Delete Link:"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:67
+#: ../../../application/views/default/files/search/query.php:59
+#: ../../../application/views/default/user/files.php:60
+msgid "Image Links"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:75
+#: ../../../application/views/default/home.php:90
+#: ../../../application/views/default/home.php:236
+#: ../../../application/views/default/admin/extend/view.php:13
+#: ../../../application/views/default/admin/extend/view.php:68
+#: ../../../application/views/default/admin/groups/view.php:18
+#: ../../../application/views/default/upload/url.php:86
+msgid "Description"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:80
+#: ../../../application/views/default/home.php:243
+msgid "Tags (seperated by commas)"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:82
+#: ../../../application/views/default/home.php:241
+#: ../../../application/views/default/upload/url.php:91
+msgid "Feature This File?"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:84
+#: ../../../application/views/default/home.php:202
+#: ../../../application/views/default/home.php:238
+#: ../../../application/views/default/admin/groups/edit.php:76
+#: ../../../application/views/default/admin/translator/translate_lang.php:70
+#: ../../../application/views/default/upload/url.php:88
+msgid "Save Changes"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:85
+msgid "Cancel Edit"
+msgstr ""
+
+#: ../../../application/views/default/files/manage.php:127
+#: ../../../application/views/default/admin/files/view.php:98
+#: ../../../application/views/default/admin/files/search_result.php:105
+#: ../../../application/views/default/admin/folders/search_result.php:105
+msgid "Are you sure you want to delete these files?"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:10
+msgid "File Details"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:17
+#: ../../../application/views/default/image/links.php:6
+msgid "Image Preview:"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:24
+#: ../../../application/views/default/image/gallery/create.php:20
+#: ../../../application/views/default/folder/create.php:14
+#: ../../../application/views/default/folder/view.php:5
+msgid "Name:"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:32
+msgid "File Size:"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:41
+msgid "Show More"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:47
+msgid "MD5 Checksum:"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:53
+msgid "Date Uploaded:"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:59
+msgid "Uploader:"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:65
+msgid "Tags:"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:77
+msgid "Downloads:"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:94
+msgid "Image BBCode/Links:"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:106
+#: ../../../application/views/default/image/gallery/create.php:22
+#: ../../../application/views/default/folder/create.php:16
+msgid "Description:"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:182
+msgid "Preview File"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:187
+msgid "Get Embed Code"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:196
+msgid "Download Here"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:202
+#, php-format
+msgid "Please Wait %s more second(s) to download."
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:206
+msgid "Captcha Test - Type the three(3) letters you see below:"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:210
+msgid "Get New Captcha"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:215
+msgid "Download"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:217
+msgid "View This Image"
+msgstr ""
+
+#: ../../../application/views/default/files/get.php:256
+#, php-format
+msgid "You need to wait %d more seconds before you can download this file."
+msgstr ""
+
+#: ../../../application/views/default/files/search/new.php:10
+#: ../../../application/views/default/files/search/query.php:10
+#, php-format
+msgid ""
+"You are currently not allowed to search files. Please %s to gain access."
+msgstr ""
+
+#: ../../../application/views/default/files/search/new.php:10
+#: ../../../application/views/default/files/search/query.php:10
+#: ../../../application/views/default/upload/url.php:10
+msgid "login"
+msgstr ""
+
+#: ../../../application/views/default/files/search/new.php:20
+#: ../../../application/views/default/admin/folders/search.php:7
+msgid ""
+"Search Text(can be file id, part of a file name, or part of a file "
+"description)"
+msgstr ""
+
+#: ../../../application/views/default/files/search/query.php:19
+msgid "New Search"
+msgstr ""
+
+#: ../../../application/views/default/files/search/query.php:24
+#, php-format
+msgid "Your query '%s' returned %d result(s)"
+msgstr ""
+
+#: ../../../application/views/default/files/search/query.php:54
+#: ../../../application/views/default/user/files.php:53
+msgid "Date Uploaded"
+msgstr ""
+
+#: ../../../application/views/default/files/pass_protected.php:3
+msgid "Download File - Enter Password"
+msgstr ""
+
+#: ../../../application/views/default/files/pass_protected.php:6
+msgid "The Password you submited was incorrect."
+msgstr ""
+
+#: ../../../application/views/default/files/pass_protected.php:9
+msgid "Enter File Password"
+msgstr ""
+
+#: ../../../application/views/default/files/pass_protected.php:11
+msgid ""
+"This file has been password protected by the uploader. You must provide the "
+"correct password to download this file."
+msgstr ""
+
+#: ../../../application/views/default/files/pass_protected.php:13
+msgid "File Password:"
+msgstr ""
+
+#: ../../../application/views/default/files/pass_protected.php:15
+msgid "Unlock File"
+msgstr ""
+
+#: ../../../application/views/default/files/404.php:3
+msgid "File Link Error"
+msgstr ""
+
+#: ../../../application/views/default/files/404.php:5
+msgid "Your file could not be found. Please check the download link."
+msgstr ""
+
+#: ../../../application/views/default/home.php:10
+#, php-format
+msgid ""
+"You are currently not allowed to upload local files. Please %s to gain "
+"access."
+msgstr ""
+
+#: ../../../application/views/default/home.php:41
+msgid "Upload Restrictions"
+msgstr ""
+
+#: ../../../application/views/default/home.php:46
+#, php-format
+msgid "You can upload %s files at %s MB each."
+msgstr ""
+
+#: ../../../application/views/default/home.php:53
+#, php-format
+msgid "You can upload these file types: %s"
+msgstr ""
+
+#: ../../../application/views/default/home.php:53
+#, php-format
+msgid "You cannot upload these file types: %s"
+msgstr ""
+
+#: ../../../application/views/default/home.php:72
+msgid "Error"
+msgstr ""
+
+#: ../../../application/views/default/home.php:73
+msgid "Get Flash!"
+msgstr ""
+
+#: ../../../application/views/default/home.php:75
+msgid "Get Adobe Flash player"
+msgstr ""
+
+#: ../../../application/views/default/home.php:79
+msgid "Upload a File"
+msgstr ""
+
+#: ../../../application/views/default/home.php:81
+msgid ""
+"This is a backup upload form for our users who do not have Flash installed, "
+"to access our advanced uploading features please install the Flash Plugin "
+"and enable Javascript."
+msgstr ""
+
+#: ../../../application/views/default/home.php:84
+msgid "File"
+msgstr ""
+
+#: ../../../application/views/default/home.php:93
+#: ../../../application/views/default/home.php:132
+#: ../../../application/views/default/home.php:142
+msgid "Upload!"
+msgstr ""
+
+#: ../../../application/views/default/home.php:99
+msgid "Select Files To Upload"
+msgstr ""
+
+#: ../../../application/views/default/home.php:106
+#: ../../../application/views/default/upload/url.php:39
+msgid "Queued File List"
+msgstr ""
+
+#: ../../../application/views/default/home.php:109
+#, php-format
+msgid "You have selected the following files for upload (%s) files."
+msgstr ""
+
+#: ../../../application/views/default/home.php:111
+msgid "You have selected previously selected files for upload."
+msgstr ""
+
+#: ../../../application/views/default/home.php:112
+#: ../../../application/views/default/home.php:116
+#: ../../../application/views/default/home.php:120
+msgid "These files have been removed."
+msgstr ""
+
+#: ../../../application/views/default/home.php:115
+msgid "One or more of the files you selected were too large."
+msgstr ""
+
+#: ../../../application/views/default/home.php:119
+msgid "One or more of the files you selected are not allowed."
+msgstr ""
+
+#: ../../../application/views/default/home.php:123
+#, php-format
+msgid ""
+"You have selected to many files to upload at once. You are limited to %s "
+"files."
+msgstr ""
+
+#: ../../../application/views/default/home.php:124
+msgid "Please select fewer files and try again."
+msgstr ""
+
+#: ../../../application/views/default/home.php:127
+msgid "An unknown error has occured."
+msgstr ""
+
+#: ../../../application/views/default/home.php:128
+msgid "Please contact us about this error"
+msgstr ""
+
+#: ../../../application/views/default/home.php:138
+msgid "Delete All?"
+msgstr ""
+
+#: ../../../application/views/default/home.php:202
+msgid "Discard Changes"
+msgstr ""
+
+#: ../../../application/views/default/home.php:233
+#: ../../../application/views/default/upload/url.php:83
+msgid "Percent Complete"
+msgstr ""
+
+#: ../../../application/views/default/home.php:234
+#: ../../../application/views/default/upload/url.php:84
+msgid "KB Remaining (at "
+msgstr ""
+
+#: ../../../application/views/default/home.php:235
+#: ../../../application/views/default/upload/url.php:85
+msgid "remaining"
+msgstr ""
+
+#: ../../../application/views/default/home.php:237
+#: ../../../application/views/default/admin/files/edit.php:13
+#: ../../../application/views/default/upload/url.php:87
+msgid "File Password"
+msgstr ""
+
+#: ../../../application/views/default/home.php:239
+#: ../../../application/views/default/upload/url.php:89
+msgid "Edit File Details"
+msgstr ""
+
+#: ../../../application/views/default/home.php:240
+#: ../../../application/views/default/upload/url.php:90
+msgid "Remove File"
+msgstr ""
+
+#: ../../../application/views/default/home.php:250
+msgid "Allowed Files"
+msgstr ""
+
+#: ../../../application/views/default/home.php:265
+msgid "Browse..."
+msgstr ""
+
+#: ../../../application/views/default/home.php:347
+#: ../../../application/views/default/upload/url.php:128
+msgid "Done!"
+msgstr ""
+
+#: ../../../application/views/default/admin/config/plugin.php:3
+msgid "Plugin Config Settings"
+msgstr ""
+
+#: ../../../application/views/default/admin/config/plugin.php:7
+#: ../../../application/views/default/admin/gateways/edit.php:7
+#, php-format
+msgid "%s Config"
+msgstr ""
+
+#: ../../../application/views/default/admin/config/plugin.php:13
+msgid "No Config Settings for this plugin."
+msgstr ""
+
+#: ../../../application/views/default/admin/config/plugin.php:81
+#: ../../../application/views/default/admin/config/main.php:90
+#: ../../../application/views/default/admin/transactions/edit.php:30
+#: ../../../application/views/default/admin/gateways/edit.php:31
+msgid "Update"
+msgstr ""
+
+#: ../../../application/views/default/admin/config/plugin.php:85
+#: ../../../application/views/install/step4.php:81
+#: ../../../application/views/install/step4.php:82
+#: ../../../application/views/install/step2.php:116
+#: ../../../application/views/install/step1.php:55
+#: ../../../application/views/install/step3.php:155
+msgid "Go Back"
+msgstr ""
+
+#: ../../../application/views/default/admin/config/main.php:3
+msgid "Config Settings"
+msgstr ""
+
+#: ../../../application/views/default/admin/config/main.php:6
+msgid "General Config"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/edit.php:9
+#: ../../../application/views/default/upload/url.php:50
+#: ../../../application/views/default/image/gallery/create.php:27
+#: ../../../application/views/default/folder/create.php:21
+#: ../../../application/views/default/folder/view.php:10
+msgid "File Name"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/edit.php:11
+msgid "File Download"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/edit.php:15
+msgid "File Description"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/edit.php:17
+msgid "Featured?"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/search.php:3
+#: ../../../application/views/default/admin/folders/search.php:3
+msgid "File Manager - Search"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/search.php:7
+msgid ""
+"Search Text (can be file id, part of a file name, or part of a file "
+"description)"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/view.php:3
+msgid "File Manager"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/view.php:9
+#: ../../../application/views/default/admin/files/view.php:66
+#: ../../../application/views/default/admin/files/search_result.php:9
+#: ../../../application/views/default/admin/files/search_result.php:70
+#: ../../../application/views/default/admin/users/view.php:10
+#: ../../../application/views/default/admin/users/view.php:83
+#: ../../../application/views/default/admin/users/search_result.php:10
+#: ../../../application/views/default/admin/users/search_result.php:90
+#: ../../../application/views/default/admin/groups/view.php:62
+#: ../../../application/views/default/admin/menu_shortcuts/view.php:53
+#: ../../../application/views/default/admin/folders/view.php:42
+#: ../../../application/views/default/admin/folders/search_result.php:9
+#: ../../../application/views/default/admin/folders/search_result.php:70
+#: ../../../application/views/default/admin/transactions/view.php:75
+#: ../../../application/views/default/admin/servers/view.php:69
+#: ../../../application/views/default/admin/skins/view.php:107
+msgid "Delete"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/view.php:10
+#: ../../../application/views/default/admin/files/view.php:67
+#: ../../../application/views/default/admin/files/search_result.php:10
+#: ../../../application/views/default/admin/files/search_result.php:73
+#: ../../../application/views/default/admin/folders/view.php:45
+#: ../../../application/views/default/admin/folders/search_result.php:10
+#: ../../../application/views/default/admin/folders/search_result.php:73
+msgid "Ban"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/view.php:36
+#: ../../../application/views/default/admin/files/search_result.php:40
+#: ../../../application/views/default/admin/home.php:227
+#: ../../../application/views/default/admin/folders/search_result.php:40
+#: ../../../application/views/default/admin/transactions/view.php:19
+msgid "Date"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/view.php:65
+#: ../../../application/views/default/admin/folders/view.php:38
+msgid "Edit This File"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/view.php:66
+#: ../../../application/views/default/admin/files/search_result.php:69
+#: ../../../application/views/default/admin/folders/view.php:41
+#: ../../../application/views/default/admin/folders/search_result.php:69
+msgid "Delete This File"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/view.php:66
+#: ../../../application/views/default/admin/files/search_result.php:69
+#: ../../../application/views/default/admin/folders/view.php:41
+#: ../../../application/views/default/admin/folders/search_result.php:69
+msgid "Are you sure you want to delete this file?"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/view.php:67
+#: ../../../application/views/default/admin/files/search_result.php:72
+#: ../../../application/views/default/admin/folders/view.php:44
+#: ../../../application/views/default/admin/folders/search_result.php:72
+msgid "Ban This File"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/view.php:67
+#: ../../../application/views/default/admin/files/search_result.php:72
+#: ../../../application/views/default/admin/folders/view.php:44
+#: ../../../application/views/default/admin/folders/search_result.php:72
+msgid "Are you sure you want to ban this file?"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/view.php:78
+#: ../../../application/views/default/admin/files/search_result.php:85
+#: ../../../application/views/default/admin/users/view.php:98
+#: ../../../application/views/default/admin/users/search_result.php:105
+#: ../../../application/views/default/admin/folders/search_result.php:85
+msgid "Results"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/view.php:90
+#: ../../../application/views/default/admin/files/search_result.php:97
+#: ../../../application/views/default/admin/folders/search_result.php:97
+msgid "Are you sure you want to ban these files?"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/search_result.php:3
+#: ../../../application/views/default/admin/folders/search_result.php:3
+msgid "File Manager - Search Result"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/search_result.php:14
+#: ../../../application/views/default/admin/folders/search_result.php:14
+msgid "All"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/search_result.php:18
+#: ../../../application/views/default/admin/users/search_result.php:17
+#: ../../../application/views/default/admin/folders/search_result.php:18
+msgid "Search Query"
+msgstr ""
+
+#: ../../../application/views/default/admin/files/search_result.php:19
+#: ../../../application/views/default/admin/users/search_result.php:18
+#: ../../../application/views/default/admin/folders/search_result.php:19
+msgid "Number of results"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:3
+#: ../../../application/views/default/admin/menu.php:7
+msgid "Admin Home"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:5
+msgid "Important Server Settings"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:8
+msgid ""
+"The largest uploaded file size this server is configured to process is "
+"<em>{$}B</em>. <br>This overrides your group settings."
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:9
+msgid "The maximum size of all allowed POST data is <em>{$}B</em>"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:10
+msgid ""
+"The longest amount of time your server can execute PHP files is <em>{$} "
+"second(s)</em>"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:11
+msgid "The longest request your server will process is <em>{$} second(s</em>)"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:12
+msgid "The maximum amount of memory a PHP script can use is <em>{$}B</em>"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:13
+msgid "Enable the use of PHP short opening tags \"&lt;?\": {$}"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:16
+msgid "Max File Size"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:17
+msgid "Max POST-Request Size"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:18
+msgid "Execution Timeout"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:19
+msgid "Request Input Timeout"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:20
+msgid "Memory Limit"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:21
+msgid "Allow PHP Short Tags"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:75
+#: ../../../application/views/default/admin/home.php:94
+#, php-format
+msgid "%s second(s)"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:83
+msgid "Error!"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:83
+msgid "Recommended"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:100
+msgid "Ok!"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:115
+msgid ""
+"Some of the above Settings are not ideal, please inspect these to ensure "
+"minimal problems."
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:138
+msgid "Upgrade Available"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:140
+msgid "Important Upgrade Available"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:141
+#, php-format
+msgid "Important Upgrade Available %s"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:147
+msgid "XtraUpload v3 Stats"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:151
+msgid "Number of Uploads"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:155
+msgid "Total Disk Space Used"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:161
+msgid "Number of Registered Users"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:165
+msgid "Total Bandwidth Used"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:171
+msgid "Number of Admins"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:175
+msgid "Number of Active Servers"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:180
+msgid "Server Stats"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:204
+msgid "Used"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:205
+#: ../../../application/views/default/user/register/begin.php:42
+msgid "Free"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:208
+msgid "Total Disk Space"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:209
+msgid "Files on Server"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:217
+msgid "Useful Information"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:219
+#, php-format
+msgid "You are using the %s with %s."
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:219
+#, php-format
+msgid "%s skin"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:219
+#, php-format
+msgid "%s plugins"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:220
+msgid "This is XtraUpload version"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:222
+msgid "Last 5 Admin Logins"
+msgstr ""
+
+#: ../../../application/views/default/admin/home.php:226
+msgid "IP Address"
+msgstr ""
+
+#: ../../../application/views/default/admin/extend/view.php:8
+msgid "Installed Plugins"
+msgstr ""
+
+#: ../../../application/views/default/admin/extend/view.php:12
+#: ../../../application/views/default/admin/extend/view.php:67
+#: ../../../application/views/default/admin/users/view.php:31
+#: ../../../application/views/default/admin/users/search_result.php:33
+#: ../../../application/views/default/admin/groups/view.php:15
+#: ../../../application/views/default/admin/menu_shortcuts/add.php:10
+#: ../../../application/views/default/admin/menu_shortcuts/edit.php:9
+#: ../../../application/views/default/admin/gateways/view.php:8
+#: ../../../application/views/default/admin/servers/view.php:13
+#: ../../../application/views/default/image/gallery/view.php:5
+msgid "Name"
+msgstr ""
+
+#: ../../../application/views/default/admin/extend/view.php:14
+#: ../../../application/views/default/admin/extend/view.php:69
+msgid "Action"
+msgstr ""
+
+#: ../../../application/views/default/admin/extend/view.php:23
+#: ../../../application/views/default/admin/extend/view.php:78
+#, php-format
+msgid "By: %s"
+msgstr ""
+
+#: ../../../application/views/default/admin/extend/view.php:47
+#, php-format
+msgid "New Version Available: v%s"
+msgstr ""
+
+#: ../../../application/views/default/admin/extend/view.php:63
+msgid "Not Installed Plugins"
+msgstr ""
+
+#: ../../../application/views/default/admin/extend/view.php:82
+msgid "Visit Plugin Home Page"
+msgstr ""
+
+#: ../../../application/views/default/admin/extend/view.php:83
+msgid "Install Plugin"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/add.php:3
+msgid "User - Add"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/add.php:9
+msgid "Add New User"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/add.php:15
+#: ../../../application/views/default/admin/users/edit.php:16
+#: ../../../application/views/default/user/register/begin.php:12
+msgid "User Group"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/edit.php:3
+msgid "User - Edit"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/edit.php:30
+#: ../../../application/views/default/admin/servers/edit.php:24
+#: ../../../application/views/default/user/password.php:23
+msgid "Submit Changes"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/search.php:3
+msgid "User Manager - Search"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/search.php:7
+msgid "Search Text(can be username, email address, or ip address)"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/view.php:3
+msgid "Users - Manage"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/view.php:14
+#: ../../../application/views/default/admin/menu_shortcuts/add.php:15
+#: ../../../application/views/default/admin/menu_shortcuts/view.php:9
+msgid "Add"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/view.php:24
+#: ../../../application/views/default/admin/users/search_result.php:26
+msgid "ID"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/view.php:42
+#: ../../../application/views/default/admin/users/search_result.php:44
+msgid "Space"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/view.php:62
+#: ../../../application/views/default/admin/users/search_result.php:69
+msgid "Activate User"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/view.php:70
+#: ../../../application/views/default/admin/users/search_result.php:77
+msgid "Deactivate User"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/view.php:82
+#: ../../../application/views/default/admin/users/search_result.php:89
+msgid "Are you sure you want to delete this user?"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/view.php:111
+#: ../../../application/views/default/admin/users/search_result.php:118
+msgid "Are you sure you want to delete these users?"
+msgstr ""
+
+#: ../../../application/views/default/admin/users/search_result.php:3
+msgid "Manage Users - Search"
+msgstr ""
+
+#: ../../../application/views/default/admin/groups/add.php:3
+msgid "Group - Add"
+msgstr ""
+
+#: ../../../application/views/default/admin/groups/add.php:8
+#: ../../../application/views/default/admin/groups/add.php:69
+msgid "Add New Group"
+msgstr ""
+
+#: ../../../application/views/default/admin/groups/add.php:33
+#: ../../../application/views/default/admin/groups/edit.php:38
+msgid "Allow"
+msgstr ""
+
+#: ../../../application/views/default/admin/groups/add.php:34
+#: ../../../application/views/default/admin/groups/edit.php:39
+msgid "Deny"
+msgstr ""
+
+#: ../../../application/views/default/admin/groups/edit.php:3
+#, php-format
+msgid "\"%s\" Group - Edit"
+msgstr ""
+
+#: ../../../application/views/default/admin/groups/edit.php:8
+msgid "Edit Group"
+msgstr ""
+
+#: ../../../application/views/default/admin/groups/view.php:3
+msgid "Groups - Manage"
+msgstr ""
+
+#: ../../../application/views/default/admin/groups/view.php:9
+msgid "New Group"
+msgstr ""
+
+#: ../../../application/views/default/admin/groups/view.php:40
+msgid "Make Private"
+msgstr ""
+
+#: ../../../application/views/default/admin/groups/view.php:48
+msgid "Make Public"
+msgstr ""
+
+#: ../../../application/views/default/admin/actions/view.php:3
+#: ../../../application/views/default/admin/actions/info.php:3
+msgid "Site Maintenance"
+msgstr ""
+
+#: ../../../application/views/default/admin/actions/view.php:6
+#: ../../../application/views/default/admin/actions/info.php:5
+msgid "View PHPINFO Debug/Settings Output"
+msgstr ""
+
+#: ../../../application/views/default/admin/actions/view.php:8
+#: ../../../application/views/default/admin/actions/info.php:7
+msgid ""
+"View your local PHPINFO, describing all your PHP settings(opens in a new "
+"window)."
+msgstr ""
+
+#: ../../../application/views/default/admin/actions/view.php:9
+msgid "View PHPINFO Page"
+msgstr ""
+
+#: ../../../application/views/default/admin/actions/view.php:12
+#: ../../../application/views/default/admin/actions/view.php:15
+msgid "Clear Site/Settings Cache"
+msgstr ""
+
+#: ../../../application/views/default/admin/actions/view.php:14
+msgid ""
+"Clear your local cache files and generate new ones. This is useful if your "
+"getting random PHP errors."
+msgstr ""
+
+#: ../../../application/views/default/admin/actions/view.php:18
+#: ../../../application/views/default/admin/actions/view.php:21
+msgid "Run Site Cron"
+msgstr ""
+
+#: ../../../application/views/default/admin/actions/view.php:20
+msgid ""
+"Run the site cron now, removing all orphaned files and running any extention "
+"cron files."
+msgstr ""
+
+#: ../../../application/views/default/admin/actions/view.php:24
+#: ../../../application/views/default/admin/actions/view.php:27
+msgid "Sync Server Settings"
+msgstr ""
+
+#: ../../../application/views/default/admin/actions/view.php:26
+msgid ""
+"Sync out the latest settings to each slave server, config, user groups and "
+"plugins."
+msgstr ""
+
+#: ../../../application/views/default/admin/email.php:15
+msgid "Send Mass EMail"
+msgstr ""
+
+#: ../../../application/views/default/admin/email.php:17
+msgid "Select user group to send email to"
+msgstr ""
+
+#: ../../../application/views/default/admin/email.php:29
+msgid "Subject"
+msgstr ""
+
+#: ../../../application/views/default/admin/email.php:31
+msgid "Message"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu_shortcuts/add.php:3
+#: ../../../application/views/default/admin/menu_shortcuts/edit.php:3
+msgid "Admin Shortcuts"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu_shortcuts/add.php:12
+#: ../../../application/views/default/admin/menu_shortcuts/edit.php:11
+msgid "Link"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu_shortcuts/edit.php:13
+msgid "Order"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu_shortcuts/view.php:3
+msgid "Admin Shortcut Manager"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu_shortcuts/view.php:15
+msgid "Link Name"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu_shortcuts/view.php:16
+msgid "Link Locaton"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu_shortcuts/view.php:35
+msgid "Turn Off Shortcut"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu_shortcuts/view.php:36
+#: ../../../application/views/default/admin/servers/view.php:57
+msgid "Turn Off"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu_shortcuts/view.php:43
+msgid "Turn On Shortcut"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu_shortcuts/view.php:44
+#: ../../../application/views/default/admin/servers/view.php:49
+msgid "Turn On"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu_shortcuts/view.php:49
+msgid "Edit This Shortcut"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu_shortcuts/view.php:52
+msgid "Delete This Shortcut"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu_shortcuts/view.php:52
+msgid "Are you sure you want to delete this shortcut?"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu_shortcuts/view.php:65
+msgid "Results Per Page"
+msgstr ""
+
+#: ../../../application/views/default/admin/folders/view.php:3
+msgid "Folder Manager"
+msgstr ""
+
+#: ../../../application/views/default/admin/folders/view.php:14
+msgid "Folder name"
+msgstr ""
+
+#: ../../../application/views/default/admin/folders/view.php:15
+#: ../../../application/views/default/admin/servers/view.php:15
+msgid "# Files"
+msgstr ""
+
+#: ../../../application/views/default/admin/folders/view.php:16
+msgid "Created"
+msgstr ""
+
+#: ../../../application/views/default/admin/transactions/edit.php:7
+msgid "Transaction Info"
+msgstr ""
+
+#: ../../../application/views/default/admin/transactions/view.php:3
+msgid "Transaction Manager"
+msgstr ""
+
+#: ../../../application/views/default/admin/transactions/view.php:16
+msgid "User"
+msgstr ""
+
+#: ../../../application/views/default/admin/transactions/view.php:17
+msgid "Ammount"
+msgstr ""
+
+#: ../../../application/views/default/admin/transactions/view.php:18
+msgid "Gateway"
+msgstr ""
+
+#: ../../../application/views/default/admin/transactions/view.php:20
+msgid "Status"
+msgstr ""
+
+#: ../../../application/views/default/admin/transactions/view.php:65
+#: ../../../application/views/default/admin/transactions/view.php:66
+msgid "Approve Transaction"
+msgstr ""
+
+#: ../../../application/views/default/admin/transactions/view.php:74
+msgid "Delete Transaction"
+msgstr ""
+
+#: ../../../application/views/default/admin/transactions/view.php:74
+msgid "Are you sure you want to delete this transaction?"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu.php:1
+msgid "Admin Links"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu.php:13
+msgid "Site Home"
+msgstr ""
+
+#: ../../../application/views/default/admin/menu.php:33
+msgid "Server Load"
+msgstr ""
+
+#: ../../../application/views/default/admin/gateways/edit.php:3
+msgid "Payment Gateway Settings"
+msgstr ""
+
+#: ../../../application/views/default/admin/gateways/view.php:24
+msgid "Disable Gateway"
+msgstr ""
+
+#: ../../../application/views/default/admin/gateways/view.php:25
+msgid "Disable"
+msgstr ""
+
+#: ../../../application/views/default/admin/gateways/view.php:32
+msgid "Enable Gateway"
+msgstr ""
+
+#: ../../../application/views/default/admin/gateways/view.php:33
+msgid "Enable"
+msgstr ""
+
+#: ../../../application/views/default/admin/gateways/view.php:40
+msgid "Current Default!"
+msgstr ""
+
+#: ../../../application/views/default/admin/gateways/view.php:46
+#: ../../../application/views/default/admin/gateways/view.php:47
+msgid "Set To Default"
+msgstr ""
+
+#: ../../../application/views/default/admin/gateways/view.php:52
+msgid "Edit This Gateway"
+msgstr ""
+
+#: ../../../application/views/default/admin/stats.php:6
+msgid "Information"
+msgstr ""
+
+#: ../../../application/views/default/admin/stats.php:8
+msgid ""
+"Here you can view a graphical representation of many site stats including "
+"weekly upload count, new users, total used space by server, etc. Please "
+"select a chart to view the corresponding data."
+msgstr ""
+
+#: ../../../application/views/default/admin/stats.php:12
+msgid "Select a Chart"
+msgstr ""
+
+#: ../../../application/views/default/admin/stats.php:13
+#: ../../../application/views/default/api/charts/uploads_weekly.php:5
+#: ../../../application/views/default/api/charts/downloads_weekly.php:5
+#: ../../../application/views/default/api/charts/total_new_users_weekly.php:5
+#: ../../../application/views/default/api/charts/downloads_monthly.php:8
+msgid "Uploads"
+msgstr ""
+
+#: ../../../application/views/default/admin/stats.php:14
+#: ../../../application/views/default/admin/stats.php:15
+#: ../../../application/views/default/admin/stats.php:16
+#: ../../../application/views/default/admin/stats.php:17
+#: ../../../application/views/default/admin/stats.php:18
+#: ../../../application/views/default/api/charts/all_uploads.php:5
+msgid "All Uploads"
+msgstr ""
+
+#: ../../../application/views/default/admin/stats.php:16
+#: ../../../application/views/default/admin/stats.php:21
+msgid "Files vs Images"
+msgstr ""
+
+#: ../../../application/views/default/admin/stats.php:17
+#: ../../../application/views/default/admin/stats.php:22
+msgid "Local vs Remote"
+msgstr ""
+
+#: ../../../application/views/default/admin/stats.php:18
+msgid "By Server"
+msgstr ""
+
+#: ../../../application/views/default/admin/stats.php:20
+#: ../../../application/views/default/admin/stats.php:21
+#: ../../../application/views/default/admin/stats.php:22
+msgid "New Uploads"
+msgstr ""
+
+#: ../../../application/views/default/admin/stats.php:25
+#: ../../../application/views/default/admin/stats.php:26
+#: ../../../application/views/default/api/charts/all_downloads.php:5
+msgid "All Downloads"
+msgstr ""
+
+#: ../../../application/views/default/admin/stats.php:29
+#: ../../../application/views/default/admin/servers/view.php:16
+msgid "Used Space"
+msgstr ""
+
+#: ../../../application/views/default/admin/stats.php:31
+#: ../../../application/views/default/admin/stats.php:32
+msgid "New Users"
+msgstr ""
+
+#: ../../../application/views/default/admin/stats.php:36
+msgid "Please select a Chart"
+msgstr ""
+
+#: ../../../application/views/default/admin/stats.php:44
+msgid "Your Requested Chart"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install-step1.php:14
+#: ../../../application/views/default/admin/servers/install.php:30
+#: ../../../application/views/default/admin/servers/install_error.php:13
+msgid "Important Information"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install-step1.php:18
+#: ../../../application/views/default/admin/servers/install.php:34
+msgid ""
+"This will FTP all php files required for a clean server install overwriting "
+"old files."
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install-step1.php:19
+#: ../../../application/views/default/admin/servers/install.php:35
+msgid "THIS WILL ERASE ALL CHANGES YOU MIGHT HAVE MADE ON THIS SERVER!"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install-step1.php:30
+msgid "Confirm Software Install"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install-step1.php:31
+msgid ""
+"We have confirmed a working FTP connection to the server you specified. "
+"Please click the button below to confirm that you want to install server "
+"software on this server."
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install.php:16
+msgid "Error(s) Occured"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install.php:40
+msgid "Server FTP Details"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install.php:42
+msgid "FTP URL"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install.php:44
+msgid "FTP Username"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install.php:46
+msgid "FTP Password"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install.php:48
+msgid "FTP Port"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install.php:50
+msgid "FTP Path to install location"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install.php:52
+msgid "Validate FTP Settings"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/add.php:15
+#: ../../../application/views/default/admin/servers/edit.php:15
+msgid "Server Name"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/add.php:17
+#: ../../../application/views/default/admin/servers/edit.php:17
+msgid "Server URL"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/add.php:19
+#: ../../../application/views/default/admin/servers/edit.php:19
+msgid "Is Active?"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/add.php:21
+msgid "Add Server"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/edit.php:13
+msgid "Server Details"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install-step2.php:11
+msgid "Install Complete!"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install-step2.php:12
+msgid ""
+"The server file have been installed on the remote server. If you notice any "
+"problems with the install please double check the installer using the server "
+"install guid in the docs. Please use the above button to go back to the "
+"server manager."
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/view.php:3
+msgid "Server Manager"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/view.php:14
+msgid "URL"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/view.php:48
+msgid "Turn On Server"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/view.php:56
+msgid "Turn Off Server"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/view.php:65
+msgid "Install Server"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/view.php:66
+msgid "Install"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/view.php:68
+msgid "Delete Server"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install_error.php:18
+msgid "You do not have the server package downloaded!"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install_error.php:20
+#, php-format
+msgid "Please download the latest server package from the %s."
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install_error.php:20
+msgid "XtraFile.com Download Page"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install_error.php:21
+msgid "Once you have downloaded the package follow these steps:"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install_error.php:23
+msgid "Extract the package"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install_error.php:24
+msgid "Login to this server via FTP"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install_error.php:25
+#, php-format
+msgid "Create a new folder in the xu2 root folder, name it %sserver_package%s"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install_error.php:26
+msgid "Upload the extracted files to that folder"
+msgstr ""
+
+#: ../../../application/views/default/admin/servers/install_error.php:27
+msgid "Refresh this page"
+msgstr ""
+
+#: ../../../application/views/default/admin/translator/save_lang.php:12
+#: ../../../application/views/default/admin/translator/translate_lang.php:12
+msgid "Key"
+msgstr ""
+
+#: ../../../application/views/default/admin/translator/confirm_lang_saved.php:12
+msgid "Select Language"
+msgstr ""
+
+#: ../../../application/views/default/admin/translator/select_slave_lang.php:6
+msgid "Select Your Language"
+msgstr ""
+
+#: ../../../application/views/default/admin/translator/select_slave_lang.php:13
+#: ../../../application/views/default/admin/translator/select_module.php:13
+msgid "Next Step"
+msgstr ""
+
+#: ../../../application/views/default/admin/translator/select_module.php:7
+msgid "Select Your Language Segement"
+msgstr ""
+
+#: ../../../application/views/default/admin/skins/view.php:3
+msgid "Skin Manager"
+msgstr ""
+
+#: ../../../application/views/default/admin/skins/view.php:8
+msgid "Install New Skins"
+msgstr ""
+
+#: ../../../application/views/default/admin/skins/view.php:34
+msgid "Image preview"
+msgstr ""
+
+#: ../../../application/views/default/admin/skins/view.php:66
+msgid "Skin name"
+msgstr ""
+
+#: ../../../application/views/default/admin/skins/view.php:67
+msgid "Active?"
+msgstr ""
+
+#: ../../../application/views/default/admin/skins/view.php:92
+msgid "Activate This Skin"
+msgstr ""
+
+#: ../../../application/views/default/admin/skins/view.php:93
+msgid "Set Active"
+msgstr ""
+
+#: ../../../application/views/default/admin/skins/view.php:100
+msgid "Is Active"
+msgstr ""
+
+#: ../../../application/views/default/admin/skins/view.php:106
+msgid "Delete This Skin"
+msgstr ""
+
+#: ../../../application/views/default/user/manage.php:9
+msgid "Manage User"
+msgstr ""
+
+#: ../../../application/views/default/user/manage.php:13
+#: ../../../application/views/default/user/forgot.php:8
+msgid "Update Profile"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:6
+msgid ""
+"Listed below are all of our available signup packages. You can pick which "
+"one you want on the user registration page."
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:11
+msgid "Download Speed Limit"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:12
+msgid "Upload File Size"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:14
+msgid "Captcha on Download?"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:16
+msgid "Mass File Upload Limit"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:17
+msgid "Account Storage Limits"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:18
+msgid "Billing Schedule"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:19
+msgid "Price"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:20
+msgid "Active File Storage Time"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:21
+msgid "Can Search Files"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:22
+msgid "Can Upload Local Files"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:23
+msgid "Can URL Upload"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:38
+msgid "Feature"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:60
+#, php-format
+msgid "%s Second(s)"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:67
+#, php-format
+msgid "%s Day(s)"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:71
+msgid "Forever!"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:81
+msgid "Free!"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:85
+#, php-format
+msgid "$%s"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:164
+#, php-format
+msgid "%s KBps"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:176
+msgid "Every 2 Years"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:185
+#: ../../../application/views/default/user/compare.php:195
+#, php-format
+msgid "%s MB"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:192
+msgid "Unlimited"
+msgstr ""
+
+#: ../../../application/views/default/user/compare.php:201
+#, php-format
+msgid "%s Files"
+msgstr ""
+
+#: ../../../application/views/default/user/files.php:3
+#, php-format
+msgid "User Files: %s"
+msgstr ""
+
+#: ../../../application/views/default/user/files.php:9
+msgid "This user does not allow public viewing of their files."
+msgstr ""
+
+#: ../../../application/views/default/user/password.php:15
+msgid "Username; "
+msgstr ""
+
+#: ../../../application/views/default/user/password.php:21
+msgid "Confirm New Password"
+msgstr ""
+
+#: ../../../application/views/default/user/profile/view.php:3
+#, php-format
+msgid "User Profile: %s"
+msgstr ""
+
+#: ../../../application/views/default/user/profile/view.php:13
+msgid "This is your user profile!"
+msgstr ""
+
+#: ../../../application/views/default/user/profile/view.php:14
+#, php-format
+msgid "You can update these values %s!"
+msgstr ""
+
+#: ../../../application/views/default/user/profile/view.php:14
+msgid "here"
+msgstr ""
+
+#: ../../../application/views/default/user/profile/view.php:19
+msgid "User Info"
+msgstr ""
+
+#: ../../../application/views/default/user/profile/view.php:24
+msgid "User Stats"
+msgstr ""
+
+#: ../../../application/views/default/user/profile/view.php:30
+#, php-format
+msgid "Uploaded Files: %s"
+msgstr ""
+
+#: ../../../application/views/default/user/login.php:3
+msgid "User Login"
+msgstr ""
+
+#: ../../../application/views/default/user/forgot.php:14
+msgid "Get New Password"
+msgstr ""
+
+#: ../../../application/views/default/user/logout.php:5
+msgid ""
+"You have been logged out. Please wait while we forward you to the home page."
+msgstr ""
+
+#: ../../../application/views/default/user/register/pay_new.php:3
+msgid "Complete Payment"
+msgstr ""
+
+#: ../../../application/views/default/user/register/begin.php:3
+#: ../../../application/views/default/user/register/complete.php:3
+#: ../../../application/views/default/user/register/pay_cancel.php:3
+msgid "Register New User"
+msgstr ""
+
+#: ../../../application/views/default/user/register/begin.php:12
+msgid "Click here for a comparision"
+msgstr ""
+
+#: ../../../application/views/default/user/register/begin.php:18
+#: ../../../application/views/default/api/charts/uploads_weekly.php:5
+#: ../../../application/views/default/api/charts/downloads_weekly.php:5
+#: ../../../application/views/default/api/charts/total_new_users_weekly.php:5
+#: ../../../application/views/default/api/charts/downloads_monthly.php:8
+msgid "Day"
+msgstr ""
+
+#: ../../../application/views/default/user/register/begin.php:19
+msgid "Week"
+msgstr ""
+
+#: ../../../application/views/default/user/register/begin.php:20
+msgid "Month"
+msgstr ""
+
+#: ../../../application/views/default/user/register/begin.php:21
+msgid "Year"
+msgstr ""
+
+#: ../../../application/views/default/user/register/begin.php:22
+msgid "2 Years"
+msgstr ""
+
+#: ../../../application/views/default/user/register/begin.php:38
+#, php-format
+msgid "$%s per %s"
+msgstr ""
+
+#: ../../../application/views/default/user/register/begin.php:81
+msgid "Select Payment Method"
+msgstr ""
+
+#: ../../../application/views/default/user/register/begin.php:102
+msgid "Security Test - Type the letters you see below:"
+msgstr ""
+
+#: ../../../application/views/default/user/register/begin.php:105
+msgid "Submit Registration"
+msgstr ""
+
+#: ../../../application/views/default/user/register/closed.php:3
+msgid "User Registration"
+msgstr ""
+
+#: ../../../application/views/default/user/register/closed.php:7
+msgid "Registrations Closed"
+msgstr ""
+
+#: ../../../application/views/default/user/register/closed.php:10
+msgid "We are sorry but we are not currently allowing new registrations."
+msgstr ""
+
+#: ../../../application/views/default/user/register/closed.php:11
+msgid "Please check back later, as we may open up more spots in the future."
+msgstr ""
+
+#: ../../../application/views/default/user/register/complete.php:6
+msgid "Your account has been created and your info has been emailed to you."
+msgstr ""
+
+#: ../../../application/views/default/user/register/complete.php:7
+msgid "You have been logged in, please return to the home page."
+msgstr ""
+
+#: ../../../application/views/default/user/register/pay_complete.php:3
+#: ../../../application/views/default/user/register/pay_complete.php:5
+msgid "Payment Complete"
+msgstr ""
+
+#: ../../../application/views/default/user/register/pay_cancel.php:5
+msgid ""
+"You have canceled the payment prematurely. Please visit the pay link "
+"included in the email you recived to complete payment and activate your "
+"account."
+msgstr ""
+
+#: ../../../application/views/default/api/charts/uploads_weekly.php:5
+msgid "Past 7 Days Uploads"
+msgstr ""
+
+#: ../../../application/views/default/api/charts/all_server_uploads.php:6
+msgid "File-Server Uploads Distrubition"
+msgstr ""
+
+#: ../../../application/views/default/api/charts/downloads_weekly.php:5
+#: ../../../application/views/default/api/charts/downloads_monthly.php:8
+msgid "Past 7 Days Downloads"
+msgstr ""
+
+#: ../../../application/views/default/api/charts/total_new_users_weekly.php:5
+msgid "New Users >> Weekly"
+msgstr ""
+
+#: ../../../application/views/default/api/charts/all_images_vs_regular.php:5
+msgid "All Uploads >> Files vs Images"
+msgstr ""
+
+#: ../../../application/views/default/api/charts/all_images_vs_regular.php:5
+#: ../../../application/views/default/api/charts/images_vs_regular_weekly.php:5
+msgid "Regular"
+msgstr ""
+
+#: ../../../application/views/default/api/charts/all_images_vs_regular.php:5
+#: ../../../application/views/default/api/charts/images_vs_regular_weekly.php:5
+msgid "Image"
+msgstr ""
+
+#: ../../../application/views/default/api/charts/all_downloads.php:5
+#: ../../../application/views/default/api/charts/all_uploads.php:5
+msgid "Anonymous"
+msgstr ""
+
+#: ../../../application/views/default/api/charts/all_downloads.php:5
+#: ../../../application/views/default/api/charts/all_uploads.php:5
+msgid "Registered"
+msgstr ""
+
+#: ../../../application/views/default/api/charts/remote_vs_host_uploads_weekly.php:5
+msgid "New Uploads >> Local vs Remote >> Weekly"
+msgstr ""
+
+#: ../../../application/views/default/api/charts/remote_vs_host_uploads_weekly.php:5
+#: ../../../application/views/default/api/charts/all_remote_vs_host_uploads.php:5
+msgid "Remote"
+msgstr ""
+
+#: ../../../application/views/default/api/charts/remote_vs_host_uploads_weekly.php:5
+#: ../../../application/views/default/api/charts/all_remote_vs_host_uploads.php:5
+msgid "Local"
+msgstr ""
+
+#: ../../../application/views/default/api/charts/all_remote_vs_host_uploads.php:5
+msgid "Uploads >> Local vs Remote"
+msgstr ""
+
+#: ../../../application/views/default/api/charts/all_server_used_space.php:6
+msgid "Servers >> Used Space"
+msgstr ""
+
+#: ../../../application/views/default/api/charts/images_vs_regular_weekly.php:5
+msgid "New Uploads >> Files vs Images >> Weekly"
+msgstr ""
+
+#: ../../../application/views/default/upload/complete.php:3
+msgid "Upload Complete"
+msgstr ""
+
+#: ../../../application/views/default/upload/complete.php:5
+msgid ""
+"Your file links are below, make sure to save this URL if you ever need to "
+"get these links again."
+msgstr ""
+
+#: ../../../application/views/default/upload/complete.php:6
+#: ../../../application/views/default/upload/failed.php:12
+#: ../../../application/views/default/upload/links.php:12
+msgid "Download Link:"
+msgstr ""
+
+#: ../../../application/views/default/upload/complete.php:21
+#: ../../../application/views/default/upload/failed.php:27
+#: ../../../application/views/default/upload/links.php:25
+msgid "Image Links:"
+msgstr ""
+
+#: ../../../application/views/default/upload/complete.php:27
+msgid "Upload More Files"
+msgstr ""
+
+#: ../../../application/views/default/upload/failed.php:5
+#: ../../../application/views/default/upload/failed.php:35
+#: ../../../application/views/default/upload/links.php:5
+#: ../../../application/views/default/upload/links.php:32
+msgid "Error: Upload Failed!!"
+msgstr ""
+
+#: ../../../application/views/default/upload/failed.php:6
+#: ../../../application/views/default/upload/links.php:6
+#, php-format
+msgid "Reason: %s"
+msgstr ""
+
+#: ../../../application/views/default/upload/url.php:3
+msgid "URL Upload(beta)"
+msgstr ""
+
+#: ../../../application/views/default/upload/url.php:10
+#, php-format
+msgid ""
+"You are currently not allowed to use URL Upload. Please %s to gain access."
+msgstr ""
+
+#: ../../../application/views/default/upload/url.php:18
+msgid "Upload files from other servers on the internet."
+msgstr ""
+
+#: ../../../application/views/default/upload/url.php:19
+#, php-format
+msgid ""
+"%sThis is still a beta service%s and there might still be bugs in it. Please "
+"email us and let us know if you find any or encounter any \"Upload Failed!\" "
+"errors."
+msgstr ""
+
+#: ../../../application/views/default/upload/url.php:25
+msgid "Remote Upload URLs, one per line"
+msgstr ""
+
+#: ../../../application/views/default/upload/url.php:33
+msgid "Add To Queue"
+msgstr ""
+
+#: ../../../application/views/default/upload/url.php:42
+#, php-format
+msgid "You have selected the following files for upload (%s Files)."
+msgstr ""
+
+#: ../../../application/views/default/upload/url.php:45
+#: ../../../application/views/default/upload/url.php:58
+msgid "Begin Upload!"
+msgstr ""
+
+#: ../../../application/views/default/upload/url.php:53
+msgid "Remove All?"
+msgstr ""
+
+#: ../../../application/views/default/image/home.php:3
+msgid "Image Info"
+msgstr ""
+
+#: ../../../application/views/default/image/home.php:5
+msgid "Name: "
+msgstr ""
+
+#: ../../../application/views/default/image/home.php:12
+msgid "Download: "
+msgstr ""
+
+#: ../../../application/views/default/image/gallery/create.php:3
+msgid "Image Gallery - Create"
+msgstr ""
+
+#: ../../../application/views/default/image/gallery/create.php:10
+msgid "You do not have any uploaded images,"
+msgstr ""
+
+#: ../../../application/views/default/image/gallery/create.php:11
+msgid "please upload some first."
+msgstr ""
+
+#: ../../../application/views/default/image/gallery/create.php:24
+#: ../../../application/views/default/folder/create.php:18
+msgid "Select Files:"
+msgstr ""
+
+#: ../../../application/views/default/image/gallery/create.php:29
+#: ../../../application/views/default/image/gallery/create.php:39
+#: ../../../application/views/default/folder/create.php:23
+#: ../../../application/views/default/folder/create.php:30
+msgid "Add?"
+msgstr ""
+
+#: ../../../application/views/default/image/gallery/create.php:45
+msgid "Create Gallery"
+msgstr ""
+
+#: ../../../application/views/default/image/gallery/done.php:3
+msgid "Image Gallery - Created"
+msgstr ""
+
+#: ../../../application/views/default/image/gallery/done.php:5
+#: ../../../application/views/default/folder/done.php:5
+msgid "Link:"
+msgstr ""
+
+#: ../../../application/views/default/image/gallery/view.php:12
+#: ../../../application/views/default/image/links.php:9
+msgid "Download:"
+msgstr ""
+
+#: ../../../application/views/default/image/links.php:3
+msgid "Image BBCode/Links"
+msgstr ""
+
+#: ../../../application/views/default/image/links.php:11
+msgid "BBCode Links"
+msgstr ""
+
+#: ../../../application/views/default/image/links.php:13
+msgid "Show image to friends:"
+msgstr ""
+
+#: ../../../application/views/default/image/links.php:15
+msgid "Hotlink for forums:"
+msgstr ""
+
+#: ../../../application/views/default/image/links.php:17
+msgid "Hotlink for forums (alt):"
+msgstr ""
+
+#: ../../../application/views/default/image/links.php:19
+msgid "Thumbnail link for forums:"
+msgstr ""
+
+#: ../../../application/views/default/image/links.php:21
+msgid "Thumbnail link for forums (alt):"
+msgstr ""
+
+#: ../../../application/views/default/image/links.php:23
+msgid "Hotlink for websites with thumbnail(HTML):"
+msgstr ""
+
+#: ../../../application/views/default/image/links.php:25
+msgid "Hotlink for websites, full image(HTML):"
+msgstr ""
+
+#: ../../../application/views/default/image/links.php:27
+msgid "Direct link to image:"
+msgstr ""
+
+#: ../../../application/views/default/folder/create.php:3
+msgid "File Folder - Create"
+msgstr ""
+
+#: ../../../application/views/default/folder/create.php:7
+msgid "You do not have any uploaded files."
+msgstr ""
+
+#: ../../../application/views/default/folder/create.php:9
+msgid "Please upload some first."
+msgstr ""
+
+#: ../../../application/views/default/folder/create.php:35
+msgid "Create Folder"
+msgstr ""
+
+#: ../../../application/views/default/folder/done.php:3
+msgid "File Folder - Created"
+msgstr ""
+
+#: ../../../application/views/default/folder/done.php:7
+msgid "View File Folder Now"
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:3
+msgid "Web Site Terms and Conditions of Use"
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:5
+msgid "1. Terms"
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:6
+msgid ""
+"By accessing this web site, you are agreeing to be bound by these web site "
+"Terms and Conditions of Use, all applicable laws and regulations, and agree "
+"that you are responsible for compliance with any applicable local laws. If "
+"you do not agree with any of these terms, you are prohibited from using or "
+"accessing this site. The materials contained in this web site are protected "
+"by applicable copyright and trade mark law."
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:7
+msgid "2. Use License"
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:10
+#, php-format
+msgid ""
+"Permission is granted to temporarily download one copy of the materials "
+"(information or software) on %s 's web site for personal, non-commercial "
+"transitory viewing only. This is the grant of a license, not a transfer of "
+"title, and under this license you may not:"
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:12
+msgid "modify or copy the materials;"
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:13
+msgid ""
+"use the materials for any commercial purpose, or for any public display "
+"(commercial or non-commercial);"
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:14
+#, php-format
+msgid ""
+"attempt to decompile or reverse engineer any software contained on %s 's web "
+"site;"
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:15
+msgid ""
+"remove any copyright or other proprietary notations from the materials; or"
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:16
+msgid ""
+"transfer the materials to another person or \"mirror\" the materials on any "
+"other server."
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:19
+#, php-format
+msgid ""
+"This license shall automatically terminate if you violate any of these "
+"restrictions and may be terminated by %s at any time. Upon terminating your "
+"viewing of these materials or upon the termination of this license, you must "
+"destroy any downloaded materials in your possession whether in electronic or "
+"printed format."
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:21
+msgid "3. Disclaimer"
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:23
+#, php-format
+msgid ""
+"The materials on %s 's web site are provided \"as is\". %s makes no "
+"warranties, expressed or implied, and hereby disclaims and negates all other "
+"warranties, including without limitation, implied warranties or conditions "
+"of merchantability, fitness for a particular purpose, or non-infringement of "
+"intellectual property or other violation of rights. Further, %s does not "
+"warrant or make any representations concerning the accuracy, likely results, "
+"or reliability of the use of the materials on its Internet web site or "
+"otherwise relating to such materials or on any sites linked to this site."
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:25
+msgid "4. Limitations"
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:26
+#, php-format
+msgid ""
+"In no event shall %s or its suppliers be liable for any damages (including, "
+"without limitation, damages for loss of data or profit, or due to business "
+"interruption,) arising out of the use or inability to use the materials on "
+"%s 's Internet site, even if %s or a %s authorized representative has been "
+"notified orally or in writing of the possibility of such damage. Because "
+"some jurisdictions do not allow limitations on implied warranties, or "
+"limitations of liability for consequential or incidental damages, these "
+"limitations may not apply to you."
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:27
+msgid "5. Revisions and Errata"
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:28
+#, php-format
+msgid ""
+"The materials appearing on %s 's web site could include technical, "
+"typographical, or photographic errors. %s does not warrant that any of the "
+"materials on its web site are accurate, complete, or current. %s may make "
+"changes to the materials contained on its web site at any time without "
+"notice. %s does not, however, make any commitment to update the materials."
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:29
+msgid "6. Links"
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:30
+#, php-format
+msgid ""
+"%s has not reviewed all of the sites linked to its Internet web site and is "
+"not responsible for the contents of any such linked site. The inclusion of "
+"any link does not imply endorsement by %s of the site. Use of any such "
+"linked web site is at the user's own risk."
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:31
+msgid "7. Site Terms of Use Modifications"
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:32
+#, php-format
+msgid ""
+"%s may revise these terms of use for its web site at any time without "
+"notice. By using this web site you are agreeing to be bound by the then "
+"current version of these Terms and Conditions of Use."
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:33
+msgid "8. Governing Law"
+msgstr ""
+
+#: ../../../application/views/default/legal/tos.php:34
+#, php-format
+msgid ""
+"Any claim relating to %s 's web site shall be governed by the laws of the "
+"United States of America without regard to its conflict of law provisions."
+msgstr ""
+
+#: ../../../application/views/default/legal/privacy.php:5
+msgid ""
+"Your privacy is very important to us. Accordingly, we have developed this "
+"Policy in order for you to understand how we collect, use, communicate and "
+"disclose and make use of personal information. The following outlines our "
+"privacy policy."
+msgstr ""
+
+#: ../../../application/views/default/legal/privacy.php:7
+msgid ""
+"Before or at the time of collecting personal information, we will identify "
+"the purposes for which information is being collected."
+msgstr ""
+
+#: ../../../application/views/default/legal/privacy.php:8
+msgid ""
+"We will collect and use of personal information solely with the objective of "
+"fulfilling those purposes specified by us and for other compatible purposes, "
+"unless we obtain the consent of the individual concerned or as required by "
+"law."
+msgstr ""
+
+#: ../../../application/views/default/legal/privacy.php:9
+msgid ""
+"We will only retain personal information as long as necessary for the "
+"fulfillment of those purposes."
+msgstr ""
+
+#: ../../../application/views/default/legal/privacy.php:10
+msgid ""
+"We will collect personal information by lawful and fair means and, where "
+"appropriate, with the knowledge or consent of the individual concerned."
+msgstr ""
+
+#: ../../../application/views/default/legal/privacy.php:11
+msgid ""
+"Personal data should be relevant to the purposes for which it is to be used, "
+"and, to the extent necessary for those purposes, should be accurate, "
+"complete, and up-to-date."
+msgstr ""
+
+#: ../../../application/views/default/legal/privacy.php:12
+msgid ""
+"We will protect personal information by reasonable security safeguards "
+"against loss or theft, as well as unauthorized access, disclosure, copying, "
+"use or modification."
+msgstr ""
+
+#: ../../../application/views/default/legal/privacy.php:13
+msgid ""
+"We will make readily available to customers information about our policies "
+"and practices relating to the management of personal information."
+msgstr ""
+
+#: ../../../application/views/default/legal/privacy.php:15
+msgid ""
+"We are committed to conducting our business in accordance with these "
+"principles in order to ensure that the confidentiality of personal "
+"information is protected and maintained."
+msgstr ""
+
+#: ../../../application/views/default/footer.php:66
+msgid "Terms Of Service"
+msgstr ""
+
+#: ../../../application/views/install/step4.php:1
+#: ../../../application/views/install/step3.php:1
+msgid "Database and Config Details"
+msgstr ""
+
+#: ../../../application/views/install/step4.php:6
+#: ../../../application/views/install/step4.php:7
+#: ../../../application/views/install/step4.php:14
+#: ../../../application/views/install/step4.php:15
+#: ../../../application/views/install/step4.php:22
+#: ../../../application/views/install/step4.php:23
+#: ../../../application/views/install/step4.php:29
+#: ../../../application/views/install/step4.php:30
+#: ../../../application/views/install/step4.php:33
+#: ../../../application/views/install/step2.php:6
+#: ../../../application/views/install/step2.php:7
+#: ../../../application/views/install/step2.php:13
+#: ../../../application/views/install/step2.php:14
+#: ../../../application/views/install/step2.php:17
+#: ../../../application/views/install/step2.php:19
+#: ../../../application/views/install/step2.php:21
+#: ../../../application/views/install/step1.php:5
+#: ../../../application/views/install/step1.php:6
+#: ../../../application/views/install/step1.php:10
+#: ../../../application/views/install/step1.php:12
+#: ../../../application/views/install/step1.php:14
+#: ../../../application/views/install/step1.php:16
+#: ../../../application/views/install/step3.php:6
+#: ../../../application/views/install/step3.php:7
+#: ../../../application/views/install/step3.php:14
+#: ../../../application/views/install/step3.php:15
+#: ../../../application/views/install/step3.php:21
+#: ../../../application/views/install/step3.php:22
+#: ../../../application/views/install/step3.php:25
+#: ../../../application/views/install/step3.php:27
+#: ../../../application/views/install/step5.php:6
+#: ../../../application/views/install/step5.php:7
+#: ../../../application/views/install/step5.php:12
+#: ../../../application/views/install/step5.php:13
+#: ../../../application/views/install/step5.php:19
+#: ../../../application/views/install/step5.php:20
+#: ../../../application/views/install/step5.php:26
+#: ../../../application/views/install/step5.php:27
+#: ../../../application/views/install/step5.php:31
+#: ../../../application/views/install/step5.php:32
+#, php-format
+msgid "Step %d"
+msgstr ""
+
+#: ../../../application/views/install/step4.php:40
+msgid "Admin Details"
+msgstr ""
+
+#: ../../../application/views/install/step4.php:41
+msgid ""
+"This section requires information to create your administration account. "
+"Please enter the data carefully!"
+msgstr ""
+
+#: ../../../application/views/install/step4.php:45
+msgid "Admin Username"
+msgstr ""
+
+#: ../../../application/views/install/step4.php:70
+#: ../../../application/views/install/step3.php:124
+msgid "Optional"
+msgstr ""
+
+#: ../../../application/views/install/step4.php:90
+#: ../../../application/views/install/step4.php:91
+#: ../../../application/views/install/step2.php:125
+#: ../../../application/views/install/update.php:31
+#: ../../../application/views/install/setup.php:28
+#: ../../../application/views/install/step1.php:63
+#: ../../../application/views/install/update_done.php:22
+#: ../../../application/views/install/step3.php:164
+#: ../../../application/views/install/step5.php:66
+msgid "Continue"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:1
+msgid "Filesystem And Version Check"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:26
+msgid "Server Test Results"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:28
+msgid ""
+"This section outputs the results of a series of tests to ensure everything "
+"is configured correctly before installing."
+msgstr ""
+
+#: ../../../application/views/install/step2.php:34
+msgid "Permission Checks"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:41
+#, php-format
+msgid "File: %s"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:42
+#, php-format
+msgid "Permissions Required: %s"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:52
+msgid "Version Checks"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:57
+msgid "PHP Version"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:58
+#: ../../../application/views/install/step2.php:76
+msgid "Minimum Version:"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:59
+#: ../../../application/views/install/step2.php:77
+msgid "Version Found:"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:66
+msgid "PHP Safe Mode"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:67
+msgid "Safe Mode:"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:75
+msgid "GD Version"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:85
+msgid "FreeType Support Check"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:86
+#: ../../../application/views/install/step2.php:95
+#: ../../../application/views/install/step2.php:104
+msgid "Found:"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:94
+msgid "SimpleXML Support Check"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:103
+msgid "FTP Support Check"
+msgstr ""
+
+#: ../../../application/views/install/step2.php:132
+msgid "There were errors during testing."
+msgstr ""
+
+#: ../../../application/views/install/step2.php:133
+msgid "Please fix these errors before continuing."
+msgstr ""
+
+#: ../../../application/views/install/step2.php:134
+msgid "If you chose to continue you do so at your own risk."
+msgstr ""
+
+#: ../../../application/views/install/header.php:8
+#: ../../../application/views/install/header.php:15
+msgid "XtraUpload V3"
+msgstr ""
+
+#: ../../../application/views/install/update.php:12
+msgid "Welcome to XtraUpload Updater"
+msgstr ""
+
+#: ../../../application/views/install/update.php:13
+#: ../../../application/views/install/setup.php:4
+msgid "Details about the system requirements are below."
+msgstr ""
+
+#: ../../../application/views/install/update.php:21
+#, php-format
+msgid "Update %s from %s"
+msgstr ""
+
+#: ../../../application/views/install/setup.php:3
+#: ../../../application/views/install/step1.php:22
+msgid "Welcome to XtraUpload Installer"
+msgstr ""
+
+#: ../../../application/views/install/setup.php:12
+msgid "Thank you for Downloading XtraUpload."
+msgstr ""
+
+#: ../../../application/views/install/setup.php:13
+msgid ""
+"We hope you find the installation of this script a breeze as it is all "
+"automated making it simple to use for someone with very limited knowledge of "
+"php, Installing etc."
+msgstr ""
+
+#: ../../../application/views/install/setup.php:14
+msgid ""
+"XtraUpload works best on PHP 5.3.0 or better, MySQL 5.1 or better, and an "
+"unused database."
+msgstr ""
+
+#: ../../../application/views/install/setup.php:15
+msgid "Please gather this information ready:"
+msgstr ""
+
+#: ../../../application/views/install/setup.php:18
+msgid ""
+"SQL database name (Create on via cpanel or some other software you have)"
+msgstr ""
+
+#: ../../../application/views/install/setup.php:19
+msgid "Your SQL username"
+msgstr ""
+
+#: ../../../application/views/install/setup.php:20
+msgid ""
+"Your SQL host address (Usually localhost but if all else fails try the ip "
+"address)"
+msgstr ""
+
+#: ../../../application/views/install/setup.php:22
+msgid ""
+"Click continue to carry on with this installation. You will be given a "
+"progress bar to show you how much is left to install."
+msgstr ""
+
+#: ../../../application/views/install/setup.php:23
+msgid ""
+"Do not click back once you have reached step 5. This Will cause database "
+"errors!"
+msgstr ""
+
+#: ../../../application/views/install/step1.php:1
+msgid "License Agreement"
+msgstr ""
+
+#: ../../../application/views/install/step1.php:25
+msgid "XtraUpload License Agreement Below"
+msgstr ""
+
+#: ../../../application/views/install/step1.php:34
+msgid "You must agree to the XtraUpload License before installing XtraUpload."
+msgstr ""
+
+#: ../../../application/views/install/step1.php:35
+msgid ""
+"By Installing XtraUpload, regardless if you read the License, you are bound "
+"by it."
+msgstr ""
+
+#: ../../../application/views/install/step1.php:38
+#, php-format
+msgid "An online copy of this license can be found at %s"
+msgstr ""
+
+#: ../../../application/views/install/step1.php:44
+msgid ""
+"By clicking the \"Continue\" button below and/or installing/upgrading/using "
+"XtraUpload you hearby agree to and are bound by the above license aggrement, "
+"including Section 10: ammendments to the Apache License v2.0."
+msgstr ""
+
+#: ../../../application/views/install/update_done.php:1
+#: ../../../application/views/install/step5.php:1
+msgid "Complete!"
+msgstr ""
+
+#: ../../../application/views/install/update_done.php:5
+#: ../../../application/views/install/step5.php:39
+msgid "Success! XtraUpload Has Installed Succefully"
+msgstr ""
+
+#: ../../../application/views/install/update_done.php:6
+#: ../../../application/views/install/step5.php:40
+msgid "Details About The Install Are Below"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:33
+msgid "Website Address"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:34
+msgid "Enter your website address here."
+msgstr ""
+
+#: ../../../application/views/install/step3.php:38
+msgid "Make sure this is correct:"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:40
+#, php-format
+msgid ""
+"Please make sure it starts with %s This is the address of all your files EG: "
+"http://www.yoursite.com/upload"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:41
+msgid "Trailing slash is required!"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:53
+msgid "Website Settings"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:54
+msgid ""
+"This allows you to set custom cookie prefixes and a custom encryption key. "
+"Leave blank to autogenerate these values."
+msgstr ""
+
+#: ../../../application/views/install/step3.php:58
+msgid "Cookie Prefix"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:60
+msgid ""
+"This prevents session collisions with other XU installs around the internet"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:68
+msgid "Encryption Key"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:70
+msgid "This is the key that will be used to encrypt sensitive data in XU"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:81
+msgid "SQL Data"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:82
+msgid ""
+"Please enter the correct MySQL info below for the tables to install "
+"correctly."
+msgstr ""
+
+#: ../../../application/views/install/step3.php:86
+msgid "SQL Host"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:88
+msgid ""
+"Localhost is default, but in some cases it can be your Server IP Address"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:98
+msgid "SQL User"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:107
+msgid "SQL Database Name"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:115
+msgid "SQL Password"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:123
+msgid "Database Prefix"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:132
+msgid "SQL Engine"
+msgstr ""
+
+#: ../../../application/views/install/step3.php:134
+msgid ""
+"You can choose from 7 different SQL database engines. MySQL is the most "
+"popular."
+msgstr ""
+
+#: ../../../application/views/install/step5.php:50
+msgid "XtraUpload was installed successfully!"
+msgstr ""
+
+#: ../../../application/views/install/step5.php:51
+msgid "The admin login information is:"
+msgstr ""
+
+#: ../../../application/views/install/footer.php:4
+msgid "Page rendered in {elapsed_time} seconds"
+msgstr ""
