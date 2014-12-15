@@ -138,16 +138,55 @@ class Files extends CI_Controller {
 				$data['icon'] = 'tv';
 				$data['code'] = <<<EOF
           <video id="player2" controls="controls" width="470" height="320" preload="none">
-            <source type="video/flv" src="$src">
+            <source type="video/x-flv" src="$src">
+            <object width="640" height="360" type="application/x-shockwave-flash" data="$swf">
+              <param name="movie" value="$swf" />
+              <param name="flashvars" value="controls=true&amp;file=$src" />
+            </object>
           </video>
           <script type="text/javascript">
             $('audio,video').mediaelementplayer({
               success: function(player, node) {
-                $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+                $('#' + node.id + '-mode').html('mode: shim'); //+ player.pluginType);
               }
             });
           </script>
 
+EOF;
+				$flvplayer = site_url('players/flvplayer.swf');
+				$express = site_url('players/expressInstall.swf');
+				$data['code'] = <<<EOF
+          <script type="text/javascript">
+            var flashvarsVideo = {
+                source: "$src",
+                type: "video",
+                streamtype: "file",
+                server: "",//Used for rtmp streams
+                duration: "",
+                poster: "",
+                autostart: "false",
+                hardwarescaling: "false",
+                darkcolor: "000000",
+                brightcolor: "4c4c4c",
+                controlcolor: "FFFFFF",
+                hovercolor: "67A8C1"
+            };
+            var params = {
+                menu: "false",
+                scale: "noScale",
+                allowFullscreen: "true",
+                allowScriptAccess: "always",
+                bgcolor: "#000000",
+                quality: "high",
+                wmode: "opaque"
+            };
+            var attributes = {
+                id:"JarisFLVPlayer"
+            };
+            swfobject.embedSWF("$flvplayer", "flvplayer", "470", "320", "10.0.0", "$express", flashvarsVideo, params, attributes);
+          </script>
+          <div id="flvplayer">
+          </div>
 EOF;
 			break;
 			case 'mp4':
