@@ -185,8 +185,8 @@ EOF;
             };
             swfobject.embedSWF("$flvplayer", "flvplayer", "470", "320", "10.0.0", "$express", flashvarsVideo, params, attributes);
           </script>
-          <div id="flvplayer">
-          </div>
+          <div id="flvplayer"></div>
+
 EOF;
 			break;
 			case 'mp4':

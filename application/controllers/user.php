@@ -829,7 +829,7 @@ class User extends CI_Controller {
 		$vals = array(
 			'img_path'  => ROOTPATH.'/temp/',
 			'word'	  => $this->users->gen_pass(5, false),
-			'img_width' => $img_widgh,
+			'img_width' => $img_width,
 			'img_height' => $img_height,
 			'img_url'   => base_url().'temp/',
 			'font_path' => BASEPATH.'fonts/MyriadWebPro-Bold.ttf'
