@@ -132,29 +132,15 @@ class Files extends CI_Controller {
 		// video code
 		$src = site_url('files/stream/'.$file->file_id.'/'.md5($this->config->config['encryption_key'].$file->file_id.$this->input->ip_address()).'/'.$file->link_name);
 		$swf = site_url('players/flashmediaelement.swf');
+		// player size
+		$player_width = $this->startup->site_config->player_width;
+		$player_height = $this->startup->site_config->player_height;
 		switch($file->type)
 		{
 			case 'flv':
-				$data['icon'] = 'tv';
-				$data['code'] = <<<EOF
-          <video id="player2" controls="controls" width="470" height="320" preload="none">
-            <source type="video/x-flv" src="$src">
-            <object width="640" height="360" type="application/x-shockwave-flash" data="$swf">
-              <param name="movie" value="$swf" />
-              <param name="flashvars" value="controls=true&amp;file=$src" />
-            </object>
-          </video>
-          <script type="text/javascript">
-            $('audio,video').mediaelementplayer({
-              success: function(player, node) {
-                $('#' + node.id + '-mode').html('mode: shim'); //+ player.pluginType);
-              }
-            });
-          </script>
-
-EOF;
 				$flvplayer = site_url('players/flvplayer.swf');
 				$express = site_url('players/expressInstall.swf');
+				$data['icon'] = 'tv';
 				$data['code'] = <<<EOF
           <script type="text/javascript">
             var flashvarsVideo = {
@@ -183,18 +169,22 @@ EOF;
             var attributes = {
                 id:"JarisFLVPlayer"
             };
-            swfobject.embedSWF("$flvplayer", "flvplayer", "470", "320", "10.0.0", "$express", flashvarsVideo, params, attributes);
+            swfobject.embedSWF("$flvplayer", "flvplayer", "$player_width", "$player_height", "10.0.0", "$express", flashvarsVideo, params, attributes);
           </script>
           <div id="flvplayer"></div>
 
 EOF;
 			break;
 			case 'mp4':
+			case 'm4v':
+			case 'mov':
+			case 'wmv':
+				$type = $file->type;
 				$data['icon'] = 'tv';
 				$data['code'] = <<<EOF
-          <video id="player2" controls="controls" width="470" height="320" preload="none">
-            <source type="video/mp4" src="$src">
-            <object width="640" height="360" type="application/x-shockwave-flash" data="$swf">
+          <video id="player2" controls="controls" width="$player_width" height="$player_height" preload="none">
+            <source type="video/$type" src="$src">
+            <object width="$player_width" height="$player_height" type="application/x-shockwave-flash" data="$swf">
               <param name="movie" value="$swf" />
               <param name="flashvars" value="controls=true&amp;file=$src" />
             </object>
