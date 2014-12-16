@@ -138,6 +138,10 @@ class Update extends CI_Controller {
 		$update_string = '- Captcha Image Size editable in admin page';
 		$version[] = array('version' => '3000040', 'description' => $update_string);
 
+		// 3.0.0 Beta5
+		$update_string = '- Player Side editable in admin page';
+		$version[] = array('version' => '3000050', 'description' => $update_string);
+
 		return $version;
 	}
 
@@ -192,6 +196,25 @@ class Update extends CI_Controller {
 		$data = array('id' => NULL,'name' => 'captcha_width','value' => '70','description1' => 'Captcha image width:','description2' => '','group' => 0,'type' => 'text','invincible' => 1);
 		$this->db->insert('config', $data);
 		$data = array('id' => NULL,'name' => 'captcha_height','value' => '20','description1' => 'Captcha image height:','description2' => '','group' => 0,'type' => 'text','invincible' => 1);
+		$this->db->insert('config', $data);
+
+		$this->_set_db_version();
+		return TRUE;
+	}
+
+	private function _update_3000050()
+	{
+		$query = $this->db->get_where('config', array('name' => 'player_width'));
+		if($query->num_rows() > 0)
+		{
+			$this->updated = FALSE;
+			$this->_set_db_version();
+			return false;
+		}
+
+		$data = array('id' => NULL,'name' => 'player_width','value' => '470','description1' => 'Player width:','description2' => '','group' => 0,'type' => 'text','invincible' => 1);
+		$this->db->insert('config', $data);
+		$data = array('id' => NULL,'name' => 'player_height','value' => '320','description1' => 'Player height:','description2' => '','group' => 0,'type' => 'text','invincible' => 1);
 		$this->db->insert('config', $data);
 
 		$this->_set_db_version();

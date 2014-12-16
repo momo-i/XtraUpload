@@ -35,7 +35,7 @@ class Captcha extends CI_Controller {
 		return;
 	}
 
-	public function get($old)
+	public function get($old=null)
 	{
 		if($this->session->flashdata('captcha'))
 		{
@@ -57,7 +57,7 @@ class Captcha extends CI_Controller {
 		$vals = array(
 			'img_path'  => ROOTPATH.'/temp/',
 			'word'	  => $this->users->gen_pass(3, false),
-			'img_width' => $img_widgh,
+			'img_width' => $img_width,
 			'img_height' => $img_height,
 			'img_url'   => base_url().'temp/',
 			'font_path' => BASEPATH.'fonts/MyriadWebPro-Bold.ttf'

@@ -44,6 +44,8 @@ if(isset($include_url_upload_js) && $include_url_upload_js === TRUE)
 <?php
 }
 ?>
+    <script src="<?php echo base_url(); ?>players/mediaelement-and-player.min.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>players/mediaelementplayer.min.css">
   </head>
   <body dir="<?php echo $this->startup->is_rtl; ?>">
     <!-- wrap starts here -->
