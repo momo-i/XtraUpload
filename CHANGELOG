@@ -1,3 +1,6 @@
+	v3.0.0-Beta5
+		- Update player size editable on admin page.
+		- Fix flv player
 	v3.0.0-Beta4
 		- Update captcha size editable on admin page.
 		- Update mediaplayer version 2.16.2 (MediaElement.js)
