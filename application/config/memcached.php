@@ -32,28 +32,27 @@
  * @copyright	Copyright (c) 2014, British Columbia Institute of Technology (http://bcit.ca/)
  * @license	http://opensource.org/licenses/MIT	MIT License
  * @link	http://codeigniter.com
- * @since	Version 1.0.0
+ * @since	Version	2.0.0
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
-| Hooks
+| Memcached settings
 | -------------------------------------------------------------------------
-| This file lets you define "hooks" to extend CI without hacking the core
-| files.  Please see the user guide for info:
+| Your Memcached servers can be specified below.
 |
-|	http://codeigniter.com/user_guide/general/hooks.html
+|	See: http://codeigniter.com/user_guide/libraries/caching.html#memcached
 |
 */
-
-$hook['pre_system'][] = array(
-	'class' => 'XuClass',
-	'function' => 'index',
-	'filename' => 'Xuclass.php',
-	'filepath' => 'hooks',
+$config = array(
+	'default' => array(
+		'hostname' => '127.0.0.1',
+		'port'     => '11211',
+		'weight'   => '1',
+	),
 );
 
-/* End of file hooks.php */
-/* Location: ./application/config/hooks.php */
+/* End of file memcached.php */
+/* Location: ./application/config/memcached.php */

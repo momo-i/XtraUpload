@@ -1,10 +1,48 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/**
+ * CodeIgniter
+ *
+ * An open source application development framework for PHP 5.2.4 or newer
+ *
+ * This content is released under the MIT License (MIT)
+ *
+ * Copyright (c) 2014, British Columbia Institute of Technology
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * @package	CodeIgniter
+ * @author	EllisLab Dev Team
+ * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (http://ellislab.com/)
+ * @copyright	Copyright (c) 2014, British Columbia Institute of Technology (http://bcit.ca/)
+ * @license	http://opensource.org/licenses/MIT	MIT License
+ * @link	http://codeigniter.com
+ * @since	Version 1.0.0
+ * @filesource
+ */
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 /*
 | -------------------------------------------------------------------
 | SMILEYS
 | -------------------------------------------------------------------
 | This file contains an array of smileys for use with the emoticon helper.
-| Individual images can be used to replace multiple simileys.  For example:
+| Individual images can be used to replace multiple smileys.  For example:
 | :-) and :) use the same image replacement.
 |
 | Please see user guide for more info:
@@ -57,10 +95,10 @@ $smileys = array(
 	':coolcheese:'	=>	array('shade_cheese.gif',	'19',	'19',	'cool cheese'),
 	':vampire:'		=>	array('vampire.gif',		'19',	'19',	'vampire'),
 	':snake:'		=>	array('snake.gif',			'19',	'19',	'snake'),
-	':exclaim:'		=>	array('exclaim.gif',		'19',	'19',	'excaim'),
-	':question:'	=>	array('question.gif',		'19',	'19',	'question') // no comma after last item
+	':exclaim:'		=>	array('exclaim.gif',		'19',	'19',	'exclaim'),
+	':question:'	=>	array('question.gif',		'19',	'19',	'question')
 
-		);
+);
 
 /* End of file smileys.php */
 /* Location: ./application/config/smileys.php */

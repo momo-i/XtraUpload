@@ -179,6 +179,8 @@ EOF;
 			case 'm4v':
 			case 'mov':
 			case 'wmv':
+			case 'avi':
+			case 'mpg':
 				$type = $file->type;
 				$data['icon'] = 'tv';
 				$data['code'] = <<<EOF

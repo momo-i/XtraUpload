@@ -316,6 +316,13 @@ class Startup {
 		$this->CI->xu_api->embed->add_embed_type('flv', array('width' => '470', 'height' => '320', 'speed' => '4000'));
 		// Enable embed code for MP4s
 		$this->CI->xu_api->embed->add_embed_type('mp4', array('width' => '470', 'height' => '320', 'speed' => '8000'));
+
+		// Enable embed code for MP4s
+		$this->CI->xu_api->embed->add_embed_type('mpg', array('width' => '470', 'height' => '320', 'speed' => '8000'));
+		// Enable embed code for MP4s
+		$this->CI->xu_api->embed->add_embed_type('wmv', array('width' => '470', 'height' => '320', 'speed' => '8000'));
+		// Enable embed code for MP4s
+		$this->CI->xu_api->embed->add_embed_type('avi', array('width' => '470', 'height' => '320', 'speed' => '8000'));
 	}
 
 	// new functions
