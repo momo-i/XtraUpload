@@ -126,26 +126,14 @@ class XU_Lang extends CI_Lang {
 
 	// --------------------------------------------------------------------
 
-	/**
-	 * Language line
-	 *
-	 * Fetches a single line of text from the language array
-	 *
-	 * @param	string	$line		Language line key
-	 * @param	bool	$log_errors	Whether to log an error message if the line is not found
-	 * @return	string	Translation
-	 */
-	public function line($line, $log_errors = TRUE)
+	public function line($line = 'nolang', $lines = NULL, $int = 0)
 	{
-		$value = isset($this->language[$line]) ? $this->language[$line] : FALSE;
-
-		// Because killer robots like unicorns!
-		if ($value === FALSE && $log_errors === TRUE)
+		$this->_check_database($line);
+		if($lines && $int)
 		{
-			log_message('error', 'Could not find the language line "'.$line.'"');
+			return $this->_translate->plural($line, $lines, $int);
 		}
-
-		return $value;
+		return $this->_translate->_($line);
 	}
 
 	public function get_language($lang = 'en_US')
