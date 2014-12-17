@@ -142,6 +142,10 @@ class Update extends CI_Controller {
 		$update_string = '- Player Side editable in admin page';
 		$version[] = array('version' => '3000050', 'description' => $update_string);
 
+		// 3.0.0 RC1
+		$update_string = '- Rewrite code for CodeIgniter 3.x';
+		$version[] = array('version' => '3000100', 'description' => $update_string);
+
 		return $version;
 	}
 
@@ -217,6 +221,12 @@ class Update extends CI_Controller {
 		$data = array('id' => NULL,'name' => 'player_height','value' => '320','description1' => 'Player height:','description2' => '','group' => 0,'type' => 'text','invincible' => 1);
 		$this->db->insert('config', $data);
 
+		$this->_set_db_version();
+		return TRUE;
+	}
+
+	private function _update_3000100()
+	{
 		$this->_set_db_version();
 		return TRUE;
 	}
