@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class XU extends CI_Model {
+class Xu extends CI_Model {
 
 	public function __construct()
 	{
@@ -10,7 +10,7 @@ class XU extends CI_Model {
 	public function get_version()
 	{
 		$query = $this->db->query('SHOW TABLES');
-		if($query->num_rows == 0)
+		if($query->num_rows() == 0)
 		{
 			return false;
 		}

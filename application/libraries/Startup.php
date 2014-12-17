@@ -5,6 +5,7 @@ class Startup {
 	public $skin = "";
 	public $site_config = "";
 	public $group_config = "";
+	public $db_version = "";
 	private $CI = "";
 	private $is_installed = FALSE;
 	private $is_upgradable = FALSE;
@@ -23,6 +24,12 @@ class Startup {
 		$this->CI =& get_instance();
 		// Load the DB and session class
 		$this->CI->load->database();
+
+        // Load General Functions and XU API
+        $this->CI->load->library(array('functions', 'xu_api'));
+
+        define('XU_VERSION_READ', $this->CI->functions->parse_version(XU_VERSION));
+        define('XU_DB_VERSION_READ', $this->CI->functions->parse_version($this->db_version));
 
 		$this->_check_setup();
 
@@ -51,7 +58,7 @@ class Startup {
 		}
 		elseif($this->is_upgradable && !preg_match('#^install#', uri_string()))
 		{
-			$this->CI->load->library('session');
+			$this->CI->load->driver('session');
 			$this->_get_config();
 			$this->_get_locale();
 			redirect('install/update');
@@ -67,7 +74,7 @@ class Startup {
 			return;
 		}
 
-		$this->CI->load->library('session');
+		$this->CI->load->driver('session');
 
 		// Load 2 helpers
 		$this->CI->load->helper(array('url', 'cssbutton'));
@@ -98,10 +105,10 @@ class Startup {
 		));
 
 		// Load General Functions and XU API
-		$this->CI->load->library(array('functions', 'xu_api'));
+		//$this->CI->load->library(array('functions', 'xu_api'));
 
-		define('XU_VERSION_READ', $this->CI->functions->parse_version(XU_VERSION));
-		define('XU_DB_VERSION_READ', $this->CI->functions->parse_version($this->db_version));
+		//define('XU_VERSION_READ', $this->CI->functions->parse_version(XU_VERSION));
+		//define('XU_DB_VERSION_READ', $this->CI->functions->parse_version($this->db_version));
 		// Load site menus
 		$this->_setup_menu();
 		// Load the Files Subsystem and the USers subsystem

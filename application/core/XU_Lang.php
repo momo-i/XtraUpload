@@ -1,19 +1,41 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
 /**
  * CodeIgniter
  *
- * An open source application development framework for PHP 5.1.6 or newer
+ * An open source application development framework for PHP 5.2.4 or newer
  *
- * @package		CodeIgniter
- * @author		ExpressionEngine Dev Team
- * @copyright	Copyright (c) 2008 - 2011, EllisLab, Inc.
- * @license		http://codeigniter.com/user_guide/license.html
- * @link		http://codeigniter.com
- * @since		Version 1.0
+ * This content is released under the MIT License (MIT)
+ *
+ * Copyright (c) 2014, British Columbia Institute of Technology
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * @package	CodeIgniter
+ * @author	EllisLab Dev Team
+ * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (http://ellislab.com/)
+ * @copyright	Copyright (c) 2014, British Columbia Institute of Technology (http://bcit.ca/)
+ * @license	http://opensource.org/licenses/MIT	MIT License
+ * @link	http://codeigniter.com
+ * @since	Version 1.0.0
  * @filesource
  */
-
-// ------------------------------------------------------------------------
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Language Class
@@ -21,30 +43,45 @@
  * @package		CodeIgniter
  * @subpackage	Libraries
  * @category	Language
- * @author		ExpressionEngine Dev Team
+ * @author		EllisLab Dev Team
  * @link		http://codeigniter.com/user_guide/libraries/language.html
  */
 class XU_Lang extends CI_Lang {
 
+	/**
+	 *
+	 */
 	private $_default_locale;
+
+	/**
+	 *
+	 */
 	private $_translate;
 
+	/**
+	 *
+	 */
 	private $_dbtypes = array();
 
 	/**
-	 * Constructor
+	 * Class constructor
 	 *
-	 * @access	public
+	 * @return	void
 	 */
 	public function __construct()
 	{
 		parent::__construct();
-		log_message('debug', "XtraUpload Zend Locale Class Initialized");
-		try {
+		log_message('debug', 'XtraUpload Zend Locale Class Initialized');
+
+		try
+		{
 			$this->_default_locale = new Zend_Locale();
-		} catch(Exception $e) {
+		}
+		catch(Exception $e)
+		{
 			$this->_default_locale = new Zend_Locale('en_US');
 		}
+
 		if( ! Zend_Locale::isLocale($this->_default_locale, true, false))
 		{
 			if( ! Zend_Locale::isLocale($this->_default_locale, false, false))
@@ -52,11 +89,13 @@ class XU_Lang extends CI_Lang {
 				throw new Zend_Locale_Exception("The locale '$locale' is no known locale");
 			}
 		}
+
 		$locale = APPPATH."/language/{$this->_default_locale}/xtraupload.mo";
 		if( ! is_file($locale))
 		{
 			$this->_default_locale->setLocale('en_US');
 		}
+
 		$this->_default_locale = new Zend_Locale($this->_default_locale);
 		$this->_translate = new Zend_Translate('gettext', APPPATH."/language/{$this->_default_locale}/xtraupload.mo", $this->_default_locale->getLanguage());
 
@@ -83,26 +122,30 @@ class XU_Lang extends CI_Lang {
 			'db_column_definition_required' => $this->lang('A column definition is required for that operation.'),
 			'db_error_heading' => $this->lang('A Database Error Occurred'),
 		);
-
 	}
 
 	// --------------------------------------------------------------------
 
 	/**
-	 * Fetch a single line of text from the language array
+	 * Language line
 	 *
-	 * @access	public
-	 * @param	string	$line	the language line
-	 * @return	string
+	 * Fetches a single line of text from the language array
+	 *
+	 * @param	string	$line		Language line key
+	 * @param	bool	$log_errors	Whether to log an error message if the line is not found
+	 * @return	string	Translation
 	 */
-	public function line($line = 'nolang', $lines = NULL, $int = 0)
+	public function line($line, $log_errors = TRUE)
 	{
-		$this->_check_database($line);
-		if($lines && $int)
+		$value = isset($this->language[$line]) ? $this->language[$line] : FALSE;
+
+		// Because killer robots like unicorns!
+		if ($value === FALSE && $log_errors === TRUE)
 		{
-			return $this->_translate->plural($line, $lines, $int);
+			log_message('error', 'Could not find the language line "'.$line.'"');
 		}
-		return $this->_translate->_($line);
+
+		return $value;
 	}
 
 	public function get_language($lang = 'en_US')
@@ -135,9 +178,12 @@ class XU_Lang extends CI_Lang {
 			$mofile = APPPATH."language/{$this->_default_locale}/xtraupload.mo";
 		}
 		$language = $this->_default_locale->getLanguage() ? $this->_default_locale->getLanguage() : 'en';
-		try {
+		try
+		{
 			$this->_translate = new Zend_Translate('gettext', $mofile, $language);
-		} catch(Exception $e) {
+		}
+		catch(Exception $e)
+		{
 			$this->_translate = new Zend_Translate('gettext', $mofile, 'en');
 		}
 	}
@@ -156,7 +202,6 @@ class XU_Lang extends CI_Lang {
 	}
 
 }
-// END Language Class
 
 /* End of file Lang.php */
 /* Location: ./system/core/Lang.php */
