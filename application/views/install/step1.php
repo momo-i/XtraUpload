@@ -37,7 +37,7 @@
               </p>
               <?php printf(lang('An online copy of this license can be found at %s'), '<a href="http://www.opensource.org/licenses/Apache-2.0">http://www.opensource.org/licenses/Apache-2.0</a>'); ?><br>
               <textarea name="textarea" readonly="readonly" cols="80" rows="15" wrap="off" id="textarea">
-                <?php echo file_get_contents(realpath(BASEPATH.'../LICENSE')); ?>
+                <?php echo $license; ?>
               </textarea>
               <p>
                 <strong>

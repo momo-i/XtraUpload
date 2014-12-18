@@ -32,8 +32,9 @@ class Step1 extends CI_Controller {
 
 	public function index()
 	{
+		$data['license'] = file_get_contents(realpath(BASEPATH.'../LICENSE'));
 		$this->load->view('install/header');
-		$this->load->view('install/step1');
+		$this->load->view('install/step1', $data);
 		$this->load->view('install/footer');
 	}
 
