@@ -146,7 +146,7 @@ class Files extends CI_Controller {
             var flashvarsVideo = {
                 source: "$src",
                 type: "video",
-                streamtype: "file",
+                streamtype: "http",
                 server: "",//Used for rtmp streams
                 duration: "",
                 poster: "",

@@ -394,7 +394,7 @@ class Files_db extends CI_Model {
 		$this->db->where('secid', $fid)->update('refrence', $data);
 	}
 	
-	public function new_file($file, $uid, $user, $is_image, $server, $remote_upload, $select='')
+	public function new_file($file, $uid, $user, $is_image, $server, $remote_upload, $select='', $duration = 0)
 	{
 		// Get MD5 Hash of uploaded file
 		$md5 = md5_file($file);
