@@ -20,7 +20,7 @@ function copyToClipboard(inElement)
 			document.body.appendChild(divholder);
 		}
 		document.getElementById(flashcopier).innerHTML = '';
-		var divinfo = '<embed src="'+___baseUrl()+'/flash/_clipboard.swf" FlashVars="clipboard='+encodeURIComponent(inElement.value)+'" width="0" height="0" type="application/x-shockwave-flash"></embed>';
+		var divinfo = '<embed src="'+___baseUrl()+'/assets/flash/_clipboard.swf" FlashVars="clipboard='+encodeURIComponent(inElement.value)+'" width="0" height="0" type="application/x-shockwave-flash"></embed>';
 		document.getElementById(flashcopier).innerHTML = divinfo;
 	}
 }

@@ -1,7 +1,7 @@
 <?php
 $rand = mt_rand();
 ?>
-var chart<?php echo $rand; ?> = new FusionCharts("<?php echo base_url(); ?>flash/charts/Column3D.swf", "ChartId", "<?php echo $height; ?>", "<?php echo $width; ?>", "0", "0");
+var chart<?php echo $rand; ?> = new FusionCharts("<?php echo base_url(); ?>assets/flash/charts/Column3D.swf", "ChartId", "<?php echo $height; ?>", "<?php echo $width; ?>", "0", "0");
 chart<?php echo $rand; ?>.setDataXML("");
 chart<?php echo $rand; ?>.render("chart_data");
 

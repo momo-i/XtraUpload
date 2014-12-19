@@ -131,15 +131,15 @@ class Files extends CI_Controller {
 
 		// video code
 		$src = site_url('files/stream/'.$file->file_id.'/'.md5($this->config->config['encryption_key'].$file->file_id.$this->input->ip_address()).'/'.$file->link_name);
-		$swf = site_url('players/flashmediaelement.swf');
+		$swf = base_url('assets/players/flashmediaelement.swf');
 		// player size
 		$player_width = $this->startup->site_config->player_width;
 		$player_height = $this->startup->site_config->player_height;
 		switch($file->type)
 		{
 			case 'flv':
-				$flvplayer = site_url('players/flvplayer.swf');
-				$express = site_url('players/expressInstall.swf');
+				$flvplayer = base_url('assets/players/flvplayer.swf');
+				$express = base_url('assets/players/expressInstall.swf');
 				$data['icon'] = 'tv';
 				$data['code'] = <<<EOF
           <script type="text/javascript">
