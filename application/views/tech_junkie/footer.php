@@ -51,6 +51,7 @@ if($this->startup->site_config->show_recent_uploads)
               <h3 class="no-line">&nbsp;</h3>
             </div>
             <div class="col3">
+<?php if($this->startup->site_config->show_about) { ?>
               <h3><?php echo lang('About'); ?></h3>
               <p>
                 <a href="http://xtrafile.com"><img src="<?php echo base_url(); ?>images/thumb.gif" width="50" height="50" alt="icon" class="float-left"></a>
@@ -63,6 +64,7 @@ if($this->startup->site_config->show_recent_uploads)
                 <?php echo lang('The documentation is extensive, concise, and clear.'); ?><br>
                 <?php echo lang('Database abstraction, page caching, configurable downloads, secure file storage, secure file links, and so much more combine to create the new leader in file hosting technology, XtraUpload. Oh, and its Free.'); ?><br>
               </p>
+<?php } ?>
             </div>
           <!-- footer-columns ends -->
           </div>    

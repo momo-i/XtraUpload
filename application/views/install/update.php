@@ -20,7 +20,7 @@ if(isset($error_message))
               <p>
                 <strong><?php printf(lang('Update %s from %s'),XU_VERSION_READ ,XU_DB_VERSION_READ); ?></strong>
               </p>
-              <p><?php echo $flash_message; ?></p>
+              <p><?php echo isset($flash_message) ? $flash_message : ""; ?></p>
 <?php
 if($this->updated)
 {

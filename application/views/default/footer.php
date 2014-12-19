@@ -48,7 +48,7 @@ if($this->startup->site_config->show_recent_uploads)
           </div>
           <div class="col float-left"></div>
           <div class="col2 float-right">
-<?php if($about) { ?>
+<?php if($this->startup->site_config->show_about) { ?>
             <h3><?php echo lang('About'); ?></h3>
             <p>
               <a href="http://xtrafile.com"><img src="<?php echo base_url(); ?>images/thumb.gif" width="50" height="50" alt="icon" class="float-left"></a>

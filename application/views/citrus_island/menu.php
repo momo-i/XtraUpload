@@ -76,6 +76,7 @@ if($this->startup->site_config->show_recent_uploads)
         </ul>
 <?php
 }
+if($this->startup->site_config->show_about) {
 ?>
         <h3><?php echo lang('About'); ?></h3>
         <p>
@@ -90,3 +91,4 @@ if($this->startup->site_config->show_recent_uploads)
           <?php echo lang('The documentation is extensive, concise, and clear.'); ?><br>
           <?php echo lang('Database abstraction, page caching, configurable downloads, secure file storage, secure file links, and so much more combine to create the new leader in file hosting technology, XtraUpload. Oh, and its Free.'); ?><br>
         </p>
+<?php } ?>
