@@ -31,6 +31,16 @@ class Startup {
         define('XU_VERSION_READ', $this->CI->functions->parse_version(XU_VERSION));
         define('XU_DB_VERSION_READ', $this->CI->functions->parse_version($this->db_version));
 
+		$locales = glob(APPPATH.'language/*');
+		$this->available_locale = array();
+		foreach($locales as $locale)
+		{
+			$locale = basename($locale);
+			if(!isset($this->CI->config->config['available_lang'][$locale]))
+				continue;
+			$this->available_locale[$locale] = $this->CI->config->config['available_lang'][$locale];
+		}
+
 		$this->_check_setup();
 
 		if( ! isset($this->CI->config->config['is_installed']))

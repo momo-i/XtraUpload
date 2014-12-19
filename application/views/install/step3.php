@@ -136,8 +136,7 @@
                 </div>
                 <td class="pformright">
                   <select name="sql_engine">
-                    <option selected="selected" value="mysql">MySQL</option>
-                    <option value="mysqli">MySQLi</option>
+                    <option selected="selected" value="mysqli">MySQLi</option>
                     <option value=mssql"">MSSQL</option>
                     <option value="postgresql">PostgreSQL</option>
                     <option value="oci8">Oracle 8i</option>

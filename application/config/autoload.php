@@ -140,7 +140,7 @@ $autoload['helper'] = array('url', 'language', 'security');
 |
 */
 
-$autoload['config'] = array();
+$autoload['config'] = array('language');
 
 
 /*

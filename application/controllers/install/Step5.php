@@ -191,13 +191,19 @@ class Step5 extends CI_Controller {
 		$data = array('id' =>  NULL, 'name' => '_db_version', 'value' => $this->_db_version, 'description1' => '', 'description2' => '', 'group' => 0, 'type' => 'text', 'invincible' => 1);
 		$this->db->insert('config', $data);
 
-		$data = array('id' => NULL, 'name' => 'locale', 'value' => $this->input->post('locale'), 'description1' => 'Site Locale', 'description2' => '', 'group' => 0, 'type' => 'select', 'invincible' => 1);
+		$data = array('id' => NULL, 'name' => 'locale', 'value' => 'en_US', 'description1' => 'Site Locale', 'description2' => '', 'group' => 0, 'type' => 'select', 'invincible' => 1);
 		$this->db->insert('config', $data);
 
 		$data = array('id' => NULL,'name' => 'captcha_width','value' => '70','description1' => 'Captcha image width:','description2' => '','group' => 0,'type' => 'text','invincible' => 1);
 		$this->db->insert('config', $data);
 
 		$data = array('id' => NULL,'name' => 'captcha_height','value' => '20','description1' => 'Captcha image height:','description2' => '','group' => 0,'type' => 'text','invincible' => 1);
+		$this->db->insert('config', $data);
+
+		$data = array('id' => NULL,'name' => 'player_width','value' => '470','description1' => 'Player width:','description2' => '','group' => 0,'type' => 'text','invincible' => 1);
+		$this->db->insert('config', $data);
+
+		$data = array('id' => NULL,'name' => 'player_height','value' => '320','description1' => 'Player height:','description2' => '','group' => 0,'type' => 'text','invincible' => 1);
 		$this->db->insert('config', $data);
 
 		// counters Table

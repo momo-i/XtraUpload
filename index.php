@@ -286,7 +286,7 @@ switch (ENVIRONMENT)
 
 	if(!file_exists(APPPATH.'config/config.php'))
 	{
-		@rename(APPPATH.'config/config.php.dist', APPPATH.'config/config.php');
+		@copy(APPPATH.'config/config.php.dist', APPPATH.'config/config.php');
 		if(!file_exists(APPPATH.'config/config.php'))
 		{
 			exit('Cannot rename config.php.dist to config.php. Please change '.APPPATH.'config/config.php.dist manually.');
@@ -295,7 +295,7 @@ switch (ENVIRONMENT)
 
 	if(!file_exists(APPPATH.'config/database.php'))
 	{
-		@rename(APPPATH.'config/database.php.dist', APPPATH.'config/database.php');
+		@copy(APPPATH.'config/database.php.dist', APPPATH.'config/database.php');
 	}
 
 	if(PHP_SAPI == 'cli' AND !defined('IN_CRON'))
