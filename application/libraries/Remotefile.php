@@ -325,7 +325,7 @@ class CI_Remotefile {
 				'fid' => $fid)
 		);
 		
-		$fname = $this->CI->ftp->download_xu2($path, $fid, $max_size);
+		$fname = $this->CI->ftp->download_xu($path, $fid, $max_size);
 		if(!$fname)
 		{
 			$this->error = 'CAN NOT FTP TRANSFER';

@@ -178,13 +178,11 @@ class Users extends CI_Model {
 		// Check if user exists in DB 
 		$query = $this->db->get_where('users', array('username' => $user, 'status' => 1, 'password' => md5($this->config->config['encryption_key'].$pass)));
 		$num = $query->num_rows();
-		
 		// If there is a user
 		if($num == 1)
 		{
 			// Get user data and setup session
 			$user_data = $query->row();
-			
 			$newdata = array(
 					   'username'  	=> $user,
 					   'id'			=> $user_data->id,
