@@ -19,6 +19,11 @@ lang('Show a preview of some file types on download(mp3, wmv, mov) and an embed 
 lang('Show Recent Uploads');
 lang('Show a list of the 5 most recently uploaded files?');
 lang('Site Locale');
+lang('Captcha image width:');
+lang('Captcha image height:');
+lang('Player width:');
+lang('Player height:');
+lang('Show About Messages');
 
 /* End of file lang_db.php */
 /* Location: ./application/config/lang_db.php */

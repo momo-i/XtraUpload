@@ -146,6 +146,11 @@ class Update extends CI_Controller {
 		$update_string = '- Rewrite code for CodeIgniter 3.x';
 		$version[] = array('version' => '3000100', 'description' => $update_string);
 
+		// 3.0.0 RC2
+		$update_string = '- Fix installation<br>';
+		$update_string .= '- Update show/hide about message on admin page.';
+		$version[] = array('version' => '3000200', 'description' => $update_string);
+
 		return $version;
 	}
 
@@ -229,6 +234,21 @@ class Update extends CI_Controller {
 	{
 		$this->_set_db_version();
 		return TRUE;
+	}
+
+	private function _update_3000200()
+	{
+		$query = $this->db->get_where('config', array('name' => 'show_about'));
+		if($query->num_rows() > 0)
+		{
+			$this->updated = FALSE;
+			$this->_set_db_version();
+			return false;
+		}
+
+		$data = array('id' =>  NULL, 'name' => 'show_about', 'value' => '1', 'description1' => 'Show About Messages', 'description2' => 'Yes|-|No<br /><br />Show a list of the About messages?', 'group' => 0, 'type' => 'yesno', 'invincible' => 1);
+		$this->db->insert('config', $data);
+
 	}
 
 	private function _set_db_version()
