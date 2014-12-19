@@ -190,7 +190,7 @@ class Startup {
 			$q = $this->CI->db->get('config');
 			foreach($q->result() as $row)
 			{
-				$this->site_config->{$row->name} = $row->value;
+				@$this->site_config->{@$row->name} = @$row->value;
 			}
 			file_put_contents(CACHEPATH . $config_file_name, base64_encode(json_encode($this->site_config)));
 		}

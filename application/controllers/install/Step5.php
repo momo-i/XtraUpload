@@ -1114,7 +1114,7 @@ class Step5 extends CI_Controller {
 			'ip' => $this->input->ip_address(),
 			'email' => $this->input->post('email'),
 			'group' => 2,
-			'locale' => $this->input->post('locale')
+			'locale' => 'en_US'
 		);
 		$this->db->insert('users', $data);
 
