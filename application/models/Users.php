@@ -76,7 +76,7 @@ class Users extends CI_Model {
 		}
 		else
 		{
-			log_message('debug', 'check_user_auth FALSE');
+			//log_message('debug', 'check_user_auth FALSE '.print_r($this->session->userdata(),true));
 			$this->load->vars(array('loggedin' => false));
 			if(!stristr(uri_string(),'user/login'))
 			{
@@ -194,6 +194,7 @@ class Users extends CI_Model {
 				   );
 	
 			$this->session->set_userdata($newdata);
+			//log_message('debug', 'process_login(): '. print_r($this->session->userdata(), true));
 			return true;
 		}
 		else
