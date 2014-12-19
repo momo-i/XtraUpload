@@ -33,7 +33,7 @@ span.alert
 	color: #c00;
 	border-top: 3px solid #fe7b7a;
 	border-bottom: 3px solid #fe7b7a;
-	background: #FFD6D6 url(../img/icons/close_24.png) 10px 50% no-repeat;
+	background: #FFD6D6 url(../images/icons/close_24.png) 10px 50% no-repeat;
 }
 
 span.info
@@ -41,7 +41,7 @@ span.info
 	color: #0055BB;
 	border-top: 3px solid #629de3;
 	border-bottom: 3px solid #629de3;
-	background: #D8E5F8 url(../img/icons/about_24.png) 10px 50% no-repeat;
+	background: #D8E5F8 url(../images/icons/about_24.png) 10px 50% no-repeat;
 }
 
 span.note
@@ -49,7 +49,7 @@ span.note
 	color: #B79000;
 	border-top: 3px solid #fde179;
 	border-bottom: 3px solid #fde179;
-	background: #FEF6D8 url(../img/icons/on_24.png) 10px 50% no-repeat;
+	background: #FEF6D8 url(../images/icons/on_24.png) 10px 50% no-repeat;
 }
 
 span.download
@@ -57,7 +57,7 @@ span.download
 	color: #57861A;
 	border-top: 3px solid #c2df88;
 	border-bottom: 3px solid #c2df88;
-	background: #EEF7DD url(../img/icons/backup_24.png) 10px 50% no-repeat;
+	background: #EEF7DD url(../images/icons/backup_24.png) 10px 50% no-repeat;
 }
 
 .pagination

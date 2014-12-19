@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/user_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/user_32.png" class="nb" alt="">
           <?php echo lang('Manage Users - Search'); ?> 
         </h2>
         <div class="users">
@@ -7,10 +7,10 @@
           <form action="<?php echo site_url('admin/user/'); ?>" id="userAdmin" method="post" style="padding:0; margin:0; border:0;">
             <div id="massActions" style="clear:both; padding-top:4px;">
               <div class="float-left">
-                <?php echo generate_link_button(lang('Delete'), 'javascript:;', base_url().'img/icons/close_16.png', 'red', array('onclick' => 'delete_submit()')); ?>
+                <?php echo generate_link_button(lang('Delete'), 'javascript:;', base_url().'assets/images/icons/close_16.png', 'red', array('onclick' => 'delete_submit()')); ?>
               </div>
               <div class="float-right">
-                  <?php echo generate_link_button(lang('Search'), site_url('admin/user/search'), base_url().'img/icons/search_16.png', NULL); ?>
+                  <?php echo generate_link_button(lang('Search'), site_url('admin/user/search'), base_url().'assets/images/icons/search_16.png', NULL); ?>
               </div>
             </div>
             <h3 style="clear:both;">
@@ -66,7 +66,7 @@ foreach ($users->result() as $user)
 	{
 ?>
                     <a href="<?php echo site_url('admin/user/turn_on/'.$user->id); ?>">
-                      <img src="<?php echo base_url(); ?>img/icons/off_16.png" class="nb" alt="<?php echo lang('Activate User'); ?>" title="<?php echo lang('Activate User'); ?>">
+                      <img src="<?php echo base_url(); ?>assets/images/icons/off_16.png" class="nb" alt="<?php echo lang('Activate User'); ?>" title="<?php echo lang('Activate User'); ?>">
                     </a>
 <?php
 	}
@@ -74,20 +74,20 @@ foreach ($users->result() as $user)
 	{
 ?>
                     <a href="<?php echo site_url('admin/user/turn_off/'.$user->id); ?>">
-                      <img src="<?php echo base_url(); ?>img/icons/on_16.png" class="nb" alt="<?php echo lang('Deactivate User'); ?>" title="<?php echo lang('Deactivate User'); ?>">
+                      <img src="<?php echo base_url(); ?>assets/images/icons/on_16.png" class="nb" alt="<?php echo lang('Deactivate User'); ?>" title="<?php echo lang('Deactivate User'); ?>">
                     </a>
 <?php
 	}
 ?>
                     <a href="<?php echo site_url('admin/user/edit/'.$user->id); ?>">
-                      <img src="<?php echo base_url(); ?>img/icons/edit_16.png" class="nb" alt="<?php echo lang('Edit'); ?>" title="<?php echo lang('Edit'); ?>">
+                      <img src="<?php echo base_url(); ?>assets/images/icons/edit_16.png" class="nb" alt="<?php echo lang('Edit'); ?>" title="<?php echo lang('Edit'); ?>">
                     </a>
 <?php
 	if($user->id != 1)
 	{
 ?>
                     <a href="<?php echo site_url('admin/user/delete/'.$user->id); ?>" onclick="return confirm('<?php echo lang('Are you sure you want to delete this user?'); ?>')">
-                      <img src="<?php echo base_url(); ?>img/icons/close_16.png" class="nb" alt="<?php echo lang('Delete'); ?>" title="<?php echo lang('Delete'); ?>">
+                      <img src="<?php echo base_url(); ?>assets/images/icons/close_16.png" class="nb" alt="<?php echo lang('Delete'); ?>" title="<?php echo lang('Delete'); ?>">
                     </a>
 <?php
 	}

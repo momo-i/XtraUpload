@@ -244,62 +244,62 @@ class Startup {
 	private function _setup_menu()
 	{
 		// load main menu links
-		$this->CI->xu_api->menus->add_main_menu_link('home', lang('Home'), 'img/other/home2_16.png');
+		$this->CI->xu_api->menus->add_main_menu_link('home', lang('Home'), 'assets/images/other/home2_16.png');
 
 		// can user access URL Uploading?
 		if($this->group_config->can_url_upload)
 		{
-			$this->CI->xu_api->menus->add_main_menu_link('upload/url', lang('URL Upload'), 'img/icons/connect_16.png');
+			$this->CI->xu_api->menus->add_main_menu_link('upload/url', lang('URL Upload'), 'assets/images/icons/connect_16.png');
 		}
 
 		// can user access search page?
 		if($this->group_config->can_search)
 		{
-			$this->CI->xu_api->menus->add_main_menu_link('files/search', lang('Search'), 'img/icons/search_16.png');
+			$this->CI->xu_api->menus->add_main_menu_link('files/search', lang('Search'), 'assets/images/icons/search_16.png');
 		}
 
 		// can user access the admin panel?
 		if($this->group_config->admin)
 		{
-			$this->CI->xu_api->menus->add_main_menu_link('admin/home', lang('Admin'), 'img/other/admin_16.png');
+			$this->CI->xu_api->menus->add_main_menu_link('admin/home', lang('Admin'), 'assets/images/other/admin_16.png');
 		}
 
 		// load either admin or user manu links
 		if(substr($this->CI->uri->uri_string(), 0, 5) == 'admin')
 		{
 			$id = $this->CI->xu_api->menus->add_admin_menu(lang('Manage'));
-			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/files/view', lang('Files'), 'img/icons/hard_disk_16.png');
-			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/transactions/view', lang('Transactions'), 'img/icons/transaction_16.png');
-			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/user/view', lang('Users'), 'img/icons/user_16.png');
+			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/files/view', lang('Files'), 'assets/images/icons/hard_disk_16.png');
+			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/transactions/view', lang('Transactions'), 'assets/images/icons/transaction_16.png');
+			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/user/view', lang('Users'), 'assets/images/icons/user_16.png');
 
 			$id = $this->CI->xu_api->menus->add_admin_menu(lang('Configure'));
-			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/config', lang('Site Config'), 'img/icons/options_16.png');
-			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/gateways/view', lang('Payment Gateways'), 'img/icons/credit_card_16.png');
-			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/extend/view', lang('Plugins'), 'img/icons/component_16.png');
-			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/skin/view', lang('Skins'), 'img/icons/colors_16.png');
-			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/server/view', lang('Servers'), 'img/other/server_16.png');
-			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/group/view', lang('User Groups'), 'img/icons/user_group_16.png');
+			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/config', lang('Site Config'), 'assets/images/icons/options_16.png');
+			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/gateways/view', lang('Payment Gateways'), 'assets/images/icons/credit_card_16.png');
+			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/extend/view', lang('Plugins'), 'assets/images/icons/component_16.png');
+			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/skin/view', lang('Skins'), 'assets/images/icons/colors_16.png');
+			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/server/view', lang('Servers'), 'assets/images/other/server_16.png');
+			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/group/view', lang('User Groups'), 'assets/images/icons/user_group_16.png');
 
 			$id = $this->CI->xu_api->menus->add_admin_menu(lang('Misc'));
-			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/menu_shortcuts/view', lang('Admin Menu Shortcuts'), 'img/icons/sticky_16.png');
-			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/email/view', lang('Mass Emailer'), 'img/icons/mail_16.png');
+			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/menu_shortcuts/view', lang('Admin Menu Shortcuts'), 'assets/images/icons/sticky_16.png');
+			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/email/view', lang('Mass Emailer'), 'assets/images/icons/mail_16.png');
 
-			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/stats/view', lang('Site Stats'), 'img/icons/chart_16.png');
-			//$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/translator', lang('Translation'), 'img/icons/spelling_16.png');
-			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/actions/view', lang('Tools/Maintenance'), 'img/icons/tools_16.png');
+			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/stats/view', lang('Site Stats'), 'assets/images/icons/chart_16.png');
+			//$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/translator', lang('Translation'), 'assets/images/icons/spelling_16.png');
+			$this->CI->xu_api->menus->add_admin_menu_link($id, '/admin/actions/view', lang('Tools/Maintenance'), 'assets/images/icons/tools_16.png');
 
-			$this->CI->xu_api->menus->add_plugin_menu_link('/admin/config/plugin', lang('Plugin Config'), 'img/icons/options_16.png');
+			$this->CI->xu_api->menus->add_plugin_menu_link('/admin/config/plugin', lang('Plugin Config'), 'assets/images/icons/options_16.png');
 
 			// Admin Menu Shortcuts Code
 			$this->CI->load->model('admin/menu_shortcuts/admin_menu_shortcuts_db');
 
 			$menu_id = $this->CI->xu_api->menus->add_admin_menu(lang('Shortcuts'));
-			$this->CI->xu_api->menus->add_admin_menu_link($menu_id, '/admin/menu_shortcuts/add/'.base64_encode($this->CI->uri->uri_string()), lang('Add This Page'), 'img/icons/add_16.png');
+			$this->CI->xu_api->menus->add_admin_menu_link($menu_id, '/admin/menu_shortcuts/add/'.base64_encode($this->CI->uri->uri_string()), lang('Add This Page'), 'assets/images/icons/add_16.png');
 
 			$links = $this->CI->admin_menu_shortcuts_db->get_shortcuts();
 			foreach($links->result() as $link)
 			{
-				$this->CI->xu_api->menus->add_admin_menu_link($menu_id, $link->link, $link->title, 'img/icons/link_16.png');
+				$this->CI->xu_api->menus->add_admin_menu_link($menu_id, $link->link, $link->title, 'assets/images/icons/link_16.png');
 			}
 
 			$new_order = array();
@@ -321,10 +321,10 @@ class Startup {
 		}
 		else
 		{
-			$this->CI->xu_api->menus->add_sub_menu_link('Files', 'home', lang('Upload'), 'img/other/upload_16.png');
-			$this->CI->xu_api->menus->add_sub_menu_link('Files', 'files/manage', lang('Manage'), 'img/other/manage-files_16.png', true);
-			$this->CI->xu_api->menus->add_sub_menu_link('Create-login', 'folder/create', lang('File Folder'), 'img/icons/folder_16.png');
-			$this->CI->xu_api->menus->add_sub_menu_link('Create-login', 'image/create_gallery', lang('Image Gallery'), 'img/other/images_16.png');
+			$this->CI->xu_api->menus->add_sub_menu_link('Files', 'home', lang('Upload'), 'assets/images/other/upload_16.png');
+			$this->CI->xu_api->menus->add_sub_menu_link('Files', 'files/manage', lang('Manage'), 'assets/images/other/manage-files_16.png', true);
+			$this->CI->xu_api->menus->add_sub_menu_link('Create-login', 'folder/create', lang('File Folder'), 'assets/images/icons/folder_16.png');
+			$this->CI->xu_api->menus->add_sub_menu_link('Create-login', 'image/create_gallery', lang('Image Gallery'), 'assets/images/other/images_16.png');
 		}
 
 		// Enable embed code for MP3s

@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/connect_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/connect_32.png" class="nb" alt="">
           <?php echo lang('URL Upload(beta)'); ?> 
         </h2>
 <?php
@@ -21,7 +21,7 @@ else
         <p>
           <label for="linkBlock">
             <a href="javascript:;" style="cursor:pointer" onclick="toggleUploadBlock()">
-              <img alt="" id="uploadImgSwitch" src="<?php echo base_url(); ?>img/other/remove_16.png" class="nb">
+              <img alt="" id="uploadImgSwitch" src="<?php echo base_url(); ?>assets/images/other/remove_16.png" class="nb">
               <?php echo lang('Remote Upload URLs, one per line'); ?> 
             </a>
           </label>
@@ -29,7 +29,7 @@ else
             <textarea id="linkBlock" name="linkBlock" cols="65" rows="15"></textarea><br>
             <span class="cssButton" style="display:block">
               <a onclick="addToQueue();" class="buttonGreen" href="javascript:;">
-                <img alt="" src="<?php echo site_url('img/icons/add_16.png'); ?>">
+                <img alt="" src="<?php echo site_url('assets/images/icons/add_16.png'); ?>">
                 <?php echo lang('Add To Queue'); ?> 
               </a>
             </span><br>
@@ -42,7 +42,7 @@ else
               <?php printf(lang('You have selected the following files for upload (%s Files).'), '<span id="summary">0</span>'); ?><br>
               <span class="alert" id="alert1" style="display:none"></span>
               <span class="alert" id="alert2" style="display:none"></span>
-              <span class="float-right"><?php echo generate_link_button(lang('Begin Upload!'), 'javascript:startUploadQueue();', base_url().'img/icons/up_16.png', 'green'); ?><br><br></span>
+              <span class="float-right"><?php echo generate_link_button(lang('Begin Upload!'), 'javascript:startUploadQueue();', base_url().'assets/images/icons/up_16.png', 'green'); ?><br><br></span>
             </p>
             <div style="clear:both"></div>
             <table border="0" style="width:98%" id="file_list_table">
@@ -50,12 +50,12 @@ else
                 <th style="width:470px" class="align-left"><?php echo lang('File Name'); ?></th>
                 <th style="width:85px">
                   <?php echo lang('Actions'); ?> 
-                  <img title="<?php echo lang('Remove All?'); ?>" src="<?php echo base_url(); ?>img/icons/delete_16.png" onclick="clearUploadQueue()" alt="<?php echo lang('Remove All?'); ?>" style="cursor:pointer" class="nb">
+                  <img title="<?php echo lang('Remove All?'); ?>" src="<?php echo base_url(); ?>assets/images/icons/delete_16.png" onclick="clearUploadQueue()" alt="<?php echo lang('Remove All?'); ?>" style="cursor:pointer" class="nb">
                 </th>
               </tr>
             </table>
             <p>
-              <span class="float-right"><?php echo generate_link_button(lang('Begin Upload!'), 'javascript:startUploadQueue();', base_url().'img/icons/up_16.png', 'green'); ?><br><br></span>
+              <span class="float-right"><?php echo generate_link_button(lang('Begin Upload!'), 'javascript:startUploadQueue();', base_url().'assets/images/icons/up_16.png', 'green'); ?><br><br></span>
             </p>
           </div>
         </div>
@@ -97,12 +97,12 @@ else
             if($('#uploadTextBlock').css('display') != 'none')
             {
               $('#uploadTextBlock').slideUp('fast');
-              $('#uploadImgSwitch').attr('src', '<?php echo base_url(); ?>img/icons/add_16.png');
+              $('#uploadImgSwitch').attr('src', '<?php echo base_url(); ?>assets/images/icons/add_16.png');
             }
             else
             {
               $('#uploadTextBlock').slideDown('fast');
-              $('#uploadImgSwitch').attr('src', '<?php echo base_url(); ?>img/other/remove_16.png');
+              $('#uploadImgSwitch').attr('src', '<?php echo base_url(); ?>assets/images/other/remove_16.png');
             }
           }
           function startUpload(id)

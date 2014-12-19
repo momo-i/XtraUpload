@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/user_32.png" alt="" class="nb">
+          <img src="<?php echo base_url(); ?>assets/images/icons/user_32.png" alt="" class="nb">
           <?php printf(lang('User Profile: %s'), '<span>'.$user->username.'</span>'); ?> 
         </h2>
         <div class="userProfile">
@@ -16,12 +16,12 @@ if($this->session->userdata('username') == $user->username)
 <?php
 }
 ?>
-            <h3><img src="<?php echo base_url(); ?>img/icons/public_16.png" alt="" class="nb"><?php echo lang('User Info'); ?></h3>
+            <h3><img src="<?php echo base_url(); ?>assets/images/icons/public_16.png" alt="" class="nb"><?php echo lang('User Info'); ?></h3>
             <p>
               <?php printf(lang('Username: %s'), ucwords($user->username)); ?><br>
               <br>
             </p>
-            <h3><img src="<?php echo base_url(); ?>img/icons/chart_16.png" alt="" class="nb"><?php echo lang('User Stats'); ?></h3>
+            <h3><img src="<?php echo base_url(); ?>assets/images/icons/chart_16.png" alt="" class="nb"><?php echo lang('User Stats'); ?></h3>
 <?php
 $num = $this->db->get_where('refrence', array('user' => $this->session->userdata('id')))->num_rows();
 ?>

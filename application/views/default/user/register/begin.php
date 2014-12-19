@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/user_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/user_32.png" class="nb" alt="">
           <?php echo lang('Register New User')?> 
         </h2>
         <?php echo $error_message; ?> 
@@ -102,7 +102,7 @@ foreach ($gates->result() as $gate)
           <label style="font-weight:bold" for="captcha"><?php echo lang('Security Test - Type the letters you see below:'); ?></label>
           <?php echo $captcha; ?><br>
           <input type="text" class="required remove_title" name="captcha"><br><br>
-          <?php echo generate_submit_button(lang('Submit Registration'), base_url().'img/other/user-add_16.png'); ?><br>
+          <?php echo generate_submit_button(lang('Submit Registration'), base_url().'assets/images/other/user-add_16.png'); ?><br>
         </form>
         <script type="text/javascript">
           //<![CDATA[

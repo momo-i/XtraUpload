@@ -4,7 +4,7 @@
 if(isset($error_message))
 {
 ?>
-        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>css/main.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>assets/css/main.css">
         <div><span class="alert"><?php echo $error_message; ?></span></div>
 <?php
 }
@@ -14,7 +14,7 @@ if(isset($error_message))
         <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
           <tr>
             <td width="12%" valign="middle">
-              <center><img style="vertical-align:middle;" src="<?php echo base_url(); ?>images/install/angle/update.png" width="128" height="128"></center>
+              <center><img style="vertical-align:middle;" src="<?php echo base_url(); ?>assets/images/install/angle/update.png" width="128" height="128"></center>
             </td>
             <td width="88%">
               <p>
@@ -28,7 +28,7 @@ if($this->updated)
               <div align="center">
                 <span class="cssbutton">
                   <a class="buttonGreen" href="<?php echo site_url('install/update/do_update') ?>">
-                    <img src="<?php echo base_url() ?>img/icons/ok_16.png" border="0" alt=""><?php echo lang('Continue'); ?>
+                    <img src="<?php echo base_url() ?>assets/images/icons/ok_16.png" border="0" alt=""><?php echo lang('Continue'); ?>
 
                   </a>
                 </span>

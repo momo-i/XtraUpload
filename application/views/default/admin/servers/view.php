@@ -1,11 +1,11 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/other/server_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/other/server_32.png" class="nb" alt="">
           <?php echo lang('Server Manager'); ?> 
         </h2>
         <?php echo $flash_message; ?>
         <div id="massActions" style="clear:both; padding-top:4px;">
           <div class="float-right">
-            <?php echo generate_link_button(lang('Add New Server'), site_url('admin/server/add'), base_url().'img/icons/new_16.png', NULL); ?>
+            <?php echo generate_link_button(lang('Add New Server'), site_url('admin/server/add'), base_url().'assets/images/icons/new_16.png', NULL); ?>
           </div>
         </div>
         <table border="0" style="width:95%" id="file_list_table">
@@ -46,7 +46,7 @@ foreach ($servers->result() as $server)
 	{
 ?>
               <a title="<?php echo lang('Turn On Server'); ?>" href="<?php echo site_url('admin/server/turn_on/'.$server->id); ?>">
-                <img src="<?php echo base_url(); ?>img/icons/off_16.png" class="nb" alt="<?php echo lang('Turn On'); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/icons/off_16.png" class="nb" alt="<?php echo lang('Turn On'); ?>">
               </a>
 <?php
 	}
@@ -54,19 +54,19 @@ foreach ($servers->result() as $server)
 	{
 ?>
               <a title="<?php echo lang('Turn Off Server'); ?>" href="<?php echo site_url('admin/server/turn_off/'.$server->id); ?>">
-                <img src="<?php echo base_url(); ?>img/icons/on_16.png" class="nb" alt="<?php echo lang('Turn Off'); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/icons/on_16.png" class="nb" alt="<?php echo lang('Turn Off'); ?>">
               </a>
 <?php
 	}
 ?>
               <a title="<?php echo lang('Edit Server'); ?>" href="<?php echo site_url('admin/server/edit/'.$server->id); ?>">
-                <img src="<?php echo base_url(); ?>img/icons/edit_16.png" class="nb" alt="<?php echo lang('Edit'); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/icons/edit_16.png" class="nb" alt="<?php echo lang('Edit'); ?>">
               </a>
               <a title="<?php echo lang('Install Server'); ?>" href="<?php echo site_url('admin/server/install/'.$server->id); ?>">
-                <img src="<?php echo base_url(); ?>img/icons/wizard_16.png" class="nb" alt="<?php echo lang('Install'); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/icons/wizard_16.png" class="nb" alt="<?php echo lang('Install'); ?>">
               </a>
               <a title="<?php echo lang('Delete Server'); ?>" href="<?php echo site_url('admin/server/delete/'.$server->id); ?>">
-                <img src="<?php echo base_url(); ?>img/icons/close_16.png" class="nb" alt="<?php echo lang('Delete'); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/icons/close_16.png" class="nb" alt="<?php echo lang('Delete'); ?>">
               </a>
             </td>
           </tr>

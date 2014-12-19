@@ -3,32 +3,32 @@
       <ul>
         <li class="complete">
           <a href="<?php echo site_url('install/step/1') ?>">
-            <img src="<?php echo base_url(); ?>img/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 1); ?>">
+            <img src="<?php echo base_url(); ?>assets/images/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 1); ?>">
             <?php printf(lang('Step %d'), 1); ?> 
           </a>
         </li>
         <li class="complete">
           <a href="<?php echo site_url('install/step/2') ?>">
-            <img src="<?php echo base_url(); ?>img/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 2); ?>">
+            <img src="<?php echo base_url(); ?>assets/images/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 2); ?>">
             <?php printf(lang('Step %d'), 2); ?> 
           </a>
         </li>
         <li>&raquo;</li>
         <li class="complete">
           <a href="<?php echo site_url('install/step/3') ?>">
-            <img src="<?php echo base_url(); ?>img/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 3); ?>">
+            <img src="<?php echo base_url(); ?>assets/images/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 3); ?>">
             <?php printf(lang('Step %d'), 3); ?> 
           </a>
         </li>
         <li>&raquo;</li>
         <li class="complete">
           <a href="<?php echo site_url('install/step/4') ?>">
-            <img src="<?php echo base_url(); ?>img/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 4); ?>">
+            <img src="<?php echo base_url(); ?>assets/images/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 4); ?>">
             <?php printf(lang('Step %d'), 3); ?> 
           </a>
         </li>
         <li class="current">
-          <img src="<?php echo site_url(); ?>img/icons/about_16.png" border="0" alt="<?php printf(lang('Step %d'), 5); ?>">
+          <img src="<?php echo site_url(); ?>assets/images/icons/about_16.png" border="0" alt="<?php printf(lang('Step %d'), 5); ?>">
           <?php printf(lang('Step %d'), 5); ?> 
         </li>
       </ul>
@@ -42,7 +42,7 @@
             <tr>
               <td width="19%" valign="middle">
                 <center>
-                  <img src="<?php echo base_url(); ?>images/install/angle/checkmark.png" width="128" height="128">
+                  <img src="<?php echo base_url(); ?>assets/images/install/angle/checkmark.png" width="128" height="128">
                 </center>
               </td>
               <td width="100%">
@@ -62,7 +62,7 @@
                   <div style="float:right">
                     <span class="cssbutton">
                       <a class="buttonGreen" href="<?php echo base_url() ?>" onclick="return $('#form1').validate().form();">
-                        <img src="<?php echo base_url(); ?>img/icons/ok_16.png" border="0" alt="">
+                        <img src="<?php echo base_url(); ?>assets/images/icons/ok_16.png" border="0" alt="">
                         <?php echo lang('Continue'); ?> 
                       </a>
                     </span>

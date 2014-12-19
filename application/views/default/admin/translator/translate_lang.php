@@ -67,7 +67,7 @@ foreach ( $module_data as $key => $line ) {
 
 echo form_hidden('save_lang', 'Save');
 
-echo generate_submit_button(lang('Save Changes'), base_url().'img/icons/save_16.png').'<br /></p>';
+echo generate_submit_button(lang('Save Changes'), base_url().'assets/images/icons/save_16.png').'<br /></p>';
 
 echo form_close();
 	

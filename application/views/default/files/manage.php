@@ -1,10 +1,10 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/other/manage-files_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/other/manage-files_32.png" class="nb" alt="">
           <?php echo lang('Manage Files'); ?> 
         </h2>
         <div id="massActions" style="clear:both; padding-top:4px;">
           <div class="float-left">
-            <?php echo generate_link_button('Delete', 'javascript:;', base_url().'img/icons/close_16.png', 'red', array('onclick' => 'deleteSubmit()')); ?>
+            <?php echo generate_link_button('Delete', 'javascript:;', base_url().'assets/images/icons/close_16.png', 'red', array('onclick' => 'deleteSubmit()')); ?>
           </div>
         </div>
         <p style=" clear:both;"></p>
@@ -43,7 +43,7 @@ foreach ($files->result() as $file) {
               </td>
               <td>
                 <a href='<?php echo $link['down']; ?>' rel="external">
-                  <img src="<?php echo base_url().'img/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
+                  <img src="<?php echo base_url().'assets/images/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
                   <?php echo $this->functions->elipsis($file->o_filename, 10); ?>
                 </a>
               </td>
@@ -54,9 +54,9 @@ foreach ($files->result() as $file) {
                 <?php echo intval($file->downloads); ?> 
               </td>
               <td>
-                <a href='javascript:;' onclick='$("#<?php echo $file->file_id; ?>-details").toggle()'><img src="<?php echo base_url(); ?>img/icons/link_16.png"  title="<?php echo lang('Show/Hide Links'); ?>" class="nb"></a>
-                <a href='javascript:;' onclick='$("#<?php echo $file->id; ?>-edit").toggle()'><img src="<?php echo base_url(); ?>img/icons/edit_16.png"  title="<?php echo lang('Edit'); ?>" class="nb"></a>
-                <a href="<?php echo $link['del']; ?>" onclick="return confirm('<?php echo lang('Are you SURE you want to do this?'); ?>');"><img src="<?php echo base_url(); ?>img/icons/close_16.png" title="<?php echo lang('Delete file'); ?>" class="nb"></a>
+                <a href='javascript:;' onclick='$("#<?php echo $file->file_id; ?>-details").toggle()'><img src="<?php echo base_url(); ?>assets/images/icons/link_16.png"  title="<?php echo lang('Show/Hide Links'); ?>" class="nb"></a>
+                <a href='javascript:;' onclick='$("#<?php echo $file->id; ?>-edit").toggle()'><img src="<?php echo base_url(); ?>assets/images/icons/edit_16.png"  title="<?php echo lang('Edit'); ?>" class="nb"></a>
+                <a href="<?php echo $link['del']; ?>" onclick="return confirm('<?php echo lang('Are you SURE you want to do this?'); ?>');"><img src="<?php echo base_url(); ?>assets/images/icons/close_16.png" title="<?php echo lang('Delete file'); ?>" class="nb"></a>
               </td>
             </tr>
             <tr class="details" style="display:none; border-top:none;" id="<?php echo $file->file_id; ?>-details">
@@ -81,8 +81,8 @@ foreach ($files->result() as $file) {
                 <input name="<?php echo $file->id; ?>_tags" id="<?php echo $file->id; ?>_tags" value="<?php echo $file->tags; ?>" size="35" maxlength="200" type="text"><br>
                 <label for="<?php echo $file->id; ?>_feat"><?php echo lang('Feature This File?'); ?></label>
                 <input name="<?php echo $file->id; ?>_feat" id="<?php echo $file->id; ?>_feat" <?php if($file->feature) { ?> checked="checked"<? } ?> type="checkbox" value="1"> <?php echo lang('Yes'); ?><br><br>
-                <?php echo generate_link_button(lang('Save Changes'), 'javascript:;', base_url().'img/icons/ok_16.png', 'green', array('onclick' => 'editFileProps(\''.$file->id.'\');')); ?> 
-                <?php echo generate_link_button(lang('Cancel Edit'), 'javascript:;', base_url().'img/icons/close_16.png', 'red', array('onclick' => '$(\'#'.$file->id.'-edit\').hide();')); ?><br><br>
+                <?php echo generate_link_button(lang('Save Changes'), 'javascript:;', base_url().'assets/images/icons/ok_16.png', 'green', array('onclick' => 'editFileProps(\''.$file->id.'\');')); ?> 
+                <?php echo generate_link_button(lang('Cancel Edit'), 'javascript:;', base_url().'assets/images/icons/close_16.png', 'red', array('onclick' => '$(\'#'.$file->id.'-edit\').hide();')); ?><br><br>
               </td>
             </tr>
 <?php

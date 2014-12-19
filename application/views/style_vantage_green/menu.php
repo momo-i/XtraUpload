@@ -6,17 +6,17 @@ if($this->session->userdata('id'))
         <ul class="sidemenu">
           <li>
             <a href="<?php echo site_url('user/manage')?>">
-              <img src="<?php echo base_url(); ?>img/icons/options_16.png" class="nb" alt=""> <?php echo lang('Manage Account')?>
+              <img src="<?php echo base_url(); ?>assets/images/icons/options_16.png" class="nb" alt=""> <?php echo lang('Manage Account')?>
             </a>
           </li>
           <li>
             <a href="<?php echo site_url('user/change_password'); ?>">
-              <img src="<?php echo base_url(); ?>img/icons/security_16.png" class="nb" alt=""> <?php echo lang('Change Password')?>
+              <img src="<?php echo base_url(); ?>assets/images/icons/security_16.png" class="nb" alt=""> <?php echo lang('Change Password')?>
             </a>
           </li>
           <li>
             <a href="<?php echo site_url('user/logout'); ?>">
-              <img src="<?php echo base_url(); ?>img/icons/log_in_16.png" class="nb" alt=""> <?php echo lang('Logout')?>
+              <img src="<?php echo base_url(); ?>assets/images/icons/log_in_16.png" class="nb" alt=""> <?php echo lang('Logout')?>
             </a>
           </li>
         </ul>
@@ -30,21 +30,21 @@ else
           <input type="hidden" name="submit" value="1">
           <p>
             <label for="username"><strong><?php echo lang('Username:')?></strong></label>
-            <input style="background:2px center url(<?php echo base_url(); ?>img/icons/user_16.png) no-repeat transparent; padding-left:22px" type="text" id="username" name="username">
+            <input style="background:2px center url(<?php echo base_url(); ?>assets/images/icons/user_16.png) no-repeat transparent; padding-left:22px" type="text" id="username" name="username">
             <label for="password"><strong><?php echo lang('Password:')?></strong></label>
-            <input style="background:2px center url(<?php echo base_url(); ?>img/other/key_16.png) no-repeat transparent; padding-left:22px" type="password" id="password" name="password"><br><br>
-            <?php echo generate_submit_button(lang('Login'), base_url().'img/icons/log_in_16.png', 'green'); ?><br>
+            <input style="background:2px center url(<?php echo base_url(); ?>assets/images/other/key_16.png) no-repeat transparent; padding-left:22px" type="password" id="password" name="password"><br><br>
+            <?php echo generate_submit_button(lang('Login'), base_url().'assets/images/icons/log_in_16.png', 'green'); ?><br>
           </p>
         </form>
         <ul class="sidemenu">
           <li>
             <a href="<?php echo site_url('user/forgot_password'); ?>">
-              <img src="<?php echo base_url(); ?>img/icons/help_16.png" class="nb" alt=""> <?php echo lang('Forgot Your Password?')?>
+              <img src="<?php echo base_url(); ?>assets/images/icons/help_16.png" class="nb" alt=""> <?php echo lang('Forgot Your Password?')?>
             </a>
           </li>
           <li>
             <a href="<?php echo site_url('user/register'); ?>">
-                <img src="<?php echo base_url(); ?>img/other/user-add_16.png" class="nb" alt=""> <?php echo lang('New? Register Here!')?>
+                <img src="<?php echo base_url(); ?>assets/images/other/user-add_16.png" class="nb" alt=""> <?php echo lang('New? Register Here!')?>
             </a>
           </li>
         </ul>
@@ -66,7 +66,7 @@ if($this->startup->site_config->show_recent_uploads)
 ?>
           <li>
             <a href="<?php echo $links['down']; ?>">
-              <img src="<?php echo base_url().'img/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
+              <img src="<?php echo base_url().'assets/images/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
               <?php echo $this->functions->elipsis($file->o_filename, 10); ?>
             </a>
           </li>
@@ -80,7 +80,7 @@ if($this->startup->site_config->show_about) {
 ?>
         <h3><?php echo lang('About'); ?></h3>
         <p>
-          <a href="http://xtrafile.com"><img src="<?php echo base_url(); ?>images/thumb.gif" width="50" height="50" alt="icon" class="float-left"></a>
+          <a href="http://xtrafile.com"><img src="<?php echo base_url(); ?>assets/images/thumb.gif" width="50" height="50" alt="icon" class="float-left"></a>
           <a href="http://xtrafile.com/products/xtraupload-v2/"><?php echo lang('XtraUpload v3'); ?></a>
           <?php printf(lang('%s is a next generation file hosting solution, blurring the lines between file hosting and ease of use.'), anchor('http://xtrafile.com/products/xtraupload-v2/', lang('XtraUpload v3'))); ?><br>
           <?php echo lang('Our revolutionary flash-based file uploader technology gets what you want done.'); ?><br>
@@ -99,13 +99,13 @@ if(stristr($this->uri->uri_string(),'/blog'))
 ?>
 	<h3>Blog Navigation</h3>
 	<ul class="sidemenu">
-		<li><a class="home" href="<?=site_url('/blog/index')?>"><img src="<?=$base_url?>img/other/home2_16.png" class="nb" alt="" />Home</a></li>
+		<li><a class="home" href="<?=site_url('/blog/index')?>"><img src="<?=$base_url?>assets/images/other/home2_16.png" class="nb" alt="" />Home</a></li>
 		
 		<li><h4>Recent Entries</h4></li>
 		<? foreach($this->blog_db->getRecentEntries(5) as $ent):?>
 		<li>
 			<a class="note" href="<?=site_url('/blog/view/'.$ent['id'].'/'.url_title($ent['title']))?>">
-				<img src="<?=$base_url?>img/icons/comments_16.png" class="nb" alt="" /><?=$ent['title']?>
+				<img src="<?=$base_url?>assets/images/icons/comments_16.png" class="nb" alt="" /><?=$ent['title']?>
 			</a>
 		</li>
 		<? endforeach;?>
@@ -113,7 +113,7 @@ if(stristr($this->uri->uri_string(),'/blog'))
 		<li><h4>Categories</h4></li>
 		<? foreach($this->blog_db->getCategories() as $cat):?>
 		<li><a class="record" href="<?=site_url('/blog/category/'.$cat['name'])?>">
-		<img src="<?=$base_url?>img/icons/tags_16.png" class="nb" alt="" /><?=ucwords($cat['name'])?>
+		<img src="<?=$base_url?>assets/images/icons/tags_16.png" class="nb" alt="" /><?=ucwords($cat['name'])?>
 		</a></li>
 		<? endforeach;?>
 	</ul>
@@ -128,13 +128,13 @@ if(stristr($this->uri->uri_string(),'/news'))
 ?>
 	<h3>News Navigation</h3>
 	<ul class="sidemenu">
-		<li><a class="home" href="<?=site_url('/news/index')?>"><img src="<?=$base_url?>img/other/home2_16.png" class="nb" alt="" />Home</a></li>
+		<li><a class="home" href="<?=site_url('/news/index')?>"><img src="<?=$base_url?>assets/images/other/home2_16.png" class="nb" alt="" />Home</a></li>
 		
 		<li><h4>Recent Entries</h4></li>
 		<? foreach($this->news_db->getRecentEntries(5) as $ent):?>
 		<li>
 			<a class="note" href="<?=site_url('/news/view/'.$ent['id'].'/'.url_title($ent['title']))?>">
-				<img src="<?=$base_url?>img/icons/comments_16.png" class="nb" alt="" /><?=$ent['title']?>
+				<img src="<?=$base_url?>assets/images/icons/comments_16.png" class="nb" alt="" /><?=$ent['title']?>
 			</a>
 		</li>
 		<? endforeach;?>
@@ -142,7 +142,7 @@ if(stristr($this->uri->uri_string(),'/news'))
 		<li><h4>Categories</h4></li>
 		<? foreach($this->news_db->getCategories() as $cat):?>
 		<li><a class="record" href="<?=site_url('/news/category/'.$cat['name'])?>">
-		<img src="<?=$base_url?>img/icons/tags_16.png" class="nb" alt="" /><?=ucwords($cat['name'])?>
+		<img src="<?=$base_url?>assets/images/icons/tags_16.png" class="nb" alt="" /><?=ucwords($cat['name'])?>
 		</a></li>
 		<? endforeach;?>
 	</ul>

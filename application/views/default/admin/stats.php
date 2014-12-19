@@ -1,6 +1,6 @@
-        <script type="text/javascript" src="<?php echo base_url(); ?>js/charts.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/charts.js"></script>
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/chart_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/chart_32.png" class="nb" alt="">
           <?php echo lang('Site Stats'); ?> 
         </h2>
         <h3><?php echo lang('Information'); ?></h3>
@@ -39,7 +39,7 @@
           //<![CDATA[
           function getChart(chartUrl)
           {
-            $('#chart_data').html('<img src="<?php echo base_url(); ?>images/loading.gif" class="nb">');
+            $('#chart_data').html('<img src="<?php echo base_url(); ?>assets/images/loading.gif" class="nb">');
             $.ajax({type: 'GET', url: chartUrl+'/r_'+rand(1,999999999), cache: true, dataType: 'script'}); 
             $('#chart_name').html('<?php echo lang('Your Requested Chart'); ?>');
           }

@@ -1,17 +1,17 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/documents_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/documents_32.png" class="nb" alt="">
           <?php echo lang('File Manager - Search Result'); ?> 
         </h2>
         <?php echo $flash_message; ?>
         <form action="<?php echo site_url('admin/files/'); ?>" id="userAdmin" method="post" style="padding:0; margin:0; border:0;">
           <div id="massActions" style="clear:both; padding-top:4px;">
             <div class="float-left">
-              <?php echo generate_link_button(lang('Delete'), 'javascript:;', base_url().'img/icons/close_16.png', 'red', array('onclick' => 'delete_submit()')); ?>
-              <?php echo generate_link_button(lang('Ban'), 'javascript:;', base_url().'img/icons/lock_16.png', NULL, array('onclick' => 'ban_submit()')); ?>
+              <?php echo generate_link_button(lang('Delete'), 'javascript:;', base_url().'assets/images/icons/close_16.png', 'red', array('onclick' => 'delete_submit()')); ?>
+              <?php echo generate_link_button(lang('Ban'), 'javascript:;', base_url().'assets/images/icons/lock_16.png', NULL, array('onclick' => 'ban_submit()')); ?>
             </div>
             <div class="float-right">
-              <?php echo generate_link_button(lang('Search'), site_url('admin/files/search'), base_url().'img/icons/search_16.png', NULL); ?>
-              <?php echo generate_link_button(lang('All'), site_url('admin/files/view'), base_url().'img/icons/documents_16.png', NULL); ?>
+              <?php echo generate_link_button(lang('Search'), site_url('admin/files/search'), base_url().'assets/images/icons/search_16.png', NULL); ?>
+              <?php echo generate_link_button(lang('All'), site_url('admin/files/view'), base_url().'assets/images/icons/documents_16.png', NULL); ?>
             </div>
           </div>
           <h3 style="clear:both">
@@ -55,7 +55,7 @@ foreach ($files->result() as $file)
               </td>
               <td>
                 <a href="<?php echo $links['down']; ?>" rel="external">
-                  <img src="<?php echo base_url().'img/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
+                  <img src="<?php echo base_url().'assets/images/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
                   <?php echo $this->functions->elipsis($file->o_filename, 10); ?> 
                 </a>
               </td>
@@ -67,10 +67,10 @@ foreach ($files->result() as $file)
               </td>
               <td>
                 <a title=<?php echo lang("Delete This File"); ?> onclick="return confirm('<?php echo lang('Are you sure you want to delete this file?'); ?>')" href="<?php echo site_url('admin/files/delete/'.$file->file_id); ?>">
-                  <img src="<?php echo base_url(); ?>img/icons/close_16.png" class="nb" alt="<?php echo lang('Delete'); ?>">
+                  <img src="<?php echo base_url(); ?>assets/images/icons/close_16.png" class="nb" alt="<?php echo lang('Delete'); ?>">
                 </a>
                 <a title="<?php echo lang('Ban This File'); ?>" onclick="return confirm('<?php echo lang('Are you sure you want to ban this file?'); ?>')" href="<?php echo site_url('admin/files/ban/'.$file->file_id); ?>">
-                  <img src="<?php echo base_url(); ?>img/icons/lock_16.png" class="nb" alt="<?php echo lang('Ban'); ?>">
+                  <img src="<?php echo base_url(); ?>assets/images/icons/lock_16.png" class="nb" alt="<?php echo lang('Ban'); ?>">
                 </a>
               </td>
             </tr>

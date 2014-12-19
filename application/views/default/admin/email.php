@@ -1,6 +1,6 @@
         <script type="text/javascript" src="<?php echo base_url(); ?>/js/charts.js"></script>
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/reports_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/reports_32.png" class="nb" alt="">
           <?php echo lang('Mass Emailer'); ?> 
         </h2>
 <?php
@@ -30,6 +30,6 @@ foreach ($groups->result() as $group)
             <input type="text" size="60" name="subject"><br>
             <label><?php echo lang('Message'); ?></label>
             <textarea name="msg" cols="60" rows="10"></textarea><br>
-            <?php echo generate_submit_button('Send Emails', base_url().'img/icons/ok_16.png', 'green')?><br><br>
+            <?php echo generate_submit_button('Send Emails', base_url().'assets/images/icons/ok_16.png', 'green')?><br><br>
           </p>
         </form>

@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/user_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/user_32.png" class="nb" alt="">
           <?php echo lang('User Package Comparison')?> 
         </h2>
         <p>

@@ -1,11 +1,11 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/colors_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/colors_32.png" class="nb" alt="">
           <?php echo lang('Skin Manager'); ?> 
         </h2>
         <?php echo $flash_message; ?>
         <div id="massActions" style="clear:both; padding-top:4px;">
           <div class="float-right">
-            <?php echo generate_link_button(lang('Install New Skins'), site_url('admin/skin/installNew'), base_url().'img/icons/new_16.png', NULL); ?>
+            <?php echo generate_link_button(lang('Install New Skins'), site_url('admin/skin/installNew'), base_url().'assets/images/icons/new_16.png', NULL); ?>
           </div>
         </div>
         <script type="text/javascript">
@@ -76,7 +76,7 @@ foreach ($skins->result() as $skin)
 	if($skin->active)
 	{
 ?>
-              <img src="<?php echo base_url(); ?>img/icons/colors_16.png" class="nb" alt="">
+              <img src="<?php echo base_url(); ?>assets/images/icons/colors_16.png" class="nb" alt="">
 <?php
 	}
 ?>
@@ -90,21 +90,21 @@ foreach ($skins->result() as $skin)
 	{
 ?>
               <a title="<?php echo lang('Activate This Skin'); ?>" href="<?php echo site_url('admin/skin/set_active/'.$skin->name); ?>">
-                <img src="<?php echo base_url(); ?>img/icons/off_16.png" class="nb" alt="<?php echo lang('Set Active'); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/icons/off_16.png" class="nb" alt="<?php echo lang('Set Active'); ?>">
               </a>
 <?php
 	}
 	else
 	{
 ?>
-              <img src="<?php echo base_url(); ?>img/icons/on_16.png" class="nb" alt="<?php echo lang('Is Active'); ?>">
+              <img src="<?php echo base_url(); ?>assets/images/icons/on_16.png" class="nb" alt="<?php echo lang('Is Active'); ?>">
 <?php
 	}
 	if($skin->name != 'default')
 	{
 ?>
               <a title="<?php echo lang('Delete This Skin'); ?>" href="<?php echo site_url('admin/skin/delete/'.$skin->name); ?>">
-                <img src="<?php echo base_url(); ?>img/icons/close_16.png" class="nb" alt="<?php echo lang('Delete'); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/icons/close_16.png" class="nb" alt="<?php echo lang('Delete'); ?>">
               </a>
 <?php
 	}

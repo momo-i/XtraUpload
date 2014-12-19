@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/options_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/options_32.png" class="nb" alt="">
           <?php echo lang('Config Settings'); ?> 
         </h2>
         <form method="post" action="<?php echo site_url('admin/config/update'); ?>">
@@ -17,7 +17,7 @@ foreach ($configs->result() as $config)
 	{
 ?>
                 <input type="text" name="<?php echo $config->name; ?>" id="<?php echo $config->name; ?>" value="<?php echo $config->value; ?>">
-                <img src="<?php echo base_url(); ?>img/icons/about_16.png" style="cursor:pointer" onclick="$('#d_<?php echo $config->name; ?>').slideToggle()" class="nb">
+                <img src="<?php echo base_url(); ?>assets/images/icons/about_16.png" style="cursor:pointer" onclick="$('#d_<?php echo $config->name; ?>').slideToggle()" class="nb">
                 <span style="display:none" id="d_<?php echo $config->name; ?>"><?php echo $this->lang->line($config->description2); ?></span>
 <?php
 	}
@@ -25,7 +25,7 @@ foreach ($configs->result() as $config)
 	{
 ?>
                 <textarea rows="8" cols="40" name="<?php echo $config->name; ?>" id="<?php echo $config->name; ?>"><?php echo $config->value; ?></textarea>
-                <img src="<?php echo base_url(); ?>img/icons/about_16.png" style="cursor:pointer" onclick="$('#d_<?php echo $config->name; ?>').slideToggle()" class="nb">
+                <img src="<?php echo base_url(); ?>assets/images/icons/about_16.png" style="cursor:pointer" onclick="$('#d_<?php echo $config->name; ?>').slideToggle()" class="nb">
                 <span style="display:none" id="d_<?php echo $config->name; ?>"><?php echo $config->description2; ?></span>
 <?php
 	}
@@ -87,6 +87,6 @@ foreach ($configs->result() as $config)
 ?>
           </table>
           <input type="hidden" name="valid" value="yes">
-          <?php echo generate_submit_button(lang('Update'), base_url().'img/icons/ok_16.png', 'green')?><br>
+          <?php echo generate_submit_button(lang('Update'), base_url().'assets/images/icons/ok_16.png', 'green')?><br>
         </form>
 

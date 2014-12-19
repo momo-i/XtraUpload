@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/backup_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/backup_32.png" class="nb" alt="">
           <?php echo lang('Upload Complete'); ?> 
         </h2>
         <p><?php echo lang('Your file links are below, make sure to save this URL if you ever need to get these links again.'); ?></p>
@@ -24,4 +24,4 @@ if(isset($link['img']))
 }
 ?>
         <div style="clear:both"></div><br>
-        <?php echo generate_link_button(lang('Upload More Files'), site_url('home'), base_url().'img/icons/back_16.png', 'green'); ?>
+        <?php echo generate_link_button(lang('Upload More Files'), site_url('home'), base_url().'assets/images/icons/back_16.png', 'green'); ?>

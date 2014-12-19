@@ -10,6 +10,6 @@ foreach ( $master_modules as $master_module )
 	echo form_radio('lang_module', $master_module).' '.ucwords($master_module).'<br />';
 }
 echo '<br />';
-echo generate_submit_button(lang('Next Step'), $base_url.'img/icons/forward_16.png', 'green').'<br /></p>';
+echo generate_submit_button(lang('Next Step'), $base_url.'assets/images/icons/forward_16.png', 'green').'<br /></p>';
 echo form_close();
 ?>

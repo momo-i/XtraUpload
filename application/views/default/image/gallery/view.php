@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/other/images_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/other/images_32.png" class="nb" alt="">
           <?php echo lang('Image Gallery') ?> 
         </h2>
         <h3><?php echo lang('Name'); ?>: <?php echo $gall->name; ?></h3>

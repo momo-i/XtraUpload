@@ -1,5 +1,5 @@
           <h2 style="vertical-align:middle">
-            <img src="<?php echo base_url(); ?>img/other/download_32.png" class="nb" alt="">
+            <img src="<?php echo base_url(); ?>assets/images/other/download_32.png" class="nb" alt="">
               <?php echo lang('Download File'); ?> 
               <a href="javascript:;" onclick="$.scrollTo($('#dlhere'),300)">&darr;</a>
           </h2>
@@ -7,7 +7,7 @@
           <table width="98%">
             <tr>
               <th>
-                <a href="javascript:;" onclick="toggleDetails()"><img id="file-details-icon" src="<?php echo base_url(); ?>img/other/remove_16.png" class="nb" alt=""> <?php echo lang('File Details'); ?></a>
+                <a href="javascript:;" onclick="toggleDetails()"><img id="file-details-icon" src="<?php echo base_url(); ?>assets/images/other/remove_16.png" class="nb" alt=""> <?php echo lang('File Details'); ?></a>
               </th>
             </tr>
             <tr id="file-details">
@@ -20,15 +20,15 @@
 <?php endif; ?>
                 <code>
                   <label for="name" style="display:inline;padding-bottom:2px">
-                    <img class="nb" src="<?php echo base_url(); ?>img/icons/about_16.png" alt="">
+                    <img class="nb" src="<?php echo base_url(); ?>assets/images/icons/about_16.png" alt="">
                     <?php echo lang('Name:'); ?> 
                   </label>
                   <span id="name">
-                    <nobr><?php echo $file->o_filename; ?> <img class="nb" src="<?php echo base_url(); ?>img/files/<?php echo $file->type; ?>.png" alt=""></nobr>
+                    <nobr><?php echo $file->o_filename; ?> <img class="nb" src="<?php echo base_url(); ?>assets/images/files/<?php echo $file->type; ?>.png" alt=""></nobr>
                   </span>
                   <br>
                   <label for="size" style="display:inline;padding-bottom:2px">
-                    <img class="nb" src="<?php echo base_url(); ?>img/icons/database_16.png" alt="">
+                    <img class="nb" src="<?php echo base_url(); ?>assets/images/icons/database_16.png" alt="">
                     <?php echo lang('File Size:'); ?>
                   </label>
                   <span id="size">
@@ -37,31 +37,31 @@
                   <br>
                   <span id="moreInfo">
                     <a href="javascript:;" class="showMoreLink" onclick="showMoreLink()">
-                      <img src="<?php echo base_url(); ?>img/icons/add_16.png" alt="" class="nb">
+                      <img src="<?php echo base_url(); ?>assets/images/icons/add_16.png" alt="" class="nb">
                       <?php echo lang('Show More'); ?> 
                     </a>
                   </span>
                   <span class="hidden" style="display:none">
                     <label for="md5" style="display:inline;padding-bottom:2px">
-                      <img class="nb" src="<?php echo base_url(); ?>img/icons/lock_16.png" alt="">
+                      <img class="nb" src="<?php echo base_url(); ?>assets/images/icons/lock_16.png" alt="">
                       <?php echo lang('MD5 Checksum:'); ?> 
                     </label>
                     <span id="md5"><?php echo $file->md5; ?></span>
                     <br>
                     <label for="md5" style="display:inline;padding-bottom:2px">
-                      <img class="nb" src="<?php echo base_url(); ?>img/icons/calendar_16.png" alt="">
+                      <img class="nb" src="<?php echo base_url(); ?>assets/images/icons/calendar_16.png" alt="">
                       <?php echo lang('Date Uploaded:'); ?> 
                     </label>
                     <span id="md5"><?php echo date('m-D-Y', $file->time); ?></span>
                     <br>
                     <label for="user" style="display:inline;padding-bottom:2px">
-                      <img class="nb" src="<?php echo base_url(); ?>img/icons/user_16.png" alt="">
+                      <img class="nb" src="<?php echo base_url(); ?>assets/images/icons/user_16.png" alt="">
                       <?php echo lang('Uploader:'); ?> 
                     </label>
                     <span id="user"><?php echo $this->users->get_username_by_id($file->user); ?></span>
                     <br>
                     <label for="tags" style="display:inline;padding-bottom:2px">
-                      <img class="nb" src="<?php echo base_url(); ?>img/icons/tags_16.png" alt="">
+                      <img class="nb" src="<?php echo base_url(); ?>assets/images/icons/tags_16.png" alt="">
                       <?php echo lang('Tags:'); ?>
                     </label>
                     <span id="tags">
@@ -73,14 +73,14 @@ $tags = array_map('ucwords', $tags);
                     </span>
                     <br>
                     <label for="dls" style="display:inline;padding-bottom:2px">
-                      <img class="nb" src="<?php echo base_url(); ?>img/icons/save_16.png" alt="">
+                      <img class="nb" src="<?php echo base_url(); ?>assets/images/icons/save_16.png" alt="">
                       <?php echo lang('Downloads:'); ?>
                     </label>
                     <span id="dls"><?php echo intval($file->downloads); ?></span>
                     <br>
 <?php if( ! empty($file->pass)): ?>
                     <label for="pass" style="display:inline;padding-bottom:2px">
-                      <img class="nb" src="<?php echo base_url(); ?>img/icons/security_16.png" alt="">
+                      <img class="nb" src="<?php echo base_url(); ?>assets/images/icons/security_16.png" alt="">
                       <?php echo lang('Password:'); ?> 
                     </label>
                     <span id="pass">
@@ -90,7 +90,7 @@ $tags = array_map('ucwords', $tags);
 <?php endif; ?>
 <?php if($image): ?>
                     <label for="img_links" style="display:inline;padding-bottom:2px">
-                      <img class="nb" src="<?php echo base_url(); ?>img/other/images_16.png" alt="">
+                      <img class="nb" src="<?php echo base_url(); ?>assets/images/other/images_16.png" alt="">
                       <?php echo lang('Image BBCode/Links:'); ?>
                     </label>
                     <span id="img_links">
@@ -102,7 +102,7 @@ $tags = array_map('ucwords', $tags);
 <?php endif; ?>
 <?php if( ! empty($file->descr)): ?>
                     <label for="descr" style="display:inline;padding-bottom:2px">
-                      <img class="nb" src="<?php echo base_url(); ?>img/icons/text_16.png" alt="">
+                      <img class="nb" src="<?php echo base_url(); ?>assets/images/icons/text_16.png" alt="">
                       <?php echo lang('Description:'); ?> 
                     </label>
                     <span id="descr">
@@ -119,11 +119,11 @@ if($this->startup->site_config->show_preview && $this->xu_api->embed->get_embed_
 {
     $embed = $this->xu_api->embed->get_embed_code($file->type);
 ?>
-        <h3 id="dlhere"><img src="<?php echo base_url(); ?>img/icons/<?php echo $icon; ?>_16.png" class="nb" alt=""> <?php echo lang('Preview File'); ?></h3>
+        <h3 id="dlhere"><img src="<?php echo base_url(); ?>assets/images/icons/<?php echo $icon; ?>_16.png" class="nb" alt=""> <?php echo lang('Preview File'); ?></h3>
         <p>
 <?php echo $code; ?>
           <a href="javascript:;" onclick="$('#<?php echo $file->type; ?>_embed_code').slideToggle('normal')">
-            <img src="<?php echo base_url(); ?>img/icons/add_16.png" class="nb" alt=""> <?php echo lang('Get Embed Code'); ?>
+            <img src="<?php echo base_url(); ?>assets/images/icons/add_16.png" class="nb" alt=""> <?php echo lang('Get Embed Code'); ?>
           </a><br>
           <input style="display:none" id="<?php echo $file->type; ?>_embed_code" type="text" size="60" onclick="this.select();" onfocus="this.select()" value="<iframe src='<?php echo site_url('files/embed/'.$file->type.'/'.$file->file_id); ?>' width='<?php echo $embed['width']; ?>' height='<?php echo $embed['height']; ?>' scrolling='no' frameborder='0'></iframe>">
         </p>
@@ -132,7 +132,7 @@ if($this->startup->site_config->show_preview && $this->xu_api->embed->get_embed_
 ?>
 <?php /*File Page Hooks*/ $this->xu_api->hooks->run_hooks('files::get::add_section::before_download', null); ?>
 
-        <h3 id="dlhere"><img src="<?php echo base_url(); ?>img/other/download_16.png" class="nb" alt=""> <?php echo lang('Download Here'); ?></h3>
+        <h3 id="dlhere"><img src="<?php echo base_url(); ?>assets/images/other/download_16.png" class="nb" alt=""> <?php echo lang('Download Here'); ?></h3>
         <form action="<?php echo site_url('files/gen/'.$file->file_id.'/'.$file->link_name); ?>" method="post" onsubmit="return checkTimer()">
           <div>
             <input type="hidden" name="pass" value="<?php echo $this->input->post('pass'); ?>">
@@ -146,14 +146,14 @@ if($this->startup->site_config->show_preview && $this->xu_api->embed->get_embed_
             <code>
               <span id="captchaImg"><?php echo $captcha; ?></span>
               <a href="javascript:;" onclick="getNewCaptcha()">
-                <img class="nb" title="<?php echo lang('Get New Captcha'); ?>" src="<?php echo base_url(); ?>img/icons/refresh_16.png" alt="">
+                <img class="nb" title="<?php echo lang('Get New Captcha'); ?>" src="<?php echo base_url(); ?>assets/images/icons/refresh_16.png" alt="">
               </a><br>
               <input type="text" size="3" maxlength="3" name="captcha">
             </code><br>
 <?php endif; ?>
-            <? echo generate_submit_button(lang('Download'), base_url().'img/icons/backup_16.png', 'green'); ?>
+            <? echo generate_submit_button(lang('Download'), base_url().'assets/images/icons/backup_16.png', 'green'); ?>
 <?php if($image): ?>
-            <? echo generate_link_button(lang('View This Image'), $image['direct_url'], base_url().'img/icons/pictures_16.png', null, array('target' => '_blank')); ?>
+            <? echo generate_link_button(lang('View This Image'), $image['direct_url'], base_url().'assets/images/icons/pictures_16.png', null, array('target' => '_blank')); ?>
 <?php endif; ?>
             <br>
           </span>
@@ -226,12 +226,12 @@ $rand1 = 'y'.str_replace('-', '', $this->functions->get_rand_id(32));
         {
           if($("#file-details").css('display') == 'none')
           {
-            $("#file-details-icon").attr('src', '<?php echo base_url(); ?>img/other/remove_16.png');
+            $("#file-details-icon").attr('src', '<?php echo base_url(); ?>assets/images/other/remove_16.png');
             $("#file-details").show();
           }
           else
           {
-            $("#file-details-icon").attr('src', '<?php echo base_url(); ?>img/icons/add_16.png');
+            $("#file-details-icon").attr('src', '<?php echo base_url(); ?>assets/images/icons/add_16.png');
             $("#file-details").hide();
           }
         }

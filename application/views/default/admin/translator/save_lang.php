@@ -30,7 +30,7 @@ foreach ( $module_data as $key => $line ) {
 
 echo form_hidden('confirm_save_lang', 'Confirm' );
 
-echo generate_submit_button(lang('Confirm Changes'), base_url().'img/icons/ok_16.png', 'green').'<br /></p>';
+echo generate_submit_button(lang('Confirm Changes'), base_url().'assets/images/icons/ok_16.png', 'green').'<br /></p>';
 
 echo form_close();
 

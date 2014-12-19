@@ -1,9 +1,9 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/user_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/user_32.png" class="nb" alt="">
           <?php echo lang('User Registration'); ?> 
         </h2>
         <h3>
-          <img src="<?php echo base_url(); ?>img/icons/close_16.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/close_16.png" class="nb" alt="">
           <?php echo lang('Registrations Closed'); ?> 
         </h3>
         <p>

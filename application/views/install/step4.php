@@ -3,7 +3,7 @@
       <ul>
         <li class="complete">
           <a href="<?php echo site_url('install/step/1') ?>">
-            <img src="<?php echo base_url(); ?>img/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 1); ?>">
+            <img src="<?php echo base_url(); ?>assets/images/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 1); ?>">
             <?php printf(lang('Step %d'), 1); ?>
 
           </a>
@@ -11,7 +11,7 @@
         <li>&raquo;</li>
         <li class="complete">
           <a href="<?php echo site_url('install/step/2') ?>">
-            <img src="<?php echo base_url(); ?>img/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 2); ?>">
+            <img src="<?php echo base_url(); ?>assets/images/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 2); ?>">
             <?php printf(lang('Step %d'), 2); ?>
 
           </a>
@@ -19,14 +19,14 @@
         <li>&raquo;</li>
         <li class="complete">
           <a href="<?php echo site_url('install/step/3') ?>">
-            <img src="<?php echo base_url(); ?>img/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 3); ?>">
+            <img src="<?php echo base_url(); ?>assets/images/icons/ok_16.png" border="0" alt="<?php printf(lang('Step %d'), 3); ?>">
             <?php printf(lang('Step %d'), 3); ?>
 
           </a>
         </li>
         <li>&raquo;</li>
         <li class="current">
-          <img src="<?php echo base_url(); ?>img/icons/about_16.png" border="0" alt="<?php printf(lang('Step %d'), 4); ?>">
+          <img src="<?php echo base_url(); ?>assets/images/icons/about_16.png" border="0" alt="<?php printf(lang('Step %d'), 4); ?>">
           <?php printf(lang('Step %d'), 4); ?>
         </li>
         <li>&raquo;</li>
@@ -78,7 +78,7 @@
           <div style="float:left">
             <span class="cssbutton">
               <a class="buttonRed" href="<?php echo site_url('install/step/3'); ?>">
-                <img src="<?php echo base_url(); ?>img/icons/back_16.png" border="0" alt="<?php echo lang('Go Back'); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/icons/back_16.png" border="0" alt="<?php echo lang('Go Back'); ?>">
                 <?php echo lang('Go Back'); ?>
 
               </a>
@@ -87,7 +87,7 @@
           <div style="float:right">
             <span class="cssbutton">
               <a class="buttonGreen" href="javascript:document.form1.submit();" onclick="return $('#form1').validate().form();">
-                <img src="<?php echo base_url(); ?>img/icons/ok_16.png" border="0" alt="<?php echo lang('Continue'); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/icons/ok_16.png" border="0" alt="<?php echo lang('Continue'); ?>">
                 <?php echo lang('Continue'); ?>
 
               </a>

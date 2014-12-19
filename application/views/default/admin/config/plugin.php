@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/options_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/options_32.png" class="nb" alt="">
           <?php echo lang('Plugin Config Settings'); ?> 
         </h2>
         <?php echo $flash_message; ?>
@@ -26,7 +26,7 @@ else
 		{
 ?>
                 <input type="text" name="<?php echo $config->name; ?>" id="<?php echo $config->name; ?>" value="<?php echo $config->value; ?>">
-                <img src="<?php echo base_url(); ?>img/icons/about_16.png" style="cursor:pointer" onclick="$('#d_<?php echo $config->name; ?>').slideToggle()" class="nb">
+                <img src="<?php echo base_url(); ?>assets/images/icons/about_16.png" style="cursor:pointer" onclick="$('#d_<?php echo $config->name; ?>').slideToggle()" class="nb">
                 <span style="display:none" id="d_<?php echo $config->name; ?>"><?php echo $config->description2; ?></span>
 <?php
 		}
@@ -34,7 +34,7 @@ else
 		{
 ?>
                 <textarea rows="8" cols="40" name="<?php echo $config->name; ?>" id="<?php echo $config->name; ?>" ><?php echo $config->value; ?></textarea>
-                <img src="<?php echo base_url(); ?>img/icons/about_16.png" style="cursor:pointer" onclick="$('#d_<?php echo $config->name; ?>').slideToggle()" class="nb">
+                <img src="<?php echo base_url(); ?>assets/images/icons/about_16.png" style="cursor:pointer" onclick="$('#d_<?php echo $config->name; ?>').slideToggle()" class="nb">
                 &nbsp;<span style="display:none" id="d_<?php echo $config->name; ?>"><?php echo $config->description2; ?></span>
 <?php
 		}
@@ -78,11 +78,11 @@ else
 <?php
 if($num_rows > 0)
 {
-	echo generate_submit_button(lang('Update'), base_url().'img/icons/ok_16.png', 'green');
+	echo generate_submit_button(lang('Update'), base_url().'assets/images/icons/ok_16.png', 'green');
 }
 else
 {
-	echo generate_link_button(lang('Go Back'), 'javascript:history.go(-1)', base_url().'img/icons/back_16.png');	}
+	echo generate_link_button(lang('Go Back'), 'javascript:history.go(-1)', base_url().'assets/images/icons/back_16.png');	}
 ?>
           <br>
         </form>

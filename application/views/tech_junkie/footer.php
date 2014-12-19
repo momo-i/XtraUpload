@@ -35,7 +35,7 @@ if($this->startup->site_config->show_recent_uploads)
 ?>
                 <li>
                   <a href="<?php echo $links['down']; ?>">
-                    <img src="<?php echo base_url().'img/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
+                    <img src="<?php echo base_url().'assets/images/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
                     <?php echo $this->functions->elipsis($file->o_filename, 10); ?> 
                   </a>
                 </li>
@@ -54,7 +54,7 @@ if($this->startup->site_config->show_recent_uploads)
 <?php if($this->startup->site_config->show_about) { ?>
               <h3><?php echo lang('About'); ?></h3>
               <p>
-                <a href="http://xtrafile.com"><img src="<?php echo base_url(); ?>images/thumb.gif" width="50" height="50" alt="icon" class="float-left"></a>
+                <a href="http://xtrafile.com"><img src="<?php echo base_url(); ?>assets/images/thumb.gif" width="50" height="50" alt="icon" class="float-left"></a>
                 <?php printf(lang('%s is a next generation file hosting solution, blurring the lines between file hosting and ease of use.'), anchor('http://xtrafile.com/products/xtraupload-v2/', lang('XtraUpload v3'))); ?><br>
                 <?php echo lang('Our revolutionary flash-based file uploader technology gets what you want done.'); ?><br>
                 <?php echo lang('Upload up to 500 files at once, and get links to them all on the same page.'); ?><br>

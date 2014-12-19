@@ -1,11 +1,11 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/folder_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/folder_32.png" class="nb" alt="">
           <?php echo lang('Folder Manager'); ?> 
         </h2>
         <?php echo $flash_message; ?>
         <div id="massActions" style="clear:both; padding-top:4px;">
           <div class="float-right">
-            <?php echo generate_link_button(lang('Search'), site_url('admin/files/search'), base_url().'img/icons/search_16.png', NULL); ?> 
+            <?php echo generate_link_button(lang('Search'), site_url('admin/files/search'), base_url().'assets/images/icons/search_16.png', NULL); ?> 
           </div>
         </div>
         <p style=" clear:both;"></p>
@@ -24,7 +24,7 @@ foreach ($files->result() as $file)
           <tr <?php echo alternator('class="odd"', 'class="even"'); ?>>
             <td>
               <a href="<?php echo site_url('folders/get/'.$file->file_id.'/'.$file->link_name); ?>" target="_blank">
-                <img src="<?php echo base_url().'img/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
+                <img src="<?php echo base_url().'assets/images/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
                 <?php echo $this->functions->elipsis($file->o_filename, 10); ?>
               </a>
             </td>
@@ -36,13 +36,13 @@ foreach ($files->result() as $file)
             </td>
             <td>
               <a title="<?php echo lang('Edit This File'); ?>" href="<?=site_url('admin/files/edit/'.$file->file_id); ?>">
-                <img src="<?php echo base_url(); ?>img/icons/edit_16.png" class="nb" alt="<?php echo lang('Edit'); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/icons/edit_16.png" class="nb" alt="<?php echo lang('Edit'); ?>">
               </a>
               <a title="<?php echo lang('Delete This File'); ?>" onclick="return confirm('<?php echo lang('Are you sure you want to delete this file?'); ?>')" href="<?php echo site_url('admin/files/delete/'.$file->file_id); ?>">
-                <img src="<?php echo base_url(); ?>img/icons/close_16.png" class="nb" alt="<?php echo lang('Delete'); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/icons/close_16.png" class="nb" alt="<?php echo lang('Delete'); ?>">
               </a>
               <a title="<?php echo lang('Ban This File'); ?>" onclick="return confirm('<?php echo lang('Are you sure you want to ban this file?'); ?>')" href="<?php echo site_url('admin/files/ban/'.$file->file_id); ?>">
-                <img src="<?php echo base_url(); ?>img/icons/lock_16.png" class="nb" alt="<?php echo lang('Ban'); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/icons/lock_16.png" class="nb" alt="<?php echo lang('Ban'); ?>">
               </a>
             </td>
           </tr>

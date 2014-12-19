@@ -5,13 +5,13 @@ if($this->session->userdata('id'))
           <h3><?php printf(lang('Welcome %s!'), $this->session->userdata('username')); ?></h3>
           <ul class="sidemenu">
             <li>
-              <?php echo anchor('user/manage', '<img src="'.base_url().'img/icons/options_16.png" class="nb" alt="">'.lang('Manage Account')); ?>
+              <?php echo anchor('user/manage', '<img src="'.base_url().'assets/images/icons/options_16.png" class="nb" alt="">'.lang('Manage Account')); ?>
             </li>
             <li>
-              <?php echo anchor('user/change_password', '<img src="'.base_url().'img/icons/security_16.png" class="nb" alt="">'.lang('Change Password')); ?>
+              <?php echo anchor('user/change_password', '<img src="'.base_url().'assets/images/icons/security_16.png" class="nb" alt="">'.lang('Change Password')); ?>
             </li>
             <li>
-              <?php echo anchor('user/logout', '<img src="'.base_url().'img/icons/log_out_16.png" class="nb" alt="">'.lang('Logout')); ?>
+              <?php echo anchor('user/logout', '<img src="'.base_url().'assets/images/icons/log_out_16.png" class="nb" alt="">'.lang('Logout')); ?>
             </li>
           </ul>
 <?
@@ -25,22 +25,22 @@ else
             <p>
               <label for="username">
                 <strong><?php echo lang('Username:'); ?></strong>
-                <input style="background:2px center url(<?php echo base_url(); ?>img/icons/user_16.png) no-repeat transparent; padding-left:22px" type="text" id="username" name="username">
+                <input style="background:2px center url(<?php echo base_url(); ?>assets/images/icons/user_16.png) no-repeat transparent; padding-left:22px" type="text" id="username" name="username">
               </label>
               <label for="password">
                 <strong><?php echo lang('Password:'); ?></strong>
-                <input style="background:2px center url(<?php echo base_url(); ?>img/other/key_16.png) no-repeat transparent; padding-left:22px" type="password" id="password" name="password">
+                <input style="background:2px center url(<?php echo base_url(); ?>assets/images/other/key_16.png) no-repeat transparent; padding-left:22px" type="password" id="password" name="password">
               </label>
               <br><br>
-              <?php echo generate_submit_button(lang('Login'), base_url().'img/icons/log_in_16.png', 'green'); ?>
+              <?php echo generate_submit_button(lang('Login'), base_url().'assets/images/icons/log_in_16.png', 'green'); ?>
             </p>
           </form>
           <ul class="sidemenu">
             <li>
-              <?php echo anchor('user/forgot_password', '<img src="'. base_url().'img/icons/help_16.png" class="nb" alt="">'.lang('Forgot Your Password?')); ?>
+              <?php echo anchor('user/forgot_password', '<img src="'. base_url().'assets/images/icons/help_16.png" class="nb" alt="">'.lang('Forgot Your Password?')); ?>
             </li>
             <li>
-              <?php echo anchor('user/register', '<img src="'. base_url().'img/other/user-add_16.png" class="nb" alt="">'.lang('New? Register Here!')); ?>
+              <?php echo anchor('user/register', '<img src="'. base_url().'assets/images/other/user-add_16.png" class="nb" alt="">'.lang('New? Register Here!')); ?>
             </li>
           </ul>
 <?php
@@ -61,7 +61,7 @@ if($this->startup->site_config->show_recent_uploads)
 ?>
             <li>
               <a href="<?php echo $links['down']; ?>">
-                <img src="<?php echo base_url().'img/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
+                <img src="<?php echo base_url().'assets/images/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
                 <?php echo $this->functions->elipsis($file->o_filename, 10); ?>
               </a>
           </li>
@@ -75,7 +75,7 @@ if($this->startup->site_config->show_about) {
 ?>
         <h3><?php echo lang('About'); ?></h3>        
         <p>
-          <a href="http://xtrafile.com"><img src="<?php echo base_url(); ?>images/thumb.gif" width="50" height="50" alt="icon" class="float-left"></a>
+          <a href="http://xtrafile.com"><img src="<?php echo base_url(); ?>assets/images/thumb.gif" width="50" height="50" alt="icon" class="float-left"></a>
           <a href="http://xtrafile.com/products/xtraupload-v2/"><?php echo lang('XtraUpload v3'); ?></a>
           <?php printf(lang('%s is a next generation file hosting solution, blurring the lines between file hosting and ease of use.'), anchor('http://xtrafile.com/products/xtraupload-v2/', lang('XtraUpload v3'))); ?><br>
           <?php echo lang('Our revolutionary flash-based file uploader technology gets what you want done.'); ?><br>

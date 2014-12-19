@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/public_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/public_32.png" class="nb" alt="">
           <?php echo lang('Web Site Terms and Conditions of Use'); ?> 
         </h2>
         <h3><?php echo lang('1. Terms'); ?></h3>

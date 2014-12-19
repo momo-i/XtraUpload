@@ -1,9 +1,9 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/user_group_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/user_group_32.png" class="nb" alt="">
           <?php echo lang('Group - Add'); ?> 
         </h2>
         <br>
-        <?php echo generate_link_button(lang('Manage Groups'), site_url('admin/group/view'), base_url().'img/icons/back_16.png'); ?><br>
+        <?php echo generate_link_button(lang('Manage Groups'), site_url('admin/group/view'), base_url().'assets/images/icons/back_16.png'); ?><br>
         <form action="<?php echo site_url('admin/group/add')?>" id="user_group" method="post">
           <h3><?php echo lang('Add New Group'); ?></h3>
           <p>
@@ -17,7 +17,7 @@ foreach ($group as $name => $value)
 ?>
             <label style="font-weight:bold" for="<?php echo $name; ?>">
               <?php echo $real_name[$name]; ?> 
-              <img src="<?php echo base_url(); ?>img/icons/about_16.png" style="cursor:pointer" onclick="$('#d_<?php echo $name; ?>').slideToggle()" class="nb"> 
+              <img src="<?php echo base_url(); ?>assets/images/icons/about_16.png" style="cursor:pointer" onclick="$('#d_<?php echo $name; ?>').slideToggle()" class="nb"> 
             </label>
 <?php
 	if($real_type[$name] == 'yesno')
@@ -66,7 +66,7 @@ foreach ($group as $name => $value)
 }
 ?>
             <br>
-            <?php echo generate_submit_button(lang('Add New Group'), base_url().'img/icons/add_16.png', 'green') ?>
+            <?php echo generate_submit_button(lang('Add New Group'), base_url().'assets/images/icons/add_16.png', 'green') ?>
             <br>
           </p>
         </form>

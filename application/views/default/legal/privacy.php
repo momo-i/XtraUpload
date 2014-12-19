@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/fraud_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/fraud_32.png" class="nb" alt="">
           <?php echo lang('Privacy Policy'); ?> 
         </h2>
         <p><?php echo lang('Your privacy is very important to us. Accordingly, we have developed this Policy in order for you to understand how we collect, use, communicate and disclose and make use of personal information. The following outlines our privacy policy.'); ?></p>

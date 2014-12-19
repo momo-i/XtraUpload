@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/folder_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/folder_32.png" class="nb" alt="">
           <?php echo lang('File Folder - Created'); ?> 
         </h2>
         <label><?php echo lang('Link:'); ?></label>

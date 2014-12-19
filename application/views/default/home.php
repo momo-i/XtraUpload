@@ -3,7 +3,7 @@ if( ! $this->startup->group_config->can_flash_upload)
 {
 ?>
           <h2 style="vertical-align:middle">
-            <img src="<?php echo base_url(); ?>img/other/home2_32.png" class="nb" alt="">
+            <img src="<?php echo base_url(); ?>assets/images/other/home2_32.png" class="nb" alt="">
             <?php echo lang('Home'); ?>
           </h2>
           <span class="alert">
@@ -15,7 +15,7 @@ else
 {
 ?>
           <h2 style="vertical-align:middle">
-            <img src="<?php echo base_url(); ?>img/other/home2_32.png" class="nb" alt="">
+            <img src="<?php echo base_url(); ?>assets/images/other/home2_32.png" class="nb" alt="">
             <?php echo lang('Home'); ?> 
           </h2>
 <?php
@@ -37,7 +37,7 @@ else
           <div id="info_div" style="display:none">
             <h3>
               <a href="javascript:void(0);" onclick="$('#upload_limits').slideDown();$(this).parent().remove();">
-                <img src="<?php echo base_url(); ?>img/icons/about_24.png" class="nb" alt="">
+                <img src="<?php echo base_url(); ?>assets/images/icons/about_24.png" class="nb" alt="">
                 <?php echo lang('Upload Restrictions'); ?> 
               </a>
             </h3>
@@ -90,7 +90,7 @@ else
                   <?php echo lang('Description'); ?><textarea id="description" name="description" rows="8" cols="40"></textarea>
                 </label>
                 <br style="clear:both">
-                <?php echo generate_submit_button(lang('Upload!'), base_url().'img/icons/up_16.png', 'green'); ?>
+                <?php echo generate_submit_button(lang('Upload!'), base_url().'assets/images/icons/up_16.png', 'green'); ?>
                 <br style="clear:both">
               </p>
             </form>
@@ -129,17 +129,17 @@ else
                 </span>
               </p>
               <div class="float-right" style=" margin-bottom:1em">
-                <?php echo generate_link_button(lang('Upload!'), 'javascript:void(0);', base_url().'img/icons/up_16.png', 'green', array('onclick'=>'swfu.startUpload();')); ?>
+                <?php echo generate_link_button(lang('Upload!'), 'javascript:void(0);', base_url().'assets/images/icons/up_16.png', 'green', array('onclick'=>'swfu.startUpload();')); ?>
               </div>
               <table style="border:0;padding:0;width:98%;clear:both" id="file_list_table">
                 <tr>
                   <th style="width:470px" class="align-left"><?php echo lang('File name'); ?></th>
                   <th style="width:90px"><?php echo lang('Size'); ?></th>
-                  <th style="width:85px"><?php echo lang('Actions'); ?> <img title="<?php echo lang('Delete All?'); ?>" src="<?php echo base_url(); ?>img/icons/delete_16.png" onclick="clearUploadQueue()" alt="" style="cursor:pointer" class="nb"></th>
+                  <th style="width:85px"><?php echo lang('Actions'); ?> <img title="<?php echo lang('Delete All?'); ?>" src="<?php echo base_url(); ?>assets/images/icons/delete_16.png" onclick="clearUploadQueue()" alt="" style="cursor:pointer" class="nb"></th>
                 </tr>
               </table>
               <div class="float-right">
-                <?php echo generate_link_button(lang('Upload!'), 'javascript:void(0);', base_url().'img/icons/up_16.png', 'green', array('onclick'=>'swfu.startUpload();')); ?>
+                <?php echo generate_link_button(lang('Upload!'), 'javascript:void(0);', base_url().'assets/images/icons/up_16.png', 'green', array('onclick'=>'swfu.startUpload();')); ?>
               </div>
             </div>
           </div>
@@ -199,7 +199,7 @@ else
             }
             function ___filePropSaveButtons(id)
             {
-             var template = "<?php echo str_replace("\n", '', str_replace('"', '\\"', generate_link_button(lang('Save Changes'), 'javascript:;', base_url().'img/icons/ok_16.png', 'green', array('onclick' => 'saveFilePropChanges(\'--id--\');$(\'#--id---details\').hide();$(\'#--id---edit_img\').fadeIn(\'fast\');')).generate_link_button(lang('Discard Changes'), 'javascript:;', base_url().'img/icons/close_16.png', 'red', array('onclick' => '$(\'#--id---details\').hide();$(\'#--id---edit_img\').fadeIn(\'fast\');'))))?>";
+             var template = "<?php echo str_replace("\n", '', str_replace('"', '\\"', generate_link_button(lang('Save Changes'), 'javascript:;', base_url().'assets/images/icons/ok_16.png', 'green', array('onclick' => 'saveFilePropChanges(\'--id--\');$(\'#--id---details\').hide();$(\'#--id---edit_img\').fadeIn(\'fast\');')).generate_link_button(lang('Discard Changes'), 'javascript:;', base_url().'assets/images/icons/close_16.png', 'red', array('onclick' => '$(\'#--id---details\').hide();$(\'#--id---edit_img\').fadeIn(\'fast\');'))))?>";
               return str_replace('--id--', id, template);
             }
             function str_replace (search, replace, subject, count)
@@ -258,7 +258,7 @@ else
                 flash_color : "#CCCCCC",
                 debug: false,
                 // Button settings
-                button_image_url : "<?php echo base_url(); ?>img/flash_upload.png", // Relative to the SWF file
+                button_image_url : "<?php echo base_url(); ?>assets/images/flash_upload.png", // Relative to the SWF file
                 button_placeholder_id : "spanButtonPlaceholder",
                 button_width: 90,
                 button_height: 18,

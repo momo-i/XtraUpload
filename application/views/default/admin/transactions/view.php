@@ -1,12 +1,12 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/transaction_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/transaction_32.png" class="nb" alt="">
           <?php echo lang('Transaction Manager'); ?> 
         </h2>
         <?php echo $flash_message; ?>
         <div style="display:none">
           <div id="massActions" style="clear:both; padding-top:4px;">
             <div class="float-right">
-              <?php echo generate_link_button(lang('Search'), site_url('admin/files/search'), base_url().'img/icons/search_16.png', NULL); ?>
+              <?php echo generate_link_button(lang('Search'), site_url('admin/files/search'), base_url().'assets/images/icons/search_16.png', NULL); ?>
             </div>
           </div>
           <div style="clear:both;"></div>
@@ -46,13 +46,13 @@ foreach ($transactions->result() as $transaction)
 	if($transaction->status)
 	{
 ?>
-              <img src="<?php echo base_url(); ?>img/icons/ok_16.png" alt="" class="nb">
+              <img src="<?php echo base_url(); ?>assets/images/icons/ok_16.png" alt="" class="nb">
 <?php
 	}
 	else
 	{
 ?>
-              <img src="<?php echo base_url(); ?>img/icons/cancel_16.png" alt="" class="nb">
+              <img src="<?php echo base_url(); ?>assets/images/icons/cancel_16.png" alt="" class="nb">
 <?php
 	}
 ?>
@@ -63,16 +63,16 @@ foreach ($transactions->result() as $transaction)
 	{
 ?>
               <a title="<?php echo lang('Approve Transaction'); ?>" href="<?php echo site_url('admin/transactions/approve/'.$transaction->id); ?>">
-                <img src="<?php echo base_url(); ?>img/icons/ok_16.png" class="nb" alt="<?php echo lang('Approve Transaction'); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/icons/ok_16.png" class="nb" alt="<?php echo lang('Approve Transaction'); ?>">
               </a>
 <?php
 	}
 ?>
               <a title="<?php echo lang('Edit Transaction'); ?>" href="<?php echo site_url('admin/transactions/edit/'.$transaction->id); ?>">
-                <img src="<?php echo base_url(); ?>img/icons/edit_16.png" class="nb" alt="<?php echo lang('Edit'); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/icons/edit_16.png" class="nb" alt="<?php echo lang('Edit'); ?>">
               </a>
               <a title="<?php echo lang('Delete Transaction'); ?>" onclick="return confirm('<?php echo lang('Are you sure you want to delete this transaction?'); ?>')" href="<?php echo site_url('admin/transactions/delete/'.$transaction->id); ?>">
-                <img src="<?php echo base_url(); ?>img/icons/close_16.png" class="nb" alt="<?php echo lang('Delete'); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/icons/close_16.png" class="nb" alt="<?php echo lang('Delete'); ?>">
               </a>
             </td>
           </tr>

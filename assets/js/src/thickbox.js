@@ -4,7 +4,7 @@
 * Copyright (c) 2007 cody lindley
 * Licensed under the MIT License: http://www.opensource.org/licenses/mit-license.php
 */
-var tb_pathToImage = ___baseUrl() + "images/loadingAnimation.gif";
+var tb_pathToImage = ___baseUrl() + "assets/images/loadingAnimation.gif";
 /*!!!!!!!!!!!!!!!!! edit below this line at your own risk !!!!!!!!!!!!!!!!!!!!!!!*/
 //on page load call tb_init
 $(document).ready(function()

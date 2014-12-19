@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/folder_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/folder_32.png" class="nb" alt="">
           <?php echo lang('File Folder - Create'); ?>
         </h2>
 <?php if($files->num_rows() == 0) { ?>
@@ -32,7 +32,7 @@
             </tr>
 <?php } //endforeach; ?>
           </table>
-          <?php echo generate_submit_button(lang('Create Folder'), base_url().'img/icons/new_16.png'); ?><br>
+          <?php echo generate_submit_button(lang('Create Folder'), base_url().'assets/images/icons/new_16.png'); ?><br>
         </form>
         <script type="text/javascript">
           //<![CDATA[

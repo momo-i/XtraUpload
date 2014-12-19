@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/edit_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/edit_32.png" class="nb" alt="">
           <?php echo lang('Edit Transaction'); ?> 
         </h2>
         <?php echo $flash_message; ?>
@@ -27,5 +27,5 @@ foreach ($config as $name => $type)
 }
 ?>
           <input type="hidden" name="valid" value="yes">
-          <?php echo generate_submit_button(lang('Update'), base_url().'img/icons/ok_16.png', 'green')?><br>
+          <?php echo generate_submit_button(lang('Update'), base_url().'assets/images/icons/ok_16.png', 'green')?><br>
         </form>

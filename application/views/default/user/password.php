@@ -5,7 +5,7 @@ if( ! $this->session->userdata('id'))
 }
 ?>
         <h2 style="vertical-align:middle">
-          <img alt="" class="nb" src="<?php echo base_url(); ?>img/icons/user_32.png">
+          <img alt="" class="nb" src="<?php echo base_url(); ?>assets/images/icons/user_32.png">
           <?php echo lang('Change Password'); ?> 
         </h2>
         <?php echo $error_message; ?> 
@@ -20,6 +20,6 @@ if( ! $this->session->userdata('id'))
             <input type="password" name="newpassword" size="50"><br>
             <label style="font-weight:bold" for="passconf"><?php echo lang('Confirm New Password'); ?></label>
             <input type="password" name="newpassconf" size="50"><br><br>
-            <?php echo generate_submit_button(lang('Submit Changes'), base_url().'img/icons/ok_16.png', 'green')?><br>
+            <?php echo generate_submit_button(lang('Submit Changes'), base_url().'assets/images/icons/ok_16.png', 'green')?><br>
           </p>
         </form>

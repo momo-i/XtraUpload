@@ -100,12 +100,12 @@ function placeProgressBar(id)
 		'<strong>'+___upLang('pc')+'</strong>: '+
 		'<span id="percent">0</span>%'+
 		'<table width="350" height="24" border="0"><tr><td width="25" height="24">'+
-		'<img src="'+___baseUrl()+'img/icons/import_24.png" class="nb" width="24" height="24">'+
+		'<img src="'+___baseUrl()+'assets/images/icons/import_24.png" class="nb" width="24" height="24">'+
 		'</td><td width="300">'+
 		'<div class="progress_border">'+
 		'<div class="progress_img" id="progress_img"></div></div>'+
 		'</td><td width="25">'+
-		'<img src="'+___baseUrl()+'img/icons/event_24.png" class="nb" width="24" height="24">'+
+		'<img src="'+___baseUrl()+'assets/images/icons/event_24.png" class="nb" width="24" height="24">'+
 		'</td></tr></table>'+
 		'<span id="total">0</span>'+___upLang('kbr')+'<span id="speed">0</span> KB/s) <br>'+
 		'<span id="remaining">00h : 00m : 00s</span> '+___upLang('remain'));
@@ -191,15 +191,15 @@ function addFileQueue(file)
 	$('#filesHidden').append(""+
 		"<tr id='"+file.id+"'>"+
 			"<td class='align-left' style='vertical-align:middle'>"+
-				"<img class='nb' src='"+___baseUrl()+"img/files/"+___getFileIcon(getExtension(file.name))+".png' border='0' />&nbsp;" +
+				"<img class='nb' src='"+___baseUrl()+"assets/images/files/"+___getFileIcon(getExtension(file.name))+".png' border='0' />&nbsp;" +
 				file.name +
 			"</td>"+
 			"<td>" + 
 				convert_bits(file.size) + 
 			"</td>"+
 			"<td id='"+file.id+"-del'>"+
-				"<img id='"+file.id+"-edit_img' onclick=\"$('#"+file.id+"-details').show();$(this).fadeOut('fast')\" src='"+___baseUrl()+"img/icons/edit_16.png' title='"+___upLang('efd')+"' style='cursor:pointer' class='nb'>&nbsp;"+
-				"<img onclick=\"rm_file('" + file.id + "');\" src='"+___baseUrl()+"img/icons/close_16.png' title='"+___upLang('rm')+"' style='cursor:pointer' class='nb'>"+
+				"<img id='"+file.id+"-edit_img' onclick=\"$('#"+file.id+"-details').show();$(this).fadeOut('fast')\" src='"+___baseUrl()+"assets/images/icons/edit_16.png' title='"+___upLang('efd')+"' style='cursor:pointer' class='nb'>&nbsp;"+
+				"<img onclick=\"rm_file('" + file.id + "');\" src='"+___baseUrl()+"assets/images/icons/close_16.png' title='"+___upLang('rm')+"' style='cursor:pointer' class='nb'>"+
 			"</td>"+
 		"</tr>"+
 		"<tr id='"+file.id+"-details' class='details' style='display:none'>"+

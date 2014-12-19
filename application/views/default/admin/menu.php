@@ -3,19 +3,19 @@
         <ul class="sidemenu">
           <li>
             <a href="<?php echo site_url('admin/home'); ?>">
-              <img src="<?php echo base_url(); ?>img/other/admin_16.png" class="nb" alt="">
+              <img src="<?php echo base_url(); ?>assets/images/other/admin_16.png" class="nb" alt="">
               <?php echo lang('Admin Home'); ?> 
             </a>
           </li>
           <li>
             <a href="<?php echo site_url('home'); ?>">
-              <img src="<?php echo base_url(); ?>img/other/home2_16.png" class="nb" alt="">
+              <img src="<?php echo base_url(); ?>assets/images/other/home2_16.png" class="nb" alt="">
               <?php echo lang('Site Home'); ?> 
             </a>
           </li>
           <li>
             <a href="<?php echo site_url('user/logout'); ?>">
-              <img src="<?php echo base_url(); ?>img/icons/log_out_16.png" class="nb" alt="">
+              <img src="<?php echo base_url(); ?>assets/images/icons/log_out_16.png" class="nb" alt="">
               <?php echo lang('Logout'); ?> 
             </a>
           </li>

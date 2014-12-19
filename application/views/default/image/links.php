@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/pictures_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/pictures_32.png" class="nb" alt="">
           <?php echo lang('Image BBCode/Links'); ?>
         </h2>
         <p>

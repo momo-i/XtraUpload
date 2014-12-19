@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/icons/folder_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/icons/folder_32.png" class="nb" alt="">
           <?php echo lang('File Folder'); ?> 
         </h2>
         <h3><?php echo lang('Name:'); ?> <?php echo $folder->name; ?></h3>
@@ -17,7 +17,7 @@ foreach ($folder_files->result() as $fileRef):
 ?>
             <tr>
               <td>
-                <img src="<?php echo base_url().'img/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
+                <img src="<?php echo base_url().'assets/images/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
                 <?php echo anchor('files/get/'.$file->file_id.'/'.$file->link_name, $file->o_filename, array('target'=>'_blank')); ?> 
               </td>
               <td><?php echo $this->functions->get_filesize_prefix($file->size); ?></td>

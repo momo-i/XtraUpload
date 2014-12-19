@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/other/admin_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/other/admin_32.png" class="nb" alt="">
           <?php echo lang('Admin Home'); ?> 
         </h2>
         <h3 id="php_ini_header" ><?php echo lang('Important Server Settings'); ?></h3>
@@ -80,7 +80,7 @@ foreach ($ini_list as $k => $v)
 	if(intval(ini_get($k)) < intval($ini_rec[$k]))
 	{
 		$is_not_good = true;
-		echo ' - <img src="'.base_url().'img/icons/cancel_16.png" alt="'.lang('Error!').'" title="'.lang('Error!').'" class="nb"><span style="color:#F00">'.lang('Recommended').': ';
+		echo ' - <img src="'.base_url().'assets/images/icons/cancel_16.png" alt="'.lang('Error!').'" title="'.lang('Error!').'" class="nb"><span style="color:#F00">'.lang('Recommended').': ';
 		if($k == 'upload_max_filesize' or $k == 'post_max_size' or $k == 'memory_limit')
 		{
 			echo $ini_rec[$k].'B';
@@ -97,7 +97,7 @@ foreach ($ini_list as $k => $v)
 	}
 	else
 	{
-		echo '<img src="'.base_url().'img/icons/ok_16.png" alt="'.lang('Ok!').'" title="'.lang('Ok!').'" class="nb" />';
+		echo '<img src="'.base_url().'assets/images/icons/ok_16.png" alt="'.lang('Ok!').'" title="'.lang('Ok!').'" class="nb" />';
 	}
 ?>
             <span id="php_<?php echo $k; ?>" style="display:none">
@@ -196,7 +196,7 @@ foreach ($servers->result() as $serv)
           <tr>
             <td>
               <h3 style="font-size:16px; padding:2px; margin:0">
-                <img class="nb" src="<?php echo base_url(); ?>img/other/server_16.png" alt="">
+                <img class="nb" src="<?php echo base_url(); ?>assets/images/other/server_16.png" alt="">
                 <a href="<?php echo site_url('admin/server/edit/'.$serv->id); ?>"><?php echo ucfirst($serv->name); ?></a>
                 (<?php echo $serv->url; ?>)
               </h3>
@@ -247,13 +247,13 @@ foreach ($logins->result() as $log)
 	if ($log->valid == 1)
 	{
 ?>
-              <img src="<?php echo base_url(); ?>img/icons/ok_16.png" class="nb" alt="">
+              <img src="<?php echo base_url(); ?>assets/images/icons/ok_16.png" class="nb" alt="">
 <?
 	}
 	else
 	{
 ?>
-              <img src="<?php echo base_url(); ?>img/icons/cancel_16.png" class="nb" alt="">
+              <img src="<?php echo base_url(); ?>assets/images/icons/cancel_16.png" class="nb" alt="">
 <?php
 	}
 ?>

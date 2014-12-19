@@ -9,5 +9,5 @@ echo '</tr>';
 ?>
 </table>
 <p>
-<?php echo generate_link_button(lang('Select Language'), site_url('admin/translator'), base_url().'img/icons/back_16.png').'<br />'?>
+<?php echo generate_link_button(lang('Select Language'), site_url('admin/translator'), base_url().'assets/images/icons/back_16.png').'<br />'?>
 </p>

@@ -1,5 +1,5 @@
         <h2 style="vertical-align:middle">
-          <img src="<?php echo base_url(); ?>img/other/images_32.png" class="nb" alt="">
+          <img src="<?php echo base_url(); ?>assets/images/other/images_32.png" class="nb" alt="">
           <?php echo lang('Image Gallery - Create'); ?> 
         </h2>
 <?php
@@ -42,7 +42,7 @@ else
 <?php
 	}
 ?>
-              <?php echo generate_submit_button(lang('Create Gallery'), base_url().'img/icons/new_16.png')?><br>
+              <?php echo generate_submit_button(lang('Create Gallery'), base_url().'assets/images/icons/new_16.png')?><br>
             </table>
           </p>
         </form>

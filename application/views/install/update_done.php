@@ -18,7 +18,7 @@
                   <div style="float:right">
                     <span class="cssbutton">
                       <a class="buttonGreen" href="<?php echo base_url() ?>" onclick="return $('#form1').validate().form();">
-                        <img src="<?php echo site_url('/img/icons/ok_16.png'); ?>" border="0" alt="">
+                        <img src="<?php echo site_url('/assets/images/icons/ok_16.png'); ?>" border="0" alt="">
                         <?php echo lang('Continue'); ?> 
                       </a>
                     </span>
