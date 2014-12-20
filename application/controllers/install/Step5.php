@@ -31,7 +31,7 @@ class Step5 extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		include(ROOTPATH.'/xu_ver.php');
+		include(APPPATH.'/config/xu_ver.php');
 		$this->_db_version = $version;
 		$this->load->model('xu');
 		$this->_version = $this->xu->get_version();

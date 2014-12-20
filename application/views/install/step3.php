@@ -124,7 +124,7 @@
                 <div class="description"><?php echo lang('Optional'); ?></div>
               </td>
               <td class="pformright">
-                <input class="required" name="sql_prefix" type="text" id="sql_prefix" size="45" value="xu3_">
+                <input name="sql_prefix" type="text" id="sql_prefix" size="45" value="xu3_">
               </td>
             </tr>
             <tr>
