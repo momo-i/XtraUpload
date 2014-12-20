@@ -795,5 +795,25 @@ if ( ! function_exists('date_range'))
 	}
 }
 
+if ( ! function_exists('unix_to_small'))
+{
+	/**
+	 * Unix to "Small"
+	 *
+	 * Formats Unix timestamp to the following prototype: 2006-08-21 11:35 PM
+	 *
+	 * @deprecated 3.0.0
+	 * @access     public
+	 * @param      integer Unix timestamp
+	 * @param      bool    whether to show seconds
+	 * @param      string  format: us or euro
+	 * @return     string
+	 */
+	function unix_to_small($time = '')
+	{
+		return unix_to_human($time);
+	}
+}
+
 /* End of file date_helper.php */
 /* Location: ./system/helpers/date_helper.php */

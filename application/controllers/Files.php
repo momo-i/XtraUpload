@@ -650,12 +650,13 @@ EOF;
 	 * @param   string
 	 * @return  none
 	 */
-	public function _download_fail($file)
+	static public function _download_fail($file)
 	{
 		$this1 =& get_instance();
+		$user = !empty($this1->session->userdata('id')) ? $this1->session->userdata('id') : lang("Guest");
 		$data = array(
 			'file_id'   => $file->file_id,
-			'user'	  => $this1->session->userdata('id'),
+			'user'	  => $user,
 			'ip'		=> $this1->input->ip_address(),
 			'size'	  => $file->size,
 			'sent'	  => $this1->filedownload->bandwidth,

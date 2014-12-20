@@ -131,7 +131,6 @@ class Upload extends CI_Controller {
 		}
 		else
 		{
-			//$this->files_db->set_upload_failed($secid, str_replace('upload_', '', $this->upload->error_num[0]));
 			$this->files_db->set_upload_failed($secid, str_replace('upload_', '', $this->upload->error_msg[0]));
 			if ($this->input->post('no_flash'))
 			{

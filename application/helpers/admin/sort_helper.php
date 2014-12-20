@@ -57,11 +57,11 @@ if( ! function_exists('get_sort_arrow'))
 		{
 			if($dir == 'asc')
 			{
-				?><img src="<?php echo base_url(); ?>img/order/arrow_up.png" alt="" class="nb"><?
+				?><img src="<?php echo base_url(); ?>assets/images/order/arrow_up.png" alt="" class="nb"><?
 			}
 			else
 			{
-				?><img src="<?php echo base_url(); ?>img/order/arrow_down.png" alt="" class="nb"><?
+				?><img src="<?php echo base_url(); ?>assets/images/order/arrow_down.png" alt="" class="nb"><?
 			}
 		}
 	}
