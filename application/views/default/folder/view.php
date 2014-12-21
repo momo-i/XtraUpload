@@ -12,7 +12,7 @@
             </tr>
 <?php
 foreach ($folder_files->result() as $fileRef):
-	$file = $this->files_db->_get_file_object($fileRef->file_id);
+	$file = $this->files_db->get_file_object($fileRef->file_id);
 	$links = $this->files_db->get_links('', $file);
 ?>
             <tr>
