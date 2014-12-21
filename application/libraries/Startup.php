@@ -166,6 +166,7 @@ class Startup {
 		{
 			// Dont wast time with the DB, load the cached version
 			$this->skin = $this->CI->security->xss_clean($this->CI->load->file(CACHEPATH . $skin_name , true));
+			log_message('debug', "Load skin from cache {$this->skin}");
 		}
 		else
 		{
@@ -173,6 +174,7 @@ class Startup {
 			$this->skin = $this->CI->db->get_where('skin', array('active' => '1'))->row()->name;
 			// Save the config object to cache for increased performance
 			file_put_contents(CACHEPATH . $skin_name , $this->skin);
+			log_message('debug', "Load skin from database {$this->skin}");
 		}
 	}
 
