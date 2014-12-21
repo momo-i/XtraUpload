@@ -32,6 +32,7 @@ class CI_Remotefile {
 	public $error = '';
 	private $headers = '';
 	public $CI = '';
+	private $_content_length=0;
 
 	/**
 	 * File Download Constructor
@@ -64,7 +65,8 @@ class CI_Remotefile {
 	public function get_headers($url)
 	{
 		$this->headers = get_headers($url, true);
-		return $this->headers['Content-Length'];
+		$this->_content_length = isset($this->headers['Content-Length']) ? $this->headers['Content-Length'] : 0;
+		return $this->_content_length;
 	}
 	
 	public function headers_to_array($string)
@@ -79,7 +81,8 @@ class CI_Remotefile {
 	
 	public function remote_size()
 	{
-		return $this->headers['Content-Length'];
+		
+		return $this->_content_length;
 	}
 	
 	public function get_referer()
