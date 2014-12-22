@@ -151,6 +151,10 @@ class Update extends CI_Controller {
 		$update_string .= '- Update show/hide about message on admin page.';
 		$version[] = array('version' => '3000200', 'description' => $update_string);
 
+		// 3.0.0 RC3
+		$update_string = '- Update upload_failures table';
+		$version[] = array('version' => '3000300', 'description' => $update_string);
+
 		return $version;
 	}
 
@@ -249,6 +253,22 @@ class Update extends CI_Controller {
 		$data = array('id' =>  NULL, 'name' => 'show_about', 'value' => '1', 'description1' => 'Show About Messages', 'description2' => 'Yes|-|No<br /><br />Show a list of the About messages?', 'group' => 0, 'type' => 'yesno', 'invincible' => 1);
 		$this->db->insert('config', $data);
 
+		$this->_set_db_version();
+		return TRUE;
+	}
+
+	private function _update_3000300()
+	{
+		$fields = array(
+			'reason' => array(
+				'type' => 'VARCHAR',
+				'constraint' => 255,
+			)
+		);
+		$this->dbforge->modify_column('upload_failures', $fields);
+
+		$this->_set_db_version();
+		return TRUE;
 	}
 
 	private function _set_db_version()

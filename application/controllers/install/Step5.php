@@ -1232,7 +1232,7 @@ class Step5 extends CI_Controller {
 			),
 			'reason' => array(
 				'type' => 'VARCHAR',
-				'constraint' => 50,
+				'constraint' => 255,
 			)
 		);
 		$this->dbforge->add_field($fields);
