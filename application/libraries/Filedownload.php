@@ -183,7 +183,7 @@ class CI_Filedownload {
 			$extension = end($x);
 
 			// Load the mime types
-			@include(APPPATH.'config/mimes'.EXT);
+			@include(APPPATH.'config/mimes.php');
 
 			// Set a default mime if we can't find it
 			if ( ! isset($mimes[$extension]))
