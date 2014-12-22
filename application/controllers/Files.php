@@ -755,7 +755,7 @@ EOF;
 			'img_width' => $img_width,
 			'img_height' => $img_height,
 			'img_url'   => base_url().'temp/',
-			'fonts' => BASEPATH.'fonts/MyriadWebPro-Bold.ttf'
+			'fonts' => BASEPATH.'assets/fonts/texb.ttf'
 		);
 
 		$cap = create_captcha($vals);

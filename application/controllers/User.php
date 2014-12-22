@@ -832,7 +832,7 @@ class User extends CI_Controller {
 			'img_width' => $img_width,
 			'img_height' => $img_height,
 			'img_url'   => base_url().'temp/',
-			'font_path' => BASEPATH.'fonts/MyriadWebPro-Bold.ttf'
+			'font_path' => BASEPATH.'assets/fonts/texb.ttf'
 		);
 
 		$cap = create_captcha($vals);

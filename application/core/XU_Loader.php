@@ -73,7 +73,7 @@ class XU_Loader extends CI_Loader {
 		}
 
 		foreach($extensions as $extension) {
-			$plugin = strtolower(str_replace(EXT, '', $extension));
+			$plugin = strtolower(str_replace('.php', '', $extension));
 
 			// If the extension is already loaded, continue on.
 			if(isset($this->_ci_extensions[$extension])) {
