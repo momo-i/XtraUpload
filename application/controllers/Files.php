@@ -203,7 +203,6 @@ EOF;
 EOF;
 			break;
 			case 'mp3':
-			default:
 				$data['icon'] = 'music';
 				$data['code'] = <<<EOF
           <audio id="player2" src="$src" controls="controls" type="audio/mp3"></audio>
@@ -212,6 +211,10 @@ EOF;
           </script>
 
 EOF;
+			break;
+			default:
+				$data['icon'] = 'help';
+				$data['code'] = '';
 			break;
 		}
 
