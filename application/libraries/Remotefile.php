@@ -172,6 +172,7 @@ class CI_Remotefile {
 		$sh = fsockopen($host, $port, $errid, $errmsg, 30);
 		if (!$sh)
 		{
+			log_message('debug', sprintf('Remotefile: cannot fsockopen errid: %s errmsg: %s', $errid, $errmsg));
 			return false;
 		}
 
