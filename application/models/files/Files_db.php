@@ -369,17 +369,17 @@ class Files_db extends CI_Model {
 			copy($file, $new);
 			return;
 		}
-		
-		$config['image_library'] = 'GD2';
-		$config['create_thumb'] = TRUE;
-		$config['thumb_marker '] = '';
-		$config['source_image'] = $file;
-		$config['new_image'] = $new;
-		$config['create_thumb'] = TRUE;
-		$config['maintain_ratio'] = TRUE;
-		$config['quality'] = 90;
-		$config['width'] = 200;
-		$config['height'] = 200;
+		$config = array(
+			'image_library' => 'gd2',
+			'create_thumb' => TRUE,
+			'thumb_marker' => '',
+			'source_image' => $file,
+			'new_image' => $new,
+			'maintain_ratio' => TRUE,
+			'quality' => 90,
+			'width' => 200,
+			'height' => 200
+		);
 		$this->load->library('image_lib', $config);
 		
 		$this->image_lib->resize();
@@ -456,11 +456,11 @@ class Files_db extends CI_Model {
 			if($is_image and $size <= (15 * 1024 * 1024))
 			{
 				$new_image = ROOTPATH.'/thumbstore/'.$prefix.'/'.$file_id.'.'.basename($file);
-				$this->process_image($file, $type, $new_image, $prefix);
 				$base = basename($file);
 				$base = substr($base,0,(strlen($base) - (1+strlen($type))));
 				$base = $base.'_thumb.'.$rType;
 				$new_image = ROOTPATH.'/thumbstore/'.$prefix.'/'.$file_id.'.'.$base;
+				$this->process_image($file, $type, $new_image, $prefix);
 			}
 			
 			// Move the file into its new home
