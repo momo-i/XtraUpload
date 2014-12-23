@@ -16,10 +16,10 @@ XtraUpload is FREE(Modified Apache 2.0 License, open source) and very stable.
 
 ## Getting all the components
 
-* [Apache](http://httpd.apache.org/) >= 2.4.x OR other web server
-* [PHP](http://www.php.net/) >= 5.4.x
-* [MySQL](http://www.mysql.com/) >= 5.x+
-* OR [mariadb](http://mariadb.org) >= 5.x+
+* [Apache](http://httpd.apache.org/) >= 2.4.x
+* [PHP](http://www.php.net/) >= 5.6.x
+* [mariadb](http://mariadb.org) >= 10.0.x+
+* OR [MySQL](http://www.mysql.com/) >= 5.x+
 
 12mb of free disk space (plus space to store uploaded files)
 mod_rewrite support for your webserver(apache config file included)
@@ -40,4 +40,4 @@ Please see the included LICENSE file
 Hate it?  Love it?  Let us know.  Let us know if you think of any
 more features, bugs, etc.
 
-  * [Public Source Repository](https://github.com/momo-i/xtraupload-v3)
+* [Public Source Repository](https://github.com/momo-i/xtraupload-v3)
