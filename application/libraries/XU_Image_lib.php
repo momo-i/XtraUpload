@@ -805,7 +805,6 @@ class XU_Image_lib extends CI_Image_lib {
 			$copy	= 'imagecopyresized';
 		}
 
-		log_message('debug', 'XU Image: '.print_r($this, true));
 		$dst_img = $create($this->width, $this->height);
 
 		if ($this->image_type === 3) // png we can actually preserve transparency
