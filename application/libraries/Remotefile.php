@@ -28,7 +28,7 @@
 class CI_Remotefile {
 
 	public $buffer = 204800;
-	public $tmp_dir = ROOTPATH.'/temp';
+	public $tmp_dir = '';
 	public $error = '';
 	private $headers = '';
 	public $CI = '';
@@ -112,6 +112,7 @@ class CI_Remotefile {
 	 
 	public function fetch_file($url, $fid, $max_size, $fp=NULL)
 	{
+		$this->tmp_dir = ROOTPATH . '/temp';
 		$parsedurl = parse_url($url, PHP_URL_SCHEME);
 		
 		if($parsedurl == 'http')
