@@ -81,7 +81,6 @@ class CI_Remotefile {
 	
 	public function remote_size()
 	{
-		
 		return $this->_content_length;
 	}
 	
@@ -93,6 +92,7 @@ class CI_Remotefile {
 		}
 		else
 		{
+			$this->set_error(lang('No Referer.'));
 			return false;
 		}
 	}
@@ -105,6 +105,7 @@ class CI_Remotefile {
 		}
 		else
 		{
+			$this->set_error(lang('No Location.'));
 			return false;
 		}
 	}
@@ -115,14 +116,17 @@ class CI_Remotefile {
 		
 		if($parsedurl == 'http')
 		{
+			log_message('debug', "HTTP Transfer started: $url");
 			return $this->_http_transfer($url, $fid, $max_size, $fp);
 		}
 		else if($parsedurl == 'ftp')
 		{
+			log_message('debug', "FTP Transfer started: $url");
 			return $this->_ftp_transfer($url, $fid, ($max_size * 1024 * 1024));
 		}
 		else
 		{
+			$this->set_error(lang('URL parse failed. '.$url));
 			exit;
 		}
 	}
@@ -197,6 +201,7 @@ class CI_Remotefile {
 		
 		$request.= "\r\n";
 
+		log_message('debug', "Request write: $request");
 		//Send The Request 
 		fwrite($sh, $request);
 
@@ -222,6 +227,7 @@ class CI_Remotefile {
 		$i = $p = 0;
 		$end_headers = false;
 		$rstr='';
+		log_message('debug', "Downloading file...");
 		// download the file
 		while(!feof($sh))
 		{
@@ -342,6 +348,20 @@ class CI_Remotefile {
 		
 		return $fname;
 	}
+
+	public function set_error($msg)
+	{
+		is_array($msg) OR $msg = array($msg);
+
+		foreach ($msg as $val)
+		{
+			$this->error_msg[] = $val;
+			log_message('error', $val);
+		}
+
+		return $this;
+	}
+
 }
 
 /* End of file remotefile.php */

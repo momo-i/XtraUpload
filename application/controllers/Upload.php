@@ -88,11 +88,11 @@ class Upload extends CI_Controller {
 			rename($file, $nfile);
 
 			$this->files_db->new_file($nfile, $uid, $user, (bool)$is_image, base_url(), true);
-			echo lang('Upload Complete!');
+			echo lang('URL Upload Complete!');
 		}
 		else
 		{
-			echo lang('Upload Failed!');
+			echo lang('URL Upload Failed!'.$this->remotefile->error_msg[0]);
 		}
 	}
 
@@ -131,7 +131,7 @@ class Upload extends CI_Controller {
 		}
 		else
 		{
-			$this->files_db->set_upload_failed($secid, str_replace('upload_', '', $this->upload->error_msg[0]));
+			$this->files_db->set_upload_failed($secid, $this->upload->error_msg[0]);
 			if ($this->input->post('no_flash'))
 			{
 				redirect('upload/failed/'.$secid);
