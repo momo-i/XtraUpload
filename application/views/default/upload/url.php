@@ -117,7 +117,7 @@ else
             $('#link').val(file.link);
             var strName = "uploader_" + (new Date()).getTime();
             //alert(strName);
-            var jFrame = $("<iframe name=\"" + strName + "\" src=\"<?php echo site_url('blank.html'); ?>\"></iframe>");
+            var jFrame = $("<iframe name=\"" + strName + "\" src=\"<?php echo site_url('upload/blank'); ?>\"></iframe>");
             jForm.attr("target", strName);
             jFrame.css("display", "none");
             jFrame.load( function(objEvent)

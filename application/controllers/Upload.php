@@ -201,6 +201,12 @@ class Upload extends CI_Controller {
 		$this->files_db->update_file_info($fid, $data);
 		echo lang('OK');
 	}
+
+	public function blank()
+	{
+		return;
+	}
+
 }
 
 /* End of file upload.php */
