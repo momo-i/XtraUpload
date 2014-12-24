@@ -904,6 +904,7 @@ class XU_Upload extends CI_Upload {
 
 		if (empty($this->allowed_types) OR ! is_array($this->allowed_types))
 		{
+			log_message('debug', "Allowed types: ".print_r($this->allowed_types, true));
 			$this->set_error($this->types['upload_no_file_types']);
 			return FALSE;
 		}
@@ -912,7 +913,7 @@ class XU_Upload extends CI_Upload {
 
 		if (in_array($ext, $this->allowed_types, TRUE))
 		{
-			log_message('debug', "No allowed types in array: $ext, ".print_r($this->allowed_types, true));
+			log_message('debug', "No allowed types in array: $ext");
 			return FALSE;
 		}
 

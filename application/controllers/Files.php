@@ -172,6 +172,7 @@ class Files extends CI_Controller {
             swfobject.embedSWF("$flvplayer", "flvplayer", "$player_width", "$player_height", "10.0.0", "$express", flashvarsVideo, params, attributes);
           </script>
           <div id="flvplayer"></div>
+          <br>
 
 EOF;
 			break;
@@ -192,13 +193,14 @@ EOF;
             </object>
           </video>
           <span id="player2-mode"></span>
-            <script type="text/javascript">
-              $('audio,video').mediaelementplayer({
-                success: function(player, node) {
-                  $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
-                }
-              });
-            </script>
+          <script type="text/javascript">
+            $('audio,video').mediaelementplayer({
+              success: function(player, node) {
+                $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+              }
+            });
+          </script>
+          <br>
 
 EOF;
 			break;
@@ -209,6 +211,7 @@ EOF;
           <script type="text/javascript">
             $('audio').mediaelementplayer();
           </script>
+          <br>
 
 EOF;
 			break;
