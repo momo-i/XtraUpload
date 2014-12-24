@@ -99,12 +99,12 @@ class Functions {
 	
 	public function elipsis($str, $count = 13)
 	{
-		if(strlen($str) <= ($count*3))
+		if(mb_strlen($str) <= ($count*3))
 		{
 			return $str;
 		}
 		
-		$parts = str_split($str, 3);
+		$parts = $this->_str_split_unicode($str, 3);
 		$i=0;
 		$return='';
 		while(($count-3) >= ($i))
@@ -213,6 +213,22 @@ class Functions {
 		}
 		return $version;
 	}
+
+	private function _str_split_unicode($str, $l = 0)
+	{
+		if ($l > 0)
+		{
+			$ret = array();
+			$len = mb_strlen($str, "UTF-8");
+			for ($i = 0; $i < $len; $i += $l)
+			{
+				$ret[] = mb_substr($str, $i, $l, "UTF-8");
+			}
+			return $ret;
+		}
+		return preg_split("//u", $str, -1, PREG_SPLIT_NO_EMPTY);
+	}
+
 }
 
 /* End of file functions.php */
