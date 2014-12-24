@@ -1,4 +1,4 @@
-        <script type="text/javascript" src="<?php echo base_url(); ?>/js/charts.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/charts.js"></script>
         <h2 style="vertical-align:middle">
           <img src="<?php echo base_url(); ?>assets/images/icons/reports_32.png" class="nb" alt="">
           <?php echo lang('Mass Emailer'); ?> 
