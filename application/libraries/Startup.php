@@ -328,20 +328,14 @@ class Startup {
 			$this->CI->xu_api->menus->add_sub_menu_link('Create-login', 'folder/create', lang('File Folder'), 'assets/images/icons/folder_16.png');
 			$this->CI->xu_api->menus->add_sub_menu_link('Create-login', 'image/create_gallery', lang('Image Gallery'), 'assets/images/other/images_16.png');
 		}
-
 		// Enable embed code for MP3s
 		$this->CI->xu_api->embed->add_embed_type('mp3', array('width' => '470', 'height' => '30', 'speed' => '50'));
 		// Enable embed code for Flash Video
-		$this->CI->xu_api->embed->add_embed_type('flv', array('width' => '470', 'height' => '320', 'speed' => '4000'));
-		// Enable embed code for MP4s
-		$this->CI->xu_api->embed->add_embed_type('mp4', array('width' => '470', 'height' => '320', 'speed' => '8000'));
+		$this->CI->xu_api->embed->add_embed_type('flv', array('width' => $this->site_config->player_width, 'height' => $this->site_config->player_height, 'speed' => '4000'));
+		// Enable embed code for Other Videos
+		$types = array('mp4', 'mpg', 'wmv', 'avi');
+		$this->CI->xu_api->embed->add_embed_type($types, array('width' => $this->site_config->player_width, 'height' => $this->site_config->player_height, 'speed' => '8000'));
 
-		// Enable embed code for MP4s
-		$this->CI->xu_api->embed->add_embed_type('mpg', array('width' => '470', 'height' => '320', 'speed' => '8000'));
-		// Enable embed code for MP4s
-		$this->CI->xu_api->embed->add_embed_type('wmv', array('width' => '470', 'height' => '320', 'speed' => '8000'));
-		// Enable embed code for MP4s
-		$this->CI->xu_api->embed->add_embed_type('avi', array('width' => '470', 'height' => '320', 'speed' => '8000'));
 	}
 
 	// new functions

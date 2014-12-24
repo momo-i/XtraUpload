@@ -45,9 +45,16 @@ class Xu_embed_api
 		$this->store->embed = array();
 	}
 	
-	public function add_embed_type($type, $data)
+	public function add_embed_type($types, $data)
 	{
-		$this->store->embed[$type] = $data;
+		if(!is_array($types))
+		{
+			$types = array($types);
+		}
+		foreach($types as $type)
+		{
+			$this->store->embed[$type] = $data;
+		}
 	}
 	
 	public function remove_embed_type($type)
