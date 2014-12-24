@@ -121,6 +121,11 @@ class Functions {
 	public function is_image($file)
 	{
 		$img_ext = array('jpg', 'gif', 'jpeg', 'png');
+		log_message('debug', "file: $file");
+		if(!preg_match('#\.#', $file))
+		{
+			return FALSE;
+		}
 		$file_ext = end(explode('.', basename($file)));
 		
 		if (in_array(strtolower($file_ext), $img_ext))
@@ -136,7 +141,7 @@ class Functions {
 	
 	public function get_file_type_icon($type)
 	{
-		if(file_exists(ROOTPATH.'/img/files/'.$type.'.png'))
+		if(file_exists(ROOTPATH.'/assets/images/files/'.$type.'.png'))
 		{
 			return $type.'.png';
 		}

@@ -54,12 +54,16 @@ class Upload extends CI_Controller {
 		$db = $this->db->get_where('progress', array('fid' => $fid));
 		if($db->num_rows() != 1)
 		{
-			echo '[{"total":"100", "sofar":"0", "start_time":"'.time().'"}]';
+			$json = '[{"total":"100", "sofar":"0", "start_time":"'.time().'"}]';
+			log_message('debug', $json);
+			echo $json;
 		}
 		else
 		{
 			$pro = $db->row();
-			echo '[{"total":"'.$pro->total.'", "sofar":"'.$pro->progress.'", "start_time":"'.$pro->start_time.'"}]';
+			$json = '[{"total":"'.$pro->total.'", "sofar":"'.$pro->progress.'", "start_time":"'.$pro->start_time.'"}]';
+			log_message('debug', $json);
+			echo $json;
 		}
 	}
 

@@ -174,7 +174,18 @@ function pushUpdate(total, remain, speed, per)
 
 function placeProgressBar(id)
 {
-	$("#up_"+id+"-details-inner").empty().html('<strong>Percent Complete</strong>: <span id="percent">0</span>%<table width="350" height="24" border="0"><tr><td width="25" height="24"><img src="'+___baseUrl()+'assets/images/icons/import_24.png"  class="nb"  width="24" height="24" /></td><td width="300"><div class="progress_border"><div class="progress_img" id="progress_img"></div></div></td><td width="25"><img src="'+___baseUrl()+'assets/images/icons/event_24.png" class="nb" width="24" height="24" /></td></tr></table><span id="total">0</span>KB Remaining (at <span id="speed">0</span> KBPS) <br /><span id="remaining">00h : 00m : 00s</span> remaining').show();
+	$("#up_"+id+"-details-inner").empty().html(
+		'<strong>Percent Complete</strong>: '+
+		'<span id="percent">0</span>%'+
+		'<table width="350" height="24" border="0"><tr><td width="25" height="24">'+
+		'<img src="'+___baseUrl()+'assets/images/icons/import_24.png"  class="nb"  width="24" height="24" />'+
+		'</td><td width="300">'+
+		'<div class="progress_border"><div class="progress_img" id="progress_img"></div></div>'+
+		'</td><td width="25">'+
+		'<img src="'+___baseUrl()+'assets/images/icons/event_24.png" class="nb" width="24" height="24" />'+
+		'</td></tr></table>'+
+		'<span id="total">0</span>KB Remaining (at <span id="speed">0</span> KBPS) <br />'+
+		'<span id="remaining">00h : 00m : 00s</span> remaining').show();
 	$("#up_"+id+"-details").show();
 }
 
@@ -182,7 +193,7 @@ function updateProgressBar(json)
 {
 	var sofar = json.sofar;
 	var total = json.total;
-	var startTime = json.startTime;
+	var startTime = json.start_time;
 	
 	var flashCurrentTime = Math.round(new Date().getTime()/1000.0);
 
