@@ -1,3 +1,31 @@
+	v3.0.0-RC4
+		- fixed remotefile
+		- show/hide about message on admin page.
+		- rename img to images and move js/css/images to assets/
+		- move flash/players to assets/
+		- move xu_ver.php to application/config/
+		- Fix db_prefix no required on install step3
+		- Fixed always upload faild because allowed mimes is bad. and create unix_to_small helper (but deprecated)
+		- Fix skin can select but doesn't work problem #4
+		- Fixed remote url upload
+		- Fixed #7
+		- update mediaelementplayer
+		- upload failure message fixed
+		- fixed captcha font
+		- delete duplicate function from system
+		- update files->get
+		- Update language and add more language (but not translated)
+		- Fixed image thumb path #9
+		- Fixed Error when trying with files/get/**** #12
+		- rebase php.ini #11
+		- Fixed #13
+		- Update required php version, mariadb version
+		- delete duplicate unchanged functions
+		- Fixed #15
+		- fixed charts.js location
+		- fixed .htaccess
+	v3.0.0-RC3
+	v3.0.0-RC2
 	v3.0.0-RC1
 		- Update CodeIgniter 3.0.0-dev
 	v3.0.0-Beta5
