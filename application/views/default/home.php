@@ -246,35 +246,34 @@ else
             $(document).ready(function()
             {
               var settings_object = {
-                file_types : "*.*",
+                file_types: "*.*",
                 file_types_description: "<?php echo lang('Allowed Files'); ?>",
-                file_upload_limit : <?php echo intval($upload_num_limit); ?>,
-                file_size_limit : (<?php echo intval($upload_limit); ?> * 1024),
-                file_queue_limit : <?php echo intval($upload_num_limit); ?>,
-                flash_url : ___baseUrl()+"assets/flash/upload.swf",
-                flash9_url: ___baseUrl()+"assets/flash/upload9.swf",
-                flash_width : "1px",
-                flash_height : "1px",
-                flash_color : "#CCCCCC",
+                file_upload_limit: <?php echo intval($upload_num_limit); ?>,
+                file_size_limit: (<?php echo intval($upload_limit); ?> * 1024),
+                file_queue_limit: <?php echo intval($upload_num_limit); ?>,
+                flash_url: ___baseUrl()+"assets/flash/upload.swf",
+                flash_width: "1px",
+                flash_height: "1px",
+                flash_color: "#CCCCCC",
                 debug: false,
                 // Button settings
-                button_image_url : "<?php echo base_url(); ?>assets/images/flash_upload.png", // Relative to the SWF file
-                button_placeholder_id : "spanButtonPlaceholder",
+                button_image_url: "<?php echo base_url(); ?>assets/images/flash_upload.png", // Relative to the SWF file
+                button_placeholder_id: "spanButtonPlaceholder",
                 button_width: 90,
                 button_height: 18,
-                button_text : '<'+'span class="button"><?php echo lang('Browse...'); ?></'+'span>',
-                button_text_style : '.button { font-family: Helvetica, Arial, sans-serif; font-size: 12pt;  font-weight:bold; color:#565656; }',
+				button_text: '<?php echo lang('Browse...'); ?>',
+                button_text_style: '.button-text { font-family: Helvetica, Arial, sans-serif; font-size: 12pt;  font-weight:bold; color:#565656; }',
                 button_text_top_padding: 0,
                 button_text_left_padding: 22,
                 button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,
                 button_cursor: SWFUpload.CURSOR.HAND,
-                upload_progress_handler : flashUploadProgress,
-                upload_error_handler : flashUploadError,
-                file_dialog_complete_handler : fileDialogComplete,
-                file_queue_error_handler : flashUploadQueueError,
-                file_queued_handler : addFileQueue,
-                upload_start_handler : beforeUploadStart,
-                upload_complete_handler : uploadDone
+                upload_progress_handler: flashUploadProgress,
+                upload_error_handler: flashUploadError,
+                file_dialog_complete_handler: fileDialogComplete,
+                file_queue_error_handler: flashUploadQueueError,
+                file_queued_handler: addFileQueue,
+                upload_start_handler: beforeUploadStart,
+                upload_complete_handler: uploadDone
               };
               swfu = new SWFUpload(settings_object);
               if (swfu) {
