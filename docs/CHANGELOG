@@ -1,4 +1,5 @@
 	v3.0.0-RC4
+		- update swfuplaod to secure-swfupload https://github.com/wordpress/secure-swfupload
 		- fixed remotefile
 		- show/hide about message on admin page.
 		- rename img to images and move js/css/images to assets/
