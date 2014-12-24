@@ -21,7 +21,7 @@ XtraUpload is FREE(Modified Apache 2.0 License, open source) and very stable.
 * [mariadb](http://mariadb.org) >= 10.0.x+
 * OR [MySQL](http://www.mysql.com/) >= 5.x+
 
-12mb of free disk space (plus space to store uploaded files)
+40 MByte of free disk space (plus space to store uploaded files)
 mod_rewrite support for your webserver(apache config file included)
 GD-PHP v2+
 Freetype v2
@@ -29,11 +29,11 @@ JPEG, PNG support in GD
 
 ## Setting Up
 
-Please see the included INSTALL file
+Please see the included docs/INSTALL file
 
 ## License
 
-Please see the included LICENSE file
+Please see the included docs/LICENSE file
 
 ## Contact info
 
