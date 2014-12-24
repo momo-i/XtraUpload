@@ -1,3 +1,8 @@
 <FilesMatch "\.(gif|jpe?g|png)$">
-	Allow from ALL
+	<IfModule authz_core_module>
+		Require all granted
+	</IfModule>
+	<IfModule !authz_core_module>
+		Allow from ALL
+	</IfModule>
 </FilesMatch>
