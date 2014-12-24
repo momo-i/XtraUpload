@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XtraUpload 3.0.0 Beta4\n"
 "Report-Msgid-Bugs-To: translator at xtrafile.com\n"
-"POT-Creation-Date: 2014-12-22 15:35+0900\n"
+"POT-Creation-Date: 2014-12-24 16:57+0900\n"
 "PO-Revision-Date: 2014-12-22 15:47+0900\n"
 "Last-Translator: momo-i <webmaster@momo-i.org>\n"
 "Language-Team: Turkish\n"
@@ -574,127 +574,127 @@ msgstr ""
 msgid "Image Gallery"
 msgstr ""
 
-#: ../../../application/libraries/Functions.php:169
+#: ../../../application/libraries/Functions.php:174
 msgid "Not Valid Version Number!"
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:133
+#: ../../../application/libraries/XU_Form_validation.php:63
 #, php-format
 msgid "The %s field is required."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:134
+#: ../../../application/libraries/XU_Form_validation.php:64
 #, php-format
 msgid "The %s field must have a value."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:135
+#: ../../../application/libraries/XU_Form_validation.php:65
 #, php-format
 msgid "The %s field must contain a valid email address."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:136
+#: ../../../application/libraries/XU_Form_validation.php:66
 #, php-format
 msgid "The %s field must contain all valid email addresses."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:137
+#: ../../../application/libraries/XU_Form_validation.php:67
 #, php-format
 msgid "The %s field must contain a valid URL."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:138
+#: ../../../application/libraries/XU_Form_validation.php:68
 #, php-format
 msgid "The %s field must contain a valid IP."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:139
+#: ../../../application/libraries/XU_Form_validation.php:69
 #, php-format
 msgid "The %s field must be at least %s characters in length."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:140
+#: ../../../application/libraries/XU_Form_validation.php:70
 #, php-format
 msgid "The %s field can not exceed %s characters in length."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:141
+#: ../../../application/libraries/XU_Form_validation.php:71
 #, php-format
 msgid "The %s field must be exactly %s characters in length."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:142
+#: ../../../application/libraries/XU_Form_validation.php:72
 #, php-format
 msgid "The %s field may only contain alphabetical characters."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:143
+#: ../../../application/libraries/XU_Form_validation.php:73
 #, php-format
 msgid "The %s field may only contain alpha-numeric characters."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:144
+#: ../../../application/libraries/XU_Form_validation.php:74
 #, php-format
 msgid ""
 "The %s field may only contain alpha-numeric characters, underscores, and "
 "dashes."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:145
+#: ../../../application/libraries/XU_Form_validation.php:75
 #, php-format
 msgid "The %s field must contain only numbers."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:146
+#: ../../../application/libraries/XU_Form_validation.php:76
 #, php-format
 msgid "The %s field must contain only numeric characters."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:147
+#: ../../../application/libraries/XU_Form_validation.php:77
 #, php-format
 msgid "The %s field must contain an integer."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:148
+#: ../../../application/libraries/XU_Form_validation.php:78
 #, php-format
 msgid "The %s field is not in the correct format."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:149
+#: ../../../application/libraries/XU_Form_validation.php:79
 #, php-format
 msgid "The %s field does not match the %s field."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:150
+#: ../../../application/libraries/XU_Form_validation.php:80
 #, php-format
 msgid "The %s field must contain only positive numbers."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:151
+#: ../../../application/libraries/XU_Form_validation.php:81
 #, php-format
 msgid "The %s field must contain a number greater than zero."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:152
+#: ../../../application/libraries/XU_Form_validation.php:82
 #, php-format
 msgid "The %s field must contain a decimal number."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:153
+#: ../../../application/libraries/XU_Form_validation.php:83
 #, php-format
 msgid "The %s field must contain a number less than %s."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:154
+#: ../../../application/libraries/XU_Form_validation.php:84
 #, php-format
 msgid "The %s field must contain a number greater than %s."
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:679
+#: ../../../application/libraries/XU_Form_validation.php:165
 msgid "The field was not set"
 msgstr ""
 
-#: ../../../application/libraries/XU_Form_validation.php:859
+#: ../../../application/libraries/XU_Form_validation.php:345
 msgid "Unable to access an error message corresponding to your field name."
 msgstr ""
 
@@ -718,6 +718,18 @@ msgstr ""
 
 #: ../../../application/libraries/Paypal_lib.php:195
 msgid "IPN Validation Failed."
+msgstr ""
+
+#: ../../../application/libraries/Remotefile.php:95
+msgid "No Referer."
+msgstr ""
+
+#: ../../../application/libraries/Remotefile.php:108
+msgid "No Location."
+msgstr ""
+
+#: ../../../application/libraries/Remotefile.php:130
+msgid "URL parse failed. "
 msgstr ""
 
 #: ../../../application/controllers/User.php:56
@@ -1602,20 +1614,23 @@ msgstr ""
 msgid "Email sent!"
 msgstr ""
 
-#: ../../../application/controllers/Upload.php:91
-msgid "Upload Complete!"
-msgstr ""
-
 #: ../../../application/controllers/Upload.php:95
-#: ../../../application/controllers/Upload.php:147
-msgid "Upload Failed!"
+msgid "URL Upload Complete!"
 msgstr ""
 
-#: ../../../application/controllers/Upload.php:129
+#: ../../../application/controllers/Upload.php:99
+msgid "URL Upload Failed!"
+msgstr ""
+
+#: ../../../application/controllers/Upload.php:133
 msgid "Upload Completed!"
 msgstr ""
 
-#: ../../../application/controllers/Upload.php:198
+#: ../../../application/controllers/Upload.php:151
+msgid "Upload Failed!"
+msgstr ""
+
+#: ../../../application/controllers/Upload.php:202
 msgid "OK"
 msgstr ""
 
@@ -1633,20 +1648,20 @@ msgstr ""
 msgid "Your query returned 0 results, please try again."
 msgstr ""
 
-#: ../../../application/controllers/Files.php:659
+#: ../../../application/controllers/Files.php:662
 msgid "Guest"
 msgstr ""
 
-#: ../../../application/controllers/Files.php:688
+#: ../../../application/controllers/Files.php:692
 #, php-format
 msgid "%d File(s) have been deleted"
 msgstr ""
 
-#: ../../../application/controllers/Files.php:733
+#: ../../../application/controllers/Files.php:737
 msgid "Password Protected File"
 msgstr ""
 
-#: ../../../application/controllers/Files.php:792
+#: ../../../application/controllers/Files.php:796
 msgid "File Not Found"
 msgstr ""
 
