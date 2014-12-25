@@ -81,7 +81,7 @@ foreach ($files->result() as $file)
         </form>
         <br>
         <div style="float:right">
-          <form action="<?=site_url('admin/files/search_count/'.$query)?>" method="post" style="padding:0; margin:0; border:0;">
+          <form action="<?php echo site_url('admin/files/search_count/'.$query)?>" method="post" style="padding:0; margin:0; border:0;">
             <?php echo lang('Results'); ?>: <input type="text" size="6" maxlength="6" name="file_count" value="<?php echo $per_page; ?>">
           </form>
         </div>

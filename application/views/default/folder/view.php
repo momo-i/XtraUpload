@@ -22,6 +22,6 @@ foreach ($folder_files->result() as $fileRef):
               </td>
               <td><?php echo $this->functions->get_filesize_prefix($file->size); ?></td>
             </tr>
-<? endforeach; ?>
+<?php endforeach; ?>
           </table>
         </div>

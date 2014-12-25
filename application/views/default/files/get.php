@@ -151,9 +151,9 @@ if($this->startup->site_config->show_preview && $this->xu_api->embed->get_embed_
               <input type="text" size="3" maxlength="3" name="captcha">
             </code><br>
 <?php endif; ?>
-            <? echo generate_submit_button(lang('Download'), base_url().'assets/images/icons/backup_16.png', 'green'); ?>
+            <?php echo generate_submit_button(lang('Download'), base_url().'assets/images/icons/backup_16.png', 'green'); ?>
 <?php if($image): ?>
-            <? echo generate_link_button(lang('View This Image'), $image['direct_url'], base_url().'assets/images/icons/pictures_16.png', null, array('target' => '_blank')); ?>
+            <?php echo generate_link_button(lang('View This Image'), $image['direct_url'], base_url().'assets/images/icons/pictures_16.png', null, array('target' => '_blank')); ?>
 <?php endif; ?>
             <br>
           </span>

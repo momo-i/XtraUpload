@@ -248,7 +248,7 @@ foreach ($logins->result() as $log)
 	{
 ?>
               <img src="<?php echo base_url(); ?>assets/images/icons/ok_16.png" class="nb" alt="">
-<?
+<?php
 	}
 	else
 	{

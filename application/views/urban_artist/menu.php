@@ -14,7 +14,7 @@ if($this->session->userdata('id'))
               <?php echo anchor('user/logout', '<img src="'.base_url().'assets/images/icons/log_out_16.png" class="nb" alt="">'.lang('Logout')); ?>
             </li>
           </ul>
-<?
+<?php
 }
 else
 {

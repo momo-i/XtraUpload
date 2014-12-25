@@ -2,7 +2,7 @@
           <img src="<?php echo base_url(); ?>assets/images/icons/security_32.png" class="nb" alt="">
           <?php echo lang('Download File - Enter Password'); ?> 
         </h2>
-<? if($error): ?>
+<?php if($error): ?>
         <span class="alert"><?php echo lang('The Password you submited was incorrect.'); ?></span>
 <?php endif; ?>
         <form action="<?php echo site_url('files/get/'.$file->file_id.'/'.$file->link_name); ?>" method="post">

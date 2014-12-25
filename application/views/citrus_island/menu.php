@@ -20,7 +20,7 @@ if($this->session->userdata('id'))
             </a>
           </li>
         </ul>
-<?
+<?php
 }
 else
 {

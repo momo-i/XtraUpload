@@ -50,7 +50,7 @@ foreach ($files->result() as $file)
                 </div>
               </td>
               <td>
-                <a href='<?=$links['down']?>' rel="external">
+                <a href='<?php echo $links['down']?>' rel="external">
                   <img src="<?php echo base_url().'assets/images/files/'.$this->functions->get_file_type_icon($file->type); ?>" class="nb" alt="">
                   <?php echo $this->functions->elipsis($file->o_filename, 10); ?> 
                 </a>
@@ -67,9 +67,7 @@ foreach ($files->result() as $file)
                 <a title="<?php echo lang('Ban This File'); ?>" onclick="return confirm('<?php echo lang('Are you sure you want to ban this file?'); ?>')" href="<?php echo site_url('admin/files/ban/'.$file->file_id); ?>"><img src="<?php echo base_url(); ?>assets/images/icons/lock_16.png" class="nb" alt="<?php echo lang('Ban'); ?>"></a>
               </td>
             </tr>
-<?
-}
-?>
+<?php } ?>
           </table>
         </form>
         <br>

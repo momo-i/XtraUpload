@@ -7,7 +7,7 @@ if(!$user->public)
 {
 ?>
         <span class="alert"><?php echo lang('This user does not allow public viewing of their files.'); ?></span>
-<?
+<?php
 }
 else
 {

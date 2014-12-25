@@ -10,8 +10,8 @@
               <?php echo generate_link_button(lang('Ban'), 'javascript:;', base_url().'assets/images/icons/lock_16.png', NULL, array('onclick' => 'ban_submit()')); ?>
             </div>
             <div class="float-right">
-              <?=generate_link_button(lang('Search'), site_url('admin/files/search'), base_url().'assets/images/icons/search_16.png', NULL); ?>
-              <?=generate_link_button(lang('All'), site_url('admin/files/view'), base_url().'assets/images/icons/documents_16.png', NULL); ?>
+              <?php echo generate_link_button(lang('Search'), site_url('admin/files/search'), base_url().'assets/images/icons/search_16.png', NULL); ?>
+              <?php echo generate_link_button(lang('All'), site_url('admin/files/view'), base_url().'assets/images/icons/documents_16.png', NULL); ?>
             </div>
           </div>
           <h3 style="clear:both">
