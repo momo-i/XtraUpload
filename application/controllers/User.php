@@ -357,9 +357,26 @@ class User extends CI_Controller {
 			$data['error_message'] = $this->session->flashdata('error_message');
 		}
 
-		$run = false;
+		$config = array(
+			array(
+                'field' => 'email',
+                'label' => lang('Email'),
+                'rules' => 'trim|valid_email'
+            ),
+            array(
+                'field' => 'username',
+                'label' => lang('Username'),
+                'rules' => 'trim|callback_check_user'
+            ),
+            array(
+                'field' => 'password',
+                'label' => lang('Password'),
+                'rules' => 'trim|min_length[5]|max_length[70]'
+            )
+        );
+        $this->form_validation->set_rules($config);
 
-		if ($run == FALSE and $this->input->post('username'))
+		if ($this->form_validation->run() == FALSE and $this->input->post('username'))
 		{
 			$this->form_validation->set_error_delimiters('<li>', '</li>');
 			$error = validation_errors();
@@ -367,16 +384,16 @@ class User extends CI_Controller {
 
 			$query = $this->db->get_where('users', array('id' => $this->session->userdata('id')));
 			$data['user'] = $query->row();
+			$data['locales'] = $this->startup->available_locale;
 			$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Manage Account')));
 			$this->load->view($this->startup->skin.'/user/manage', $data);
 			$this->load->view($this->startup->skin.'/footer');
 		}
 		else if(!$this->input->post('username'))
 		{
-			$data['error_message'] = '';
-
 			$query = $this->db->get_where('users', array('id' => $this->session->userdata('id')));
 			$data['user'] = $query->row();
+			$data['locales'] = $this->startup->available_locale;
 
 			$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Manage Account')));
 			$this->load->view($this->startup->skin.'/user/manage', $data);
@@ -725,7 +742,10 @@ class User extends CI_Controller {
 		}
 
 		$data = array(
-			// Nothing here yet!
+			'username' => $this->input->post('username'),
+			'password' => md5($this->config->config['encryption_key'].$this->input->post('password')),
+			'email' => $this->input->post('email'),
+			'locale' => $this->input->post('locale'),
 		);
 
 		$result = $this->users->user_update($data);
@@ -851,6 +871,22 @@ class User extends CI_Controller {
 
 		return $cap['image'];
 	}
+
+	public function check_user()
+	{
+		$query = $this->db->get_where('users', array('username' => $this->input->post('username')));
+		$num = $query->num_rows();
+		$user = $query->row();
+		if($num != 1 AND strcmp($this->input->post('username'), $user->username) !== 0)
+		{
+			return FALSE;
+		}
+		else
+		{
+			return TRUE;
+		}
+	}
+
 }
 
 /* End of file User.php */

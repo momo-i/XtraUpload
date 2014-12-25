@@ -136,6 +136,7 @@ class XU_Lang extends CI_Lang {
 	public function set_locale($lang = 'en_US')
 	{
 		$this->_default_locale = new Zend_Locale($lang);
+		log_message('debug', 'Locale Setting: '.$this->_default_locale);
 		if ( ! file_exists(APPPATH."language/{$this->_default_locale}/xtraupload.mo"))
 		{
 			$mofile = APPPATH."language/en_US/xtraupload.mo";
@@ -145,6 +146,7 @@ class XU_Lang extends CI_Lang {
 			$mofile = APPPATH."language/{$this->_default_locale}/xtraupload.mo";
 		}
 		$language = $this->_default_locale->getLanguage() ? $this->_default_locale->getLanguage() : 'en';
+		log_message('debug', 'Get Language: '.$language);
 		try
 		{
 			$this->_translate = new Zend_Translate('gettext', $mofile, $language);
@@ -153,6 +155,7 @@ class XU_Lang extends CI_Lang {
 		{
 			$this->_translate = new Zend_Translate('gettext', $mofile, 'en');
 		}
+		//log_message('debug', 'Translate: '.print_r($this->_translate, true));
 	}
 
 	private function _check_database(&$line)
@@ -165,7 +168,9 @@ class XU_Lang extends CI_Lang {
 
 	public function lang($str)
 	{
-		return $this->_translate->translate($str);
+		$return = $this->_translate->translate($str);
+		//log_message('debug', sprintf('Translated %s to %s', $str, $return));
+		return $return;
 	}
 
 }

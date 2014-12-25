@@ -107,7 +107,7 @@ class Users_db extends CI_Model {
 		$this->set_user_status(1, $id);
 	}
 	
-	public function edit_user($id, $user, $pass, $email, $group)
+	public function edit_user($id, $user, $pass, $email, $group, $locale = 'en_US')
 	{
 		$data = array();
 		if(!empty($user))
@@ -130,6 +130,11 @@ class Users_db extends CI_Model {
 			$data['group'] = $group;
 		}
 		
+		if(!empty($locale))
+		{
+			$data['locale'] = $locale;
+		}
+
 		if(count($data) == 0)
 		{
 			return true;

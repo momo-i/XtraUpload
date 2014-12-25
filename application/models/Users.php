@@ -138,8 +138,7 @@ class Users extends CI_Model {
 	public function user_update($data)
 	{
 		$this->db->where('id', $this->session->userdata('id'));
-		$this->db->update('users', $data); 
-		return true;
+		return $this->db->update('users', $data); 
 	}
 	
 	// ------------------------------------------------------------------------

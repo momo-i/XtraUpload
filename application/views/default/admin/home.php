@@ -26,7 +26,7 @@ $ini_rec = array(
 	'max_execution_time'  => '600',
 	'max_input_time'  => '600',
 	'memory_limit' => '320M',
-	'short_open_tag' => '1'
+	'short_open_tag' => '0'
 );
 
 function rename_ini_result($r, $n)

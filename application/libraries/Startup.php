@@ -176,6 +176,7 @@ class Startup {
 		{
 			$this->locale = isset($this->site_config->site_locale) ? $this->site_config->site_locale : $locale;
 		}
+		log_message('debug', 'Get Locale: '.$this->locale);
 		$is_rtl = is_rtl($this->locale);
 		$this->is_rtl = !empty($is_rtl['characters']) ? 'rtl' : 'ltr';
 	}

@@ -62,7 +62,6 @@ class Home extends CI_Controller {
 			'file_types_allow_deny' => $this->startup->group_config->file_types_allow_deny,
 			'storage_limit' => $this->startup->group_config->storage_limit
 		);
-
 		if($this->config->config['index_page'] != '')
 		{
 			$data['server'] .= $this->config->config['index_page'].'/';

@@ -210,7 +210,7 @@ class User extends CI_Controller {
 		}
 		else
 		{
-			$this->users_db->edit_user($id, $this->input->post('username'),  $this->input->post('password'), $this->input->post('email'), $this->input->post('group'));
+			$this->users_db->edit_user($id, $this->input->post('username'),  $this->input->post('password'), $this->input->post('email'), $this->input->post('group'), $this->input->post('locale'));
 			$this->session->set_flashdata('msg', lang('User Edited!'));
 			redirect('/admin/user/view');
 			return true;
@@ -218,6 +218,7 @@ class User extends CI_Controller {
 
 		$data['user'] = $this->users_db->get_user_by_id($id);
 		$data['groups'] = $this->db->get('groups');
+		$data['locales'] = $this->startup->available_locale;
 		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Edit User')));
 		$this->load->view($this->startup->skin.'/admin/users/edit', $data);
 		$this->load->view($this->startup->skin.'/footer');
