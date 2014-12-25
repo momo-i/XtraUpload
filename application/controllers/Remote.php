@@ -55,7 +55,7 @@ class Remote extends CI_Controller {
 	 */
 	public function index()
 	{
-		$config['functions']['remote_server_api.updateCache'] = array('function' => 'Remote._update_cache');
+		$config['functions']['remote_server_api.update_cache'] = array('function' => 'Remote._update_cache');
 		//$config['debug'] = true;
 
 		$this->xmlrpcs->initialize($config);

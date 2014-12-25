@@ -38,6 +38,7 @@ class Cron extends CI_Controller {
 			show_404();
 		}
 
+		log_message('debug', "XU Cron Initialized.");
 		$this->server = base_url();
 		$this->_run_cron();
 	}

@@ -60,7 +60,7 @@ class Remote_server_xml_rpc {
 		foreach($servers->result() as $server)
 		{
 			$this->CI->xmlrpc->server($server->url.'remote', 80);
-			$this->CI->xmlrpc->method('remote_server_api.updateCache');
+			$this->CI->xmlrpc->method('remote_server_api.update_cache');
 			
 			//$request = '';
 			$request = array($this->CI->config->config['encryption_key']);
