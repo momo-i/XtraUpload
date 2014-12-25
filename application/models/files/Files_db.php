@@ -1,4 +1,6 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
@@ -12,8 +14,7 @@
  * @since		Version 2.0
  * @filesource
  */
-
-// ------------------------------------------------------------------------
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload Files DB Model
@@ -24,9 +25,6 @@
  * @author		Matthew Glinski
  * @link		http://xtrafile.com/docs/pages/files
  */
-
-// ------------------------------------------------------------------------
-
 class Files_db extends CI_Model {
 
     public function __construct($select='')
@@ -648,5 +646,5 @@ class Files_db extends CI_Model {
 	}
 }
 
-/* End of file files_db.php */
-/* Location: ./application/models/files/files_db.php */
+/* End of file Files_db.php */
+/* Location: ./application/models/files/Files_db.php */

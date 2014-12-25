@@ -1,53 +1,80 @@
 <?php
+/* vim: set ts=4 sw=4 sts=0: */
+
+/**
+ * XtraUpload
+ *
+ * A turn-key open source web 2.0 PHP file uploading package requiring PHP v5
+ *
+ * @package		XtraUpload
+ * @author		Matthew Glinski
+ * @copyright	Copyright (c) 2006, XtraFile.com
+ * @license		http://xtrafile.com/docs/license
+ * @link		http://xtrafile.com
+ * @since		Version 2.0
+ * @filesource
+ */
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+if(!function_exists('lang'))
+{
+	function lang($msg)
+	{
+		return $msg;
+	}
+}
 
 $config['available_lang'] = array(
-	'af_ZA' => 'Afrikaans',
-	'ar_SA' => 'Arabic',
-	'bg_BG' => 'Bulgarian',
-	'bn_BD' => 'BengaliBangla',
-	'ca_ES' => 'Catalan',
-	'cs_CZ' => 'Czech',
-	'da_DK' => 'Danish',
-	'de_DE' => 'German',
-	'el_GR' => 'Greek',
-	'en_GB' => 'English (UK)',
-	'en_US' => 'English (US)',
-	'es_AR' => 'Spanish (Argentina)',
-	'es_ES' => 'Spanish (Spain)',
-	'es_MX' => 'Spanish (Mexico)',
-	'et_EE' => 'Estonian',
-	'eu_ES' => 'Basque',
-	'fa_IR' => 'Persian',
-	'fi_FI' => 'Finnish',
-	'fo_FO' => 'Faroese',
-	'fr_FR' => 'French',
-	'ga_IE' => 'Irish',
-	'he_IL' => 'Hebrew',
-	'hr_HR' => 'Croatian',
-	'hu_HU' => 'Hungarian',
-	'is_IS' => 'Icelandic',
-	'it_IT' => 'Italian',
-	'ja_JP' => 'Japanese',
-	'ko_KR' => 'Korean',
-	'lt_LT' => 'Lithuanian',
-	'lv_LV' => 'Latvian',
-	'mk_MK' => 'Macedonian',
-	'ms_MY' => 'Malay',
-	'nl_NL' => 'Dutch',
-	'no_NO' => 'Norwegian (Bokmal)',
-	'pl_PL' => 'Polish',
-	'pt_BR' => 'Portuguese (Brasil)',
-	'pt_PT' => 'Portuguese (Portugal)',
-	'ro_RO' => 'Romanian',
-	'ru_RU' => 'Russian',
-	'sk_SK' => 'Slovak',
-	'sl_SI' => 'Slovenian',
-	'sr_RS' => 'Serbian',
-	'sv_SE' => 'Swedish',
-	'tn_ZA' => 'Tswana',
-	'tr_TR' => 'Turkish',
-	'uk_UA' => 'Ukrainian',
-	'vi_VN' => 'Vietnamese',
-	'zh_CN' => 'Chinese (simplified)',
-	'zh_TW' => 'Chinese (traditional)'
+	'af_ZA' => lang('Afrikaans'),
+	'ar_SA' => lang('Arabic'),
+	'bg_BG' => lang('Bulgarian'),
+	'bn_BD' => lang('BengaliBangla'),
+	'ca_ES' => lang('Catalan'),
+	'cs_CZ' => lang('Czech'),
+	'da_DK' => lang('Danish'),
+	'de_DE' => lang('German'),
+	'el_GR' => lang('Greek'),
+	'en_GB' => lang('English (UK)'),
+	'en_US' => lang('English (US)'),
+	'es_AR' => lang('Spanish (Argentina)'),
+	'es_ES' => lang('Spanish (Spain)'),
+	'es_MX' => lang('Spanish (Mexico)'),
+	'et_EE' => lang('Estonian'),
+	'eu_ES' => lang('Basque'),
+	'fa_IR' => lang('Persian'),
+	'fi_FI' => lang('Finnish'),
+	'fo_FO' => lang('Faroese'),
+	'fr_FR' => lang('French'),
+	'ga_IE' => lang('Irish'),
+	'he_IL' => lang('Hebrew'),
+	'hr_HR' => lang('Croatian'),
+	'hu_HU' => lang('Hungarian'),
+	'is_IS' => lang('Icelandic'),
+	'it_IT' => lang('Italian'),
+	'ja_JP' => lang('Japanese'),
+	'ko_KR' => lang('Korean'),
+	'lt_LT' => lang('Lithuanian'),
+	'lv_LV' => lang('Latvian'),
+	'mk_MK' => lang('Macedonian'),
+	'ms_MY' => lang('Malay'),
+	'nl_NL' => lang('Dutch'),
+	'no_NO' => lang('Norwegian (Bokmal)'),
+	'pl_PL' => lang('Polish'),
+	'pt_BR' => lang('Portuguese (Brasil)'),
+	'pt_PT' => lang('Portuguese (Portugal)'),
+	'ro_RO' => lang('Romanian'),
+	'ru_RU' => lang('Russian'),
+	'sk_SK' => lang('Slovak'),
+	'sl_SI' => lang('Slovenian'),
+	'sr_RS' => lang('Serbian'),
+	'sv_SE' => lang('Swedish'),
+	'tn_ZA' => lang('Tswana'),
+	'tr_TR' => lang('Turkish'),
+	'uk_UA' => lang('Ukrainian'),
+	'vi_VN' => lang('Vietnamese'),
+	'zh_CN' => lang('Chinese (simplified)'),
+	'zh_TW' => lang('Chinese (traditional)')
 );
+
+/* End of file language.php */
+/* Location: ./application/config/language.php */

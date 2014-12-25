@@ -1,4 +1,6 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
@@ -6,7 +8,7 @@
  *
  * @package		XtraUpload
  * @author		Matthew Glinski
- * @author      momo-i
+ * @author		momo-i
  * @copyright	Copyright (c) 2006, XtraFile.com
  * @copyright	Copyright (c) 2011-, www.momo-i.org
  * @license		http://www.opensource.org/licenses/Apache-2.0
@@ -14,17 +16,17 @@
  * @since		Version 2.0
  * @filesource
  */
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload Ads Controller
  *
- * @package     XtraUpload
- * @subpackage  Controllers
- * @category    Controllers
- * @author      Matthew Glinski
- * @author      momo-i
- * @link        https://gitorious.org/xtraupload-v3
- * @todo        Create Models, and Views
+ * @package		XtraUpload
+ * @subpackage	Controllers
+ * @category	Controllers
+ * @author		Matthew Glinski
+ * @author		momo-i
+ * @link		https://github.com/momo-i/xtraupload-v3
  */
 class Ads extends CI_Controller {
 
@@ -213,5 +215,5 @@ class Ads extends CI_Controller {
 	}
 }
 
-/* End of file admin/ads.php */
-/* Location: ./application/controllers/admin/ads.php */
+/* End of file admin/Ads.php */
+/* Location: ./application/controllers/admin/Ads.php */

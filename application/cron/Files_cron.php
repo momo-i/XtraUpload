@@ -1,32 +1,30 @@
 <?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
  * A turn-key open source web 2.0 PHP file uploading package requiring PHP v5
  *
- * @package	 XtraUpload
- * @author	  Matthew Glinski
- * @copyright   Copyright (c) 2006, XtraFile.com
- * @license	 http://xtrafile.com/docs/license
+ * @package		XtraUpload
+ * @author		Matthew Glinski
+ * @copyright	Copyright (c) 2006, XtraFile.com
+ * @license		http://xtrafile.com/docs/license
  * @link		http://xtrafile.com
- * @since	   Version 2.0
+ * @since		Version 2.0
  * @filesource
  */
-
-// ------------------------------------------------------------------------
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload Cron Item
  *
- * @package	 XtraUpload
- * @subpackage  Controllers
+ * @package		XtraUpload
+ * @subpackage	Controllers
  * @category	Controllers
- * @author	  Matthew Glinski
+ * @author		Matthew Glinski
  * @link		http://xtrafile.com/docs/cron
  */
-
-// ------------------------------------------------------------------------
-
 class Files_cron {
 
 	private $server = false;
@@ -170,5 +168,5 @@ class Files_cron {
 	}
 }
 
-/* End of file files_cron.php */
-/* Location: ./application/cron/files_cron.php */
+/* End of file Files_cron.php */
+/* Location: ./application/cron/Files_cron.php */

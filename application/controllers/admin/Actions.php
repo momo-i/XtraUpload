@@ -1,29 +1,32 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
  * A turn-key open source web 2.0 PHP file uploading package requiring PHP v5
  *
- * @package     XtraUpload
- * @author      Matthew Glinski
- * @author      momo-i
- * @copyright   Copyright (c) 2006, XtraFile.com
- * @copyright   Copyright (c) 2011-, www.momo-i.org
- * @license     http://www.opensource.org/licenses/Apache-2.0
- * @link        http://xtrafile.com
- * @since       Version 2.0
+ * @package		XtraUpload
+ * @author		Matthew Glinski
+ * @author		momo-i
+ * @copyright	Copyright (c) 2006, XtraFile.com
+ * @copyright	Copyright (c) 2011-, www.momo-i.org
+ * @license		http://www.opensource.org/licenses/Apache-2.0
+ * @link		http://xtrafile.com
+ * @since		Version 2.0
  * @filesource
  */
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload Actions Controller
  *
- * @package     XtraUpload
- * @subpackage  Controllers
- * @category    Controllers
- * @author      Matthew Glinski
- * @author      momo-i
- * @link        https://gitorious.org/xtraupload-v3
+ * @package		XtraUpload
+ * @subpackage	Controllers
+ * @category	Controllers
+ * @author		Matthew Glinski
+ * @author		momo-i
+ * @link		https://github.com/momo-i/xtraupload-v3
  */
 class Actions extends CI_Controller {
 
@@ -189,5 +192,5 @@ EOF;
 	}
 }
 
-/* End of file admin/actions.php */
-/* Location: ./application/controllers/admin/actions.php */
+/* End of file admin/Actions.php */
+/* Location: ./application/controllers/admin/Actions.php */

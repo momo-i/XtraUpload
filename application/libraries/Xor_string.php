@@ -1,4 +1,6 @@
-<?php  if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
@@ -12,19 +14,17 @@
  * @since		Version 2.0
  * @filesource
  */
-
-// ------------------------------------------------------------------------
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload XOR Encryption Library
  *
  * @package		XtraUpload
- * @subpackage	Library
- * @category	Library
+ * @subpackage	Libraries
+ * @category	Libraries
  * @author		Matthew Glinski
  * @link		http://xtrafile.com/docs/lib/xor
  */
-
 class Xor_string {
 
 	public function process($str, $crypt_direction, $key='')
@@ -61,5 +61,5 @@ class Xor_string {
 	} // End function decryptPassword	
 }
 
-/* End of file xor_string.php */
-/* Location: ./application/libraries/xor_string.php */
+/* End of file Xor_string.php */
+/* Location: ./application/libraries/Xor_string.php */

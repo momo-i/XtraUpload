@@ -1,4 +1,6 @@
-<?php  if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
@@ -12,15 +14,14 @@
  * @since		Version 2.0
  * @filesource
  */
-
-// ------------------------------------------------------------------------
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload Functions Library
  *
  * @package		XtraUpload
- * @subpackage	Library
- * @category	Library
+ * @subpackage	Libraries
+ * @category	Libraries
  * @author		Matthew Glinski
  * @link		http://xtrafile.com/docs/pages/files
  */
@@ -239,5 +240,5 @@ class Functions {
 
 }
 
-/* End of file functions.php */
-/* Location: ./application/libraries/functions.php */
+/* End of file Functions.php */
+/* Location: ./application/libraries/Functions.php */

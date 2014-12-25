@@ -1,4 +1,6 @@
-<?php  if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
@@ -12,19 +14,17 @@
  * @since		Version 2.0
  * @filesource
  */
-
-// ------------------------------------------------------------------------
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload XU_API Menu Library
  *
  * @package		XtraUpload
- * @subpackage	Library
- * @category	Library
+ * @subpackage	Libraries
+ * @category	Libraries
  * @author		Matthew Glinski
  * @link		http://xtrafile.com/docs/api/menus
  */
-
 class Xu_menus_api {
 
 	private $store;
@@ -261,5 +261,5 @@ class Xu_menus_api {
 	}
 }
 
-/* End of file xu_menus_api.php */
-/* Location: ./application/libraries/api/xu_menus_api.php */
+/* End of file Xu_menus_api.php */
+/* Location: ./application/libraries/api/Xu_menus_api.php */

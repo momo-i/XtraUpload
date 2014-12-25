@@ -1,4 +1,6 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); 
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * Code Igniter
  *
@@ -12,8 +14,7 @@
  * @since		Version 1.0
  * @filesource
  */
-
-// ------------------------------------------------------------------------
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * PayPal_Lib Controller Class (Paypal IPN Class)
@@ -239,5 +240,5 @@ class Paypal_Lib {
 
 }
 
-/* End of file paypal_lib.php */
-/* Location: ./application/libraries/paypal_lib.php */
+/* End of file Paypal_lib.php */
+/* Location: ./application/libraries/Paypal_lib.php */

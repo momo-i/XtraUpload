@@ -1,4 +1,6 @@
-<?php if (!defined('BASEPATH')) { die('No direct script access allowed'); }
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
@@ -12,15 +14,14 @@
  * @since		Version 2.0
  * @filesource
  */
-
-// ------------------------------------------------------------------------
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload CSS Button Helper
  *
  * @package		XtraUpload
- * @subpackage	Helper
- * @category	Helper
+ * @subpackage	Helpers
+ * @category	Helpers
  * @author		Matthew Glinski
  * @link		http://xtrafile.com/docs/pages/files
  */

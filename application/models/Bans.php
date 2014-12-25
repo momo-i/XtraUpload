@@ -1,4 +1,6 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
@@ -12,8 +14,7 @@
  * @since		Version 2.0
  * @filesource
  */
-
-// ------------------------------------------------------------------------
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload Ban Access Model
@@ -122,5 +123,5 @@ class Bans extends CI_Model {
 	}
 }
 
-/* End of file bans.php */
-/* Location: ./application/models/bans.php */
+/* End of file Bans.php */
+/* Location: ./application/models/Bans.php */

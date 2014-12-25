@@ -1,26 +1,29 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
  * A turn-key open source web 2.0 PHP file uploading package requiring PHP v5
  *
- * @package	 XtraUpload
- * @author	  Matthew Glinski
- * @copyright   Copyright (c) 2006, XtraFile.com
- * @license	 http://xtrafile.com/docs/license
+ * @package		XtraUpload
+ * @author		Matthew Glinski
+ * @copyright	Copyright (c) 2006, XtraFile.com
+ * @license		http://xtrafile.com/docs/license
  * @link		http://xtrafile.com
- * @since	   Version 2.0
+ * @since		Version 2.0
  * @filesource
  */
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload Stats Controller
  *
- * @package	 XtraUpload
- * @subpackage  Controllers
+ * @package		XtraUpload
+ * @subpackage	Controllers
  * @category	Controllers
- * @author	  Matthew Glinski
- * @author	  momo-i
+ * @author		Matthew Glinski
+ * @author		momo-i
  * @link		http://xtrafile.com/docs
  */
 class Stats extends CI_Controller {
@@ -44,5 +47,5 @@ class Stats extends CI_Controller {
 	}
 }
 
-/* End of file admin/stats.php */
-/* Location: ./application/controllers/admin/stats.php */
+/* End of file admin/Stats.php */
+/* Location: ./application/controllers/admin/Stats.php */

@@ -1,4 +1,6 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
@@ -12,11 +14,17 @@
  * @since		Version 2.0
  * @filesource
  */
-
-// ------------------------------------------------------------------------
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload Remote Server XML_RPC Library
+ *
+ * Usage:
+ *
+ * <code>
+ * $this->load->library('Remote_server_xml_rpc');
+ * $this->remote_server_api->update_cache();
+ * </code>
  *
  * @package		XtraUpload
  * @subpackage	Model
@@ -24,15 +32,6 @@
  * @author		Matthew Glinski
  * @link		http://xtrafile.com/docs/code/libraries/remote_server_xml_rpc
  */
- 
-/* 
-Usage:
-	$this->load->library('Remote_server_xml_rpc');
-	$this->remote_server_api->update_cache();
-*/
-
-// ------------------------------------------------------------------------
-
 class Remote_server_xml_rpc {
 
 	private $CI = '';
@@ -75,5 +74,5 @@ class Remote_server_xml_rpc {
 	}
 }
 
-/* End of file remote_server_xml.php */
-/* Location: ./application/libraries/remote_server_xml.php */
+/* End of file Remote_server_xml.php */
+/* Location: ./application/libraries/Remote_server_xml.php */

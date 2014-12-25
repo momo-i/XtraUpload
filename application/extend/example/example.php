@@ -1,5 +1,30 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
 
+/**
+ * XtraUpload
+ *
+ * A turn-key open source web 2.0 PHP file uploading package requiring PHP v5
+ *
+ * @package		XtraUpload
+ * @author		momo-i
+ * @copyright	Copyright (c) 2014, www.momo-i.org
+ * @license		http://www.opensource.org/licenses/Apache-2.0 Apache License, Version 2.0
+ * @link		http://www.momo-i.org
+ * @since		Version 2.0
+ * @filesource
+ */
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+/**
+ * XtraUpload Example Extend Class
+ *
+ * @package		XtraUpload
+ * @subpackage	Controller
+ * @category	Model
+ * @author		momo-i
+ * @link		https://github.com/momo-i/xtraupload-v3
+ */
 class Example extends CI_Model {
 
 	public function __construct()
@@ -44,5 +69,5 @@ class Example extends CI_Model {
 	}
 }
 
-/* End of file main.php */
-/* Location: ./application/extends/example/main.php */
+/* End of file extends/example/example.php */
+/* Location: ./application/extends/example/example.php */

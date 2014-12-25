@@ -1,4 +1,6 @@
-﻿<?php if (! defined('BASEPATH')) exit('No direct script access allowed');
+﻿<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
@@ -12,19 +14,17 @@
  * @since		Version 2.0
  * @filesource
  */
-
-// ------------------------------------------------------------------------
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload Remote File Upload Library
  *
  * @package		XtraUpload
- * @subpackage	Library
- * @category	Library
+ * @subpackage	Libraries
+ * @category	Libraries
  * @author		Matthew Glinski
  * @link		http://xtrafile.com/docs/pages/files
  */
-
 class CI_Remotefile {
 
 	public $buffer = 204800;
@@ -365,5 +365,5 @@ class CI_Remotefile {
 
 }
 
-/* End of file remotefile.php */
-/* Location: ./application/libraries/remotefile.php */
+/* End of file Remotefile.php */
+/* Location: ./application/libraries/Remotefile.php */

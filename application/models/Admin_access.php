@@ -1,4 +1,6 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
@@ -12,8 +14,7 @@
  * @since		Version 2.0
  * @filesource
  */
-
-// ------------------------------------------------------------------------
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload Admin Access Model
@@ -24,9 +25,6 @@
  * @author		Matthew Glinski
  * @link		http://xtrafile.com/docs/pages/files
  */
-
-// ------------------------------------------------------------------------
-
 class Admin_access extends CI_Model {
 
 	// ------------------------------------------------------------------------
@@ -54,5 +52,5 @@ class Admin_access extends CI_Model {
     }
 }
 
-/* End of file admin_access.php */
-/* Location: ./application/models/admin_access.php */
+/* End of file Admin_access.php */
+/* Location: ./application/models/Admin_access.php */

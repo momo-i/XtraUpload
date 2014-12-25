@@ -1,4 +1,6 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
@@ -12,8 +14,7 @@
  * @since		Version 2.0
  * @filesource
  */
-
-// ------------------------------------------------------------------------
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload Ban Access Model
@@ -24,9 +25,6 @@
  * @author		Matthew Glinski
  * @link		http://xtrafile.com/docs/pages/files
  */
-
-// ------------------------------------------------------------------------
-
 class Admin_menu_shortcuts_db extends CI_Model {
 
 	public $ban_list = array();
@@ -96,5 +94,5 @@ class Admin_menu_shortcuts_db extends CI_Model {
 	}
 }
 
-/* End of file admin_menu_shortcuts_db.php */
-/* Location: ./application/models/admin/menu_shortcuts/admin_menu_shortcuts_db.php */
+/* End of file Admin_menu_shortcuts_db.php */
+/* Location: ./application/models/admin/menu_shortcuts/Admin_menu_shortcuts_db.php */

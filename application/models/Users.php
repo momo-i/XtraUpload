@@ -1,4 +1,6 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
@@ -12,8 +14,7 @@
  * @since		Version 2.0
  * @filesource
  */
-
-// ------------------------------------------------------------------------
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload Users Model
@@ -24,7 +25,6 @@
  * @author		Matthew Glinski
  * @link		http://xtrafile.com/docs/pages/files
  */
-
 class Users extends CI_Model {
 
     public $loggedin = false;
@@ -338,5 +338,5 @@ class Users extends CI_Model {
 	}
 }
 
-/* End of file users.php */
-/* Location: ./application/models/users.php */
+/* End of file Users.php */
+/* Location: ./application/models/Users.php */

@@ -1,29 +1,31 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
  * A turn-key open source web 2.0 PHP file uploading package requiring PHP v5
  *
- * @package     XtraUpload
- * @author      Matthew Glinski
- * @author      momo-i
- * @copyright   Copyright (c) 2006, XtraFile.com
- * @copyright   Copyright (c) 2011-, www.momo-i.org
- * @license     http://www.opensource.org/licenses/Apache-2.0
- * @link        http://xtrafile.com
- * @since       Version 2.0
+ * @package		XtraUpload
+ * @author		Matthew Glinski
+ * @author		momo-i
+ * @copyright	Copyright (c) 2006, XtraFile.com
+ * @copyright	Copyright (c) 2011-2014, www.momo-i.org
+ * @license		http://www.opensource.org/licenses/Apache-2.0
+ * @link		http://xtrafile.com
+ * @since		Version 2.0
  * @filesource
  */
 
 /**
  * XtraUpload Files Controller
  *
- * @package     XtraUpload
- * @subpackage  Controllers
- * @category    Controllers
- * @author      Matthew Glinski
- * @author      momo-i
- * @link        https://gitorious.org/xtraupload-v3
+ * @package		XtraUpload
+ * @subpackage	Controllers
+ * @category	Controllers
+ * @author		Matthew Glinski
+ * @author		momo-i
+ * @link		https://github.com/momo-i/xtraupload-v3
  */
 class Files extends CI_Controller {
 
@@ -332,5 +334,5 @@ class Files extends CI_Controller {
 	}
 }
 
-/* End of file admin/files.php */
-/* Location: ./application/controllers/admin/files.php */
+/* End of file admin/Files.php */
+/* Location: ./application/controllers/admin/Files.php */

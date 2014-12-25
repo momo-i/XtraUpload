@@ -1,4 +1,6 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+/* vim: set ts=4 sw=4 sts=0: */
+
 /**
  * XtraUpload
  *
@@ -12,8 +14,7 @@
  * @since		Version 2.0
  * @filesource
  */
-
-// ------------------------------------------------------------------------
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * XtraUpload Admin Access Model
@@ -58,5 +59,5 @@ class Admin_logger extends CI_Model {
 	}
 }
 
-/* End of file admin_logger.php */
-/* Location: ./application/models/admin_logger.php */
+/* End of file Admin_logger.php */
+/* Location: ./application/models/Admin_logger.php */
