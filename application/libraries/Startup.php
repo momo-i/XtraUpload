@@ -25,11 +25,12 @@ class Startup {
 		// Load the DB and session class
 		$this->CI->load->database();
 
-        // Load General Functions and XU API
-        $this->CI->load->library(array('functions', 'xu_api'));
+		// Load General Functions and XU API
+		$this->CI->load->library(array('functions', 'xu_api'));
+		$this->_check_setup();
 
-        define('XU_VERSION_READ', $this->CI->functions->parse_version(XU_VERSION));
-        define('XU_DB_VERSION_READ', $this->CI->functions->parse_version($this->db_version));
+		define('XU_VERSION_READ', $this->CI->functions->parse_version(XU_VERSION));
+		define('XU_DB_VERSION_READ', $this->CI->functions->parse_version($this->db_version));
 
 		$locales = glob(APPPATH.'language/*');
 		$this->available_locale = array();
@@ -40,8 +41,6 @@ class Startup {
 				continue;
 			$this->available_locale[$locale] = $this->CI->config->config['available_lang'][$locale];
 		}
-
-		$this->_check_setup();
 
 		if( ! isset($this->CI->config->config['is_installed']))
 		{
