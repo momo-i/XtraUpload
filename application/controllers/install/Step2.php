@@ -77,7 +77,12 @@ class Step2 extends CI_Controller {
 		{
 			$data['is_chmod'] = false;
 			$data['phpver']  = '<span style="color: #FF0000; font-size: 4"><strong>'.lang('Failed').'</strong></span><br>';
-			$data['phpver'] .= sprintf(lang('Please update php to the latest version in the %s'), '<a href="http://php.net/downloads.php">'.lang('v5.3 code branch').'</a>')."\n";
+			$data['phpver'] .= sprintf(lang('Please update php to the latest version in the %s'), '<a href="http://php.net/downloads.php">'.lang('v5.6 code branch').'</a>')."\n";
+		}
+		elseif($phpver < 560)
+		{
+			$data['phpver'] = '<span style="color: #FF4000; font-size: 4"><strong>'.lang('Warning').'</strong></span><br>';
+			$data['phpver'] .= sprintf(lang('Please update php to the latest version in the %s'), '<a href="http://php.net/downloads.php">'.lang('v5.6 code branch').'</a>')."\n";
 		}
 		else
 		{
