@@ -6,6 +6,7 @@ TODO
 	- Replace swfupload to pluplaod http://plupload.com/
 	- Add ads for each pages.
 	- Payment system.
+	- auto create poster(thumbnail) for video player by ffmpeg.
 
 	* 3.0.0
 	- Convert Zend_Translate from CodeIgniter DB language.
