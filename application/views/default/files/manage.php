@@ -80,7 +80,7 @@ foreach ($files->result() as $file) {
                 <label for="<?php echo $file->id; ?>_tags"><?php echo lang('Tags (seperated by commas)'); ?></label>
                 <input name="<?php echo $file->id; ?>_tags" id="<?php echo $file->id; ?>_tags" value="<?php echo $file->tags; ?>" size="35" maxlength="200" type="text"><br>
                 <label for="<?php echo $file->id; ?>_feat"><?php echo lang('Feature This File?'); ?></label>
-                <input name="<?php echo $file->id; ?>_feat" id="<?php echo $file->id; ?>_feat" <?php if($file->feature) { ?> checked="checked"<? } ?> type="checkbox" value="1"> <?php echo lang('Yes'); ?><br><br>
+                <input name="<?php echo $file->id; ?>_feat" id="<?php echo $file->id; ?>_feat" <?php if($file->feature) { ?> checked="checked"<?php } ?> type="checkbox" value="1"> <?php echo lang('Yes'); ?><br><br>
                 <?php echo generate_link_button(lang('Save Changes'), 'javascript:;', base_url().'assets/images/icons/ok_16.png', 'green', array('onclick' => 'editFileProps(\''.$file->id.'\');')); ?> 
                 <?php echo generate_link_button(lang('Cancel Edit'), 'javascript:;', base_url().'assets/images/icons/close_16.png', 'red', array('onclick' => '$(\'#'.$file->id.'-edit\').hide();')); ?><br><br>
               </td>
