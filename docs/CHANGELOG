@@ -1,4 +1,4 @@
-	v3.0.0-RC4
+	v3.0.0-RC3
 		- update swfuplaod to secure-swfupload https://github.com/wordpress/secure-swfupload
 		- fixed remotefile
 		- show/hide about message on admin page.
@@ -25,7 +25,6 @@
 		- Fixed #15
 		- fixed charts.js location
 		- fixed .htaccess
-	v3.0.0-RC3
 	v3.0.0-RC2
 	v3.0.0-RC1
 		- Update CodeIgniter 3.0.0-dev

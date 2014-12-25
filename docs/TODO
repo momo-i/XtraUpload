@@ -1,10 +1,15 @@
 TODO
+	* 4.0.0
+	- Completing the original TODO
+
+	* 3.1.0
+	- Replace swfupload to pluplaod http://plupload.com/
+	- Add ads for each pages.
+	- Payment system.
+
 	* 3.0.0
 	- Convert Zend_Translate from CodeIgniter DB language.
-	- Completing the original TODO
 	- Upgrader system. done
-	- User Guide for 3.0.0
-	- Payment system not working.
 
 Original TODO.
 ---------------------

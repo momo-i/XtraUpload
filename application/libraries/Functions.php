@@ -122,12 +122,20 @@ class Functions {
 	{
 		$img_ext = array('jpg', 'gif', 'jpeg', 'png');
 		log_message('debug', "file: $file");
-		if(!preg_match('#\.#', $file))
+		if(!preg_match('#\.#', basename($file)))
 		{
+			log_message('debug', 'No extension.');
 			return FALSE;
 		}
-		$file_ext = end(explode('.', basename($file)));
-		
+		if(function_exists('pathinfo'))
+		{
+			$pathinfo = pathinfo($file);
+			$file_ext = isset($pathinfo['extension']) ? $pathinfo['extension'] : "";
+		}
+		else
+		{
+			list($name, $file_ext) = explode('.', basename($file));
+		}
 		if (in_array(strtolower($file_ext), $img_ext))
 		{
 			return TRUE;
