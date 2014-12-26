@@ -158,6 +158,10 @@ class Update extends CI_Controller {
 		$update_string = '- Update upload_failures table';
 		$version[] = array('version' => '3000300', 'description' => $update_string);
 
+		// 3.0.0 RC4
+		$update_string = '- Fixed session database table';
+		$version[] = array('version' => '3000400', 'description' => $update_string);
+
 		return $version;
 	}
 
@@ -269,6 +273,48 @@ class Update extends CI_Controller {
 			)
 		);
 		$this->dbforge->modify_column('upload_failures', $fields);
+
+		$this->_set_db_version();
+		return TRUE;
+	}
+
+	private function _update_3000400()
+	{
+		$this->dbforge->drop_table('sessions');
+		$fields = array(
+			'session_id' => array(
+				'type' => 'VARCHAR',
+				'constraint' => 40,
+				'default' => 0,
+				'null' => false,
+			),
+			'ip_address' => array(
+				'type' => 'VARCHAR',
+				'constraint' => 45,
+				'default' => 0,
+				'null' => false
+			),
+			'user_agent' => array(
+				'type' => 'VARCHAR',
+				'null' => false,
+				'constraint' => 120
+			),
+			'last_activity' => array(
+				'type' => 'INT',
+				'unsigned' => TRUE,
+				'default' => '0',
+				'constraint' => 10,
+				'null' => FALSE,
+			),
+			'user_data' => array(
+				'type' => 'TEXT',
+				'null' => false
+			)
+		);
+		$this->dbforge->add_field($fields);
+		$this->dbforge->add_key(array('session_id', 'ip_address', 'user_agent'), true);
+		$this->dbforge->add_key('last_activity');
+		$this->dbforge->create_table('sessions');
 
 		$this->_set_db_version();
 		return TRUE;

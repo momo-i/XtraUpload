@@ -1,3 +1,6 @@
+	v3.0.0-RC4
+		- fixed session database #17
+		- fixed locale settings
 	v3.0.0-RC3
 		- update swfuplaod to secure-swfupload https://github.com/wordpress/secure-swfupload
 		- fixed remotefile

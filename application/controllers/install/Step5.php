@@ -891,30 +891,27 @@ class Step5 extends CI_Controller {
 		$fields = array(
 			'session_id' => array(
 				'type' => 'VARCHAR',
-				'constraint' => 40
+				'constraint' => 40,
+				'default' => 0,
+				'null' => false,
 			),
 			'ip_address' => array(
 				'type' => 'VARCHAR',
-				'constraint' => 16,
+				'constraint' => 45,
 				'default' => 0,
 				'null' => false
-			),
-			'active' => array(
-				'type' => 'TINYINT',
-				'unsigned' => TRUE,
-				'default' => '0',
-				'constraint' => 1
 			),
 			'user_agent' => array(
 				'type' => 'VARCHAR',
 				'null' => false,
-				'constraint' => 50
+				'constraint' => 120
 			),
 			'last_activity' => array(
 				'type' => 'INT',
 				'unsigned' => TRUE,
 				'default' => '0',
-				'constraint' => 10
+				'constraint' => 10,
+				'null' => FALSE,
 			),
 			'user_data' => array(
 				'type' => 'TEXT',
@@ -923,6 +920,9 @@ class Step5 extends CI_Controller {
 		);
 		$this->dbforge->add_field($fields);
 		$this->dbforge->add_key('session_id', true);
+		$this->dbforge->add_key('ip_address', true);
+		$this->dbforge->add_key('user_agent', true);
+		$this->dbforge->add_key('last_activity');
 		$this->dbforge->create_table('sessions');
 
 		// Admin Menu Shortcuts Table
