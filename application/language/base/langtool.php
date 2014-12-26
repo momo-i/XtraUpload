@@ -23,11 +23,12 @@ function update_core($dir, $domain)
 
 	$application = realpath(BASEDIR."/../../../application");
 
+	unlink($potfile);
 	passthru(<<<END
 xgettext \
 	--from-code=UTF-8 \
 	--default-domain=$domain \
-	--output=$domain.pot \
+	--output=$potfile \
 	--language=PHP \
 	--copyright-holder="XtraUpload" \
 	--package-name="XtraUpload" \

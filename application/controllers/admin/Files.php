@@ -297,8 +297,8 @@ class Files extends CI_Controller {
 			{
 				$this->files_db->ban_file_admin($id);
 			}
-
-			$this->session->set_flashdata('msg', sprintf(lang('%d File(s) have been Banned'), count($this->input->post('files'))));
+			$count = count($this->input->post('files'));
+			$this->session->set_flashdata('msg', sprintf(nlang('%d file has been banned.', '%d files have been banned.', $count), $count));
 		}
 
 		if( ! empty($query))
@@ -319,8 +319,8 @@ class Files extends CI_Controller {
 			{
 				$this->files_db->delete_file_admin($id);
 			}
-
-			$this->session->set_flashdata('msg', sprintf(lang('%d Files(s) have been deleted'), count($this->input->post('files'))));
+			$count = count($this->input->post('files'));
+			$this->session->set_flashdata('msg', sprintf(nlang('%d file has been deleted.', '%d files have been deleted.', $count), $count));
 		}
 
 		if( ! empty($query))

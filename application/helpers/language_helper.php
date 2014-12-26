@@ -52,14 +52,6 @@ if ( ! function_exists('lang'))
 	}
 }
 
-if ( ! function_exists('lang_noop'))
-{
-	function lang_noop($line, $for = '', $attributes = array())
-	{
-		return lang($line, $for, $attributes);
-	}
-}
-
 if ( ! function_exists('nlang'))
 {
 	function nlang($line, $lines, $int=0)

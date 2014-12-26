@@ -342,7 +342,8 @@ class User extends CI_Controller {
 			{
 				$this->users_db->delete_user($id);
 			}
-			$this->session->set_flashdata('msg', sprintf(lang('%d User(s) have been deleted'), count($this->input->post('users'))));
+			$count = count($this->input->post('users'));
+			$this->session->set_flashdata('msg', sprintf(nlang('%d user has been deleted', '%d users have been deleted', $count), $count));
 		}
 		if( ! empty($query))
 		{

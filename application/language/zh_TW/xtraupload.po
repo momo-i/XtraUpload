@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XtraUpload 3.0.0 Beta4\n"
 "Report-Msgid-Bugs-To: translator at xtrafile.com\n"
-"POT-Creation-Date: 2014-12-26 09:07+0900\n"
+"POT-Creation-Date: 2014-12-26 14:21+0900\n"
 "PO-Revision-Date: 2014-12-22 15:47+0900\n"
 "Last-Translator: momo-i <webmaster@momo-i.org>\n"
 "Language-Team: Chinese (traditional)\n"
@@ -446,7 +446,7 @@ msgstr ""
 msgid "The upload destination folder does not appear to be writable."
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:275
+#: ../../../application/libraries/Startup.php:266
 #: ../../../application/controllers/admin/Home.php:83
 #: ../../../application/controllers/Home.php:83
 #: ../../../application/views/default/home.php:7
@@ -454,12 +454,12 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:280
+#: ../../../application/libraries/Startup.php:271
 #: ../../../application/controllers/Upload.php:50
 msgid "URL Upload"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:286
+#: ../../../application/libraries/Startup.php:277
 #: ../../../application/views/default/admin/files/view.php:13
 #: ../../../application/views/default/admin/files/search_result.php:13
 #: ../../../application/views/default/admin/users/view.php:13
@@ -470,105 +470,105 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:292
+#: ../../../application/libraries/Startup.php:283
 msgid "Admin"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:298
-#: ../../../application/libraries/Startup.php:353
+#: ../../../application/libraries/Startup.php:289
+#: ../../../application/libraries/Startup.php:344
 msgid "Manage"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:299
+#: ../../../application/libraries/Startup.php:290
 msgid "Files"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:300
+#: ../../../application/libraries/Startup.php:291
 msgid "Transactions"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:301
+#: ../../../application/libraries/Startup.php:292
 msgid "Users"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:303
+#: ../../../application/libraries/Startup.php:294
 msgid "Configure"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:304
+#: ../../../application/libraries/Startup.php:295
 msgid "Site Config"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:305
+#: ../../../application/libraries/Startup.php:296
 #: ../../../application/views/default/admin/gateways/view.php:3
 msgid "Payment Gateways"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:306
+#: ../../../application/libraries/Startup.php:297
 #: ../../../application/views/default/admin/menu.php:47
 msgid "Plugins"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:307
+#: ../../../application/libraries/Startup.php:298
 msgid "Skins"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:308
+#: ../../../application/libraries/Startup.php:299
 #: ../../../application/views/default/admin/stats.php:28
 #: ../../../application/views/default/admin/stats.php:29
 msgid "Servers"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:309
+#: ../../../application/libraries/Startup.php:300
 msgid "User Groups"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:311
+#: ../../../application/libraries/Startup.php:302
 msgid "Misc"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:312
+#: ../../../application/libraries/Startup.php:303
 msgid "Admin Menu Shortcuts"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:313
+#: ../../../application/libraries/Startup.php:304
 #: ../../../application/views/default/admin/email.php:4
 msgid "Mass Emailer"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:315
+#: ../../../application/libraries/Startup.php:306
 #: ../../../application/controllers/admin/Stats.php:44
 #: ../../../application/views/default/admin/stats.php:4
 msgid "Site Stats"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:317
+#: ../../../application/libraries/Startup.php:308
 msgid "Tools/Maintenance"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:319
+#: ../../../application/libraries/Startup.php:310
 msgid "Plugin Config"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:324
+#: ../../../application/libraries/Startup.php:315
 msgid "Shortcuts"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:325
+#: ../../../application/libraries/Startup.php:316
 msgid "Add This Page"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:352
+#: ../../../application/libraries/Startup.php:343
 msgid "Upload"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:354
-#: ../../../application/controllers/Folder.php:53
+#: ../../../application/libraries/Startup.php:345
+#: ../../../application/controllers/Folder.php:64
 #: ../../../application/views/default/folder/view.php:3
 msgid "File Folder"
 msgstr ""
 
-#: ../../../application/libraries/Startup.php:355
+#: ../../../application/libraries/Startup.php:346
 #: ../../../application/views/default/image/gallery/view.php:3
 msgid "Image Gallery"
 msgstr ""
@@ -865,9 +865,9 @@ msgid "Manage Account"
 msgstr ""
 
 #: ../../../application/controllers/User.php:444
-#: ../../../application/controllers/Files.php:478
-#: ../../../application/controllers/Files.php:509
-#: ../../../application/controllers/Files.php:546
+#: ../../../application/controllers/Files.php:488
+#: ../../../application/controllers/Files.php:517
+#: ../../../application/controllers/Files.php:554
 msgid "Manage Your Files"
 msgstr ""
 
@@ -989,12 +989,12 @@ msgstr ""
 msgid "Processing..."
 msgstr ""
 
-#: ../../../application/controllers/Folder.php:63
-#: ../../../application/controllers/Folder.php:92
+#: ../../../application/controllers/Folder.php:74
+#: ../../../application/controllers/Folder.php:103
 msgid "Create File Folder"
 msgstr ""
 
-#: ../../../application/controllers/Folder.php:92
+#: ../../../application/controllers/Folder.php:103
 #: ../../../application/controllers/Image.php:160
 msgid "Done"
 msgstr ""
@@ -1075,10 +1075,12 @@ msgstr ""
 msgid "User has been Activated"
 msgstr ""
 
-#: ../../../application/controllers/admin/User.php:345
+#: ../../../application/controllers/admin/User.php:346
 #, php-format
-msgid "%d User(s) have been deleted"
-msgstr ""
+msgid "%d user has been deleted"
+msgid_plural "%d users have been deleted"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../../../application/controllers/admin/Config.php:70
 msgid "Manage Site Config"
@@ -1475,12 +1477,14 @@ msgstr ""
 
 #: ../../../application/controllers/admin/Skin.php:79
 #, php-format
-msgid "%s New Skin(s) were installed."
-msgstr ""
+msgid "%s new skin was installed."
+msgid_plural "%s new skins were installed."
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../../../application/controllers/admin/Skin.php:88
 #, php-format
-msgid "The Skin \"%s\" has been Uninstalled."
+msgid "The skin \"%s\" has been Uninstalled."
 msgstr ""
 
 #: ../../../application/controllers/admin/Skin.php:98
@@ -1502,7 +1506,7 @@ msgid "Edit File"
 msgstr ""
 
 #: ../../../application/controllers/admin/Files.php:242
-#: ../../../application/controllers/Files.php:571
+#: ../../../application/controllers/Files.php:580
 msgid "File Deleted"
 msgstr ""
 
@@ -1512,13 +1516,17 @@ msgstr ""
 
 #: ../../../application/controllers/admin/Files.php:301
 #, php-format
-msgid "%d File(s) have been Banned"
-msgstr ""
+msgid "%d file has been banned."
+msgid_plural "%d files have been banned."
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../../../application/controllers/admin/Files.php:323
 #, php-format
-msgid "%d Files(s) have been deleted"
-msgstr ""
+msgid "%d file has been deleted."
+msgid_plural "%d files have been deleted."
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../../../application/controllers/admin/Gateways.php:65
 msgid "Manage Payment Gateways"
@@ -1638,34 +1646,36 @@ msgstr ""
 msgid "OK"
 msgstr ""
 
-#: ../../../application/controllers/Files.php:228
+#: ../../../application/controllers/Files.php:242
 #: ../../../application/views/default/files/get.php:3
 msgid "Download File"
 msgstr ""
 
-#: ../../../application/controllers/Files.php:250
-#: ../../../application/controllers/Files.php:286
+#: ../../../application/controllers/Files.php:263
+#: ../../../application/controllers/Files.php:298
 msgid "The Captcha you submited was incorrect."
 msgstr ""
 
-#: ../../../application/controllers/Files.php:532
+#: ../../../application/controllers/Files.php:540
 msgid "Your query returned 0 results, please try again."
 msgstr ""
 
-#: ../../../application/controllers/Files.php:668
+#: ../../../application/controllers/Files.php:679
 msgid "Guest"
 msgstr ""
 
-#: ../../../application/controllers/Files.php:698
+#: ../../../application/controllers/Files.php:715
 #, php-format
-msgid "%d File(s) have been deleted"
-msgstr ""
+msgid "%d file has been deleted"
+msgid_plural "%d files have been deleted"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../../../application/controllers/Files.php:743
+#: ../../../application/controllers/Files.php:757
 msgid "Password Protected File"
 msgstr ""
 
-#: ../../../application/controllers/Files.php:802
+#: ../../../application/controllers/Files.php:808
 msgid "File Not Found"
 msgstr ""
 
@@ -1844,389 +1854,363 @@ msgstr ""
 msgid "bytes"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:211
-msgid "(UTC +14:00) Line Islands"
+#: ../../../application/helpers/language_helper.php:87
+msgid "Afrikaans"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:210
-msgid "(UTC +13:00) Phoenix Islands Time, Tonga"
+#: ../../../application/helpers/language_helper.php:88
+msgid "Arabic"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:209
-msgid "(UTC +12:45) Chatham Islands Standard Time"
+#: ../../../application/helpers/language_helper.php:89
+msgid "Bulgarian"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:208
-msgid ""
-"(UTC +12:00) Fiji, Gilbert Islands, Kamchatka Time, New Zealand Standard Time"
+#: ../../../application/helpers/language_helper.php:90
+msgid "BengaliBangla"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:207
-msgid "(UTC +11:30) Norfolk Island"
+#: ../../../application/helpers/language_helper.php:91
+msgid "Catalan"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:206
-msgid "(UTC +11:00) Magadan Time, Solomon Islands, Vanuatu"
+#: ../../../application/helpers/language_helper.php:92
+msgid "Czech"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:205
-msgid "(UTC +10:30) Lord Howe Island"
+#: ../../../application/helpers/language_helper.php:93
+msgid "Danish"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:204
-msgid "(UTC +10:00) Australian Eastern Standard Time, Vladivostok Time"
+#: ../../../application/helpers/language_helper.php:94
+msgid "German"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:203
-msgid "(UTC +9:30) Australian Central Standard Time"
+#: ../../../application/helpers/language_helper.php:95
+msgid "Greek"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:202
-msgid "(UTC +9:00) Japan Standard Time, Korea Standard Time, Yakutsk Time"
+#: ../../../application/helpers/language_helper.php:96
+msgid "English (UK)"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:201
-msgid "(UTC +8:45) Australian Central Western Standard Time"
+#: ../../../application/helpers/language_helper.php:97
+msgid "English (US)"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:200
-msgid ""
-"(UTC +8:00) Australian Western Standard Time, Beijing Time, Irkutsk Time"
+#: ../../../application/helpers/language_helper.php:98
+msgid "Spanish (Argentina)"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:199
-msgid "(UTC +7:00) Krasnoyarsk Time, Cambodia, Laos, Thailand, Vietnam"
+#: ../../../application/helpers/language_helper.php:99
+msgid "Spanish (Spain)"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:198
-msgid "(UTC +6:30) Cocos Islands, Myanmar"
+#: ../../../application/helpers/language_helper.php:100
+msgid "Spanish (Mexico)"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:197
-msgid "(UTC +6:00) Bangladesh Standard Time, Bhutan Time, Omsk Time"
+#: ../../../application/helpers/language_helper.php:101
+msgid "Estonian"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:196
-msgid "(UTC +5:45) Nepal Time"
+#: ../../../application/helpers/language_helper.php:102
+msgid "Basque"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:195
-msgid "(UTC +5:30) Indian Standard Time, Sri Lanka Time"
+#: ../../../application/helpers/language_helper.php:103
+msgid "Persian"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:194
-msgid "(UTC +5:00) Pakistan Standard Time, Yekaterinburg Time"
+#: ../../../application/helpers/language_helper.php:104
+msgid "Finnish"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:193
-msgid "(UTC +4:30) Afghanistan"
+#: ../../../application/helpers/language_helper.php:105
+msgid "Faroese"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:192
-msgid "(UTC +4:00) Azerbaijan Standard Time, Samara Time"
+#: ../../../application/helpers/language_helper.php:106
+msgid "French"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:191
-msgid "(UTC +3:30) Iran Standard Time"
+#: ../../../application/helpers/language_helper.php:107
+msgid "Irish"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:190
-msgid "(UTC +3:00) Moscow Time, East Africa Time"
+#: ../../../application/helpers/language_helper.php:108
+msgid "Hebrew"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:189
+#: ../../../application/helpers/language_helper.php:109
+msgid "Croatian"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:110
+msgid "Hungarian"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:111
+msgid "Icelandic"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:112
+msgid "Italian"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:113
+msgid "Japanese"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:114
+msgid "Korean"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:115
+msgid "Lithuanian"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:116
+msgid "Latvian"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:117
+msgid "Macedonian"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:118
+msgid "Malay"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:119
+msgid "Dutch"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:120
+msgid "Norwegian (Bokmal)"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:121
+msgid "Polish"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:122
+msgid "Portuguese (Brasil)"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:123
+msgid "Portuguese (Portugal)"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:124
+msgid "Romanian"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:125
+msgid "Russian"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:126
+msgid "Slovak"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:127
+msgid "Slovenian"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:128
+msgid "Serbian"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:129
+msgid "Swedish"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:130
+msgid "Tswana"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:131
+msgid "Turkish"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:132
+msgid "Ukrainian"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:133
+msgid "Vietnamese"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:134
+msgid "Chinese (simplified)"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:135
+msgid "Chinese (traditional)"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:164
+msgid "(UTC -12:00) Baker/Howland Island"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:165
+msgid "(UTC -11:00) Samoa Time Zone, Niue"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:166
+msgid "(UTC -10:00) Hawaii-Aleutian Standard Time, Cook Islands, Tahiti"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:167
+msgid "(UTC -9:30) Marquesas Islands"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:168
+msgid "(UTC -9:00) Alaska Standard Time, Gambier Islands"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:169
+msgid "(UTC -8:00) Pacific Standard Time, Clipperton Island"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:170
+msgid "(UTC -7:00) Mountain Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:171
+msgid "(UTC -6:00) Central Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:172
+msgid "(UTC -5:00) Eastern Standard Time, Western Caribbean Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:173
+msgid "(UTC -4:30) Venezuelan Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:174
+msgid "(UTC -4:00) Atlantic Standard Time, Eastern Caribbean Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:175
+msgid "(UTC -3:30) Newfoundland Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:176
+msgid "(UTC -3:00) Argentina, Brazil, French Guiana, Uruguay"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:177
+msgid "(UTC -2:00) South Georgia/South Sandwich Islands"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:178
+msgid "(UTC -1:00) Azores, Cape Verde Islands"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:179
+msgid "(UTC) Greenwich Mean Time, Western European Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:180
+msgid "(UTC +1:00) Central European Time, West Africa Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:181
 msgid ""
 "(UTC +2:00) Central Africa Time, Eastern European Time, Kaliningrad Time"
 msgstr ""
 
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:188
-msgid "(UTC +1:00) Central European Time, West Africa Time"
-msgstr ""
-
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:187
-msgid "(UTC) Greenwich Mean Time, Western European Time"
-msgstr ""
-
-#: ../../../application/helpers/.language_helper.php.swp:18
-#: ../../../application/helpers/language_helper.php:186
-msgid "(UTC -1:00) Azores, Cape Verde Islands"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:95
-msgid "Afrikaans"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:96
-msgid "Arabic"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:97
-msgid "Bulgarian"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:98
-msgid "BengaliBangla"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:99
-msgid "Catalan"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:100
-msgid "Czech"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:101
-msgid "Danish"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:102
-msgid "German"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:103
-msgid "Greek"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:104
-msgid "English (UK)"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:105
-msgid "English (US)"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:106
-msgid "Spanish (Argentina)"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:107
-msgid "Spanish (Spain)"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:108
-msgid "Spanish (Mexico)"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:109
-msgid "Estonian"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:110
-msgid "Basque"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:111
-msgid "Persian"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:112
-msgid "Finnish"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:113
-msgid "Faroese"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:114
-msgid "French"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:115
-msgid "Irish"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:116
-msgid "Hebrew"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:117
-msgid "Croatian"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:118
-msgid "Hungarian"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:119
-msgid "Icelandic"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:120
-msgid "Italian"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:121
-msgid "Japanese"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:122
-msgid "Korean"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:123
-msgid "Lithuanian"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:124
-msgid "Latvian"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:125
-msgid "Macedonian"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:126
-msgid "Malay"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:127
-msgid "Dutch"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:128
-msgid "Norwegian (Bokmal)"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:129
-msgid "Polish"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:130
-msgid "Portuguese (Brasil)"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:131
-msgid "Portuguese (Portugal)"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:132
-msgid "Romanian"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:133
-msgid "Russian"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:134
-msgid "Slovak"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:135
-msgid "Slovenian"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:136
-msgid "Serbian"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:137
-msgid "Swedish"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:138
-msgid "Tswana"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:139
-msgid "Turkish"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:140
-msgid "Ukrainian"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:141
-msgid "Vietnamese"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:142
-msgid "Chinese (simplified)"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:143
-msgid "Chinese (traditional)"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:172
-msgid "(UTC -12:00) Baker/Howland Island"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:173
-msgid "(UTC -11:00) Samoa Time Zone, Niue"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:174
-msgid "(UTC -10:00) Hawaii-Aleutian Standard Time, Cook Islands, Tahiti"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:175
-msgid "(UTC -9:30) Marquesas Islands"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:176
-msgid "(UTC -9:00) Alaska Standard Time, Gambier Islands"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:177
-msgid "(UTC -8:00) Pacific Standard Time, Clipperton Island"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:178
-msgid "(UTC -7:00) Mountain Standard Time"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:179
-msgid "(UTC -6:00) Central Standard Time"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:180
-msgid "(UTC -5:00) Eastern Standard Time, Western Caribbean Standard Time"
-msgstr ""
-
-#: ../../../application/helpers/language_helper.php:181
-msgid "(UTC -4:30) Venezuelan Standard Time"
-msgstr ""
-
 #: ../../../application/helpers/language_helper.php:182
-msgid "(UTC -4:00) Atlantic Standard Time, Eastern Caribbean Standard Time"
+msgid "(UTC +3:00) Moscow Time, East Africa Time"
 msgstr ""
 
 #: ../../../application/helpers/language_helper.php:183
-msgid "(UTC -3:30) Newfoundland Standard Time"
+msgid "(UTC +3:30) Iran Standard Time"
 msgstr ""
 
 #: ../../../application/helpers/language_helper.php:184
-msgid "(UTC -3:00) Argentina, Brazil, French Guiana, Uruguay"
+msgid "(UTC +4:00) Azerbaijan Standard Time, Samara Time"
 msgstr ""
 
 #: ../../../application/helpers/language_helper.php:185
-msgid "(UTC -2:00) South Georgia/South Sandwich Islands"
+msgid "(UTC +4:30) Afghanistan"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:186
+msgid "(UTC +5:00) Pakistan Standard Time, Yekaterinburg Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:187
+msgid "(UTC +5:30) Indian Standard Time, Sri Lanka Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:188
+msgid "(UTC +5:45) Nepal Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:189
+msgid "(UTC +6:00) Bangladesh Standard Time, Bhutan Time, Omsk Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:190
+msgid "(UTC +6:30) Cocos Islands, Myanmar"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:191
+msgid "(UTC +7:00) Krasnoyarsk Time, Cambodia, Laos, Thailand, Vietnam"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:192
+msgid ""
+"(UTC +8:00) Australian Western Standard Time, Beijing Time, Irkutsk Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:193
+msgid "(UTC +8:45) Australian Central Western Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:194
+msgid "(UTC +9:00) Japan Standard Time, Korea Standard Time, Yakutsk Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:195
+msgid "(UTC +9:30) Australian Central Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:196
+msgid "(UTC +10:00) Australian Eastern Standard Time, Vladivostok Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:197
+msgid "(UTC +10:30) Lord Howe Island"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:198
+msgid "(UTC +11:00) Magadan Time, Solomon Islands, Vanuatu"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:199
+msgid "(UTC +11:30) Norfolk Island"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:200
+msgid ""
+"(UTC +12:00) Fiji, Gilbert Islands, Kamchatka Time, New Zealand Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:201
+msgid "(UTC +12:45) Chatham Islands Standard Time"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:202
+msgid "(UTC +13:00) Phoenix Islands Time, Tonga"
+msgstr ""
+
+#: ../../../application/helpers/language_helper.php:203
+msgid "(UTC +14:00) Line Islands"
 msgstr ""
 
 #: ../../../application/views/style_vantage_green/menu.php:5
@@ -2775,8 +2759,10 @@ msgstr ""
 
 #: ../../../application/views/default/files/get.php:141
 #, php-format
-msgid "Please Wait %s more second(s) to download."
-msgstr ""
+msgid "Please wait %s second to download."
+msgid_plural "Please wait %s more seconds to download."
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../../../application/views/default/files/get.php:145
 msgid "Captcha Test - Type the three(3) letters you see below:"
@@ -2825,8 +2811,10 @@ msgstr ""
 
 #: ../../../application/views/default/files/search/query.php:24
 #, php-format
-msgid "Your query '%s' returned %d result(s)"
-msgstr ""
+msgid "Your query '%s' returned %d result"
+msgid_plural "Your query '%s' returned %d results"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../../../application/views/default/files/search/query.php:54
 #: ../../../application/views/default/user/files.php:53
@@ -3234,7 +3222,7 @@ msgid ""
 msgstr ""
 
 #: ../../../application/views/default/admin/home.php:11
-msgid "The longest request your server will process is <em>{$} second(s</em>)"
+msgid "The longest request your server will process is <em>{$} second(s)</em>"
 msgstr ""
 
 #: ../../../application/views/default/admin/home.php:12
@@ -3271,9 +3259,12 @@ msgstr ""
 
 #: ../../../application/views/default/admin/home.php:75
 #: ../../../application/views/default/admin/home.php:94
+#: ../../../application/views/default/user/compare.php:60
 #, php-format
-msgid "%s second(s)"
-msgstr ""
+msgid "%s second"
+msgid_plural "%s seconds"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../../../application/views/default/admin/home.php:83
 msgid "Error!"
@@ -4145,15 +4136,12 @@ msgstr ""
 msgid "Feature"
 msgstr ""
 
-#: ../../../application/views/default/user/compare.php:60
-#, php-format
-msgid "%s Second(s)"
-msgstr ""
-
 #: ../../../application/views/default/user/compare.php:67
 #, php-format
-msgid "%s Day(s)"
-msgstr ""
+msgid "%s day"
+msgid_plural "%s days"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../../../application/views/default/user/compare.php:71
 msgid "Forever!"

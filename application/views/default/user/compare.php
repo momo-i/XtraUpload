@@ -57,14 +57,14 @@ foreach ($group1 as $name => $value)
 		elseif($name == 'wait_time')
 		{
 ?>
-              <td><?php printf(lang('%s Second(s)'), $group->$name); ?></td>
+              <td><?php printf(nlang('%s second', '%s seconds', $group->$name), $group->$name); ?></td>
 <?php
 		}
 		elseif($name == 'file_expire')
 		{ // SHOULD BE CLEANED BETTER AND CHANGE FOR LANGUAGE.
 			if($group->$name > 0)
 			{
-				$strings = sprintf(lang('%s Day(s)'), $group->$name);
+				$strings = sprintf(nlang('%s day', '%s days', $group->$name), $group->$name);
 			}
 			else
 			{

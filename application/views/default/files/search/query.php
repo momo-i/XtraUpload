@@ -21,7 +21,7 @@ else
         </div>
         <div style=" clear:both;"></div>
         <?php echo $flash_message; ?> 
-        <h3><?php printf(lang('Your query \'%s\' returned %d result(s)'), $query, $num_results); ?></h3>
+        <h3><?php printf(nlang('Your query \'%s\' returned %d result', 'Your query \'%s\' returned %d results', $num_results), $query, $num_results); ?></h3>
         <table border="0" style="width:95%" id="file_list_table">
           <tr>
             <th><?php echo lang('File name'); ?></th>

@@ -28,8 +28,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Cron extends CI_Controller {
 
+	/**
+	 *
+	 */
 	private $server = false;
 
+	/**
+	 * Constructor
+	 *
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -43,17 +51,32 @@ class Cron extends CI_Controller {
 		$this->_run_cron();
 	}
 
+	/**
+	 * Cron->index()
+	 * nothing to do.
+	 *
+	 * @return	void
+	 */
 	public function index()
 	{
-		return;
 	}
 
+	/**
+	 * Cron->_run_cron()
+	 *
+	 * @return	void
+	 */
 	private function _run_cron()
 	{
 		// run plugin cron files
 		$this->_extend_cron();
 	}
 
+	/**
+	 * Cron->_extend_cron()
+	 *
+	 * @return	void
+	 */
 	private function _extend_cron()
 	{
 		$dir = APPPATH."cron";

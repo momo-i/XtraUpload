@@ -28,36 +28,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Files extends CI_Controller {
 
-	// Lets the files->downloadFail() function know if the download completed
-	private $downloadComplete = false;
+	/**
+	 * Lets the Files::download_fail() function know if the download completed
+	 *
+	 * @access	private
+	 * @var		bool
+	 */
+	private $download_complete = false;
 
+	/**
+	 * Constructor
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 	}
 
+	/**
+	 * Files::index()
+	 *
+	 * Redirecting Files::home()
+	 *
+	 * @return	void
+	 */
 	public function index()
 	{
 		redirect('home');
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->get()
+	 * Files::get()
 	 *
-	 * The file download geteway page, file info, wait time, and captcha test are served here
+	 * The file download geteway page, file info, wait time,
+	 * and captcha test are served here
 	 *
-	 * @access  public
-	 * @param   string
-	 * @param   string
-	 * @param   string
-	 * @return  none
+	 * @access	public
+	 * @param	string	$id		File ID
+	 * @param	string	$name	File name
+	 * @param	string	$error	Error message
+	 * @return	void
 	 */
 	public function get($id='', $name='', $error='')
 	{
 		// check for auth string in URL
-		$this->_check_for_httpauth();
+		$this->check_for_httpauth();
 
 		// Get the file object for the requested file
 		$file = $this->files_db->get_file_object($id);
@@ -230,17 +244,16 @@ EOF;
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->gen()
+	 * Files::gen()
 	 *
-	 * The file download validation page, if everything checks out the file is downloaded
+	 * The file download validation page, if everything
+	 * checks out the file is downloaded
 	 *
-	 * @access  public
-	 * @param   string
-	 * @param   string
-	 * @return  none
+	 * @access	public
+	 * @param	string	$id		File ID
+	 * @param	string	$name	File name
+	 * @return	void
 	 */
 	public function gen($id='', $name='')
 	{
@@ -262,7 +275,6 @@ EOF;
 		// Captcha validation check
 		if($this->startup->group_config->download_captcha == 2 or ($this->startup->group_config->download_captcha == 1 and !$this->session->userdata('captcha_served')))
 		{
-			// If user submitted CAPTCHA, delete it.
 			// If user submitted CAPTCHA, delete it.
 			if($this->session->flashdata('captcha'))
 			{
@@ -315,20 +327,20 @@ EOF;
 		$this->_goto_download_url($file, $link);
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->download()
+	 * Files::download()
 	 *
 	 * Download file if a download link was generated
 	 *
-	 * @access  public
-	 * @return  none
+	 * @access	public
+	 * @param	string	$dlink	Database ID
+	 * @param	string	$name	File name
+	 * @return	void
 	 */
 	public function download($dlink, $name='')
 	{
 		// did user submit WWW_basic-auth params?
-		$this->_check_for_httpauth();
+		$this->check_for_httpauth();
 
 		$down_link = $this->db->select('time, ip, fid')->get_where('dlinks', array('id' => $dlink));
 
@@ -362,15 +374,15 @@ EOF;
 		$this->_download($dl->fid);
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->stream()
+	 * Files::stream()
 	 *
 	 * Stream a file for playback, mp3's are currently only supported
 	 *
-	 * @access  public
-	 * @return  none
+	 * @access	public
+	 * @param	int		$fid	File ID
+	 * @param	string	$enc	Encrypted string with file ID and IP address
+	 * @return	void
 	 */
 	public function stream($fid='', $enc='')
 	{
@@ -408,15 +420,15 @@ EOF;
 		}
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->embed()
+	 * Files::embed()
 	 *
 	 * Embed File HTML
 	 *
-	 * @access  public
-	 * @return  none
+	 * @access	public
+	 * @param	string	$type	Embed type
+	 * @param	int		$fid	File ID
+	 * @return	void
 	 */
 	public function embed($type='mp3', $fid='')
 	{
@@ -432,15 +444,13 @@ EOF;
 		}
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->manage()
+	 * Files::manage()
 	 *
 	 * File management page, logged in users only
 	 *
-	 * @access  public
-	 * @return  none
+	 * @access	public
+	 * @return	void
 	 */
 	public function manage()
 	{
@@ -480,15 +490,13 @@ EOF;
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->manage()
+	 * Files::manage()
 	 *
 	 * File management page, logged in users only
 	 *
-	 * @access  public
-	 * @return  none
+	 * @access	public
+	 * @return	void
 	 */
 	public function search()
 	{
@@ -553,15 +561,16 @@ EOF;
 		}
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->delete()
+	 * Files::delete()
 	 *
 	 * File delete page, logged in users only
 	 *
-	 * @access  public
-	 * @return  none
+	 * @access	public
+	 * @param	int		$id		Database ID
+	 * @param	string	$secid	MD5 hashed ID
+	 * @param	string	$name	File name
+	 * @return	void
 	 */
 	public function delete($id, $secid, $name)
 	{
@@ -584,8 +593,15 @@ EOF;
 		}
 	}
 
-	// ------------------------------------------------------------------------
-
+	/**
+	 * Files::old_redirect()
+	 *
+	 * Old XtraUpload download url redirect
+	 *
+	 * @deprecated	3.1.0
+	 * @access	public
+	 * @return	void
+	 */
 	public function old_redirect()
 	{
 		$id = $this->uri->segment(2);
@@ -601,16 +617,15 @@ EOF;
 		}
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->_download()
+	 * Files::_download()
 	 *
 	 * File Download private function
 	 *
-	 * @access  private
-	 * @param   string
-	 * @return  none
+	 * @access	private
+	 * @param	int		$id		File ID
+	 * @param	int		$speed	Download speed
+	 * @return	void
 	 */
 	private function _download($id, $speed=0)
 	{
@@ -646,18 +661,14 @@ EOF;
 		}
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->_downloadFail()
+	 * Files::_download_fail()
 	 *
 	 * Function called if the user aborts the connection prematurely
 	 *
-	 * @access  public
-	 * @param   string
-	 * @param   string
-	 * @param   string
-	 * @return  none
+	 * @access	public
+	 * @param	object	$file	Files_db::get_file_object()
+	 * @return	void
 	 */
 	static public function _download_fail($file)
 	{
@@ -684,8 +695,14 @@ EOF;
 		$this1->db->insert('downloads', $data);
 	}
 
-	// ------------------------------------------------------------------------
-
+	/**
+	 * Files::mass_delete()
+	 *
+	 * Mass delete files
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function mass_delete()
 	{
 		if($this->input->post('files') and is_array($this->input->post('files')))
@@ -694,43 +711,40 @@ EOF;
 			{
 				$this->files_db->delete_file_user($id, $this->session->userdata('id'));
 			}
-
-			$this->session->set_flashdata('msg', sprintf(lang('%d File(s) have been deleted'), count($this->input->post('files'))));
+			$count = count($this->input->post('files'));
+			$this->session->set_flashdata('msg', nlang('%d file has been deleted', '%d files have been deleted', $count));
 		}
 
 		redirect('files/manage');
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->_gen_dlink()
+	 * Files::_gen_dlink()
 	 *
 	 * Generate timed download link
 	 *
-	 * @access  public
-	 * @param   string
-	 * @param   string
-	 * @param   int
-	 * @return  none
+	 * @access	public
+	 * @param	string	$fid	File ID
+	 * @param	string	$name	File name
+	 * @param	int		$time	Download limit time?
+	 * @param	bool	$stream	Stream or not
+	 * @return	int		The insert ID number when performing database inserts.
 	 */
-	private function _gen_dlink($id, $name, $time=60, $strean=false)
+	private function _gen_dlink($id, $name, $time=60, $stream=false)
 	{
-		$this->db->insert('dlinks', array('fid' => $id, 'name' => $name, 'time' => time()+($time*60), 'ip' => $this->input->ip_address(), 'stream' => $strean));
+		$this->db->insert('dlinks', array('fid' => $id, 'name' => $name, 'time' => time()+($time*60), 'ip' => $this->input->ip_address(), 'stream' => $stream));
 		return $this->db->insert_id();
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->_pass_page()
+	 * Files::_pass_page()
 	 *
 	 * Function called file is password protected
 	 *
-	 * @access  public
-	 * @param   string
-	 * @param   bool
-	 * @return  none
+	 * @access	private
+	 * @param	object	$file	Object returns Files_db::get_file_object()
+	 * @param	bool	$error	If password was submitted and is incorrect: true else false
+	 * @return	void
 	 */
 	private function _pass_page($file, $error=false)
 	{
@@ -745,17 +759,13 @@ EOF;
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->_get_captcha()
+	 * Files::_get_captcha()
 	 *
 	 * Function called to generate a captcha image
 	 *
-	 * @access  public
-	 * @param   string
-	 * @param   bool
-	 * @return  none
+	 * @access	private
+	 * @return	mixed	if create successful, returns html code, if failure, return false.
 	 */
 	private function _get_captcha()
 	{
@@ -785,17 +795,13 @@ EOF;
 		return $cap['image'];
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->_send404()
+	 * Files::_send404()
 	 *
 	 * Function called to send a 404 error on invalid file link
 	 *
-	 * @access  public
-	 * @param   string
-	 * @param   bool
-	 * @return  none
+	 * @access	private
+	 * @return	void
 	 */
 	private function _send404()
 	{
@@ -805,19 +811,15 @@ EOF;
 		return;
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->_check_for_httpauth()
+	 * Files::check_for_httpauth()
 	 *
 	 * Login user if they send login info using basic-auth, mostly for download accelerators
 	 *
-	 * @access  public
-	 * @param   string
-	 * @param   bool
-	 * @return  none
+	 * @access	public
+	 * @return	void
 	 */
-	public function _check_for_httpauth()
+	public function check_for_httpauth()
 	{
 		if (!isset($_SERVER['PHP_AUTH_USER']))
 		{
@@ -835,17 +837,15 @@ EOF;
 		}
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Files->_goto_download_url()
+	 * Files::_goto_download_url()
 	 *
 	 * build the correct url for downloading a file and send the visitor to it
 	 *
-	 * @access  public
-	 * @param   object
-	 * @param   string
-	 * @return  none
+	 * @access	public
+	 * @param	object	$file	Object returns Files_db::get_file_object()
+	 * @param	string	$link	Returns id generated by Files::_gen_dlink()
+	 * @return	void
 	 */
 
 	private function _goto_download_url($file, $link)

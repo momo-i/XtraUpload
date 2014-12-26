@@ -28,6 +28,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Folder extends CI_Controller {
 
+	/**
+	 * Constructor
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -35,6 +38,14 @@ class Folder extends CI_Controller {
 		$this->load->library('functions');
 	}
 
+	/**
+	 * Folder::index()
+	 *
+	 * Redirection home
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		redirect('home');

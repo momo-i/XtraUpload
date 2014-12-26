@@ -8,7 +8,7 @@ $ini_list = array(
 	'upload_max_filesize' => lang('The largest uploaded file size this server is configured to process is <em>{$}B</em>. <br>This overrides your group settings.'),
 	'post_max_size'  => lang('The maximum size of all allowed POST data is <em>{$}B</em>'),
 	'max_execution_time'  => lang('The longest amount of time your server can execute PHP files is <em>{$} second(s)</em>'),
-	'max_input_time'  => lang('The longest request your server will process is <em>{$} second(s</em>)'),
+	'max_input_time'  => lang('The longest request your server will process is <em>{$} second(s)</em>'),
 	'memory_limit' => lang('The maximum amount of memory a PHP script can use is <em>{$}B</em>'),
 	'short_open_tag' => lang('Enable the use of PHP short opening tags "&lt;?": {$}')
 );
@@ -72,7 +72,7 @@ foreach ($ini_list as $k => $v)
 	}
 	else
 	{
-		printf(lang('%s second(s)'), ini_get($k));
+		printf(nlang('%s second', '%s seconds', ini_get($k)), ini_get($k));
 	}
 ?>
             </a>
@@ -91,7 +91,7 @@ foreach ($ini_list as $k => $v)
 		}
 		else
 		{
-			printf(lang('%s second(s)'), $ini_rec[$k]);
+			printf(nlang('%s second', '%s seconds', $ini_rec[$k]), $ini_rec[$k]);
 		}
 		echo '</span>';
 	}

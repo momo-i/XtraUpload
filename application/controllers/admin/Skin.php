@@ -76,7 +76,7 @@ class Skin extends CI_Controller {
 			}
 			closedir($handle);
 		}
-		$this->session->set_flashdata('msg', sprintf(lang('%s New Skin(s) were installed.'), $i));
+		$this->session->set_flashdata('msg', sprintf(nlang('%s new skin was installed.', '%s new skins were installed.', $i), $i));
 		redirect('admin/skin/view');
 	}
 
@@ -85,7 +85,7 @@ class Skin extends CI_Controller {
 		if($file != '' and $file != 'default')
 		{
 			$this->skin_db->delete_skin($file);
-			$this->session->set_flashdata('msg', sprintf(lang('The Skin "%s" has been Uninstalled.'), '<strong>'.ucwords(str_replace('_',' ',$file)).'</strong>'));
+			$this->session->set_flashdata('msg', sprintf(lang('The skin "%s" has been Uninstalled.'), '<strong>'.ucwords(str_replace('_',' ',$file)).'</strong>'));
 		}
 		redirect('admin/skin/view');
 	}
