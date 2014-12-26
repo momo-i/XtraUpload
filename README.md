@@ -40,4 +40,4 @@ Please see the included docs/LICENSE file
 Hate it?  Love it?  Let us know.  Let us know if you think of any
 more features, bugs, etc.
 
-* [Public Source Repository](https://github.com/momo-i/xtraupload-v3)
+* [Public Source Repository](https://github.com/momo-i/XtraUpload)
