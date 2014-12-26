@@ -3,6 +3,7 @@
 # Copyright (C) 2014 XtraUpload
 # This file is distributed under the same license as the XtraUpload 3.0.0 package.
 # momo-i <webmaster@momo-i.org>, 2014.
+# force UTF-8 ω
 #
 msgid ""
 msgstr ""
@@ -449,7 +450,7 @@ msgstr ""
 #: ../../../application/views/default/home.php:7
 #: ../../../application/views/default/home.php:19
 msgid "Home"
-msgstr ""
+msgstr "Domáci"
 
 #: ../../../application/libraries/Startup.php:271
 #: ../../../application/controllers/Upload.php:50

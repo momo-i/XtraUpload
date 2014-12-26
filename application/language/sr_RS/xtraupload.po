@@ -450,7 +450,7 @@ msgstr ""
 #: ../../../application/views/default/home.php:7
 #: ../../../application/views/default/home.php:19
 msgid "Home"
-msgstr ""
+msgstr "Почетна"
 
 #: ../../../application/libraries/Startup.php:271
 #: ../../../application/controllers/Upload.php:50
