@@ -48,8 +48,15 @@ if ( ! function_exists('lang'))
 		{
 			$line = '<label for="'.$for.'"'._stringify_attributes($attributes).'>'.$line.'</label>';
 		}
-
 		return $line;
+	}
+}
+
+if ( ! function_exists('lang_noop'))
+{
+	function lang_noop($line, $for = '', $attributes = array())
+	{
+		return lang($line, $for, $attributes);
 	}
 }
 
@@ -84,10 +91,58 @@ if ( ! function_exists('available_lang'))
 {
 	function available_lang()
 	{
-		$CI =& get_instance();
-		$CI->config->load('language');
-		$available_lang = $CI->config->item('available_lang');
-		$langs = array('en_US' => lang('English'));
+		$available_lang = array(
+			'af_ZA' => lang('Afrikaans'),
+			'ar_SA' => lang('Arabic'),
+			'bg_BG' => lang('Bulgarian'),
+			'bn_BD' => lang('BengaliBangla'),
+			'ca_ES' => lang('Catalan'),
+			'cs_CZ' => lang('Czech'),
+			'da_DK' => lang('Danish'),
+			'de_DE' => lang('German'),
+			'el_GR' => lang('Greek'),
+			'en_GB' => lang('English (UK)'),
+			'en_US' => lang('English (US)'),
+			'es_AR' => lang('Spanish (Argentina)'),
+			'es_ES' => lang('Spanish (Spain)'),
+			'es_MX' => lang('Spanish (Mexico)'),
+			'et_EE' => lang('Estonian'),
+			'eu_ES' => lang('Basque'),
+			'fa_IR' => lang('Persian'),
+			'fi_FI' => lang('Finnish'),
+			'fo_FO' => lang('Faroese'),
+			'fr_FR' => lang('French'),
+			'ga_IE' => lang('Irish'),
+			'he_IL' => lang('Hebrew'),
+			'hr_HR' => lang('Croatian'),
+			'hu_HU' => lang('Hungarian'),
+			'is_IS' => lang('Icelandic'),
+			'it_IT' => lang('Italian'),
+			'ja_JP' => lang('Japanese'),
+			'ko_KR' => lang('Korean'),
+			'lt_LT' => lang('Lithuanian'),
+			'lv_LV' => lang('Latvian'),
+			'mk_MK' => lang('Macedonian'),
+			'ms_MY' => lang('Malay'),
+			'nl_NL' => lang('Dutch'),
+			'no_NO' => lang('Norwegian (Bokmal)'),
+			'pl_PL' => lang('Polish'),
+			'pt_BR' => lang('Portuguese (Brasil)'),
+			'pt_PT' => lang('Portuguese (Portugal)'),
+			'ro_RO' => lang('Romanian'),
+			'ru_RU' => lang('Russian'),
+			'sk_SK' => lang('Slovak'),
+			'sl_SI' => lang('Slovenian'),
+			'sr_RS' => lang('Serbian'),
+			'sv_SE' => lang('Swedish'),
+			'tn_ZA' => lang('Tswana'),
+			'tr_TR' => lang('Turkish'),
+			'uk_UA' => lang('Ukrainian'),
+			'vi_VN' => lang('Vietnamese'),
+			'zh_CN' => lang('Chinese (simplified)'),
+			'zh_TW' => lang('Chinese (traditional)')
+		);
+		$langs = array();
 		$paths = scandir(APPPATH.'/language');
 		foreach ($paths as $lang)
 		{

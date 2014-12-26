@@ -218,7 +218,7 @@ class User extends CI_Controller {
 
 		$data['user'] = $this->users_db->get_user_by_id($id);
 		$data['groups'] = $this->db->get('groups');
-		$data['locales'] = $this->startup->available_locale;
+		$data['locales'] = available_lang();
 		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Edit User')));
 		$this->load->view($this->startup->skin.'/admin/users/edit', $data);
 		$this->load->view($this->startup->skin.'/footer');

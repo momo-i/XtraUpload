@@ -384,7 +384,7 @@ class User extends CI_Controller {
 
 			$query = $this->db->get_where('users', array('id' => $this->session->userdata('id')));
 			$data['user'] = $query->row();
-			$data['locales'] = $this->startup->available_locale;
+			$data['locales'] = available_lang();
 			$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Manage Account')));
 			$this->load->view($this->startup->skin.'/user/manage', $data);
 			$this->load->view($this->startup->skin.'/footer');
@@ -393,7 +393,7 @@ class User extends CI_Controller {
 		{
 			$query = $this->db->get_where('users', array('id' => $this->session->userdata('id')));
 			$data['user'] = $query->row();
-			$data['locales'] = $this->startup->available_locale;
+			$data['locales'] = available_lang();
 
 			$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Manage Account')));
 			$this->load->view($this->startup->skin.'/user/manage', $data);

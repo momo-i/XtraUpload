@@ -91,7 +91,7 @@ $autoload['libraries'] = array('startup');
 |	$autoload['drivers'] = array('session', 'cache');
 */
 
-$autoload['drivers'] = array('session');
+$autoload['drivers'] = array();
 
 
 /*
@@ -119,7 +119,7 @@ $autoload['helper'] = array('url', 'language', 'security');
 |
 */
 
-$autoload['config'] = array('language');
+$autoload['config'] = array();
 
 
 /*
