@@ -30,8 +30,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 if( ! function_exists('generate_css_button'))
 {
-	// origin: generate_css_button
-	function generate_css_button($addStyleTags)
+	/**
+	 * generate_css_button
+	 *
+	 * Generate CSS Button
+	 *
+	 * @param	bool	$add_style_tags	If true, adding style tag
+	 * @return	string
+	 */
+	function generate_css_button($add_style_tags)
 	{
 		$css = '/* BUTTONS */
 span.cssbutton
@@ -134,7 +141,7 @@ span.cssButton a.buttonRed:active
 	color:#fff;
 }
 ';
-		if($addStyleTags)
+		if($add_style_tags)
 		{
 			return "<style type='text/css'>\n".$css."\n</style>";
 		}
@@ -145,21 +152,18 @@ span.cssButton a.buttonRed:active
 	}	
 }
 
-// ------------------------------------------------------------------------
-
-/**
- * Generate Link Button - Make a button with an <a> element
- *
- * @access	public
- * @param	string
- * @param	string
- * @param	string
- * @param	bool
- * @return	string
- */	
 if( ! function_exists('generate_link_button'))
 {
-	// origin: generate_link_button
+	/**
+	 * Generate Link Button - Make a button with an <a> element
+	 *
+	 * @param	string	$text
+	 * @param	string	$link
+	 * @param	string	$icon
+	 * @param	string	$color
+	 * @param	bool	$attributes
+	 * @return	string
+	 */	
 	function generate_link_button($text, $link, $icon=NULL, $color=NULL, $attributes=NULL)
 	{
 		$buttonHTML = '';
@@ -195,21 +199,17 @@ if( ! function_exists('generate_link_button'))
 	}	
 }
 
-// ------------------------------------------------------------------------
-
-/**
- * Generate Link Button - Make a button with an <a> element
- *
- * @access	public
- * @param	string
- * @param	string
- * @param	string
- * @param	bool
- * @return	string
- */	
 if (! function_exists('generate_submit_button'))
 {
-	// origin: generate_submit_button
+	/**
+	 * Generate Link Button - Make a button with an <a> element
+	 *
+	 * @param	string	$text
+	 * @param	string	$icon
+	 * @param	string	$color
+	 * @param	bool	$attributes
+	 * @return	string
+	 */	
 	function generate_submit_button($text, $icon=NULL, $color=NULL, $attributes=NULL)
 	{
 		$buttonHTML = '';

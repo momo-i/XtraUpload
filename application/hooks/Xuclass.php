@@ -27,6 +27,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class XuClass {
 
+	/**
+	 * XuClass::index()
+	 *
+	 * required class file load
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		log_message('debug', 'XuClass Initialized');

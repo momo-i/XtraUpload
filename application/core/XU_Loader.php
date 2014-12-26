@@ -29,8 +29,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class XU_Loader extends CI_Loader {
 
+	/**
+	 * Store loading extensions
+	 *
+	 * @access	protected
+	 * @var		array
+	 */
 	protected $_ci_extensions = array();
 
+	/**
+	 * Constructor
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -41,9 +50,9 @@ class XU_Loader extends CI_Loader {
 	 *
 	 * This function loads the specified extension.
 	 *
-	 * @access	 public
-	 * @param	  array
-	 * @return	 void
+	 * @access	public
+	 * @param	array	$extensions	specified extension
+	 * @return	void
 	 */
 	public function extension($extensions = array())
 	{
@@ -82,9 +91,11 @@ class XU_Loader extends CI_Loader {
 	 *
 	 * Extends on the default view loader.
 	 *
-	 * @param $view
-	 * @param array $vars
-	 * @param bool $return
+	 * @access	public
+	 * @param	string	$view	Skin name if empty, use default
+	 * @param	array	$vars	Data to load
+	 * @param	bool	$return	Data to load
+	 * @retun	object
 	 */
 	public function view($view, $vars = array(), $return = FALSE)
 	{

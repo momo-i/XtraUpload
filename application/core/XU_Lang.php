@@ -23,22 +23,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @subpackage	Libraries
  * @category	Language
  * @author		momo-i
- * @link		https://github.com/momo-i/xtraupload-v3
+ * @link		https://github.com/momo-i/XtraUpload
  */
 class XU_Lang extends CI_Lang {
 
 	/**
+	 * Default Locale
 	 *
+	 * @access	private
+	 * @var		string
 	 */
 	private $_default_locale;
 
 	/**
+	 * Zend Locale Object
 	 *
+	 * @access	private
+	 * @var		object
 	 */
 	private $_translate;
 
 	/**
+	 * Normaly untranslated database message
 	 *
+	 * @access	private
+	 * @var		array
 	 */
 	private $_dbtypes = array();
 
@@ -103,8 +112,17 @@ class XU_Lang extends CI_Lang {
 		);
 	}
 
-	// --------------------------------------------------------------------
-
+	/**
+	 * Lang::line()
+	 *
+	 * Translates the given string
+	 *
+	 * @access	public
+	 * @param	string	$line	Singular translation string
+	 * @param	string	$lines	Plural translation string
+	 * @param	int		$int	Number for detecting the correct plural
+	 * @return	string
+	 */
 	public function line($line = 'nolang', $lines = NULL, $int = 0)
 	{
 		$this->_check_database($line);
@@ -115,24 +133,60 @@ class XU_Lang extends CI_Lang {
 		return $this->_translate->_($line);
 	}
 
+	/**
+	 * Lang::get_language()
+	 *
+	 * Returns the language part of the locale
+	 *
+	 * @access	public
+	 * @param	string	$lang	Locale for parsing input
+	 * @return	string
+	 */
 	public function get_language($lang = 'en_US')
 	{
 		$locale = new Zend_Locale($lang);
 		return $locale->getLanguage();
 	}
 
+	/**
+	 * Lang::get_region()
+	 *
+	 * Returns the region part of the locale if available
+	 *
+	 * @access	public
+	 * @param	string	$lang	Locale for parsing input
+	 * @return	string|false	Regionstring
+	 */
 	public function get_region($lang = 'en_US')
 	{
 		$locale = new Zend_Locale($lang);
 		return $locale->getRegion();
 	}
 
+	/**
+	 * Lang::is_rtl
+	 *
+	 * Check RTL or LTR
+	 *
+	 * @access	public
+	 * @param	string	$lang	Locale for parsing input
+	 * @return	array
+	 */
 	public function is_rtl($lang = 'en_US')
 	{
 		$is_rtl = Zend_Locale_Data::getList($lang, 'layout');
 		return $is_rtl;
 	}
 
+	/**
+	 * Lang::set_locale()
+	 *
+	 * Set translation locale.
+	 *
+	 * @access	public
+	 * @param	string	$lang	Locale for parsing input
+	 * @return	void
+	 */
 	public function set_locale($lang = 'en_US')
 	{
 		$this->_default_locale = new Zend_Locale($lang);
@@ -155,6 +209,15 @@ class XU_Lang extends CI_Lang {
 		}
 	}
 
+	/**
+	 * Lang::_check_database()
+	 *
+	 * Check the word from database or not.
+	 *
+	 * @access	private
+	 * @param	string	$line	translation word
+	 * @return	void
+	 */
 	private function _check_database(&$line)
 	{
 		if (array_key_exists($line, $this->_dbtypes))
@@ -163,10 +226,19 @@ class XU_Lang extends CI_Lang {
 		}
 	}
 
+	/**
+	 * Lang::lang()
+	 *
+	 * Alias for Lang::line()
+	 *
+	 * @deprecated	3.1.0
+	 * @access	public
+	 * @param	string	$str	Singular translation string
+	 * @return	string
+	 */
 	public function lang($str)
 	{
-		$return = $this->_translate->translate($str);
-		return $return;
+		return $this->line($str);
 	}
 
 }

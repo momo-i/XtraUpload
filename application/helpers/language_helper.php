@@ -33,27 +33,32 @@ if ( ! function_exists('lang'))
 	/**
 	 * Lang
 	 *
-	 * Fetches a language variable and optionally outputs a form label
+	 * Translates the given string
+	 * returns the translation
 	 *
-	 * @param	string	$line		The language line
-	 * @param	string	$for		The "for" value (id of the form element)
-	 * @param	array	$attributes	Any additional HTML attributes
+	 * @param	string	$line		Translation string
 	 * @return	string
 	 */
-	function lang($line, $for = '', $attributes = array())
+	function lang($line)
 	{
 		$line = get_instance()->lang->line($line);
-
-		if ($for !== '')
-		{
-			$line = '<label for="'.$for.'"'._stringify_attributes($attributes).'>'.$line.'</label>';
-		}
 		return $line;
 	}
 }
 
 if ( ! function_exists('nlang'))
 {
+	/**
+	 * nlang
+	 *
+	 * Translates the given string using plural notations
+	 * Returns the translated string
+	 *
+	 * @param	string	$line	Singular translation string
+	 * @param	string	$lines	Plural translation string
+	 * @param	int		$int	Number for detecting the correct plural
+	 * @return	string
+	 */
 	function nlang($line, $lines, $int=0)
 	{
 		$lines = get_instance()->lang->line($line, $lines, $int);
@@ -63,6 +68,14 @@ if ( ! function_exists('nlang'))
 
 if ( ! function_exists('get_language'))
 {
+	/**
+	 * get_language
+	 *
+	 * Returns the language part of the locale
+	 *
+	 * @param	string	$lang	Locale for parsing input
+	 * @return	string
+	 */
 	function get_language($lang = 'en_US')
 	{
 		$locale = get_instance()->lang->get_language($lang);
@@ -72,6 +85,14 @@ if ( ! function_exists('get_language'))
 
 if ( ! function_exists('get_region'))
 {
+	/**
+	 * get_region
+	 *
+	 * Returns the region part of the locale if available
+	 *
+	 * @param	stirng	$lang	Locale for parsing input
+	 * @return	string|false	Regionstring
+	 */
 	function get_region($lang = 'en_US')
 	{
 		$region = get_instance()->lang->get_region($lang);
@@ -81,6 +102,13 @@ if ( ! function_exists('get_region'))
 
 if ( ! function_exists('available_lang'))
 {
+	/**
+	 * available_lang
+	 *
+	 * Returns the available language for XtreUpload
+	 *
+	 * @return	array
+	 */
 	function available_lang()
 	{
 		$available_lang = array(
@@ -149,6 +177,14 @@ if ( ! function_exists('available_lang'))
 
 if ( ! function_exists('is_rtl'))
 {
+	/**
+	 * is_rtl
+	 *
+	 * Read the LDML file, get a array of multipath defined value
+	 *
+	 * @param	string	$lang	Want to check language.
+	 * @return	array
+	 */
 	function is_rtl($lang = 'en_US')
 	{
 		$is_rtl = get_instance()->lang->is_rtl($lang);
@@ -158,6 +194,14 @@ if ( ! function_exists('is_rtl'))
 
 if ( ! function_exists('lang_timezone'))
 {
+	/**
+	 * lang_timezone
+	 *
+	 * Returns the description for timezone
+	 *
+	 * @param	string	$key	Offset timezone
+	 * @return	string
+	 */
 	function lang_timezone($key)
 	{
 		$timezones = array(
