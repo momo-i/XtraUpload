@@ -277,7 +277,7 @@ class Users extends CI_Model {
 		// Set email options
 		$this->email->from($this->startup->site_config->site_email, $this->startup->site_config->sitename.' Support');
 		$this->email->to($to);
-		$subject = sprintf(lang('New user ad %s!'), $this->startup->site_config->sitename);
+		$subject = sprintf(lang('New user at %s!'), $this->startup->site_config->sitename);
 		$this->email->subject($subject);
 
 		$msg  = lang('Hello %s,')."<br>\n";

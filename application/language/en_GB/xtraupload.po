@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XtraUpload 3.0.0 RC4\n"
 "Report-Msgid-Bugs-To: translator at xtrafile.com\n"
-"POT-Creation-Date: 2014-12-26 14:21+0900\n"
-"PO-Revision-Date: 2014-12-26 14:21+0900\n"
+"POT-Creation-Date: 2014-12-26 14:47+0900\n"
+"PO-Revision-Date: 2014-12-26 14:47+0900\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: en_GB\n"
@@ -152,9 +152,10 @@ msgid "Bi-Yearly"
 msgstr "Bi-Yearly"
 
 #: ../../../application/models/Users.php:280
+#: ../../../application/models/Users.php:323
 #, php-format
-msgid "New user ad %s!"
-msgstr "New user ad %s!"
+msgid "New user at %s!"
+msgstr "New user at %s!"
 
 #: ../../../application/models/Users.php:283
 #: ../../../application/models/Users.php:326
@@ -206,11 +207,6 @@ msgstr "Thanks for joining our community!"
 #, php-format
 msgid "%s Administration"
 msgstr "%s Administration"
-
-#: ../../../application/models/Users.php:323
-#, php-format
-msgid "New user at %s!"
-msgstr "New user at %s!"
 
 #: ../../../application/models/Users.php:328
 msgid ""
