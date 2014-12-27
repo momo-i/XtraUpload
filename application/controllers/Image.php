@@ -28,6 +28,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Image extends CI_Controller {
 
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @return	void
+	 */
     public function __construct()
     {
         parent::__construct();
@@ -35,11 +41,30 @@ class Image extends CI_Controller {
         $this->load->library('functions');
     }
 
+	/**
+	 * Image::index()
+	 *
+	 * Redirecting Image::home()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
     public function index()
     {
         redirect('home');
     }
 
+	/**
+	 * Image::show()
+	 *
+	 * Show images
+	 *
+	 * @access	public
+	 * @param	string	$id	File ID
+	 * @param	string	$name	Unused???
+	 * @see		Files_db::get_image_links()
+	 * @return	void
+	 */
     public function show($id, $name)
     {
         $links = $this->files_db->get_image_links($id, $name);
@@ -54,6 +79,17 @@ class Image extends CI_Controller {
         $this->load->view($this->startup->skin.'/footer');
     }
 
+	/**
+	 * Image::links()
+	 *
+	 * Show image links
+	 *
+	 * @access	public
+	 * @param	string	$id	File ID
+	 * @param	string	$name	Unused???
+	 * @see		Files_db::get_image_links()
+	 * @return	void
+	 */
     public function links($id, $name)
     {
         $links = $this->files_db->get_image_links($id, $name);
@@ -75,6 +111,16 @@ class Image extends CI_Controller {
         $this->load->view($this->startup->skin.'/footer');
     }
 
+	/**
+	 * Image::thumb()
+	 *
+	 * Get thumbnail and show
+	 *
+	 * @access	public
+	 * @param	string	$id	File ID
+	 * @param	string	$name	Unused
+	 * @return	void
+	 */
     public function thumb($id, $name)
     {
         $file = $this->files_db->get_file_object($id);
@@ -94,6 +140,16 @@ class Image extends CI_Controller {
         echo file_get_contents($file->thumb);
     }
 
+	/**
+	 * Image::direct()
+	 *
+	 * Get file object and show
+	 *
+	 * @access	public
+	 * @param	string	$id	File ID
+	 * @param	string	$name	Unused???
+	 * @return	void
+	 */
     public function direct($id, $name)
     {
         $file = $this->files_db->get_file_object($id);
@@ -114,6 +170,15 @@ class Image extends CI_Controller {
         echo file_get_contents($file->filename);
     }
 
+	/**
+	 * Image::gallery()
+	 *
+	 * Show gallery page.
+	 *
+	 * @access	public
+	 * @param	string	$id	Gallery ID
+	 * @return	void
+	 */
     public function gallery($id)
     {
         $data['gall'] = $this->db->get_where('gallery', array('g_id' => $id))->row();
@@ -124,6 +189,14 @@ class Image extends CI_Controller {
         $this->load->view($this->startup->skin.'/footer');
     }
 
+	/**
+	 * Image::create_gallery()
+	 *
+	 * Show create gallery page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
     public function create_gallery()
     {
         $this->load->model('user_access');
@@ -134,6 +207,14 @@ class Image extends CI_Controller {
         $this->load->view($this->startup->skin.'/footer');
     }
 
+	/**
+	 * Image::process_new_gallery()
+	 *
+	 * Create gallery page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
     public function process_new_gallery()
     {
         $this->load->model('user_access');
@@ -162,6 +243,15 @@ class Image extends CI_Controller {
         $this->load->view($this->startup->skin.'/footer');
     }
 
+	/**
+	 * Image::edit_gallery()
+	 *
+	 * Show edit gallery page
+	 *
+	 * @access	public
+	 * @param	string	$id	Gallery ID
+	 * @return	void
+	 */
     public function edit_gallery($id)
     {
         $this->load->model('user_access');
@@ -174,6 +264,14 @@ class Image extends CI_Controller {
         $this->load->view($this->startup->skin.'/footer');
     }
 
+	/**
+	 * Image::process_edit_gallery()
+	 *
+	 * Edit gallery page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function process_edit_gallery()
 	{
         $this->load->model('user_access');

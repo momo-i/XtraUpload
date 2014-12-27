@@ -51,6 +51,15 @@ class Folder extends CI_Controller {
 		redirect('home');
 	}
 
+	/**
+	 * Folder::view()
+	 *
+	 * View folder list
+	 *
+	 * @access	public
+	 * @param	string	$id	Folder ID
+	 * @return	void
+	 */
 	public function view($id)
 	{
 		$data['folder'] = $this->db->get_where('folder', array('f_id' => $id))->row();
@@ -66,6 +75,14 @@ class Folder extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Folder::create()
+	 *
+	 * Create folder page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function create()
 	{
 		$this->load->model('user_access');
@@ -76,6 +93,14 @@ class Folder extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Folder::process()
+	 *
+	 * Create folder process
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function process()
 	{
 		$this->load->model('user_access');
