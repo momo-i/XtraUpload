@@ -28,11 +28,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Template extends CI_Controller {
 
+	/**
+	 * Constructor
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 	}
 
+	/**
+	 * Template::index()
+	 */
 	public function index()
 	{
 	}

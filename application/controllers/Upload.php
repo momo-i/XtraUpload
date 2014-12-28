@@ -28,18 +28,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Upload extends CI_Controller {
 
+	/**
+	 * Constructor
+	 */
 	public function __construct()
 	{
-		log_message('debug', 'Upload Controller Initialized !!');
+		log_message('debug', 'XtraUpload Upload Controller Initialized !!');
 		parent::__construct();
 		$this->load->model('server/server_db');
 	}
 
+	/**
+	 * Upload::index()
+	 *
+	 * Redirect Home::index()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		redirect('home');
 	}
 
+	/**
+	 * Upload::url()
+	 *
+	 * Show URL Upload page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function url()
 	{
 		$data = array(
@@ -52,6 +71,15 @@ class Upload extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Upload::get_progress()
+	 *
+	 * Get file upload progress
+	 *
+	 * @access	public
+	 * @param	string	$id	File ID
+	 * @return	void
+	 */
 	public function get_progress($fid)
 	{
 		$db = $this->db->get_where('progress', array('fid' => $fid));
@@ -70,6 +98,14 @@ class Upload extends CI_Controller {
 		}
 	}
 
+	/**
+	 * Upload::url_process()
+	 *
+	 * Get URL upload process
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function url_process()
 	{
 		$this->load->library('remotefile');
@@ -103,6 +139,16 @@ class Upload extends CI_Controller {
 		}
 	}
 
+	/**
+	 * Upload::process()
+	 *
+	 * Upload process
+	 *
+	 * @access	public
+	 * @param	string	$secid	Upload ID
+	 * @param	int		$user	User ID
+	 * @return	void
+	 */
 	public function process($secid='', $user=0)
 	{
 		if(intval($user) !== 0 && $this->session->userdata('login') !== TRUE)
@@ -157,12 +203,30 @@ class Upload extends CI_Controller {
 		}
 	}
 
+	/**
+	 * Upload::get_links()
+	 *
+	 * Show link page
+	 *
+	 * @access	public
+	 * @param	string	$secid	File ID
+	 * @return	void
+	 */
 	public function get_links($secid)
 	{
 		$data['link'] = $this->files_db->get_links($secid);
 		$this->load->view($this->startup->skin.'/upload/links', $data);
 	}
 
+	/**
+	 * Upload::failed()
+	 *
+	 * Show failed page
+	 *
+	 * @access	public
+	 * @param	string	$secid	File ID
+	 * @return	void
+	 */
 	public function failed($secid)
 	{
 		$data['link'] = $this->files_db->get_links($secid);
@@ -171,6 +235,14 @@ class Upload extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Upload::complete()
+	 *
+	 * Show complete page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function complete($secid)
 	{
 		$data['link'] = $this->files_db->get_links($secid);
@@ -180,6 +252,14 @@ class Upload extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Upload::file_upload_props()
+	 *
+	 * Return upload props
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function file_upload_props()
 	{
 		$data = array(
@@ -206,6 +286,14 @@ class Upload extends CI_Controller {
 		echo lang('OK');
 	}
 
+	/**
+	 * Upload::blank()
+	 *
+	 * Use in remote file upload javascript
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function blank()
 	{
 		return;

@@ -44,7 +44,7 @@ class Image extends CI_Controller {
 	/**
 	 * Image::index()
 	 *
-	 * Redirecting Image::home()
+	 * Redirecting Home::index()
 	 *
 	 * @access	public
 	 * @return	void

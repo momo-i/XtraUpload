@@ -28,18 +28,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Legal extends CI_Controller {
 
+	/**
+	 * ???
+	 *
+	 * @access	private
+	 * @var		bool
+	 */
 	private $server = false;
 
+	/**
+	 * Constructor
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 	}
 
+	/**
+	 * Legal::index()
+	 *
+	 * Nothing to do
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
-		return;
 	}
 
+	/**
+	 * Legal::tos()
+	 *
+	 * Show Terms of Service page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function tos()
 	{
 		$data=array();
@@ -47,15 +71,21 @@ class Legal extends CI_Controller {
 		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Terms of Service')));
 		$this->load->view($this->startup->skin.'/legal/tos', $data);
 		$this->load->view($this->startup->skin.'/footer');
-		return;
 	}
 
+	/**
+	 * Legal::privacy()
+	 *
+	 * Show Privacy Policy page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function privacy()
 	{
 		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Privacy Policy')));
 		$this->load->view($this->startup->skin.'/legal/privacy');
 		$this->load->view($this->startup->skin.'/footer');
-		return;
 	}
 }
 

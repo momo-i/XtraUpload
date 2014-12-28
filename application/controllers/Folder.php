@@ -41,7 +41,7 @@ class Folder extends CI_Controller {
 	/**
 	 * Folder::index()
 	 *
-	 * Redirection home
+	 * Redirection Home::index()
 	 *
 	 * @access	public
 	 * @return	void

@@ -29,12 +29,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Remote extends CI_Controller {
 
 	/**
-	 * Home()
+	 * Remote::Home()
 	 *
 	 * The home page controller constructor
 	 *
-	 * @access  public
-	 * @return  void
+	 * @access	public
+	 * @return	void
 	 */
 	public function __construct()
 	{
@@ -43,15 +43,13 @@ class Remote extends CI_Controller {
 		$this->load->library('xmlrpcs');
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Remote->index()
+	 * Remote::index()
 	 *
 	 * Route RPC requests
 	 *
-	 * @access  public
-	 * @return  none
+	 * @access	public
+	 * @return	void
 	 */
 	public function index()
 	{
@@ -62,16 +60,14 @@ class Remote extends CI_Controller {
 		$this->xmlrpcs->serve();
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Remote->_update_config()
+	 * Remote::_update_config()
 	 *
 	 * The home page for XtraUpload, containing the flash uploader
 	 *
-	 * @access  private
-	 * @param   object
-	 * @return  none
+	 * @access	private
+	 * @param	object	$request	Request object
+	 * @return	void
 	 */
 	private function _update_cache($request)
 	{

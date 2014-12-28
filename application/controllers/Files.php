@@ -47,7 +47,7 @@ class Files extends CI_Controller {
 	/**
 	 * Files::index()
 	 *
-	 * Redirecting Files::home()
+	 * Redirecting Home::index()
 	 *
 	 * @return	void
 	 */
