@@ -35,9 +35,11 @@ class Ads extends CI_Controller {
 	 *
 	 * Load admin_access and ads_db model
 	 *
-	 * @see    Admin_access
-	 * @see    Ads_db
-	 * @author Matthew Glinski
+	 * @access	public
+	 * @see		Admin_access
+	 * @see		Ads_db
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function __construct()
 	{
@@ -47,13 +49,14 @@ class Ads extends CI_Controller {
 	}
 
 	/**
-	 * index
+	 * Ads::index()
 	 *
 	 * Redirect ads view
 	 *
-	 * @see    view()
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @see		view()
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function index()
 	{
@@ -61,13 +64,14 @@ class Ads extends CI_Controller {
 	}
 
 	/**
-	 * view
+	 * Ads::view()
 	 *
 	 * Advert Setting View
 	 *
-	 * @see    Ads_db::get_ads()
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @see		Ads_db::get_ads()
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function view()
 	{
@@ -85,14 +89,15 @@ class Ads extends CI_Controller {
 	}
 
 	/**
-	 * add
+	 * Ads::add()
 	 *
 	 * Advert Add
 	 *
-	 * @see    Ads_db::get_ads()
-	 * @see    Ads_db::insert()
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @see		Ads_db::get_ads()
+	 * @see		Ads_db::insert()
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function add()
 	{
@@ -117,15 +122,16 @@ class Ads extends CI_Controller {
 	}
 
 	/**
-	 * edit
+	 * Ads::edit()
 	 *
 	 * Advert Edit
 	 *
-	 * @see    Ads_db::get_ads()
-	 * @see    Ads_db::insert()
-	 * @author Matthew Glinski
-	 * @param  integer $id Advert ID
-	 * @return void
+	 * @access	public
+	 * @see		Ads_db::get_ads()
+	 * @see		Ads_db::insert()
+	 * @author	Matthew Glinski
+	 * @param	int		$id Advert ID
+	 * @return	void
 	 */
 	public function edit($id)
 	{
@@ -155,14 +161,15 @@ class Ads extends CI_Controller {
 	}
 
 	/**
-	 * turn_on
+	 * Ads::turn_on()
 	 *
 	 * Activate Advert
 	 *
-	 * @see    Ads_db::turn_on()
-	 * @author Matthew Glinski
-	 * @param  integer $id Advert ID
-	 * @return void
+	 * @access	public
+	 * @see		Ads_db::turn_on()
+	 * @author	Matthew Glinski
+	 * @param	int		$id Advert ID
+	 * @return	void
 	 */
 	public function turn_on($id)
 	{
@@ -175,14 +182,15 @@ class Ads extends CI_Controller {
 	}
 
 	/**
-	 * turn_off
+	 * Ads::turn_off()
 	 *
 	 * Deactivate Advert
 	 *
-	 * @see    Ads_db::turn_off
-	 * @author Matthew Glinski
-	 * @param  integer $id Advert ID
-	 * @return void
+	 * @access	public
+	 * @see		Ads_db::turn_off
+	 * @author	Matthew Glinski
+	 * @param	int		$id Advert ID
+	 * @return	void
 	 */
 	public function turn_off($id)
 	{
@@ -195,14 +203,15 @@ class Ads extends CI_Controller {
 	}
 
 	/**
-	 * delete
+	 * Ads::delete()
 	 *
 	 * Delete Advert
 	 *
-	 * @see    Ads_db::delete()
-	 * @author Matthew Glinski
-	 * @param  integer $id Advert ID
-	 * @return void
+	 * @access	public
+	 * @see		Ads_db::delete()
+	 * @author	Matthew Glinski
+	 * @param	int		$id Advert ID
+	 * @return	void
 	 */
 	public function delete($id)
 	{

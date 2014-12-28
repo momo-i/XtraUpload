@@ -33,9 +33,11 @@ class Config extends CI_Controller {
 	/**
 	 * Constructor
 	 *
-	 * @see    Admin_access
-	 * @see    Users
-	 * @author Matthew Glinski
+	 * @access	public
+	 * @see		Admin_access
+	 * @see		Users
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function __construct()
 	{
@@ -46,12 +48,13 @@ class Config extends CI_Controller {
 	}
 
 	/**
-	 * Config->index()
+	 * Config::index()
 	 *
 	 * Load the site config into xHTML for editing/viewing
 	 *
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function index()
 	{
@@ -73,10 +76,12 @@ class Config extends CI_Controller {
 	}
 
 	/**
-	 * plugin
+	 * Config::plugin()
 	 *
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @author	Matthew Glinski
+	 * @param	string	$name	Group name
+	 * @return	void
 	 */
 	public function plugin($name='')
 	{
@@ -106,12 +111,13 @@ class Config extends CI_Controller {
 	}
 
 	/**
-	 * Config->update()
+	 * Config::update()
 	 *
 	 * Process a new config object save request
 	 *
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function update()
 	{
@@ -133,12 +139,13 @@ class Config extends CI_Controller {
 	}
 
 	/**
-	 * Config->_update_site_config()
+	 * Config::_update_site_config()
 	 *
 	 * Save a new config object and write it to the cache
 	 *
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	private
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	private function _update_site_config()
 	{

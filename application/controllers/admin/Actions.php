@@ -35,8 +35,10 @@ class Actions extends CI_Controller {
 	 *
 	 * Load admin_access model
 	 *
-	 * @see    Admin_access
-	 * @author Matthew Glinski
+	 * @access	public
+	 * @see		Admin_access
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function __construct()
 	{
@@ -45,13 +47,14 @@ class Actions extends CI_Controller {
 	}
 
 	/**
-	 * index
+	 * Actions::index()
 	 *
 	 * Redirect actions view
 	 *
-	 * @see	   view()
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @see		view()
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function index()
 	{
@@ -59,12 +62,13 @@ class Actions extends CI_Controller {
 	}
 
 	/**
-	 * view
+	 * Actions::view()
 	 *
 	 * Show some actions view.
 	 *
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function view()
 	{
@@ -80,13 +84,15 @@ class Actions extends CI_Controller {
 	}
 
 	/**
-	 * php_info
+	 * Actions::php_info()
 	 *
 	 * Display phpinfo()
 	 *
-	 * @author Matthew Glinski
-	 * @author momo-i
-	 * @return void
+	 * @access	public
+	 * @param	int		$type	PHPInfo constants
+	 * @author	Matthew Glinski
+	 * @author	momo-i
+	 * @return	void
 	 */
 	public function php_info($type = INFO_ALL)
 	{
@@ -104,15 +110,15 @@ class Actions extends CI_Controller {
 		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('PHP Info')));
 		$this->load->view($this->startup->skin.'/admin/actions/info', $data);
 		$this->load->view($this->startup->skin.'/footer');
-		//phpinfo();
 	}
 
 	/**
-	 * run_cron
+	 * Actions::run_cron()
 	 *
 	 * Run cron jobs.
 	 *
-	 * @return void
+	 * @access	public
+	 * @return	void
 	 */
 	public function run_cron()
 	{
@@ -140,11 +146,12 @@ class Actions extends CI_Controller {
 	}
 
 	/**
-	 * clear_cache
+	 * Actions::clear_cache()
 	 *
 	 * Cleaning cache files.
 	 *
-	 * @return void
+	 * @access	public
+	 * @return	void
 	 */
 	public function clear_cache()
 	{
@@ -177,11 +184,13 @@ EOF;
 	}
 
 	/**
-	 * update_server_cache
+	 * Actions::update_server_cache()
 	 *
 	 * Update Remote Server Cache.
 	 *
-	 * @see Remote_server_xml_rpc::update_cache
+	 * @access	public
+	 * @see		Remote_server_xml_rpc::update_cache()
+	 * @return	void
 	 */
 	public function update_server_cache()
 	{

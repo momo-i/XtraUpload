@@ -35,23 +35,26 @@ class Extend extends CI_Controller {
 	/**
 	 * Installed packages
 	 *
-	 * @var array
+	 * @access	private
+	 * @var		array
 	 */
-	private $installed='';
+	private $installed = array();
 
 	/**
 	 * Not installed packages
 	 *
-	 * @var array
+	 * @access	private
+	 * @var		array
 	 */
-	private $not_installed='';
+	private $not_installed = array();
 
 	// }}}
 
 	/**
 	 * Constructor
 	 *
-	 * @see Admin_access
+	 * @access	public
+	 * @see		Admin_access
 	 */
 	public function __construct()
 	{
@@ -62,11 +65,12 @@ class Extend extends CI_Controller {
 	}
 
 	/**
-	 * index
+	 * Extend::index()
 	 *
 	 * Redirect extend view
 	 *
-	 * @return void
+	 * @access	public
+	 * @return	void
 	 */
 	public function index()
 	{
@@ -74,12 +78,13 @@ class Extend extends CI_Controller {
 	}
 
 	/**
-	 * view
+	 * Extend::view()
 	 *
 	 * Install, uninstall plugins.
 	 *
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function view()
 	{
@@ -111,13 +116,14 @@ class Extend extends CI_Controller {
 	}
 
 	/**
-	 * install
+	 * Extend::install()
 	 *
 	 * Install plugin
 	 *
-	 * @param  string $name Plugin name
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @param	string	$name	Plugin name
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function install($name)
 	{
@@ -148,16 +154,18 @@ class Extend extends CI_Controller {
 	}
 
 	/**
-	 * remove
+	 * Extend::remove()
 	 *
 	 * Uninstall Extends.
 	 *
-	 * @param  string $name Plugin name
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @param	string	$name	Plugin name
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function remove($name)
-	{	 $name = str_replace(array('../', '..'), '', $name);
+	{
+		$name = str_replace(array('../', '..'), '', $name);
 		$this->load->extention($name);
 		$this->$name->uninstall();
 
@@ -168,13 +176,14 @@ class Extend extends CI_Controller {
 	}
 
 	/**
-	 * turn_on
+	 * Extend::turn_on()
 	 *
 	 * Activate Plugin
 	 *
-	 * @param  string $name Plugin name
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @param	string	$name	Plugin name
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function turn_on($name)
 	{
@@ -185,13 +194,14 @@ class Extend extends CI_Controller {
 	}
 
 	/**
-	 * turn_off
+	 * Extend::turn_off()
 	 *
 	 * Deactivate Plugins
 	 *
-	 * @param  string $name Plugin name
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @param	string	$name	Plugin name
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function turn_off($name)
 	{
@@ -202,12 +212,13 @@ class Extend extends CI_Controller {
 	}
 
 	/**
-	 * _update_cache
+	 * Extend::_update_cache()
 	 *
 	 * Update Cache file
 	 *
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	private
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	private function _update_cache()
 	{
@@ -235,12 +246,13 @@ class Extend extends CI_Controller {
 	}
 
 	/**
-	 * _get_installed_plugins
+	 * Extend::_get_installed_plugins()
 	 *
 	 * Get Installed plugins
 	 *
-	 * @author Matthew Glinski
-	 * @return array Installed Plugins
+	 * @access	private
+	 * @author	Matthew Glinski
+	 * @return	array	Installed Plugins
 	 */
 	private function _get_installed_plugins()
 	{
@@ -259,12 +271,13 @@ class Extend extends CI_Controller {
 	}
 
 	/**
-	 * _get_not_installed_plugins
+	 * Extend::_get_not_installed_plugins()
 	 *
 	 * Get not installed plugins
 	 *
-	 * @author Matthew Glinski
-	 * @return array Not installed plugins
+	 * @access	private
+	 * @author	Matthew Glinski
+	 * @return	array	Not installed plugins
 	 */
 	private function _get_not_installed_plugins()
 	{

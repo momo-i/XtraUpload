@@ -28,6 +28,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class User extends CI_Controller {
 
+	/**
+	 * Constructor
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -36,6 +39,14 @@ class User extends CI_Controller {
 		$this->load->helper('form');
 	}
 
+	/**
+	 * User::index()
+	 *
+	 * If user does not login, redirect User::login()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		if($this->session->userdata('id'))
@@ -48,11 +59,27 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::forgot()
+	 *
+	 * Redirect User::forgot_password()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function forgot()
 	{
 		redirect('forgot_password');
 	}
 
+	/**
+	 * User::compare()
+	 *
+	 * Show user package comparison
+	 *
+	 * @access	public
+	 * @return 	void
+	 */
 	public function compare()
 	{
 		$data['group1'] = $this->db->get_where('groups', array('id' => 1))->row();
@@ -61,6 +88,14 @@ class User extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * User::register()
+	 *
+	 * User register page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function register()
 	{
 		if($this->db->get_where('groups', array('id !=' => 2, 'id !=' => 1, 'status' => '1'))->num_rows() == 0)
@@ -155,6 +190,14 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::login()
+	 *
+	 * User login
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function login()
 	{
 		//$this->output->cache(60);
@@ -193,6 +236,14 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::pay_cancel()
+	 *
+	 * Cancel pay
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function pay_cancel()
 	{
 		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Payment Canceled')));
@@ -200,6 +251,14 @@ class User extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * User::pay_complete()
+	 *
+	 * Payment compelate page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function pay_complete()
 	{
 		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Payment Processing')));
@@ -207,6 +266,16 @@ class User extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * User::pay_new()
+	 *
+	 * New payment
+	 *
+	 * @access	public
+	 * @param	int		$id			User ID
+	 * @param	int		$gate_id	Gateway ID
+	 * @return	void
+	 */
 	public function pay_new($id='', $gate_id='')
 	{
 		if(intval($id) == 0 or intval($gate_id) == 0)
@@ -344,6 +413,14 @@ class User extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * User::manage()
+	 *
+	 * User management
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function manage()
 	{
 		if(!$this->session->userdata('id'))
@@ -405,6 +482,15 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::files()
+	 *
+	 * User file page
+	 *
+	 * @access	public
+	 * @param	string	$user	Username
+	 * @return	void
+	 */
 	public function files($user)
 	{
 		$query = $this->db->get_where('users', array('username' => $user));
@@ -446,6 +532,14 @@ class User extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * User::change_password()
+	 *
+	 * Change user password page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function change_password()
 	{
 		if(!$this->session->userdata('id'))
@@ -505,6 +599,14 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::forgot_password()
+	 *
+	 * Password forgot page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function forgot_password()
 	{
 		$config = array(
@@ -569,12 +671,29 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::logout()
+	 *
+	 * Logout XtraUpload
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function logout()
 	{
 		$this->users->user_logout();
 		redirect('home');
 	}
 
+	/**
+	 * User::profile()
+	 *
+	 * Show user profile page
+	 *
+	 * @access	public
+	 * @param	string	$uname	Username
+	 * @return	void
+	 */
 	public function profile($uname)
 	{
 		$this->load->helper(array('string', 'text'));
@@ -584,6 +703,15 @@ class User extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * User::username_check
+	 *
+	 * Check username callback
+	 *
+	 * @access	public
+	 * @param	string	$str	Username
+	 * @return	bool	true|false
+	 */
 	public function username_check($str)
 	{
 		$query = $this->db->get_where('users',array('username' => $str));
@@ -599,21 +727,39 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::username_check_forgot()
+	 *
+	 * Check username callback on forgot page
+	 *
+	 * @access	public
+	 * @param	string	$str	Username
+	 * @return	bool	true|false
+	 */
 	public function username_check_forgot($str)
 	{
 		$query = $this->db->get_where('users',array('username' => $str));
 		$num = $query->num_rows();
 		if($num == 1)
 		{
-			return true;
+			return TRUE;
 		}
 		else
 		{
 			$this->form_validation->set_message('username_check_forgot', lang('That username does not exist in our records'));
-			return false;
+			return FALSE;
 		}
 	}
 
+	/**
+	 * User::email_check()
+	 *
+	 * Check email address callback
+	 *
+	 * @access	public
+	 * @param	string	$str	Email address
+	 * @return	bool	true|false
+	 */
 	public function email_check($str)
 	{
 		$query = $this->db->get_where('users',array('email' => $str));
@@ -629,6 +775,15 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::email_check_forgot()
+	 *
+	 * Check email address function on forgot page
+	 *
+	 * @access	public
+	 * @param	string	$str	Email address
+	 * @return	bool	true|false
+	 */
 	public function email_check_forgot($str)
 	{
 		$query = $this->db->get_where('users',array('email' => $str));
@@ -644,6 +799,15 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::password_check()
+	 *
+	 * Check password function
+	 *
+	 * @access	public
+	 * @param	string	$str	Password
+	 * @return	bool	true|false
+	 */
 	public function password_check($str)
 	{
 		$data =  array(
@@ -664,6 +828,14 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::_login_submit()
+	 *
+	 * Login return page
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _login_submit()
 	{
 		if($this->users->process_login($this->input->post('username'), $this->input->post('password')))
@@ -685,10 +857,17 @@ class User extends CI_Controller {
 			$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Login')));
 			$this->load->view($this->startup->skin.'/user/login');
 			$this->load->view($this->startup->skin.'/footer');
-			return false;
 		}
 	}
 
+	/**
+	 * User::_register_submit()
+	 *
+	 * Register process
+	 *
+	 * @access	public
+	 * @return	bool	true|false
+	 */
 	private function _register_submit()
 	{
 		$data = array(
@@ -733,6 +912,14 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::_user_update()
+	 *
+	 * User update process
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _user_update()
 	{
 		if(isset($_FILES['avitar']['name']) and $_FILES['avitar']['name'] != '')
@@ -762,6 +949,14 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::_check_user()
+	 *
+	 * Check user
+	 *
+	 * @access	private
+	 * @return	bool	true|false
+	 */
 	private function _check_user()
 	{
 		$query = $this->db->get_where('users',array('username' => $this->input->post('username'), 'email' => $this->input->post('email')));
@@ -776,6 +971,14 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::_password_update()
+	 *
+	 * Password update process
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _password_update()
 	{
 		$data = array(
@@ -800,6 +1003,14 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::_password_forgot()
+	 *
+	 * Password check process
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	private function _password_forgot()
 	{
 		$this->load->library('email');
@@ -844,6 +1055,14 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::_get_captcha()
+	 *
+	 * Get captcha
+	 *
+	 * @access	private
+	 * @return	string	HTML tag
+	 */
 	private function _get_captcha()
 	{
 		$this->load->helper('captcha');
@@ -872,6 +1091,14 @@ class User extends CI_Controller {
 		return $cap['image'];
 	}
 
+	/**
+	 * User::check_user()
+	 *
+	 * Check user
+	 *
+	 * @access	public
+	 * @return	bool	true|false
+	 */
 	public function check_user()
 	{
 		$query = $this->db->get_where('users', array('username' => $this->input->post('username')));

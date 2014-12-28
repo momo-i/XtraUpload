@@ -33,8 +33,10 @@ class Email extends CI_Controller {
 	/**
 	 * Constructor
 	 *
-	 * @see    Admin_access
-	 * @author Matthew Glinski
+	 * @access	public
+	 * @see		Admin_access
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function __construct()
 	{
@@ -43,12 +45,13 @@ class Email extends CI_Controller {
 	}
 
 	/**
-	 * index
+	 * Email::index()
 	 *
 	 * Redirect email view
 	 *
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function index()
 	{
@@ -56,12 +59,13 @@ class Email extends CI_Controller {
 	}
 
 	/**
-	 * view
+	 * Email::view()
 	 *
 	 * mass email view
 	 *
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function view()
 	{
@@ -77,12 +81,13 @@ class Email extends CI_Controller {
 	}
 
 	/**
-	 * send
+	 * Email::send()
 	 *
 	 * Send mail
 	 *
-	 * @author Matthew Glinski
-	 * @return void
+	 * @access	public
+	 * @author	Matthew Glinski
+	 * @return	void
 	 */
 	public function send()
 	{
