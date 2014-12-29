@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author		Matthew Glinski
  * @link		http://xtrafile.com/docs/pages/files
  */
-class CI_Filedownload {
+class XU_Filedownload {
 
 	// Public Vars
 	public $file = null;
