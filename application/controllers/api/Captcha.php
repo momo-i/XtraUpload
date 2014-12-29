@@ -28,16 +28,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Captcha extends CI_Controller {
 
+	/**
+	 * Constructor
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 	}
 
+	/**
+	 * Captcha::index()
+	 *
+	 * Nothing to do.
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
-		return;
 	}
 
+	/**
+	 * Captcha::get()
+	 *
+	 * Get captcha code
+	 *
+	 * @access	public
+	 * @param	string	$old	Old captcha? not use in this function
+	 * @return	void
+	 */
 	public function get($old=null)
 	{
 		if($this->session->flashdata('captcha'))
@@ -52,6 +71,14 @@ class Captcha extends CI_Controller {
 		echo $captcha;
 	}
 
+	/**
+	 * Captcha::_get_captcha()
+	 *
+	 * Captcha creation
+	 *
+	 * @access	private
+	 * @return	string	Captcha code
+	 */
 	private function _get_captcha()
 	{
 		$this->load->helper('captcha');
