@@ -29,12 +29,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends CI_Controller {
 
 	/**
-	 * Home()
+	 * Constructor
 	 *
 	 * The home page controller constructor
 	 *
-	 * @access  public
-	 * @return  none
+	 * @access	public
+	 * @return	void
 	 */
 	public function __construct()
 	{
@@ -44,15 +44,13 @@ class Home extends CI_Controller {
 		$this->load->helper('date');
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * Home->index()
+	 * Home::index()
 	 *
 	 * The home page for XtraUpload, containing the flash uploader
 	 *
-	 * @access  public
-	 * @return  none
+	 * @access	public
+	 * @return	void
 	 */
 	public function index()
 	{

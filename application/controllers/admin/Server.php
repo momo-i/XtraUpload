@@ -28,6 +28,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Server extends CI_Controller {
 
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @see		Admin_access
+	 * @see		Server_db
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -35,11 +43,27 @@ class Server extends CI_Controller {
 		$this->load->model('server/server_db');
 	}
 
+	/**
+	 * Server::index()
+	 *
+	 * Redirect Server::view
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		redirect('admin/server/view');
 	}
 
+	/**
+	 * Server::view()
+	 *
+	 * Show server management page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function view()
 	{
 		$this->load->helper('string');
@@ -57,23 +81,31 @@ class Server extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Server::add()
+	 *
+	 * Add server
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function add()
 	{
 		if($this->input->post('valid'))
 		{
-			unset($_POST['valid']);
+			unset($this->input->post('valid'));
 
-			if( ! isset($_POST['status']))
+			if( ! isset($this->input->post('status')))
 			{
-				$_POST['status'] = 0;
+				$this->input->post('status') = 0;
 			}
 
-			if(substr($_POST['url'], -1) != '/')
+			if(substr($this->input->post('url'), -1) != '/')
 			{
-				$_POST['url'] .= '/';
+				$this->input->post('url') .= '/';
 			}
 
-			$id = $this->server_db->add_server($_POST);
+			$id = $this->server_db->add_server($this->input->post());
 
 			$this->session->set_flashdata('msg', sprintf(lang('New Server Installed, %s'), anchor('admin/server/install/'.$id, lang('FTP Install this server?'))));
 
@@ -85,23 +117,32 @@ class Server extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Server::edit()
+	 *
+	 * Edit server
+	 *
+	 * @access	public
+	 * @param	int		$id	Server ID
+	 * @return	void
+	 */
 	public function edit($id)
 	{
 		if($this->input->post('valid'))
 		{
-			unset($_POST['valid']);
+			unset($this->input->post('valid'));
 
-			if( ! isset($_POST['status']))
+			if( ! isset($this->input->post('status')))
 			{
-				$_POST['status'] = 0;
+				$this->input->post('status') = 0;
 			}
 
-			if(substr($_POST['url'], -1) != '/')
+			if(substr($this->input->post('url'), -1) != '/')
 			{
-				$_POST['url'] .= '/';
+				$this->input->post('url') .= '/';
 			}
 
-			$this->server_db->edit_server($id, $_POST);
+			$this->server_db->edit_server($id, $this->input->post());
 
 			$this->session->set_flashdata('msg', lang('Server Edited'));
 			redirect('admin/server/view');
@@ -115,6 +156,15 @@ class Server extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Server::install()
+	 *
+	 * Install remote server
+	 *
+	 * @access	public
+	 * @param	int		$id	Server ID
+	 * @return	void
+	 */
 	public function install($id='')
 	{
 		if(empty($id))
@@ -212,7 +262,7 @@ class Server extends CI_Controller {
 				$db['default']['hostname'] = $ip;
 				file_put_contents(
 					'server_package/system/application/config/database.php',
-					'<'.'?php'."\n".'$active_group = "default";'."\n".'$active_record = TRUE;'."\n".'$db = '.var_export($db, true).';'."\n".'?'.'>'
+					'<'.'?php'."\n".'$active_group = "default";'."\n".'$query_builder = TRUE;'."\n".'$db = '.var_export($db, true).';'."\n".'?'.'>'
 				);
 			}
 			else
@@ -263,6 +313,15 @@ class Server extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Server::turn_on()
+	 *
+	 * Turn on server
+	 *
+	 * @access	public
+	 * @param	int		$id	Server ID
+	 * @return	void
+	 */
 	public function turn_on($id)
 	{
 		$this->session->set_flashdata('msg', lang('Server turned On'));
@@ -270,6 +329,15 @@ class Server extends CI_Controller {
 		redirect('admin/server/view');
 	}
 
+	/**
+	 * Server::turn_off()
+	 *
+	 * Turn off server
+	 *
+	 * @access	public
+	 * @param	int		$id	Server ID
+	 * @return	void
+	 */
 	public function turn_off($id)
 	{
 		$this->session->set_flashdata('msg', lang('Server turned Off'));
@@ -277,6 +345,15 @@ class Server extends CI_Controller {
 		redirect('admin/server/view');
 	}
 
+	/**
+	 * Server::delete()
+	 *
+	 * Delete server
+	 *
+	 * @access	public
+	 * @param	int		$id	Server ID
+	 * @return	void
+	 */
 	public function delete($id)
 	{
 		$this->session->set_flashdata('msg', lang('Server removed'));

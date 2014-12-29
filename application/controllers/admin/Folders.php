@@ -28,6 +28,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Folders extends CI_Controller {
 
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @see		Admin_access
+	 * @see		Folders_db
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -35,11 +43,27 @@ class Folders extends CI_Controller {
 		$this->load->model('folders/folders_db');
 	}
 
+	/**
+	 * Folders::index()
+	 *
+	 * Redirect Folders::view()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		redirect('admin/folders/view');
 	}
 
+	/**
+	 * Folders::view()
+	 *
+	 * Show folder page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function view()
 	{
 		$data['flash_message'] = '';
@@ -65,6 +89,13 @@ class Folders extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Folders::search()
+	 *
+	 * @access	public
+	 * @param	string	$query	Search string
+	 * @return	void
+	 */
 	public function search($query='')
 	{
 		$data['flash_message'] = '';
@@ -98,6 +129,15 @@ class Folders extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Folders::delete()
+	 *
+	 * Delete folder
+	 *
+	 * @access	public
+	 * @param	int		$id	Folder ID
+	 * @return	void
+	 */
 	public function delete($id)
 	{
 		if(intval($id) != 0))

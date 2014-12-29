@@ -28,27 +28,66 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Gateways extends CI_Controller {
 
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @see		Admin_access
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('admin_access');
 	}
 
+	/**
+	 * Gateways::index()
+	 *
+	 * Redirect Gateways::view()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		redirect('admin/gateways/view');
 	}
 
+	/**
+	 * Gateways::manage()
+	 *
+	 * Redirect Gateways::view()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function manage()
 	{
 		redirect('admin/gateways/view');
 	}
 
+	/**
+	 * Gateways::home()
+	 *
+	 * Redirect Gateways::view()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function home()
 	{
 		redirect('admin/gateways/view');
 	}
 
+	/**
+	 * Gateways::view()
+	 *
+	 * Show payment gateways page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function view()
 	{
 		$this->load->library('pagination');
@@ -67,6 +106,15 @@ class Gateways extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Gateways::edit()
+	 *
+	 * Show edit gateways page
+	 *
+	 * @access	public
+	 * @param	int		$id	Gateways ID
+	 * @return	void
+	 */
 	public function edit($id)
 	{
 		$data['flash_message'] = '';
@@ -81,15 +129,14 @@ class Gateways extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * update()
+	 * Gateways::update()
 	 *
 	 * Process a new config object save request
 	 *
-	 * @access  public
-	 * @return  none
+	 * @access	public
+	 * @param	int		$id	Gateways ID
+	 * @return	void
 	 */
 	public function update($id)
 	{
@@ -115,6 +162,15 @@ class Gateways extends CI_Controller {
 		}
 	}
 
+	/**
+	 * Gateways::set_default()
+	 *
+	 * Set default payment gateway
+	 *
+	 * @access	public
+	 * @param	int		$id	Gateways ID
+	 * @return	void
+	 */
 	public function set_default($id)
 	{
 		// If the user has posted new values
@@ -128,6 +184,15 @@ class Gateways extends CI_Controller {
 		redirect('admin/gateways/view');
 	}
 
+	/**
+	 * Gateways::turn_on()
+	 *
+	 * Turn on gateway
+	 *
+	 * @access	public
+	 * @param	int		$id	Gateways ID
+	 * @return	void
+	 */
 	public function turn_on($id)
 	{
 		$this->db->where('id', $id);
@@ -137,6 +202,15 @@ class Gateways extends CI_Controller {
 		redirect('admin/gateways/view');
 	}
 
+	/**
+	 * Gateways::turn_off()
+	 *
+	 * Turn off gateway
+	 *
+	 * @access	public
+	 * @param	int		$id	Gateway ID
+	 * @return	void
+	 */
 	public function turn_off($id)
 	{
 		$this->db->where('id', $id);

@@ -28,17 +28,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Menu_shortcuts extends CI_Controller {
 
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @see		Admin_menu_shortcuts_db
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('admin/menu_shortcuts/admin_menu_shortcuts_db');
 	}
 
+	/**
+	 * Menu_shortcuts::index()
+	 *
+	 * Redirect Menu_shortcuts::view()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		redirect('admin/menu_shortcuts/view');
 	}
 
+	/**
+	 * Menu_shortcuts::view()
+	 *
+	 * Show menu shortcut page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function view()
 	{
 		$this->load->library('pagination');
@@ -70,11 +93,20 @@ class Menu_shortcuts extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Menu_shortcuts::edit()
+	 *
+	 * Show shortcut edit page, and edit shortcut
+	 *
+	 * @access	public
+	 * @param	int		$id	Shortcut ID
+	 * @return	void
+	 */
 	public function edit($id)
 	{
 		if($this->input->post('status'))
 		{
-			$this->admin_menu_shortcuts_db->edit_shortcut($id, $_POST);
+			$this->admin_menu_shortcuts_db->edit_shortcut($id, $this->input->post());
 
 			$this->session->set_flashdata('msg', lang('Shortcut Edited'));
 			redirect('admin/menu_shortcuts/view');
@@ -89,11 +121,21 @@ class Menu_shortcuts extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Menu_shortcuts::add()
+	 *
+	 * Show shortcut add page, and add shortcut
+	 *
+	 * @access	public
+	 * @param	string	$link	Shortcut link
+	 * @param	strin	$title	Shortcut title
+	 * @return	void
+	 */
 	public function add($link= '', $title='')
 	{
 		if($this->input->post('link'))
 		{
-			$this->admin_menu_shortcuts_db->add_shortcut($_POST);
+			$this->admin_menu_shortcuts_db->add_shortcut($this->input->post());
 
 			$this->session->set_flashdata('msg', lang('New Shortcut Added'));
 			redirect('admin/menu_shortcuts/view');
@@ -119,6 +161,15 @@ class Menu_shortcuts extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Menu_shortcuts::delete()
+	 *
+	 * Delete shortcut
+	 *
+	 * @access	public
+	 * @param	int		$id	Shortcut ID
+	 * @return	void
+	 */
 	public function delete($id)
 	{
 		$this->admin_menu_shortcuts_db->delete_shortcut($id);
@@ -126,6 +177,15 @@ class Menu_shortcuts extends CI_Controller {
 		redirect('admin/menu_shortcuts/view');
 	}
 
+	/**
+	 * Menu_shortcuts::turn_off()
+	 *
+	 * Turn off shortcut
+	 *
+	 * @access	public
+	 * @param	int		$id	Shortcut ID
+	 * @return	void
+	 */
 	public function turn_off($id)
 	{
 		$this->admin_menu_shortcuts_db->edit_shortcut($id, array('status' => 0));
@@ -133,6 +193,15 @@ class Menu_shortcuts extends CI_Controller {
 		redirect('admin/menu_shortcuts/view');
 	}
 
+	/**
+	 * Menu_shortcuts::turn_on()
+	 *
+	 * Turn on shortcut
+	 *
+	 * @access	public
+	 * @param	int		$id	Shortcut ID
+	 * @return	void
+	 */
 	public function turn_on($id)
 	{
 		$this->admin_menu_shortcuts_db->edit_shortcut($id, array('status' => 1));
