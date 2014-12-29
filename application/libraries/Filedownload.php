@@ -54,7 +54,7 @@ class XU_Filedownload {
 	function __construct()
 	{
 		$this->CI =& get_instance();
-		log_message('debug', "Download Class Initialized");
+		log_message('debug', "XtraUpload Download Class Initialized");
 	}
 
 	/**

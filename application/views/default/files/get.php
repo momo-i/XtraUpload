@@ -138,7 +138,7 @@ if($this->startup->site_config->show_preview && $this->xu_api->embed->get_embed_
             <input type="hidden" name="pass" value="<?php echo $this->input->post('pass'); ?>">
             <input type="hidden" name="waited" value="1">
             <span id="waitL">
-              <?php printf(lang('Please wait %s more seconds to download.', '<span id="waittime">'.$sec.'</span>'); ?><br>
+              <?php printf(lang('Please wait %s more seconds to download.'), '<span id="waittime">'.$sec.'</span>'); ?><br>
             </span>
             <span style="display:none" id="captcha">
 <?php if($captcha_bool): ?>

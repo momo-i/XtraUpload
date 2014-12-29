@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XtraUpload 3.0.0 RC4\n"
 "Report-Msgid-Bugs-To: translator at xtrafile.com\n"
-"POT-Creation-Date: 2014-12-26 14:47+0900\n"
-"PO-Revision-Date: 2014-12-26 14:47+0900\n"
+"POT-Creation-Date: 2014-12-29 23:05+0900\n"
+"PO-Revision-Date: 2014-12-29 23:05+0900\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: en_GB\n"
@@ -118,13 +118,13 @@ msgid "Show About Messages"
 msgstr "Show About Messages"
 
 #: ../../../application/models/Users.php:270
-#: ../../../application/controllers/admin/Group.php:235
+#: ../../../application/controllers/admin/Group.php:326
 #: ../../../application/views/default/user/compare.php:172
 msgid "Daily"
 msgstr "Daily"
 
 #: ../../../application/models/Users.php:271
-#: ../../../application/controllers/admin/Group.php:236
+#: ../../../application/controllers/admin/Group.php:327
 #: ../../../application/views/default/admin/stats.php:15
 #: ../../../application/views/default/admin/stats.php:21
 #: ../../../application/views/default/admin/stats.php:22
@@ -135,19 +135,19 @@ msgid "Weekly"
 msgstr "Weekly"
 
 #: ../../../application/models/Users.php:272
-#: ../../../application/controllers/admin/Group.php:237
+#: ../../../application/controllers/admin/Group.php:328
 #: ../../../application/views/default/user/compare.php:174
 msgid "Monthly"
 msgstr "Monthly"
 
 #: ../../../application/models/Users.php:273
-#: ../../../application/controllers/admin/Group.php:238
+#: ../../../application/controllers/admin/Group.php:329
 #: ../../../application/views/default/user/compare.php:175
 msgid "Yearly"
 msgstr "Yearly"
 
 #: ../../../application/models/Users.php:274
-#: ../../../application/controllers/admin/Group.php:239
+#: ../../../application/controllers/admin/Group.php:330
 msgid "Bi-Yearly"
 msgstr "Bi-Yearly"
 
@@ -159,7 +159,7 @@ msgstr "New user at %s!"
 
 #: ../../../application/models/Users.php:283
 #: ../../../application/models/Users.php:326
-#: ../../../application/controllers/User.php:818
+#: ../../../application/controllers/User.php:1029
 #, php-format
 msgid "Hello %s,"
 msgstr "Hello %s,"
@@ -175,7 +175,7 @@ msgid "Here are your account details should you ever need them:"
 msgstr "Here are your account details should you ever need them:"
 
 #: ../../../application/models/Users.php:287
-#: ../../../application/controllers/User.php:822
+#: ../../../application/controllers/User.php:1033
 #: ../../../application/views/default/user/profile/view.php:21
 #, php-format
 msgid "Username: %s"
@@ -203,7 +203,7 @@ msgstr "Thanks for joining our community!"
 
 #: ../../../application/models/Users.php:303
 #: ../../../application/models/Users.php:331
-#: ../../../application/controllers/User.php:826
+#: ../../../application/controllers/User.php:1037
 #, php-format
 msgid "%s Administration"
 msgstr "%s Administration"
@@ -233,7 +233,7 @@ msgstr "Example"
 msgid "Example Manage"
 msgstr "Example Manage"
 
-#: ../../../application/core/XU_Lang.php:82
+#: ../../../application/core/XU_Lang.php:91
 msgid ""
 "Unable to determine the database settings based on the connection string you "
 "submitted."
@@ -241,87 +241,87 @@ msgstr ""
 "Unable to determine the database settings based on the connection string you "
 "submitted."
 
-#: ../../../application/core/XU_Lang.php:83
+#: ../../../application/core/XU_Lang.php:92
 msgid "Unable to connect to your database server using the provided settings."
 msgstr "Unable to connect to your database server using the provided settings."
 
-#: ../../../application/core/XU_Lang.php:84
+#: ../../../application/core/XU_Lang.php:93
 msgid "The query you submitted is not valid."
 msgstr "The query you submitted is not valid."
 
-#: ../../../application/core/XU_Lang.php:85
+#: ../../../application/core/XU_Lang.php:94
 msgid "You must set the database table to be used with your query."
 msgstr "You must set the database table to be used with your query."
 
-#: ../../../application/core/XU_Lang.php:86
+#: ../../../application/core/XU_Lang.php:95
 msgid "You must use the \"set\" method to update an entry."
 msgstr "You must use the \"set\" method to update an entry."
 
-#: ../../../application/core/XU_Lang.php:87
+#: ../../../application/core/XU_Lang.php:96
 msgid "You must specify an index to match on for batch updates."
 msgstr "You must specify an index to match on for batch updates."
 
-#: ../../../application/core/XU_Lang.php:88
+#: ../../../application/core/XU_Lang.php:97
 msgid ""
 "One or more rows submitted for batch updating is missing the specified index."
 msgstr ""
 "One or more rows submitted for batch updating is missing the specified index."
 
-#: ../../../application/core/XU_Lang.php:89
+#: ../../../application/core/XU_Lang.php:98
 msgid "Updates are not allowed unless they contain a \"where\" clause."
 msgstr "Updates are not allowed unless they contain a \"where\" clause."
 
-#: ../../../application/core/XU_Lang.php:90
+#: ../../../application/core/XU_Lang.php:99
 msgid ""
 "Deletes are not allowed unless they contain a \"where\" or \"like\" clause."
 msgstr ""
 "Deletes are not allowed unless they contain a \"where\" or \"like\" clause."
 
-#: ../../../application/core/XU_Lang.php:91
+#: ../../../application/core/XU_Lang.php:100
 msgid "To fetch fields requires the name of the table as a parameter."
 msgstr "To fetch fields requires the name of the table as a parameter."
 
-#: ../../../application/core/XU_Lang.php:92
+#: ../../../application/core/XU_Lang.php:101
 msgid "This feature is not available for the database you are using."
 msgstr "This feature is not available for the database you are using."
 
-#: ../../../application/core/XU_Lang.php:93
+#: ../../../application/core/XU_Lang.php:102
 msgid "Transaction failure: Rollback performed."
 msgstr "Transaction failure: Rollback performed."
 
-#: ../../../application/core/XU_Lang.php:94
+#: ../../../application/core/XU_Lang.php:103
 msgid "Unable to drop the specified database."
 msgstr "Unable to drop the specified database."
 
-#: ../../../application/core/XU_Lang.php:95
+#: ../../../application/core/XU_Lang.php:104
 msgid "Unsupported feature of the database platform you are using."
 msgstr "Unsupported feature of the database platform you are using."
 
-#: ../../../application/core/XU_Lang.php:96
+#: ../../../application/core/XU_Lang.php:105
 msgid "The file compression format you chose is not supported by your server."
 msgstr "The file compression format you chose is not supported by your server."
 
-#: ../../../application/core/XU_Lang.php:97
+#: ../../../application/core/XU_Lang.php:106
 msgid "Unable to write data to the file path you have submitted."
 msgstr "Unable to write data to the file path you have submitted."
 
-#: ../../../application/core/XU_Lang.php:98
+#: ../../../application/core/XU_Lang.php:107
 msgid "The cache path you submitted is not valid or writable."
 msgstr "The cache path you submitted is not valid or writable."
 
-#: ../../../application/core/XU_Lang.php:99
+#: ../../../application/core/XU_Lang.php:108
 msgid "A table name is required for that operation."
 msgstr "A table name is required for that operation."
 
-#: ../../../application/core/XU_Lang.php:100
+#: ../../../application/core/XU_Lang.php:109
 msgid "A column name is required for that operation."
 msgstr "A column name is required for that operation."
 
-#: ../../../application/core/XU_Lang.php:101
+#: ../../../application/core/XU_Lang.php:110
 msgid "A column definition is required for that operation."
 msgstr "A column definition is required for that operation."
 
-#: ../../../application/core/XU_Lang.php:102
+#: ../../../application/core/XU_Lang.php:111
 msgid "A Database Error Occurred"
 msgstr "A Database Error Occurred"
 
@@ -386,7 +386,7 @@ msgstr ""
 "Unable to move the file. Please make sure the destination directory exists."
 
 #: ../../../application/libraries/payment/PaymentGateway.php:143
-#: ../../../application/controllers/User.php:342
+#: ../../../application/controllers/User.php:411
 msgid "Make Payment"
 msgstr "Make Payment"
 
@@ -471,7 +471,7 @@ msgid "The upload destination folder does not appear to be writable."
 msgstr "The upload destination folder does not appear to be writable."
 
 #: ../../../application/libraries/Startup.php:266
-#: ../../../application/controllers/admin/Home.php:83
+#: ../../../application/controllers/admin/Home.php:81
 #: ../../../application/controllers/Home.php:83
 #: ../../../application/views/default/home.php:7
 #: ../../../application/views/default/home.php:19
@@ -479,7 +479,7 @@ msgid "Home"
 msgstr "Home"
 
 #: ../../../application/libraries/Startup.php:271
-#: ../../../application/controllers/Upload.php:50
+#: ../../../application/controllers/Upload.php:69
 msgid "URL Upload"
 msgstr "URL Upload"
 
@@ -561,7 +561,7 @@ msgid "Mass Emailer"
 msgstr "Mass Emailer"
 
 #: ../../../application/libraries/Startup.php:306
-#: ../../../application/controllers/admin/Stats.php:44
+#: ../../../application/controllers/admin/Stats.php:67
 #: ../../../application/views/default/admin/stats.php:4
 msgid "Site Stats"
 msgstr "Site Stats"
@@ -587,7 +587,7 @@ msgid "Upload"
 msgstr "Upload"
 
 #: ../../../application/libraries/Startup.php:345
-#: ../../../application/controllers/Folder.php:64
+#: ../../../application/controllers/Folder.php:73
 #: ../../../application/views/default/folder/view.php:3
 msgid "File Folder"
 msgstr "File Folder"
@@ -759,24 +759,24 @@ msgstr "No Location."
 msgid "URL parse failed. "
 msgstr "URL parse failed. "
 
-#: ../../../application/controllers/User.php:59
+#: ../../../application/controllers/User.php:86
 #: ../../../application/views/default/user/compare.php:3
 msgid "User Package Comparison"
 msgstr "User Package Comparison"
 
-#: ../../../application/controllers/User.php:69
-#: ../../../application/controllers/User.php:140
-#: ../../../application/controllers/User.php:152
-#: ../../../application/controllers/User.php:725
+#: ../../../application/controllers/User.php:104
+#: ../../../application/controllers/User.php:175
+#: ../../../application/controllers/User.php:187
+#: ../../../application/controllers/User.php:904
 msgid "Register"
 msgstr "Register"
 
-#: ../../../application/controllers/User.php:95
-#: ../../../application/controllers/User.php:164
-#: ../../../application/controllers/User.php:368
-#: ../../../application/controllers/User.php:513
-#: ../../../application/controllers/admin/User.php:188
-#: ../../../application/controllers/admin/User.php:237
+#: ../../../application/controllers/User.php:130
+#: ../../../application/controllers/User.php:207
+#: ../../../application/controllers/User.php:445
+#: ../../../application/controllers/User.php:615
+#: ../../../application/controllers/admin/User.php:245
+#: ../../../application/controllers/admin/User.php:302
 #: ../../../application/views/default/admin/home.php:225
 #: ../../../application/views/default/admin/users/add.php:11
 #: ../../../application/views/default/admin/users/edit.php:11
@@ -786,11 +786,11 @@ msgstr "Register"
 msgid "Username"
 msgstr "Username"
 
-#: ../../../application/controllers/User.php:100
-#: ../../../application/controllers/User.php:169
-#: ../../../application/controllers/User.php:373
-#: ../../../application/controllers/admin/User.php:193
-#: ../../../application/controllers/admin/User.php:242
+#: ../../../application/controllers/User.php:135
+#: ../../../application/controllers/User.php:212
+#: ../../../application/controllers/User.php:450
+#: ../../../application/controllers/admin/User.php:250
+#: ../../../application/controllers/admin/User.php:307
 #: ../../../application/views/default/files/manage.php:78
 #: ../../../application/views/default/home.php:87
 #: ../../../application/views/default/admin/users/add.php:26
@@ -799,40 +799,40 @@ msgstr "Username"
 msgid "Password"
 msgstr "Password"
 
-#: ../../../application/controllers/User.php:105
+#: ../../../application/controllers/User.php:140
 #: ../../../application/views/default/user/register/begin.php:100
 #: ../../../application/views/install/step4.php:61
 msgid "Password Confirmation"
 msgstr "Password Confirmation"
 
-#: ../../../application/controllers/User.php:110
-#: ../../../application/controllers/User.php:518
+#: ../../../application/controllers/User.php:145
+#: ../../../application/controllers/User.php:620
 #: ../../../application/views/default/user/forgot.php:12
 #: ../../../application/views/default/user/register/begin.php:94
 msgid "Email Address"
 msgstr "Email Address"
 
-#: ../../../application/controllers/User.php:115
+#: ../../../application/controllers/User.php:150
 #: ../../../application/views/default/user/register/begin.php:96
 msgid "Email Address Confirmation"
 msgstr "Email Address Confirmation"
 
-#: ../../../application/controllers/User.php:136
+#: ../../../application/controllers/User.php:171
 msgid "The Captcha you submited was incorrect"
 msgstr "The Captcha you submited was incorrect"
 
-#: ../../../application/controllers/User.php:138
-#: ../../../application/controllers/User.php:180
-#: ../../../application/controllers/User.php:383
-#: ../../../application/controllers/User.php:480
-#: ../../../application/controllers/User.php:543
-#: ../../../application/controllers/admin/User.php:204
-#: ../../../application/controllers/admin/User.php:254
+#: ../../../application/controllers/User.php:173
+#: ../../../application/controllers/User.php:223
+#: ../../../application/controllers/User.php:460
+#: ../../../application/controllers/User.php:574
+#: ../../../application/controllers/User.php:645
+#: ../../../application/controllers/admin/User.php:261
+#: ../../../application/controllers/admin/User.php:319
 msgid "Error:"
 msgstr "Error:"
 
-#: ../../../application/controllers/User.php:186
-#: ../../../application/controllers/User.php:685
+#: ../../../application/controllers/User.php:229
+#: ../../../application/controllers/User.php:857
 #: ../../../application/views/style_vantage_green/menu.php:36
 #: ../../../application/views/tech_junkie/menu.php:36
 #: ../../../application/views/urban_artist/menu.php:35
@@ -846,22 +846,22 @@ msgstr "Error:"
 msgid "Login"
 msgstr "Login"
 
-#: ../../../application/controllers/User.php:198
+#: ../../../application/controllers/User.php:249
 msgid "Payment Canceled"
 msgstr "Payment Canceled"
 
-#: ../../../application/controllers/User.php:205
+#: ../../../application/controllers/User.php:264
 msgid "Payment Processing"
 msgstr "Payment Processing"
 
-#: ../../../application/controllers/User.php:264
-#: ../../../application/controllers/User.php:298
+#: ../../../application/controllers/User.php:333
+#: ../../../application/controllers/User.php:367
 msgid "Account Registration"
 msgstr "Account Registration"
 
-#: ../../../application/controllers/User.php:278
-#: ../../../application/controllers/User.php:310
-#: ../../../application/controllers/User.php:339
+#: ../../../application/controllers/User.php:347
+#: ../../../application/controllers/User.php:379
+#: ../../../application/controllers/User.php:408
 msgid ""
 "If you are not automatically redirected to payment website within 5 seconds,"
 "<br> click 'Make Payment' below to begin the payment procedure."
@@ -869,9 +869,9 @@ msgstr ""
 "If you are not automatically redirected to payment website within 5 seconds,"
 "<br> click 'Make Payment' below to begin the payment procedure."
 
-#: ../../../application/controllers/User.php:363
-#: ../../../application/controllers/admin/User.php:183
-#: ../../../application/controllers/admin/User.php:232
+#: ../../../application/controllers/User.php:440
+#: ../../../application/controllers/admin/User.php:240
+#: ../../../application/controllers/admin/User.php:297
 #: ../../../application/views/default/admin/users/add.php:13
 #: ../../../application/views/default/admin/users/edit.php:14
 #: ../../../application/views/default/admin/users/view.php:38
@@ -881,8 +881,8 @@ msgstr ""
 msgid "Email"
 msgstr "Email"
 
-#: ../../../application/controllers/User.php:388
-#: ../../../application/controllers/User.php:398
+#: ../../../application/controllers/User.php:465
+#: ../../../application/controllers/User.php:475
 #: ../../../application/views/style_vantage_green/menu.php:9
 #: ../../../application/views/tech_junkie/menu.php:9
 #: ../../../application/views/urban_artist/menu.php:8
@@ -894,33 +894,33 @@ msgstr "Email"
 msgid "Manage Account"
 msgstr "Manage Account"
 
-#: ../../../application/controllers/User.php:444
+#: ../../../application/controllers/User.php:530
 #: ../../../application/controllers/Files.php:488
 #: ../../../application/controllers/Files.php:517
 #: ../../../application/controllers/Files.php:554
 msgid "Manage Your Files"
 msgstr "Manage Your Files"
 
-#: ../../../application/controllers/User.php:458
+#: ../../../application/controllers/User.php:552
 #: ../../../application/views/default/user/password.php:17
 msgid "Old Password"
 msgstr "Old Password"
 
-#: ../../../application/controllers/User.php:463
+#: ../../../application/controllers/User.php:557
 #: ../../../application/views/default/admin/users/edit.php:28
 #: ../../../application/views/default/user/manage.php:19
 #: ../../../application/views/default/user/password.php:19
 msgid "New Password"
 msgstr "New Password"
 
-#: ../../../application/controllers/User.php:468
+#: ../../../application/controllers/User.php:562
 msgid "New Password Confirmation"
 msgstr "New Password Confirmation"
 
-#: ../../../application/controllers/User.php:486
-#: ../../../application/controllers/User.php:498
-#: ../../../application/controllers/User.php:790
-#: ../../../application/controllers/User.php:797
+#: ../../../application/controllers/User.php:580
+#: ../../../application/controllers/User.php:592
+#: ../../../application/controllers/User.php:993
+#: ../../../application/controllers/User.php:1000
 #: ../../../application/views/style_vantage_green/menu.php:14
 #: ../../../application/views/tech_junkie/menu.php:14
 #: ../../../application/views/urban_artist/menu.php:11
@@ -934,134 +934,134 @@ msgstr "New Password Confirmation"
 msgid "Change Password"
 msgstr "Change Password"
 
-#: ../../../application/controllers/User.php:539
+#: ../../../application/controllers/User.php:641
 msgid "No User is registered with that username/email address combination."
 msgstr "No User is registered with that username/email address combination."
 
-#: ../../../application/controllers/User.php:549
-#: ../../../application/controllers/User.php:562
-#: ../../../application/controllers/User.php:834
-#: ../../../application/controllers/User.php:841
+#: ../../../application/controllers/User.php:651
+#: ../../../application/controllers/User.php:664
+#: ../../../application/controllers/User.php:1045
+#: ../../../application/controllers/User.php:1052
 #: ../../../application/views/default/user/forgot.php:3
 msgid "Forgot Password"
 msgstr "Forgot Password"
 
-#: ../../../application/controllers/User.php:582
+#: ../../../application/controllers/User.php:701
 msgid "User Profile:"
 msgstr "User Profile:"
 
-#: ../../../application/controllers/User.php:593
+#: ../../../application/controllers/User.php:721
 msgid "The username you requested has already been taken"
 msgstr "The username you requested has already been taken"
 
-#: ../../../application/controllers/User.php:612
+#: ../../../application/controllers/User.php:749
 msgid "That username does not exist in our records"
 msgstr "That username does not exist in our records"
 
-#: ../../../application/controllers/User.php:623
+#: ../../../application/controllers/User.php:769
 msgid "The email address you supplied is already registered with us"
 msgstr "The email address you supplied is already registered with us"
 
-#: ../../../application/controllers/User.php:638
+#: ../../../application/controllers/User.php:793
 msgid "The email address you supplied is not registered with us."
 msgstr "The email address you supplied is not registered with us."
 
-#: ../../../application/controllers/User.php:658
+#: ../../../application/controllers/User.php:822
 msgid "The Old Password you supplied did not match our records"
 msgstr "The Old Password you supplied did not match our records"
 
-#: ../../../application/controllers/User.php:683
+#: ../../../application/controllers/User.php:855
 msgid "Login Failed, Please Try Again"
 msgstr "Login Failed, Please Try Again"
 
-#: ../../../application/controllers/User.php:755
-#: ../../../application/controllers/User.php:789
+#: ../../../application/controllers/User.php:942
+#: ../../../application/controllers/User.php:992
 msgid "User Modification Completed!"
 msgstr "User Modification Completed!"
 
-#: ../../../application/controllers/User.php:760
-#: ../../../application/controllers/User.php:796
+#: ../../../application/controllers/User.php:947
+#: ../../../application/controllers/User.php:999
 msgid "User Modification Failed:"
 msgstr "User Modification Failed:"
 
-#: ../../../application/controllers/User.php:814
+#: ../../../application/controllers/User.php:1025
 msgid "Support"
 msgstr "Support"
 
-#: ../../../application/controllers/User.php:817
+#: ../../../application/controllers/User.php:1028
 msgid "Password Reset Request"
 msgstr "Password Reset Request"
 
-#: ../../../application/controllers/User.php:819
+#: ../../../application/controllers/User.php:1030
 #, php-format
 msgid "You have requested that your password for %s be reset."
 msgstr "You have requested that your password for %s be reset."
 
-#: ../../../application/controllers/User.php:820
+#: ../../../application/controllers/User.php:1031
 msgid "Here is your new password:"
 msgstr "Here is your new password:"
 
-#: ../../../application/controllers/User.php:823
+#: ../../../application/controllers/User.php:1034
 #, php-format
 msgid "Password: %s"
 msgstr "Password: %s"
 
-#: ../../../application/controllers/User.php:825
+#: ../../../application/controllers/User.php:1036
 msgid "Thank You,"
 msgstr "Thank You,"
 
-#: ../../../application/controllers/User.php:833
-#: ../../../application/controllers/User.php:840
+#: ../../../application/controllers/User.php:1044
+#: ../../../application/controllers/User.php:1051
 msgid "New Password Sent!"
 msgstr "New Password Sent!"
 
-#: ../../../application/controllers/payment/Ipn.php:105
+#: ../../../application/controllers/payment/Ipn.php:117
 msgid "Processing..."
 msgstr "Processing..."
 
-#: ../../../application/controllers/Folder.php:74
-#: ../../../application/controllers/Folder.php:103
+#: ../../../application/controllers/Folder.php:91
+#: ../../../application/controllers/Folder.php:128
 msgid "Create File Folder"
 msgstr "Create File Folder"
 
-#: ../../../application/controllers/Folder.php:103
-#: ../../../application/controllers/Image.php:160
+#: ../../../application/controllers/Folder.php:128
+#: ../../../application/controllers/Image.php:241
 msgid "Done"
 msgstr "Done"
 
-#: ../../../application/controllers/admin/Extend.php:108
+#: ../../../application/controllers/admin/Extend.php:113
 #: ../../../application/views/default/admin/extend/view.php:3
 msgid "Plugin Manager"
 msgstr "Plugin Manager"
 
-#: ../../../application/controllers/admin/Extend.php:144
+#: ../../../application/controllers/admin/Extend.php:150
 #, php-format
 msgid "Plugin \"%s\" Installed"
 msgstr "Plugin \"%s\" Installed"
 
-#: ../../../application/controllers/admin/Extend.php:165
+#: ../../../application/controllers/admin/Extend.php:173
 #, php-format
 msgid "Plugin \"%s\" Uninstalled"
 msgstr "Plugin \"%s\" Uninstalled"
 
-#: ../../../application/controllers/admin/Extend.php:182
+#: ../../../application/controllers/admin/Extend.php:191
 #, php-format
 msgid "Plugin \"%s\" Activated"
 msgstr "Plugin \"%s\" Activated"
 
-#: ../../../application/controllers/admin/Extend.php:199
+#: ../../../application/controllers/admin/Extend.php:209
 #, php-format
 msgid "Plugin \"%s\" Deactivated"
 msgstr "Plugin \"%s\" Deactivated"
 
-#: ../../../application/controllers/admin/User.php:103
+#: ../../../application/controllers/admin/User.php:144
 #: ../../../application/views/default/admin/users/add.php:7
 #: ../../../application/views/default/admin/users/edit.php:7
 msgid "Manage Users"
 msgstr "Manage Users"
 
-#: ../../../application/controllers/admin/User.php:164
-#: ../../../application/controllers/admin/Files.php:213
+#: ../../../application/controllers/admin/User.php:214
+#: ../../../application/controllers/admin/Files.php:254
 #: ../../../application/views/default/files/search/new.php:3
 #: ../../../application/views/default/files/search/new.php:22
 #: ../../../application/views/default/files/search/query.php:3
@@ -1070,62 +1070,62 @@ msgstr "Manage Users"
 msgid "Search Files"
 msgstr "Search Files"
 
-#: ../../../application/controllers/admin/User.php:170
+#: ../../../application/controllers/admin/User.php:220
 #: ../../../application/views/default/admin/users/search.php:9
 msgid "Search Users"
 msgstr "Search Users"
 
-#: ../../../application/controllers/admin/User.php:214
+#: ../../../application/controllers/admin/User.php:271
 msgid "User Edited!"
 msgstr "User Edited!"
 
-#: ../../../application/controllers/admin/User.php:222
+#: ../../../application/controllers/admin/User.php:279
 #: ../../../application/views/default/admin/users/edit.php:9
 msgid "Edit User"
 msgstr "Edit User"
 
-#: ../../../application/controllers/admin/User.php:267
+#: ../../../application/controllers/admin/User.php:332
 msgid "New User Added!"
 msgstr "New User Added!"
 
-#: ../../../application/controllers/admin/User.php:272
+#: ../../../application/controllers/admin/User.php:337
 #: ../../../application/views/default/admin/users/add.php:28
 msgid "Add User"
 msgstr "Add User"
 
-#: ../../../application/controllers/admin/User.php:280
+#: ../../../application/controllers/admin/User.php:354
 msgid "User has been deleted"
 msgstr "User has been deleted"
 
-#: ../../../application/controllers/admin/User.php:287
+#: ../../../application/controllers/admin/User.php:370
 msgid "User has been Deactivated"
 msgstr "User has been Deactivated"
 
-#: ../../../application/controllers/admin/User.php:294
+#: ../../../application/controllers/admin/User.php:386
 msgid "User has been Activated"
 msgstr "User has been Activated"
 
-#: ../../../application/controllers/admin/User.php:346
+#: ../../../application/controllers/admin/User.php:472
 #, php-format
 msgid "%d user has been deleted"
 msgid_plural "%d users have been deleted"
 msgstr[0] "%d user has been deleted"
 msgstr[1] "%d users have been deleted"
 
-#: ../../../application/controllers/admin/Config.php:70
+#: ../../../application/controllers/admin/Config.php:73
 msgid "Manage Site Config"
 msgstr "Manage Site Config"
 
-#: ../../../application/controllers/admin/Config.php:103
+#: ../../../application/controllers/admin/Config.php:108
 #, php-format
 msgid "Manage %s Plugin Config"
 msgstr "Manage %s Plugin Config"
 
-#: ../../../application/controllers/admin/Config.php:125
+#: ../../../application/controllers/admin/Config.php:131
 msgid "Config Updated!"
 msgstr "Config Updated!"
 
-#: ../../../application/controllers/admin/Server.php:55
+#: ../../../application/controllers/admin/Server.php:79
 #: ../../../application/views/default/admin/servers/install-step1.php:7
 #: ../../../application/views/default/admin/servers/install.php:7
 #: ../../../application/views/default/admin/servers/add.php:7
@@ -1135,37 +1135,37 @@ msgstr "Config Updated!"
 msgid "Manage Servers"
 msgstr "Manage Servers"
 
-#: ../../../application/controllers/admin/Server.php:78
+#: ../../../application/controllers/admin/Server.php:110
 #, php-format
 msgid "New Server Installed, %s"
 msgstr "New Server Installed, %s"
 
-#: ../../../application/controllers/admin/Server.php:78
+#: ../../../application/controllers/admin/Server.php:110
 msgid "FTP Install this server?"
 msgstr "FTP Install this server?"
 
-#: ../../../application/controllers/admin/Server.php:83
+#: ../../../application/controllers/admin/Server.php:115
 #: ../../../application/views/default/admin/servers/add.php:3
 #: ../../../application/views/default/admin/servers/add.php:13
 #: ../../../application/views/default/admin/servers/view.php:8
 msgid "Add New Server"
 msgstr "Add New Server"
 
-#: ../../../application/controllers/admin/Server.php:106
+#: ../../../application/controllers/admin/Server.php:147
 msgid "Server Edited"
 msgstr "Server Edited"
 
-#: ../../../application/controllers/admin/Server.php:113
+#: ../../../application/controllers/admin/Server.php:154
 #: ../../../application/views/default/admin/servers/edit.php:3
 #: ../../../application/views/default/admin/servers/view.php:62
 msgid "Edit Server"
 msgstr "Edit Server"
 
-#: ../../../application/controllers/admin/Server.php:130
-#: ../../../application/controllers/admin/Server.php:181
-#: ../../../application/controllers/admin/Server.php:188
-#: ../../../application/controllers/admin/Server.php:255
-#: ../../../application/controllers/admin/Server.php:261
+#: ../../../application/controllers/admin/Server.php:180
+#: ../../../application/controllers/admin/Server.php:231
+#: ../../../application/controllers/admin/Server.php:238
+#: ../../../application/controllers/admin/Server.php:305
+#: ../../../application/controllers/admin/Server.php:311
 #: ../../../application/views/default/admin/servers/install-step1.php:3
 #: ../../../application/views/default/admin/servers/install-step1.php:33
 #: ../../../application/views/default/admin/servers/install.php:3
@@ -1174,210 +1174,213 @@ msgstr "Edit Server"
 msgid "Install Server Software"
 msgstr "Install Server Software"
 
-#: ../../../application/controllers/admin/Server.php:268
+#: ../../../application/controllers/admin/Server.php:327
 msgid "Server turned On"
 msgstr "Server turned On"
 
-#: ../../../application/controllers/admin/Server.php:275
+#: ../../../application/controllers/admin/Server.php:343
 msgid "Server turned Off"
 msgstr "Server turned Off"
 
-#: ../../../application/controllers/admin/Server.php:282
+#: ../../../application/controllers/admin/Server.php:359
 msgid "Server removed"
 msgstr "Server removed"
 
-#: ../../../application/controllers/admin/Menu_shortcuts.php:68
-#: ../../../application/controllers/admin/Files.php:92
-#: ../../../application/controllers/admin/Files.php:207
+#: ../../../application/controllers/admin/Menu_shortcuts.php:91
+#: ../../../application/controllers/admin/Files.php:115
+#: ../../../application/controllers/admin/Files.php:248
 #: ../../../application/views/default/files/manage.php:3
 #: ../../../application/views/default/admin/files/edit.php:8
 msgid "Manage Files"
 msgstr "Manage Files"
 
-#: ../../../application/controllers/admin/Menu_shortcuts.php:79
+#: ../../../application/controllers/admin/Menu_shortcuts.php:111
 msgid "Shortcut Edited"
 msgstr "Shortcut Edited"
 
-#: ../../../application/controllers/admin/Menu_shortcuts.php:87
+#: ../../../application/controllers/admin/Menu_shortcuts.php:119
 #: ../../../application/views/default/admin/menu_shortcuts/edit.php:7
 msgid "Edit Shortcut"
 msgstr "Edit Shortcut"
 
-#: ../../../application/controllers/admin/Menu_shortcuts.php:98
+#: ../../../application/controllers/admin/Menu_shortcuts.php:140
 msgid "New Shortcut Added"
 msgstr "New Shortcut Added"
 
-#: ../../../application/controllers/admin/Menu_shortcuts.php:117
+#: ../../../application/controllers/admin/Menu_shortcuts.php:159
 #: ../../../application/views/default/admin/menu_shortcuts/add.php:8
 msgid "Add Shortcut"
 msgstr "Add Shortcut"
 
-#: ../../../application/controllers/admin/Menu_shortcuts.php:125
+#: ../../../application/controllers/admin/Menu_shortcuts.php:176
 msgid "Shortcut Deleted"
 msgstr "Shortcut Deleted"
 
-#: ../../../application/controllers/admin/Menu_shortcuts.php:132
+#: ../../../application/controllers/admin/Menu_shortcuts.php:192
 msgid "Shortcut Hidden"
 msgstr "Shortcut Hidden"
 
-#: ../../../application/controllers/admin/Menu_shortcuts.php:139
+#: ../../../application/controllers/admin/Menu_shortcuts.php:208
 msgid "Shortcut Shown"
 msgstr "Shortcut Shown"
 
-#: ../../../application/controllers/admin/Ads.php:82
-#: ../../../application/controllers/admin/Ads.php:114
-#: ../../../application/controllers/admin/Ads.php:152
+#: ../../../application/controllers/admin/Ads.php:86
+#: ../../../application/controllers/admin/Ads.php:119
+#: ../../../application/controllers/admin/Ads.php:158
 msgid "Advert Manager"
 msgstr "Advert Manager"
 
-#: ../../../application/controllers/admin/Ads.php:102
+#: ../../../application/controllers/admin/Ads.php:107
 msgid "Advert Added!"
 msgstr "Advert Added!"
 
-#: ../../../application/controllers/admin/Ads.php:140
+#: ../../../application/controllers/admin/Ads.php:146
 msgid "Advert Edited!"
 msgstr "Advert Edited!"
 
-#: ../../../application/controllers/admin/Ads.php:172
+#: ../../../application/controllers/admin/Ads.php:179
 msgid "Advert Turned On!"
 msgstr "Advert Turned On!"
 
-#: ../../../application/controllers/admin/Ads.php:192
+#: ../../../application/controllers/admin/Ads.php:200
 msgid "Advert Turned Off!"
 msgstr "Advert Turned Off!"
 
-#: ../../../application/controllers/admin/Ads.php:212
+#: ../../../application/controllers/admin/Ads.php:221
 msgid "Advert Deleted!"
 msgstr "Advert Deleted!"
 
-#: ../../../application/controllers/admin/Transactions.php:79
+#: ../../../application/controllers/admin/Transactions.php:119
 msgid "Manage Transactions"
 msgstr "Manage Transactions"
 
-#: ../../../application/controllers/admin/Transactions.php:93
+#: ../../../application/controllers/admin/Transactions.php:142
 #: ../../../application/views/default/admin/transactions/edit.php:3
 #: ../../../application/views/default/admin/transactions/view.php:71
 msgid "Edit Transaction"
 msgstr "Edit Transaction"
 
-#: ../../../application/controllers/admin/Transactions.php:121
+#: ../../../application/controllers/admin/Transactions.php:169
 msgid "Transaction Edited!"
 msgstr "Transaction Edited!"
 
-#: ../../../application/controllers/admin/Transactions.php:135
+#: ../../../application/controllers/admin/Transactions.php:192
 msgid "Transaction Deleted!"
 msgstr "Transaction Deleted!"
 
-#: ../../../application/controllers/admin/Group.php:55
+#: ../../../application/controllers/admin/Group.php:78
 #: ../../../application/views/default/admin/groups/add.php:6
 #: ../../../application/views/default/admin/groups/edit.php:6
 msgid "Manage Groups"
 msgstr "Manage Groups"
 
-#: ../../../application/controllers/admin/Group.php:80
-#: ../../../application/controllers/admin/Group.php:116
+#: ../../../application/controllers/admin/Group.php:112
 msgid "Group Edited!"
 msgstr "Group Edited!"
 
-#: ../../../application/controllers/admin/Group.php:89
+#: ../../../application/controllers/admin/Group.php:121
 msgid "Edit User Group"
 msgstr "Edit User Group"
 
-#: ../../../application/controllers/admin/Group.php:125
+#: ../../../application/controllers/admin/Group.php:156
+msgid "New Group Added!"
+msgstr "New Group Added!"
+
+#: ../../../application/controllers/admin/Group.php:165
 msgid "Add New User Group"
 msgstr "Add New User Group"
 
-#: ../../../application/controllers/admin/Group.php:136
+#: ../../../application/controllers/admin/Group.php:185
 msgid "Group is now Public"
 msgstr "Group is now Public"
 
-#: ../../../application/controllers/admin/Group.php:147
+#: ../../../application/controllers/admin/Group.php:205
 msgid "Group is now Private"
 msgstr "Group is now Private"
 
-#: ../../../application/controllers/admin/Group.php:157
+#: ../../../application/controllers/admin/Group.php:224
 msgid "Group has been deleted"
 msgstr "Group has been deleted"
 
-#: ../../../application/controllers/admin/Group.php:165
+#: ../../../application/controllers/admin/Group.php:240
 msgid "Group Name"
 msgstr "Group Name"
 
-#: ../../../application/controllers/admin/Group.php:166
+#: ../../../application/controllers/admin/Group.php:241
 msgid "Registration Price"
 msgstr "Registration Price"
 
-#: ../../../application/controllers/admin/Group.php:167
+#: ../../../application/controllers/admin/Group.php:242
 msgid "Group Description"
 msgstr "Group Description"
 
-#: ../../../application/controllers/admin/Group.php:168
+#: ../../../application/controllers/admin/Group.php:243
 msgid "Can Access Admin Panel?"
 msgstr "Can Access Admin Panel?"
 
-#: ../../../application/controllers/admin/Group.php:169
+#: ../../../application/controllers/admin/Group.php:244
 msgid "Allow Search Access"
 msgstr "Allow Search Access"
 
-#: ../../../application/controllers/admin/Group.php:170
+#: ../../../application/controllers/admin/Group.php:245
 msgid "Download speed limit"
 msgstr "Download speed limit"
 
-#: ../../../application/controllers/admin/Group.php:171
+#: ../../../application/controllers/admin/Group.php:246
 msgid "File Size Limit"
 msgstr "File Size Limit"
 
-#: ../../../application/controllers/admin/Group.php:172
+#: ../../../application/controllers/admin/Group.php:247
 #: ../../../application/views/default/user/compare.php:13
 msgid "Download Wait Time"
 msgstr "Download Wait Time"
 
-#: ../../../application/controllers/admin/Group.php:173
+#: ../../../application/controllers/admin/Group.php:248
 msgid "File Types"
 msgstr "File Types"
 
-#: ../../../application/controllers/admin/Group.php:174
+#: ../../../application/controllers/admin/Group.php:249
 msgid "File Types are Allowed/Restricted"
 msgstr "File Types are Allowed/Restricted"
 
-#: ../../../application/controllers/admin/Group.php:175
+#: ../../../application/controllers/admin/Group.php:250
 msgid "Captcha for downloads"
 msgstr "Captcha for downloads"
 
-#: ../../../application/controllers/admin/Group.php:176
+#: ../../../application/controllers/admin/Group.php:251
 #: ../../../application/views/default/user/compare.php:15
 msgid "Direct Links?"
 msgstr "Direct Links?"
 
-#: ../../../application/controllers/admin/Group.php:177
+#: ../../../application/controllers/admin/Group.php:252
 msgid "Mass Upload File Count"
 msgstr "Mass Upload File Count"
 
-#: ../../../application/controllers/admin/Group.php:178
+#: ../../../application/controllers/admin/Group.php:253
 msgid "Account Storage Limit"
 msgstr "Account Storage Limit"
 
-#: ../../../application/controllers/admin/Group.php:179
+#: ../../../application/controllers/admin/Group.php:254
 msgid "Billing Interval"
 msgstr "Billing Interval"
 
-#: ../../../application/controllers/admin/Group.php:180
+#: ../../../application/controllers/admin/Group.php:255
 msgid "Can Upload Using Flash"
 msgstr "Can Upload Using Flash"
 
-#: ../../../application/controllers/admin/Group.php:181
+#: ../../../application/controllers/admin/Group.php:256
 msgid "Can Upload Using URLs"
 msgstr "Can Upload Using URLs"
 
-#: ../../../application/controllers/admin/Group.php:182
+#: ../../../application/controllers/admin/Group.php:257
 msgid "File Expire Time"
 msgstr "File Expire Time"
 
-#: ../../../application/controllers/admin/Group.php:190
+#: ../../../application/controllers/admin/Group.php:273
 msgid "The name for your Group"
 msgstr "The name for your Group"
 
-#: ../../../application/controllers/admin/Group.php:191
+#: ../../../application/controllers/admin/Group.php:274
 msgid ""
 "The price someone has to pay to register or extend a user account with this "
 "group"
@@ -1385,33 +1388,33 @@ msgstr ""
 "The price someone has to pay to register or extend a user account with this "
 "group"
 
-#: ../../../application/controllers/admin/Group.php:192
+#: ../../../application/controllers/admin/Group.php:275
 msgid "The group description"
 msgstr "The group description"
 
-#: ../../../application/controllers/admin/Group.php:193
+#: ../../../application/controllers/admin/Group.php:276
 msgid "Are users in this group allowed to access the admin panel?"
 msgstr "Are users in this group allowed to access the admin panel?"
 
-#: ../../../application/controllers/admin/Group.php:194
+#: ../../../application/controllers/admin/Group.php:277
 msgid ""
 "Can users in this group use the sitewide file search(only for public files)?"
 msgstr ""
 "Can users in this group use the sitewide file search(only for public files)?"
 
-#: ../../../application/controllers/admin/Group.php:195
+#: ../../../application/controllers/admin/Group.php:278
 msgid "The download speed limit, in KBps"
 msgstr "The download speed limit, in KBps"
 
-#: ../../../application/controllers/admin/Group.php:196
+#: ../../../application/controllers/admin/Group.php:279
 msgid "The max filesize for uploads, in MB"
 msgstr "The max filesize for uploads, in MB"
 
-#: ../../../application/controllers/admin/Group.php:197
+#: ../../../application/controllers/admin/Group.php:280
 msgid "The time a user has to wait before they can download a file."
 msgstr "The time a user has to wait before they can download a file."
 
-#: ../../../application/controllers/admin/Group.php:198
+#: ../../../application/controllers/admin/Group.php:281
 msgid ""
 "A Pipe(\"|\") seperated list of file types to allow or deny on upload. "
 "<br>Leave blank to remove restrictions. The setting below controls this "
@@ -1421,15 +1424,15 @@ msgstr ""
 "<br>Leave blank to remove restrictions. The setting below controls this "
 "setting."
 
-#: ../../../application/controllers/admin/Group.php:199
+#: ../../../application/controllers/admin/Group.php:282
 msgid "Allow or deny the above file list."
 msgstr "Allow or deny the above file list."
 
-#: ../../../application/controllers/admin/Group.php:200
+#: ../../../application/controllers/admin/Group.php:283
 msgid "Force a captcha on users in this group before they can download a file"
 msgstr "Force a captcha on users in this group before they can download a file"
 
-#: ../../../application/controllers/admin/Group.php:201
+#: ../../../application/controllers/admin/Group.php:284
 msgid ""
 "If captcha is off, the wait time is 1 or less and this is set to yes, file "
 "links will auto download."
@@ -1437,13 +1440,13 @@ msgstr ""
 "If captcha is off, the wait time is 1 or less and this is set to yes, file "
 "links will auto download."
 
-#: ../../../application/controllers/admin/Group.php:202
+#: ../../../application/controllers/admin/Group.php:285
 msgid ""
 "The number of files a user can upload at once without refreshing the page."
 msgstr ""
 "The number of files a user can upload at once without refreshing the page."
 
-#: ../../../application/controllers/admin/Group.php:203
+#: ../../../application/controllers/admin/Group.php:286
 msgid ""
 "The total size in megabytes that any user in thes group can store at one "
 "time."
@@ -1451,23 +1454,23 @@ msgstr ""
 "The total size in megabytes that any user in thes group can store at one "
 "time."
 
-#: ../../../application/controllers/admin/Group.php:204
+#: ../../../application/controllers/admin/Group.php:287
 msgid "The period of time where an account is billed for service"
 msgstr "The period of time where an account is billed for service"
 
-#: ../../../application/controllers/admin/Group.php:205
+#: ../../../application/controllers/admin/Group.php:288
 msgid "Can the user search through public files?"
 msgstr "Can the user search through public files?"
 
-#: ../../../application/controllers/admin/Group.php:206
+#: ../../../application/controllers/admin/Group.php:289
 msgid "Can the user upload files using flash?"
 msgstr "Can the user upload files using flash?"
 
-#: ../../../application/controllers/admin/Group.php:207
+#: ../../../application/controllers/admin/Group.php:290
 msgid "Can the user upload files from other sites(URL Upload)?"
 msgstr "Can the user upload files from other sites(URL Upload)?"
 
-#: ../../../application/controllers/admin/Group.php:208
+#: ../../../application/controllers/admin/Group.php:291
 msgid ""
 "The ammount of time in days that a file uploaded by this group is kept on "
 "the server."
@@ -1475,217 +1478,217 @@ msgstr ""
 "The ammount of time in days that a file uploaded by this group is kept on "
 "the server."
 
-#: ../../../application/controllers/admin/Group.php:234
+#: ../../../application/controllers/admin/Group.php:325
 #: ../../../application/views/default/user/compare.php:170
 #: ../../../application/views/default/user/compare.php:171
 #: ../../../application/views/default/user/register/begin.php:17
 msgid "None"
 msgstr "None"
 
-#: ../../../application/controllers/admin/Group.php:242
+#: ../../../application/controllers/admin/Group.php:333
 msgid "Never"
 msgstr "Never"
 
-#: ../../../application/controllers/admin/Group.php:243
+#: ../../../application/controllers/admin/Group.php:334
 msgid "First Download"
 msgstr "First Download"
 
-#: ../../../application/controllers/admin/Group.php:244
+#: ../../../application/controllers/admin/Group.php:335
 msgid "Always"
 msgstr "Always"
 
-#: ../../../application/controllers/admin/Actions.php:77
+#: ../../../application/controllers/admin/Actions.php:81
 msgid "Maintenance Actions"
 msgstr "Maintenance Actions"
 
-#: ../../../application/controllers/admin/Actions.php:104
+#: ../../../application/controllers/admin/Actions.php:110
 msgid "PHP Info"
 msgstr "PHP Info"
 
-#: ../../../application/controllers/admin/Actions.php:138
+#: ../../../application/controllers/admin/Actions.php:144
 msgid "Cron Actions Completed!"
 msgstr "Cron Actions Completed!"
 
-#: ../../../application/controllers/admin/Actions.php:175
+#: ../../../application/controllers/admin/Actions.php:182
 msgid "Cache Files Deleted!"
 msgstr "Cache Files Deleted!"
 
-#: ../../../application/controllers/admin/Actions.php:190
+#: ../../../application/controllers/admin/Actions.php:199
 msgid "Server Cache Updating Complete!"
 msgstr "Server Cache Updating Complete!"
 
-#: ../../../application/controllers/admin/Skin.php:55
+#: ../../../application/controllers/admin/Skin.php:79
 msgid "Manage Skins"
 msgstr "Manage Skins"
 
-#: ../../../application/controllers/admin/Skin.php:79
+#: ../../../application/controllers/admin/Skin.php:111
 #, php-format
 msgid "%s new skin was installed."
 msgid_plural "%s new skins were installed."
 msgstr[0] "%s new skin was installed."
 msgstr[1] "%s new skins were installed."
 
-#: ../../../application/controllers/admin/Skin.php:88
+#: ../../../application/controllers/admin/Skin.php:129
 #, php-format
 msgid "The skin \"%s\" has been Uninstalled."
 msgstr "The skin \"%s\" has been Uninstalled."
 
-#: ../../../application/controllers/admin/Skin.php:98
+#: ../../../application/controllers/admin/Skin.php:147
 #, php-format
 msgid "Skin \"%s\" set as active."
 msgstr "Skin \"%s\" set as active."
 
-#: ../../../application/controllers/admin/Files.php:146
+#: ../../../application/controllers/admin/Files.php:178
 msgid "Manage Files in Folder"
 msgstr "Manage Files in Folder"
 
-#: ../../../application/controllers/admin/Files.php:226
+#: ../../../application/controllers/admin/Files.php:276
 msgid "File Edited"
 msgstr "File Edited"
 
-#: ../../../application/controllers/admin/Files.php:234
+#: ../../../application/controllers/admin/Files.php:284
 #: ../../../application/views/default/admin/files/edit.php:3
 msgid "Edit File"
 msgstr "Edit File"
 
-#: ../../../application/controllers/admin/Files.php:242
+#: ../../../application/controllers/admin/Files.php:301
 #: ../../../application/controllers/Files.php:580
 msgid "File Deleted"
 msgstr "File Deleted"
 
-#: ../../../application/controllers/admin/Files.php:249
+#: ../../../application/controllers/admin/Files.php:317
 msgid "File Banned"
 msgstr "File Banned"
 
-#: ../../../application/controllers/admin/Files.php:301
+#: ../../../application/controllers/admin/Files.php:403
 #, php-format
 msgid "%d file has been banned."
 msgid_plural "%d files have been banned."
 msgstr[0] "%d file has been banned."
 msgstr[1] "%d files have been banned."
 
-#: ../../../application/controllers/admin/Files.php:323
+#: ../../../application/controllers/admin/Files.php:434
 #, php-format
 msgid "%d file has been deleted."
 msgid_plural "%d files have been deleted."
 msgstr[0] "%d file has been deleted."
 msgstr[1] "%d files have been deleted."
 
-#: ../../../application/controllers/admin/Gateways.php:65
+#: ../../../application/controllers/admin/Gateways.php:104
 msgid "Manage Payment Gateways"
 msgstr "Manage Payment Gateways"
 
-#: ../../../application/controllers/admin/Gateways.php:79
+#: ../../../application/controllers/admin/Gateways.php:127
 msgid "Edit Payment Gateway"
 msgstr "Edit Payment Gateway"
 
-#: ../../../application/controllers/admin/Gateways.php:108
+#: ../../../application/controllers/admin/Gateways.php:155
 msgid "Payment Gateway Edited!"
 msgstr "Payment Gateway Edited!"
 
-#: ../../../application/controllers/admin/Gateways.php:127
+#: ../../../application/controllers/admin/Gateways.php:183
 msgid "New Payment Gateway Set as Default!"
 msgstr "New Payment Gateway Set as Default!"
 
-#: ../../../application/controllers/admin/Gateways.php:136
+#: ../../../application/controllers/admin/Gateways.php:201
 msgid "Payment Gateway turned on!"
 msgstr "Payment Gateway turned on!"
 
-#: ../../../application/controllers/admin/Gateways.php:145
+#: ../../../application/controllers/admin/Gateways.php:219
 msgid "Payment Gateway turned off!"
 msgstr "Payment Gateway turned off!"
 
-#: ../../../application/controllers/admin/Folders.php:63
+#: ../../../application/controllers/admin/Folders.php:87
 msgid "File Folder Manager"
 msgstr "File Folder Manager"
 
-#: ../../../application/controllers/admin/Folders.php:78
+#: ../../../application/controllers/admin/Folders.php:109
 msgid "Search File Folder"
 msgstr "Search File Folder"
 
-#: ../../../application/controllers/admin/Folders.php:96
+#: ../../../application/controllers/admin/Folders.php:127
 msgid "File Folder Search Results"
 msgstr "File Folder Search Results"
 
-#: ../../../application/controllers/admin/Folders.php:106
+#: ../../../application/controllers/admin/Folders.php:146
 msgid "Folder Deleted!"
 msgstr "Folder Deleted!"
 
-#: ../../../application/controllers/admin/Translator.php:100
+#: ../../../application/controllers/admin/Translator.php:101
 msgid "Changes Saved"
 msgstr "Changes Saved"
 
-#: ../../../application/controllers/admin/Translator.php:105
+#: ../../../application/controllers/admin/Translator.php:106
 msgid "Failure"
 msgstr "Failure"
 
-#: ../../../application/controllers/admin/Translator.php:111
+#: ../../../application/controllers/admin/Translator.php:112
 #: ../../../application/views/default/admin/translator/save_lang.php:33
 msgid "Confirm Changes"
 msgstr "Confirm Changes"
 
-#: ../../../application/controllers/admin/Translator.php:116
+#: ../../../application/controllers/admin/Translator.php:117
 #, php-format
 msgid "Translate %s"
 msgstr "Translate %s"
 
-#: ../../../application/controllers/admin/Translator.php:165
+#: ../../../application/controllers/admin/Translator.php:166
 msgid "Select Language Directory"
 msgstr "Select Language Directory"
 
-#: ../../../application/controllers/admin/Translator.php:171
+#: ../../../application/controllers/admin/Translator.php:172
 msgid "Select Master Language"
 msgstr "Select Master Language"
 
-#: ../../../application/controllers/admin/Translator.php:178
+#: ../../../application/controllers/admin/Translator.php:179
 msgid "Select Language to Translate"
 msgstr "Select Language to Translate"
 
-#: ../../../application/controllers/admin/Translator.php:185
+#: ../../../application/controllers/admin/Translator.php:186
 msgid "Select File to Translate"
 msgstr "Select File to Translate"
 
-#: ../../../application/controllers/admin/Translator.php:360
+#: ../../../application/controllers/admin/Translator.php:361
 msgid "Mismatch - does not exist in master translation"
 msgstr "Mismatch - does not exist in master translation"
 
-#: ../../../application/controllers/admin/Translator.php:376
+#: ../../../application/controllers/admin/Translator.php:377
 msgid "Invalid syntax - check for unbalanced quotation marks"
 msgstr "Invalid syntax - check for unbalanced quotation marks"
 
-#: ../../../application/controllers/admin/Translator.php:381
+#: ../../../application/controllers/admin/Translator.php:382
 msgid "Entry cannot be blank. Defaulted to master translation."
 msgstr "Entry cannot be blank. Defaulted to master translation."
 
-#: ../../../application/controllers/admin/Translator.php:386
+#: ../../../application/controllers/admin/Translator.php:387
 msgid "Invalid PHP syntax"
 msgstr "Invalid PHP syntax"
 
-#: ../../../application/controllers/admin/Email.php:74
+#: ../../../application/controllers/admin/Email.php:78
 msgid "Bulk Email"
 msgstr "Bulk Email"
 
-#: ../../../application/controllers/admin/Email.php:119
+#: ../../../application/controllers/admin/Email.php:124
 msgid "Email sent!"
 msgstr "Email sent!"
 
-#: ../../../application/controllers/Upload.php:98
+#: ../../../application/controllers/Upload.php:134
 msgid "URL Upload Complete!"
 msgstr "URL Upload Complete!"
 
-#: ../../../application/controllers/Upload.php:102
+#: ../../../application/controllers/Upload.php:138
 msgid "URL Upload Failed!"
 msgstr "URL Upload Failed!"
 
-#: ../../../application/controllers/Upload.php:137
+#: ../../../application/controllers/Upload.php:183
 msgid "Upload Completed!"
 msgstr "Upload Completed!"
 
-#: ../../../application/controllers/Upload.php:155
+#: ../../../application/controllers/Upload.php:201
 msgid "Upload Failed!"
 msgstr "Upload Failed!"
 
-#: ../../../application/controllers/Upload.php:206
+#: ../../../application/controllers/Upload.php:286
 msgid "OK"
 msgstr "OK"
 
@@ -1722,103 +1725,103 @@ msgstr "Password Protected File"
 msgid "File Not Found"
 msgstr "File Not Found"
 
-#: ../../../application/controllers/Legal.php:47
+#: ../../../application/controllers/Legal.php:71
 msgid "Terms of Service"
 msgstr "Terms of Service"
 
-#: ../../../application/controllers/Legal.php:55
+#: ../../../application/controllers/Legal.php:86
 #: ../../../application/views/default/legal/privacy.php:3
 #: ../../../application/views/default/footer.php:68
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
 
-#: ../../../application/controllers/Image.php:52
+#: ../../../application/controllers/Image.php:77
 msgid "View Image"
 msgstr "View Image"
 
-#: ../../../application/controllers/Image.php:73
+#: ../../../application/controllers/Image.php:109
 msgid "Forum/BBCode Image Links"
 msgstr "Forum/BBCode Image Links"
 
-#: ../../../application/controllers/Image.php:122
+#: ../../../application/controllers/Image.php:187
 msgid "View Image Gallery"
 msgstr "View Image Gallery"
 
-#: ../../../application/controllers/Image.php:132
-#: ../../../application/controllers/Image.php:160
+#: ../../../application/controllers/Image.php:205
+#: ../../../application/controllers/Image.php:241
 msgid "Create Image Gallery"
 msgstr "Create Image Gallery"
 
-#: ../../../application/controllers/Image.php:172
+#: ../../../application/controllers/Image.php:262
 msgid "Edit Image Gallery"
 msgstr "Edit Image Gallery"
 
-#: ../../../application/controllers/install/Step2.php:65
-#: ../../../application/controllers/install/Step2.php:82
-#: ../../../application/controllers/install/Step2.php:98
-#: ../../../application/controllers/install/Step2.php:121
-#: ../../../application/controllers/install/Step2.php:142
-#: ../../../application/controllers/install/Step2.php:163
-#: ../../../application/controllers/install/Step2.php:184
+#: ../../../application/controllers/install/Step2.php:84
+#: ../../../application/controllers/install/Step2.php:101
+#: ../../../application/controllers/install/Step2.php:117
+#: ../../../application/controllers/install/Step2.php:140
+#: ../../../application/controllers/install/Step2.php:161
+#: ../../../application/controllers/install/Step2.php:182
+#: ../../../application/controllers/install/Step2.php:203
 msgid "Failed"
 msgstr "Failed"
 
-#: ../../../application/controllers/install/Step2.php:69
-#: ../../../application/controllers/install/Step2.php:74
-#: ../../../application/controllers/install/Step2.php:92
-#: ../../../application/controllers/install/Step2.php:104
-#: ../../../application/controllers/install/Step2.php:126
-#: ../../../application/controllers/install/Step2.php:147
-#: ../../../application/controllers/install/Step2.php:168
-#: ../../../application/controllers/install/Step2.php:189
+#: ../../../application/controllers/install/Step2.php:88
+#: ../../../application/controllers/install/Step2.php:93
+#: ../../../application/controllers/install/Step2.php:111
+#: ../../../application/controllers/install/Step2.php:123
+#: ../../../application/controllers/install/Step2.php:145
+#: ../../../application/controllers/install/Step2.php:166
+#: ../../../application/controllers/install/Step2.php:187
+#: ../../../application/controllers/install/Step2.php:208
 msgid "Passed"
 msgstr "Passed"
 
-#: ../../../application/controllers/install/Step2.php:83
-#: ../../../application/controllers/install/Step2.php:88
+#: ../../../application/controllers/install/Step2.php:102
+#: ../../../application/controllers/install/Step2.php:107
 #, php-format
 msgid "Please update php to the latest version in the %s"
 msgstr "Please update php to the latest version in the %s"
 
-#: ../../../application/controllers/install/Step2.php:83
-#: ../../../application/controllers/install/Step2.php:88
+#: ../../../application/controllers/install/Step2.php:102
+#: ../../../application/controllers/install/Step2.php:107
 msgid "v5.6 code branch"
 msgstr "v5.6 code branch"
 
-#: ../../../application/controllers/install/Step2.php:87
+#: ../../../application/controllers/install/Step2.php:106
 msgid "Warning"
 msgstr "Warning"
 
-#: ../../../application/controllers/install/Step2.php:97
+#: ../../../application/controllers/install/Step2.php:116
 #: ../../../application/views/default/admin/home.php:66
 #: ../../../application/views/default/admin/home.php:90
 msgid "On"
 msgstr "On"
 
-#: ../../../application/controllers/install/Step2.php:99
+#: ../../../application/controllers/install/Step2.php:118
 msgid "XtraUpload requires SafeMode Off."
 msgstr "XtraUpload requires SafeMode Off."
 
-#: ../../../application/controllers/install/Step2.php:103
+#: ../../../application/controllers/install/Step2.php:122
 #: ../../../application/views/default/admin/home.php:70
 msgid "Off"
 msgstr "Off"
 
-#: ../../../application/controllers/install/Step2.php:122
-#: ../../../application/controllers/install/Step2.php:143
-#: ../../../application/controllers/install/Step2.php:164
-#: ../../../application/controllers/install/Step2.php:185
+#: ../../../application/controllers/install/Step2.php:141
+#: ../../../application/controllers/install/Step2.php:162
+#: ../../../application/controllers/install/Step2.php:183
+#: ../../../application/controllers/install/Step2.php:204
 #, php-format
 msgid "Please recompile php with %s"
 msgstr "Please recompile php with %s"
 
-#: ../../../application/controllers/install/Step2.php:122
+#: ../../../application/controllers/install/Step2.php:141
 msgid "GD2 support"
 msgstr "GD2 support"
 
-#: ../../../application/controllers/install/Step2.php:131
-#: ../../../application/controllers/install/Step2.php:152
-#: ../../../application/controllers/install/Step2.php:173
+#: ../../../application/controllers/install/Step2.php:150
+#: ../../../application/controllers/install/Step2.php:171
+#: ../../../application/controllers/install/Step2.php:192
 #: ../../../application/views/default/files/manage.php:83
 #: ../../../application/views/default/home.php:242
 #: ../../../application/views/default/admin/groups/add.php:26
@@ -1834,9 +1837,9 @@ msgstr "GD2 support"
 msgid "Yes"
 msgstr "Yes"
 
-#: ../../../application/controllers/install/Step2.php:136
-#: ../../../application/controllers/install/Step2.php:157
-#: ../../../application/controllers/install/Step2.php:178
+#: ../../../application/controllers/install/Step2.php:155
+#: ../../../application/controllers/install/Step2.php:176
+#: ../../../application/controllers/install/Step2.php:197
 #: ../../../application/views/default/admin/groups/add.php:27
 #: ../../../application/views/default/admin/groups/edit.php:30
 #: ../../../application/views/default/user/compare.php:99
@@ -1847,33 +1850,33 @@ msgstr "Yes"
 msgid "No"
 msgstr "No"
 
-#: ../../../application/controllers/install/Step2.php:143
+#: ../../../application/controllers/install/Step2.php:162
 msgid "FreeType support"
 msgstr "FreeType support"
 
-#: ../../../application/controllers/install/Step2.php:164
+#: ../../../application/controllers/install/Step2.php:183
 msgid "SimpleXML support"
 msgstr "SimpleXML support"
 
-#: ../../../application/controllers/install/Step2.php:185
+#: ../../../application/controllers/install/Step2.php:204
 msgid "FTP support"
 msgstr "FTP support"
 
-#: ../../../application/controllers/install/Update.php:56
-#: ../../../application/controllers/install/Update.php:69
+#: ../../../application/controllers/install/Update.php:80
+#: ../../../application/controllers/install/Update.php:101
 msgid "No Updates Needed"
 msgstr "No Updates Needed"
 
-#: ../../../application/controllers/install/Update.php:70
+#: ../../../application/controllers/install/Update.php:102
 msgid "Back Home"
 msgstr "Back Home"
 
-#: ../../../application/controllers/install/Update.php:81
+#: ../../../application/controllers/install/Update.php:113
 #, php-format
 msgid "Cannot Update %s from %s"
 msgstr "Cannot Update %s from %s"
 
-#: ../../../application/controllers/install/Update.php:102
+#: ../../../application/controllers/install/Update.php:152
 msgid "Database version too old, please re-install fresh."
 msgstr "Database version too old, please re-install fresh."
 
@@ -1897,365 +1900,365 @@ msgstr "KB"
 msgid "bytes"
 msgstr "bytes"
 
-#: ../../../application/helpers/language_helper.php:87
+#: ../../../application/helpers/language_helper.php:115
 msgid "Afrikaans"
 msgstr "Afrikaans"
 
-#: ../../../application/helpers/language_helper.php:88
+#: ../../../application/helpers/language_helper.php:116
 msgid "Arabic"
 msgstr "Arabic"
 
-#: ../../../application/helpers/language_helper.php:89
+#: ../../../application/helpers/language_helper.php:117
 msgid "Bulgarian"
 msgstr "Bulgarian"
 
-#: ../../../application/helpers/language_helper.php:90
+#: ../../../application/helpers/language_helper.php:118
 msgid "BengaliBangla"
 msgstr "BengaliBangla"
 
-#: ../../../application/helpers/language_helper.php:91
+#: ../../../application/helpers/language_helper.php:119
 msgid "Catalan"
 msgstr "Catalan"
 
-#: ../../../application/helpers/language_helper.php:92
+#: ../../../application/helpers/language_helper.php:120
 msgid "Czech"
 msgstr "Czech"
 
-#: ../../../application/helpers/language_helper.php:93
+#: ../../../application/helpers/language_helper.php:121
 msgid "Danish"
 msgstr "Danish"
 
-#: ../../../application/helpers/language_helper.php:94
+#: ../../../application/helpers/language_helper.php:122
 msgid "German"
 msgstr "German"
 
-#: ../../../application/helpers/language_helper.php:95
+#: ../../../application/helpers/language_helper.php:123
 msgid "Greek"
 msgstr "Greek"
 
-#: ../../../application/helpers/language_helper.php:96
+#: ../../../application/helpers/language_helper.php:124
 msgid "English (UK)"
 msgstr "English (UK)"
 
-#: ../../../application/helpers/language_helper.php:97
+#: ../../../application/helpers/language_helper.php:125
 msgid "English (US)"
 msgstr "English (US)"
 
-#: ../../../application/helpers/language_helper.php:98
+#: ../../../application/helpers/language_helper.php:126
 msgid "Spanish (Argentina)"
 msgstr "Spanish (Argentina)"
 
-#: ../../../application/helpers/language_helper.php:99
+#: ../../../application/helpers/language_helper.php:127
 msgid "Spanish (Spain)"
 msgstr "Spanish (Spain)"
 
-#: ../../../application/helpers/language_helper.php:100
+#: ../../../application/helpers/language_helper.php:128
 msgid "Spanish (Mexico)"
 msgstr "Spanish (Mexico)"
 
-#: ../../../application/helpers/language_helper.php:101
+#: ../../../application/helpers/language_helper.php:129
 msgid "Estonian"
 msgstr "Estonian"
 
-#: ../../../application/helpers/language_helper.php:102
+#: ../../../application/helpers/language_helper.php:130
 msgid "Basque"
 msgstr "Basque"
 
-#: ../../../application/helpers/language_helper.php:103
+#: ../../../application/helpers/language_helper.php:131
 msgid "Persian"
 msgstr "Persian"
 
-#: ../../../application/helpers/language_helper.php:104
+#: ../../../application/helpers/language_helper.php:132
 msgid "Finnish"
 msgstr "Finnish"
 
-#: ../../../application/helpers/language_helper.php:105
+#: ../../../application/helpers/language_helper.php:133
 msgid "Faroese"
 msgstr "Faroese"
 
-#: ../../../application/helpers/language_helper.php:106
+#: ../../../application/helpers/language_helper.php:134
 msgid "French"
 msgstr "French"
 
-#: ../../../application/helpers/language_helper.php:107
+#: ../../../application/helpers/language_helper.php:135
 msgid "Irish"
 msgstr "Irish"
 
-#: ../../../application/helpers/language_helper.php:108
+#: ../../../application/helpers/language_helper.php:136
 msgid "Hebrew"
 msgstr "Hebrew"
 
-#: ../../../application/helpers/language_helper.php:109
+#: ../../../application/helpers/language_helper.php:137
 msgid "Croatian"
 msgstr "Croatian"
 
-#: ../../../application/helpers/language_helper.php:110
+#: ../../../application/helpers/language_helper.php:138
 msgid "Hungarian"
 msgstr "Hungarian"
 
-#: ../../../application/helpers/language_helper.php:111
+#: ../../../application/helpers/language_helper.php:139
 msgid "Icelandic"
 msgstr "Icelandic"
 
-#: ../../../application/helpers/language_helper.php:112
+#: ../../../application/helpers/language_helper.php:140
 msgid "Italian"
 msgstr "Italian"
 
-#: ../../../application/helpers/language_helper.php:113
+#: ../../../application/helpers/language_helper.php:141
 msgid "Japanese"
 msgstr "Japanese"
 
-#: ../../../application/helpers/language_helper.php:114
+#: ../../../application/helpers/language_helper.php:142
 msgid "Korean"
 msgstr "Korean"
 
-#: ../../../application/helpers/language_helper.php:115
+#: ../../../application/helpers/language_helper.php:143
 msgid "Lithuanian"
 msgstr "Lithuanian"
 
-#: ../../../application/helpers/language_helper.php:116
+#: ../../../application/helpers/language_helper.php:144
 msgid "Latvian"
 msgstr "Latvian"
 
-#: ../../../application/helpers/language_helper.php:117
+#: ../../../application/helpers/language_helper.php:145
 msgid "Macedonian"
 msgstr "Macedonian"
 
-#: ../../../application/helpers/language_helper.php:118
+#: ../../../application/helpers/language_helper.php:146
 msgid "Malay"
 msgstr "Malay"
 
-#: ../../../application/helpers/language_helper.php:119
+#: ../../../application/helpers/language_helper.php:147
 msgid "Dutch"
 msgstr "Dutch"
 
-#: ../../../application/helpers/language_helper.php:120
+#: ../../../application/helpers/language_helper.php:148
 msgid "Norwegian (Bokmal)"
 msgstr "Norwegian (Bokmal)"
 
-#: ../../../application/helpers/language_helper.php:121
+#: ../../../application/helpers/language_helper.php:149
 msgid "Polish"
 msgstr "Polish"
 
-#: ../../../application/helpers/language_helper.php:122
+#: ../../../application/helpers/language_helper.php:150
 msgid "Portuguese (Brasil)"
 msgstr "Portuguese (Brasil)"
 
-#: ../../../application/helpers/language_helper.php:123
+#: ../../../application/helpers/language_helper.php:151
 msgid "Portuguese (Portugal)"
 msgstr "Portuguese (Portugal)"
 
-#: ../../../application/helpers/language_helper.php:124
+#: ../../../application/helpers/language_helper.php:152
 msgid "Romanian"
 msgstr "Romanian"
 
-#: ../../../application/helpers/language_helper.php:125
+#: ../../../application/helpers/language_helper.php:153
 msgid "Russian"
 msgstr "Russian"
 
-#: ../../../application/helpers/language_helper.php:126
+#: ../../../application/helpers/language_helper.php:154
 msgid "Slovak"
 msgstr "Slovak"
 
-#: ../../../application/helpers/language_helper.php:127
+#: ../../../application/helpers/language_helper.php:155
 msgid "Slovenian"
 msgstr "Slovenian"
 
-#: ../../../application/helpers/language_helper.php:128
+#: ../../../application/helpers/language_helper.php:156
 msgid "Serbian"
 msgstr "Serbian"
 
-#: ../../../application/helpers/language_helper.php:129
+#: ../../../application/helpers/language_helper.php:157
 msgid "Swedish"
 msgstr "Swedish"
 
-#: ../../../application/helpers/language_helper.php:130
+#: ../../../application/helpers/language_helper.php:158
 msgid "Tswana"
 msgstr "Tswana"
 
-#: ../../../application/helpers/language_helper.php:131
+#: ../../../application/helpers/language_helper.php:159
 msgid "Turkish"
 msgstr "Turkish"
 
-#: ../../../application/helpers/language_helper.php:132
+#: ../../../application/helpers/language_helper.php:160
 msgid "Ukrainian"
 msgstr "Ukrainian"
 
-#: ../../../application/helpers/language_helper.php:133
+#: ../../../application/helpers/language_helper.php:161
 msgid "Vietnamese"
 msgstr "Vietnamese"
 
-#: ../../../application/helpers/language_helper.php:134
+#: ../../../application/helpers/language_helper.php:162
 msgid "Chinese (simplified)"
 msgstr "Chinese (simplified)"
 
-#: ../../../application/helpers/language_helper.php:135
+#: ../../../application/helpers/language_helper.php:163
 msgid "Chinese (traditional)"
 msgstr "Chinese (traditional)"
 
-#: ../../../application/helpers/language_helper.php:164
+#: ../../../application/helpers/language_helper.php:208
 msgid "(UTC -12:00) Baker/Howland Island"
 msgstr "(UTC -12:00) Baker/Howland Island"
 
-#: ../../../application/helpers/language_helper.php:165
+#: ../../../application/helpers/language_helper.php:209
 msgid "(UTC -11:00) Samoa Time Zone, Niue"
 msgstr "(UTC -11:00) Samoa Time Zone, Niue"
 
-#: ../../../application/helpers/language_helper.php:166
+#: ../../../application/helpers/language_helper.php:210
 msgid "(UTC -10:00) Hawaii-Aleutian Standard Time, Cook Islands, Tahiti"
 msgstr "(UTC -10:00) Hawaii-Aleutian Standard Time, Cook Islands, Tahiti"
 
-#: ../../../application/helpers/language_helper.php:167
+#: ../../../application/helpers/language_helper.php:211
 msgid "(UTC -9:30) Marquesas Islands"
 msgstr "(UTC -9:30) Marquesas Islands"
 
-#: ../../../application/helpers/language_helper.php:168
+#: ../../../application/helpers/language_helper.php:212
 msgid "(UTC -9:00) Alaska Standard Time, Gambier Islands"
 msgstr "(UTC -9:00) Alaska Standard Time, Gambier Islands"
 
-#: ../../../application/helpers/language_helper.php:169
+#: ../../../application/helpers/language_helper.php:213
 msgid "(UTC -8:00) Pacific Standard Time, Clipperton Island"
 msgstr "(UTC -8:00) Pacific Standard Time, Clipperton Island"
 
-#: ../../../application/helpers/language_helper.php:170
+#: ../../../application/helpers/language_helper.php:214
 msgid "(UTC -7:00) Mountain Standard Time"
 msgstr "(UTC -7:00) Mountain Standard Time"
 
-#: ../../../application/helpers/language_helper.php:171
+#: ../../../application/helpers/language_helper.php:215
 msgid "(UTC -6:00) Central Standard Time"
 msgstr "(UTC -6:00) Central Standard Time"
 
-#: ../../../application/helpers/language_helper.php:172
+#: ../../../application/helpers/language_helper.php:216
 msgid "(UTC -5:00) Eastern Standard Time, Western Caribbean Standard Time"
 msgstr "(UTC -5:00) Eastern Standard Time, Western Caribbean Standard Time"
 
-#: ../../../application/helpers/language_helper.php:173
+#: ../../../application/helpers/language_helper.php:217
 msgid "(UTC -4:30) Venezuelan Standard Time"
 msgstr "(UTC -4:30) Venezuelan Standard Time"
 
-#: ../../../application/helpers/language_helper.php:174
+#: ../../../application/helpers/language_helper.php:218
 msgid "(UTC -4:00) Atlantic Standard Time, Eastern Caribbean Standard Time"
 msgstr "(UTC -4:00) Atlantic Standard Time, Eastern Caribbean Standard Time"
 
-#: ../../../application/helpers/language_helper.php:175
+#: ../../../application/helpers/language_helper.php:219
 msgid "(UTC -3:30) Newfoundland Standard Time"
 msgstr "(UTC -3:30) Newfoundland Standard Time"
 
-#: ../../../application/helpers/language_helper.php:176
+#: ../../../application/helpers/language_helper.php:220
 msgid "(UTC -3:00) Argentina, Brazil, French Guiana, Uruguay"
 msgstr "(UTC -3:00) Argentina, Brazil, French Guiana, Uruguay"
 
-#: ../../../application/helpers/language_helper.php:177
+#: ../../../application/helpers/language_helper.php:221
 msgid "(UTC -2:00) South Georgia/South Sandwich Islands"
 msgstr "(UTC -2:00) South Georgia/South Sandwich Islands"
 
-#: ../../../application/helpers/language_helper.php:178
+#: ../../../application/helpers/language_helper.php:222
 msgid "(UTC -1:00) Azores, Cape Verde Islands"
 msgstr "(UTC -1:00) Azores, Cape Verde Islands"
 
-#: ../../../application/helpers/language_helper.php:179
+#: ../../../application/helpers/language_helper.php:223
 msgid "(UTC) Greenwich Mean Time, Western European Time"
 msgstr "(UTC) Greenwich Mean Time, Western European Time"
 
-#: ../../../application/helpers/language_helper.php:180
+#: ../../../application/helpers/language_helper.php:224
 msgid "(UTC +1:00) Central European Time, West Africa Time"
 msgstr "(UTC +1:00) Central European Time, West Africa Time"
 
-#: ../../../application/helpers/language_helper.php:181
+#: ../../../application/helpers/language_helper.php:225
 msgid ""
 "(UTC +2:00) Central Africa Time, Eastern European Time, Kaliningrad Time"
 msgstr ""
 "(UTC +2:00) Central Africa Time, Eastern European Time, Kaliningrad Time"
 
-#: ../../../application/helpers/language_helper.php:182
+#: ../../../application/helpers/language_helper.php:226
 msgid "(UTC +3:00) Moscow Time, East Africa Time"
 msgstr "(UTC +3:00) Moscow Time, East Africa Time"
 
-#: ../../../application/helpers/language_helper.php:183
+#: ../../../application/helpers/language_helper.php:227
 msgid "(UTC +3:30) Iran Standard Time"
 msgstr "(UTC +3:30) Iran Standard Time"
 
-#: ../../../application/helpers/language_helper.php:184
+#: ../../../application/helpers/language_helper.php:228
 msgid "(UTC +4:00) Azerbaijan Standard Time, Samara Time"
 msgstr "(UTC +4:00) Azerbaijan Standard Time, Samara Time"
 
-#: ../../../application/helpers/language_helper.php:185
+#: ../../../application/helpers/language_helper.php:229
 msgid "(UTC +4:30) Afghanistan"
 msgstr "(UTC +4:30) Afghanistan"
 
-#: ../../../application/helpers/language_helper.php:186
+#: ../../../application/helpers/language_helper.php:230
 msgid "(UTC +5:00) Pakistan Standard Time, Yekaterinburg Time"
 msgstr "(UTC +5:00) Pakistan Standard Time, Yekaterinburg Time"
 
-#: ../../../application/helpers/language_helper.php:187
+#: ../../../application/helpers/language_helper.php:231
 msgid "(UTC +5:30) Indian Standard Time, Sri Lanka Time"
 msgstr "(UTC +5:30) Indian Standard Time, Sri Lanka Time"
 
-#: ../../../application/helpers/language_helper.php:188
+#: ../../../application/helpers/language_helper.php:232
 msgid "(UTC +5:45) Nepal Time"
 msgstr "(UTC +5:45) Nepal Time"
 
-#: ../../../application/helpers/language_helper.php:189
+#: ../../../application/helpers/language_helper.php:233
 msgid "(UTC +6:00) Bangladesh Standard Time, Bhutan Time, Omsk Time"
 msgstr "(UTC +6:00) Bangladesh Standard Time, Bhutan Time, Omsk Time"
 
-#: ../../../application/helpers/language_helper.php:190
+#: ../../../application/helpers/language_helper.php:234
 msgid "(UTC +6:30) Cocos Islands, Myanmar"
 msgstr "(UTC +6:30) Cocos Islands, Myanmar"
 
-#: ../../../application/helpers/language_helper.php:191
+#: ../../../application/helpers/language_helper.php:235
 msgid "(UTC +7:00) Krasnoyarsk Time, Cambodia, Laos, Thailand, Vietnam"
 msgstr "(UTC +7:00) Krasnoyarsk Time, Cambodia, Laos, Thailand, Vietnam"
 
-#: ../../../application/helpers/language_helper.php:192
+#: ../../../application/helpers/language_helper.php:236
 msgid ""
 "(UTC +8:00) Australian Western Standard Time, Beijing Time, Irkutsk Time"
 msgstr ""
 "(UTC +8:00) Australian Western Standard Time, Beijing Time, Irkutsk Time"
 
-#: ../../../application/helpers/language_helper.php:193
+#: ../../../application/helpers/language_helper.php:237
 msgid "(UTC +8:45) Australian Central Western Standard Time"
 msgstr "(UTC +8:45) Australian Central Western Standard Time"
 
-#: ../../../application/helpers/language_helper.php:194
+#: ../../../application/helpers/language_helper.php:238
 msgid "(UTC +9:00) Japan Standard Time, Korea Standard Time, Yakutsk Time"
 msgstr "(UTC +9:00) Japan Standard Time, Korea Standard Time, Yakutsk Time"
 
-#: ../../../application/helpers/language_helper.php:195
+#: ../../../application/helpers/language_helper.php:239
 msgid "(UTC +9:30) Australian Central Standard Time"
 msgstr "(UTC +9:30) Australian Central Standard Time"
 
-#: ../../../application/helpers/language_helper.php:196
+#: ../../../application/helpers/language_helper.php:240
 msgid "(UTC +10:00) Australian Eastern Standard Time, Vladivostok Time"
 msgstr "(UTC +10:00) Australian Eastern Standard Time, Vladivostok Time"
 
-#: ../../../application/helpers/language_helper.php:197
+#: ../../../application/helpers/language_helper.php:241
 msgid "(UTC +10:30) Lord Howe Island"
 msgstr "(UTC +10:30) Lord Howe Island"
 
-#: ../../../application/helpers/language_helper.php:198
+#: ../../../application/helpers/language_helper.php:242
 msgid "(UTC +11:00) Magadan Time, Solomon Islands, Vanuatu"
 msgstr "(UTC +11:00) Magadan Time, Solomon Islands, Vanuatu"
 
-#: ../../../application/helpers/language_helper.php:199
+#: ../../../application/helpers/language_helper.php:243
 msgid "(UTC +11:30) Norfolk Island"
 msgstr "(UTC +11:30) Norfolk Island"
 
-#: ../../../application/helpers/language_helper.php:200
+#: ../../../application/helpers/language_helper.php:244
 msgid ""
 "(UTC +12:00) Fiji, Gilbert Islands, Kamchatka Time, New Zealand Standard Time"
 msgstr ""
 "(UTC +12:00) Fiji, Gilbert Islands, Kamchatka Time, New Zealand Standard Time"
 
-#: ../../../application/helpers/language_helper.php:201
+#: ../../../application/helpers/language_helper.php:245
 msgid "(UTC +12:45) Chatham Islands Standard Time"
 msgstr "(UTC +12:45) Chatham Islands Standard Time"
 
-#: ../../../application/helpers/language_helper.php:202
+#: ../../../application/helpers/language_helper.php:246
 msgid "(UTC +13:00) Phoenix Islands Time, Tonga"
 msgstr "(UTC +13:00) Phoenix Islands Time, Tonga"
 
-#: ../../../application/helpers/language_helper.php:203
+#: ../../../application/helpers/language_helper.php:247
 msgid "(UTC +14:00) Line Islands"
 msgstr "(UTC +14:00) Line Islands"
 
@@ -2814,10 +2817,8 @@ msgstr "Download Here"
 
 #: ../../../application/views/default/files/get.php:141
 #, php-format
-msgid "Please wait %s second to download."
-msgid_plural "Please wait %s more seconds to download."
-msgstr[0] "Please wait %s second to download."
-msgstr[1] "Please wait %s more seconds to download."
+msgid "Please wait %s more seconds to download."
+msgstr "Please wait %s more seconds to download."
 
 #: ../../../application/views/default/files/get.php:145
 msgid "Captcha Test - Type the three(3) letters you see below:"
