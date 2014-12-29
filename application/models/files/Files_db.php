@@ -150,6 +150,11 @@ class Files_db extends CI_Model {
 	{
 		return $this->db->select('id')->count_all_results('refrence');
 	}
+
+	public function get_admin_num_files_in_folder($folder_id)
+	{
+		return $this->db->select('f_id')->count_all_results('folder');
+	}
 	
 	public function get_admin_num_files_search($query)
 	{

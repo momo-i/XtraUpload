@@ -29,17 +29,40 @@
  */
 class Files extends CI_Controller {
 
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @see		Admin_access
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('admin_access');
 	}
 
+	/**
+	 * Files::index()
+	 *
+	 * Redirect Files::view()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		redirect('admin/files/view');
 	}
 
+	/**
+	 * Files::view()
+	 *
+	 * File view page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function view()
 	{
 		$this->load->library('pagination');
@@ -94,6 +117,15 @@ class Files extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Files::folder()
+	 *
+	 * Folder view page
+	 *
+	 * @access	public
+	 * @param	string	$folder_id	Folder ID
+	 * @return	void
+	 */
 	public function folder($folder_id)
 	{
 		$this->load->library('pagination');
@@ -129,7 +161,7 @@ class Files extends CI_Controller {
 		$data['per_page'] = $per_page;
 
 		$config['base_url'] = site_url('admin/files/view');
-		$config['total_rows'] = $this->files_db->get_admin_num_filesInFolder($folder_id);
+		$config['total_rows'] = $this->files_db->get_admin_num_files_in_folder($folder_id);
 		$config['per_page'] = $per_page;
 		$config['uri_segment'] = 4;
 
@@ -148,6 +180,15 @@ class Files extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Files::search()
+	 *
+	 * File search
+	 *
+	 * @access	public
+	 * @param	string	$query	Database query
+	 * @return	void
+	 */
 	public function search($query='')
 	{
 		if( ! empty($query))
@@ -216,12 +257,21 @@ class Files extends CI_Controller {
 		}
 	}
 
+	/**
+	 * Files::edit()
+	 *
+	 * Edit file
+	 *
+	 * @access	public
+	 * @param	string	$id	File ID
+	 * @return	void
+	 */
 	public function edit($id)
 	{
 		if($this->input->post('status'))
 		{
 			$this->db->where('file_id', $id);
-			$this->db->update('refrence', $_POST);
+			$this->db->update('refrence', $this->input->post());
 
 			$this->session->set_flashdata('msg', lang('File Edited'));
 			redirect('admin/files/view');
@@ -236,6 +286,15 @@ class Files extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Files::delete()
+	 *
+	 * Delete file
+	 *
+	 * @access	public
+	 * @param	string	$id	File ID
+	 * @return	void
+	 */
 	public function delete($id)
 	{
 		$this->files_db->delete_file_admin($id);
@@ -243,6 +302,15 @@ class Files extends CI_Controller {
 		redirect('admin/files/view');
 	}
 
+	/**
+	 * Files::ban()
+	 *
+	 * Ban file
+	 *
+	 * @access	public
+	 * @param	string	$id	File ID
+	 * @return	void
+	 */
 	public function ban($id)
 	{
 		$this->files_db->ban_file_admin($id);
@@ -250,6 +318,14 @@ class Files extends CI_Controller {
 		redirect('admin/files/view');
 	}
 
+	/**
+	 * Files::sort()
+	 *
+	 * Sort file
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function sort()
 	{
 		if($this->input->post('sort'))
@@ -267,6 +343,14 @@ class Files extends CI_Controller {
 		redirect('admin/files');
 	}
 
+	/**
+	 * Files::count()
+	 *
+	 * Show file count
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function count()
 	{
 		if($this->input->post('file_count'))
@@ -278,6 +362,15 @@ class Files extends CI_Controller {
 		redirect('admin/files/view');
 	}
 
+	/**
+	 * Files::search_count()
+	 *
+	 * Show searched file count
+	 *
+	 * @access	public
+	 * @param	string	$query	Database query
+	 * @return	void
+	 */
 	public function search_count($query)
 	{
 		if($this->input->post('file_count'))
@@ -289,6 +382,15 @@ class Files extends CI_Controller {
 		redirect('admin/files/search/'.$query);
 	}
 
+	/**
+	 * Files::mass_ban()
+	 *
+	 * Many files ban
+	 *
+	 * @access	public
+	 * @param	string	$query	Database query
+	 * @return	void
+	 */
 	public function mass_ban($query='')
 	{
 		if($this->input->post('files') && is_array($this->input->post('files')))
@@ -311,6 +413,15 @@ class Files extends CI_Controller {
 		}
 	}
 
+	/**
+	 * Files::mass_delete()
+	 *
+	 * Many files delete
+	 *
+	 * @access	public
+	 * @param	string	$query	Database query
+	 * @return	void
+	 */
 	public function mass_delete($query='')
 	{
 		if($this->input->post('files') && is_array($this->input->post('files')))
