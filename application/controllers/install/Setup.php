@@ -28,18 +28,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Setup extends CI_Controller {
 
-	private $os = false;
+	/**
+	 * Operating system
+	 *
+	 * @access	private
+	 * @var		bool
+	 */
+	private $_os = false;
 
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 		$this->_check_os();
 	}
 
+	/**
+	 * Setup::index()
+	 *
+	 * Show install page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		$this->load->view('install/header');
-		if(strcmp($this->os, 'LINUX') === 0)
+		if(strcmp($this->_os, 'LINUX') === 0)
 		{
 			$this->load->view('install/setup');
 		}
@@ -50,11 +70,19 @@ class Setup extends CI_Controller {
 		$this->load->view('install/footer');
 	}
 
+	/**
+	 * Setup::_check_os()
+	 *
+	 * Get PHP_OS
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _check_os()
 	{
 		if(defined('PHP_OS'))
 		{
-			$this->os = strtoupper(PHP_OS);
+			$this->_os = strtoupper(PHP_OS);
 		}
 	}
 

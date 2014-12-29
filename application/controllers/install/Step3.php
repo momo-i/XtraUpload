@@ -28,6 +28,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Step3 extends CI_Controller {
 
+	/**
+	 * Step3::index()
+	 *
+	 * Show step3 page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		$data['servername'] = site_url();

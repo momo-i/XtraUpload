@@ -28,10 +28,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Ipn extends CI_Controller {
 
-	private $gateway = '';
+	/**
+	 * Gateway number
+	 *
+	 * @access	private
+	 * @var		int
+	 */
+	private $_gateway = null;
 
 	/**
-	 * Ipn()
+	 * Constructor
 	 *
 	 * The home page controller constructor
 	 *
@@ -49,21 +55,19 @@ class Ipn extends CI_Controller {
 		return;
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * IPN->paypal()
+	 * Ipn::paypal()
 	 *
 	 * Validate PayPal payments
 	 *
-	 * @access  public
-	 * @return  none
+	 * @access	public
+	 * @return	void
 	 */
 	public function paypal()
 	{
 		// Include the paypal library
 		include_once (APPPATH.'libraries/payment/Paypal.php');
-		$this->gateway = '1';
+		$this->_gateway = 1;
 
 		// Create an instance of the paypal library
 		$my_paypal = new Paypal();
@@ -99,6 +103,14 @@ class Ipn extends CI_Controller {
 		redirect('/user/pay_cancel');
 	}
 
+	/**
+	 * Ipn::authorize()
+	 *
+	 * Validate Authorize payments
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function authorize()
 	{
 		// make sure there are no timeouts...
@@ -109,7 +121,7 @@ class Ipn extends CI_Controller {
 
 		// Include the paypal library
 		include_once (APPPATH.'libraries/payment/Authorize.php');
-		$this->gateway = '2';
+		$this->_gateway = 2;
 
 		// Create an instance of the authorize.net library
 		$my_authorize = new Authorize();
@@ -141,11 +153,19 @@ class Ipn extends CI_Controller {
 		}
 	}
 
+	/**
+	 * Ipn::two_checkout()
+	 *
+	 * Validate Two Checkout payments
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function two_checkout()
 	{
 		// Include the paypal library
 		include_once (APPPATH.'libraries/payment/TwoCo.php');
-		$this->gateway = '3';
+		$this->_gateway = 3;
 
 		$gate = $this->db->get_where('gateways', array('name' => 'twoco'))->row();
 		$gate_conf = json_decode($gate->settings);
@@ -180,8 +200,16 @@ class Ipn extends CI_Controller {
 		}
 	}
 
-	//--------------------------------------------------------------------
-
+	/**
+	 * Ipn::_new_user_payment()
+	 *
+	 * New user payment
+	 *
+	 * @access	private
+	 * @param	int		$id		User ID
+	 * @param	int		$amount	Amount
+	 * @return	void
+	 */
 	private function _new_user_payment($id, $amount)
 	{
 		$this->db->where('id', $id)->update('users', array('status' => 1));
@@ -194,7 +222,7 @@ class Ipn extends CI_Controller {
 		$this->load->model('transactions/transactions_db');
 		$data = array(
 			'user' => $user->id,
-			'gateway' => $this->gateway,
+			'gateway' => $this->_gateway,
 			'time' => time(),
 			'status' => '1',
 			'ammount' => $amount,
@@ -205,9 +233,19 @@ class Ipn extends CI_Controller {
 		$this->transactions_db->insert($id);
 	}
 
+	/**
+	 * Ipn::_log_error()
+	 *
+	 * Error logging
+	 *
+	 * @access	private
+	 * @param	int		$gate	Gateway ID
+	 * @param	array	$data	Payment datas
+	 * @return	void|false
+	 */
 	private function _log_error($gate, $data)
 	{
-		if($this->gateway == 2)
+		if($this->_gateway == 2)
 		{
 			$settings = @json_decode(@base64_decode(@$data['x_Cust_ID']));
 		}
@@ -221,15 +259,15 @@ class Ipn extends CI_Controller {
 		}
 
 		$id = $settings['user_id'];
-		if($this->gateway == 1)
+		if($this->_gateway == 1)
 		{
 			$amount = $data['amount'];
 		}
-		elseif($this->gateway == 2)
+		elseif($this->_gateway == 2)
 		{
 			$amount = $data['x_Amount'];
 		}
-		elseif($this->gateway == 3)
+		elseif($this->_gateway == 3)
 		{
 			$amount = $data['total'];
 		}
@@ -240,7 +278,7 @@ class Ipn extends CI_Controller {
 		$this->load->model('transactions/transactions_db');
 		$data = array(
 			'user' => $user->id,
-			'gateway' => $this->gateway,
+			'gateway' => $this->_gateway,
 			'time' => time(),
 			'status' => '0',
 			'ammount' => $amount,

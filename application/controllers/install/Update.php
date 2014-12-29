@@ -28,9 +28,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Update extends CI_Controller {
 
+	/**
+	 * Update flag
+	 *
+	 * @access	public
+	 * @var		bool
+	 */
 	public $updated = FALSE;
+
+	/**
+	 * Versions
+	 *
+	 * @access	private
+	 * @var		array
+	 */
 	private $_verions = array();
 
+	/**
+	 * Constructor
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -40,6 +56,14 @@ class Update extends CI_Controller {
 		$this->_xu_db_version = str_replace(array('.', ','), '', XU_DB_VERSION);
 	}
 
+	/**
+	 * Update::index()
+	 *
+	 * Show update page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		foreach ($this->_versions as $version)
@@ -60,6 +84,14 @@ class Update extends CI_Controller {
 		$this->load->view('install/footer');
 	}
 
+	/**
+	 * Update::do_update()
+	 *
+	 * Update XtraUpload
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function do_update()
 	{
 		$this->_check_versions();
@@ -86,6 +118,14 @@ class Update extends CI_Controller {
 		$this->load->view('install/footer');
 	}
 
+	/**
+	 * Update::done()
+	 *
+	 * Show update done page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function done()
 	{
 		$this->load->view('install/header');
@@ -93,6 +133,16 @@ class Update extends CI_Controller {
 		$this->load->view('install/footer');
 	}
 
+	/**
+	 * Update::_update()
+	 *
+	 * Call update version function
+	 *
+	 * @access	private
+	 * @param	string	$prev	Previous version
+	 * @param	string	$new	New version
+	 * @return	bool
+	 */
 	private function _update($prev, $new)
 	{
 		$prev = str_replace(array(',', '.'), '', $prev);
@@ -127,6 +177,14 @@ class Update extends CI_Controller {
 		return FALSE;
 	}
 
+	/**
+	 * Update::_populate_version()
+	 *
+	 * Populate versions
+	 *
+	 * @access	private
+	 * @return	array
+	 */
 	private function _populate_version()
 	{
 		$version = array();
@@ -165,6 +223,14 @@ class Update extends CI_Controller {
 		return $version;
 	}
 
+	/**
+	 * Update::_update_3000002()
+	 *
+	 * Update version 3.0.0 Alpha2
+	 *
+	 * @access	private
+	 * @return	bool
+	 */
 	private function _update_3000002()
 	{
 		$query = $this->db->get_where('config', array('name' => 'locale'));
@@ -185,24 +251,56 @@ class Update extends CI_Controller {
 		return TRUE;
 	}
 
+	/**
+	 * Update::_update_3000010()
+	 *
+	 * Update Beta1
+	 *
+	 * @access	private
+	 * @return	bool
+	 */
 	private function _update_3000010()
 	{
 		$this->_set_db_version();
 		return TRUE;
 	}
 
+	/**
+	 * Update::_update_3000020()
+	 *
+	 * Update Beta2
+	 *
+	 * @access	private
+	 * @return	bool
+	 */
 	private function _update_3000020()
 	{
 		$this->_set_db_version();
 		return TRUE;
 	}
 
+	/**
+	 * Update::_update_3000030()
+	 *
+	 * Update Beta3
+	 *
+	 * @access	public
+	 * @return	bool
+	 */
 	private function _update_3000030()
 	{
 		$this->_set_db_version();
 		return TRUE;
 	}
 
+	/**
+	 * Update::_update_3000040()
+	 *
+	 * Update Beta4
+	 *
+	 * @access	private
+	 * @return	bool
+	 */
 	private function _update_3000040()
 	{
 		$query = $this->db->get_where('config', array('name' => 'captcha_width'));
@@ -210,7 +308,7 @@ class Update extends CI_Controller {
 		{
 			$this->updated = FALSE;
 			$this->_set_db_version();
-			return false;
+			return FALSE;
 		}
 
 		$data = array('id' => NULL,'name' => 'captcha_width','value' => '70','description1' => 'Captcha image width:','description2' => '','group' => 0,'type' => 'text','invincible' => 1);
@@ -222,6 +320,14 @@ class Update extends CI_Controller {
 		return TRUE;
 	}
 
+	/**
+	 * Update::_update_3000050()
+	 *
+	 * Update Beta5
+	 *
+	 * @access	private
+	 * @return	bool
+	 */
 	private function _update_3000050()
 	{
 		$query = $this->db->get_where('config', array('name' => 'player_width'));
@@ -229,7 +335,7 @@ class Update extends CI_Controller {
 		{
 			$this->updated = FALSE;
 			$this->_set_db_version();
-			return false;
+			return FALSE;
 		}
 
 		$data = array('id' => NULL,'name' => 'player_width','value' => '470','description1' => 'Player width:','description2' => '','group' => 0,'type' => 'text','invincible' => 1);
@@ -241,12 +347,28 @@ class Update extends CI_Controller {
 		return TRUE;
 	}
 
+	/**
+	 * Update::_update_3000100()
+	 *
+	 * Update RC1
+	 *
+	 * @access	private
+	 * @return	bool
+	 */
 	private function _update_3000100()
 	{
 		$this->_set_db_version();
 		return TRUE;
 	}
 
+	/**
+	 * Update::_update_3000200()
+	 *
+	 * Update RC2
+	 *
+	 * @access	private
+	 * @return	bool
+	 */
 	private function _update_3000200()
 	{
 		$query = $this->db->get_where('config', array('name' => 'show_about'));
@@ -264,6 +386,14 @@ class Update extends CI_Controller {
 		return TRUE;
 	}
 
+	/**
+	 * Update::_update_3000300()
+	 *
+	 * Update RC3
+	 *
+	 * @access	private
+	 * @return	bool
+	 */
 	private function _update_3000300()
 	{
 		$fields = array(
@@ -278,6 +408,14 @@ class Update extends CI_Controller {
 		return TRUE;
 	}
 
+	/**
+	 * Update::_update_3000400()
+	 *
+	 * Update RC4
+	 *
+	 * @access	private
+	 * @return	bool
+	 */
 	private function _update_3000400()
 	{
 		$this->dbforge->drop_table('sessions');
@@ -320,6 +458,14 @@ class Update extends CI_Controller {
 		return TRUE;
 	}
 
+	/**
+	 * Update::_set_db_version()
+	 *
+	 * Set version on database
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _set_db_version()
 	{
 		$data = array('value' => XU_VERSION);
@@ -327,6 +473,14 @@ class Update extends CI_Controller {
 		$this->db->update('config', $data);
 	}
 
+	/**
+	 * Update::_check_versions()
+	 *
+	 * Check update version
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _check_versions()
 	{
 		foreach ($this->_versions as $version)

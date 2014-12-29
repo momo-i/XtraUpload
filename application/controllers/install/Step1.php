@@ -28,11 +28,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Step1 extends CI_Controller {
 
+	/**
+	 * Constructor
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 	}
 
+	/**
+	 * Step1::index()
+	 *
+	 * Show install step1 page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		$data['license'] = file_get_contents(realpath(BASEPATH.'../LICENSE'));
@@ -40,7 +51,6 @@ class Step1 extends CI_Controller {
 		$this->load->view('install/step1', $data);
 		$this->load->view('install/footer');
 	}
-
 
 }
 

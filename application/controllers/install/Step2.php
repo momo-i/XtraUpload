@@ -28,11 +28,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Step2 extends CI_Controller {
 
+	/**
+	 * Constructor
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 	}
 
+	/**
+	 * Step2::index()
+	 *
+	 * Show step2 page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		$data = $this->_check_vers();
@@ -41,6 +52,14 @@ class Step2 extends CI_Controller {
 		$this->load->view('install/footer');
 	}
 
+	/**
+	 * Step2::_check_vers()
+	 *
+	 * Get required application version for install
+	 *
+	 * @access	private
+	 * @return	array
+	 */
 	private function _check_vers()
 	{
 		$chmod = array();

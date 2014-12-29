@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * XtraUpload Example Extend Class
  *
  * @package		XtraUpload
- * @subpackage	Controller
+ * @subpackage	Controllers
  * @category	Model
  * @author		momo-i
  * @link		https://github.com/momo-i/xtraupload-v3

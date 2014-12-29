@@ -28,9 +28,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Step5 extends CI_Controller {
 
+	/**
+	 * Database version
+	 *
+	 * @access	private
+	 * @var		string
+	 */
 	private $_db_version;
+
+	/**
+	 * XtraUpload version
+	 *
+	 * @access	private
+	 * @var		string
+	 */
 	private $_version = null;
 
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @see		Xu
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -40,6 +60,14 @@ class Step5 extends CI_Controller {
 		$this->_version = $this->xu->get_version();
 	}
 
+	/**
+	 * Step5::index()
+	 *
+	 * Show step5 page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		$this->load->database();
@@ -54,6 +82,14 @@ class Step5 extends CI_Controller {
 		$this->load->view('install/footer');
 	}
 
+	/**
+	 * Step5::_load_database()
+	 *
+	 * Create new database table
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _load_database()
 	{
 		$fields = array(
