@@ -27,6 +27,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Functions {
 
+	/**
+	 * Functions::get_rand_id()
+	 *
+	 * Returns random strings
+	 *
+	 * @access	public
+	 * @param	int		$length	Password length
+	 * @return	string	random strings
+	 */
 	public function get_rand_id($length=10)
 	{
 		$password = "";
@@ -45,28 +54,40 @@ class Functions {
 		}
 		return $password;
 	}
-	
-	// alias of above function
-	// deprecated? genRandId
-	public function gen_rand_id($length=10)
-	{
-		return $this->get_rand_id($length);
-	}
-	
-	public function get_server_load($movingAverage=0) 
+
+	/**
+	 * Functions::get_server_load()
+	 *
+	 * Get server load average
+	 *
+	 * @access	public
+	 * @param	int		$moving_average	moving average
+	 * @return	int
+	 */
+	public function get_server_load($moving_average=0) 
     { 
 		if(is_readable('/proc/loadavg'))
 		{
 			$fp = fopen('/proc/loadavg', 'r');
 			$stats = substr(fgets($fp), 2, 2);
-    	    return str_replace(',', '', $stats[$movingAverage]);
+    	    return str_replace(',', '', $stats[$moving_average]);
 		}
 		else
 		{
 			return 0;
 		}
     }
-	
+
+	/**
+	 * Functions::gen_pass()
+	 *
+	 * Generate password
+	 *
+	 * @access	public
+	 * @param	int		$length	Password length
+	 * @param	bool	$caps	Use upper case or not
+	 * @return	string	password
+	 */
 	public function gen_pass($length, $caps=true)
 	{
 		$password = "";
@@ -87,7 +108,16 @@ class Functions {
 		}
 		return $password;
 	}
-	
+
+	/**
+	 * Functions::check_login
+	 *
+	 * Check user logged-in or not
+	 *
+	 * @access	public
+	 * @param	string	$send	Redirect path
+	 * @return	void
+	 */
 	public function check_login($send='/user/login')
 	{
 		$CI =& get_instance();
@@ -97,7 +127,17 @@ class Functions {
 			exit();
 		}
 	}
-	
+
+	/**
+	 * Functions::elipsis()
+	 *
+	 * Elipsis strings
+	 *
+	 * @access	public
+	 * @param	string	$str	Want to elipsis string
+	 * @param	int		$count	Want to elipsis count
+	 * @return	string
+	 */
 	public function elipsis($str, $count = 13)
 	{
 		if(mb_strlen($str) <= ($count*3))
@@ -118,7 +158,16 @@ class Functions {
 		$return .= $parts[(count($parts) - 3)].$parts[(count($parts) - 2)].end($parts);
 		return $return;
 	}
-	
+
+	/**
+	 * Functions::is_image()
+	 *
+	 * Check file is image or not
+	 *
+	 * @access	public
+	 * @param	string	$file	Want to check filename
+	 * @return	bool	true|false
+	 */
 	public function is_image($file)
 	{
 		$img_ext = array('jpg', 'gif', 'jpeg', 'png');
@@ -147,7 +196,16 @@ class Functions {
 		}
 
 	}
-	
+
+	/**
+	 * Functions::get_file_type_icon()
+	 *
+	 * Returns file type icon
+	 *
+	 * @access	public
+	 * @param	string	$type	File type
+	 * @return	string	Icon filename
+	 */
 	public function get_file_type_icon($type)
 	{
 		if(file_exists(ROOTPATH.'/assets/images/files/'.$type.'.png'))
@@ -159,13 +217,32 @@ class Functions {
 			return 'default.png';
 		}
 	}
-	
-	public function get_json_filetype_List()
+
+	/**
+	 * Functions::get_json_filetype_list()
+	 *
+	 * Returns file type list to json
+	 *
+	 * @access	public
+	 * @return	string
+	 */
+	public function get_json_filetype_list()
 	{
 		return '"3gp", "7z", "aca", "ai", "api", "app", "as", "ascx", "asmx", "asp", "aspx", "avi", "avs", "axt", "bash", "bat", "bmp", "c", "cab", "cal", "cat", "cda", "cf", "chm", "cnf", "conf", "config", "cpl", "cpp", "crt", "cs", "csproj", "css", "csv", "cue", "dar", "db", "dbp", "dem", "disco", "dll", "dng", "doc", "dot", "dpk", "dpr", "dps", "dtq", "dun", "etp", "exe", "fdb", "fhf", "fla", "flv", "fnd", "fon", "gif", "gz", "h", "hlp", "hol", "htm", "html", "htt", "hxc", "hxi", "hxk", "hxs", "hxt", "icm", "ini", "ins", "iqy", "iso", "its", "jar", "java", "jbf", "job", "jpeg", "jpf", "jpg", "js", "lnk", "m3u", "m3v", "m4a", "m4p", "m4v", "mad", "map", "mapup", "mat", "mdb", "mdf", "mht", "mml", "mov", "mp3", "mp4", "mpeg", "mpg", "msc", "msg", "msi", "ncd", "nfo", "none", "nrg", "ogg", "ost", "otf", "pas", "pdf", "pdi", "pet", "pfm", "php", "pif", "plg", "pmc", "", "pot", "ppk", "pps", "ppt", "prf", "psd", "psp", "pub", "qbb", "rar", "rb", "rc", "rct", "rdp", "refresh", "reg", "res", "resx", "rmvb", "rss", "rtf", "sdl", "sea", "sh", "shs", "sln", "sql", "suo", "swf", "tar", "tdf", "tdl", "theme", "tiff", "ttf", "txt", "url", "vb", "vbproj", "vbs", "vcard", "vcf", "vob", "vsmacros", "wab", "wma", "wmv", "wpl", "wri", "wsc", "xhtml", "xla", "xls", "xml", "xpi", "xsd", "xsl", "xslt", "xsn", "zip"';
 	}
 	
-	// Depreciated - USE >> byte_format()
+	/**
+	 * Functions::get_filesize_prefix()
+	 *
+	 * Formats a numbers as bytes, based on size, and adds the appropriate suffix
+	 *
+	 * This function deprecated, use byte_format()
+	 *
+	 * @deprecated	3.1.0
+	 * @access	public
+	 * @param	int		$size	Filesize
+	 * @return	string
+	 */
 	public function get_filesize_prefix($size)
 	{
 	    if( ! function_exists('byte_format'))
@@ -175,7 +252,17 @@ class Functions {
 	    }
 	    return byte_format($size);
 	}
-	
+
+	/**
+	 * Functions::parse_version()
+	 *
+	 * Parse valid version or not
+	 *
+	 * @access	public
+	 * @param	string	$v			Version number
+	 * @param	bool	$details	Show Alpha/Beta/RC/STABLE or not
+	 * @return	string
+	 */
 	public function parse_version($v, $details=true)
 	{
 		if(!stristr($v, ','))
@@ -223,6 +310,16 @@ class Functions {
 		return $version;
 	}
 
+	/**
+	 * Functions::_str_split_unicode()
+	 *
+	 * str_split for unicode
+	 *
+	 * @access	private
+	 * @param	string	$str	String
+	 * @param	int		$l		Length
+	 * @return	string
+	 */
 	private function _str_split_unicode($str, $l = 0)
 	{
 		if ($l > 0)
