@@ -28,17 +28,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Stats extends CI_Controller {
 
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @see		Admin_access
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('admin_access');
 	}
 
+	/**
+	 * Stats::index()
+	 *
+	 * Redirect Stats::view()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		redirect('admin/stats/view');
 	}
 
+	/**
+	 * Stats::view()
+	 *
+	 * Show statistics page
+	 *
+	 * @accses	public
+	 * @return	void
+	 */
 	public function view()
 	{
 		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Site Stats')));

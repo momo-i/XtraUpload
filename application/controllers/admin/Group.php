@@ -28,17 +28,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Group extends CI_Controller {
 
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @see		Admin_access
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('admin_access');
 	}
 
+	/**
+	 * Group::index()
+	 *
+	 * Redirect Group::view()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		redirect('admin/group/view');
 	}
 
+	/**
+	 * Group::view()
+	 *
+	 * Show group page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function view()
 	{
 		$this->load->helper('string');
@@ -57,12 +80,21 @@ class Group extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Group::edit()
+	 *
+	 * Show/Edit group page
+	 *
+	 * @access	public
+	 * @param	int		$id	Group ID
+	 * @return	void
+	 */
 	public function edit($id)
 	{
 		if($this->input->post('name'))
 		{
 			// Save changes
-			$this->db->where('id', $id)->update('groups', $_POST);
+			$this->db->where('id', $id)->update('groups', $this->input->post());
 
 			// Encrypt the cache filename for security
 			$group_file_name = md5($this->config->config['encryption_key'].'group_'.$id);
@@ -91,12 +123,20 @@ class Group extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Group::add()
+	 *
+	 * Add group
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function add()
 	{
 		if($this->input->post('name'))
 		{
 			// Insert new group
-			$this->db->insert('groups', $_POST);
+			$this->db->insert('groups', $this->input->post());
 			$group = $this->db->insert_id();
 
 			// Encrypt the cache filename for security
@@ -113,7 +153,7 @@ class Group extends CI_Controller {
 			$this->remote_server_xml_rpc->update_cache();
 
 			// Send back to the main page
-			$this->session->set_flashdata('msg', lang('Group Edited!'));
+			$this->session->set_flashdata('msg', lang('New Group Added!'));
 			redirect('/admin/group/view');
 		}
 
@@ -127,6 +167,15 @@ class Group extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Group::turn_on()
+	 *
+	 * Turn on group
+	 *
+	 * @access	public
+	 * @param	int		$id	Group ID
+	 * @return	void
+	 */
 	public function turn_on($id)
 	{
 		if($id > 2)
@@ -138,6 +187,15 @@ class Group extends CI_Controller {
 		redirect('admin/group/view');
 	}
 
+	/**
+	 * Group::turn_off()
+	 *
+	 * Turn off group
+	 *
+	 * @access	public
+	 * @param	int		$id	Group ID
+	 * @return	void
+	 */
 	public function turn_off($id)
 	{
 		if($id > 2)
@@ -149,6 +207,15 @@ class Group extends CI_Controller {
 		redirect('admin/group/view');
 	}
 
+	/**
+	 * Group::delete()
+	 *
+	 * Delete group
+	 *
+	 * @access	public
+	 * @param	int		$id	Group ID
+	 * @return	void
+	 */
 	public function delete($id)
 	{
 		if($id > 2)
@@ -159,6 +226,14 @@ class Group extends CI_Controller {
 		redirect('admin/group/view');
 	}
 
+	/**
+	 * Group::_get_real_names()
+	 *
+	 * Returns real name
+	 *
+	 * @access	private
+	 * @return	array	real name
+	 */
 	private function _get_real_names()
 	{
 		$group = array(
@@ -184,6 +259,14 @@ class Group extends CI_Controller {
 		return $group;
 	}
 
+	/**
+	 * Group::_get_real_descriptions()
+	 *
+	 * Returns real descriptions
+	 *
+	 * @access	private
+	 * @return	array	Readl descriptions
+	 */
 	private function _get_real_descriptions()
 	{
 		$group = array(
@@ -210,6 +293,14 @@ class Group extends CI_Controller {
 		return $group;
 	}
 
+	/**
+	 * Group::_get_real_types()
+	 *
+	 * Returns real types
+	 *
+	 * @access	private
+	 * @return	array	Real types
+	 */
 	private function _get_real_types()
 	{
 		$group = array(

@@ -28,6 +28,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class User extends CI_Controller {
 
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @see		Admin_access
+	 * @see		Users_db
+	 * @see		XU_Form_validation
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -37,21 +46,53 @@ class User extends CI_Controller {
 		$this->load->helper('form');
 	}
 
+	/**
+	 * User::index()
+	 *
+	 * Redirect User::view()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		redirect('admin/user/view');
 	}
 
+	/**
+	 * User::manage()
+	 *
+	 * Redirect User::view()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function manage()
 	{
 		redirect('admin/user/view');
 	}
 
+	/**
+	 * User::home()
+	 *
+	 * Redirect User::view()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function home()
 	{
 		redirect('admin/user/view');
 	}
 
+	/**
+	 * User::view()
+	 *
+	 * Show user account page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function view()
 	{
 		$this->load->library('pagination');
@@ -105,6 +146,15 @@ class User extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * User::search()
+	 *
+	 * Show user search page
+	 *
+	 * @access	public
+	 * @param	string	$query	Search string
+	 * @return	void
+	 */
 	public function search($query='')
 	{
 		$this->load->helper('string');
@@ -173,8 +223,15 @@ class User extends CI_Controller {
 		}
 	}
 
-	// ------------------------------------------------------------------------
-
+	/**
+	 * User::edit()
+	 *
+	 * Edit user
+	 *
+	 * @access	public
+	 * @param	int		$id	User ID
+	 * @return	void
+	 */
 	public function edit($id)
 	{
 		$config = array(
@@ -224,6 +281,14 @@ class User extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * User::add()
+	 *
+	 * Add user
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function add()
 	{
 		$config = array(
@@ -274,6 +339,15 @@ class User extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * User::delete()
+	 *
+	 * Delete user
+	 *
+	 * @access	public
+	 * @param	int		$id	User ID
+	 * @return	void
+	 */
 	public function delete($id)
 	{
 		$this->users_db->delete_user($id);
@@ -281,6 +355,15 @@ class User extends CI_Controller {
 		redirect('admin/user/view');
 	}
 
+	/**
+	 * User::turn_off()
+	 *
+	 * Disable user account
+	 *
+	 * @access	public
+	 * @param	int		$id	User ID
+	 * @return	void
+	 */
 	public function turn_off($id)
 	{
 		$this->users_db->set_user_status(0, $id);
@@ -288,6 +371,15 @@ class User extends CI_Controller {
 		redirect('admin/user/view');
 	}
 
+	/**
+	 * User::turn_on()
+	 *
+	 * Enable user account
+	 *
+	 * @access	public
+	 * @param	int		$id	User ID
+	 * @return	void
+	 */
 	public function turn_on($id)
 	{
 		$this->users_db->set_user_status(1, $id);
@@ -295,6 +387,14 @@ class User extends CI_Controller {
 		redirect('admin/user/view');
 	}
 
+	/**
+	 * User::sort()
+	 *
+	 * Sort user account
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function sort()
 	{
 		if($this->input->post('sort'))
@@ -312,6 +412,14 @@ class User extends CI_Controller {
 		redirect('admin/user');
 	}
 
+	/**
+	 * User::count()
+	 *
+	 * Count users
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function count()
 	{
 		if($this->input->post('user_count'))
@@ -323,6 +431,15 @@ class User extends CI_Controller {
 		redirect('admin/user/view');
 	}
 
+	/**
+	 * User::search_count()
+	 *
+	 * Count search user
+	 *
+	 * @access	public
+	 * @param	string	$query	Search string
+	 * @return	void
+	 */
 	public function search_count($query)
 	{
 		if($this->input->post('user_count'))
@@ -334,6 +451,15 @@ class User extends CI_Controller {
 		redirect('admin/user/search/'.$query);
 	}
 
+	/**
+	 * User::mass_delete()
+	 *
+	 * Mass user delete
+	 *
+	 * @access	public
+	 * @param	string	$query	Search string
+	 * @return	void
+	 */
 	public function mass_delete($query='')
 	{
 		if($this->input->post('users') and is_array($this->input->post('users')))
@@ -355,6 +481,14 @@ class User extends CI_Controller {
 		}
 	}
 
+	/**
+	 * User::check_user()
+	 *
+	 * User check callback
+	 *
+	 * @access	public
+	 * @return	bool	true|false
+	 */
 	public function check_user()
 	{
 		$query = $this->db->get_where('users', array('username' => $this->input->post('username')));

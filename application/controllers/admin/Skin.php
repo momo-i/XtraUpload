@@ -28,6 +28,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Skin extends CI_Controller {
 
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @see		Admin_access
+	 * @see		Skin_db
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -35,11 +43,27 @@ class Skin extends CI_Controller {
 		$this->load->model('skin/skin_db');
 	}
 
+	/**
+	 * Skin::index()
+	 *
+	 * Redirect Skin::view()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		redirect('admin/skin/view');
 	}
 
+	/**
+	 * Skin::view()
+	 *
+	 * Show skin page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function view()
 	{
 		$this->load->helper('string');
@@ -57,6 +81,14 @@ class Skin extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Skin::install_new()
+	 *
+	 * Install new skin
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function install_new()
 	{
 		if ($handle = opendir(APPPATH.'views'))
@@ -80,6 +112,15 @@ class Skin extends CI_Controller {
 		redirect('admin/skin/view');
 	}
 
+	/**
+	 * Skin::delete()
+	 *
+	 * Delete skin
+	 *
+	 * @access	public
+	 * @param	string	$file	Skin name
+	 * @return	void
+	 */
 	public function delete($file='')
 	{
 		if($file != '' and $file != 'default')
@@ -90,7 +131,15 @@ class Skin extends CI_Controller {
 		redirect('admin/skin/view');
 	}
 
-
+	/**
+	 * Skin::set_active()
+	 *
+	 * Activate skin
+	 *
+	 * @access	public
+	 * @param	string	$name	Skin name
+	 * @return	void
+	 */
 	public function set_active($name)
 	{
 		$skin_name = md5($this->config->config['encryption_key'].'skin_name');
@@ -108,6 +157,14 @@ class Skin extends CI_Controller {
 		redirect('admin/skin/view');
 	}
 
+	/**
+	 * Skin::_new_skins_to_install()
+	 *
+	 * Install new skin
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _new_skins_to_install()
 	{
 		if ($handle = opendir(APPPATH.'views/'))

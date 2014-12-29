@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @category	Controllers
  * @author		Matthew Glinski
  * @author		momo-i
+ * @todo		Re-write Zend Locale
  * @link		http://xtrafile.com/docs
  */
 class Translator extends CI_Controller {

@@ -28,6 +28,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Transactions extends CI_Controller {
 
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @see		Admin_access
+	 * @see		Transactions_db
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -35,21 +43,53 @@ class Transactions extends CI_Controller {
 		$this->load->model('transactions/transactions_db');
 	}
 
+	/**
+	 * Transactions::index()
+	 *
+	 * Redirect Transactions::view()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function index()
 	{
 		redirect('admin/user/view');
 	}
 
+	/**
+	 * Transactions::manage()
+	 *
+	 * Redirect Transactions::view()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function manage()
 	{
 		redirect('admin/user/view');
 	}
 
+	/**
+	 * Transactions::home()
+	 *
+	 * Redirect Transactions::view()
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function home()
 	{
 		redirect('admin/user/view');
 	}
 
+	/**
+	 * Transactions::view()
+	 *
+	 * Show tarnsactions page
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function view()
 	{
 		$this->load->library('pagination');
@@ -81,6 +121,15 @@ class Transactions extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
+	/**
+	 * Transactions::edit()
+	 *
+	 * Edit transactions
+	 *
+	 * @access	public
+	 * @param	int		$id	Transaction ID
+	 * @return	void
+	 */
 	public function edit($id)
 	{
 		$data['flash_message'] = '';
@@ -95,15 +144,14 @@ class Transactions extends CI_Controller {
 		$this->load->view($this->startup->skin.'/footer');
 	}
 
-	// ------------------------------------------------------------------------
-
 	/**
-	 * update()
+	 * Transactions::update()
 	 *
 	 * Process a new config object save request
 	 *
-	 * @access  public
-	 * @return  none
+	 * @access	public
+	 * @param	int		$id	Transaction ID
+	 * @return	none
 	 */
 	public function update($id)
 	{
@@ -128,6 +176,15 @@ class Transactions extends CI_Controller {
 		}
 	}
 
+	/**
+	 * Transcations::delete()
+	 *
+	 * Delete transaction
+	 *
+	 * @access	public
+	 * @param	int		$id	Transaction ID
+	 * @return	void
+	 */
 	public function delete($id)
 	{
 		// If the user has posted new values
