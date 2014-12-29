@@ -27,29 +27,133 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class XU_Filedownload {
 
-	// Public Vars
+	/**
+	 * Download file
+	 *
+	 * @access	public
+	 * @var		string
+	 */
 	public $file = null;
+
+	/**
+	 * Resume flag
+	 *
+	 * @access	public
+	 * @var		bool
+	 */
 	public $resume = true;
+
+	/**
+	 * Download filename
+	 *
+	 * @access	public
+	 * @var		string
+	 */
 	public $filename = null;
+
+	/**
+	 * Mime type
+	 *
+	 * @access	public
+	 * @var		string
+	 */
 	public $mime = null;
+
+	/**
+	 * Download speed
+	 *
+	 * @access	public
+	 * @var		int
+	 */
 	public $speed = 0;
+
+	/**
+	 * Bandwidth
+	 *
+	 * @access	public
+	 * @var		int
+	 */
 	public $bandwidth = 0;
 
-	// Private Vars, Do NOT Set!!
+	/**
+	 * CodeIgniter
+	 *
+	 * @access	private
+	 * @var		object
+	 */
 	private $CI;
-	private $file_len = 0;
-	private $file_mod = 0;
-	private $file_type = 0;
-	private $file_section = 0;
-	private $bufsize = 8192;
-	private $seek_start = 0;
-	private $seek_end = -1;
-	private $setup = false;
+
+	/**
+	 * File length
+	 *
+	 * @access	private
+	 * @var		int
+	 */
+	private $_file_len = 0;
+
+	/**
+	 * File mod
+	 *
+	 * @access	private
+	 * @var		int
+	 */
+	private $_file_mod = 0;
+
+	/**
+	 * File type
+	 *
+	 * @access	private
+	 * @var		int
+	 */
+	private $_file_type = 0;
+
+	/**
+	 * File section
+	 *
+	 * @access	private
+	 * @var		int
+	 */
+	private $_file_section = 0;
+
+	/**
+	 * Buffer size
+	 *
+	 * @access	private
+	 * @var		int
+	 */
+	private $_bufsize = 8192;
+
+	/**
+	 * Seek start
+	 *
+	 * @access	private
+	 * @var		int
+	 */
+	private $_seek_start = 0;
+
+	/**
+	 * Seek end
+	 *
+	 * @access	private
+	 * @var		int
+	 */
+	private $_seek_end = -1;
+
+	/**
+	 * Setup
+	 *
+	 * @access	private
+	 * @var		bool
+	 */
+	private $_setup = false;
 
 	/**
 	 * File Download Constructor
 	 *
 	 * The constructor sets up the download system as ready for files
+	 *
+	 * @access	public
+	 * @return	void
 	 */
 	function __construct()
 	{
@@ -58,13 +162,13 @@ class XU_Filedownload {
 	}
 
 	/**
-	 * Set Config
+	 * Filedownload::set_config()
 	 *
 	 * Sets Config Vars
 	 *
-	 * @access  public
-	 * @param   Config Array
-	 * @return  null
+	 * @access	public
+	 * @param	array	$config	Config
+	 * @return	void
 	 */
 	 public function set_config($config = array())
 	 {
@@ -75,13 +179,13 @@ class XU_Filedownload {
 	 }
 
 	/**
-	 * Send Download
+	 * Filedownload::send_download
 	 *
 	 * Begins download
 	 *
-	 * @access  public
-	 * @param   Config Array
-	 * @return  integer OR false
+	 * @access	public
+	 * @param	array	$config	Config
+	 * @return	int|false
 	 */
 	public function send_download($config = array())
 	{
@@ -90,9 +194,9 @@ class XU_Filedownload {
 		$this->_initialize($config);
 
 		// Grab some vars
-		$seek = $this->seek_start;
+		$seek = $this->_seek_start;
 		$speed = $this->speed;
-		$bufsize = $this->bufsize;
+		$bufsize = $this->_bufsize;
 		$packet = 1;
 
 		// Make sure we dont timeout wheil serving the download
@@ -117,10 +221,10 @@ class XU_Filedownload {
 
 		// If partial request skip to the part we want
 		if ($seek) fseek($res , $seek);
-		if ($this->seek_end < $seek) $this->seek_end = $size - 1;
+		if ($this->_seek_end < $seek) $this->_seek_end = $size - 1;
 
-		$this->_send_headers($size, $seek, $this->seek_end); //always use the last seek
-		$size = $this->seek_end - $seek + 1;
+		$this->_send_headers($size, $seek, $this->_seek_end); //always use the last seek
+		$size = $this->_seek_end - $seek + 1;
 
 		$packet = 0;
 
@@ -156,16 +260,25 @@ class XU_Filedownload {
 		return $this->bandwidth;
 	}
 
-	//Read a file segment
+	/**
+	 * Filedownload::fullread()
+	 *
+	 * Read a file segment
+	 *
+	 * @access	public
+	 * @param	resource	$fh		File handle
+	 * @param	int			$size	file size
+	 * @return	int
+	 */
 	public function fullread($fh, $size)
 	{
 		$buffer ='';
 		$done = 0;
 		while($done < $size)
 		{
-			if ($size - $done > $this->bufsize)
+			if ($size - $done > $this->_bufsize)
 			{
-				$thisbuff = fread($fh, $this->bufsize);
+				$thisbuff = fread($fh, $this->_bufsize);
 				$buffer .= $thisbuff;
 				$did = strlen($thisbuff);
 			}
@@ -181,17 +294,18 @@ class XU_Filedownload {
 	}
 
 	/**
-	 * Initialize the user preferences
+	 * Filedownload::_initialize()
 	 *
+	 * Initialize the user preference
 	 * Accepts an associative array as input, containing display preferences
 	 *
-	 * @access  private
-	 * @param   array of config preferences
-	 * @return  void
+	 * @access	private
+	 * @param	array	$config	config preferences
+	 * @return	true|void
 	 */
 	private function _initialize($config = array())
 	{
-		if($this->setup)
+		if($this->_setup)
 		{
 			return true;
 		}
@@ -204,8 +318,15 @@ class XU_Filedownload {
 		if($this->mime == NULL)
 		{
 			// Grab the file extension
-			$x = explode('.', $this->file);
-			$extension = end($x);
+			if(preg_match('#\.#', $this->file))
+			{
+				$x = explode('.', $this->file);
+				$extension = end($x);
+			}
+			else
+			{
+				$extension = "";
+			}
 
 			// Load the mime types
 			@include(APPPATH.'config/mimes.php');
@@ -230,49 +351,49 @@ class XU_Filedownload {
 
 			if ($range[0] > 0)
 			{
-				$this->seek_start = intval($range[0]);
+				$this->_seek_start = intval($range[0]);
 			}
 
 			if ($range[1] > 0)
 			{
-				$this->seek_end = intval($range[1]);
+				$this->_seek_end = intval($range[1]);
 			}
 			else
 			{
-				$this->seek_end = -1;
+				$this->_seek_end = -1;
 			}
 
 			// Do we want to serve a partial request?
 			if (!$this->resume)
 			{
-				$this->seek_start = 0;
+				$this->_seek_start = 0;
 			}
 			else
 			{
-				$this->file_section = 1;
+				$this->_file_section = 1;
 			}
 
 		}
 		else
 		{
 			// Serve the whole file, from the beginning
-			$this->seek_start = 0;
-			$this->seek_end = -1;
+			$this->_seek_start = 0;
+			$this->_seek_end = -1;
 		}
 	}
 
 	/**
-	 * Send Headers
+	 * Filedownload::_send_headers
 	 *
 	 * Sends Download Headers to the client, describing the download
 	 *
-	 * @access  private
-	 * @param   size of file
-	 * @param   begining of file
-	 * @param   end of file
-	 * @return  void
+	 * @access	private
+	 * @param	int		$size		Size of file
+	 * @param	int		$seek_start	Begining of file
+	 * @param	int		$seek_end	End of file
+	 * @return	void
 	 */
-	private function _send_headers($size,$seek_start=null,$seek_end=null)
+	private function _send_headers($size, $seek_start = null, $seek_end = null)
 	{
 		// Generate the server headers
 		header('Content-type: ' . $this->mime);
@@ -280,7 +401,7 @@ class XU_Filedownload {
 		header("Content-Transfer-Encoding: binary");
 		header('Expires: 0');
 
-		if ($this->file_section && $this->resume)
+		if ($this->_file_section && $this->resume)
 		{
 			header("HTTP/1.0 206 Partial Content");
 			header("Status: 206 Partial Content");
