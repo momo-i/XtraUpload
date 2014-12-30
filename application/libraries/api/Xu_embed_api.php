@@ -27,22 +27,59 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Xu_embed_api
 {
-	private $store;
+	/**
+	 * Store
+	 *
+	 * @access	private
+	 * @var		object
+	 */
+	private $_store;
+
+	/**
+	 * CodeIgniter singleton
+	 *
+	 * @access	private
+	 * @var		object
+	 */
 	private $CI;
-	
+
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		$this->CI =& get_instance();
 		log_message('debug', "XtraUpload Embed Code API Class Initialized");
 		$this->_init();
 	}
-	
+
+	/**
+	 * Xu_embed_api::_init()
+	 *
+	 * Initialize object
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _init()
 	{
-		$this->store = new stdClass();
-		$this->store->embed = array();
+		$this->_store = new stdClass();
+		$this->_store->embed = array();
 	}
-	
+
+	/**
+	 * Xu_embed_api::add_embed_type()
+	 *
+	 * Add embed type
+	 *
+	 * @access	public
+	 * @param	string	$types	Embed type
+	 * @param	string	$data	Embed data
+	 * @return	void
+	 */
 	public function add_embed_type($types, $data)
 	{
 		if(!is_array($types))
@@ -51,32 +88,67 @@ class Xu_embed_api
 		}
 		foreach($types as $type)
 		{
-			$this->store->embed[$type] = $data;
+			$this->_store->embed[$type] = $data;
 		}
 	}
-	
+
+	/**
+	 * Xu_embed_api::remove_embed_type()
+	 *
+	 * Remove embed type
+	 *
+	 * @access	public
+	 * @param	string	$type	Embed type
+	 * @return	void
+	 */
 	public function remove_embed_type($type)
 	{
-		unset($this->store->embed[$type]);
+		unset($this->_store->embed[$type]);
 	}
-	
+
+	/**
+	 * Xu_embed_api::get_embed_code()
+	 *
+	 * Returns embed code
+	 *
+	 * @access	public
+	 * @param	string	$type	Embed type
+	 * @return	object|false
+	 */
 	public function get_embed_code($type)
 	{
-		if(!isset($this->store->embed[$type]) or !is_array($this->store->embed[$type]))
+		if(!isset($this->_store->embed[$type]) or !is_array($this->_store->embed[$type]))
 		{
 			return false;	
 		}
-		return $this->store->embed[$type];
+		return $this->_store->embed[$type];
 	}
-	
+
+	/**
+	 * Xu_embed_api::_get_embed_store()
+	 *
+	 * Returns embed store
+	 *
+	 * @access	private
+	 * @return	object
+	 */
 	private function _get_embed_store()
 	{
-		return $this->store;
+		return $this->_store;
 	}
-	
+
+	/**
+	 * Xu_embed_api::_put_embed_store()
+	 *
+	 * Put embed store
+	 *
+	 * @access	private
+	 * @param	string	$store Embed store
+	 * @return	void
+	 */
 	private function _put_embed_store($store)
 	{
-		$this->store = $store;
+		$this->_store = $store;
 	}
 }
 

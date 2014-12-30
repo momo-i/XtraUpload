@@ -27,32 +27,67 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Xu_menus_api {
 
-	private $store;
+	/**
+	 * Store
+	 *
+	 * @access	private
+	 * @var		object
+	 */
+	private $_store;
+
+	/**
+	 * CodeIgniter singleton
+	 *
+	 * @access	private
+	 * @var		object
+	 */
 	private $CI;
-	
+
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		$this->CI =& get_instance();
 		log_message('debug', "XtraUpload Menu API Class Initialized");
-		$this->init();
+		$this->_init();
 	}
-	
-	private function init()
+
+	/**
+	 * Xu_menus_api::_init()
+	 *
+	 * Initialize store object
+	 *
+	 * @access	private
+	 * @return	void
+	 */
+	private function _init()
 	{
-		$this->store = new stdClass();
-		$this->store->main_menu = array();
-		$this->store->admin_menu = array();
-		$this->store->admin_menu_names = array();
-		$this->store->admin_menu_order = array();
-		$this->store->admin_menu_count = 0;
-		$this->store->plugin_menu = array();
-		$this->store->sub_menu = array();
+		$this->_store = new stdClass();
+		$this->_store->main_menu = array();
+		$this->_store->admin_menu = array();
+		$this->_store->admin_menu_names = array();
+		$this->_store->admin_menu_order = array();
+		$this->_store->admin_menu_count = 0;
+		$this->_store->plugin_menu = array();
+		$this->_store->sub_menu = array();
 	}
-	
+
+	/**
+	 * Xu_menus_api::get_main_menu()
+	 *
+	 * Returns main menu HTML code
+	 *
+	 * @access	public
+	 * @return	string	html tag
+	 */
 	public function get_main_menu()
 	{
 		$html = '';
-		foreach ($this->store->main_menu as $link => $arr)
+		foreach ($this->_store->main_menu as $link => $arr)
 		{
 			if(((isset($item['login']) && $item['login'] == true) && $this->CI->session->userdata('id')) or !isset($item['login']))
 			{
@@ -66,81 +101,149 @@ class Xu_menus_api {
 		}
 		return $html;
 	}
-	
+
+	/**
+	 * Xu_menus_api::add_main_menu_link()
+	 *
+	 * Add link for main menu
+	 *
+	 * @access	public
+	 * @param	string	$link	Link
+	 * @param	string	$text	Menu text
+	 * @param	string	$icon	Menu icon
+	 * @param	bool	$login	Login flag
+	 * @return	void
+	 */
 	public function add_main_menu_link($link, $text, $icon, $login=false)
 	{
-		$menu = $this->store->main_menu;
+		$menu = $this->_store->main_menu;
 		$menu[$link] = array(
 			'icon' => $icon, 
 			'text' => $text, 
 			'login' => $login
 		);
-		$this->store->main_menu = $menu;
+		$this->_store->main_menu = $menu;
 	}
-	
+
+	/**
+	 * Xu_menus_api::remove_main_menu_link()
+	 *
+	 * Remove link for main menu
+	 *
+	 * @access	public
+	 * @param	int		$id		Link ID(not in use)
+	 * @param	strin	$link	Link name
+	 * @return	void
+	 */
 	public function remove_main_menu_link($id, $link)
 	{
-		unset($this->store->main_menu[$link]);
+		unset($this->_store->main_menu[$link]);
 	}
-	
+
+	/**
+	 * Xu_menus_api::add_admin_menu()
+	 *
+	 * Add link for admin menu
+	 *
+	 * @access	public
+	 * @param	string	$name	Menu name
+	 * @param	int		$id		Link ID
+	 * @return	mixed	int|false
+	 */
 	public function add_admin_menu($name, $id='')
 	{
 		if($id == '')
 		{
-			$id = $this->store->admin_menu_count;
+			$id = $this->_store->admin_menu_count;
 		}
 		
-		if(isset($this->store->admin_menu[$id]))
+		if(isset($this->_store->admin_menu[$id]))
 		{
 			return false;
 		}
 		
-		$this->store->admin_menu_names[$id] = $name;
+		$this->_store->admin_menu_names[$id] = $name;
 		
-		$count = count($this->store->admin_menu_order) - 1;
-		$this->store->admin_menu_order[$count] = $id;
-		$this->store->admin_menu[$id] = array();
-		$this->store->admin_menu_count++;
+		$count = count($this->_store->admin_menu_order) - 1;
+		$this->_store->admin_menu_order[$count] = $id;
+		$this->_store->admin_menu[$id] = array();
+		$this->_store->admin_menu_count++;
 		
 		return $id;
 	}
-	
+
+	/**
+	 * Xu_menus_api::get_admin_menu_order()
+	 *
+	 * Returns admin menu order
+	 *
+	 * @access	public
+	 * @param	int		$id	Menu ID
+	 * @return	int
+	 */
 	public function get_admin_menu_order($id='')
 	{
 		if($id != '')
 		{
-			return $this->store->admin_menu_order[$id];
+			return $this->_store->admin_menu_order[$id];
 		}
 		
-		return $this->store->admin_menu_order;
+		return $this->_store->admin_menu_order;
 	}
-	
+
+	/**
+	 * Xu_menus_api::put_admin_menu_order()
+	 *
+	 * Add admin menu order
+	 *
+	 * @access	public
+	 * @param	string	$menu	Menu name
+	 * @return	void
+	 */
 	public function put_admin_menu_order($menu)
 	{
-		$this->store->admin_menu_order = $menu;
-		ksort($this->store->admin_menu_order);
+		$this->_store->admin_menu_order = $menu;
+		ksort($this->_store->admin_menu_order);
 	}
-	
+
+	/**
+	 * Xu_menus_api::remove_admin_menu()
+	 *
+	 * Remove menu from admin page
+	 *
+	 * @access	public
+	 * @param	int		$id	Menu ID
+	 * @return	int
+	 */
 	public function remove_admin_menu($id='')
 	{
 		if($id == '')
 		{
-			$id = $this->store->admin_menu_count;
+			$id = $this->_store->admin_menu_count;
 		}
 		
-		unset($this->store->admin_menu_names[$id], $this->store->admin_menu[$id]);
-		$this->store->admin_menu_count--;
+		unset($this->_store->admin_menu_names[$id], $this->_store->admin_menu[$id]);
+		$this->_store->admin_menu_count--;
 			
 		return $id;
 	}
-	
+
+	/**
+	 * Xu_menus_api::get_admin_menu()
+	 *
+	 * Returns admin menu html tag
+	 *
+	 * @access	public
+	 * @param	int		$id	Menu ID
+	 * @return	string
+	 */
 	public function get_admin_menu($id='')
 	{
 		if($id != '')
 		{
-			$html = '<h3>'.$this->store->admin_menu_names[$id].'</h3><ul class="sidemenu">'."\n";
-			//sort($this->store->admin_menu);
-			foreach($this->store->admin_menu[$id] as $link => $arr)
+			$html = '<h3>'.$this->_store->admin_menu_names[$id].'</h3><ul class="sidemenu">'."\n";
+			//sort($this->_store->admin_menu);
+			foreach($this->_store->admin_menu[$id] as $link => $arr)
 			{
 				$html .= '<li><a href="'.site_url($link).'"><img src="'.base_url().$arr['icon'].'" class="nb" alt=""> '.$arr['text'].'</a></li>'."\n";
 			}
@@ -150,11 +253,11 @@ class Xu_menus_api {
 		else
 		{
 			$html = '';
-			foreach($this->store->admin_menu_order as $index => $id)
+			foreach($this->_store->admin_menu_order as $index => $id)
 			{
-				$menu = $this->store->admin_menu[$id];
-				$html .= '<h3>'.$this->store->admin_menu_names[$id].'</h3><ul class="sidemenu">'."\n";
-				//sort($this->store->admin_menu);
+				$menu = $this->_store->admin_menu[$id];
+				$html .= '<h3>'.$this->_store->admin_menu_names[$id].'</h3><ul class="sidemenu">'."\n";
+				//sort($this->_store->admin_menu);
 				foreach($menu as $link => $arr)
 				{
 					$html .= '<li><a href="'.site_url($link).'"><img src="'.base_url().$arr['icon'].'" class="nb" alt=""> '.$arr['text'].'</a></li>'."\n";
@@ -165,52 +268,110 @@ class Xu_menus_api {
 		}
 		
 	}
-	
+
+	/**
+	 * Xu_menus_api::add_admin_menu_link()
+	 *
+	 * Add menu link to admin menu
+	 *
+	 * @access	public
+	 * @param	int		$id	Menu ID
+	 * @param	string	$link	Link
+	 * @param	string	$text	Menu text
+	 * @param	string	$icon	Menu icon
+	 * @return	void
+	 */
 	public function add_admin_menu_link($id, $link, $text, $icon)
 	{
-		$menu = $this->store->admin_menu[$id];
+		$menu = $this->_store->admin_menu[$id];
 		$menu[$link] = array(
 			'icon' => $icon, 
 			'text' => $text
 		);
-		$this->store->admin_menu[$id] = $menu;
+		$this->_store->admin_menu[$id] = $menu;
 	}
-	
+
+	/**
+	 * Xu_menus_api::remove_admin_menu_link()
+	 *
+	 * Remove menu link from admin page
+	 *
+	 * @access	public
+	 * @param	int		$id	Menu ID
+	 * @param	string	$link	Link
+	 * @return	void
+	 */
 	public function remove_admin_menu_link($id, $link)
 	{
-		unset($this->store->admin_menu[$id][$link]);
+		unset($this->_store->admin_menu[$id][$link]);
 	}
-	
+
+	/**
+	 * Xu_menus_api::get_plugin_menu()
+	 *
+	 * Returns plugin menu html tag
+	 *
+	 * @access	public
+	 * @return	string
+	 */
 	public function get_plugin_menu()
 	{
 		$html = '';
-		//sort($this->store->admin_menu);
-		foreach($this->store->plugin_menu as $link => $arr)
+		//sort($this->_store->admin_menu);
+		foreach($this->_store->plugin_menu as $link => $arr)
 		{
 			$html .= '<li><a href="'.site_url($link).'"><img src="'.base_url().$arr['icon'].'" class="nb" alt="" /> '.$arr['text'].'</a></li>'."\n";
 		}
 		return $html;
 	}
-	
+
+	/**
+	 * Xu_menus_api::add_plugin_menu_link()
+	 *
+	 * Add menu link to plugin page
+	 *
+	 * @access	public
+	 * @param	string	$link	Link
+	 * @param	string	$text	Menu text
+	 * @param	string	$icon	Menu icon
+	 * @return	void
+	 */
 	public function add_plugin_menu_link($link, $text, $icon)
 	{
-		$menu = $this->store->plugin_menu;
+		$menu = $this->_store->plugin_menu;
 		$menu[$link] = array(
 			'icon' => $icon, 
 			'text' => $text
 		);
-		$this->store->plugin_menu = $menu;
+		$this->_store->plugin_menu = $menu;
 	}
-	
+
+	/**
+	 * Xu_menus_api::remove_plugin_menu_link()
+	 *
+	 * Remove menu link from plugin page
+	 *
+	 * @access	public
+	 * @param	string	$link Link
+	 * @return	void
+	 */
 	public function remove_plugin_menu_link($link)
 	{
-		unset($this->store->plugin_menu[$link]);
+		unset($this->_store->plugin_menu[$link]);
 	}
-	
+
+	/**
+	 * Xu_menus_api::get_sub_menu()
+	 *
+	 * Returns sub menu
+	 *
+	 * @access	public
+	 * @return	string
+	 */
 	public function get_sub_menu()
 	{
 		$html = '';
-		foreach($this->store->sub_menu as $name => $menu)
+		foreach($this->_store->sub_menu as $name => $menu)
 		{
 			if(stristr($name, '-login'))
 			{
@@ -233,10 +394,23 @@ class Xu_menus_api {
 		
 		return $html;
 	}
-	
+
+	/**
+	 * Xu_menus_api::add_sub_menu_link()
+	 *
+	 * Add link to sub menu
+	 *
+	 * @access	public
+	 * @param	string	$cat	Category
+	 * @param	string	$link	Link
+	 * @param	string	$text	Menu text
+	 * @param	string	$icon	Menu icon
+	 * @param	bool	$login	Login flag
+	 * @return	void
+	 */
 	public function add_sub_menu_link($cat, $link, $text, $icon, $login=false)
 	{
-		$menu = $this->store->sub_menu;
+		$menu = $this->_store->sub_menu;
 		if(!isset($menu[$cat]))
 		{
 			$menu[$cat] = array();
@@ -247,17 +421,36 @@ class Xu_menus_api {
 			'text' => $text, 
 			'login' => $login
 		);
-		$this->store->sub_menu = $menu;
+		$this->_store->sub_menu = $menu;
 	}
-	
+
+	/**
+	 * Xu_menus_api::remove_sub_menu_link()
+	 *
+	 * Remove link from sub menu
+	 *
+	 * @access	public
+	 * @param	string	$cat	Category
+	 * @param	string	$link	Link
+	 * @return	void
+	 */
 	public function remove_sub_menu_link($cat, $link)
 	{
-		unset($this->store->sub_menu[$cat][$link]);
+		unset($this->_store->sub_menu[$cat][$link]);
 	}
-	
+
+	/**
+	 * Xu_menus_api::_get_store()
+	 *
+	 * Get store
+	 *
+	 * @access	private
+	 * @param	string	$item	Item name
+	 * @return	void
+	 */
 	private function _get_store($item)
 	{
-		return $this->store->$item;
+		return $this->_store->$item;
 	}
 }
 

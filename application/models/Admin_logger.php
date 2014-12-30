@@ -27,25 +27,49 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Admin_logger extends CI_Model {
 
-	// ------------------------------------------------------------------------
-
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @return	void
+	 */
     public function __construct()
     {
         // Call the Model constructor
         parent::__construct();
     }
-    
-    public function add_log($valid=0)
+
+	/**
+	 * Admin_logger::add_log()
+	 *
+	 * Add admin log
+	 *
+	 * @access	public
+	 * @param	int	$valid	Valid
+	 * @return	void
+	 */
+    public function add_log($valid = 0)
     {
     	$data['user'] = $this->session->userdata('id');
     	$data['user_name'] = $this->session->userdata('username');
     	$data['ip'] = $this->input->ip_address();
     	$data['date'] = time();
 		$data['valid'] = $valid;
-    	
+
     	$this->db->insert('login_refrence', $data);
     }
-    
+
+	/**
+	 * Admin_logger::get_logs()
+	 *
+	 * Get admin log
+	 *
+	 * @access	public
+	 * @param	int		$limit	Limit
+	 * @param	int		$offset	Offset
+	 * @param	string	$select	Database query
+	 * @return	object
+	 */    
     public function get_logs($limit=100, $offset=0, $select='')
 	{
 		$this->db->order_by("date", "desc"); 

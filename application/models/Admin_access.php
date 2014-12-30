@@ -27,8 +27,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Admin_access extends CI_Model {
 
-	// ------------------------------------------------------------------------
-
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @return	void
+	 */
     public function __construct()
     {
         // Call the Model constructor
