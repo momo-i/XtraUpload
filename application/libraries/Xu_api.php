@@ -27,9 +27,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Xu_api {
 
+	/**
+	 * Menu
+	 *
+	 * @access	public
+	 * @var		string
+	 */
 	public $menus;
+
+	/**
+	 * CodeIgniter singleton
+	 *
+	 * @access	private
+	 * @var		object
+	 */
 	private $CI;
-	
+
+	/**
+	 * Constructor
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		$this->CI =& get_instance();
@@ -37,7 +56,15 @@ class Xu_api {
 		
 		$this->init();
 	}
-	
+
+	/**
+	 * Xu_api::init()
+	 *
+	 * Init api
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function init()
 	{
 		$dir = APPPATH."libraries/api/";

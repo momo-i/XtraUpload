@@ -27,13 +27,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Xor_string {
 
+	/**
+	 * Xor_string::process()
+	 *
+	 * Xor process
+	 *
+	 * @access	public
+	 * @param	string	$str	String
+	 * @param	string	$crypt_direction	encrypt or decrypt
+	 * @param	string	$key	Encrypt key
+	 * @return	string
+	 */
 	public function process($str, $crypt_direction, $key='')
 	{
 		$crypt_method = ( $crypt_direction == 'encrypt' ? 'encrypt' : 'decrypt' );
 		$new_pass = $this->$crypt_method($str, $key);
 		return $new_pass;
 	}
-	
+
+	/**
+	 * Xor_string::encrypt()
+	 *
+	 * Encrypt string
+	 *
+	 * @access	public
+	 * @param	string	$str	String
+	 * @param	string	$enc_string	String
+	 * @return	string
+	 */
 	public function encrypt($str, $enc_string) 
 	{	
 		$str_encrypted = "";
@@ -45,7 +66,17 @@ class Xor_string {
 		}
 		return $str_encrypted;
 	} 
-	
+
+	/**
+	 * Xor_string::decrypt()
+	 *
+	 * Decrypt string
+	 *
+	 * @access	public
+	 * @param	string	$str_encrypted	Encrypted string
+	 * @param	string	$enc_string	String
+	 * @return	string
+	 */
 	public function decrypt($str_encrypted, $enc_string) 
 	{
 		$str = "";
@@ -58,7 +89,7 @@ class Xor_string {
 			$str .= chr(hexdec(substr($enc_string, $i % strlen($enc_string), 2)) ^ hexdec(substr($str_encrypted, $i, 2)));
 		}
 		return $str;
-	} // End function decryptPassword	
+	}
 }
 
 /* End of file Xor_string.php */
