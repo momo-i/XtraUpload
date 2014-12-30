@@ -32,6 +32,7 @@ class XU_FTP extends CI_FTP {
 	/**
 	 * Constructor
 	 *
+	 * @access	public
 	 * @param	array	$config
 	 * @return	void
 	 */
@@ -57,15 +58,15 @@ class XU_FTP extends CI_FTP {
 
 	}
 
-	// --------------------------------------------------------------------
-
 	/**
+	 * XU_Ftp::download_xu()
+	 *
 	 * Download a file
 	 *
 	 * @access  public
-	 * @param   string
-	 * @param   string
-	 * @param   bool
+	 * @param   string	$remote_file	Remote filename
+	 * @param   string	$fid			File ID
+	 * @param   bool	$max_size		Max file size
 	 * @return  bool
 	 */
 	public function download_xu($remote_file, $fid, $max_size)
@@ -126,12 +127,11 @@ class XU_FTP extends CI_FTP {
 		return $tmpfname;
 	}
 
-	// --------------------------------------------------------------------
-
 	/**
 	 * Display error message
 	 *
-	 * @param	string	$line
+	 * @access	protected
+	 * @param	string	$line	Error message
 	 * @return	void
 	 */
 	protected function _error($line)

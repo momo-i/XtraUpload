@@ -67,15 +67,14 @@ class XU_Form_validation extends CI_Form_validation {
 		log_message('debug', 'XU Form Validation Class Initialized');
 	}
 
-	// --------------------------------------------------------------------
-
 	/**
 	 * Executes the Validation routines
 	 *
-	 * @param	array
-	 * @param	array
-	 * @param	mixed
-	 * @param	int
+	 * @access	protected
+	 * @param	array	$row
+	 * @param	array	$rules
+	 * @param	mixed	$postdata
+	 * @param	int		$cycles
 	 * @return	mixed
 	 */
 	protected function _execute($row, $rules, $postdata = NULL, $cycles = 0)
@@ -359,12 +358,11 @@ class XU_Form_validation extends CI_Form_validation {
 		}
 	}
 
-	// --------------------------------------------------------------------
-
 	/**
 	 * Translate a field name
 	 *
-	 * @param	string	the field name
+	 * @access	protected
+	 * @param	string	$fieldname	the field name
 	 * @return	string
 	 */
 	protected function _translate_fieldname($fieldname)
@@ -382,8 +380,6 @@ class XU_Form_validation extends CI_Form_validation {
 
 		return $fieldname;
 	}
-
-	// --------------------------------------------------------------------
 
 }
 

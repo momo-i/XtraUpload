@@ -34,24 +34,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Remote_server_xml_rpc {
 
+	/**
+	 * CodeIgniter
+	 *
+	 * @access	private
+	 * @var		object
+	 */
 	private $CI = '';
 	
 	/**
-	 * Remote_server()
+	 * Constructor
 	 *
 	 * AN XML_RPC server/client system for sending commands to file servers.
 	 *
 	 * @access	public
-	 * @return	none
+	 * @return	void
 	 */
     public function __construct()
     {
 		$this->CI =& get_instance();
 		$this->CI->load->library('xmlrpc');
     }
-	
-	// ------------------------------------------------------------------------
-	
+
+	/**
+	 * Remote_server_xml_rpc::update_cache()
+	 *
+	 * Remote cache update
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function update_cache()
 	{
 		$this->CI->load->model('server/server_db');

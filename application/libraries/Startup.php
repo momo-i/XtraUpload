@@ -27,14 +27,70 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Startup {
 
+	/**
+	 * Skin name
+	 *
+	 * @access	public
+	 * @var		string
+	 */
 	public $skin = "";
-	public $site_config = "";
-	public $group_config = "";
-	public $db_version = "";
-	private $CI = "";
-	private $is_installed = FALSE;
-	private $is_upgradable = FALSE;
 
+	/**
+	 * Site configuration
+	 *
+	 * @access	public
+	 * @var		object
+	 */
+	public $site_config = "";
+
+	/**
+	 * Group configuration
+	 *
+	 * @access	public
+	 * @var		object
+	 */
+	public $group_config = "";
+
+	/**
+	 * XtraUpload version in database
+	 *
+	 * @access	public
+	 * @var		string
+	 */
+	public $db_version = "";
+
+	/**
+	 * CodeIgniter
+	 *
+	 * @accses	private
+	 * @var		object
+	 */
+	private $CI = "";
+
+	/**
+	 * Flag install or not
+	 *
+	 * @accses	private
+	 * @var		bool
+	 */
+	private $_is_installed = FALSE;
+
+	/**
+	 * Flag upgrade or not
+	 *
+	 * @access	private
+	 * @var		bool
+	 */
+	private $_is_upgradable = FALSE;
+
+	/**
+	 * Constructor
+	 *
+	 * Set any variables
+	 *
+	 * @accses	public
+	 * @return	void
+	 */
 	public function __construct()
 	{
 		log_message('debug', "Startup Class Initialized");
@@ -62,27 +118,27 @@ class Startup {
 		if( ! isset($this->CI->config->config['is_installed']))
 		{
 			$this->_set_autolang();
-			if(!$this->is_installed && !preg_match('#^install/#', uri_string()))
+			if(!$this->_is_installed && !preg_match('#^install/#', uri_string()))
 			{
 				redirect('install/setup');
 				exit;
 			}
-			elseif(!$this->is_installed && $this->is_upgradable)
+			elseif(!$this->_is_installed && $this->_is_upgradable)
 			{
 				redirect('install/setup');
 				exit;
 			}
-			elseif($this->is_installed && isset($this->CI->config->config['is_installed']))
+			elseif($this->_is_installed && isset($this->CI->config->config['is_installed']))
 			{
 				redirect('home');
 			}
 			return;
 		}
-		elseif(!$this->is_installed && !preg_match('#^(install|setup|step\d)#', $_SERVER['REQUEST_URI']))
+		elseif(!$this->_is_installed && !preg_match('#^(install|setup|step\d)#', $_SERVER['REQUEST_URI']))
 		{
 			redirect('install/setup');
 		}
-		elseif($this->is_upgradable && !preg_match('#^install#', uri_string()))
+		elseif($this->_is_upgradable && !preg_match('#^install#', uri_string()))
 		{
 			$this->CI->load->driver('session');
 			$this->_get_config();
@@ -90,7 +146,7 @@ class Startup {
 			redirect('install/update');
 			exit;
 		}
-		elseif($this->CI->config->config['is_installed'] && preg_match('#^(install|setup|step\d)#', uri_string()) && $this->_db_installed() && !$this->is_upgradable)
+		elseif($this->CI->config->config['is_installed'] && preg_match('#^(install|setup|step\d)#', uri_string()) && $this->_db_installed() && !$this->_is_upgradable)
 		{
 			redirect('home');
 		}
@@ -143,13 +199,29 @@ class Startup {
 		$this->_run_startup();
 	}
 
+	/**
+	 * Destructor
+	 *
+	 * DB closing
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function __destruct()
 	{
-		if($this->is_installed) {
+		if($this->_is_installed) {
 			$this->CI->db->close();
 		}
 	}
 
+	/**
+	 * Startup::_get_locale()
+	 *
+	 * Get default user locale, and check language is rtl or not
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _get_locale()
 	{
 		try {
@@ -173,6 +245,14 @@ class Startup {
 		$this->is_rtl = !empty($is_rtl['characters']) ? 'rtl' : 'ltr';
 	}
 
+	/**
+	 * Startup::_get_skin()
+	 *
+	 * Get user skin
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _get_skin()
 	{
 		// Encrypt the cache filename for security
@@ -195,6 +275,14 @@ class Startup {
 		}
 	}
 
+	/**
+	 * Startup::_get_config()
+	 *
+	 * Get configuration from cache or DB
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _get_config()
 	{
 		$config_file_name = md5($this->CI->config->config['encryption_key'].'site_config');
@@ -215,6 +303,14 @@ class Startup {
 		}
 	}
 
+	/**
+	 * Startup::get_group()
+	 *
+	 * Get user group
+	 *
+	 * @access	public
+	 * @return	void
+	 */
 	public function get_group($gid='')
 	{
 		if($gid != '')
@@ -245,6 +341,14 @@ class Startup {
 		}
 	}
 
+	/**
+	 * Startup::_run_startup()
+	 *
+	 * Run startup
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _run_startup()
 	{
 		$extend_file_name = md5($this->CI->config->config['encryption_key'].'extend');
@@ -260,6 +364,14 @@ class Startup {
 		}
 	}
 
+	/**
+	 * Startup::_setup_menu()
+	 *
+	 * Set menu
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _setup_menu()
 	{
 		// load main menu links
@@ -355,7 +467,14 @@ class Startup {
 
 	}
 
-	// new functions
+	/**
+	 * Startup::_check_setup()
+	 *
+	 * Check initial setup or not
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _check_setup()
 	{
 		if(!isset($this->CI->config->config['is_installed']))
@@ -364,7 +483,7 @@ class Startup {
 		}
 		else
 		{
-			$this->is_installed = true;
+			$this->_is_installed = true;
 		}
 		$this->CI->load->model('xu');
 		$this->db_version = $this->CI->xu->get_version();
@@ -373,10 +492,18 @@ class Startup {
 		$current_version = str_replace(array(',', '.'), '', XU_VERSION);
 		if($db_version < $current_version)
 		{
-			$this->is_upgradable = true;
+			$this->_is_upgradable = true;
 		}
 	}
 
+	/**
+	 * Startup::_set_autolang()
+	 *
+	 * Set user language from browser
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _set_autolang()
 	{
 		try {
@@ -395,6 +522,14 @@ class Startup {
 		}
 	}
 
+	/**
+	 * Startup::_db_installed()
+	 *
+	 * Check version in database
+	 *
+	 * @access	private
+	 * @return	void
+	 */
 	private function _db_installed()
 	{
 		if(!$this->CI->xu->get_version())

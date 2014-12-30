@@ -30,7 +30,8 @@ class XU_Pagination extends CI_Pagination {
 	/**
 	 * Attributes
 	 *
-	 * @var	string
+	 * @access	protected
+	 * @var		string
 	 */
 	protected $_attributes = 'prevnext';
 

@@ -27,17 +27,61 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class CI_Remotefile {
 
+	/**
+	 * Buffer size
+	 *
+	 * @access	public
+	 * @var		int
+	 */
 	public $buffer = 204800;
+
+	/**
+	 * Temporary directory
+	 *
+	 * @access	public
+	 * @var		string
+	 */
 	public $tmp_dir = '';
+
+	/**
+	 * Error message
+	 *
+	 * @access	public
+	 * @var		string
+	 */
 	public $error = '';
-	private $headers = '';
-	public $CI = '';
-	private $_content_length=0;
+
+	/**
+	 * HTTP headers
+	 *
+	 * @access	private
+	 * @var		array
+	 */
+	private $_headers = '';
+
+	/**
+	 * CodeIgniter
+	 *
+	 * @access	private
+	 * @var		object
+	 */
+	private $CI = '';
+
+	/**
+	 * Content length for HTTP header
+	 *
+	 * @access	private
+	 * @var		int
+	 */
+	private $_content_length = 0;
 
 	/**
 	 * File Download Constructor
 	 *
 	 * The constructor sets up the download system as ready for files
+	 *
+	 * @access	public
+	 * @return	void
 	 */		
 	public function __construct()
 	{
@@ -46,13 +90,13 @@ class CI_Remotefile {
 	}
 	
 	/**
-	 * Setup
+	 * Remotefile::setup()
 	 *
 	 * Sets Config Vars
 	 *
 	 * @access	public
-	 * @param	Config Array
-	 * @return	null
+	 * @param	array	$config	Config Array
+	 * @return	void
 	 */
 	public function setup($config = array())
 	{
@@ -61,34 +105,68 @@ class CI_Remotefile {
 			$this->_initialize($config);
 		}
 	}
-	
+
+	/**
+	 * Remotefile::get_headers()
+	 *
+	 * Get HTTP headers
+	 *
+	 * @access	public
+	 * @param	string	URL
+	 * @return	int		Content length
+	 */
 	public function get_headers($url)
 	{
-		$this->headers = get_headers($url, true);
-		$this->_content_length = isset($this->headers['Content-Length']) ? $this->headers['Content-Length'] : 0;
+		$this->_headers = get_headers($url, true);
+		$this->_content_length = isset($this->_headers['Content-Length']) ? $this->_headers['Content-Length'] : 0;
 		return $this->_content_length;
 	}
-	
+
+	/**
+	 * Remotefile::headers_to_array()
+	 *
+	 * Convert to array from getting headers
+	 *
+	 * @access	public
+	 * @param	string	$string	Getting headers
+	 * @return	void
+	 */
 	public function headers_to_array($string)
 	{
 		$lines = explode("\n", $string);
 		foreach( $lines as $line)
 		{
 			$header = explode(":", $line);
-			$this->headers[$header[0]] = (isset($header[1]) ? $header[1] : '' );
+			$this->_headers[$header[0]] = (isset($header[1]) ? $header[1] : '' );
 		}
 	}
-	
+
+	/**
+	 * Remotefile::remote_size()
+	 *
+	 * Returns content length
+	 *
+	 * @access	public
+	 * @return	int
+	 */
 	public function remote_size()
 	{
 		return $this->_content_length;
 	}
-	
+
+	/**
+	 * Remotefile::get_referer()
+	 *
+	 * Returns referer
+	 *
+	 * @access	public
+	 * @return	string|false
+	 */
 	public function get_referer()
 	{
-		if(isset($this->headers['Referer']))
+		if(isset($this->_headers['Referer']))
 		{
-			return $this->headers['Referer'];
+			return $this->_headers['Referer'];
 		}
 		else
 		{
@@ -96,12 +174,20 @@ class CI_Remotefile {
 			return false;
 		}
 	}
-	
+
+	/**
+	 * Remotefile::is_redirect()
+	 *
+	 * Returns if Location is set
+	 *
+	 * @access	public
+	 * @return	string|false
+	 */
 	public function is_redirect()
 	{
-		if(isset($this->headers['Location']))
+		if(isset($this->_headers['Location']))
 		{
-			return $this->headers['Location'];
+			return $this->_headers['Location'];
 		}
 		else
 		{
@@ -109,7 +195,19 @@ class CI_Remotefile {
 			return false;
 		}
 	}
-	 
+
+	/**
+	 * Remotefile::fetch_file()
+	 *
+	 * Get remote file
+	 *
+	 * @access	public
+	 * @param	string		$url		HTTP/FTP URL
+	 * @param	int			$fid		File ID
+	 * @param	int			$max_size	Max file size
+	 * @param	resource	$fp			File pointer
+	 * @return	mixed	if success, returns filename. if failed, returns true|false.
+	 */
 	public function fetch_file($url, $fid, $max_size, $fp=NULL)
 	{
 		$this->tmp_dir = ROOTPATH . '/temp';
@@ -131,7 +229,19 @@ class CI_Remotefile {
 			exit;
 		}
 	}
-	
+
+	/**
+	 * Remotefile::_http_transfer()
+	 *
+	 * Get http url contents
+	 *
+	 * @access	private
+	 * @param	string		$url		URL
+	 * @param	int			$fid		File ID
+	 * @param	int			$max_size	Max file size
+	 * @param	resource	$fp			File pointer
+	 * @return	mixed	If success, returns filename. if failed, returns true or false
+	 */
 	private function _http_transfer($url, $fid, $max_size, $fp=NULL)
 	{
 		$nurl = $url;
@@ -276,7 +386,19 @@ class CI_Remotefile {
 			return $tmpfname;
 		}
 	}
-	
+
+	/**
+	 * Remotefile::_ftp_transfer()
+	 *
+	 * Get ftp contents
+	 *
+	 * @access	private
+	 * @param	string		$url		URL
+	 * @param	int			$fid		File ID
+	 * @param	int			$max_size	Max file size
+	 * @param	resource	$fp			File pointer
+	 * @return	mixed	If success, returns filename. If failed, returns true or false
+	 */
 	private function _ftp_transfer($url, $fid, $max_size, $fp=NULL)
 	{
 		$url = trim($url);
@@ -350,6 +472,15 @@ class CI_Remotefile {
 		return $fname;
 	}
 
+	/**
+	 * Remotefile::set_error()
+	 *
+	 * Set error message
+	 *
+	 * @access	public
+	 * @param	array|string	Error message
+	 * @return	void
+	 */
 	public function set_error($msg)
 	{
 		is_array($msg) OR $msg = array($msg);
