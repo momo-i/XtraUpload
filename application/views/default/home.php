@@ -67,7 +67,7 @@ else
               </span>
             </p>
           </div>
-          <div id="flash" style="display:">
+          <!--div id="flash" style="display:">
             <span class="alert">
               <strong><?php echo lang('Error'); ?></strong><br>
               <?php echo lang('Get Flash!'); ?><br>
@@ -94,7 +94,8 @@ else
                 <br style="clear:both">
               </p>
             </form>
-          </div>
+          </div-->
+          <div id="plupload">test</div>
           <div id="uploader" style="display:none;">
             <h3 style="padding-top:8px;"><?php echo lang('Select Files To Upload'); ?></h3><br>
             <div style="padding-left:12px;">

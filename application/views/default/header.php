@@ -30,11 +30,13 @@ else
       //--]]>
     </script>
     <script src="<?php echo base_url(); ?>assets/js/main.php" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>assets/js/lang.php" type="text/javascript"></script>
 <?php
 if(isset($include_flash_upload_js) && $include_flash_upload_js === TRUE)
 {
 ?>
     <script src="<?php echo base_url(); ?>assets/js/upload.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/jquery.plupload.queue.css">
 <?php
 }
 if(isset($include_url_upload_js) && $include_url_upload_js === TRUE)
