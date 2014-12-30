@@ -210,6 +210,19 @@ class XU_Lang extends CI_Lang {
 	}
 
 	/**
+	 * Lang::get_locale()
+	 *
+	 * Returns locale
+	 *
+	 * @param	access
+	 * @return	string
+	 */
+	public function get_locale()
+	{
+		return $this->_default_locale->getLanguage();
+	}
+
+	/**
 	 * Lang::_check_database()
 	 *
 	 * Check the word from database or not.

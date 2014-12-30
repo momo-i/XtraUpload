@@ -79,8 +79,15 @@ class Home extends CI_Controller {
 			$data['flash_message'] = '<span class="info"><strong>'.$this->session->flashdata('msg').'</strong></span>';
 		}
 
+		$html = '';
+		$locale = $this->lang->get_locale();
+		$jslocale = ROOTPATH.'/assets/js/lang/'.$locale.'.js';
+		if(is_file($jslocale))
+		{
+			$html = sprintf('<script type="text/javascript" src="%s"></script>', base_url().'assets/js/lang/'.$locale.'.js');
+		}
 		// There is no processing functionality here, just static pages to send the user
-		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Home'), 'include_flash_upload_js' => true));
+		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Home'), 'include_flash_upload_js' => true, 'pllang' => $html));
 		$this->load->view($this->startup->skin.'/home', $data);
 		$this->load->view($this->startup->skin.'/footer');
 	}
