@@ -124,7 +124,7 @@ else
             $(function() {
               $('#plupload').pluploadQueue({
                 runtimes: 'html5,flash,silverlight,html4',
-                url: "<?php echo site_url('upload/process/'.md5($this->functions->get_rand_id(32)).'/'.($this->session->userdata('id') ? $this->session->userdata('id') : 0 ))?>",
+                url: "<?php echo site_url('upload/plupload'); ?>", //.md5($this->functions->get_rand_id(32)).'/'.($this->session->userdata('id') ? $this->session->userdata('id') : 0 ))?>",
                 chunk_size: "1mb",
                 unique_names: true,
                 flash_swf_url: '/assets/flash/Moxie.swf',
@@ -134,6 +134,10 @@ else
                   mime_types: [
                     {title: "All files", extensions: "*"}
                   ]
+                },
+                init: {
+                  FileUploaded: function(up, file, info) {
+                  }
                 },
               });
             });

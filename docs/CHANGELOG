@@ -1,3 +1,6 @@
+	v3.1.0-Alpha1
+		- Rewrite upload class for plupload
+	v3.0.0
 	v3.0.0-RC4
 		- fixed session database #17
 		- fixed locale settings

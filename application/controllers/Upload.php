@@ -299,6 +299,16 @@ class Upload extends CI_Controller {
 		return;
 	}
 
+	public function plupload()
+	{
+		$allowed_types = !empty($this->startup->group_config->files_types) ? $this->startup->group_config->files_types : "*";
+		$config['upload_path'] = ROOTPATH.'/temp/';
+		$config['allowed_types'] = $allowed_types;
+		$config['max_size'] = (1024 * intval($this->startup->group_config->upload_size_limit));
+		$this->load->library('upload', $config);
+		echo $this->upload->process_upload($_REQUEST, $_FILES);
+	}
+
 }
 
 /* End of file Upload.php */
