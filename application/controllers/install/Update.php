@@ -220,6 +220,10 @@ class Update extends CI_Controller {
 		$update_string = '- Fixed session database table';
 		$version[] = array('version' => '3000400', 'description' => $update_string);
 
+		// 3.0.0 STABLE
+		$update_string = '- Stable release!!!!!';
+		$version[] = array('version' => '3001000', 'description' => $update_string);
+
 		return $version;
 	}
 
@@ -454,6 +458,20 @@ class Update extends CI_Controller {
 		$this->dbforge->add_key('last_activity');
 		$this->dbforge->create_table('sessions');
 
+		$this->_set_db_version();
+		return TRUE;
+	}
+
+	/**
+	 * Update::_update_3001000
+	 *
+	 * Stable release
+	 *
+	 * @access	private
+	 * @return	true
+	 */
+	private function _update_3001000()
+	{
 		$this->_set_db_version();
 		return TRUE;
 	}
