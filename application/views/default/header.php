@@ -34,7 +34,10 @@ else
 if(isset($include_flash_upload_js) && $include_flash_upload_js === TRUE)
 {
 ?>
-    <script src="<?php echo base_url(); ?>assets/js/upload.js" type="text/javascript"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/plupload.full.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.plupload.queue.min.js"></script>
+    <?php echo $pllang; ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/jquery.plupload.queue.css">
 <?php
 }
 if(isset($include_url_upload_js) && $include_url_upload_js === TRUE)

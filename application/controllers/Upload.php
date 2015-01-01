@@ -246,7 +246,6 @@ class Upload extends CI_Controller {
 	public function complete($secid)
 	{
 		$data['link'] = $this->files_db->get_links($secid);
-
 		$this->load->view($this->startup->skin.'/header');
 		$this->load->view($this->startup->skin.'/upload/complete', $data);
 		$this->load->view($this->startup->skin.'/footer');
@@ -297,6 +296,19 @@ class Upload extends CI_Controller {
 	public function blank()
 	{
 		return;
+	}
+
+	public function plupload($secid='', $user=0)
+	{
+		$allowed_types = !empty($this->startup->group_config->files_types) ? $this->startup->group_config->files_types : "*";
+		$config['upload_path'] = ROOTPATH.'/temp/';
+		$config['allowed_types'] = $allowed_types;
+		$config['max_size'] = (1024 * intval($this->startup->group_config->upload_size_limit));
+		$this->load->library('upload', $config);
+		log_message('debug', '$_REQUEST: '.print_r($_REQUEST, true));
+		log_message('debug', '$_FILES: '.print_r($_FILES, true));
+		//$this->files_db->new_file($file, $secid, $user, (bool)$data['is_image'], base_url(), false);
+		echo $this->upload->process_upload($_REQUEST, $_FILES);
 	}
 
 }

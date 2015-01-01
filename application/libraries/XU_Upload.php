@@ -800,6 +800,128 @@ class XU_Upload extends CI_Upload {
 		return $info;
 	}
 
+	/**
+	 * Upload for plupload
+	 *
+	 * @access	public
+	 * @param	array	$data
+	 * @param	array	$files
+	 * @return	void
+	 */
+	public function process_upload($data, $files)
+	{
+		if ( ! $this->validate_upload_path())
+		{
+			return '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "'.lang('Invalid upload path.').'"}, "id" : "id"}';
+		}
+		// Get parameters
+		$chunk = isset($data["chunk"]) ? $data["chunk"] : 0;
+		$chunks = isset($data["chunks"]) ? $data["chunks"] : 0;
+		$file_name = isset($data["name"]) ? $data["name"] : '';
+
+		// Clean the fileName for security reasons
+		$file_name = preg_replace('/[^\w\._]+/', '', $file_name);
+
+		// Make sure the fileName is unique but only if chunking is disabled
+		if ($chunks < 2 && file_exists($this->upload_path . DIRECTORY_SEPARATOR . $file_name))
+		{
+			if(preg_match('#\.#', $file_name))
+			{
+				$ext = strrpos($file_name, '.');
+				$file_name_a = substr($file_name, 0, $ext);
+				$file_name_b = substr($file_name, $ext);
+			}
+			else
+			{
+				return '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to find extension."}, "id" : "id"}';
+			}
+			$count = 1;
+			while (file_exists($this->upload_path . DIRECTORY_SEPARATOR . $file_name_a . '_' . $count . $file_name_b))
+			{
+				$count++;
+			}
+			$file_name = $file_name_a . '_' . $count . $file_name_b;
+		}
+
+		if (isset($_SERVER["HTTP_CONTENT_TYPE"]))
+		{
+			$content_type = $_SERVER["HTTP_CONTENT_TYPE"];
+		}
+		if (isset($_SERVER["CONTENT_TYPE"]))
+		{
+			$content_type = $_SERVER["CONTENT_TYPE"];
+		}
+
+		// Handle non multipart uploads older WebKit versions didn't support multipart in HTML5
+		if (strpos($content_type, "multipart") !== false)
+		{
+			if (isset($files['file']['tmp_name']) && is_uploaded_file($files['file']['tmp_name']))
+			{
+				// Open temp file
+				$out = fopen($this->upload_path . DIRECTORY_SEPARATOR . $file_name, $chunk == 0 ? "wb" : "ab");
+				if ($out)
+				{
+					// Read binary input stream and append it to temp file
+					$in = fopen($files['file']['tmp_name'], "rb");
+
+					if ($in)
+					{
+						while ($buff = fread($in, 4096))
+						{
+							fwrite($out, $buff);
+						}
+					}
+					else
+					{
+						return '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to open input stream."}, "id" : "id"}';
+					}
+					fclose($in);
+					fclose($out);
+					@unlink($files['file']['tmp_name']);
+				}
+				else
+				{
+					return '{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}';
+				}
+			}
+			else
+			{
+				return '{"jsonrpc" : "2.0", "error" : {"code": 103, "message": "Failed to move uploaded file."}, "id" : "id"}';
+			}
+		}
+		else
+		{
+			// Open temp file
+			$out = fopen($this->upload_path . DIRECTORY_SEPARATOR . $file_name, $chunk == 0 ? "wb" : "ab");
+			if ($out)
+			{
+				// Read binary input stream and append it to temp file
+				$in = fopen("php://input", "rb");
+
+				if ($in)
+				{
+					while ($buff = fread($in, 4096))
+					{
+						fwrite($out, $buff);
+					}
+				}
+				else
+				{
+					return '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to open input stream."}, "id" : "id"}';
+				}
+				fclose($in);
+				fclose($out);
+			}
+			else
+			{
+				return '{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}';
+			}
+		}
+
+		// Return JSON-RPC response
+		return '{"jsonrpc" : "2.0", "result" : "'.$file_name.'", "id" : "id"}';
+	}
+
 }
 
 /* End of file XU_Upload.php */
