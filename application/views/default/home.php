@@ -67,11 +67,39 @@ else
               </span>
             </p>
           </div>
-          <div id="plupload">Testing use. This is not work well yet.</div>
+          <div id="flash" style="display:">
+            <span class="alert">
+              <strong><?php echo lang('Error'); ?></strong><br>
+              <?php echo lang('Get Flash!'); ?><br>
+              <a href="http://get.adobe.com/jp/flashplayer/">
+                <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="<?php echo lang('Get Adobe Flash player'); ?>">
+              </a>
+            </span>
+            <form enctype="multipart/form-data" action="<?php echo site_url('upload/process/'.md5($this->functions->get_rand_id(32)).'/'.($this->session->userdata('id') ? $this->session->userdata('id') : 0 ))?>" method="post">
+              <h3><?php echo lang('Upload a File'); ?></h3>
+              <p>
+                <span><?php echo lang('This is a backup upload form for our users who do not have Flash installed, to access our advanced uploading features please install the Flash Plugin and enable Javascript.'); ?></span>
+                <input type="hidden" name="no_flash" value="1">
+                <label for="file">
+                  <?php echo lang('File'); ?><input type="file" id="file" name="Filedata">
+                </label>
+                <label for="passwords">
+                  <?php echo lang('Password'); ?><input type="text" id="passwords" name="password" value="">
+                </label>
+                <label for="description">
+                  <?php echo lang('Description'); ?><textarea id="description" name="description" rows="8" cols="40"></textarea>
+                </label>
+                <br style="clear:both">
+                <?php echo generate_submit_button(lang('Upload!'), base_url().'img/icons/up_16.png', 'green'); ?>
+                <br style="clear:both">
+              </p>
+            </form>
+          </div>
+          <!--div id="plupload">Testing use. This is not work well yet.</div-->
           <div id="uploader" style="display:none;">
             <h3 style="padding-top:8px;"><?php echo lang('Select Files To Upload'); ?></h3><br>
             <div style="padding-left:12px;">
-              <div style="display: block; width:90px; height:22px; border: solid 1px #7FAAFF; background-color: #C5D9FF; padding: 2px; padding-top:6px; padding-left:6px;"><span id="spanButtonPlaceholder"></span></div>
+              <div style="display: block; width:90px; height:22px; border: solid 1px #7FAAFF; background-color: #C5D9FF; padding: 2px; padding-top:6px; padding-left:6px;"><span id="plupload"><span class="button" style="font-size: 12pt; font-weight:bold; color:#565656;"><?php echo lang('Browse...'); ?></span></span></div>
             </div>
             <br>
           </div>
@@ -167,6 +195,13 @@ else
                   }
                 },
               });
+              if(uploader) {
+                $('#flash').remove();
+                $('#browser').attr('disabled', false);
+                $('#uploader').show();
+                $('#files').show();
+                $('#info_div').show();
+              }
               uploader.init();
             //});
             function sync_file_props(file)
