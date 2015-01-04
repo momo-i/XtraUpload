@@ -67,7 +67,7 @@ function rm_file(id)
 {
 	$('#'+id).remove();
 	$('#'+id+"-details").remove();
-	swfu.cancelUpload(id);
+	plupload.cancelUpload(id);
 	delete fileObj[id];
 	
 	// remove from count
@@ -76,8 +76,7 @@ function rm_file(id)
 
 function updatePendingFileCount()
 {
-	var queue = swfu.getStats();
-	$('#summary').html(parseInt(queue.files_queued));
+	$('#summary').html(parseInt(plupload.QUEUED));
 }
 
 function convert_bits(bytes) 
@@ -115,7 +114,7 @@ function addFileQueue(file)
 {
 	if(typeof(fileObj[file.id]) != 'undefined')
 	{
-		swfu.cancelUpload(file.id);
+		plupload.cancelUpload(file.id);
 		subtractFilesFromTotal++;
 		prevFile = true;
 		return true;
@@ -123,7 +122,7 @@ function addFileQueue(file)
 	
 	if(file.size > 1024 * 1024 * ___getMaxUploadSize())
 	{
-		swfu.cancelUpload(file.id);
+		plupload.cancelUpload(file.id);
 		subtractFilesFromTotal++;
 		fileToBig = true;
 		return true;
@@ -150,7 +149,7 @@ function addFileQueue(file)
 			
 			if(!allow)
 			{
-				swfu.cancelUpload(file.id);
+				plupload.cancelUpload(file.id);
 				subtractFilesFromTotal++;
 				fileNotAllowed = true;
 				return true;	
@@ -171,7 +170,7 @@ function addFileQueue(file)
 			
 			if(notAllow)
 			{
-				swfu.cancelUpload(file.id);
+				plupload.cancelUpload(file.id);
 				subtractFilesFromTotal++;
 				fileNotAllowed = true;
 				return true;	
@@ -256,13 +255,10 @@ function fileDialogComplete(num)
 
 function clearUploadQueue()
 {
-	var stats = swfu.getStats();
-
-	while(stats.files_queued > 0) {
-		//swfu.cancelUpload();
-		file = swfu.getFile();
+	while(plupload.QUEUED > 0) {
+		plupload.cancelUpload();
+		file = plupload.getFile();
 		rm_file(file.id);
-		stats = swfu.getStats();
 	}
 };
 

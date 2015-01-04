@@ -102,7 +102,7 @@ else
                 </span>
               </p>
               <div class="float-right" style=" margin-bottom:1em">
-                <?php echo generate_link_button(lang('Upload!'), 'javascript:void(0);', base_url().'assets/images/icons/up_16.png', 'green', array('onclick'=>'swfu.startUpload();')); ?>
+                <?php echo generate_link_button(lang('Upload!'), 'javascript:void(0);', base_url().'assets/images/icons/up_16.png', 'green', array('onclick'=>'plupload.start();')); ?>
               </div>
               <table style="border:0;padding:0;width:98%;clear:both" id="file_list_table">
                 <tr>
@@ -112,7 +112,7 @@ else
                 </tr>
               </table>
               <div class="float-right">
-                <?php echo generate_link_button(lang('Upload!'), 'javascript:void(0);', base_url().'assets/images/icons/up_16.png', 'green', array('onclick'=>'swfu.startUpload();')); ?>
+                <?php echo generate_link_button(lang('Upload!'), 'javascript:void(0);', base_url().'assets/images/icons/up_16.png', 'green', array('onclick'=>'plupload.start();')); ?>
               </div>
             </div>
           </div>
@@ -147,7 +147,7 @@ else
                   FilesAdded: function(up, files) {
                     plupload.each(files, function(file) {
                       $('#files').show();
-                      $('#file_list').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b></div>';
+                      $('#file_list').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b>test</b></div>';
                     });
                   },
                   BeforeUpload: function(up, file) {
