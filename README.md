@@ -41,3 +41,4 @@ Hate it?  Love it?  Let us know.  Let us know if you think of any
 more features, bugs, etc.
 
 * [Public Source Repository](https://github.com/momo-i/XtraUpload)
+* [GitHub Page](http://momo-i.github.io/XtraUpload)

@@ -300,6 +300,15 @@ class Upload extends CI_Controller {
 
 	public function plupload($secid='', $user=0)
 	{
+		if(intval($user) !== 0 && $this->session->userdata('login') !== TRUE)
+		{
+			log_message('debug', 'User not found?');
+			echo intval($user)."\n\n";
+			$userobj = $this->users->get_user_by_id(intval($user));
+			$this->startup->get_group(intval($userobj->group));
+			unset($userobj);
+		}
+
 		$allowed_types = !empty($this->startup->group_config->files_types) ? $this->startup->group_config->files_types : "*";
 		$config['upload_path'] = ROOTPATH.'/temp/';
 		$config['allowed_types'] = $allowed_types;

@@ -67,7 +67,7 @@ else
               </span>
             </p>
           </div>
-          <div id="plupload">test</div>
+          <div id="plupload">Testing use. This is not work well yet.</div>
           <div id="uploader" style="display:none;">
             <h3 style="padding-top:8px;"><?php echo lang('Select Files To Upload'); ?></h3><br>
             <div style="padding-left:12px;">
@@ -121,26 +121,95 @@ else
           <div id="filesHidden" style="display:none"></div>
           <script type="text/javascript">
             //<![CDATA[
-            $(function() {
-              $('#plupload').pluploadQueue({
+            function ___server_url()
+            {
+              return '<?php echo $server; ?>';
+            }
+            //$(function() {
+              //$('#plupload').pluploadQueue({
+              var uploader = new plupload.Uploader({
                 runtimes: 'html5,flash,silverlight,html4',
+                browse_button: 'plupload',
                 url: "<?php echo site_url('upload/plupload'); ?>", //.md5($this->functions->get_rand_id(32)).'/'.($this->session->userdata('id') ? $this->session->userdata('id') : 0 ))?>",
                 chunk_size: "1mb",
                 unique_names: true,
                 flash_swf_url: '/assets/flash/Moxie.swf',
                 silverlight_xap_url: '/assets/flash/Moxie.xap',
                 filters: {
-                  max_file_size: '100mb',
+                  max_file_size: '100gb',
                   mime_types: [
                     {title: "All files", extensions: "*"}
                   ]
                 },
                 init: {
-                  FileUploaded: function(up, file, info) {
+                  PostInit: function() {
+                  },
+                  FilesAdded: function(up, files) {
+                    plupload.each(files, function(file) {
+                      $('#files').show();
+                      $('#file_list').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b></div>';
+                    });
+                  },
+                  BeforeUpload: function(up, file) {
+                    var fid = gen_rand_id(32);
+                    var cur_file_id = fid;
+                    var stats = plupload.QUEUED;
+                    var f_user = $('#uid').val();
+                    var url = ___server_url()+"upload/process/"+fid+'/'+f_user;
+                    placeProgressBar(file.id);
+                    //var flashUploadStartTime = Math.round(new Date().getTime()/1000.0);
+                    //$("#"+file.id+"-details").css('borderTop', 'none').show();
+                    //$("#"+file.id).addClass('details').css('borderBottom', 'none');
+                  },
+                  UploadComplete: function(up, files) {
+					alert('test');
+                    upload_done(files);
                   }
                 },
               });
-            });
+              uploader.init();
+            //});
+            function sync_file_props(file)
+            {
+              var fFeatured = filePropsObj[file.id]['feat'];
+              var fDesc = filePropsObj[file.id]['desc'] ;
+              var fPass = filePropsObj[file.id]['pass'];
+              var fTags = filePropsObj[file.id]['tags'];
+              if(fPass == '' && fFeatured == '' && fDesc == '' && fTags == '')
+              {
+                $("#"+file.id+"-details-inner").empty().attr('colspan', 3).load('<?php echo site_url('upload/get_links'); ?>/'+curFileId);
+                return;
+              }
+              $.post(
+                '<?php echo site_url('upload/file_upload_props'); ?>',
+                {
+                  fid: curFileId,
+                  password: fPass,
+                  desc: fDesc,
+                  tags: fTags,
+                  featured: fFeatured
+                },
+                function()
+                {
+                  $("#"+file.id+"-details-inner").empty().attr('colspan', 3).load('<?php echo site_url('upload/get_links'); ?>/'+curFileId);
+                }
+              );
+            }
+            function upload_done(file)
+            {
+              syncFileProps(file);
+              $('#'+file.id+"-del").empty().html("<strong><?php echo lang('Done!'); ?></strong>");
+              $("#"+file.id+"-details").css('borderTop', 'none').show();
+              var stats = swfu.getStats();
+              if(stats.files_queued > 0)
+              {
+                swfu.startUpload();
+              }
+              else
+              {
+                $.scrollTo( $("#uploader"), 400);
+              }
+            }
             //--]]>
           </script>
 <?php

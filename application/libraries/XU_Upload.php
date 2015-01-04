@@ -812,7 +812,9 @@ class XU_Upload extends CI_Upload {
 	{
 		if ( ! $this->validate_upload_path())
 		{
-			return '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "'.lang('Invalid upload path.').'"}, "id" : "id"}';
+			$errmsg = '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "'.lang('Invalid upload path.').'"}, "id" : "id"}';
+			log_message('debug', $errmsg);
+			return $errmsg;
 		}
 		// Get parameters
 		$chunk = isset($data["chunk"]) ? $data["chunk"] : 0;
@@ -833,7 +835,9 @@ class XU_Upload extends CI_Upload {
 			}
 			else
 			{
-				return '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to find extension."}, "id" : "id"}';
+				$errmsg = '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "'.lang('Failed to find extension.').'"}, "id" : "id"}';
+				log_message('debug', $errmsg. " ". $file_name);
+				return $errmsg;
 			}
 			$count = 1;
 			while (file_exists($this->upload_path . DIRECTORY_SEPARATOR . $file_name_a . '_' . $count . $file_name_b))
@@ -873,7 +877,9 @@ class XU_Upload extends CI_Upload {
 					}
 					else
 					{
-						return '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to open input stream."}, "id" : "id"}';
+						$errmsg = '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "'.lang('Failed to open input stream.').'"}, "id" : "id"}';
+						log_message('debug', $errmsg);
+						return $errmsg;
 					}
 					fclose($in);
 					fclose($out);
@@ -881,12 +887,16 @@ class XU_Upload extends CI_Upload {
 				}
 				else
 				{
-					return '{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}';
+					$errmsg = '{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "'.lang('Failed to open output stream.').'"}, "id" : "id"}';
+					log_message('debug', $errmsg);
+					return $errmsg;
 				}
 			}
 			else
 			{
-				return '{"jsonrpc" : "2.0", "error" : {"code": 103, "message": "Failed to move uploaded file."}, "id" : "id"}';
+				$errmsg = '{"jsonrpc" : "2.0", "error" : {"code": 103, "message": "'.lang('Failed to move uploaded file.').'"}, "id" : "id"}';
+				log_message('debug', $errmsg);
+				return $errmsg;
 			}
 		}
 		else
@@ -907,19 +917,25 @@ class XU_Upload extends CI_Upload {
 				}
 				else
 				{
-					return '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to open input stream."}, "id" : "id"}';
+					$errmsg = '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "'.lang('Failed to open input stream.').'"}, "id" : "id"}';
+					log_message('debug', $errmsg);
+					return $errmsg;
 				}
 				fclose($in);
 				fclose($out);
 			}
 			else
 			{
-				return '{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}';
+				$errmsg = '{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "'.lang('Failed to open output stream.').'"}, "id" : "id"}';
+				log_message('debug', $errmsg);
+				return $errmsg;
 			}
 		}
 
 		// Return JSON-RPC response
-		return '{"jsonrpc" : "2.0", "result" : "'.$file_name.'", "id" : "id"}';
+		$errmsg = '{"jsonrpc" : "2.0", "result" : "'.$file_name.'", "id" : "id"}';
+		log_message('debug', $errmsg);
+		return $errmsg;
 	}
 
 }
