@@ -90,7 +90,7 @@ else
                   <?php echo lang('Description'); ?><textarea id="description" name="description" rows="8" cols="40"></textarea>
                 </label>
                 <br style="clear:both">
-                <?php echo generate_submit_button(lang('Upload!'), base_url().'img/icons/up_16.png', 'green'); ?>
+                <?php echo generate_submit_button(lang('Upload!'), base_url().'assets/images/icons/up_16.png', 'green'); ?>
                 <br style="clear:both">
               </p>
             </form>
@@ -148,11 +148,85 @@ else
           <input id="uid" type="hidden" value="<?php echo (intval($this->session->userdata('id')) != 0 ? intval($this->session->userdata('id')) : 0 ); ?>">
           <div id="filesHidden" style="display:none"></div>
           <script type="text/javascript">
+            var fileObj = new Array();
+            var filePropsObj = new Array();
+            var fileIcons = new Array(<?php echo $file_icons; ?>);
+
             //<![CDATA[
             function ___server_url()
             {
               return '<?php echo $server; ?>';
             }
+            function ___getMaxUploadSize()
+            {
+              return '<?php echo intval($upload_limit); ?>';
+            }
+            function ___getFilePipeString()
+            {
+              return '<?php echo $files_types; ?>';
+            }
+            function ___getFileTypesAllowOrDeny()
+            {
+              return <?php echo intval($file_types_allow_deny); ?>;
+            }
+            function ___getFileIcon(icon)
+            {
+              if(in_array(icon, fileIcons))
+              {
+                return icon;
+              }
+              else
+              {
+                return 'default';
+              }
+            }
+            function ___upLang(key)
+            {
+              var lang = new Array();
+              lang['pc' ]     = '<?php echo lang('Percent Complete'); ?>';
+              lang['kbr']     = '<?php echo lang('KB Remaining (at '); ?>';
+              lang['remain']  = '<?php echo lang('remaining'); ?>';
+              lang['desc']    = '<?php echo lang('Description'); ?>';
+              lang['fp']      = '<?php echo lang('File Password'); ?>';
+              lang['sc']      = '<?php echo lang('Save Changes'); ?>';
+              lang['efd']     = '<?php echo lang('Edit File Details'); ?>';
+              lang['rm']      = '<?php echo lang('Remove File'); ?>';
+              lang['ff1']     = '<?php echo lang('Feature This File?'); ?>';
+              lang['ff2']     = '<?php echo lang('Yes'); ?>';
+              lang['ft']      = '<?php echo lang('Tags (seperated by commas)'); ?>';
+              return lang[key];
+            }
+            function ___filePropSaveButtons(id)
+            {
+             var template = "<?php echo str_replace("\n", '', str_replace('"', '\\"', generate_link_button(lang('Save Changes'), 'javascript:;', base_url().'assets/images/icons/ok_16.png', 'green', array('onclick' => 'saveFilePropChanges(\'--id--\');$(\'#--id---details\').hide();$(\'#--id---edit_img\').fadeIn(\'fast\');')).generate_link_button(lang('Discard Changes'), 'javascript:;', base_url().'assets/images/icons/close_16.png', 'red', array('onclick' => '$(\'#--id---details\').hide();$(\'#--id---edit_img\').fadeIn(\'fast\');'))))?>";
+              return str_replace('--id--', id, template);
+            }
+            function str_replace (search, replace, subject, count)
+            {
+              // Replaces all occurrences of search in haystack with replace
+              f = [].concat(search),
+              r = [].concat(replace),
+              s = subject,
+              ra = r instanceof Array, sa = s instanceof Array;    s = [].concat(s);
+              if (count) {
+                this.window[count] = 0;
+              }
+              for (i=0, sl=s.length; i < sl; i++) {
+                if (s[i] === '') {
+                  continue;
+                }
+                for (j=0, fl=f.length; j < fl; j++) {
+                  temp = s[i]+'';
+                  repl = ra ? (r[j] !== undefined ? r[j] : '') : r[0];
+                  s[i] = (temp).split(f[j]).join(repl);
+                  if (count && s[i] !== temp) {
+                    this.window[count] += (temp.length-s[i].length)/f[j].length;
+                  }
+                }
+              }
+              return sa ? s : s[0];
+            }
+
             //$(function() {
               //$('#plupload').pluploadQueue({
               var uploader = new plupload.Uploader({
@@ -174,8 +248,9 @@ else
                   },
                   FilesAdded: function(up, files) {
                     plupload.each(files, function(file) {
-                      $('#files').show();
-                      $('#file_list').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b>test</b></div>';
+                      //$('#files').show();
+                      //$('#file_list').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b>test</b></div>';
+                      addFileQueue(file);
                     });
                   },
                   BeforeUpload: function(up, file) {

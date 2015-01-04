@@ -119,7 +119,7 @@ function addFileQueue(file)
 		prevFile = true;
 		return true;
 	}
-	
+
 	if(file.size > 1024 * 1024 * ___getMaxUploadSize())
 	{
 		plupload.cancelUpload(file.id);
@@ -187,7 +187,8 @@ function addFileQueue(file)
     filePropsObj[file.id]['pass'] = '';
 	
 	fileObj[file.id] = file.name;
-	$('#filesHidden').append(""+
+	$('#file_list_table').append(""+
+	//$('#filesHidden').append(""+
 		"<tr id='"+file.id+"'>"+
 			"<td class='align-left' style='vertical-align:middle'>"+
 				"<img class='nb' src='"+___baseUrl()+"assets/images/files/"+___getFileIcon(getExtension(file.name))+".png' border='0' />&nbsp;" +
