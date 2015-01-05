@@ -130,7 +130,7 @@ else
                 </span>
               </p>
               <div class="float-right" style=" margin-bottom:1em">
-                <?php echo generate_link_button(lang('Upload!'), 'javascript:void(0);', base_url().'assets/images/icons/up_16.png', 'green', array('onclick'=>'plupload.start();')); ?>
+                <?php echo generate_link_button(lang('Upload!'), 'javascript:void(0);', base_url().'assets/images/icons/up_16.png', 'green', array('onclick'=>'uploader.start();')); ?>
               </div>
               <table style="border:0;padding:0;width:98%;clear:both" id="file_list_table">
                 <tr>
@@ -140,7 +140,7 @@ else
                 </tr>
               </table>
               <div class="float-right">
-                <?php echo generate_link_button(lang('Upload!'), 'javascript:void(0);', base_url().'assets/images/icons/up_16.png', 'green', array('onclick'=>'plupload.start();')); ?>
+                <?php echo generate_link_button(lang('Upload!'), 'javascript:void(0);', base_url().'assets/images/icons/up_16.png', 'green', array('onclick'=>'uploader.start();')); ?>
               </div>
             </div>
           </div>
@@ -148,26 +148,28 @@ else
           <input id="uid" type="hidden" value="<?php echo (intval($this->session->userdata('id')) != 0 ? intval($this->session->userdata('id')) : 0 ); ?>">
           <div id="filesHidden" style="display:none"></div>
           <script type="text/javascript">
-            var fileObj = new Array();
-            var filePropsObj = new Array();
-            var fileIcons = new Array(<?php echo $file_icons; ?>);
-
             //<![CDATA[
-            function ___server_url()
-            {
-              return '<?php echo $server; ?>';
-            }
+            var fileObj = new Array();
+            var prevFile = false;
+            var fileToBig = false;
+            var fileNotAllowed = false;
+            var filePropsObj = new Array();
+            var subtractFilesFromTotal = 0;
+            var curFileId = '';
+            var pbUpd = 0;
+            var flashUploadStartTime = '';
+            var fileIcons = new Array(<?php echo $file_icons; ?>);
             function ___getMaxUploadSize()
             {
               return '<?php echo intval($upload_limit); ?>';
             }
+            function ___serverUrl()
+            {
+              return '<?php echo $server; ?>';
+            }
             function ___getFilePipeString()
             {
               return '<?php echo $files_types; ?>';
-            }
-            function ___getFileTypesAllowOrDeny()
-            {
-              return <?php echo intval($file_types_allow_deny); ?>;
             }
             function ___getFileIcon(icon)
             {
@@ -180,21 +182,21 @@ else
                 return 'default';
               }
             }
-            function ___upLang(key)
+            function ___getFileTypesAllowOrDeny()
             {
-              var lang = new Array();
-              lang['pc' ]     = '<?php echo lang('Percent Complete'); ?>';
-              lang['kbr']     = '<?php echo lang('KB Remaining (at '); ?>';
-              lang['remain']  = '<?php echo lang('remaining'); ?>';
-              lang['desc']    = '<?php echo lang('Description'); ?>';
-              lang['fp']      = '<?php echo lang('File Password'); ?>';
-              lang['sc']      = '<?php echo lang('Save Changes'); ?>';
-              lang['efd']     = '<?php echo lang('Edit File Details'); ?>';
-              lang['rm']      = '<?php echo lang('Remove File'); ?>';
-              lang['ff1']     = '<?php echo lang('Feature This File?'); ?>';
-              lang['ff2']     = '<?php echo lang('Yes'); ?>';
-              lang['ft']      = '<?php echo lang('Tags (seperated by commas)'); ?>';
-              return lang[key];
+              return <?php echo intval($file_types_allow_deny); ?>;
+            }
+            function ___toManyFilesError()
+            {
+              $('#alert4').show();
+              setTimeout('$("#alert4").hide("normal");', 2500);
+              fileToBig = false;
+            }
+            function ___generalError()
+            {
+              $('#alert5').show();
+              setTimeout('$("#alert5").hide("normal");', 2500);
+              fileToBig = false;
             }
             function ___filePropSaveButtons(id)
             {
@@ -226,7 +228,22 @@ else
               }
               return sa ? s : s[0];
             }
-
+            function ___upLang(key)
+            {
+              var lang = new Array();
+              lang['pc' ]     = '<?php echo lang('Percent Complete'); ?>';
+              lang['kbr']     = '<?php echo lang('KB Remaining (at '); ?>';
+              lang['remain']  = '<?php echo lang('remaining'); ?>';
+              lang['desc']    = '<?php echo lang('Description'); ?>';
+              lang['fp']      = '<?php echo lang('File Password'); ?>';
+              lang['sc']      = '<?php echo lang('Save Changes'); ?>';
+              lang['efd']     = '<?php echo lang('Edit File Details'); ?>';
+              lang['rm']      = '<?php echo lang('Remove File'); ?>';
+              lang['ff1']     = '<?php echo lang('Feature This File?'); ?>';
+              lang['ff2']     = '<?php echo lang('Yes'); ?>';
+              lang['ft']      = '<?php echo lang('Tags (seperated by commas)'); ?>';
+              return lang[key];
+            }
             //$(function() {
               //$('#plupload').pluploadQueue({
               var uploader = new plupload.Uploader({
@@ -254,18 +271,17 @@ else
                     });
                   },
                   BeforeUpload: function(up, file) {
-                    var fid = gen_rand_id(32);
+                    var fid = genRandId(32);
                     var cur_file_id = fid;
                     var stats = plupload.QUEUED;
                     var f_user = $('#uid').val();
-                    var url = ___server_url()+"upload/process/"+fid+'/'+f_user;
+                    var url = ___serverUrl()+"upload/process/"+fid+'/'+f_user;
                     placeProgressBar(file.id);
                     //var flashUploadStartTime = Math.round(new Date().getTime()/1000.0);
                     //$("#"+file.id+"-details").css('borderTop', 'none').show();
                     //$("#"+file.id).addClass('details').css('borderBottom', 'none');
                   },
                   UploadComplete: function(up, files) {
-					alert('test');
                     upload_done(files);
                   }
                 },
@@ -279,7 +295,35 @@ else
               }
               uploader.init();
             //});
-            function sync_file_props(file)
+            function saveFilePropChanges(file_id)
+            {
+              filePropsObj[file_id]['desc'] = $('#'+file_id+'_desc').val();
+              filePropsObj[file_id]['pass'] = $('#'+file_id+'_pass').val();
+              filePropsObj[file_id]['tags'] = $('#'+file_id+'_tags').val();
+              if($('#'+file_id+'_feat:checked').length)
+              {
+                filePropsObj[file_id]['feat'] = "1";
+              }
+              else
+              {
+                filePropsObj[file_id]['feat'] = "0";
+              }
+            }
+            function beforeUploadStart(file)
+            {
+              var fid = genRandId(32);
+              curFileId = fid;
+              var url;
+              var fUser = $('#uid').val();
+              var url = ___serverUrl()+"upload/process/"+fid+'/'+fUser;
+              placeProgressBar(file.id);
+              flashUploadStartTime = Math.round(new Date().getTime()/1000.0);
+              $("#"+file.id+"-details").css('borderTop', 'none').show();
+              $("#"+file.id).addClass('details').css('borderBottom', 'none');
+              //$.scrollTo( $("#"+file.id), 300);
+              return true;
+            }
+            function syncFileProps(file)
             {
               var fFeatured = filePropsObj[file.id]['feat'];
               var fDesc = filePropsObj[file.id]['desc'] ;
@@ -307,13 +351,13 @@ else
             }
             function upload_done(file)
             {
+console.log(file);
               syncFileProps(file);
               $('#'+file.id+"-del").empty().html("<strong><?php echo lang('Done!'); ?></strong>");
               $("#"+file.id+"-details").css('borderTop', 'none').show();
-              var stats = swfu.getStats();
-              if(stats.files_queued > 0)
+              if(plupload.QUEUED > 0)
               {
-                swfu.startUpload();
+                uploader.start();
               }
               else
               {

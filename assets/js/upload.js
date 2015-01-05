@@ -67,7 +67,7 @@ function rm_file(id)
 {
 	$('#'+id).remove();
 	$('#'+id+"-details").remove();
-	plupload.cancelUpload(id);
+	//plupload.cancelUpload(id);
 	delete fileObj[id];
 	
 	// remove from count
@@ -114,7 +114,7 @@ function addFileQueue(file)
 {
 	if(typeof(fileObj[file.id]) != 'undefined')
 	{
-		plupload.cancelUpload(file.id);
+		//plupload.cancelUpload(file.id);
 		subtractFilesFromTotal++;
 		prevFile = true;
 		return true;
@@ -122,7 +122,7 @@ function addFileQueue(file)
 
 	if(file.size > 1024 * 1024 * ___getMaxUploadSize())
 	{
-		plupload.cancelUpload(file.id);
+		plupload.removeFile(file);
 		subtractFilesFromTotal++;
 		fileToBig = true;
 		return true;
@@ -149,7 +149,7 @@ function addFileQueue(file)
 			
 			if(!allow)
 			{
-				plupload.cancelUpload(file.id);
+				plupload.removeFile(file);
 				subtractFilesFromTotal++;
 				fileNotAllowed = true;
 				return true;	
@@ -170,7 +170,7 @@ function addFileQueue(file)
 			
 			if(notAllow)
 			{
-				plupload.cancelUpload(file.id);
+				plupload.removeFile(file);
 				subtractFilesFromTotal++;
 				fileNotAllowed = true;
 				return true;	
@@ -257,7 +257,7 @@ function fileDialogComplete(num)
 function clearUploadQueue()
 {
 	while(plupload.QUEUED > 0) {
-		plupload.cancelUpload();
+		plupload.removeFile();
 		file = plupload.getFile();
 		rm_file(file.id);
 	}
