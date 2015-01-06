@@ -1,4 +1,4 @@
-﻿///<reference path="./lib/jquery/jquery-1.9.1.js" />
+///<reference path="./lib/jquery/jquery-1.9.1.js" />
 /**
 * jQuery pugin : This plugin provides follwing featurs.
 *   - Browser detection.
