@@ -96,7 +96,14 @@ class Xu_api {
 			{
 				$name = str_replace(array('_api', 'xu_', 'Xu_'), '', $class);
 				include_once($dir.$file);
-				$this->$name = new $class();
+				if(class_exists($class))
+				{
+					$this->$name = new $class();
+				}
+				else
+				{
+					show_error(sprintf('Class %s does not exists. please reupload %s.', $class, $file));
+				}
 			}
 		}
 	}
