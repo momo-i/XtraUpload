@@ -76,7 +76,7 @@ function rm_file(id)
 
 function updatePendingFileCount()
 {
-	$('#summary').html(parseInt(plupload.QUEUED));
+	$('#summary').html(parseInt(uploader.total.queued));
 }
 
 function convert_bits(bytes) 
@@ -185,10 +185,9 @@ function addFileQueue(file)
     filePropsObj[file.id]['desc'] = '';
     filePropsObj[file.id]['tags'] = ''; 
     filePropsObj[file.id]['pass'] = '';
-	
 	fileObj[file.id] = file.name;
+
 	$('#file_list_table').append(""+
-	//$('#filesHidden').append(""+
 		"<tr id='"+file.id+"'>"+
 			"<td class='align-left' style='vertical-align:middle'>"+
 				"<img class='nb' src='"+___baseUrl()+"assets/images/files/"+___getFileIcon(getExtension(file.name))+".png' border='0' />&nbsp;" +
@@ -256,7 +255,7 @@ function fileDialogComplete(num)
 
 function clearUploadQueue()
 {
-	while(plupload.QUEUED > 0) {
+	while(uploader.total.queued > 0) {
 		plupload.removeFile();
 		file = plupload.getFile();
 		rm_file(file.id);
