@@ -265,8 +265,6 @@ else
                   },
                   FilesAdded: function(up, files) {
                     plupload.each(files, function(file) {
-                      //$('#files').show();
-                      //$('#file_list').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b>test</b></div>';
                       addFileQueue(file);
                     });
                   },
@@ -277,12 +275,12 @@ else
                     var f_user = $('#uid').val();
                     var url = ___serverUrl()+"upload/process/"+fid+'/'+f_user;
                     placeProgressBar(file.id);
-                    //var flashUploadStartTime = Math.round(new Date().getTime()/1000.0);
-                    //$("#"+file.id+"-details").css('borderTop', 'none').show();
-                    //$("#"+file.id).addClass('details').css('borderBottom', 'none');
+                    var flashUploadStartTime = Math.round(new Date().getTime()/1000.0);
+                    $("#"+file.id+"-details").css('borderTop', 'none').show();
+                    $("#"+file.id).addClass('details').css('borderBottom', 'none');
                   },
                   UploadComplete: function(up, files) {
-                    upload_done(files);
+                    uploadDone(files);
                   }
                 },
               });
@@ -349,9 +347,8 @@ else
                 }
               );
             }
-            function upload_done(file)
+            function uploadDone(file)
             {
-console.log(file);
               syncFileProps(file);
               $('#'+file.id+"-del").empty().html("<strong><?php echo lang('Done!'); ?></strong>");
               $("#"+file.id+"-details").css('borderTop', 'none').show();
