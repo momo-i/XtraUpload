@@ -99,7 +99,7 @@ else
           <div id="uploader" style="display:none;">
             <h3 style="padding-top:8px;"><?php echo lang('Select Files To Upload'); ?></h3><br>
             <div style="padding-left:12px;">
-              <div style="display: block; width:90px; height:22px; border: solid 1px #7FAAFF; background-color: #C5D9FF; padding: 2px; padding-top:6px; padding-left:6px;"><span id="plupload"><span class="button" style="font-size: 12pt; font-weight:bold; color:#565656;"><?php echo lang('Browse...'); ?></span></span></div>
+              <div style="display: block; width:90px; height:22px; border: solid 1px #7FAAFF; background-color: #C5D9FF; padding: 2px; padding-top:6px; padding-left:6px;"><span id="plupload"><span class="button" style="font-size: 12pt; font-weight:bold; color:#565656; cursor: pointer;"><?php echo lang('Browse...'); ?></span></span></div>
             </div>
             <br>
           </div>
@@ -265,21 +265,19 @@ else
                   },
                   FilesAdded: function(up, files) {
                     plupload.each(files, function(file) {
-                      //$('#files').show();
-                      //$('#file_list').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b>test</b></div>';
+                      fileDialogComplete();
                       addFileQueue(file);
                     });
                   },
                   BeforeUpload: function(up, file) {
                     var fid = genRandId(32);
                     var cur_file_id = fid;
-                    var stats = plupload.QUEUED;
                     var f_user = $('#uid').val();
                     var url = ___serverUrl()+"upload/process/"+fid+'/'+f_user;
                     placeProgressBar(file.id);
-                    //var flashUploadStartTime = Math.round(new Date().getTime()/1000.0);
-                    //$("#"+file.id+"-details").css('borderTop', 'none').show();
-                    //$("#"+file.id).addClass('details').css('borderBottom', 'none');
+                    var flashUploadStartTime = Math.round(new Date().getTime()/1000.0);
+                    $("#"+file.id+"-details").css('borderTop', 'none').show();
+                    $("#"+file.id).addClass('details').css('borderBottom', 'none');
                   },
                   UploadComplete: function(up, files) {
                     upload_done(files);
@@ -351,11 +349,10 @@ else
             }
             function upload_done(file)
             {
-console.log(file);
               syncFileProps(file);
               $('#'+file.id+"-del").empty().html("<strong><?php echo lang('Done!'); ?></strong>");
               $("#"+file.id+"-details").css('borderTop', 'none').show();
-              if(plupload.QUEUED > 0)
+              if(uploader.total.queued > 0)
               {
                 uploader.start();
               }
