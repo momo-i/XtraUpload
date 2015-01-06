@@ -153,7 +153,7 @@ else
             var prevFile = false;
             var fileToBig = false;
             var fileNotAllowed = false;
-            var filePropsObj = new Array();
+            var filePropsObj = ""; //new Array();
             var subtractFilesFromTotal = 0;
             var curFileId = '';
             var pbUpd = 0;
@@ -247,7 +247,7 @@ else
             var uploader = new plupload.Uploader({
               runtimes: 'html5,flash,silverlight,html4',
               browse_button: 'plupload',
-              url: "<?php echo site_url('upload/plupload'). '/' .md5($this->functions->get_rand_id(32)).'/'.($this->session->userdata('id') ? $this->session->userdata('id') : 0 )?>",
+              url: "<?php echo site_url('upload/plupload'); ?>", //. '/' .md5($this->functions->get_rand_id(32)).'/'.($this->session->userdata('id') ? $this->session->userdata('id') : 0 )?>",
               chunk_size: "10mb",
               unique_names: true,
               flash_swf_url: '/assets/flash/Moxie.swf',
@@ -302,11 +302,6 @@ else
             }
             function beforeUploadStart(file)
             {
-              var fid = genRandId(32);
-              curFileId = fid;
-              var url;
-              var fUser = $('#uid').val();
-              var url = ___serverUrl()+"upload/process/"+fid+'/'+fUser;
               placeProgressBar(file.id);
               flashUploadStartTime = Math.round(new Date().getTime()/1000.0);
               $("#"+file.id+"-details").css('borderTop', 'none').show();
@@ -342,6 +337,11 @@ else
             }
             function uploadDone(file)
             {
+              var fid = genRandId(32);
+              curFileId = fid;
+              var fUser = $('#uid').val();
+              var url = ___serverUrl()+"upload/process/"+fid+'/'+fUser;
+              $.post(url);
               syncFileProps(file);
               $('#'+file.id+"-del").empty().html("<strong><?php echo lang('Done!'); ?></strong>");
               $("#"+file.id+"-details").css('borderTop', 'none').show();

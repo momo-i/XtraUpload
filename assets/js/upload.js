@@ -184,7 +184,7 @@ function addFileQueue(file)
 		}
 		
 	}
-    
+	filePropsObj = new Array();
     filePropsObj[file.id] = new Array();
     filePropsObj[file.id]['feat'] = ''; 
     filePropsObj[file.id]['desc'] = '';

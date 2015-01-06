@@ -167,7 +167,7 @@ class Upload extends CI_Controller {
 		$this->load->library('upload', $config);
 
 		log_message('debug', 'Class: '.__CLASS__.' Function: '.__FUNCTION__.' Upload start '.print_r($config, true));
-		if($this->upload->do_upload('Filedata'))
+		if($this->upload->do_upload('file'))
 		{
 			$data = $this->upload->data();
 			$file = $data['full_path'];
