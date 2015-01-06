@@ -244,55 +244,48 @@ else
               lang['ft']      = '<?php echo lang('Tags (seperated by commas)'); ?>';
               return lang[key];
             }
-            //$(function() {
-              //$('#plupload').pluploadQueue({
-              var uploader = new plupload.Uploader({
-                runtimes: 'html5,flash,silverlight,html4',
-                browse_button: 'plupload',
-                url: "<?php echo site_url('upload/plupload'); ?>", //.md5($this->functions->get_rand_id(32)).'/'.($this->session->userdata('id') ? $this->session->userdata('id') : 0 ))?>",
-                chunk_size: "1mb",
-                unique_names: true,
-                flash_swf_url: '/assets/flash/Moxie.swf',
-                silverlight_xap_url: '/assets/flash/Moxie.xap',
-                filters: {
-                  max_file_size: '100gb',
-                  mime_types: [
-                    {title: "All files", extensions: "*"}
-                  ]
+            var uploader = new plupload.Uploader({
+              runtimes: 'html5,flash,silverlight,html4',
+              browse_button: 'plupload',
+              url: "<?php echo site_url('upload/plupload'). '/' .md5($this->functions->get_rand_id(32)).'/'.($this->session->userdata('id') ? $this->session->userdata('id') : 0 )?>",
+              chunk_size: "10mb",
+              unique_names: true,
+              flash_swf_url: '/assets/flash/Moxie.swf',
+              silverlight_xap_url: '/assets/flash/Moxie.xap',
+              filters: {
+                max_file_size: '100gb',
+                mime_types: [
+                  {title: "All files", extensions: "*"}
+                ]
+              },
+              init: {
+                PostInit: function() {
                 },
-                init: {
-                  PostInit: function() {
-                  },
-                  FilesAdded: function(up, files) {
-                    plupload.each(files, function(file) {
-                      fileDialogComplete();
-                      addFileQueue(file);
-                    });
-                  },
-                  BeforeUpload: function(up, file) {
-                    var fid = genRandId(32);
-                    var cur_file_id = fid;
-                    var f_user = $('#uid').val();
-                    var url = ___serverUrl()+"upload/process/"+fid+'/'+f_user;
-                    placeProgressBar(file.id);
-                    var flashUploadStartTime = Math.round(new Date().getTime()/1000.0);
-                    $("#"+file.id+"-details").css('borderTop', 'none').show();
-                    $("#"+file.id).addClass('details').css('borderBottom', 'none');
-                  },
-                  UploadComplete: function(up, files) {
-                    uploadDone(files);
-                  }
+                FilesAdded: function(up, files) {
+                  plupload.each(files, function(file) {
+                    fileDialogComplete();
+                    addFileQueue(file);
+                  });
                 },
-              });
-              if(uploader) {
-                $('#flash').remove();
-                $('#browser').attr('disabled', false);
-                $('#uploader').show();
-                $('#files').show();
-                $('#info_div').show();
-              }
-              uploader.init();
-            //});
+                BeforeUpload: function(up, file) {
+                  beforeUploadStart(file);
+                },
+                UploadProgress: function(up, file) {
+                  flashUploadProgress(file, up);
+                },
+                UploadComplete: function(up, files) {
+                  uploadDone(files);
+                }
+              },
+            });
+            if(uploader) {
+              $('#flash').remove();
+              $('#browser').attr('disabled', false);
+              $('#uploader').show();
+              $('#files').show();
+              $('#info_div').show();
+            }
+            uploader.init();
             function saveFilePropChanges(file_id)
             {
               filePropsObj[file_id]['desc'] = $('#'+file_id+'_desc').val();
