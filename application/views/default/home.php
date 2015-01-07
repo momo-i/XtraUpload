@@ -311,6 +311,7 @@ else
             }
             function syncFileProps(file)
             {
+console.log(filePropsObj);
               var fFeatured = filePropsObj[file.id]['feat'];
               var fDesc = filePropsObj[file.id]['desc'] ;
               var fPass = filePropsObj[file.id]['pass'];

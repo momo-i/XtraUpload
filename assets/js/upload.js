@@ -1,4 +1,4 @@
-function flashUpdate(total,remain,speed,per)
+function flashUpdate(total, remain, speed, per)
 {
 	$("#progress_img").stop(true);
 	if(total != '')
@@ -22,7 +22,6 @@ var pbUpd=0;
 //function flashUploadProgress(file, sofar, total)
 function flashUploadProgress(file, up)
 {
-//console.log(up);
 	var flashCurrentTime = Math.round(new Date().getTime()/1000.0);
 	var sofar = up.total.loaded;
 	var lapsed =  flashCurrentTime - flashUploadStartTime;
@@ -31,13 +30,14 @@ function flashUploadProgress(file, up)
 	var bSpeed = 0; 
 	var speed = 0; 
 	var remaining = 0;
+	var percent = 0;
 
 	if(lapsed > 0)
 	{ 
 		bSpeed = (bRead / lapsed); 
 	}
 
-	bSpeed = up.total.bytesPerSec;
+	//bSpeed = up.total.bytesPerSec;
 	if(bSpeed > 0)
 	{ 
 		remaining = Math.round((total - sofar) / bSpeed); 
@@ -53,9 +53,8 @@ function flashUploadProgress(file, up)
 	
 	var remainingf = remaining_hours+"h : "+remaining_min+"m : "+remaining_sec+"s"; 
 	
-	var percent = Math.round(100 * bRead / total);
 	percent = up.total.percent;
-	if(lapsed>1)
+	if(lapsed > 1)
 	{
 		speed = Math.round(bRead / lapsed);
 	}
@@ -65,7 +64,7 @@ function flashUploadProgress(file, up)
 	}
 	speed = Math.round(speed / 1024);	
 	
-	flashUpdate(Math.round((total-sofar)/1024),remainingf,speed,percent);
+	flashUpdate(Math.round((total-sofar)/1024), remainingf, speed, percent);
 }
 
 function rm_file(id)
