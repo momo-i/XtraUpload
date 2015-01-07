@@ -93,19 +93,20 @@ class Server extends CI_Controller {
 	{
 		if($this->input->post('valid'))
 		{
-			unset($this->input->post('valid'));
+			$post = $this->input->post();
+			unset($post['valid']);
 
-			if( ! isset($this->input->post('status')))
+			if( ! isset($post['status']))
 			{
-				$this->input->post('status') = 0;
+				$post['status'] = 0;
 			}
 
-			if(substr($this->input->post('url'), -1) != '/')
+			if(substr($post['url'], -1) != '/')
 			{
-				$this->input->post('url') .= '/';
+				$post['url'] .= '/';
 			}
 
-			$id = $this->server_db->add_server($this->input->post());
+			$id = $this->server_db->add_server($post);
 
 			$this->session->set_flashdata('msg', sprintf(lang('New Server Installed, %s'), anchor('admin/server/install/'.$id, lang('FTP Install this server?'))));
 
@@ -130,19 +131,20 @@ class Server extends CI_Controller {
 	{
 		if($this->input->post('valid'))
 		{
-			unset($this->input->post('valid'));
+			$post = $this->input->post();
+			unset($post['valid']);
 
-			if( ! isset($this->input->post('status')))
+			if( ! isset($post['status']))
 			{
-				$this->input->post('status') = 0;
+				$post['status'] = 0;
 			}
 
-			if(substr($this->input->post('url'), -1) != '/')
+			if(substr($post['url'], -1) != '/')
 			{
-				$this->input->post('url') .= '/';
+				$post['url'] .= '/';
 			}
 
-			$this->server_db->edit_server($id, $this->input->post());
+			$this->server_db->edit_server($id, $post);
 
 			$this->session->set_flashdata('msg', lang('Server Edited'));
 			redirect('admin/server/view');
