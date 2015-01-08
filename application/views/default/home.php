@@ -274,7 +274,9 @@ else
                   flashUploadProgress(file, up);
                 },
                 UploadComplete: function(up, files) {
-                  uploadDone(files);
+                  plupload.each(files, function(file) {
+                    uploadDone(file);
+                  });
                 }
               },
             });
@@ -309,9 +311,8 @@ else
               //$.scrollTo( $("#"+file.id), 300);
               return true;
             }
-            function syncFileProps(file)
+            function syncFileProps(file, curFileId)
             {
-console.log(filePropsObj);
               var fFeatured = filePropsObj[file.id]['feat'];
               var fDesc = filePropsObj[file.id]['desc'] ;
               var fPass = filePropsObj[file.id]['pass'];
@@ -343,7 +344,7 @@ console.log(filePropsObj);
               var fUser = $('#uid').val();
               var url = ___serverUrl()+"upload/process/"+fid+'/'+fUser;
               $.post(url);
-              syncFileProps(file);
+              syncFileProps(file, fid);
               $('#'+file.id+"-del").empty().html("<strong><?php echo lang('Done!'); ?></strong>");
               $("#"+file.id+"-details").css('borderTop', 'none').show();
               if(uploader.total.queued > 0)
