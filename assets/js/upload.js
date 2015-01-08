@@ -118,7 +118,7 @@ function addFileQueue(file)
 {
 	if(typeof(fileObj[file.id]) != 'undefined')
 	{
-		//plupload.cancelUpload(file.id);
+		plupload.removeFile(file);
 		subtractFilesFromTotal++;
 		prevFile = true;
 		return true;

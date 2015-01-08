@@ -245,23 +245,21 @@ else
               lang['ft']      = '<?php echo lang('Tags (seperated by commas)'); ?>';
               return lang[key];
             }
+            var maxsize = ___getMaxUploadSize();
             var uploader = new plupload.Uploader({
               runtimes: 'html5,flash,silverlight,html4',
               browse_button: 'plupload',
               url: "<?php echo site_url('upload/plupload'). '/"+fid+"/'.($this->session->userdata('id') ? $this->session->userdata('id') : 0 )?>",
-              chunk_size: "50mb",
-              //unique_names: true,
-              flash_swf_url: '/assets/flash/Moxie.swf',
-              silverlight_xap_url: '/assets/flash/Moxie.xap',
+              chunk_size: "1gb",
+              flash_swf_url: ___baseUrl()+'assets/flash/Moxie.swf',
+              silverlight_xap_url: ___baseUrl()+'assets/flash/Moxie.xap',
               filters: {
-                max_file_size: '100gb',
+                max_file_size: maxsize+'mb',
                 mime_types: [
                   {title: "All files", extensions: "*"}
                 ]
               },
               init: {
-                PostInit: function() {
-                },
                 FilesAdded: function(up, files) {
                   plupload.each(files, function(file) {
                     fileDialogComplete();
@@ -278,6 +276,9 @@ else
                   plupload.each(files, function(file) {
                     uploadDone(file);
                   });
+                },
+                Error: function(up, args) {
+                  uploadError(up, args);
                 }
               },
             });
@@ -343,7 +344,7 @@ else
               curFileId = fid;
               var fUser = $('#uid').val();
               var url = ___serverUrl()+"upload/process/"+fid+'/'+fUser;
-              $.post(url); //, {}, function(data) { console.log(data); }, "json");
+              $.post(url);
               syncFileProps(file, fid);
               $('#'+file.id+"-del").empty().html("<strong><?php echo lang('Done!'); ?></strong>");
               $("#"+file.id+"-details").css('borderTop', 'none').show();
