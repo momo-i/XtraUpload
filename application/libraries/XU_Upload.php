@@ -739,9 +739,9 @@ class XU_Upload extends CI_Upload {
 
 		log_message('debug', __FUNCTION__.": last...");
 		if($this->allowed_or_not)
-			return FALSE;
-		else
 			return TRUE;
+		else
+			return FALSE;
 	}
 
 	/**

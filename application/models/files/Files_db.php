@@ -441,9 +441,10 @@ class Files_db extends CI_Model {
 
 		// Has the file been uploaded before?
 		$real_file = $this->db->select('id, type, is_image')->get_where('files', array('md5' => $md5));
+		log_message('debug', "Files_db: Has the file been uploaded before?");
 		if($real_file->num_rows() == 0)
-		{// Nope, original content!
-
+		{
+			// Nope, original content!
 			// Get some file information
 			$type =  str_replace('.','',strtolower(strrchr(basename($file), '.')));
 			$rType =  str_replace('.','',strrchr(basename($file), '.'));
@@ -471,10 +472,12 @@ class Files_db extends CI_Model {
 			// Move the file into its new home
 			if(is_uploaded_file($file))
 			{
+				log_message('debug', "Files_db: move_uploaded_file $file to $new_path");
 				move_uploaded_file($file, $new_path);
 			}
 			else
 			{
+				log_message('debug', "Files_db: rename $file to $new_path");
 				rename($file, $new_path);
 			}
 			
@@ -492,10 +495,12 @@ class Files_db extends CI_Model {
 			);
 			$this->db->insert('files', $data); unset($data);
 			$file_link_id = $this->db->insert_id();
+			log_message('debug', "Files_db: insert files: $file_link_id");
 		}
 		else
 		{
 			// Oops, we have a dupe. Lets save the user some trouble and not tell them, mmmk?
+			log_message('debug', "Files_db: Oops, we have a dupe. Lets save the user some trouble and not tell them, mmmk?");
 			$file_obj = $real_file->row();
 			$type = $file_obj->type;
 			$file_link_id = $file_obj->id;
@@ -528,6 +533,7 @@ class Files_db extends CI_Model {
 			'remote' => $remote_upload,
 			'time' => time()
 		);
+		log_message('debug', "Files_db: Insert refrence");
 		$this->db->insert('refrence', $data);
 		return $file_id;
 	}

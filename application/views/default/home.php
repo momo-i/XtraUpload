@@ -344,8 +344,13 @@ else
               curFileId = fid;
               var fUser = $('#uid').val();
               var url = ___serverUrl()+"upload/process/"+fid+'/'+fUser;
-              $.post(url);
-              syncFileProps(file, fid);
+              $.post(
+                url,
+                "",
+                function() {
+                  syncFileProps(file, fid);
+                }
+              );
               $('#'+file.id+"-del").empty().html("<strong><?php echo lang('Done!'); ?></strong>");
               $("#"+file.id+"-details").css('borderTop', 'none').show();
               if(uploader.total.queued > 0)
