@@ -159,6 +159,7 @@ else
             var pbUpd = 0;
             var flashUploadStartTime = '';
             var fileIcons = new Array(<?php echo $file_icons; ?>);
+            var fid = genRandId(32);
             function ___getMaxUploadSize()
             {
               return '<?php echo intval($upload_limit); ?>';
@@ -247,9 +248,9 @@ else
             var uploader = new plupload.Uploader({
               runtimes: 'html5,flash,silverlight,html4',
               browse_button: 'plupload',
-              url: "<?php echo site_url('upload/plupload'); ?>", //. '/' .md5($this->functions->get_rand_id(32)).'/'.($this->session->userdata('id') ? $this->session->userdata('id') : 0 )?>",
-              chunk_size: "10mb",
-              unique_names: true,
+              url: "<?php echo site_url('upload/plupload'). '/"+fid+"/'.($this->session->userdata('id') ? $this->session->userdata('id') : 0 )?>",
+              chunk_size: "50mb",
+              //unique_names: true,
               flash_swf_url: '/assets/flash/Moxie.swf',
               silverlight_xap_url: '/assets/flash/Moxie.xap',
               filters: {
@@ -339,11 +340,10 @@ else
             }
             function uploadDone(file)
             {
-              var fid = genRandId(32);
               curFileId = fid;
               var fUser = $('#uid').val();
               var url = ___serverUrl()+"upload/process/"+fid+'/'+fUser;
-              $.post(url);
+              $.post(url); //, {}, function(data) { console.log(data); }, "json");
               syncFileProps(file, fid);
               $('#'+file.id+"-del").empty().html("<strong><?php echo lang('Done!'); ?></strong>");
               $("#"+file.id+"-details").css('borderTop', 'none').show();

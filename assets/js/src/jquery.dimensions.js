@@ -113,7 +113,9 @@ $.fn.extend({
 });
 
 function num(el, prop) {
-	return parseInt($.curCSS(el.jquery?el[0]:el,prop,true))||0;
+	var element = el.jquery ? el[0] : el;
+	//return parseInt($.curCSS(el.jquery?el[0]:el,prop,true))||0;
+	return parseInt($(element).css(prop,true))||0;
 };
 
 })(jQuery);

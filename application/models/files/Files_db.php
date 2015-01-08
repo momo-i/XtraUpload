@@ -235,10 +235,12 @@ class Files_db extends CI_Model {
 		
 		// No provided file object, make one
 		$query = $this->db->select('file_id, link_name, is_image')->get_where('refrence', array('secid' => $secid), 1, 0);
+		log_message('debug', "Files_db: Check $secid");
 		if($query->num_rows() == 1)
 		{
+			log_message('debug', 'Files_db: Found links.');
 			$file = $query->row();
-			
+			log_message('debug', print_r($file, true));
 			$links['down'] = site_url('/files/get/'.$file->file_id.'/'.$file->link_name);
 			$links['del'] = site_url('/files/delete/'.$file->file_id.'/'.$secid.'/'.$file->link_name);
 			
@@ -248,10 +250,10 @@ class Files_db extends CI_Model {
 			}
 			$links = $this->xu_api->hooks->run_hooks('files_db::get_links', $links);
 			return $links;
-			
 		}
 		else
 		{
+			log_message('debug', 'Files_db: Failed.');
 		    $reason = $this->get_reason_upload_failed($secid);
 		    if(!$reason)
 		    {

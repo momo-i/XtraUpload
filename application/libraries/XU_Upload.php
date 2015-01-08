@@ -113,6 +113,14 @@ class XU_Upload extends CI_Upload {
 	public $allowed_types = '';
 
 	/**
+	 * Allowed or not
+	 *
+	 * @access	public
+	 * @var		bool
+	 */
+	public $allowed_or_not = TRUE;
+
+	/**
 	 * Temporary filename
 	 *
 	 * @access	public
@@ -554,14 +562,15 @@ class XU_Upload extends CI_Upload {
 		 * we'll use move_uploaded_file(). One of the two should
 		 * reliably work in most environments
 		 */
-		if ( ! @copy($this->file_temp, $this->upload_path.$this->file_name))
+		// Plupload, file already moved, then ignore.
+		/*if ( ! @copy($this->file_temp, $this->upload_path.$this->file_name))
 		{
 			if ( ! @move_uploaded_file($this->file_temp, $this->upload_path.$this->file_name))
 			{
 				$this->set_error($this->_types['upload_destination_error']);
 				return FALSE;
 			}
-		}
+		}*/
 
 		/*
 		 * Set the finalized image dimensions
@@ -666,15 +675,18 @@ class XU_Upload extends CI_Upload {
 	{
 		if ($this->allowed_types === '*')
 		{
-			log_message('debug', 'All files are allowed');
-			return TRUE;
+			log_message('debug', 'Allowed types are *');
+			if($this->allowed_or_not)
+				return TRUE;
+			else
+				return FALSE;
 		}
 
 		if (empty($this->allowed_types) OR ! is_array($this->allowed_types))
 		{
 			log_message('debug', "Allowed types: ".print_r($this->allowed_types, true));
 			$this->set_error($this->types['upload_no_file_types']);
-			return FALSE;
+				return FALSE;
 		}
 
 		$ext = strtolower(ltrim($this->file_ext, '.'));
@@ -682,30 +694,54 @@ class XU_Upload extends CI_Upload {
 		if (in_array($ext, $this->allowed_types, TRUE))
 		{
 			log_message('debug', "No allowed types in array: $ext");
-			return FALSE;
+			if($this->allowed_or_not)
+				return FALSE;
+			else
+				return TRUE;
 		}
 
 		// Images get some additional checks
 		if (in_array($ext, array('gif', 'jpg', 'jpeg', 'jpe', 'png'), TRUE) && @getimagesize($this->file_temp) === FALSE)
 		{
 			log_message('debug', "No allowed image types. ext: {$ext}");
-			return FALSE;
+			if($this->allowed_or_not)
+				return FALSE;
+			else
+				return TRUE;
 		}
 
 		if ($ignore_mime === TRUE)
 		{
+			log_message('debug', "Ignore mime...");
 			return TRUE;
 		}
 
 		if (isset($this->_mimes[$ext]))
 		{
 			log_message('debug', "File types: {$this->_mimes[$ext]}");
-			return is_array($this->_mimes[$ext])
-				? in_array($this->file_type, $this->_mimes[$ext], TRUE)
-				: ($this->_mimes[$ext] === $this->file_type);
+			$return = false;
+			if($this->allowed_or_not)
+			{
+				log_message('debug', "allowed_or_not: true ");
+				$return = is_array($this->_mimes[$ext])
+					? in_array($this->file_type, $this->_mimes[$ext], TRUE)
+					: ($this->_mimes[$ext] === $this->file_type);
+			}
+			else
+			{
+				log_message('debug', "allowed_or_not: false");
+				$return = is_array($this->_mimes[$ext])
+					? ($this->_mimes[$ext] === $this->file_type)
+					: in_array($this->file_type, $this->_mimes[$ext], TRUE);
+			}
+			return $return;
 		}
 
-		return FALSE;
+		log_message('debug', __FUNCTION__.": last...");
+		if($this->allowed_or_not)
+			return FALSE;
+		else
+			return TRUE;
 	}
 
 	/**
@@ -806,9 +842,10 @@ class XU_Upload extends CI_Upload {
 	 * @access	public
 	 * @param	array	$data
 	 * @param	array	$files
+	 * @param	string	$secid
 	 * @return	void
 	 */
-	public function process_upload($data, $files)
+	public function process_upload($data, $files, $secid)
 	{
 		if ( ! $this->validate_upload_path())
 		{
@@ -819,32 +856,34 @@ class XU_Upload extends CI_Upload {
 		// Get parameters
 		$chunk = isset($data["chunk"]) ? $data["chunk"] : 0;
 		$chunks = isset($data["chunks"]) ? $data["chunks"] : 0;
-		$file_name = isset($data["name"]) ? $data["name"] : '';
-
+		$this->file_name = isset($data["name"]) ? $data["name"] : '';
+		$_FILES['file']['name'] = $data['name'];
+		//log_message('debug', print_r($data, true));
+		//log_message('debug', print_r($_FILES, true));
 		// Clean the fileName for security reasons
-		$file_name = preg_replace('/[^\w\._]+/', '', $file_name);
+		$this->file_name = preg_replace('/[^\w\._]+/', '', $this->file_name);
 
 		// Make sure the fileName is unique but only if chunking is disabled
-		if ($chunks < 2 && file_exists($this->upload_path . DIRECTORY_SEPARATOR . $file_name))
+		if ($chunks < 2 && file_exists($this->upload_path . $this->file_name))
 		{
-			if(preg_match('#\.#', $file_name))
+			if(preg_match('#\.#', $this->file_name))
 			{
-				$ext = strrpos($file_name, '.');
-				$file_name_a = substr($file_name, 0, $ext);
-				$file_name_b = substr($file_name, $ext);
+				$ext = strrpos($this->file_name, '.');
+				$file_name_a = substr($this->file_name, 0, $ext);
+				$file_name_b = substr($this->file_name, $ext);
 			}
 			else
 			{
 				$errmsg = '{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "'.lang('Failed to find extension.').'"}, "id" : "id"}';
-				log_message('debug', $errmsg. " ". $file_name);
+				log_message('debug', $errmsg. " ". $this->file_name);
 				return $errmsg;
 			}
 			$count = 1;
-			while (file_exists($this->upload_path . DIRECTORY_SEPARATOR . $file_name_a . '_' . $count . $file_name_b))
+			while (file_exists($this->upload_path . $file_name_a . '_' . $count . $file_name_b))
 			{
 				$count++;
 			}
-			$file_name = $file_name_a . '_' . $count . $file_name_b;
+			$this->file_name = $file_name_a . '_' . $count . $file_name_b;
 		}
 
 		if (isset($_SERVER["HTTP_CONTENT_TYPE"]))
@@ -862,7 +901,7 @@ class XU_Upload extends CI_Upload {
 			if (isset($files['file']['tmp_name']) && is_uploaded_file($files['file']['tmp_name']))
 			{
 				// Open temp file
-				$out = fopen($this->upload_path . DIRECTORY_SEPARATOR . $file_name, $chunk == 0 ? "wb" : "ab");
+				$out = fopen($this->upload_path . $this->file_name, $chunk == 0 ? "wb" : "ab");
 				if ($out)
 				{
 					// Read binary input stream and append it to temp file
@@ -902,7 +941,7 @@ class XU_Upload extends CI_Upload {
 		else
 		{
 			// Open temp file
-			$out = fopen($this->upload_path . DIRECTORY_SEPARATOR . $file_name, $chunk == 0 ? "wb" : "ab");
+			$out = fopen($this->upload_path . $this->file_name, $chunk == 0 ? "wb" : "ab");
 			if ($out)
 			{
 				// Read binary input stream and append it to temp file
@@ -933,8 +972,18 @@ class XU_Upload extends CI_Upload {
 		}
 
 		// Return JSON-RPC response
-		$errmsg = '{"jsonrpc" : "2.0", "result" : "'.$file_name.'", "id" : "id"}';
+		$errmsg = '{"jsonrpc" : "2.0", "result" : "'.$this->upload_path . $this->file_name.'", "id" : "id"}';
 		log_message('debug', $errmsg);
+		log_message('debug', "Chunk: $chunk, Chunks: $chunks");
+		if(($chunk == 0 && $chunks == 0) OR ($chunk == ($chunks - 1)))
+		{
+			$this->do_upload('file');
+			$this->updata = $this->data();
+			$errmsg = json_encode($this->updata);
+			$temp = $this->updata['file_path'].$secid;
+			log_message('debug', print_r($temp, true));
+			file_put_contents($temp, $errmsg);
+		}
 		return $errmsg;
 	}
 

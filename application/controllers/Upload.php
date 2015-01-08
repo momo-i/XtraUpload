@@ -36,6 +36,13 @@ class Upload extends CI_Controller {
 		log_message('debug', 'XtraUpload Upload Controller Initialized !!');
 		parent::__construct();
 		$this->load->model('server/server_db');
+
+		$allowed_types = !empty($this->startup->group_config->files_types) ? $this->startup->group_config->files_types : "*";
+		$config['overwrite'] = TRUE;
+		$config['upload_path'] = ROOTPATH.'/temp/';
+		$config['allowed_types'] = $allowed_types;
+		$config['max_size'] = (1024 * intval($this->startup->group_config->upload_size_limit));
+		$this->load->library('upload', $config);
 	}
 
 	/**
@@ -160,16 +167,11 @@ class Upload extends CI_Controller {
 			unset($userobj);
 		}
 
-		$allowed_types = !empty($this->startup->group_config->files_types) ? $this->startup->group_config->files_types : "*";
-		$config['upload_path'] = ROOTPATH.'/temp/';
-		$config['allowed_types'] = $allowed_types;
-		$config['max_size'] = (1024 * intval($this->startup->group_config->upload_size_limit));
-		$this->load->library('upload', $config);
-
-		log_message('debug', 'Class: '.__CLASS__.' Function: '.__FUNCTION__.' Upload start '.print_r($config, true));
-		if($this->upload->do_upload('file'))
+		$file = ROOTPATH.'/temp/'.$secid;
+		if(is_file($file))
 		{
-			$data = $this->upload->data();
+			$data = json_decode(file_get_contents($file), true);
+			unlink($file);
 			$file = $data['full_path'];
 
 			$this->files_db->new_file($file, $secid, $user, (bool)$data['is_image'], base_url(), false);
@@ -185,7 +187,7 @@ class Upload extends CI_Controller {
 		}
 		else
 		{
-			$this->files_db->set_upload_failed($secid, $this->upload->error_msg[0]);
+			$this->files_db->set_upload_failed($secid, "Failed");
 			if ($this->input->post('no_flash'))
 			{
 				redirect('upload/failed/'.$secid);
@@ -195,6 +197,7 @@ class Upload extends CI_Controller {
 			}
 			else
 			{
+				log_message('debug', __CLASS__.": Upload Failed.");
 				print "<pre>";
 				var_dump($_FILES);
 				print "</pre>";
@@ -308,16 +311,8 @@ class Upload extends CI_Controller {
 			$this->startup->get_group(intval($userobj->group));
 			unset($userobj);
 		}
-
-		$allowed_types = !empty($this->startup->group_config->files_types) ? $this->startup->group_config->files_types : "*";
-		$config['upload_path'] = ROOTPATH.'/temp/';
-		$config['allowed_types'] = $allowed_types;
-		$config['max_size'] = (1024 * intval($this->startup->group_config->upload_size_limit));
-		$this->load->library('upload', $config);
-		log_message('debug', '$_REQUEST: '.print_r($_REQUEST, true));
-		log_message('debug', '$_FILES: '.print_r($_FILES, true));
-		//$this->files_db->new_file($file, $secid, $user, (bool)$data['is_image'], base_url(), false);
-		echo $this->upload->process_upload($_REQUEST, $_FILES);
+		$data = $this->upload->process_upload($_REQUEST, $_FILES, $secid);
+		echo $data;
 	}
 
 }
