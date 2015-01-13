@@ -226,7 +226,7 @@ class Update extends CI_Controller {
 
 		// 3.1.0 Alpha1
 		$update_string = '- New uplaoder can upload over 2GB';
-		$version[] = array('version' => '3100010', 'description' => $update_string);
+		$version[] = array('version' => '3100001', 'description' => $update_string);
 
 		return $version;
 	}
@@ -481,14 +481,14 @@ class Update extends CI_Controller {
 	}
 
     /**
-     * Update::_update_3100010
+     * Update::_update_3100001
      *
      * 3.1.0 Alpha1
      *
      * @access  private
      * @return  true
      */
-	private function _update_3100010()
+	private function _update_3100001()
 	{
 		$this->_set_db_version();
 		return TRUE;
