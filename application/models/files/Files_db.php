@@ -218,7 +218,7 @@ class Files_db extends CI_Model {
 	public function get_links($secid, $file_object=false)
 	{
 		$links = array();
-		
+
 		// Use provided file object
 		if($file_object)
 		{

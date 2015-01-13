@@ -183,8 +183,12 @@ function addFileQueue(file)
 		}
 		
 	}
-	filePropsObj = new Array();
-    filePropsObj[file.id] = new Array();
+	if(!$.isArray(filePropsObj)) {
+		filePropsObj = new Array();
+	}
+	if(!$.isArray(filePropsObj[file.id])) {
+	    filePropsObj[file.id] = new Array();
+	}
     filePropsObj[file.id]['feat'] = ''; 
     filePropsObj[file.id]['desc'] = '';
     filePropsObj[file.id]['tags'] = ''; 

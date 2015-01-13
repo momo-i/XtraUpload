@@ -153,13 +153,13 @@ else
             var prevFile = false;
             var fileToBig = false;
             var fileNotAllowed = false;
-            var filePropsObj = ""; //new Array();
+            var filePropsObj = new Array();
             var subtractFilesFromTotal = 0;
             var curFileId = '';
             var pbUpd = 0;
             var flashUploadStartTime = '';
             var fileIcons = new Array(<?php echo $file_icons; ?>);
-            var fid = genRandId(32);
+            var fid = "";
             function ___getMaxUploadSize()
             {
               return '<?php echo intval($upload_limit); ?>';
@@ -249,7 +249,7 @@ else
             var uploader = new plupload.Uploader({
               runtimes: 'html5,flash,silverlight,html4',
               browse_button: 'plupload',
-              url: "<?php echo site_url('upload/plupload'). '/"+fid+"/'.($this->session->userdata('id') ? $this->session->userdata('id') : 0 )?>",
+              url: "<?php echo site_url('upload/plupload'); ?>",
               chunk_size: "1gb",
               flash_swf_url: ___baseUrl()+'assets/flash/Moxie.swf',
               silverlight_xap_url: ___baseUrl()+'assets/flash/Moxie.xap',
@@ -258,6 +258,12 @@ else
                 mime_types: [
                   {title: "All files", extensions: "*"}
                 ]
+              },
+              preinit: {
+                UploadFile: function(up, file) {
+                  fid = genRandId(32);
+                  up.setOption('url', '<?php echo site_url("upload/plupload"). "/'+fid+'/".($this->session->userdata('id') ? $this->session->userdata('id') : 0 )?>');
+                }
               },
               init: {
                 FilesAdded: function(up, files) {
@@ -272,10 +278,9 @@ else
                 UploadProgress: function(up, file) {
                   flashUploadProgress(file, up);
                 },
-                UploadComplete: function(up, files) {
-                  plupload.each(files, function(file) {
-                    uploadDone(file);
-                  });
+                FileUploaded: function(up, file, info) {
+                  uploadDone(file);
+                  updatePendingFileCount();
                 },
                 Error: function(up, args) {
                   uploadError(up, args);
@@ -315,6 +320,7 @@ else
             }
             function syncFileProps(file, curFileId)
             {
+console.log(filePropsObj);
               var fFeatured = filePropsObj[file.id]['feat'];
               var fDesc = filePropsObj[file.id]['desc'] ;
               var fPass = filePropsObj[file.id]['pass'];
@@ -348,19 +354,19 @@ else
                 url,
                 "",
                 function() {
-                  syncFileProps(file, fid);
+                  syncFileProps(file, curFileId);
+                  $('#'+file.id+"-del").empty().html("<strong><?php echo lang('Done!'); ?></strong>");
+                  $("#"+file.id+"-details").css('borderTop', 'none').show();
+                  if(uploader.total.queued > 0)
+                  {
+                    uploader.start();
+                  }
+                  else
+                  {
+                    $.scrollTo( $("#uploader"), 400);
+                  }
                 }
               );
-              $('#'+file.id+"-del").empty().html("<strong><?php echo lang('Done!'); ?></strong>");
-              $("#"+file.id+"-details").css('borderTop', 'none').show();
-              if(uploader.total.queued > 0)
-              {
-                uploader.start();
-              }
-              else
-              {
-                $.scrollTo( $("#uploader"), 400);
-              }
             }
             //--]]>
           </script>

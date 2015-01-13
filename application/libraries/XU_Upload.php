@@ -853,13 +853,12 @@ class XU_Upload extends CI_Upload {
 			log_message('debug', $errmsg);
 			return $errmsg;
 		}
+
 		// Get parameters
 		$chunk = isset($data["chunk"]) ? $data["chunk"] : 0;
 		$chunks = isset($data["chunks"]) ? $data["chunks"] : 0;
 		$this->file_name = isset($data["name"]) ? $data["name"] : '';
 		$_FILES['file']['name'] = $data['name'];
-		//log_message('debug', print_r($data, true));
-		//log_message('debug', print_r($_FILES, true));
 		// Clean the fileName for security reasons
 		$this->file_name = preg_replace('/[^\w\._]+/', '', $this->file_name);
 
@@ -979,6 +978,7 @@ class XU_Upload extends CI_Upload {
 		{
 			$this->do_upload('file');
 			$this->updata = $this->data();
+			$this->updata['secid'] = $secid;
 			$errmsg = json_encode($this->updata);
 			$temp = $this->updata['file_path'].$secid;
 			log_message('debug', print_r($temp, true));
