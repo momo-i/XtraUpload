@@ -16,9 +16,6 @@ else
     <link rel="shortcut icon" href="<?php echo base_url(); ?>favicon.ico">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>assets/css/main.css">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>assets/css/tech_junkie/tech_junkie.css">
-    <!--[if lte IE 6]> 
-    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>assets/css/ie6.css">
-    <![endif]-->
     <script type="text/javascript">
       //<![CDATA[
       function ___imageClose(){return '<?php echo base_url(); ?>assets/images/lightbox-btn-close.gif';}
