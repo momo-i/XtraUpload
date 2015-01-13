@@ -35,7 +35,7 @@ if($this->startup->site_config->show_recent_uploads)
               <li>
                 <a href="<?php echo $links['down'];?>">
                   <img src="<?php echo base_url().'assets/images/files/'.$this->functions->get_file_type_icon($file->type);?>" class="nb" alt="">
-                  <?php echo $this->functions->elipsis($file->o_filename, 10); ?> 
+                  <?php echo $this->functions->elipsis($file->o_filename, 10); ?>
                 </a>
               </li>
 <?php

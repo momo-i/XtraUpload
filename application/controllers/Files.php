@@ -265,6 +265,8 @@ EOF;
 			return false;
 		}
 
+		$file = $this->files_db->get_file_object($id);
+
 		// Is file Password Protected?
 		if(!empty($file->pass) and ($this->input->post('pass') != $file->pass))
 		{
