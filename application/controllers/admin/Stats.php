@@ -64,7 +64,7 @@ class Stats extends CI_Controller {
 	 */
 	public function view()
 	{
-		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Site Stats')));
+		$this->load->view($this->startup->skin.'/header', array('header_title' => lang('Site Stats'), 'include_chart_js' => TRUE));
 		$this->load->view($this->startup->skin.'/admin/stats');
 		$this->load->view($this->startup->skin.'/footer');
 	}
