@@ -1,22 +1,23 @@
-$('#chart_title').html('<?php echo lang('Past 7 Days Uploads'); ?>');
+$('#chart_title').html('<?php echo $title; ?>');
 var chart = c3.generate({
   bindto: '#chart_data',
   data: {
+    x: 'x',
     columns: [
-      ['<?php echo $data['6days']['d']; ?>', <?php echo $data['6days']['num']; ?>],
-      ['<?php echo $data['5days']['d']; ?>', <?php echo $data['5days']['num']; ?>],
-      ['<?php echo $data['4days']['d']; ?>', <?php echo $data['4days']['num']; ?>],
-      ['<?php echo $data['3days']['d']; ?>', <?php echo $data['3days']['num']; ?>],
-      ['<?php echo $data['2days']['d']; ?>', <?php echo $data['2days']['num']; ?>],
-      ['<?php echo $data['1day']['d']; ?>', <?php echo $data['1day']['num']; ?>],
-      ['<?php echo $data['today']['d']; ?>',<?php echo $data['today']['num']; ?>]
+      ['x', '<?php echo $day6['d']; ?>', '<?php echo $day5['d']; ?>', '<?php echo $day4['d']; ?>', '<?php echo $day3['d']; ?>', '<?php echo $day2['d']; ?>', '<?php echo $day1['d']; ?>', '<?php echo $today['d']; ?>'],
+      ['All uploads', <?php echo $day6['num']; ?>, <?php echo $day5['num']; ?>, <?php echo $day4['num']; ?>, <?php echo $day3['num']; ?>, <?php echo $day2['num']; ?>, <?php echo $day1['num']; ?>, <?php echo $today['num']; ?>]
     ],
+    groups: [['All uploads']],
     type: 'bar',
   },
   axis: {
     x: {
-      show: false,
-      type: 'categorized'
+      type: 'categorized',
+      label: '<?php echo $xlabel; ?>'
+    },
+    y: {
+      position: 'outer-middle',
+      text: '<?php echo $ylabel; ?>'
     }
   },
   bar: {
@@ -25,29 +26,6 @@ var chart = c3.generate({
     },
   },
   legend: {
-    show: false
+    show: true
   }
 });
-
-function toggle(id) {
-    chart.toggle(id);
-}
-
-d3.select('.container').insert('div', '.chart_data').attr('class', 'legend_uploads_weekly').selectAll('span')
-    .data(['<?php echo $data['6days']['d']; ?>', '<?php echo $data['5days']['d']; ?>', '<?php echo $data['4days']['d']; ?>', '<?php echo $data['3days']['d']; ?>', '<?php echo $data['2days']['d']; ?>', '<?php echo $data['1day']['d']; ?>', '<?php echo $data['today']['d']; ?>'])
-  .enter().append('span')
-    .attr('data-id', function (id) { return id; })
-    .html(function (id) { return id; })
-    .each(function (id) {
-        d3.select(this).style('background-color', chart.color(id));
-    })
-    .on('mouseover', function (id) {
-        chart.focus(id);
-    })
-    .on('mouseout', function (id) {
-        chart.revert();
-    })
-    .on('click', function (id) {
-        chart.toggle(id);
-    });
-

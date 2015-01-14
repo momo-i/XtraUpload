@@ -136,29 +136,13 @@
 
 /*-- Legend --*/
 
+.chart_container {
+  text-align: center;
+  background-color: white;
+}
+
 #chart_title {
   font-size: 20px;
-  text-align: center;
-}
-
-.chart_data {
-  text-align: center;
-}
-
-.legend_all_uploads span {
-  width: 50%;
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
-  color: white;
-}
-
-.legend_uploads_weekly span {
-  width: 14.28571428%;
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
-  color: white;
 }
 
 .c3-legend-item {

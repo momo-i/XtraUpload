@@ -1,6 +1,31 @@
-<?php
-$rand = mt_rand();
-?>
-var chart<?php echo $rand; ?> = new FusionCharts("<?php echo base_url(); ?>assets/flash/charts/Column3D.swf", "ChartId", "<?php echo $height; ?>", "<?php echo $width; ?>", "0", "0");
- chart<?php echo $rand; ?>.setDataXML("<chart caption='<?php echo lang('Past 7 Days Downloads'); ?>' xAxisName='<?php echo lang('Day'); ?>' yAxisName='<?php echo lang('Uploads'); ?>' showValues='0' decimals='0' formatNumberScale='0'><set label='<?php $d='-6'; echo date('D', strtotime($d.' days')); ?>' value='<?php echo $this->db->where('time >', strtotime($d.' days 12:00 AM'))->where('time <', strtotime($d.' days 11:59:59 PM'))->count_all_results('downloads'); ?>' /><set label='<?php $d='-5'; echo date('D', strtotime($d.' days')); ?>' value='<?php echo $this->db->where('time >', strtotime($d.' days 12:00 AM'))->where('time <', strtotime($d.' days 11:59:59 PM'))->count_all_results('downloads'); ?>' /><set label='<?php $d='-4'; echo date('D', strtotime($d.' days')); ?>' value='<?php echo $this->db->where('time >', strtotime($d.' days 12:00 AM'))->where('time <', strtotime($d.' days 11:59:59 PM'))->count_all_results('downloads'); ?>' /><set label='<?php $d='-3'; echo date('D', strtotime($d.' days')); ?>' value='<?php echo $this->db->where('time >', strtotime($d.' days 12:00 AM'))->where('time <', strtotime($d.' days 11:59:59 PM'))->count_all_results('downloads'); ?>' /><set label='<?php $d='-2'; echo date('D', strtotime($d.' days')); ?>' value='<?php echo $this->db->where('time >', strtotime($d.' days 12:00 AM'))->where('time <', strtotime($d.' days 11:59:59 PM'))->count_all_results('downloads'); ?>' /><set label='<?php $d='-1'; echo date('D', strtotime($d.' days')); ?>' value='<?php echo $this->db->where('time >', strtotime($d.' days 12:00 AM'))->where('time <', strtotime($d.' days 11:59:59 PM'))->count_all_results('downloads'); ?>' /><set label='<?php $d='-6'; echo date('D', strtotime('today')); ?>' value='<?php echo $this->db->where('time >', strtotime('today 12:00 AM'))->where('time <', strtotime('today 11:59:59 PM'))->count_all_results('downloads'); ?>' /></chart>");
-chart<?php echo $rand; ?>.render("chart_data");
+$('#chart_title').html('<?php echo $title; ?>');
+var chart = c3.generate({
+  bindto: '#chart_data',
+  data: {
+    x: 'x',
+    columns: [
+      ['x', '<?php echo $day6['d']; ?>', '<?php echo $day5['d']; ?>', '<?php echo $day4['d']; ?>', '<?php echo $day3['d']; ?>', '<?php echo $day2['d']; ?>', '<?php echo $day1['d']; ?>', '<?php echo $today['d']; ?>'],
+      ['All downloads', <?php echo $day6['num']; ?>, <?php echo $day5['num']; ?>, <?php echo $day4['num']; ?>, <?php echo $day3['num']; ?>, <?php echo $day2['num']; ?>, <?php echo $day1['num']; ?>, <?php echo $today['num']; ?>]
+    ],
+    groups: [['All downloads']],
+    type: 'bar',
+  },
+  axis: {
+    x: {
+      type: 'categorized',
+      label: '<?php echo $xlabel; ?>'
+    },
+    y: {
+      position: 'outer-middle',
+      text: '<?php echo $ylabel; ?>'
+    }
+  },
+  bar: {
+    width: {
+      ratio: 0.3,
+    },
+  },
+  legend: {
+    show: true
+  }
+});

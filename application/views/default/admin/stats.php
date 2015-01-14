@@ -7,7 +7,7 @@
           <?php echo lang('Here you can view a graphical representation of many site stats including weekly upload count, new users, total used space by server, etc. Please select a chart to view the corresponding data.'); ?> 
         </p>
         <div>
-          <select id="stats" onchange="get_chart('<?php echo site_url('api/charts/')?>/'+this.value+'/600/300')">
+          <select id="stats" onchange="get_chart('<?php echo site_url('api/charts/')?>/'+this.value)">
             <option value="null" selected="selected"><?php echo lang('Select a Chart'); ?></option>
             <optgroup label="<?php echo lang('Uploads'); ?>">
               <option value="all_uploads"><?php echo lang('All Uploads'); ?></option>
@@ -33,7 +33,7 @@
           </select>
         </div>
         <h3 id="chart_name"><?php echo lang('Please select a Chart'); ?></h3>
-        <div class="container">
+        <div class="chart_container">
           <div id="chart_title"></div>
           <div id="chart_data"></div>
           <div class="chart_data"></div>

@@ -1,6 +1,34 @@
-<?php
-$rand = mt_rand();
-?>
-var chart<?php echo $rand; ?> = new FusionCharts("<?php echo base_url(); ?>assets/flash/charts/StackedColumn3D.swf", "ChartId", "<?php echo $height; ?>", "<?php echo $width; ?>", "0", "0");
-chart<?php echo $rand; ?>.setDataXML("<chart palette='1' caption='<?php echo lang('New Uploads >> Local vs Remote >> Weekly'); ?>' shownames='1' showvalues='0'  numberPrefix='' showSum='1' decimals='0' overlapColumns='0'><categories><category label='<?php $d='-6'; echo date('D', strtotime($d.' days')); ?>' /><category label='<?php $d='-5'; echo date('D', strtotime($d.' days')); ?>' /><category label='<?php $d='-4'; echo date('D', strtotime($d.' days')); ?>' /><category label='<?php $d='-3'; echo date('D', strtotime($d.' days')); ?>' /><category label='<?php $d='-2'; echo date('D', strtotime($d.' days')); ?>' /><category label='<?php $d='-1'; echo date('D', strtotime($d.' days')); ?>' /><category label='<?php echo date('D', strtotime('today')); ?>' /></categories><dataset seriesName='<?php echo lang('Remote'); ?>' showValues='0'><set <?php $d='-6'; ?> value='<?php echo $this->db->get_where('refrence', array('time >' => strtotime($d.' days 12:00 AM'), 'time <' => strtotime($d.' days 11:59:59 PM'), 'remote' => 1))->num_rows(); ?>'/><set <?php $d='-5'; ?> value='<?php echo $this->db->get_where('refrence', array('time >' => strtotime($d.' days 12:00 AM'), 'time <' => strtotime($d.' days 11:59:59 PM'), 'remote' => 1))->num_rows(); ?>'/><set <?php $d='-4'; ?> value='<?php echo $this->db->get_where('refrence', array('time >' => strtotime($d.' days 12:00 AM'), 'time <' => strtotime($d.' days 11:59:59 PM'), 'remote' => 1))->num_rows(); ?>'/><set <?php $d='-3'; ?> value='<?php echo $this->db->get_where('refrence', array('time >' => strtotime($d.' days 12:00 AM'), 'time <' => strtotime($d.' days 11:59:59 PM'), 'remote' => 1))->num_rows(); ?>'/><set <?php $d='-2'; ?> value='<?php echo $this->db->get_where('refrence', array('time >' => strtotime($d.' days 12:00 AM'), 'time <' => strtotime($d.' days 11:59:59 PM'), 'remote' => 1))->num_rows(); ?>'/><set <?php $d='-1'; ?> value='<?php echo $this->db->get_where('refrence', array('time >' => strtotime($d.' days 12:00 AM'), 'time <' => strtotime($d.' days 11:59:59 PM'), 'remote' => 1))->num_rows(); ?>'/><set value='<?php echo $this->db->get_where('refrence', array('time >' => strtotime('today 12:00 AM'), 'time <' => strtotime('today 11:59:59 PM'), 'remote' => 1))->num_rows(); ?>'/></dataset><dataset seriesName='<?php echo lang('Local'); ?>' showValues='0'><set <?php $d='-6'; ?> value='<?php echo $this->db->get_where('refrence', array('time >' => strtotime($d.' days 12:00 AM'), 'time <' => strtotime($d.' days 11:59:59 PM'), 'remote' => 0))->num_rows(); ?>'/><set <?php $d='-5'; ?> value='<?php echo $this->db->get_where('refrence', array('time >' => strtotime($d.' days 12:00 AM'), 'time <' => strtotime($d.' days 11:59:59 PM'), 'remote' => 0))->num_rows(); ?>'/><set <?php $d='-4'; ?> value='<?php echo $this->db->get_where('refrence', array('time >' => strtotime($d.' days 12:00 AM'), 'time <' => strtotime($d.' days 11:59:59 PM'), 'remote' => 0))->num_rows(); ?>'/><set <?php $d='-3'; ?> value='<?php echo $this->db->get_where('refrence', array('time >' => strtotime($d.' days 12:00 AM'), 'time <' => strtotime($d.' days 11:59:59 PM'), 'remote' => 0))->num_rows(); ?>'/><set <?php $d='-2'; ?> value='<?php echo $this->db->get_where('refrence', array('time >' => strtotime($d.' days 12:00 AM'), 'time <' => strtotime($d.' days 11:59:59 PM'), 'remote' => 0))->num_rows(); ?>'/><set <?php $d='-1'; ?> value='<?php echo $this->db->get_where('refrence', array('time >' => strtotime($d.' days 12:00 AM'), 'time <' => strtotime($d.' days 11:59:59 PM'), 'remote' => 0))->num_rows(); ?>'/><set value='<?php echo $this->db->get_where('refrence', array('time >' => strtotime('today 12:00 AM'), 'time <' => strtotime('today 11:59:59 PM'), 'remote' => 0))->num_rows(); ?>'/></dataset></chart>");
-chart<?php echo $rand; ?>.render("chart_data");
+$('#chart_title').html('<?php echo $title; ?>');
+var chart = c3.generate({
+  bindto: '#chart_data',
+  data: {
+    x: 'x',
+    columns: [
+      ['x', '<?php echo $day6['d']; ?>', '<?php echo $day5['d']; ?>', '<?php echo $day4['d']; ?>', '<?php echo $day3['d']; ?>', '<?php echo $day2['d']; ?>', '<?php echo $day1['d']; ?>', '<?php echo $today['d']; ?>'],
+      ['local', <?php echo $local['day6']['num']; ?>, <?php echo $local['day5']['num']; ?>, <?php echo $local['day4']['num']; ?>, <?php echo $local['day3']['num']; ?>, <?php echo $local['day2']['num']; ?>, <?php echo $local['day1']['num']; ?>, <?php echo $local['today']['num']; ?>],
+      ['remote', <?php echo $remote['day6']['num']; ?>, <?php echo $remote['day5']['num']; ?>, <?php echo $remote['day4']['num']; ?>, <?php echo $remote['day3']['num']; ?>, <?php echo $remote['day2']['num']; ?>, <?php echo $remote['day1']['num']; ?>, <?php echo $remote['today']['num']; ?>],
+    ],
+    groups: [['local', 'remote']],
+    type: 'bar'
+  },
+  axis: {
+    x: {
+      type: 'categorized',
+      label: '<?php echo $xlabel; ?>'
+    },
+    y: {
+      label: {
+        position: 'outer-middle',
+        text: '<?php echo $ylabel; ?>'
+      }
+    }
+  },
+  bar: {
+    width: {
+      ratio: 0.3,
+    },
+  },
+  legend: {
+    show: true
+  }
+});
