@@ -84,7 +84,9 @@ class Charts extends CI_Controller {
 	 */
     public function all_images_vs_regular($height = 300, $width = 300, $ignore = '')
     {
-        $this->load->view($this->startup->skin.'/api/charts/all_images_vs_regular', array('width' => $width, 'height' => $height));
+		$data['regular'] = $this->db->get_where('refrence', array('is_image' => false))->num_rows();
+		$data['image'] = $this->db->get_where('refrence', array('is_image' => true))->num_rows();
+        $this->load->view($this->startup->skin.'/api/charts/all_images_vs_regular', array('data' => $data));
     }
 
 	/**
@@ -150,7 +152,7 @@ class Charts extends CI_Controller {
 	 */
     public function all_uploads($height = 300, $width = 300, $ignore = '')
     {
-        $this->load->view($this->startup->skin.'/api/charts/all_uploads', array('width' => $width, 'height' => $height));
+        $this->load->view($this->startup->skin.'/api/charts/all_uploads');
     }
 
 	/**
@@ -229,7 +231,29 @@ class Charts extends CI_Controller {
 	 */
 	public function uploads_weekly($height = 300, $width = 300, $ignore = '')
     {
-        $this->load->view($this->startup->skin.'/api/charts/uploads_weekly', array('width' => $width, 'height' => $height));
+		$data = array();
+		$data['today']['d'] = date('Y-m-d', strtotime('today'));
+		$data['today']['num'] = $this->db->get_where('refrence', array('time >' => strtotime('today 12:00 AM'), 'time <' => strtotime('today 11:59:59 PM')))->num_rows();
+
+		$data['1day']['d'] = date('Y-m-d', strtotime('-1 days'));
+		$data['1day']['num'] = $this->db->get_where('refrence', array('time >' => strtotime('-1 days 12:00 AM'), 'time <' => strtotime('-1 days 11:59:59 PM')))->num_rows();
+
+		$data['2days']['d'] = date('Y-m-d', strtotime('-2 days'));
+		$data['2days']['num'] = $this->db->get_where('refrence', array('time >' => strtotime('-2 days 12:00 AM'), 'time <' => strtotime('-2 days 11:59:59 PM')))->num_rows();
+
+		$data['3days']['d'] = date('Y-m-d', strtotime('-3 days'));
+		$data['3days']['num'] = $this->db->get_where('refrence', array('time >' => strtotime('-3 days 12:00 AM'), 'time <' => strtotime('-3 days 11:59:59 PM')))->num_rows();
+
+		$data['4days']['d'] = date('Y-m-d', strtotime('-4 days'));
+		$data['4days']['num'] = $this->db->get_where('refrence', array('time >' => strtotime('-4 days 12:00 AM'), 'time <' => strtotime('-4 days 11:59:59 PM')))->num_rows();
+
+		$data['5days']['d'] = date('Y-m-d', strtotime('-5 days'));
+		$data['5days']['num'] = $this->db->get_where('refrence', array('time >' => strtotime('-5 days 12:00 AM'), 'time <' => strtotime('-5 days 11:59:59 PM')))->num_rows();
+
+		$data['6days']['d'] = date('Y-m-d', strtotime('-6 days'));
+		$data['6days']['num'] = $this->db->get_where('refrence', array('time >' => strtotime('-6 days 12:00 AM'), 'time <' => strtotime('-6 days 11:59:59 PM')))->num_rows();
+
+        $this->load->view($this->startup->skin.'/api/charts/uploads_weekly', array('data' => $data));
     }
 }
 

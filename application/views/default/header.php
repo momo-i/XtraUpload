@@ -51,7 +51,7 @@ if(isset($include_chart_js) && $include_chart_js === TRUE)
 ?>
     <script src="<?php echo base_url(); ?>assets/js/d3.min.js" type="text/javascript"></script>
     <script src="<?php echo base_url(); ?>assets/js/c3.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/c3.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/c3.css">
 <?php
 }
 ?>

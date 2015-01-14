@@ -56,7 +56,10 @@ class Admin_logger extends CI_Model {
     	$data['date'] = time();
 		$data['valid'] = $valid;
 
-    	$this->db->insert('login_refrence', $data);
+		if($data['user'])
+		{
+	    	$this->db->insert('login_refrence', $data);
+		}
     }
 
 	/**

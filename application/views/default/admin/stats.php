@@ -33,12 +33,16 @@
           </select>
         </div>
         <h3 id="chart_name"><?php echo lang('Please select a Chart'); ?></h3>
-        <div id="chart_title"></div>
-        <p id="chart_data"></p>
+        <div class="container">
+          <div id="chart_title"></div>
+          <div id="chart_data"></div>
+          <div class="chart_data"></div>
+        </div>
         <script type="text/javascript">
           //<![CDATA[
           function get_chart(chart_url)
           {
+            $('[class^=legend]').html('');
             var type = $('#stats').val();
             if(type == "null")
             {
