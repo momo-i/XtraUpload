@@ -33,6 +33,7 @@
           </select>
         </div>
         <h3 id="chart_name"><?php echo lang('Please select a Chart'); ?></h3>
+        <div id="chart_title"></div>
         <p id="chart_data"></p>
         <script type="text/javascript">
           //<![CDATA[
@@ -42,6 +43,7 @@
             if(type == "null")
             {
               $('#chart_data').html("");
+              $('#chart_title').html('');
               return;
             }
             $('#chart_data').html('<img src="<?php echo base_url(); ?>assets/images/loading.gif" class="nb">');

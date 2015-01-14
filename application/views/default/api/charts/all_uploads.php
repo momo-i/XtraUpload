@@ -2,6 +2,7 @@
 $registered = $this->db->get_where('refrence', array('user' => '0'))->num_rows();
 $anonym = $this->db->get_where('refrence', array('user !=' => '0'))->num_rows();
 ?>
+$('#chart_title').html('<?php echo lang('All uploads'); ?>');
 var chart = c3.generate({
   bindto: '#chart_data',
   data: {
