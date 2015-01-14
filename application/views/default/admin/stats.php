@@ -1,4 +1,3 @@
-        <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/charts.js"></script>
         <h2 style="vertical-align:middle">
           <img src="<?php echo base_url(); ?>assets/images/icons/chart_32.png" class="nb" alt="">
           <?php echo lang('Site Stats'); ?> 
@@ -8,7 +7,7 @@
           <?php echo lang('Here you can view a graphical representation of many site stats including weekly upload count, new users, total used space by server, etc. Please select a chart to view the corresponding data.'); ?> 
         </p>
         <div>
-          <select onchange="getChart('<?php echo site_url('api/charts/')?>/'+this.value+'/600/300')">
+          <select id="stats" onchange="get_chart('<?php echo site_url('api/charts/')?>/'+this.value+'/600/300')">
             <option value="null" selected="selected"><?php echo lang('Select a Chart'); ?></option>
             <optgroup label="<?php echo lang('Uploads'); ?>">
               <option value="all_uploads"><?php echo lang('All Uploads'); ?></option>
@@ -37,10 +36,16 @@
         <p id="chart_data"></p>
         <script type="text/javascript">
           //<![CDATA[
-          function getChart(chartUrl)
+          function get_chart(chart_url)
           {
+            var type = $('#stats').val();
+            if(type == "null")
+            {
+              $('#chart_data').html("");
+              return;
+            }
             $('#chart_data').html('<img src="<?php echo base_url(); ?>assets/images/loading.gif" class="nb">');
-            $.ajax({type: 'GET', url: chartUrl+'/r_'+rand(1,999999999), cache: true, dataType: 'script'}); 
+            $.ajax({type: 'GET', url: chart_url+'/r_'+rand(1,999999999), cache: true, dataType: 'script'}); 
             $('#chart_name').html('<?php echo lang('Your Requested Chart'); ?>');
           }
           function rand(min, max)
