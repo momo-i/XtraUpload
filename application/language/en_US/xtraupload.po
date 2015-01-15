@@ -1,14 +1,14 @@
 # English translations for XtraUpload 3.0.0 package.
-# Copyright (C) 2014 XtraUpload
+# Copyright (C) 2015 XtraUpload
 # This file is distributed under the same license as the XtraUpload 3.0.0 package.
-# Automatically generated, 2014.
+# Automatically generated, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: XtraUpload 3.0.0 RC4\n"
 "Report-Msgid-Bugs-To: translator at xtrafile.com\n"
-"POT-Creation-Date: 2014-12-29 23:05+0900\n"
-"PO-Revision-Date: 2014-12-29 23:05+0900\n"
+"POT-Creation-Date: 2015-01-15 13:49+0900\n"
+"PO-Revision-Date: 2015-01-15 13:49+0900\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: en_US\n"
@@ -125,11 +125,11 @@ msgstr "Daily"
 
 #: ../../../application/models/Users.php:271
 #: ../../../application/controllers/admin/Group.php:327
-#: ../../../application/views/default/admin/stats.php:15
+#: ../../../application/views/default/admin/stats.php:14
+#: ../../../application/views/default/admin/stats.php:20
 #: ../../../application/views/default/admin/stats.php:21
-#: ../../../application/views/default/admin/stats.php:22
-#: ../../../application/views/default/admin/stats.php:26
-#: ../../../application/views/default/admin/stats.php:32
+#: ../../../application/views/default/admin/stats.php:25
+#: ../../../application/views/default/admin/stats.php:31
 #: ../../../application/views/default/user/compare.php:173
 msgid "Weekly"
 msgstr "Weekly"
@@ -325,7 +325,7 @@ msgstr "A column definition is required for that operation."
 msgid "A Database Error Occurred"
 msgstr "A Database Error Occurred"
 
-#: ../../../application/libraries/XU_Ftp.php:44
+#: ../../../application/libraries/XU_Ftp.php:45
 msgid ""
 "Unable to locate a valid connection ID. Please make sure you are connected "
 "before peforming any file routines."
@@ -333,25 +333,25 @@ msgstr ""
 "Unable to locate a valid connection ID. Please make sure you are connected "
 "before peforming any file routines."
 
-#: ../../../application/libraries/XU_Ftp.php:45
+#: ../../../application/libraries/XU_Ftp.php:46
 msgid "Unable to connect to your FTP server using the supplied hostname."
 msgstr "Unable to connect to your FTP server using the supplied hostname."
 
-#: ../../../application/libraries/XU_Ftp.php:46
+#: ../../../application/libraries/XU_Ftp.php:47
 msgid ""
 "Unable to login to your FTP server. Please check your username and password."
 msgstr ""
 "Unable to login to your FTP server. Please check your username and password."
 
-#: ../../../application/libraries/XU_Ftp.php:47
+#: ../../../application/libraries/XU_Ftp.php:48
 msgid "Unable to create the directory you have specified."
 msgstr "Unable to create the directory you have specified."
 
-#: ../../../application/libraries/XU_Ftp.php:48
+#: ../../../application/libraries/XU_Ftp.php:49
 msgid "Unable to change directories."
 msgstr "Unable to change directories."
 
-#: ../../../application/libraries/XU_Ftp.php:49
+#: ../../../application/libraries/XU_Ftp.php:50
 msgid ""
 "Unable to set file permissions. Please check your path. Note: This feature "
 "is only available in PHP 5 or higher."
@@ -359,27 +359,27 @@ msgstr ""
 "Unable to set file permissions. Please check your path. Note: This feature "
 "is only available in PHP 5 or higher."
 
-#: ../../../application/libraries/XU_Ftp.php:50
+#: ../../../application/libraries/XU_Ftp.php:51
 msgid "Unable to upload the specified file. Please check your path."
 msgstr "Unable to upload the specified file. Please check your path."
 
-#: ../../../application/libraries/XU_Ftp.php:51
+#: ../../../application/libraries/XU_Ftp.php:52
 msgid "Unable to download the specified file. Please check your path."
 msgstr "Unable to download the specified file. Please check your path."
 
-#: ../../../application/libraries/XU_Ftp.php:52
+#: ../../../application/libraries/XU_Ftp.php:53
 msgid "Unable to locate the source file. Please check your path."
 msgstr "Unable to locate the source file. Please check your path."
 
-#: ../../../application/libraries/XU_Ftp.php:53
+#: ../../../application/libraries/XU_Ftp.php:54
 msgid "Unable to rename the file."
 msgstr "Unable to rename the file."
 
-#: ../../../application/libraries/XU_Ftp.php:54
+#: ../../../application/libraries/XU_Ftp.php:55
 msgid "Unable to delete the file."
 msgstr "Unable to delete the file."
 
-#: ../../../application/libraries/XU_Ftp.php:55
+#: ../../../application/libraries/XU_Ftp.php:56
 msgid ""
 "Unable to move the file. Please make sure the destination directory exists."
 msgstr ""
@@ -390,11 +390,11 @@ msgstr ""
 msgid "Make Payment"
 msgstr "Make Payment"
 
-#: ../../../application/libraries/XU_Upload.php:307
+#: ../../../application/libraries/XU_Upload.php:347
 msgid "Unable to find a post variable called userfile."
 msgstr "Unable to find a post variable called userfile."
 
-#: ../../../application/libraries/XU_Upload.php:308
+#: ../../../application/libraries/XU_Upload.php:348
 msgid ""
 "The uploaded file exceeds the maximum allowed size in your PHP configuration "
 "file."
@@ -402,43 +402,43 @@ msgstr ""
 "The uploaded file exceeds the maximum allowed size in your PHP configuration "
 "file."
 
-#: ../../../application/libraries/XU_Upload.php:309
+#: ../../../application/libraries/XU_Upload.php:349
 msgid ""
 "The uploaded file exceeds the maximum size allowed by the submission form."
 msgstr ""
 "The uploaded file exceeds the maximum size allowed by the submission form."
 
-#: ../../../application/libraries/XU_Upload.php:310
+#: ../../../application/libraries/XU_Upload.php:350
 msgid "The file was only partially uploaded."
 msgstr "The file was only partially uploaded."
 
-#: ../../../application/libraries/XU_Upload.php:311
+#: ../../../application/libraries/XU_Upload.php:351
 msgid "The temporary folder is missing."
 msgstr "The temporary folder is missing."
 
-#: ../../../application/libraries/XU_Upload.php:312
+#: ../../../application/libraries/XU_Upload.php:352
 msgid "The file could not be written to disk."
 msgstr "The file could not be written to disk."
 
-#: ../../../application/libraries/XU_Upload.php:313
+#: ../../../application/libraries/XU_Upload.php:353
 msgid "The file upload was stopped by extension."
 msgstr "The file upload was stopped by extension."
 
-#: ../../../application/libraries/XU_Upload.php:314
+#: ../../../application/libraries/XU_Upload.php:354
 msgid "You did not select a file to upload."
 msgstr "You did not select a file to upload."
 
-#: ../../../application/libraries/XU_Upload.php:315
+#: ../../../application/libraries/XU_Upload.php:355
 msgid "The filetype you are attempting to upload is not allowed."
 msgstr "The filetype you are attempting to upload is not allowed."
 
-#: ../../../application/libraries/XU_Upload.php:316
+#: ../../../application/libraries/XU_Upload.php:356
 msgid ""
 "The file you are attempting to upload is larger than the permitted size."
 msgstr ""
 "The file you are attempting to upload is larger than the permitted size."
 
-#: ../../../application/libraries/XU_Upload.php:317
+#: ../../../application/libraries/XU_Upload.php:357
 msgid ""
 "The image you are attempting to upload doesn't fit into the allowed "
 "dimensions."
@@ -446,7 +446,7 @@ msgstr ""
 "The image you are attempting to upload doesn't fit into the allowed "
 "dimensions."
 
-#: ../../../application/libraries/XU_Upload.php:318
+#: ../../../application/libraries/XU_Upload.php:358
 msgid ""
 "A problem was encountered while attempting to move the uploaded file to the "
 "final destination."
@@ -454,36 +454,58 @@ msgstr ""
 "A problem was encountered while attempting to move the uploaded file to the "
 "final destination."
 
-#: ../../../application/libraries/XU_Upload.php:319
+#: ../../../application/libraries/XU_Upload.php:359
 msgid "The upload path does not appear to be valid."
 msgstr "The upload path does not appear to be valid."
 
-#: ../../../application/libraries/XU_Upload.php:320
+#: ../../../application/libraries/XU_Upload.php:360
 msgid "You have not specified any allowed file types."
 msgstr "You have not specified any allowed file types."
 
-#: ../../../application/libraries/XU_Upload.php:321
+#: ../../../application/libraries/XU_Upload.php:361
 msgid "The file name you submitted already exists on the server."
 msgstr "The file name you submitted already exists on the server."
 
-#: ../../../application/libraries/XU_Upload.php:322
+#: ../../../application/libraries/XU_Upload.php:362
 msgid "The upload destination folder does not appear to be writable."
 msgstr "The upload destination folder does not appear to be writable."
 
-#: ../../../application/libraries/Startup.php:266
+#: ../../../application/libraries/XU_Upload.php:852
+msgid "Invalid upload path."
+msgstr "Invalid upload path."
+
+#: ../../../application/libraries/XU_Upload.php:876
+msgid "Failed to find extension."
+msgstr "Failed to find extension."
+
+#: ../../../application/libraries/XU_Upload.php:918
+#: ../../../application/libraries/XU_Upload.php:958
+msgid "Failed to open input stream."
+msgstr "Failed to open input stream."
+
+#: ../../../application/libraries/XU_Upload.php:928
+#: ../../../application/libraries/XU_Upload.php:967
+msgid "Failed to open output stream."
+msgstr "Failed to open output stream."
+
+#: ../../../application/libraries/XU_Upload.php:935
+msgid "Failed to move uploaded file."
+msgstr "Failed to move uploaded file."
+
+#: ../../../application/libraries/Startup.php:378
 #: ../../../application/controllers/admin/Home.php:81
-#: ../../../application/controllers/Home.php:83
+#: ../../../application/controllers/Home.php:90
 #: ../../../application/views/default/home.php:7
 #: ../../../application/views/default/home.php:19
 msgid "Home"
 msgstr "Home"
 
-#: ../../../application/libraries/Startup.php:271
-#: ../../../application/controllers/Upload.php:69
+#: ../../../application/libraries/Startup.php:383
+#: ../../../application/controllers/Upload.php:76
 msgid "URL Upload"
 msgstr "URL Upload"
 
-#: ../../../application/libraries/Startup.php:277
+#: ../../../application/libraries/Startup.php:389
 #: ../../../application/views/default/admin/files/view.php:13
 #: ../../../application/views/default/admin/files/search_result.php:13
 #: ../../../application/views/default/admin/users/view.php:13
@@ -494,110 +516,110 @@ msgstr "URL Upload"
 msgid "Search"
 msgstr "Search"
 
-#: ../../../application/libraries/Startup.php:283
+#: ../../../application/libraries/Startup.php:395
 msgid "Admin"
 msgstr "Admin"
 
-#: ../../../application/libraries/Startup.php:289
-#: ../../../application/libraries/Startup.php:344
+#: ../../../application/libraries/Startup.php:401
+#: ../../../application/libraries/Startup.php:456
 msgid "Manage"
 msgstr "Manage"
 
-#: ../../../application/libraries/Startup.php:290
+#: ../../../application/libraries/Startup.php:402
 msgid "Files"
 msgstr "Files"
 
-#: ../../../application/libraries/Startup.php:291
+#: ../../../application/libraries/Startup.php:403
 msgid "Transactions"
 msgstr "Transactions"
 
-#: ../../../application/libraries/Startup.php:292
+#: ../../../application/libraries/Startup.php:404
 msgid "Users"
 msgstr "Users"
 
-#: ../../../application/libraries/Startup.php:294
+#: ../../../application/libraries/Startup.php:406
 msgid "Configure"
 msgstr "Configure"
 
-#: ../../../application/libraries/Startup.php:295
+#: ../../../application/libraries/Startup.php:407
 msgid "Site Config"
 msgstr "Site Config"
 
-#: ../../../application/libraries/Startup.php:296
+#: ../../../application/libraries/Startup.php:408
 #: ../../../application/views/default/admin/gateways/view.php:3
 msgid "Payment Gateways"
 msgstr "Payment Gateways"
 
-#: ../../../application/libraries/Startup.php:297
+#: ../../../application/libraries/Startup.php:409
 #: ../../../application/views/default/admin/menu.php:47
 msgid "Plugins"
 msgstr "Plugins"
 
-#: ../../../application/libraries/Startup.php:298
+#: ../../../application/libraries/Startup.php:410
 msgid "Skins"
 msgstr "Skins"
 
-#: ../../../application/libraries/Startup.php:299
+#: ../../../application/libraries/Startup.php:411
+#: ../../../application/views/default/admin/stats.php:27
 #: ../../../application/views/default/admin/stats.php:28
-#: ../../../application/views/default/admin/stats.php:29
 msgid "Servers"
 msgstr "Servers"
 
-#: ../../../application/libraries/Startup.php:300
+#: ../../../application/libraries/Startup.php:412
 msgid "User Groups"
 msgstr "User Groups"
 
-#: ../../../application/libraries/Startup.php:302
+#: ../../../application/libraries/Startup.php:414
 msgid "Misc"
 msgstr "Misc"
 
-#: ../../../application/libraries/Startup.php:303
+#: ../../../application/libraries/Startup.php:415
 msgid "Admin Menu Shortcuts"
 msgstr "Admin Menu Shortcuts"
 
-#: ../../../application/libraries/Startup.php:304
+#: ../../../application/libraries/Startup.php:416
 #: ../../../application/views/default/admin/email.php:4
 msgid "Mass Emailer"
 msgstr "Mass Emailer"
 
-#: ../../../application/libraries/Startup.php:306
+#: ../../../application/libraries/Startup.php:418
 #: ../../../application/controllers/admin/Stats.php:67
-#: ../../../application/views/default/admin/stats.php:4
+#: ../../../application/views/default/admin/stats.php:3
 msgid "Site Stats"
 msgstr "Site Stats"
 
-#: ../../../application/libraries/Startup.php:308
+#: ../../../application/libraries/Startup.php:420
 msgid "Tools/Maintenance"
 msgstr "Tools/Maintenance"
 
-#: ../../../application/libraries/Startup.php:310
+#: ../../../application/libraries/Startup.php:422
 msgid "Plugin Config"
 msgstr "Plugin Config"
 
-#: ../../../application/libraries/Startup.php:315
+#: ../../../application/libraries/Startup.php:427
 msgid "Shortcuts"
 msgstr "Shortcuts"
 
-#: ../../../application/libraries/Startup.php:316
+#: ../../../application/libraries/Startup.php:428
 msgid "Add This Page"
 msgstr "Add This Page"
 
-#: ../../../application/libraries/Startup.php:343
+#: ../../../application/libraries/Startup.php:455
 msgid "Upload"
 msgstr "Upload"
 
-#: ../../../application/libraries/Startup.php:345
+#: ../../../application/libraries/Startup.php:457
 #: ../../../application/controllers/Folder.php:73
 #: ../../../application/views/default/folder/view.php:3
 msgid "File Folder"
 msgstr "File Folder"
 
-#: ../../../application/libraries/Startup.php:346
+#: ../../../application/libraries/Startup.php:458
 #: ../../../application/views/default/image/gallery/view.php:3
 msgid "Image Gallery"
 msgstr "Image Gallery"
 
-#: ../../../application/libraries/Functions.php:183
+#: ../../../application/libraries/Functions.php:270
 msgid "Not Valid Version Number!"
 msgstr "Not Valid Version Number!"
 
@@ -715,11 +737,11 @@ msgstr "The %s field must contain a number less than %s."
 msgid "The %s field must contain a number greater than %s."
 msgstr "The %s field must contain a number greater than %s."
 
-#: ../../../application/libraries/XU_Form_validation.php:144
+#: ../../../application/libraries/XU_Form_validation.php:143
 msgid "The field was not set"
 msgstr "The field was not set"
 
-#: ../../../application/libraries/XU_Form_validation.php:324
+#: ../../../application/libraries/XU_Form_validation.php:323
 msgid "Unable to access an error message corresponding to your field name."
 msgstr "Unable to access an error message corresponding to your field name."
 
@@ -747,15 +769,15 @@ msgstr ""
 msgid "IPN Validation Failed."
 msgstr "IPN Validation Failed."
 
-#: ../../../application/libraries/Remotefile.php:95
+#: ../../../application/libraries/Remotefile.php:173
 msgid "No Referer."
 msgstr "No Referer."
 
-#: ../../../application/libraries/Remotefile.php:108
+#: ../../../application/libraries/Remotefile.php:194
 msgid "No Location."
 msgstr "No Location."
 
-#: ../../../application/libraries/Remotefile.php:130
+#: ../../../application/libraries/Remotefile.php:228
 msgid "URL parse failed. "
 msgstr "URL parse failed. "
 
@@ -895,9 +917,9 @@ msgid "Manage Account"
 msgstr "Manage Account"
 
 #: ../../../application/controllers/User.php:530
-#: ../../../application/controllers/Files.php:488
-#: ../../../application/controllers/Files.php:517
-#: ../../../application/controllers/Files.php:554
+#: ../../../application/controllers/Files.php:490
+#: ../../../application/controllers/Files.php:519
+#: ../../../application/controllers/Files.php:556
 msgid "Manage Your Files"
 msgstr "Manage Your Files"
 
@@ -1135,37 +1157,37 @@ msgstr "Config Updated!"
 msgid "Manage Servers"
 msgstr "Manage Servers"
 
-#: ../../../application/controllers/admin/Server.php:110
+#: ../../../application/controllers/admin/Server.php:111
 #, php-format
 msgid "New Server Installed, %s"
 msgstr "New Server Installed, %s"
 
-#: ../../../application/controllers/admin/Server.php:110
+#: ../../../application/controllers/admin/Server.php:111
 msgid "FTP Install this server?"
 msgstr "FTP Install this server?"
 
-#: ../../../application/controllers/admin/Server.php:115
+#: ../../../application/controllers/admin/Server.php:116
 #: ../../../application/views/default/admin/servers/add.php:3
 #: ../../../application/views/default/admin/servers/add.php:13
 #: ../../../application/views/default/admin/servers/view.php:8
 msgid "Add New Server"
 msgstr "Add New Server"
 
-#: ../../../application/controllers/admin/Server.php:147
+#: ../../../application/controllers/admin/Server.php:149
 msgid "Server Edited"
 msgstr "Server Edited"
 
-#: ../../../application/controllers/admin/Server.php:154
+#: ../../../application/controllers/admin/Server.php:156
 #: ../../../application/views/default/admin/servers/edit.php:3
 #: ../../../application/views/default/admin/servers/view.php:62
 msgid "Edit Server"
 msgstr "Edit Server"
 
-#: ../../../application/controllers/admin/Server.php:180
-#: ../../../application/controllers/admin/Server.php:231
-#: ../../../application/controllers/admin/Server.php:238
-#: ../../../application/controllers/admin/Server.php:305
-#: ../../../application/controllers/admin/Server.php:311
+#: ../../../application/controllers/admin/Server.php:182
+#: ../../../application/controllers/admin/Server.php:233
+#: ../../../application/controllers/admin/Server.php:240
+#: ../../../application/controllers/admin/Server.php:307
+#: ../../../application/controllers/admin/Server.php:313
 #: ../../../application/views/default/admin/servers/install-step1.php:3
 #: ../../../application/views/default/admin/servers/install-step1.php:33
 #: ../../../application/views/default/admin/servers/install.php:3
@@ -1174,15 +1196,15 @@ msgstr "Edit Server"
 msgid "Install Server Software"
 msgstr "Install Server Software"
 
-#: ../../../application/controllers/admin/Server.php:327
+#: ../../../application/controllers/admin/Server.php:329
 msgid "Server turned On"
 msgstr "Server turned On"
 
-#: ../../../application/controllers/admin/Server.php:343
+#: ../../../application/controllers/admin/Server.php:345
 msgid "Server turned Off"
 msgstr "Server turned Off"
 
-#: ../../../application/controllers/admin/Server.php:359
+#: ../../../application/controllers/admin/Server.php:361
 msgid "Server removed"
 msgstr "Server removed"
 
@@ -1552,7 +1574,7 @@ msgid "Edit File"
 msgstr "Edit File"
 
 #: ../../../application/controllers/admin/Files.php:301
-#: ../../../application/controllers/Files.php:580
+#: ../../../application/controllers/Files.php:582
 msgid "File Deleted"
 msgstr "File Deleted"
 
@@ -1672,25 +1694,117 @@ msgstr "Bulk Email"
 msgid "Email sent!"
 msgstr "Email sent!"
 
-#: ../../../application/controllers/Upload.php:134
+#: ../../../application/controllers/Upload.php:141
 msgid "URL Upload Complete!"
 msgstr "URL Upload Complete!"
 
-#: ../../../application/controllers/Upload.php:138
+#: ../../../application/controllers/Upload.php:145
 msgid "URL Upload Failed!"
 msgstr "URL Upload Failed!"
 
-#: ../../../application/controllers/Upload.php:183
+#: ../../../application/controllers/Upload.php:185
 msgid "Upload Completed!"
 msgstr "Upload Completed!"
 
-#: ../../../application/controllers/Upload.php:201
+#: ../../../application/controllers/Upload.php:204
 msgid "Upload Failed!"
 msgstr "Upload Failed!"
 
-#: ../../../application/controllers/Upload.php:286
+#: ../../../application/controllers/Upload.php:288
 msgid "OK"
 msgstr "OK"
+
+#: ../../../application/controllers/api/Charts.php:69
+msgid "All downloads"
+msgstr "All downloads"
+
+#: ../../../application/controllers/api/Charts.php:71
+#: ../../../application/controllers/api/Charts.php:184
+msgid "Registered"
+msgstr "Registered"
+
+#: ../../../application/controllers/api/Charts.php:74
+#: ../../../application/controllers/api/Charts.php:187
+msgid "Anonymous"
+msgstr "Anonymous"
+
+#: ../../../application/controllers/api/Charts.php:91
+msgid "All Uploads >> Files vs Images"
+msgstr "All Uploads >> Files vs Images"
+
+#: ../../../application/controllers/api/Charts.php:93
+msgid "Regular"
+msgstr "Regular"
+
+#: ../../../application/controllers/api/Charts.php:96
+msgid "Image"
+msgstr "Image"
+
+#: ../../../application/controllers/api/Charts.php:112
+msgid "Uploads >> Local vs Remote"
+msgstr "Uploads >> Local vs Remote"
+
+#: ../../../application/controllers/api/Charts.php:114
+msgid "Local"
+msgstr "Local"
+
+#: ../../../application/controllers/api/Charts.php:117
+msgid "Remote"
+msgstr "Remote"
+
+#: ../../../application/controllers/api/Charts.php:134
+msgid "File-Server Uploads Distrubition"
+msgstr "File-Server Uploads Distrubition"
+
+#: ../../../application/controllers/api/Charts.php:159
+msgid "Servers >> Used Space"
+msgstr "Servers >> Used Space"
+
+#: ../../../application/controllers/api/Charts.php:182
+msgid "All uploads"
+msgstr "All uploads"
+
+#: ../../../application/controllers/api/Charts.php:204
+#: ../../../application/views/default/api/charts/downloads_monthly.php:8
+msgid "Past 7 Days Downloads"
+msgstr "Past 7 Days Downloads"
+
+#: ../../../application/controllers/api/Charts.php:205
+#: ../../../application/controllers/api/Charts.php:244
+#: ../../../application/controllers/api/Charts.php:287
+#: ../../../application/controllers/api/Charts.php:328
+#: ../../../application/controllers/api/Charts.php:367
+#: ../../../application/views/default/admin/files/view.php:36
+#: ../../../application/views/default/admin/files/search_result.php:40
+#: ../../../application/views/default/admin/home.php:227
+#: ../../../application/views/default/admin/folders/search_result.php:40
+#: ../../../application/views/default/admin/transactions/view.php:19
+msgid "Date"
+msgstr "Date"
+
+#: ../../../application/controllers/api/Charts.php:206
+#: ../../../application/controllers/api/Charts.php:245
+#: ../../../application/controllers/api/Charts.php:288
+#: ../../../application/controllers/api/Charts.php:329
+#: ../../../application/controllers/api/Charts.php:368
+msgid "Counts"
+msgstr "Counts"
+
+#: ../../../application/controllers/api/Charts.php:243
+msgid "New Uploads >> Files vs Images >> Weekly"
+msgstr "New Uploads >> Files vs Images >> Weekly"
+
+#: ../../../application/controllers/api/Charts.php:286
+msgid "New Uploads >> Local vs Remote >> Weekly"
+msgstr "New Uploads >> Local vs Remote >> Weekly"
+
+#: ../../../application/controllers/api/Charts.php:327
+msgid "New Users >> Weekly"
+msgstr "New Users >> Weekly"
+
+#: ../../../application/controllers/api/Charts.php:366
+msgid "Past 7 Days Uploads"
+msgstr "Past 7 Days Uploads"
 
 #: ../../../application/controllers/Files.php:242
 #: ../../../application/views/default/files/get.php:3
@@ -1698,30 +1812,30 @@ msgid "Download File"
 msgstr "Download File"
 
 #: ../../../application/controllers/Files.php:263
-#: ../../../application/controllers/Files.php:298
+#: ../../../application/controllers/Files.php:300
 msgid "The Captcha you submited was incorrect."
 msgstr "The Captcha you submited was incorrect."
 
-#: ../../../application/controllers/Files.php:540
+#: ../../../application/controllers/Files.php:542
 msgid "Your query returned 0 results, please try again."
 msgstr "Your query returned 0 results, please try again."
 
-#: ../../../application/controllers/Files.php:679
+#: ../../../application/controllers/Files.php:681
 msgid "Guest"
 msgstr "Guest"
 
-#: ../../../application/controllers/Files.php:715
+#: ../../../application/controllers/Files.php:717
 #, php-format
 msgid "%d file has been deleted"
 msgid_plural "%d files have been deleted"
 msgstr[0] "%d file has been deleted"
 msgstr[1] "%d files have been deleted"
 
-#: ../../../application/controllers/Files.php:757
+#: ../../../application/controllers/Files.php:759
 msgid "Password Protected File"
 msgstr "Password Protected File"
 
-#: ../../../application/controllers/Files.php:808
+#: ../../../application/controllers/Files.php:810
 msgid "File Not Found"
 msgstr "File Not Found"
 
@@ -1823,7 +1937,7 @@ msgstr "GD2 support"
 #: ../../../application/controllers/install/Step2.php:171
 #: ../../../application/controllers/install/Step2.php:192
 #: ../../../application/views/default/files/manage.php:83
-#: ../../../application/views/default/home.php:242
+#: ../../../application/views/default/home.php:244
 #: ../../../application/views/default/admin/groups/add.php:26
 #: ../../../application/views/default/admin/groups/edit.php:29
 #: ../../../application/views/default/admin/servers/add.php:20
@@ -2616,7 +2730,7 @@ msgstr "You have %d of %d MB remaining."
 
 #: ../../../application/views/default/files/manage.php:27
 #: ../../../application/views/default/files/search/query.php:27
-#: ../../../application/views/default/home.php:136
+#: ../../../application/views/default/home.php:137
 #: ../../../application/views/default/admin/files/view.php:26
 #: ../../../application/views/default/admin/files/search_result.php:30
 #: ../../../application/views/default/admin/folders/search_result.php:30
@@ -2626,7 +2740,7 @@ msgstr "File name"
 
 #: ../../../application/views/default/files/manage.php:28
 #: ../../../application/views/default/files/search/query.php:28
-#: ../../../application/views/default/home.php:137
+#: ../../../application/views/default/home.php:138
 #: ../../../application/views/default/admin/files/view.php:31
 #: ../../../application/views/default/admin/files/search_result.php:35
 #: ../../../application/views/default/admin/folders/search_result.php:35
@@ -2638,14 +2752,14 @@ msgid "Size"
 msgstr "Size"
 
 #: ../../../application/views/default/files/manage.php:29
-#: ../../../application/views/default/admin/stats.php:24
+#: ../../../application/views/default/admin/stats.php:23
 #: ../../../application/views/default/user/files.php:26
 msgid "Downloads"
 msgstr "Downloads"
 
 #: ../../../application/views/default/files/manage.php:30
 #: ../../../application/views/default/files/search/query.php:29
-#: ../../../application/views/default/home.php:138
+#: ../../../application/views/default/home.php:139
 #: ../../../application/views/default/admin/files/view.php:39
 #: ../../../application/views/default/admin/files/search_result.php:43
 #: ../../../application/views/default/admin/users/view.php:43
@@ -2710,7 +2824,7 @@ msgstr "Image Links"
 
 #: ../../../application/views/default/files/manage.php:75
 #: ../../../application/views/default/home.php:90
-#: ../../../application/views/default/home.php:236
+#: ../../../application/views/default/home.php:238
 #: ../../../application/views/default/admin/extend/view.php:13
 #: ../../../application/views/default/admin/extend/view.php:68
 #: ../../../application/views/default/admin/groups/view.php:18
@@ -2719,19 +2833,19 @@ msgid "Description"
 msgstr "Description"
 
 #: ../../../application/views/default/files/manage.php:80
-#: ../../../application/views/default/home.php:243
+#: ../../../application/views/default/home.php:245
 msgid "Tags (seperated by commas)"
 msgstr "Tags (seperated by commas)"
 
 #: ../../../application/views/default/files/manage.php:82
-#: ../../../application/views/default/home.php:241
+#: ../../../application/views/default/home.php:243
 #: ../../../application/views/default/upload/url.php:91
 msgid "Feature This File?"
 msgstr "Feature This File?"
 
 #: ../../../application/views/default/files/manage.php:84
-#: ../../../application/views/default/home.php:202
-#: ../../../application/views/default/home.php:238
+#: ../../../application/views/default/home.php:204
+#: ../../../application/views/default/home.php:240
 #: ../../../application/views/default/admin/groups/edit.php:76
 #: ../../../application/views/default/admin/translator/translate_lang.php:70
 #: ../../../application/views/default/upload/url.php:88
@@ -2975,8 +3089,8 @@ msgid "File"
 msgstr "File"
 
 #: ../../../application/views/default/home.php:93
-#: ../../../application/views/default/home.php:132
-#: ../../../application/views/default/home.php:142
+#: ../../../application/views/default/home.php:133
+#: ../../../application/views/default/home.php:143
 msgid "Upload!"
 msgstr "Upload!"
 
@@ -2984,35 +3098,43 @@ msgstr "Upload!"
 msgid "Select Files To Upload"
 msgstr "Select Files To Upload"
 
-#: ../../../application/views/default/home.php:106
+#: ../../../application/views/default/home.php:101
+msgid "Browse..."
+msgstr "Browse..."
+
+#: ../../../application/views/default/home.php:105
+msgid "Drop your files or folders here"
+msgstr "Drop your files or folders here"
+
+#: ../../../application/views/default/home.php:107
 #: ../../../application/views/default/upload/url.php:39
 msgid "Queued File List"
 msgstr "Queued File List"
 
-#: ../../../application/views/default/home.php:109
+#: ../../../application/views/default/home.php:110
 #, php-format
 msgid "You have selected the following files for upload (%s) files."
 msgstr "You have selected the following files for upload (%s) files."
 
-#: ../../../application/views/default/home.php:111
+#: ../../../application/views/default/home.php:112
 msgid "You have selected previously selected files for upload."
 msgstr "You have selected previously selected files for upload."
 
-#: ../../../application/views/default/home.php:112
-#: ../../../application/views/default/home.php:116
-#: ../../../application/views/default/home.php:120
+#: ../../../application/views/default/home.php:113
+#: ../../../application/views/default/home.php:117
+#: ../../../application/views/default/home.php:121
 msgid "These files have been removed."
 msgstr "These files have been removed."
 
-#: ../../../application/views/default/home.php:115
+#: ../../../application/views/default/home.php:116
 msgid "One or more of the files you selected were too large."
 msgstr "One or more of the files you selected were too large."
 
-#: ../../../application/views/default/home.php:119
+#: ../../../application/views/default/home.php:120
 msgid "One or more of the files you selected are not allowed."
 msgstr "One or more of the files you selected are not allowed."
 
-#: ../../../application/views/default/home.php:123
+#: ../../../application/views/default/home.php:124
 #, php-format
 msgid ""
 "You have selected to many files to upload at once. You are limited to %s "
@@ -3021,66 +3143,58 @@ msgstr ""
 "You have selected to many files to upload at once. You are limited to %s "
 "files."
 
-#: ../../../application/views/default/home.php:124
+#: ../../../application/views/default/home.php:125
 msgid "Please select fewer files and try again."
 msgstr "Please select fewer files and try again."
 
-#: ../../../application/views/default/home.php:127
+#: ../../../application/views/default/home.php:128
 msgid "An unknown error has occured."
 msgstr "An unknown error has occured."
 
-#: ../../../application/views/default/home.php:128
+#: ../../../application/views/default/home.php:129
 msgid "Please contact us about this error"
 msgstr "Please contact us about this error"
 
-#: ../../../application/views/default/home.php:138
+#: ../../../application/views/default/home.php:139
 msgid "Delete All?"
 msgstr "Delete All?"
 
-#: ../../../application/views/default/home.php:202
+#: ../../../application/views/default/home.php:204
 msgid "Discard Changes"
 msgstr "Discard Changes"
 
-#: ../../../application/views/default/home.php:233
+#: ../../../application/views/default/home.php:235
 #: ../../../application/views/default/upload/url.php:83
 msgid "Percent Complete"
 msgstr "Percent Complete"
 
-#: ../../../application/views/default/home.php:234
+#: ../../../application/views/default/home.php:236
 #: ../../../application/views/default/upload/url.php:84
 msgid "KB Remaining (at "
 msgstr "KB Remaining (at "
 
-#: ../../../application/views/default/home.php:235
+#: ../../../application/views/default/home.php:237
 #: ../../../application/views/default/upload/url.php:85
 msgid "remaining"
 msgstr "remaining"
 
-#: ../../../application/views/default/home.php:237
+#: ../../../application/views/default/home.php:239
 #: ../../../application/views/default/admin/files/edit.php:13
 #: ../../../application/views/default/upload/url.php:87
 msgid "File Password"
 msgstr "File Password"
 
-#: ../../../application/views/default/home.php:239
+#: ../../../application/views/default/home.php:241
 #: ../../../application/views/default/upload/url.php:89
 msgid "Edit File Details"
 msgstr "Edit File Details"
 
-#: ../../../application/views/default/home.php:240
+#: ../../../application/views/default/home.php:242
 #: ../../../application/views/default/upload/url.php:90
 msgid "Remove File"
 msgstr "Remove File"
 
-#: ../../../application/views/default/home.php:250
-msgid "Allowed Files"
-msgstr "Allowed Files"
-
-#: ../../../application/views/default/home.php:264
-msgid "Browse..."
-msgstr "Browse..."
-
-#: ../../../application/views/default/home.php:346
+#: ../../../application/views/default/home.php:379
 #: ../../../application/views/default/upload/url.php:128
 msgid "Done!"
 msgstr "Done!"
@@ -3188,14 +3302,6 @@ msgstr "Delete"
 #: ../../../application/views/default/admin/folders/search_result.php:73
 msgid "Ban"
 msgstr "Ban"
-
-#: ../../../application/views/default/admin/files/view.php:36
-#: ../../../application/views/default/admin/files/search_result.php:40
-#: ../../../application/views/default/admin/home.php:227
-#: ../../../application/views/default/admin/folders/search_result.php:40
-#: ../../../application/views/default/admin/transactions/view.php:19
-msgid "Date"
-msgstr "Date"
 
 #: ../../../application/views/default/admin/files/view.php:65
 #: ../../../application/views/default/admin/folders/view.php:38
@@ -3861,11 +3967,11 @@ msgstr "Set To Default"
 msgid "Edit This Gateway"
 msgstr "Edit This Gateway"
 
-#: ../../../application/views/default/admin/stats.php:6
+#: ../../../application/views/default/admin/stats.php:5
 msgid "Information"
 msgstr "Information"
 
-#: ../../../application/views/default/admin/stats.php:8
+#: ../../../application/views/default/admin/stats.php:7
 msgid ""
 "Here you can view a graphical representation of many site stats including "
 "weekly upload count, new users, total used space by server, etc. Please "
@@ -3875,68 +3981,63 @@ msgstr ""
 "weekly upload count, new users, total used space by server, etc. Please "
 "select a chart to view the corresponding data."
 
-#: ../../../application/views/default/admin/stats.php:12
+#: ../../../application/views/default/admin/stats.php:11
 msgid "Select a Chart"
 msgstr "Select a Chart"
 
-#: ../../../application/views/default/admin/stats.php:13
-#: ../../../application/views/default/api/charts/uploads_weekly.php:5
-#: ../../../application/views/default/api/charts/downloads_weekly.php:5
-#: ../../../application/views/default/api/charts/total_new_users_weekly.php:5
+#: ../../../application/views/default/admin/stats.php:12
 #: ../../../application/views/default/api/charts/downloads_monthly.php:8
 msgid "Uploads"
 msgstr "Uploads"
 
+#: ../../../application/views/default/admin/stats.php:13
 #: ../../../application/views/default/admin/stats.php:14
 #: ../../../application/views/default/admin/stats.php:15
 #: ../../../application/views/default/admin/stats.php:16
 #: ../../../application/views/default/admin/stats.php:17
-#: ../../../application/views/default/admin/stats.php:18
-#: ../../../application/views/default/api/charts/all_uploads.php:5
 msgid "All Uploads"
 msgstr "All Uploads"
 
-#: ../../../application/views/default/admin/stats.php:16
-#: ../../../application/views/default/admin/stats.php:21
+#: ../../../application/views/default/admin/stats.php:15
+#: ../../../application/views/default/admin/stats.php:20
 msgid "Files vs Images"
 msgstr "Files vs Images"
 
-#: ../../../application/views/default/admin/stats.php:17
-#: ../../../application/views/default/admin/stats.php:22
+#: ../../../application/views/default/admin/stats.php:16
+#: ../../../application/views/default/admin/stats.php:21
 msgid "Local vs Remote"
 msgstr "Local vs Remote"
 
-#: ../../../application/views/default/admin/stats.php:18
+#: ../../../application/views/default/admin/stats.php:17
 msgid "By Server"
 msgstr "By Server"
 
+#: ../../../application/views/default/admin/stats.php:19
 #: ../../../application/views/default/admin/stats.php:20
 #: ../../../application/views/default/admin/stats.php:21
-#: ../../../application/views/default/admin/stats.php:22
 msgid "New Uploads"
 msgstr "New Uploads"
 
+#: ../../../application/views/default/admin/stats.php:24
 #: ../../../application/views/default/admin/stats.php:25
-#: ../../../application/views/default/admin/stats.php:26
-#: ../../../application/views/default/api/charts/all_downloads.php:5
 msgid "All Downloads"
 msgstr "All Downloads"
 
-#: ../../../application/views/default/admin/stats.php:29
+#: ../../../application/views/default/admin/stats.php:28
 #: ../../../application/views/default/admin/servers/view.php:16
 msgid "Used Space"
 msgstr "Used Space"
 
+#: ../../../application/views/default/admin/stats.php:30
 #: ../../../application/views/default/admin/stats.php:31
-#: ../../../application/views/default/admin/stats.php:32
 msgid "New Users"
 msgstr "New Users"
 
-#: ../../../application/views/default/admin/stats.php:36
+#: ../../../application/views/default/admin/stats.php:35
 msgid "Please select a Chart"
 msgstr "Please select a Chart"
 
-#: ../../../application/views/default/admin/stats.php:44
+#: ../../../application/views/default/admin/stats.php:55
 msgid "Your Requested Chart"
 msgstr "Your Requested Chart"
 
@@ -4355,9 +4456,6 @@ msgid "Click here for a comparision"
 msgstr "Click here for a comparision"
 
 #: ../../../application/views/default/user/register/begin.php:18
-#: ../../../application/views/default/api/charts/uploads_weekly.php:5
-#: ../../../application/views/default/api/charts/downloads_weekly.php:5
-#: ../../../application/views/default/api/charts/total_new_users_weekly.php:5
 #: ../../../application/views/default/api/charts/downloads_monthly.php:8
 msgid "Day"
 msgstr "Day"
@@ -4433,73 +4531,6 @@ msgstr ""
 "You have canceled the payment prematurely. Please visit the pay link "
 "included in the email you recived to complete payment and activate your "
 "account."
-
-#: ../../../application/views/default/api/charts/uploads_weekly.php:5
-msgid "Past 7 Days Uploads"
-msgstr "Past 7 Days Uploads"
-
-#: ../../../application/views/default/api/charts/all_server_uploads.php:6
-msgid "File-Server Uploads Distrubition"
-msgstr "File-Server Uploads Distrubition"
-
-#: ../../../application/views/default/api/charts/downloads_weekly.php:5
-#: ../../../application/views/default/api/charts/downloads_monthly.php:8
-msgid "Past 7 Days Downloads"
-msgstr "Past 7 Days Downloads"
-
-#: ../../../application/views/default/api/charts/total_new_users_weekly.php:5
-msgid "New Users >> Weekly"
-msgstr "New Users >> Weekly"
-
-#: ../../../application/views/default/api/charts/all_images_vs_regular.php:5
-msgid "All Uploads >> Files vs Images"
-msgstr "All Uploads >> Files vs Images"
-
-#: ../../../application/views/default/api/charts/all_images_vs_regular.php:5
-#: ../../../application/views/default/api/charts/images_vs_regular_weekly.php:5
-msgid "Regular"
-msgstr "Regular"
-
-#: ../../../application/views/default/api/charts/all_images_vs_regular.php:5
-#: ../../../application/views/default/api/charts/images_vs_regular_weekly.php:5
-msgid "Image"
-msgstr "Image"
-
-#: ../../../application/views/default/api/charts/all_downloads.php:5
-#: ../../../application/views/default/api/charts/all_uploads.php:5
-msgid "Anonymous"
-msgstr "Anonymous"
-
-#: ../../../application/views/default/api/charts/all_downloads.php:5
-#: ../../../application/views/default/api/charts/all_uploads.php:5
-msgid "Registered"
-msgstr "Registered"
-
-#: ../../../application/views/default/api/charts/remote_vs_host_uploads_weekly.php:5
-msgid "New Uploads >> Local vs Remote >> Weekly"
-msgstr "New Uploads >> Local vs Remote >> Weekly"
-
-#: ../../../application/views/default/api/charts/remote_vs_host_uploads_weekly.php:5
-#: ../../../application/views/default/api/charts/all_remote_vs_host_uploads.php:5
-msgid "Remote"
-msgstr "Remote"
-
-#: ../../../application/views/default/api/charts/remote_vs_host_uploads_weekly.php:5
-#: ../../../application/views/default/api/charts/all_remote_vs_host_uploads.php:5
-msgid "Local"
-msgstr "Local"
-
-#: ../../../application/views/default/api/charts/all_remote_vs_host_uploads.php:5
-msgid "Uploads >> Local vs Remote"
-msgstr "Uploads >> Local vs Remote"
-
-#: ../../../application/views/default/api/charts/all_server_used_space.php:6
-msgid "Servers >> Used Space"
-msgstr "Servers >> Used Space"
-
-#: ../../../application/views/default/api/charts/images_vs_regular_weekly.php:5
-msgid "New Uploads >> Files vs Images >> Weekly"
-msgstr "New Uploads >> Files vs Images >> Weekly"
 
 #: ../../../application/views/default/upload/complete.php:3
 msgid "Upload Complete"
