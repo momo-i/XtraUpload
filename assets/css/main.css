@@ -576,3 +576,13 @@ span.cssButton a.buttonRed:active
 	margin-top:1px;
 	margin-bottom:1px;
 }
+
+#drop-target {
+  border: 10px dashed #999;
+  text-align: center;
+  color: #999;
+  font-size: 20px;
+  width: 600px;
+  height: 300px;
+  line-height: 300px;
+}

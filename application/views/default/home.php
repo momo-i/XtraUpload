@@ -95,7 +95,6 @@ else
               </p>
             </form>
           </div>
-          <!--div id="plupload">Testing use. This is not work well yet.</div-->
           <div id="uploader" style="display:none;">
             <h3 style="padding-top:8px;"><?php echo lang('Select Files To Upload'); ?></h3><br>
             <div style="padding-left:12px;">
@@ -103,6 +102,7 @@ else
             </div>
             <br>
           </div>
+          <div id="drop-target" style="display:none">Drop your files or folders here</div>
           <div id="files" style="display:none">
             <h3 style="padding-top:8px;"><?php echo lang('Queued File List'); ?></h3>
             <div id="file_list">
@@ -247,8 +247,9 @@ else
             }
             var maxsize = ___getMaxUploadSize();
             var uploader = new plupload.Uploader({
-              runtimes: 'html5,flash,silverlight,html4',
+              runtimes: 'html5,silverlight,flash,html4',
               browse_button: 'plupload',
+              drop_element: 'drop-target',
               url: "<?php echo site_url('upload/plupload'); ?>",
               chunk_size: "1gb",
               flash_swf_url: ___baseUrl()+'assets/flash/Moxie.swf',
@@ -266,6 +267,11 @@ else
                 }
               },
               init: {
+                Init: function(up, params) {
+                  if(params.runtime === 'html5' && !$.browser.msie) {
+                    $('#drop-target').show();
+                  }
+                },
                 FilesAdded: function(up, files) {
                   plupload.each(files, function(file) {
                     fileDialogComplete();
@@ -287,6 +293,21 @@ else
                 }
               },
             });
+            var target = $("#drop-target");
+            if(uploader.features.dragdrop) {
+              target.ondragover = function(event) {
+                event.dataTransfer.dropEffect = "copy";
+              };
+              target.ondragenter = function() {
+                this.className = "dragover";
+              };
+              target.ondragleave = function() {
+                this.className = "";
+              };
+              target.ondrop = function() {
+                this.className = "";
+              };
+            }
             if(uploader) {
               $('#flash').remove();
               $('#browser').attr('disabled', false);
