@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XtraUpload 3.0.0 RC4\n"
 "Report-Msgid-Bugs-To: translator at xtrafile.com\n"
-"POT-Creation-Date: 2015-01-15 13:49+0900\n"
-"PO-Revision-Date: 2015-01-15 13:49+0900\n"
+"POT-Creation-Date: 2015-01-15 15:18+0900\n"
+"PO-Revision-Date: 2015-01-15 15:18+0900\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: en_GB\n"
@@ -912,7 +912,6 @@ msgstr "Email"
 #: ../../../application/views/vector_lover/menu.php:9
 #: ../../../application/views/citrus_island/menu.php:9
 #: ../../../application/views/style_vantage_blue/menu.php:9
-#: ../../../application/views/default/menu.php:8
 msgid "Manage Account"
 msgstr "Manage Account"
 
@@ -952,7 +951,6 @@ msgstr "New Password Confirmation"
 #: ../../../application/views/style_vantage_blue/menu.php:14
 #: ../../../application/views/default/user/password.php:9
 #: ../../../application/views/default/user/password.php:13
-#: ../../../application/views/default/menu.php:11
 msgid "Change Password"
 msgstr "Change Password"
 
@@ -2448,8 +2446,8 @@ msgstr "Password:"
 #: ../../../application/views/citrus_island/menu.php:42
 #: ../../../application/views/style_vantage_blue/menu.php:42
 #: ../../../application/views/default/menu.php:40
-msgid "Forgot Your Password?"
-msgstr "Forgot Your Password?"
+msgid "Forgot your password?"
+msgstr "Forgot your password?"
 
 #: ../../../application/views/style_vantage_green/menu.php:47
 #: ../../../application/views/tech_junkie/menu.php:47
@@ -2459,8 +2457,8 @@ msgstr "Forgot Your Password?"
 #: ../../../application/views/citrus_island/menu.php:47
 #: ../../../application/views/style_vantage_blue/menu.php:47
 #: ../../../application/views/default/menu.php:43
-msgid "New? Register Here!"
-msgstr "New? Register Here!"
+msgid "New? Register here!"
+msgstr "New? Register here!"
 
 #: ../../../application/views/style_vantage_green/menu.php:59
 #: ../../../application/views/tech_junkie/footer.php:28
@@ -2470,8 +2468,8 @@ msgstr "New? Register Here!"
 #: ../../../application/views/citrus_island/menu.php:59
 #: ../../../application/views/style_vantage_blue/menu.php:59
 #: ../../../application/views/default/footer.php:27
-msgid "Recently Uploaded Files"
-msgstr "Recently Uploaded Files"
+msgid "Recently uploaded files"
+msgstr "Recently uploaded files"
 
 #: ../../../application/views/style_vantage_green/menu.php:81
 #: ../../../application/views/tech_junkie/footer.php:55
@@ -3095,8 +3093,8 @@ msgid "Upload!"
 msgstr "Upload!"
 
 #: ../../../application/views/default/home.php:99
-msgid "Select Files To Upload"
-msgstr "Select Files To Upload"
+msgid "Select files to upload"
+msgstr "Select files to upload"
 
 #: ../../../application/views/default/home.php:101
 msgid "Browse..."
@@ -3107,9 +3105,8 @@ msgid "Drop your files or folders here"
 msgstr "Drop your files or folders here"
 
 #: ../../../application/views/default/home.php:107
-#: ../../../application/views/default/upload/url.php:39
-msgid "Queued File List"
-msgstr "Queued File List"
+msgid "Queued file list"
+msgstr "Queued file list"
 
 #: ../../../application/views/default/home.php:110
 #, php-format
@@ -4607,6 +4604,10 @@ msgstr "Remote Upload URLs, one per line"
 msgid "Add To Queue"
 msgstr "Add To Queue"
 
+#: ../../../application/views/default/upload/url.php:39
+msgid "Queued File List"
+msgstr "Queued File List"
+
 #: ../../../application/views/default/upload/url.php:42
 #, php-format
 msgid "You have selected the following files for upload (%s Files)."
@@ -4714,6 +4715,14 @@ msgstr "Hotlink for websites, full image(HTML):"
 #: ../../../application/views/default/image/links.php:27
 msgid "Direct link to image:"
 msgstr "Direct link to image:"
+
+#: ../../../application/views/default/menu.php:8
+msgid "Manage account"
+msgstr "Manage account"
+
+#: ../../../application/views/default/menu.php:11
+msgid "Change password"
+msgstr "Change password"
 
 #: ../../../application/views/default/folder/create.php:3
 msgid "File Folder - Create"

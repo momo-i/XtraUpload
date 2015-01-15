@@ -39,12 +39,12 @@ else
         <ul class="sidemenu">
           <li>
             <a href="<?php echo site_url('user/forgot_password'); ?>">
-              <img src="<?php echo base_url(); ?>assets/images/icons/help_16.png" class="nb" alt=""> <?php echo lang('Forgot Your Password?')?>
+              <img src="<?php echo base_url(); ?>assets/images/icons/help_16.png" class="nb" alt=""> <?php echo lang('Forgot your password?')?>
             </a>
           </li>
           <li>
             <a href="<?php echo site_url('user/register'); ?>">
-                <img src="<?php echo base_url(); ?>assets/images/other/user-add_16.png" class="nb" alt=""> <?php echo lang('New? Register Here!')?>
+                <img src="<?php echo base_url(); ?>assets/images/other/user-add_16.png" class="nb" alt=""> <?php echo lang('New? Register here!')?>
             </a>
           </li>
         </ul>

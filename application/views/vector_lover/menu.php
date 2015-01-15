@@ -39,12 +39,12 @@ else
         <ul class="sidemenu">
           <li>
             <a href="<?php echo site_url('user/forgot_password'); ?>">
-              <img src="<?php echo base_url(); ?>assets/images/icons/help_16.png" class="nb" alt=""> <?php echo lang('Forgot Your Password?')?>
+              <img src="<?php echo base_url(); ?>assets/images/icons/help_16.png" class="nb" alt=""> <?php echo lang('Forgot your password?')?>
             </a>
           </li>
           <li>
             <a href="<?php echo site_url('user/register'); ?>">
-                <img src="<?php echo base_url(); ?>assets/images/other/user-add_16.png" class="nb" alt=""> <?php echo lang('New? Register Here!')?>
+                <img src="<?php echo base_url(); ?>assets/images/other/user-add_16.png" class="nb" alt=""> <?php echo lang('New? Register here!')?>
             </a>
           </li>
         </ul>
@@ -56,7 +56,7 @@ else
 if($this->startup->site_config->show_recent_uploads)
 {
 ?>
-        <h3><?php echo lang('Recently Uploaded Files'); ?></h3>
+        <h3><?php echo lang('Recently uploaded files'); ?></h3>
         <ul class="sidemenu">
 <?php
 	$query = $this->files_db->get_recent_files(5);

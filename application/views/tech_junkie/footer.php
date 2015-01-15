@@ -25,7 +25,7 @@ else
 if($this->startup->site_config->show_recent_uploads)
 {
 ?>
-              <h3><?php echo lang('Recently Uploaded Files'); ?></h3>
+              <h3><?php echo lang('Recently uploaded files'); ?></h3>
               <ul class="col-list">
 <?php
 	$query = $this->files_db->get_recent_files(5);

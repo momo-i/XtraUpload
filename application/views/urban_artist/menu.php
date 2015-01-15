@@ -37,10 +37,10 @@ else
           </form>
           <ul class="sidemenu">
             <li>
-              <?php echo anchor('user/forgot_password', '<img src="'. base_url().'assets/images/icons/help_16.png" class="nb" alt="">'.lang('Forgot Your Password?')); ?>
+              <?php echo anchor('user/forgot_password', '<img src="'. base_url().'assets/images/icons/help_16.png" class="nb" alt="">'.lang('Forgot your password?')); ?>
             </li>
             <li>
-              <?php echo anchor('user/register', '<img src="'. base_url().'assets/images/other/user-add_16.png" class="nb" alt="">'.lang('New? Register Here!')); ?>
+              <?php echo anchor('user/register', '<img src="'. base_url().'assets/images/other/user-add_16.png" class="nb" alt="">'.lang('New? Register here!')); ?>
             </li>
           </ul>
 <?php
@@ -51,7 +51,7 @@ else
 if($this->startup->site_config->show_recent_uploads)
 {
 ?>
-          <h3><?php echo lang('Recently Uploaded Files'); ?></h3>
+          <h3><?php echo lang('Recently uploaded files'); ?></h3>
           <ul class="sidemenu">
 <?php 
 	$query = $this->files_db->get_recent_files(5);

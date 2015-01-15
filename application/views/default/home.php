@@ -96,7 +96,7 @@ else
             </form>
           </div>
           <div id="uploader" style="display:none;">
-            <h3 style="padding-top:8px;"><?php echo lang('Select Files To Upload'); ?></h3><br>
+            <h3 style="padding-top:8px;"><?php echo lang('Select files to upload'); ?></h3><br>
             <div style="padding-left:12px;">
               <div style="display: block; width:90px; height:22px; border: solid 1px #7FAAFF; background-color: #C5D9FF; padding: 2px; padding-top:6px; padding-left:6px;"><span id="plupload"><span class="button" style="font-size: 12pt; font-weight:bold; color:#565656; cursor: pointer;"><?php echo lang('Browse...'); ?></span></span></div>
             </div>
@@ -104,7 +104,7 @@ else
           </div>
           <div id="drop-target" style="display:none"><?php echo lang('Drop your files or folders here'); ?></div>
           <div id="files" style="display:none">
-            <h3 style="padding-top:8px;"><?php echo lang('Queued File List'); ?></h3>
+            <h3 style="padding-top:8px;"><?php echo lang('Queued file list'); ?></h3>
             <div id="file_list">
               <p>
                 <?php printf(lang('You have selected the following files for upload (%s) files.'), '<span id="summary">0</span>'); ?><br>

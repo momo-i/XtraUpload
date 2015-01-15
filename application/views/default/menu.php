@@ -5,10 +5,10 @@ if($this->session->userdata('id'))
           <h3><?php printf(lang('Welcome %s!'), $this->session->userdata('username')); ?></h3>
           <ul class="sidemenu">
             <li>
-              <?php echo anchor('user/manage', '<img src="'.base_url().'assets/images/icons/options_16.png" class="nb" alt="">'.lang('Manage Account')); ?> 
+              <?php echo anchor('user/manage', '<img src="'.base_url().'assets/images/icons/options_16.png" class="nb" alt="">'.lang('Manage account')); ?> 
             </li>
             <li>
-              <?php echo anchor('user/change_password', '<img src="'.base_url().'assets/images/icons/security_16.png" class="nb" alt="">'.lang('Change Password')); ?> 
+              <?php echo anchor('user/change_password', '<img src="'.base_url().'assets/images/icons/security_16.png" class="nb" alt="">'.lang('Change password')); ?> 
             </li>
             <li>
               <?php echo anchor('user/logout', '<img src="'.base_url().'assets/images/icons/log_out_16.png" class="nb" alt="">'.lang('Logout')); ?> 
@@ -37,10 +37,10 @@ else
           </form>
           <ul class="sidemenu">
             <li>
-              <?php echo anchor('user/forgot_password', '<img src="'. base_url().'assets/images/icons/help_16.png" class="nb" alt="">'.lang('Forgot Your Password?')); ?> 
+              <?php echo anchor('user/forgot_password', '<img src="'. base_url().'assets/images/icons/help_16.png" class="nb" alt="">'.lang('Forgot your password?')); ?> 
             </li>
             <li>
-              <?php echo anchor('user/register', '<img src="'. base_url().'assets/images/other/user-add_16.png" class="nb" alt="">'.lang('New? Register Here!')); ?> 
+              <?php echo anchor('user/register', '<img src="'. base_url().'assets/images/other/user-add_16.png" class="nb" alt="">'.lang('New? Register here!')); ?> 
             </li>
           </ul>
 <?php

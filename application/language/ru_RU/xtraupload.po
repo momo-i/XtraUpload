@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XtraUpload 3.0.0 Beta4\n"
 "Report-Msgid-Bugs-To: translator at xtrafile.com\n"
-"POT-Creation-Date: 2015-01-15 13:49+0900\n"
+"POT-Creation-Date: 2015-01-15 15:15+0900\n"
 "PO-Revision-Date: 2014-12-14 10:46+0900\n"
 "Last-Translator: momo-i <webmaster@momo-i.org>\n"
 "Language-Team: Rusian\n"
@@ -879,7 +879,6 @@ msgstr ""
 #: ../../../application/views/vector_lover/menu.php:9
 #: ../../../application/views/citrus_island/menu.php:9
 #: ../../../application/views/style_vantage_blue/menu.php:9
-#: ../../../application/views/default/menu.php:8
 msgid "Manage Account"
 msgstr ""
 
@@ -919,7 +918,6 @@ msgstr ""
 #: ../../../application/views/style_vantage_blue/menu.php:14
 #: ../../../application/views/default/user/password.php:9
 #: ../../../application/views/default/user/password.php:13
-#: ../../../application/views/default/menu.php:11
 msgid "Change Password"
 msgstr ""
 
@@ -2404,7 +2402,7 @@ msgstr ""
 #: ../../../application/views/citrus_island/menu.php:42
 #: ../../../application/views/style_vantage_blue/menu.php:42
 #: ../../../application/views/default/menu.php:40
-msgid "Forgot Your Password?"
+msgid "Forgot your password?"
 msgstr ""
 
 #: ../../../application/views/style_vantage_green/menu.php:47
@@ -2415,7 +2413,7 @@ msgstr ""
 #: ../../../application/views/citrus_island/menu.php:47
 #: ../../../application/views/style_vantage_blue/menu.php:47
 #: ../../../application/views/default/menu.php:43
-msgid "New? Register Here!"
+msgid "New? Register here!"
 msgstr ""
 
 #: ../../../application/views/style_vantage_green/menu.php:59
@@ -2426,7 +2424,7 @@ msgstr ""
 #: ../../../application/views/citrus_island/menu.php:59
 #: ../../../application/views/style_vantage_blue/menu.php:59
 #: ../../../application/views/default/footer.php:27
-msgid "Recently Uploaded Files"
+msgid "Recently uploaded files"
 msgstr ""
 
 #: ../../../application/views/style_vantage_green/menu.php:81
@@ -3033,7 +3031,7 @@ msgid "Upload!"
 msgstr ""
 
 #: ../../../application/views/default/home.php:99
-msgid "Select Files To Upload"
+msgid "Select files to upload"
 msgstr ""
 
 #: ../../../application/views/default/home.php:101
@@ -3045,8 +3043,7 @@ msgid "Drop your files or folders here"
 msgstr ""
 
 #: ../../../application/views/default/home.php:107
-#: ../../../application/views/default/upload/url.php:39
-msgid "Queued File List"
+msgid "Queued file list"
 msgstr ""
 
 #: ../../../application/views/default/home.php:110
@@ -4505,6 +4502,10 @@ msgstr ""
 msgid "Add To Queue"
 msgstr ""
 
+#: ../../../application/views/default/upload/url.php:39
+msgid "Queued File List"
+msgstr ""
+
 #: ../../../application/views/default/upload/url.php:42
 #, php-format
 msgid "You have selected the following files for upload (%s Files)."
@@ -4611,6 +4612,14 @@ msgstr ""
 
 #: ../../../application/views/default/image/links.php:27
 msgid "Direct link to image:"
+msgstr ""
+
+#: ../../../application/views/default/menu.php:8
+msgid "Manage account"
+msgstr ""
+
+#: ../../../application/views/default/menu.php:11
+msgid "Change password"
 msgstr ""
 
 #: ../../../application/views/default/folder/create.php:3
