@@ -8,7 +8,4 @@ var chart = c3.generate({
     ],
     type: 'pie',
   },
-  legend: {
-    show: true
-  }
 });

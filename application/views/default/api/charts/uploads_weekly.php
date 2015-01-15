@@ -5,9 +5,9 @@ var chart = c3.generate({
     x: 'x',
     columns: [
       ['x', '<?php echo $day6['d']; ?>', '<?php echo $day5['d']; ?>', '<?php echo $day4['d']; ?>', '<?php echo $day3['d']; ?>', '<?php echo $day2['d']; ?>', '<?php echo $day1['d']; ?>', '<?php echo $today['d']; ?>'],
-      ['All uploads', <?php echo $day6['num']; ?>, <?php echo $day5['num']; ?>, <?php echo $day4['num']; ?>, <?php echo $day3['num']; ?>, <?php echo $day2['num']; ?>, <?php echo $day1['num']; ?>, <?php echo $today['num']; ?>]
+      ['<?php echo lang('All uploads'); ?>', <?php echo $day6['num']; ?>, <?php echo $day5['num']; ?>, <?php echo $day4['num']; ?>, <?php echo $day3['num']; ?>, <?php echo $day2['num']; ?>, <?php echo $day1['num']; ?>, <?php echo $today['num']; ?>]
     ],
-    groups: [['All uploads']],
+    groups: [['<?php echo lang('All uploads'); ?>']],
     type: 'bar',
   },
   axis: {
@@ -25,7 +25,4 @@ var chart = c3.generate({
       ratio: 0.3,
     },
   },
-  legend: {
-    show: true
-  }
 });

@@ -14,7 +14,4 @@ foreach($servers as $server)
     ],
     type: 'pie',
   },
-  legend: {
-    show: true
-  }
 });
