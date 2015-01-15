@@ -102,7 +102,7 @@ else
             </div>
             <br>
           </div>
-          <div id="drop-target" style="display:none">Drop your files or folders here</div>
+          <div id="drop-target" style="display:none"><?php echo lang('Drop your files or folders here'); ?></div>
           <div id="files" style="display:none">
             <h3 style="padding-top:8px;"><?php echo lang('Queued File List'); ?></h3>
             <div id="file_list">

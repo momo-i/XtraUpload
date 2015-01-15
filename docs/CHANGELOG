@@ -1,5 +1,6 @@
 	v3.2.0-Alpha2
 		- new Chart system
+		- Add upload using Drag and Drop support 
 	v3.1.0-Alpha1
 		- Rewrite upload class for plupload
 	v3.0.0
