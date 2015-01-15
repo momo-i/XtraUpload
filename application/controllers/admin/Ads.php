@@ -135,7 +135,7 @@ class Ads extends CI_Controller {
 	 */
 	public function edit($id)
 	{
-		if(intval($id) == 0))
+		if(intval($id) == 0)
 		{
 			redirect('admin/ads/view');
 		}
@@ -173,7 +173,7 @@ class Ads extends CI_Controller {
 	 */
 	public function turn_on($id)
 	{
-		if(intval($id) != 0))
+		if(intval($id) != 0)
 		{
 			$this->ads_db->edit_ads(intval($id), array('status' => '1'));
 			$this->session->set_flashdata('msg', lang('Advert Turned On!'));
@@ -194,9 +194,9 @@ class Ads extends CI_Controller {
 	 */
 	public function turn_off($id)
 	{
-		if(intval($id) != 0))
+		if(intval($id) != 0)
 		{
-			$this->ads_db->edit_ads(intval($id), array('status' => '1');
+			$this->ads_db->edit_ads(intval($id), array('status' => '1'));
 			$this->session->set_flashdata('msg', lang('Advert Turned Off!'));
 			redirect();
 		}
@@ -215,7 +215,7 @@ class Ads extends CI_Controller {
 	 */
 	public function delete($id)
 	{
-		if(intval($id) != 0))
+		if(intval($id) != 0)
 		{
 			$this->ads_db->delete_ads(intval($id));
 			$this->session->set_flashdata('msg', lang('Advert Deleted!'));
