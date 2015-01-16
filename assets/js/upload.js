@@ -118,17 +118,19 @@ function addFileQueue(file)
 {
 	if(typeof(fileObj[file.id]) != 'undefined')
 	{
-		plupload.removeFile(file);
+		uploader.removeFile(file);
 		subtractFilesFromTotal++;
 		prevFile = true;
+		updatePendingFileCount();
 		return true;
 	}
 
 	if(file.size > 1024 * 1024 * ___getMaxUploadSize())
 	{
-		plupload.removeFile(file);
+		uploader.removeFile(file);
 		subtractFilesFromTotal++;
 		fileToBig = true;
+		updatePendingFileCount();
 		return true;
 	}
 	
@@ -153,9 +155,10 @@ function addFileQueue(file)
 			
 			if(!allow)
 			{
-				plupload.removeFile(file);
+				uploader.removeFile(file);
 				subtractFilesFromTotal++;
 				fileNotAllowed = true;
+				updatePendingFileCount();
 				return true;	
 			}
 		}
@@ -174,9 +177,10 @@ function addFileQueue(file)
 			
 			if(notAllow)
 			{
-				plupload.removeFile(file);
+				uploader.removeFile(file);
 				subtractFilesFromTotal++;
 				fileNotAllowed = true;
+				updatePendingFileCount();
 				return true;	
 			}
 			
@@ -264,19 +268,20 @@ function fileDialogComplete(num)
 function clearUploadQueue()
 {
 	while(uploader.total.queued > 0) {
-		plupload.removeFile();
+		//uploader.removeFile();
 		file = plupload.getFile();
 		rm_file(file.id);
 	}
 };
 
-function flashUploadError(file, errorCode, message)
+function uploadError(file, errorCode, message)
 {
-	alert("Upload Failed("+errorCode+"): "+ message);
-	$('.debug').append(errorCode+": "+message+"\n");
+	$('#alert0').html(message);
+	$('#alert0').show();
+	setTimeout('$(".alert").hide("normal");', 2500);
 }
 
-function flashUploadQueueError(file,errorCode, message)
+function flashUploadQueueError(file, errorCode, message)
 {
 	if(errorCode == -110)
 	{
@@ -312,4 +317,3 @@ function debug_function(message)
 {
 	$('.debug').append(message+"\n");
 }
-	

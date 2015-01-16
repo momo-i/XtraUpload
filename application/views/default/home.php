@@ -128,6 +128,7 @@ else
                   <?php echo lang('An unknown error has occured.'); ?><br>
                   <?php echo lang('Please contact us about this error'); ?> 
                 </span>
+                <span class="alert" id="alert0" style="display:none"></span>
               </p>
               <div class="float-right" style=" margin-bottom:1em">
                 <?php echo generate_link_button(lang('Upload!'), 'javascript:void(0);', base_url().'assets/images/icons/up_16.png', 'green', array('onclick'=>'uploader.start();')); ?>
@@ -210,7 +211,9 @@ else
               f = [].concat(search),
               r = [].concat(replace),
               s = subject,
-              ra = r instanceof Array, sa = s instanceof Array;    s = [].concat(s);
+              ra = r instanceof Array,
+              sa = s instanceof Array;
+              s = [].concat(s);
               if (count) {
                 this.window[count] = 0;
               }
@@ -257,7 +260,7 @@ else
               filters: {
                 max_file_size: maxsize+'mb',
                 mime_types: [
-                  {title: "All files", extensions: "*"}
+                  {title: "<?php echo lang('All files'); ?>", extensions: "*"}
                 ]
               },
               preinit: {
@@ -289,7 +292,10 @@ else
                   updatePendingFileCount();
                 },
                 Error: function(up, args) {
-                  uploadError(up, args);
+                  var errorCode = args.code;
+                  var message = args.message;
+                  var file = args.file;
+                  uploadError(file, errorCode, message);
                 }
               },
             });
