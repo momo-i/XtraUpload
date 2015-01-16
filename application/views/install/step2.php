@@ -55,13 +55,24 @@
           <tr>
             <td class="pformleftw">
               <?php echo lang('PHP Version'); ?><br>
-              <?php echo lang('Minimum Version:'); ?> <strong>v5.3.0</strong><br>
+              <?php echo lang('Minimum Version:'); ?> <strong>v5.6.0</strong><br>
               <?php echo lang('Version Found:'); ?> <strong>v<?php echo phpversion()?></strong>
             </td>
             <td class="pformright">
               <?php echo $phpver; ?>
             </td>
           </tr>
+          <tr>
+            <td class="pformleftw">
+              <?php echo lang('OS Architecture'); ?><br>
+              <?php echo lang('Recomended OS architecture is 64bit.'); ?><br>
+              <?php printf(lang('Your OS architecture is %s.'), $archver); ?>
+            </td>
+            <td class="pformright">
+              <?php echo $arch; ?>
+            </td>
+          </tr>
+          <tr>
             <td class="pformleftw">
               <?php echo lang('PHP Safe Mode'); ?><br>
               <?php echo lang('Safe Mode:'); ?> <strong><?php echo $safemode; ?></strong>

@@ -111,6 +111,34 @@ class Step2 extends CI_Controller {
 			$data['phpver'] = '<span style="color: #009900; font-size: 4"><strong>'.lang('Passed').'</strong></span>'."\n";
 		}
 
+		if(strcmp(PHP_OS, 'Linux') === 0)
+		{
+			$arch = 'Unknown';
+			if(function_exists('posix_uname'))
+			{
+				$osinfo = posix_uname();
+				$arch = $osinfo['machine'];
+			}
+			else
+			{
+				$osinfo = @shell_exec('uname -m');
+				if($osinfo)
+				{
+					$arch = trim($osinfo);
+				}
+			}
+			if(strcmp($arch, 'x86_64') === 0)
+			{
+				$data['arch'] = '<span style="color: #009900; font-size: 4"><strong>'.lang('Passed').'</strong></span>'."\n";
+			}
+			elseif(preg_match('#i[0-9]+#', $arch))
+			{
+				$data['arch'] = '<span style="color: #FF4000; font-size: 4"><strong>'.lang('Warning').'</strong></span><br>';
+				$data['arch'] = lang('Your OS architecture is 32 bit. Maybe some functions will be restricted.');
+			}
+			$data['archver'] = $arch;
+		}
+
 		if((bool)ini_get('safe_mode') && $phpver < 530)
 		{
 			$data['safemode'] = lang('On');
