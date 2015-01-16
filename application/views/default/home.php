@@ -38,7 +38,7 @@ else
             <h3>
               <a href="javascript:void(0);" onclick="$('#upload_limits').slideDown();$(this).parent().remove();">
                 <img src="<?php echo base_url(); ?>assets/images/icons/about_24.png" class="nb" alt="">
-                <?php echo lang('Upload Restrictions'); ?> 
+                <?php echo lang('Upload Restrictions'); ?>
               </a>
             </h3>
             <p>
@@ -70,10 +70,13 @@ else
           <div id="flash" style="display:">
             <span class="alert">
               <strong><?php echo lang('Error'); ?></strong><br>
-              <?php echo lang('Get Flash!'); ?><br>
+              <?php echo lang('You are not having flash or silverlight or html5.'); ?><br>
               <a href="http://get.adobe.com/jp/flashplayer/">
-                <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="<?php echo lang('Get Adobe Flash player'); ?>">
-              </a>
+                <img src="<?php echo base_url(); ?>/assets/images/get_flash_player.gif" alt="<?php echo lang('Get Adobe Flash player'); ?>">
+              </a><br>
+              <a href="http://www.microsoft.com/silverlight/">
+                <img src="<?php echo base_url(); ?>/assets/images/silverlight.gif" alt="<?php echo lang('Get Microsoft Silverlight'); ?>">
+              </a><br>
             </span>
             <form enctype="multipart/form-data" action="<?php echo site_url('upload/process/'.md5($this->functions->get_rand_id(32)).'/'.($this->session->userdata('id') ? $this->session->userdata('id') : 0 ))?>" method="post">
               <h3><?php echo lang('Upload a File'); ?></h3>
@@ -250,7 +253,7 @@ else
             }
             var maxsize = ___getMaxUploadSize();
             var uploader = new plupload.Uploader({
-              runtimes: 'html5,silverlight,flash,html4',
+              runtimes: 'html5,silverlight,flash',
               browse_button: 'plupload',
               drop_element: 'drop-target',
               url: "<?php echo site_url('upload/plupload'); ?>",
@@ -277,6 +280,10 @@ else
                 },
                 FilesAdded: function(up, files) {
                   plupload.each(files, function(file) {
+                    if(uploader.total.queued > <?php echo $upload_num_limit; ?>) {
+                      ___toManyFilesError();
+                      return false;
+                    }
                     fileDialogComplete();
                     addFileQueue(file);
                   });
