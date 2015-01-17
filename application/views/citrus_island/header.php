@@ -32,7 +32,7 @@ if(isset($include_flash_upload_js) && $include_flash_upload_js === TRUE)
     <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/plupload.full.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.plupload.queue.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.ui.plupload.min.js"></script>
-    <?php echo $pllang; ?>
+    <?php echo isset($pllang) ? $pllang : ""; ?>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/jquery.plupload.queue.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/jquery.ui.plupload.css">
     <script src="<?php echo base_url(); ?>assets/js/upload.js" type="text/javascript"></script>
