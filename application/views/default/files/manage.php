@@ -22,7 +22,7 @@
           <table border="0" style="width:95%" id="file_list_table">
             <tr>
               <th style="width:20px">
-                <div style="text-align:center"><input type="checkbox" id="switch_box" onchange="switchCheckboxes(this.checked)"></div>
+                <div style="text-align:center"><input type="checkbox" id="switch_box" onchange="switch_checkboxes(this.checked)"></div>
               </th>
               <th><?php echo lang('File name'); ?></th>
               <th><?php echo lang('Size'); ?></th>
@@ -38,7 +38,7 @@ foreach ($files->result() as $file) {
             <tr id="<?php echo $file->file_id; ?>" <?php echo alternator('class="odd"', 'class="even"'); ?>>
               <td>
                 <div align="center">
-                  <input type="checkbox" id="check-<?php echo $file->id; ?>" onchange="manageCheckboxes()" name="files[]" value="<?php echo $file->file_id; ?>">
+                  <input type="checkbox" id="check-<?php echo $file->id; ?>" onchange="manage_checkboxes()" name="files[]" value="<?php echo $file->file_id; ?>">
                 </div>
               </td>
               <td>
@@ -129,68 +129,6 @@ foreach ($files->result() as $file) {
               $('#userAdmin').attr('action', "<?php echo site_url('files/mass_delete'); ?>");
               $('#userAdmin').submit();
             }
-          }
-          function switchCheckboxes(checked)
-          {
-            var the_id = this.id;
-            if(checked == false)
-            {
-              $("input:checkbox").each( function()
-              {
-                if(this.id != the_id)
-                {
-                  this.checked = false;
-                }
-              });
-            }
-            else
-            {
-              $("input:checkbox").each( function()
-              {
-                if(this.id != the_id)
-                {
-                  this.checked = true;
-                }
-              });
-            }
-          }
-          function manageCheckboxes()
-          {
-            var boxes = [];
-            var is_all_checked = true;
-            var i = 0;
-            // get all main checkboxes and manage them muwahhahh!!!!
-            $("input[id^='check-']:checkbox").each( function()
-            {
-              if(this.id != 'switch_box' && is_all_checked == true)
-              {
-                if(this.checked === false)
-                {
-                  is_all_checked = false;
-                }
-              }
-            });
-            if(is_all_checked)
-            {
-              $('#switch_box').get(0).checked = true;
-            }
-            else
-            {
-              $('#switch_box').get(0).checked = false;
-            }
-          }
-          function switchCheckbox(id)
-          {
-            $('#'+id).each( function()
-            {
-              $(this).get(0).checked = !$(this).get(0).checked;
-            });
-          }
-          function sort_form(col, dir)
-          {
-            $('#formS').val(col);
-            $('#formD').val(dir);
-            $('#sort_form').get(0).submit();
           }
           //--]]>
         </script>

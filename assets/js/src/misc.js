@@ -63,3 +63,51 @@ function getExtension(file)
 {
 	return end(file.split('.')).toLowerCase();	
 }
+
+function switch_checkboxes(checked) {
+	var the_id = this.id;
+	if(checked == false) {
+		$("input:checkbox").each( function() {
+			if(this.id != the_id) {
+				this.checked = false;
+			}
+		});
+	} else {
+		$("input:checkbox").each( function() {
+			if(this.id != the_id) {
+				this.checked = true;
+			}
+		});
+	}
+}
+
+function switch_checkbox(id) {
+	$('#'+id).each( function() {
+		$(this).get(0).checked = !$(this).get(0).checked;
+	});
+}
+
+function sort_form(col, dir) {
+	$('#formS').val(col);
+	$('#formD').val(dir);
+	$('#sort_form').get(0).submit();
+}
+
+function manage_checkboxes() {
+	var boxes = [];
+	var is_all_checked = true;
+	var i = 0;
+	// get all main checkboxes and manage them muwahhahh!!!!
+	$("input[id^='check-']:checkbox").each( function() {
+		if(this.id != 'switch_box' && is_all_checked == true) {
+			if(this.checked === false) {
+				is_all_checked = false;
+			}
+		}
+	});
+	if(is_all_checked) {
+		$('#switch_box').get(0).checked = true;
+	} else {
+		$('#switch_box').get(0).checked = false;
+	}
+}

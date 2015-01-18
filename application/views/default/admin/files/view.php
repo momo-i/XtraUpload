@@ -99,25 +99,5 @@ foreach ($files->result() as $file)
               $('#userAdmin').submit();
             }
           }
-          function switch_checkboxes()
-          {
-            $('input[@type=checkbox]').each( function()
-            {
-              this.checked = !this.checked;
-            });
-          }
-          function switch_checkbox(id)
-          {
-            $('#'+id).each( function()
-            {
-              this.checked = !this.checked;
-            });
-          }
-          function sort_form(col, dir)
-          {
-            $('#formS').val(col);
-            $('#formD').val(dir);
-            $('#sort_form').get(0).submit();
-          }
           //--]]>
         </script>

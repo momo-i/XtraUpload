@@ -20,7 +20,7 @@
             <tr>
               <th width="300" class="align-left"><?php echo lang('File Name'); ?></th>
               <th width="80"><?php echo lang('Size'); ?></th>
-              <th width="60"><?php echo lang('Add?'); ?> <input type="checkbox" value="ok" name="checkAll" onchange="switchCheckboxes(this.checked)"></th>
+              <th width="60"><?php echo lang('Add?'); ?> <input type="checkbox" value="ok" name="checkAll" onchange="switch_checkboxes(this.checked)"></th>
             </tr>
 <?php foreach ($files->result() as $file) { ?>
             <tr>
@@ -34,28 +34,4 @@
           </table>
           <?php echo generate_submit_button(lang('Create Folder'), base_url().'assets/images/icons/new_16.png'); ?><br>
         </form>
-        <script type="text/javascript">
-          //<![CDATA[
-          var checkBoxAllBool = false;
-          function switchCheckboxes()
-          {
-            if(!checkBoxAllBool)
-            {
-              $('input[@type=checkbox]', document).each(function(i)
-              {
-                $(this).attr('checked', 'checked');
-              });
-              checkBoxAllBool = true;
-            }
-            else
-            {
-              $('input[@type=checkbox]', document).each(function(i)
-              {
-                $(this).attr('checked', '');
-              });
-              checkBoxAllBool = false;
-            }
-          }
-          //--]]>
-        </script>
 <?php } // endif; ?>
