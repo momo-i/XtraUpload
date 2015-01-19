@@ -18,7 +18,7 @@ else
     <link rel="shortcut icon" href="<?php echo base_url(); ?>favicon.ico">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>assets/css/main.css">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>assets/css/default/default.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>assets/css/custombox.min.css">
+   <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>assets/css/fancybox.css">
     <script type="text/javascript">
       //<![CDATA[
       function ___imageClose(){return '<?php echo base_url(); ?>assets/images/lightbox-btn-close.gif';}

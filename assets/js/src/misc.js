@@ -111,3 +111,7 @@ function manage_checkboxes() {
 		$('#switch_box').get(0).checked = false;
 	}
 }
+
+$(document).ready(function() {
+	$('.fancybox').fancybox();
+});

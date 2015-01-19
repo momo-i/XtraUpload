@@ -5,7 +5,7 @@
         <h3><?php echo lang('Name: ')?><?php echo $file->o_filename; ?></h3>
         <p>
           <?php echo $this->lang->line('Image Preview:'); ?><br>
-          <a href="<?php echo $direct_url; ?>" class="thickbox">
+          <a href="<?php echo $direct_url."?type=.".$file->type; ?>" class="fancybox">
             <img src="<?php echo $thumb_url; ?>" alt="">
           </a>
           <br><br>
