@@ -198,10 +198,9 @@ class Step4 extends CI_Controller {
 		$new_htaccess = ROOTPATH.'/.htaccess';
 		if(file_exists($new_htaccess))
 		{
-			@unlink($orig_htaccess);
 			return true;
 		}
-		if(@rename($orig_htacess, $new_htaccess))
+		if(@copy($orig_htacess, $new_htaccess))
 		{
 			return true;
 		}
