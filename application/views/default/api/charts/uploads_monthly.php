@@ -5,9 +5,9 @@ var chart = c3.generate({
     x: 'x',
     columns: [
       ['x', '<?php echo $week3['d']; ?>', '<?php echo $week2['d']; ?>', '<?php echo $week1['d']; ?>', '<?php echo $thisweek['d']; ?>'],
-      ['<?php echo lang('All downloads'); ?>', <?php echo $week3['num']; ?>, <?php echo $week2['num']; ?>, <?php echo $week1['num']; ?>, <?php echo $thisweek['num']; ?>]
+      ['<?php echo lang('All uploads'); ?>', <?php echo $week3['num']; ?>, <?php echo $week2['num']; ?>, <?php echo $week1['num']; ?>, <?php echo $thisweek['num']; ?>]
     ],
-    groups: [['<?php echo lang('All downloads'); ?>']],
+    groups: [['<?php echo lang('All uploads'); ?>']],
     type: 'bar',
   },
   axis: {

@@ -12,6 +12,7 @@
             <optgroup label="<?php echo lang('Uploads'); ?>">
               <option value="all_uploads"><?php echo lang('All Uploads'); ?></option>
               <option value="uploads_weekly"><?php echo lang('All Uploads'); ?> &gt;&gt; <?php echo lang('Weekly'); ?></option>
+              <option value="uploads_monthly"><?php echo lang('All Uploads'); ?> &gt;&gt; <?php echo lang('Monthly'); ?></option>
               <option value="all_images_vs_regular"><?php echo lang('All Uploads'); ?> &gt;&gt; <?php echo lang('Files vs Images'); ?></option>
               <option value="all_remote_vs_host_uploads"><?php echo lang('All Uploads'); ?> &gt;&gt; <?php echo lang('Local vs Remote'); ?></option>
               <option value="all_server_uploads"><?php echo lang('All Uploads'); ?> &gt;&gt; <?php echo lang('By Server'); ?></option>
@@ -23,6 +24,7 @@
             <optgroup label="<?php echo lang('Downloads'); ?>">
               <option value="all_downloads"><?php echo lang('All Downloads'); ?></option>
               <option value="downloads_weekly"><?php echo lang('All Downloads'); ?> &gt;&gt; <?php echo lang('Weekly'); ?></option>
+              <option value="downloads_monthly"><?php echo lang('All Downloads'); ?> &gt;&gt; <?php echo lang('Monthly'); ?></option>
             </optgroup>
             <optgroup label="<?php echo lang('Servers'); ?>">
               <option value="all_server_used_space"><?php echo lang('Servers'); ?> &gt;&gt; <?php echo lang('Used Space'); ?></option>

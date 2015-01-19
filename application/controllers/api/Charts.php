@@ -201,7 +201,7 @@ class Charts extends CI_Controller {
 	 */
     public function downloads_weekly($ignore = '')
     {
-		$data['title'] = lang('Past 7 Days Downloads');;
+		$data['title'] = lang('Past 7 Days Downloads');
 		$data['xlabel'] = lang('Date');
 		$data['ylabel'] = lang('Counts');
 
@@ -228,6 +228,37 @@ class Charts extends CI_Controller {
 
         $this->load->view($this->startup->skin.'/api/charts/downloads_weekly', $data);
     }
+
+	/**
+	 * Charts::downloads_monthly()
+	 *
+	 * Show monthly downloads
+	 *
+	 * @access	public
+	 * @param	int		$ignore	not use
+	 * @return	void
+	 */
+	public function downloads_monthly($ignore = '')
+	{
+		$data['title'] = lang('Past 4 Weeks Downloads');
+		$data['xlabel'] = lang('Week');
+		$data['ylabel'] = lang('Counts');
+
+		$data['thisweek']['d'] = date('Y-m-d', strtotime('today'));
+		$data['thisweek']['num'] = $this->db->where('time >', strtotime('-7days 12:00 AM'))->where('time <', strtotime('today 11:59:59 PM'))->count_all_results('downloads');
+
+		$data['week1']['d'] = date('Y-m-d', strtotime('-7 days'));
+		$data['week1']['num'] = $this->db->where('time >', strtotime('-14 days 12:00 AM'))->where('time <', strtotime('-7 days 11:59:59 PM'))->count_all_results('downloads');
+
+		$data['week2']['d'] = date('Y-m-d', strtotime('-14 days'));
+		$data['week2']['num'] = $this->db->where('time >', strtotime('-21 days 12:00 AM'))->where('time <', strtotime('-14 days 11:59:59 PM'))->count_all_results('downloads');
+
+		$data['week3']['d'] = date('Y-m-d', strtotime('-21 days'));
+		$data['week3']['num'] = $this->db->where('time >', strtotime('-28 days 12:00 AM'))->where('time <', strtotime('-21 days 11:59:59 PM'))->count_all_results('downloads');
+
+		$this->load->view($this->startup->skin.'/api/charts/downloads_monthly', $data);
+
+	}
 
 	/**
 	 * Charts::images_vs_regular_weekly()
@@ -363,7 +394,7 @@ class Charts extends CI_Controller {
 	 */
 	public function uploads_weekly($ignore = '')
     {
-		$data['title'] = lang('Past 7 Days Uploads');;
+		$data['title'] = lang('Past 7 Days Uploads');
 		$data['xlabel'] = lang('Date');
 		$data['ylabel'] = lang('Counts');
 
@@ -390,6 +421,36 @@ class Charts extends CI_Controller {
 
         $this->load->view($this->startup->skin.'/api/charts/uploads_weekly', $data);
     }
+
+	/**
+	 * Charts::uploads_monthly()
+	 *
+	 * Show monthly uploads
+	 *
+	 * @access	public
+	 * @param	int		$ignore not use
+	 * @return	void
+	 */
+	public function uploads_monthly($ignore = '')
+	{
+		$data['title'] = lang('Past 4 Weeks Uploads');
+		$data['xlabel'] = lang('Date');
+		$data['ylabel'] = lang('Counts');
+
+		$data['thisweek']['d'] = date('Y-m-d', strtotime('today'));
+		$data['thisweek']['num'] = $this->db->get_where('refrence', array('time >' => strtotime('-7days 12:00 AM'), 'time <' => strtotime('today 11:59:59 PM')))->num_rows();
+
+		$data['week1']['d'] = date('Y-m-d', strtotime('-7 days'));
+		$data['week1']['num'] = $this->db->get_where('refrence', array('time >' => strtotime('-14 days 12:00 AM'), 'time <' => strtotime('-7 days 11:59:59 PM')))->num_rows();
+
+		$data['week2']['d'] = date('Y-m-d', strtotime('-14 days'));
+		$data['week2']['num'] = $this->db->get_where('refrence', array('time >' => strtotime('-21 days 12:00 AM'), 'time <' => strtotime('-14 days 11:59:59 PM')))->num_rows();
+
+		$data['week3']['d'] = date('Y-m-d', strtotime('-21 days'));
+		$data['week3']['num'] = $this->db->get_where('refrence', array('time >' => strtotime('-28 days 12:00 AM'), 'time <' => strtotime('-21 days 11:59:59 PM')))->num_rows();
+
+		$this->load->view($this->startup->skin.'/api/charts/uploads_monthly', $data);
+	}
 }
 
 /* End of file api/Charts.php */
