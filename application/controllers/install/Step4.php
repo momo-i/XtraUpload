@@ -106,7 +106,7 @@ class Step4 extends CI_Controller {
 				$this->_url .= '/';
 			}
 
-			if(!$this->_write_config() OR !$this->_write_database())
+			if(!$this->_write_config() OR !$this->_write_database() OR $this->_write_htaccess())
 			{
 				return false;
 			}
@@ -182,6 +182,30 @@ class Step4 extends CI_Controller {
 			fwrite($out, $line . "\n");
 		} while(!feof($fp));
 		return true;
+	}
+
+	/**
+	 * Step4::_write_htaccess()
+	 *
+	 * Write .htaccess
+	 *
+	 * @access	private
+	 * @return	bool
+	 */
+	private function _write_htaccess()
+	{
+		$orig_htaccess = ROOTPATH.'/application/config/htaccess';
+		$new_htaccess = ROOTPATH.'/.htaccess';
+		if(file_exists($new_htaccess))
+		{
+			@unlink($orig_htaccess);
+			return true;
+		}
+		if(@rename($orig_htacess, $new_htaccess))
+		{
+			return true;
+		}
+		return false;
 	}
 
 }
