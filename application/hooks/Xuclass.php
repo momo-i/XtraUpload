@@ -43,6 +43,25 @@ class XuClass {
 		require_once 'Zend/Locale.php';
 		require_once 'Zend/Locale/Data.php';
 		require_once 'Zend/Translate.php';
+		$this->_check_htaccess();
+	}
+
+	private function _check_htaccess()
+	{
+		$orig_htaccess = ROOTPATH.'/application/config/htaccess';
+		$new_htaccess = ROOTPATH.'/.htaccess';
+		if(file_exists($new_htaccess))
+		{
+			return true;
+		}
+		if(copy($orig_htaccess, $new_htaccess))
+		{
+			return true;
+		}
+		else
+		{
+			exit("Please manually rename $orig_htaccess to $new_htaccess");
+		}
 	}
 
 }
