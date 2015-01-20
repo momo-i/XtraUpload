@@ -101,6 +101,7 @@ class Files extends CI_Controller {
 		$config['total_rows'] = $this->files_db->get_admin_num_files();
 		$config['per_page'] = $per_page;
 		$config['uri_segment'] = 4;
+		$config['attributes'] = array('class' => 'prevnext');
 
 		$this->pagination->initialize($config);
 

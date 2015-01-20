@@ -470,6 +470,7 @@ EOF;
 		$config['base_url'] = site_url('files/manage');
 		$config['total_rows'] = $this->files_db->get_num_files();
 		$config['per_page'] = $per_page;
+		$config['attributes'] = array('class' => 'prevnext');
 
 		// setup the pagination library
 		$this->pagination->initialize($config);
@@ -533,6 +534,7 @@ EOF;
 			$config['base_url'] = site_url('files/search/'.$this->uri->segment(3));
 			$config['total_rows'] = $this->files_db->search_num_files($this->uri->segment(3));
 			$config['per_page'] = $per_page;
+			$config['attributes'] = array('class' => 'prevnext');
 
 			$data['num_results'] = $config['total_rows'];
 			$data['query'] = $this->uri->segment(3);

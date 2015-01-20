@@ -79,6 +79,7 @@ class Folders extends CI_Controller {
 		$config['total_rows'] = $this->folders_db->get_num_folders();
 		$config['per_page'] = $per_page;
 		$config['uri_segment'] = 4;
+		$config['attributes'] = array('class' => 'prevnext');
 		$this->pagination->initialize($config);
 
 		$data['pagination'] = $this->pagination->create_links();

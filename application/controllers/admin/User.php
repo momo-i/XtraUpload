@@ -130,6 +130,7 @@ class User extends CI_Controller {
 		$config['total_rows'] = $this->users_db->get_num_users();
 		$config['per_page'] = $per_page;
 		$config['uri_segment'] = 4;
+		$config['attributes'] = array('class' => 'prevnext');
 		$this->pagination->initialize($config);
 
 		$data['users'] = $this->users_db->get_all_users($sort, $direction, $per_page, $this->uri->segment(4));

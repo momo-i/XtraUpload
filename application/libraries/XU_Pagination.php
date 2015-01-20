@@ -33,7 +33,56 @@ class XU_Pagination extends CI_Pagination {
 	 * @access	protected
 	 * @var		string
 	 */
-	protected $_attributes = 'prevnext';
+	protected $_attributes = ' class="prevnext"';
+
+	/**
+	 * Full tag open
+	 *
+	 * @access	protected
+	 * @var		string
+	 */
+	protected $full_tag_open = '<div class="pagination">';
+
+	/**
+	 * Full tag close
+	 *
+	 * @access	protected
+	 * @var		string
+	 */
+	protected $full_tag_close = '</div>';
+
+	/**
+	 * Current tag open
+	 *
+	 * @access	protected
+	 * @var		string
+	 */
+	protected $cur_tag_open = '<span class="current">';
+
+	/**
+	 * Current tag close
+	 *
+	 * @access	protected
+	 * @var		string
+	 */
+	protected $cur_tag_close = '</span>';
+
+	/**
+	 * Constructor
+	 *
+	 * @param	array	$params	Initialization parameters
+	 * @return	void
+	 */
+	public function __construct($params = array())
+	{
+		parent::__construct();
+
+		log_message('debug', 'XU Pagination Class Initialized');
+		$this->first_link = lang('&lsaquo; First');
+		$this->next_link = lang('&gt;');
+		$this->prev_link = lang('&lt;');
+		$this->last_link = lang('Last &rsaquo;');
+	}
 
 }
 

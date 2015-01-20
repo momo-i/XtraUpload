@@ -105,6 +105,7 @@ class Transactions extends CI_Controller {
 		$config['total_rows'] = $this->transactions_db->get_num_transactions();
 		$config['per_page'] = $per_page;
 		$config['uri_segment'] = 4;
+		$config['attributes'] = array('class' => 'prevnext');
 		$this->pagination->initialize($config);
 
 		$data['transactions'] = $this->transactions_db->get_transactions($per_page, $this->uri->segment(4));

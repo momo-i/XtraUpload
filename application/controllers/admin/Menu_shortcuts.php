@@ -77,6 +77,7 @@ class Menu_shortcuts extends CI_Controller {
 		$config['total_rows'] = $this->admin_menu_shortcuts_db->get_num_shortcuts();
 		$config['per_page'] = $per_page;
 		$config['uri_segment'] = 4;
+		$config['attributes'] = array('class' => 'prevnext');
 
 		$this->pagination->initialize($config);
 

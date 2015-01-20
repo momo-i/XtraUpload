@@ -509,6 +509,7 @@ class User extends CI_Controller {
 			$config['base_url'] = site_url('user/files/'.$user);
 			$config['total_rows'] = $this->files_db->get_num_userfiles($data['user']->id, true);
 			$config['per_page'] = $per_page;
+			$config['attributes'] = array('class' => 'prevnext');
 
 			// setup the pagination library
 			$this->pagination->initialize($config);
