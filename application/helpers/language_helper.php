@@ -115,7 +115,7 @@ if ( ! function_exists('available_lang'))
 			'af_ZA' => lang('Afrikaans'),
 			'ar_SA' => lang('Arabic'),
 			'bg_BG' => lang('Bulgarian'),
-			'bn_BD' => lang('BengaliBangla'),
+			'bn_BD' => lang('Bengali Bangla'),
 			'ca_ES' => lang('Catalan'),
 			'cs_CZ' => lang('Czech'),
 			'da_DK' => lang('Danish'),
