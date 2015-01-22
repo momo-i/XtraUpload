@@ -131,14 +131,22 @@ else
 if($this->startup->site_config->allow_version_check)
 {
 	$this->load->helper('admin/version');
-	$latest_version = check_version(); //@file_get_contents('http://xtrafile.com/xu_version.txt');
-	if(XU_VERSION < $latest_version)
+	$latest_version = check_version();
+	if(strcmp($latest_version, "Unknown") === 0)
+	{
+		$msg = lang("Unknown Version.");
+	}
+	else
+	{
+		$msg = $this->functions->parse_version($latest_version);
+	}
+	if($this->functions->compare_version(XU_VERSION, $latest_version))
 	{
 ?>
         <h3><?php echo lang('Upgrade Available'); ?></h3>
         <span class="alert">
           <?php echo lang('Important Upgrade Available'); ?>:
-          <?php echo anchor('http://xtrafile.com/files/', sprintf(lang('Important Upgrade Available %s'), '<strong>'.$this->functions->parse_version($latest_version).'</strong>')); ?> 
+          <?php echo anchor('https://github.com/momo-i/XtraUpload/releases', sprintf(lang('Important Upgrade Available %s'), '<strong>'.$msg.'</strong>')); ?> 
         </span>
 <?php
 	}

@@ -254,6 +254,26 @@ class Functions {
 	}
 
 	/**
+	 * Functions::compare_version()
+	 *
+	 * Parse version and compare
+	 *
+	 * @access	public
+	 * @param	string	$current	Current version
+	 * @param	string	$new		New version
+	 * @return	bool
+	 */
+	public function compare_version($current, $new)
+	{
+		list($current, $new) = str_replace(array(',', '.'), '', array($current, $new));
+		if($current < $new)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	/**
 	 * Functions::parse_version()
 	 *
 	 * Parse valid version or not

@@ -28,9 +28,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 if ( ! function_exists('check_version'))
 {
-	function check_version($urls = "http://xtrafire.momo-i.org/xu_version.txt")
+	function check_version($urls = "https://raw.githubusercontent.com/momo-i/XtraUpload/master/application/config/xu_ver.php")
 	{
-		$version = @file_get_contents($urls);
+		$version = "Unknown";
+		$file = @file_get_contents($urls);
+		$config = ROOTPATH.'/temp/xu_ver.php';
+		@file_put_contents($config, $file);
+		if(file_exists($config))
+		{
+			require_once $config;
+			@unlink($config);
+		}
+
 		return $version;
 	}
 }
