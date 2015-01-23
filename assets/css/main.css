@@ -411,7 +411,7 @@ span.cssButton a.buttonRed:active
 	line-height: 1.4;
 }
 
-// For plupload drag and drop
+/* For plupload drag and drop */
 #drop-target {
   border: 10px dashed #999;
   text-align: center;
