@@ -16,5 +16,5 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$version = '3.1.0,0.0.0.1'; // 3.1.0 Alpha1
+$version = '3.1.0,1.0.0.0'; // 3.1.0 Release1 
 ?>

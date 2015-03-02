@@ -1,12 +1,12 @@
 XtraUpload v3 README
 ====================
 
-## Intro:
+## Intro
 
 XtraUpload is a turn-key PHP application for setting up a file hosting enviroment.
 It automates the uploading and downloading of files shared by your users and is
 extremely customizable. It is built on the CodeIgniter PHP Framework and is compatable
-with a large majority of web server configurations.
+with a large majority of web server configurations.  
 
 XtraUpload has support for multiple user groups, premium users with unlimited tiers,
 multiple file upload, password protected file links, file folders, image galleries,
@@ -22,14 +22,14 @@ XtraUpload is FREE(Modified Apache 2.0 License, open source) and very stable.
 * OR [MySQL](http://www.mysql.com/) >= 5.x+
 
 40 MByte of free disk space (plus space to store uploaded files)
-mod_rewrite support for your webserver(apache config file included)
-GD-PHP v2+
-Freetype v2
-JPEG, PNG support in GD
+mod_rewrite support for your webserver(apache config file included)  
+* GD-PHP v2+
+* Freetype v2
+* JPEG, PNG support in GD
 
 ## Setting Up
 
-Please see the included docs/INSTALL file
+Please see the included docs/INSTALL.md file
 
 ## License
 
@@ -42,3 +42,8 @@ more features, bugs, etc.
 
 * [Public Source Repository](https://github.com/momo-i/XtraUpload)
 * [GitHub Page](http://momo-i.github.io/XtraUpload)
+
+### Under construction
+* ~~[HomePage](http://xtra.momo-i.org/)~~
+* ~~[Support Forums](http://xtra.momo-i.org/forums/)~~
+* ~~[Demo](http://xtra.momo-i.org/demo/)~~

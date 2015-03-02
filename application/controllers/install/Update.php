@@ -228,6 +228,10 @@ class Update extends CI_Controller {
 		$update_string = '- New uplaoder can upload over 2GB';
 		$version[] = array('version' => '3100001', 'description' => $update_string);
 
+		// 3.1.0 STABLE
+		$update_string = '- Stable release!!!!!';
+		$version[] = array('version' => '3101000', 'description' => $update_string);
+
 		return $version;
 	}
 
@@ -489,6 +493,20 @@ class Update extends CI_Controller {
      * @return  true
      */
 	private function _update_3100001()
+	{
+		$this->_set_db_version();
+		return TRUE;
+	}
+
+	/**
+	 * Update::_update_3101000
+	 *
+	 * Stable release
+	 *
+	 * @access  private
+	 * @return  true
+	 */
+	private function _update_3101000()
 	{
 		$this->_set_db_version();
 		return TRUE;

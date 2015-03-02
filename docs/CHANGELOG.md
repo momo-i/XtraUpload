@@ -1,3 +1,27 @@
+commit 49b5e395907f92f56d7f0640972a79f8f0d86387
+Author: momo-i <webmaster@momo-i.org>
+Date:   Fri Jan 23 23:00:48 2015 +0900
+
+    Fixed layout
+
+commit 22287ff4eb835959afda91c821e8074b8e96339f
+Author: momo-i <webmaster@momo-i.org>
+Date:   Thu Jan 22 13:41:10 2015 +0900
+
+    Update version checker
+
+commit 74805ac8e440af6d70bd36c2609416afba8ee3fb
+Author: momo-i <webmaster@momo-i.org>
+Date:   Thu Jan 22 13:26:22 2015 +0900
+
+    fixed language name
+
+commit 1cdb195a1f2e96da8e86a309a06917288532d437
+Author: momo-i <webmaster@momo-i.org>
+Date:   Tue Jan 20 16:05:11 2015 +0900
+
+    change to git log
+
 commit 557401663be553763740446c919d682151c56d75
 Author: momo-i <webmaster@momo-i.org>
 Date:   Tue Jan 20 16:03:59 2015 +0900
